@@ -54,13 +54,15 @@ const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260504s";
+const DATA_VERSION = "20260504za";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
+  likely_true_both: "Likely Valid",
   likely_false: "Needs Review",
   new_record: "New",
+  unlisted: "Unlisted",
 };
 const FOOTPRINT_DEFAULTS = {
   countrywide: {
@@ -399,12 +401,16 @@ function speciesSortName(entry) {
 }
 
 function isNewDiscovery(entry) {
-  return Boolean(entry) && (entry.expected === false || entry.status === "new_record" || entry.bucket === "New");
+  return Boolean(entry) && (entry.status === "new_record" || entry.bucket === "New");
 }
 
 function effectiveBucket(entry) {
   if (!entry) {
     return "Needs Review";
+  }
+  const explicitBucket = cleanText(entry.bucket) || statusToBucket(entry.status);
+  if (explicitBucket) {
+    return explicitBucket;
   }
   if (isNewDiscovery(entry)) {
     return "New";
@@ -412,10 +418,17 @@ function effectiveBucket(entry) {
   if (entry.footprintCode === "no_points" || entry.footprintCode === "needs_review") {
     return "Needs Review";
   }
-  return entry.bucket || "Needs Review";
+  return "Needs Review";
+}
+
+function isVisibleSpecies(entry) {
+  return effectiveBucket(entry) !== "Unlisted";
 }
 
 function matchesGroupFilter(entry, groupKey) {
+  if (!isVisibleSpecies(entry)) {
+    return false;
+  }
   switch (groupKey) {
     case "all":
       return true;
@@ -436,6 +449,10 @@ function matchesGroupFilter(entry, groupKey) {
 
 function groupCount(country, groupKey) {
   return (country?.species || []).filter((entry) => matchesGroupFilter(entry, groupKey)).length;
+}
+
+function visibleSpecies(country) {
+  return (country?.species || []).filter((entry) => isVisibleSpecies(entry));
 }
 
 function roundCoordinate(value) {
@@ -523,6 +540,11 @@ async function loadCountryData(packKey) {
   const pack = await loadCountryPack(normalizedPackKey);
   const species = [];
   const groups = {};
+  const summary = {
+    total: 0,
+    statusCounts: {},
+    bucketCounts: {},
+  };
 
   (pack.entries || []).forEach((rawEntry) => {
     const itemId = cleanText(rawEntry.itemId);
@@ -530,19 +552,22 @@ async function loadCountryData(packKey) {
       return;
     }
 
+    const bucket = statusToBucket(rawEntry.status);
+    if (bucket === "Unlisted") {
+      return;
+    }
+
     const animal = animalById.get(itemId) || {};
     const observationProfile = resolveObservationProfile(rawEntry, pack.precomputeMode);
     const footprintCode = observationProfile.code;
-    groups[footprintCode] = (groups[footprintCode] || 0) + 1;
-
-    species.push({
+    const speciesEntry = {
       itemId,
       label: speciesLabel(animal),
       commonName: animal.commonName,
       binomial: animal.binomial,
       classLabel: animal.classLabel,
       status: rawEntry.status,
-      bucket: statusToBucket(rawEntry.status),
+      bucket,
       expected: rawEntry.expected,
       footprintCode,
       footprintLabel: observationProfile.label,
@@ -550,7 +575,15 @@ async function loadCountryData(packKey) {
       footprintNote: observationProfile.note,
       polygonLatLngs: observationProfile.footprintPolygonLatLngs,
       hasPolygon: observationProfile.footprintPolygonLatLngs.length >= 3,
-    });
+    };
+
+    groups[footprintCode] = (groups[footprintCode] || 0) + 1;
+    summary.total += 1;
+    summary.statusCounts[rawEntry.status] = (summary.statusCounts[rawEntry.status] || 0) + 1;
+
+    const resolvedBucket = effectiveBucket(speciesEntry);
+    summary.bucketCounts[resolvedBucket] = (summary.bucketCounts[resolvedBucket] || 0) + 1;
+    species.push(speciesEntry);
   });
 
   species.sort((left, right) => sortKey(left.commonName).localeCompare(sortKey(right.commonName)) || sortKey(left.binomial).localeCompare(sortKey(right.binomial)));
@@ -559,11 +592,7 @@ async function loadCountryData(packKey) {
     iso3: normalizedPackKey,
     countryName: countryPackLabel(catalogEntry) || pack.countryName || normalizedPackKey,
     precomputeMode: pack.precomputeMode || "unknown",
-    summary: pack.summary || {
-      total: species.length,
-      statusCounts: {},
-      bucketCounts: {},
-    },
+    summary,
     groups,
     species,
   };
@@ -1481,7 +1510,7 @@ function formatSpeciesList(species) {
 
 function currentNationalSpecies() {
   return (state.currentCountry?.species || [])
-    .filter((entry) => entry.footprintCode === "countrywide")
+    .filter((entry) => isVisibleSpecies(entry) && entry.footprintCode === "countrywide")
     .slice()
     .sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
 }
@@ -2148,7 +2177,7 @@ function currentSpeciesById(itemId) {
 }
 
 function buildSummaryText(country) {
-  const total = country.species.length || country.summary?.total || 0;
+  const total = visibleSpecies(country).length || country.summary?.total || 0;
   const likelyValidCount = groupCount(country, "likely_valid");
   const needsReviewCount = groupCount(country, "needs_review");
   const newCount = groupCount(country, "new");
@@ -2207,7 +2236,7 @@ function filteredSpecies() {
   }
 
   const search = state.speciesFilter.toLocaleLowerCase();
-  return state.currentCountry.species.filter((entry) => {
+  return visibleSpecies(state.currentCountry).filter((entry) => {
     if (!matchesGroupFilter(entry, state.groupFilter)) {
       return false;
     }

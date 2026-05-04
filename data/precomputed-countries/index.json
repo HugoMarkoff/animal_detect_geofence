@@ -500,13 +500,20 @@
       "iso3": "CAN",
       "countryName": "Canada",
       "path": "./CAN.json",
-      "precomputeMode": "baseline",
-      "total": 339,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 339
+        "Unlisted": 1657,
+        "Likely Valid": 294,
+        "Needs Review": 45,
+        "New": 23
       },
       "statusCounts": {
-        "likely_true_one_source": 339
+        "unlisted": 1657,
+        "likely_true_one_source": 293,
+        "likely_false": 45,
+        "new_record": 23,
+        "likely_true_both": 1
       }
     },
     {
