@@ -59,11 +59,6 @@
           </div>
 
           <form id="ticket-form" class="ticket-form">
-            <label class="field">
-              <span>GitHub repo</span>
-              <input id="githubRepo" name="githubRepo" placeholder="owner/repo">
-            </label>
-
             <fieldset class="mode-fieldset">
               <legend>Suggestion type</legend>
               <div class="segmented-control">
@@ -92,7 +87,7 @@
 
               <label id="proposed-species-field" class="field">
                 <span>Proposed species</span>
-                <input id="proposedSpeciesLabel" name="proposedSpeciesLabel" list="animal-options" placeholder="Type or pick a species">
+                <input id="proposedSpeciesLabel" name="proposedSpeciesLabel" list="animal-options" placeholder="Search or pick any species">
                 <input id="proposedSpeciesItemId" name="proposedSpeciesItemId" type="hidden">
                 <datalist id="animal-options"></datalist>
               </label>
@@ -135,22 +130,22 @@
             <div class="section-head preview-head">
               <div>
                 <p class="section-kicker">Preview</p>
-                <h3>GitHub Issue Draft</h3>
+                <h3>Ticket Draft</h3>
               </div>
               <div class="preview-actions">
-                <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Markdown</button>
-                <a id="open-github" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Open GitHub Draft</a>
+                <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
+                <a id="open-ticket" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Open Draft</a>
               </div>
             </div>
 
             <label class="field">
               <span>Title</span>
-              <input id="ticket-title" type="text" readonly placeholder="Build a ticket to preview the issue title.">
+              <input id="ticket-title" type="text" readonly placeholder="Build a ticket to preview the title.">
             </label>
 
             <label class="field">
               <span>Body</span>
-              <textarea id="ticket-body" rows="14" readonly placeholder="The issue body will appear here."></textarea>
+              <textarea id="ticket-body" rows="14" readonly placeholder="The ticket body will appear here."></textarea>
             </label>
 
             <div id="ticket-warnings" class="warning-list" hidden></div>

@@ -5,7 +5,6 @@ const groupChips = document.getElementById("group-chips");
 const speciesFilterInput = document.getElementById("speciesFilter");
 const speciesList = document.getElementById("species-list");
 const ticketForm = document.getElementById("ticket-form");
-const githubRepoInput = document.getElementById("githubRepo");
 const currentSpeciesField = document.getElementById("current-species-field");
 const currentSpeciesSelect = document.getElementById("currentSpeciesItemId");
 const proposedSpeciesField = document.getElementById("proposed-species-field");
@@ -21,7 +20,7 @@ const statusLine = document.getElementById("status-line");
 const ticketTitleInput = document.getElementById("ticket-title");
 const ticketBodyInput = document.getElementById("ticket-body");
 const copyMarkdownButton = document.getElementById("copy-markdown");
-const openGithubLink = document.getElementById("open-github");
+const openTicketLink = document.getElementById("open-ticket");
 const ticketWarnings = document.getElementById("ticket-warnings");
 const mapSummary = document.getElementById("map-summary");
 
@@ -34,10 +33,9 @@ const COASTLINE_SNAP_DISTANCE_KM = 8;
 const COASTLINE_FILL_BUFFER_KM = 4;
 const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen";
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
-const GITHUB_REPO_STORAGE_KEY = "animal-detect-geofence.githubRepo.v1";
-const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
+const DEFAULT_TICKET_REPOSITORY = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
-const MAX_GITHUB_URL_LENGTH = 7000;
+const MAX_TICKET_URL_LENGTH = 7000;
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
   likely_false: "Needs Review",
@@ -585,42 +583,37 @@ function buildIssueBody(ticket) {
   lines.push(
     "",
     "## Notes",
-    "- Generated from the country-pack review app hosted in the repository.",
-    "- This draft is based on the current precomputed country pack stored in this repo."
+    "- This draft is based on the currently loaded country pack."
   );
 
   return lines.join("\n").trim();
 }
 
-function buildGithubIssueUrl(repository, title, body) {
+function buildTicketDraftUrl(repository, title, body) {
   if (!repository) {
     return null;
   }
 
   const params = new URLSearchParams({ title, body });
   const url = `https://github.com/${repository}/issues/new?${params.toString()}`;
-  return url.length <= MAX_GITHUB_URL_LENGTH ? url : null;
+  return url.length <= MAX_TICKET_URL_LENGTH ? url : null;
 }
 
 function buildTicketPreviewData(payload) {
   const ticket = buildTicketFromPayload(payload);
   const title = buildIssueTitle(ticket);
   const body = buildIssueBody(ticket);
-  const githubIssueUrl = buildGithubIssueUrl(ticket.githubRepo, title, body);
+  const draftUrl = buildTicketDraftUrl(DEFAULT_TICKET_REPOSITORY, title, body);
   const warnings = [];
 
-  if (ticket.githubRepo && !githubIssueUrl) {
-    warnings.push("The GitHub draft URL would be too long. Use Copy Markdown instead.");
-  }
-  if (!ticket.githubRepo) {
-    warnings.push("Set a GitHub repo to enable Open GitHub Draft.");
+  if (!draftUrl) {
+    warnings.push("The draft link is too long. Use Copy Ticket instead.");
   }
 
   return {
     title,
     body,
-    githubRepo: ticket.githubRepo,
-    githubIssueUrl,
+    draftUrl,
     warnings,
     ticket,
   };
@@ -1450,6 +1443,11 @@ function populateAnimalOptions(animals) {
   animalOptions.replaceChildren(...options);
 }
 
+function setProposedSpeciesValue(label, itemId = "") {
+  proposedSpeciesInput.value = label;
+  proposedSpeciesItemIdInput.value = itemId;
+}
+
 function populateCurrentSpeciesSelect(species) {
   const previous = currentSpeciesSelect.value;
   const options = [
@@ -1647,8 +1645,7 @@ function applySpeciesSelection(itemId, fitToMap = false) {
   if (suggestionType() === "correction") {
     const currentEntry = currentSpeciesById(itemId);
     if (currentEntry && !cleanText(proposedSpeciesInput.value)) {
-      proposedSpeciesInput.value = currentEntry.label;
-      proposedSpeciesItemIdInput.value = currentEntry.itemId;
+      setProposedSpeciesValue(currentEntry.label, currentEntry.itemId);
     }
   }
 
@@ -1714,8 +1711,8 @@ function clearTicketPreview() {
   ticketWarnings.hidden = true;
   ticketWarnings.innerHTML = "";
   copyMarkdownButton.disabled = true;
-  openGithubLink.href = "#";
-  openGithubLink.classList.add("disabled");
+  openTicketLink.href = "#";
+  openTicketLink.classList.add("disabled");
 }
 
 function renderTicketPreview(preview) {
@@ -1724,12 +1721,12 @@ function renderTicketPreview(preview) {
   ticketBodyInput.value = preview.body || "";
   copyMarkdownButton.disabled = !preview.title || !preview.body;
 
-  if (preview.githubIssueUrl) {
-    openGithubLink.href = preview.githubIssueUrl;
-    openGithubLink.classList.remove("disabled");
+  if (preview.draftUrl) {
+    openTicketLink.href = preview.draftUrl;
+    openTicketLink.classList.remove("disabled");
   } else {
-    openGithubLink.href = "#";
-    openGithubLink.classList.add("disabled");
+    openTicketLink.href = "#";
+    openTicketLink.classList.add("disabled");
   }
 
   const warnings = preview.warnings || [];
@@ -1744,7 +1741,6 @@ function renderTicketPreview(preview) {
 
 function buildTicketPayload() {
   return {
-    githubRepo: cleanText(githubRepoInput.value),
     countryIso3: countrySelect.value,
     suggestionType: suggestionType(),
     currentSpeciesItemId: currentSpeciesSelect.value,
@@ -1819,11 +1815,6 @@ async function initialize() {
       loadCountryCatalog(),
     ]);
 
-    const storedRepo = window.localStorage.getItem(GITHUB_REPO_STORAGE_KEY) || "";
-    githubRepoInput.value = storedRepo && storedRepo !== "owner/repo"
-      ? storedRepo
-      : DEFAULT_GITHUB_REPO;
-
     populateAnimalOptions(animals || []);
     populateCountrySelect(countries || []);
     await loadCountry(countrySelect.value);
@@ -1884,11 +1875,6 @@ scopeSelect.addEventListener("change", () => {
 
 proposedSpeciesInput.addEventListener("input", syncProposedSpeciesLookup);
 explanationInput.addEventListener("input", clearTicketPreview);
-
-githubRepoInput.addEventListener("input", () => {
-  window.localStorage.setItem(GITHUB_REPO_STORAGE_KEY, cleanText(githubRepoInput.value));
-  clearTicketPreview();
-});
 
 clearDrawingButton.addEventListener("click", () => {
   clearDrawnPolygons();
