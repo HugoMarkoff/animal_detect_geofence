@@ -1,4 +1,7 @@
 const countrySelect = document.getElementById("countryIso3");
+const countryInput = document.getElementById("countryLabel");
+const countryToggle = document.getElementById("country-toggle");
+const countryOptions = document.getElementById("country-options");
 const browserTitle = document.getElementById("browser-title");
 const countrySummary = document.getElementById("country-summary");
 const groupChips = document.getElementById("group-chips");
@@ -173,6 +176,20 @@ let currentCountryGeometry = null;
 let hasShownCorrectionRegionalHelp = false;
 
 const comboBoxes = {
+  country: {
+    key: "country",
+    root: document.getElementById("country-combobox"),
+    input: countryInput,
+    toggle: countryToggle,
+    menu: countryOptions,
+    hiddenInput: countrySelect,
+    options: [],
+    filteredOptions: [],
+    highlightedItemId: "",
+    keyboardMode: false,
+    emptyText: "No matching country or region pack.",
+    strictSelection: true,
+  },
   current: {
     key: "current",
     root: document.getElementById("current-species-combobox"),
@@ -221,6 +238,84 @@ function cleanText(value) {
 
 function sortKey(value) {
   return cleanText(value).toLocaleLowerCase();
+}
+
+function normalizePackKey(value) {
+  return cleanText(value).toUpperCase();
+}
+
+function countryPackSubdivisionName(entry) {
+  return cleanText(entry?.regionName || entry?.stateName || entry?.subdivisionName);
+}
+
+function countryPackKey(entry) {
+  const explicitKey = normalizePackKey(entry?.packId || entry?.packKey || entry?.id || entry?.iso3);
+  if (explicitKey) {
+    return explicitKey;
+  }
+
+  const relativePath = cleanText(entry?.path).replace(/^\.\//, "");
+  if (!relativePath) {
+    return "";
+  }
+
+  const stem = relativePath.split("/").pop()?.replace(/\.json$/i, "") || "";
+  return normalizePackKey(stem);
+}
+
+function countryPackLabel(entry) {
+  const displayName = cleanText(entry?.displayName || entry?.label || entry?.name);
+  if (displayName) {
+    return displayName;
+  }
+
+  const countryName = cleanText(entry?.countryName);
+  const subdivisionName = countryPackSubdivisionName(entry);
+  if (countryName && subdivisionName) {
+    return `${countryName} (${subdivisionName})`;
+  }
+
+  return countryName || countryPackKey(entry);
+}
+
+function countryPackMeta(entry) {
+  const unitType = cleanText(entry?.unitType || entry?.regionType || entry?.scopeLabel).replaceAll("_", " ");
+  if (unitType) {
+    return unitType;
+  }
+
+  if (countryPackSubdivisionName(entry)) {
+    return "Region";
+  }
+
+  return cleanText(entry?.iso3) || cleanText(entry?.parentIso3);
+}
+
+function countryPackAliases(entry) {
+  const aliases = new Set();
+  const label = countryPackLabel(entry);
+  const key = countryPackKey(entry);
+  const countryName = cleanText(entry?.countryName);
+  const subdivisionName = countryPackSubdivisionName(entry);
+
+  [key, countryName, label, subdivisionName, entry?.displayName, entry?.parentCountryName, entry?.parentIso3]
+    .map((value) => cleanText(value))
+    .filter(Boolean)
+    .forEach((value) => aliases.add(value));
+
+  if (key === "USA" || /united states/i.test(label) || /united states/i.test(countryName)) {
+    ["USA", "US", "U.S.", "America", "United States"].forEach((value) => aliases.add(value));
+  }
+
+  return Array.from(aliases);
+}
+
+function countryPackPath(entry, packKey) {
+  const relativePath = cleanText(entry?.path).replace(/^\.\//, "");
+  if (relativePath) {
+    return relativePath;
+  }
+  return `${normalizePackKey(packKey)}.json`;
 }
 
 function searchableText(values) {
@@ -391,32 +486,40 @@ async function loadCountryCatalog() {
   }
 
   const payload = await fetchJson(dataUrl("precomputed-countries/index.json"));
-  countryCatalogCache = (payload.countries || []).slice().sort((left, right) => sortKey(left.countryName).localeCompare(sortKey(right.countryName)));
+  countryCatalogCache = (payload.countries || [])
+    .filter((entry) => countryPackKey(entry))
+    .slice()
+    .sort((left, right) => sortKey(countryPackLabel(left)).localeCompare(sortKey(countryPackLabel(right))));
   return countryCatalogCache;
 }
 
-async function loadCountryPack(iso3) {
-  const normalizedIso3 = cleanText(iso3).toUpperCase();
-  if (!normalizedIso3) {
+async function loadCountryPack(packKey) {
+  const normalizedPackKey = normalizePackKey(packKey);
+  if (!normalizedPackKey) {
     throw new Error("Country is required.");
   }
 
-  if (!countryPackCache.has(normalizedIso3)) {
-    countryPackCache.set(normalizedIso3, fetchJson(dataUrl(`precomputed-countries/${encodeURIComponent(normalizedIso3)}.json`)));
+  if (!countryPackCache.has(normalizedPackKey)) {
+    const countries = await loadCountryCatalog();
+    const entry = countries.find((candidate) => countryPackKey(candidate) === normalizedPackKey) || null;
+    const relativePath = countryPackPath(entry, normalizedPackKey);
+    countryPackCache.set(normalizedPackKey, fetchJson(dataUrl(`precomputed-countries/${relativePath}`)));
   }
 
   try {
-    return await countryPackCache.get(normalizedIso3);
+    return await countryPackCache.get(normalizedPackKey);
   } catch (error) {
-    countryPackCache.delete(normalizedIso3);
+    countryPackCache.delete(normalizedPackKey);
     throw error;
   }
 }
 
-async function loadCountryData(iso3) {
-  const normalizedIso3 = cleanText(iso3).toUpperCase();
+async function loadCountryData(packKey) {
+  const normalizedPackKey = normalizePackKey(packKey);
   await loadAnimalCatalog();
-  const pack = await loadCountryPack(normalizedIso3);
+  const countries = await loadCountryCatalog();
+  const catalogEntry = countries.find((entry) => countryPackKey(entry) === normalizedPackKey) || null;
+  const pack = await loadCountryPack(normalizedPackKey);
   const species = [];
   const groups = {};
 
@@ -452,8 +555,8 @@ async function loadCountryData(iso3) {
   species.sort((left, right) => sortKey(left.commonName).localeCompare(sortKey(right.commonName)) || sortKey(left.binomial).localeCompare(sortKey(right.binomial)));
 
   return {
-    iso3: normalizedIso3,
-    countryName: pack.countryName || normalizedIso3,
+    iso3: normalizedPackKey,
+    countryName: countryPackLabel(catalogEntry) || pack.countryName || normalizedPackKey,
     precomputeMode: pack.precomputeMode || "unknown",
     summary: pack.summary || {
       total: species.length,
@@ -1733,15 +1836,40 @@ function clearDrawnPolygons() {
 }
 
 function populateCountrySelect(countries) {
-  const options = countries.map((country) => {
-    const option = document.createElement("option");
-    option.value = country.iso3;
-    option.textContent = country.countryName;
-    return option;
+  comboBoxes.country.options = countries.map((country) => {
+    const itemId = countryPackKey(country);
+    const label = countryPackLabel(country);
+    const aliases = countryPackAliases(country);
+    return {
+      itemId,
+      label,
+      meta: countryPackMeta(country),
+      aliases,
+      searchText: searchableText([
+        label,
+        ...aliases,
+        country?.unitType,
+        country?.regionType,
+        country?.scopeLabel,
+      ]),
+    };
   });
 
-  countrySelect.replaceChildren(...options);
-  countrySelect.value = countries.some((country) => country.iso3 === "DNK") ? "DNK" : countries[0]?.iso3 || "";
+  const defaultOption = comboBoxes.country.options.find((option) => option.itemId === "DNK") || comboBoxes.country.options[0] || null;
+  setCountryValue(defaultOption?.label || "", defaultOption?.itemId || "");
+
+  if (openComboKey === "country") {
+    renderComboOptions("country");
+  }
+}
+
+function setCountryValue(label, itemId = "") {
+  countryInput.value = label;
+  countrySelect.value = itemId;
+
+  if (openComboKey === "country") {
+    renderComboOptions("country");
+  }
 }
 
 function populateAnimalOptions(animals) {
@@ -1841,6 +1969,11 @@ function closeComboBox(key) {
   const combo = comboBoxes[key];
   if (!combo) {
     return;
+  }
+
+  if (combo.strictSelection) {
+    const selectedOption = combo.options.find((option) => option.itemId === combo.hiddenInput.value) || null;
+    combo.input.value = selectedOption?.label || "";
   }
 
   combo.root.classList.remove("open", "open-up");
@@ -1962,6 +2095,16 @@ function moveComboHighlight(key, direction) {
 function selectComboOption(key, itemId) {
   const option = comboBoxes[key]?.options.find((candidate) => candidate.itemId === itemId);
   if (!option) {
+    return;
+  }
+
+  if (key === "country") {
+    const hasChanged = countrySelect.value !== option.itemId;
+    setCountryValue(option.label, option.itemId);
+    closeComboBox(key);
+    if (hasChanged) {
+      countrySelect.dispatchEvent(new Event("change"));
+    }
     return;
   }
 
@@ -2404,6 +2547,49 @@ function syncCurrentSpeciesLookup() {
   }
 }
 
+function findCountryOptionByQuery(value) {
+  const query = sortKey(value);
+  if (!query) {
+    return null;
+  }
+
+  return comboBoxes.country.options.find((option) => {
+    if (sortKey(option.label) === query) {
+      return true;
+    }
+    return (option.aliases || []).some((alias) => sortKey(alias) === query);
+  }) || null;
+}
+
+function syncCountryLookup(commitSelection = false) {
+  if (document.activeElement === countryInput || isComboBoxOpen("country")) {
+    openComboBox("country");
+
+    const exactMatch = findCountryOptionByQuery(countryInput.value);
+    if (!commitSelection && exactMatch) {
+      comboBoxes.country.highlightedItemId = exactMatch.itemId;
+      renderComboOptions("country");
+    }
+  }
+
+  if (!commitSelection) {
+    return;
+  }
+
+  const match = findCountryOptionByQuery(countryInput.value);
+  if (!match) {
+    closeComboBox("country");
+    return;
+  }
+
+  const hasChanged = countrySelect.value !== match.itemId;
+  setCountryValue(match.label, match.itemId);
+  closeComboBox("country");
+  if (hasChanged) {
+    countrySelect.dispatchEvent(new Event("change"));
+  }
+}
+
 function syncProposedSpeciesLookup() {
   const label = cleanText(proposedSpeciesInput.value);
   proposedSpeciesItemIdInput.value = animalLabelIndex.get(label) || "";
@@ -2654,7 +2840,7 @@ Object.entries(comboBoxes).forEach(([key, combo]) => {
       return;
     }
 
-    if (event.key === "Enter" && isComboBoxOpen(key) && combo.keyboardMode && combo.highlightedItemId) {
+    if (event.key === "Enter" && isComboBoxOpen(key) && combo.highlightedItemId && (combo.keyboardMode || combo.strictSelection)) {
       event.preventDefault();
       selectComboOption(key, combo.highlightedItemId);
       return;
@@ -2700,6 +2886,12 @@ document.addEventListener("focusin", (event) => {
 
 currentSpeciesInput.addEventListener("input", syncCurrentSpeciesLookup);
 currentSpeciesInput.addEventListener("change", syncCurrentSpeciesLookup);
+countryInput.addEventListener("input", () => {
+  syncCountryLookup(false);
+});
+countryInput.addEventListener("change", () => {
+  syncCountryLookup(true);
+});
 
 scopeSelect.addEventListener("change", () => {
   updateFormVisibility();

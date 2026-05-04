@@ -78,9 +78,14 @@
               </div>
               <label class="field compact-field">
                 <span>Country</span>
-                <select id="countryIso3" name="countryIso3" aria-label="Country">
-                  <option value="">Loading countries...</option>
-                </select>
+                <div id="country-combobox" class="combo-box">
+                  <div class="combo-input-shell">
+                    <input id="countryLabel" name="countryLabel" placeholder="Search countries or regions" autocomplete="off" spellcheck="false" aria-label="Country" aria-autocomplete="list" aria-expanded="false" aria-controls="country-options">
+                    <button id="country-toggle" class="combo-toggle" type="button" aria-label="Toggle countries and regions"></button>
+                  </div>
+                  <div id="country-options" class="combo-menu" role="listbox" hidden></div>
+                </div>
+                <input id="countryIso3" name="countryIso3" type="hidden" value="">
               </label>
             </div>
 
@@ -237,6 +242,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260504w"></script>
+    <script src="./assets/app.js?v=20260504x"></script>
   </body>
 </html>
