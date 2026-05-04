@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504c">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260504d">
   </head>
   <body>
     <main class="shell">
@@ -80,9 +80,9 @@
             <div id="species-selection-grid" class="field-grid two-up">
               <label id="current-species-field" class="field">
                 <span>Current species</span>
-                <select id="currentSpeciesItemId" name="currentSpeciesItemId">
-                  <option value="">Select from current country pack</option>
-                </select>
+                <input id="currentSpeciesLabel" name="currentSpeciesLabel" list="current-species-options" placeholder="Select from current country pack">
+                <input id="currentSpeciesItemId" name="currentSpeciesItemId" type="hidden">
+                <datalist id="current-species-options"></datalist>
               </label>
 
               <label id="proposed-species-field" class="field">
@@ -174,6 +174,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260504c"></script>
+    <script src="./assets/app.js?v=20260504d"></script>
   </body>
 </html>

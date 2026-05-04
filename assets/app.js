@@ -7,7 +7,9 @@ const speciesList = document.getElementById("species-list");
 const ticketForm = document.getElementById("ticket-form");
 const speciesSelectionGrid = document.getElementById("species-selection-grid");
 const currentSpeciesField = document.getElementById("current-species-field");
-const currentSpeciesSelect = document.getElementById("currentSpeciesItemId");
+const currentSpeciesInput = document.getElementById("currentSpeciesLabel");
+const currentSpeciesItemIdInput = document.getElementById("currentSpeciesItemId");
+const currentSpeciesOptions = document.getElementById("current-species-options");
 const proposedSpeciesField = document.getElementById("proposed-species-field");
 const proposedSpeciesInput = document.getElementById("proposedSpeciesLabel");
 const proposedSpeciesItemIdInput = document.getElementById("proposedSpeciesItemId");
@@ -88,6 +90,7 @@ const GROUP_LABELS = {
 const countryCenterCache = new Map();
 const countryGeometryCache = new Map();
 const countryBoundarySegmentCache = new WeakMap();
+const currentSpeciesLabelIndex = new Map();
 const animalLabelIndex = new Map();
 const animalById = new Map();
 const countryPackCache = new Map();
@@ -1448,23 +1451,27 @@ function setProposedSpeciesValue(label, itemId = "") {
   proposedSpeciesItemIdInput.value = itemId;
 }
 
-function populateCurrentSpeciesSelect(species) {
-  const previous = currentSpeciesSelect.value;
-  const options = [
-    Object.assign(document.createElement("option"), {
-      value: "",
-      textContent: "Select from current country pack",
-    }),
-    ...species.map((entry) => {
-      const option = document.createElement("option");
-      option.value = entry.itemId;
-      option.textContent = `${entry.label} · ${entry.footprintShort}`;
-      return option;
-    }),
-  ];
+function setCurrentSpeciesValue(label, itemId = "") {
+  currentSpeciesInput.value = label;
+  currentSpeciesItemIdInput.value = itemId;
+}
 
-  currentSpeciesSelect.replaceChildren(...options);
-  currentSpeciesSelect.value = species.some((entry) => entry.itemId === previous) ? previous : "";
+function populateCurrentSpeciesOptions(species) {
+  const previous = currentSpeciesItemIdInput.value;
+  currentSpeciesLabelIndex.clear();
+
+  const options = species.map((entry) => {
+    currentSpeciesLabelIndex.set(entry.label, entry.itemId);
+    const option = document.createElement("option");
+    option.value = entry.label;
+    option.label = entry.footprintShort;
+    return option;
+  });
+
+  currentSpeciesOptions.replaceChildren(...options);
+
+  const previousEntry = species.find((entry) => entry.itemId === previous) || null;
+  setCurrentSpeciesValue(previousEntry?.label || "", previousEntry?.itemId || "");
 }
 
 function currentSpeciesById(itemId) {
@@ -1639,14 +1646,8 @@ function applySpeciesSelection(itemId, fitToMap = false) {
   updateSelectedRegionalLayers(fitToMap);
 
   if (suggestionType() !== "addition") {
-    currentSpeciesSelect.value = itemId || "";
-  }
-
-  if (suggestionType() === "correction") {
     const currentEntry = currentSpeciesById(itemId);
-    if (currentEntry && !cleanText(proposedSpeciesInput.value)) {
-      setProposedSpeciesValue(currentEntry.label, currentEntry.itemId);
-    }
+    setCurrentSpeciesValue(currentEntry?.label || "", itemId || "");
   }
 
   clearTicketPreview();
@@ -1691,12 +1692,28 @@ function updateFormVisibility() {
   scopeField.hidden = !showScope;
   speciesSelectionGrid.classList.toggle("single-field", showCurrentSpecies !== showProposedSpecies);
 
-  currentSpeciesSelect.required = showCurrentSpecies;
+  currentSpeciesInput.required = showCurrentSpecies;
   proposedSpeciesInput.required = showProposedSpecies;
   scopeSelect.required = showScope;
 
   enableDrawing(drawingEnabled);
   updateMapHint();
+}
+
+function syncCurrentSpeciesLookup() {
+  const label = cleanText(currentSpeciesInput.value);
+  const itemId = currentSpeciesLabelIndex.get(label) || "";
+  currentSpeciesItemIdInput.value = itemId;
+
+  if (itemId) {
+    applySpeciesSelection(itemId, false);
+    return;
+  }
+
+  state.highlightedSpeciesId = "";
+  renderSpeciesList();
+  updateSelectedRegionalLayers(false);
+  clearTicketPreview();
 }
 
 function syncProposedSpeciesLookup() {
@@ -1744,7 +1761,7 @@ function buildTicketPayload() {
   return {
     countryIso3: countrySelect.value,
     suggestionType: suggestionType(),
-    currentSpeciesItemId: currentSpeciesSelect.value,
+    currentSpeciesItemId: currentSpeciesItemIdInput.value,
     proposedSpeciesItemId: proposedSpeciesItemIdInput.value,
     proposedSpeciesLabel: cleanText(proposedSpeciesInput.value),
     scope: scopeSelect.value,
@@ -1766,7 +1783,7 @@ async function loadCountry(iso3) {
     const countryData = await loadCountryData(iso3);
     state.currentCountry = countryData;
     renderCountryHeader();
-    populateCurrentSpeciesSelect(countryData.species || []);
+    populateCurrentSpeciesOptions(countryData.species || []);
     renderGroupChips();
     renderSpeciesList();
     updateMapSummary();
@@ -1827,7 +1844,7 @@ async function initialize() {
 
 function handleSuggestionTypeChange() {
   if (suggestionType() === "addition") {
-    currentSpeciesSelect.value = "";
+    setCurrentSpeciesValue("", "");
     state.highlightedSpeciesId = "";
     updateSelectedRegionalLayers(false);
     renderSpeciesList();
@@ -1874,9 +1891,8 @@ document.querySelectorAll(".segment-option").forEach((option) => {
   });
 });
 
-currentSpeciesSelect.addEventListener("change", () => {
-  applySpeciesSelection(currentSpeciesSelect.value, false);
-});
+currentSpeciesInput.addEventListener("input", syncCurrentSpeciesLookup);
+currentSpeciesInput.addEventListener("change", syncCurrentSpeciesLookup);
 
 scopeSelect.addEventListener("change", () => {
   updateFormVisibility();
