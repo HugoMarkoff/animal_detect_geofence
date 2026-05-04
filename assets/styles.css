@@ -846,73 +846,29 @@ button {
 }
 
 .map-help-tool-icon {
-  position: relative;
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   border-radius: 8px;
-  background: rgba(24, 28, 31, 0.06);
+  background-color: rgba(24, 28, 31, 0.06);
   flex: 0 0 auto;
 }
 
-.map-help-tool-icon::before,
-.map-help-tool-icon::after {
-  content: "";
-  position: absolute;
+.map-help-tool-sprite {
+  background-image: url("https://unpkg.com/leaflet-draw@1.0.4/dist/images/spritesheet.svg");
+  background-repeat: no-repeat;
+  background-size: 300px 30px;
 }
 
-.map-help-tool-icon-draw::before {
-  inset: 4px;
-  border: 2px solid rgba(24, 28, 31, 0.72);
-  clip-path: polygon(18% 18%, 70% 12%, 84% 42%, 74% 80%, 28% 76%, 14% 46%);
+.map-help-tool-sprite-draw {
+  background-position: -29px -1px;
 }
 
-.map-help-tool-icon-draw::after {
-  top: 4px;
-  left: 4px;
-  width: 5px;
-  height: 5px;
-  border-radius: 999px;
-  background: var(--green);
-  box-shadow: 10px -1px 0 var(--green), 12px 10px 0 var(--green), 2px 12px 0 var(--green);
+.map-help-tool-sprite-edit {
+  background-position: -210px -1px;
 }
 
-.map-help-tool-icon-edit::before {
-  left: 6px;
-  top: 10px;
-  width: 11px;
-  height: 3px;
-  background: rgba(24, 28, 31, 0.78);
-  border-radius: 999px;
-  transform: rotate(-35deg);
-}
-
-.map-help-tool-icon-edit::after {
-  right: 4px;
-  top: 5px;
-  width: 0;
-  height: 0;
-  border-left: 5px solid rgba(24, 28, 31, 0.78);
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  transform: rotate(-35deg);
-}
-
-.map-help-tool-icon-remove::before,
-.map-help-tool-icon-remove::after {
-  top: 5px;
-  left: 10px;
-  width: 2px;
-  height: 12px;
-  background: rgba(24, 28, 31, 0.78);
-  border-radius: 999px;
-}
-
-.map-help-tool-icon-remove::before {
-  transform: rotate(45deg);
-}
-
-.map-help-tool-icon-remove::after {
-  transform: rotate(-45deg);
+.map-help-tool-sprite-remove {
+  background-position: -240px -2px;
 }
 
 .map-help-card .secondary-button {
