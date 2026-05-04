@@ -1825,6 +1825,18 @@ async function initialize() {
   }
 }
 
+function handleSuggestionTypeChange() {
+  if (suggestionType() === "addition") {
+    currentSpeciesSelect.value = "";
+    state.highlightedSpeciesId = "";
+    updateSelectedRegionalLayers(false);
+    renderSpeciesList();
+  }
+
+  updateFormVisibility();
+  clearTicketPreview();
+}
+
 groupChips.addEventListener("click", (event) => {
   const chip = event.target.closest("[data-group]");
   if (!chip) {
@@ -1853,15 +1865,12 @@ speciesFilterInput.addEventListener("input", () => {
 });
 
 document.querySelectorAll('input[name="suggestionType"]').forEach((input) => {
-  input.addEventListener("change", () => {
-    if (suggestionType() === "addition") {
-      currentSpeciesSelect.value = "";
-      state.highlightedSpeciesId = "";
-      updateSelectedRegionalLayers(false);
-      renderSpeciesList();
-    }
-    updateFormVisibility();
-    clearTicketPreview();
+  input.addEventListener("change", handleSuggestionTypeChange);
+});
+
+document.querySelectorAll(".segment-option").forEach((option) => {
+  option.addEventListener("click", () => {
+    requestAnimationFrame(handleSuggestionTypeChange);
   });
 });
 
