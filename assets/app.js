@@ -5,6 +5,7 @@ const groupChips = document.getElementById("group-chips");
 const speciesFilterInput = document.getElementById("speciesFilter");
 const speciesList = document.getElementById("species-list");
 const ticketForm = document.getElementById("ticket-form");
+const speciesSelectionGrid = document.getElementById("species-selection-grid");
 const currentSpeciesField = document.getElementById("current-species-field");
 const currentSpeciesSelect = document.getElementById("currentSpeciesItemId");
 const proposedSpeciesField = document.getElementById("proposed-species-field");
@@ -487,9 +488,11 @@ function buildTicketFromPayload(payload) {
       throw new Error("Choose national or regional coverage for additions and corrections.");
     }
 
-    proposedSpecies = buildProposedSpecies(payload);
-    if (!proposedSpecies.label) {
-      throw new Error("Choose or type the species for the proposed update.");
+    if (suggestion === "addition") {
+      proposedSpecies = buildProposedSpecies(payload);
+      if (!proposedSpecies.label) {
+        throw new Error("Choose or type the species for the proposed update.");
+      }
     }
 
     polygons = sanitizePolygons(payload.polygons);
@@ -526,10 +529,7 @@ function buildIssueTitle(ticket) {
   if (ticket.suggestionType === "addition") {
     return `${prefix} Add ${ticket.proposedSpecies.label} as ${ticket.scopeLabel.toLowerCase()}`;
   }
-  if (ticket.currentSpecies.label === ticket.proposedSpecies.label) {
-    return `${prefix} Adjust ${ticket.currentSpecies.label} to ${ticket.scopeLabel.toLowerCase()}`;
-  }
-  return `${prefix} Correct ${ticket.currentSpecies.label} to ${ticket.proposedSpecies.label}`;
+  return `${prefix} Adjust ${ticket.currentSpecies.label} to ${ticket.scopeLabel.toLowerCase()}`;
 }
 
 function buildIssueBody(ticket) {
@@ -546,7 +546,7 @@ function buildIssueBody(ticket) {
     lines.push(`- Current status bucket: ${ticket.currentSpecies.bucket}`);
   }
 
-  if (ticket.proposedSpecies.label) {
+  if (ticket.suggestionType === "addition" && ticket.proposedSpecies.label) {
     lines.push(`- Proposed species: ${ticket.proposedSpecies.label}`);
   }
 
@@ -1682,13 +1682,14 @@ function updateMapHint() {
 function updateFormVisibility() {
   const type = suggestionType();
   const showCurrentSpecies = type !== "addition";
-  const showProposedSpecies = type !== "removal";
+  const showProposedSpecies = type === "addition";
   const showScope = type !== "removal";
   const drawingEnabled = showScope && scopeSelect.value === "regional";
 
   currentSpeciesField.hidden = !showCurrentSpecies;
   proposedSpeciesField.hidden = !showProposedSpecies;
   scopeField.hidden = !showScope;
+  speciesSelectionGrid.classList.toggle("single-field", showCurrentSpecies !== showProposedSpecies);
 
   currentSpeciesSelect.required = showCurrentSpecies;
   proposedSpeciesInput.required = showProposedSpecies;
