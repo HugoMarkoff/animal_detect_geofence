@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Country Pack Review Desk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    >
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
+    >
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace">
+        <section class="panel browser-panel">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Current Pack</p>
+              <h2 id="browser-title">Loading...</h2>
+            </div>
+            <label class="field compact-field">
+              <span>Country</span>
+              <select id="countryIso3" name="countryIso3" aria-label="Country">
+                <option value="">Loading countries...</option>
+              </select>
+            </label>
+          </div>
+
+          <p id="country-summary" class="section-copy">Loading current country pack.</p>
+
+          <div id="group-chips" class="group-chips"></div>
+
+          <label class="field search-field">
+            <span>Filter species</span>
+            <input id="speciesFilter" type="search" placeholder="Search common or binomial name">
+          </label>
+
+          <div id="species-list" class="species-list">
+            <article class="empty-card">Loading species...</article>
+          </div>
+        </section>
+
+        <section class="panel ticket-panel">
+          <div class="section-head">
+            <div>
+              <p class="section-kicker">Suggestion Ticket</p>
+              <h2>Draft Update</h2>
+            </div>
+          </div>
+
+          <form id="ticket-form" class="ticket-form">
+            <label class="field">
+              <span>GitHub repo</span>
+              <input id="githubRepo" name="githubRepo" placeholder="owner/repo">
+            </label>
+
+            <fieldset class="mode-fieldset">
+              <legend>Suggestion type</legend>
+              <div class="segmented-control">
+                <label class="segment-option">
+                  <input type="radio" name="suggestionType" value="addition" checked>
+                  <span>Addition</span>
+                </label>
+                <label class="segment-option">
+                  <input type="radio" name="suggestionType" value="correction">
+                  <span>Correction</span>
+                </label>
+                <label class="segment-option">
+                  <input type="radio" name="suggestionType" value="removal">
+                  <span>Removal</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="field-grid two-up">
+              <label id="current-species-field" class="field">
+                <span>Current species</span>
+                <select id="currentSpeciesItemId" name="currentSpeciesItemId">
+                  <option value="">Select from current country pack</option>
+                </select>
+              </label>
+
+              <label id="proposed-species-field" class="field">
+                <span>Proposed species</span>
+                <input id="proposedSpeciesLabel" name="proposedSpeciesLabel" list="animal-options" placeholder="Type or pick a species">
+                <input id="proposedSpeciesItemId" name="proposedSpeciesItemId" type="hidden">
+                <datalist id="animal-options"></datalist>
+              </label>
+            </div>
+
+            <div class="field-grid two-up">
+              <label id="scope-field" class="field">
+                <span>Coverage</span>
+                <select id="scope" name="scope">
+                  <option value="national">National</option>
+                  <option value="regional">Regional</option>
+                </select>
+              </label>
+
+              <div class="field map-hint-field">
+                <span>Map action</span>
+                <div id="map-hint" class="map-hint-pill">National suggestions do not need polygons.</div>
+              </div>
+            </div>
+
+            <label class="field">
+              <span>Explanation</span>
+              <textarea
+                id="explanation"
+                name="explanation"
+                rows="6"
+                required
+                placeholder="Explain the proposed change, evidence, and why it should update the current list."
+              ></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button id="build-ticket" type="submit">Build Ticket</button>
+              <button id="clear-drawing" class="secondary-button" type="button">Clear Drawn Polygons</button>
+              <p id="status-line" class="status-line">Ready.</p>
+            </div>
+          </form>
+
+          <section class="ticket-preview">
+            <div class="section-head preview-head">
+              <div>
+                <p class="section-kicker">Preview</p>
+                <h3>GitHub Issue Draft</h3>
+              </div>
+              <div class="preview-actions">
+                <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Markdown</button>
+                <a id="open-github" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Open GitHub Draft</a>
+              </div>
+            </div>
+
+            <label class="field">
+              <span>Title</span>
+              <input id="ticket-title" type="text" readonly placeholder="Build a ticket to preview the issue title.">
+            </label>
+
+            <label class="field">
+              <span>Body</span>
+              <textarea id="ticket-body" rows="14" readonly placeholder="The issue body will appear here."></textarea>
+            </label>
+
+            <div id="ticket-warnings" class="warning-list" hidden></div>
+          </section>
+        </section>
+      </section>
+
+      <section class="panel map-panel">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Map</p>
+            <h2>Regional Footprints</h2>
+          </div>
+          <p id="map-summary" class="map-summary">Loading map.</p>
+        </div>
+
+        <div id="review-map" aria-label="Country review map"></div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+    <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
+    <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
