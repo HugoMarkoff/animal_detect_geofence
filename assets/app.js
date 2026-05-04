@@ -29,6 +29,10 @@ const dismissRegionalHelpButton = document.getElementById("dismiss-regional-help
 const statusLine = document.getElementById("status-line");
 const ticketTitleInput = document.getElementById("ticket-title");
 const ticketBodyInput = document.getElementById("ticket-body");
+const ticketPreviewPanel = document.getElementById("ticket-preview-panel");
+const buildTicketButton = document.getElementById("build-ticket");
+const ticketPreviewGate = document.getElementById("ticket-preview-gate");
+const ticketPreviewGateMessage = document.getElementById("ticket-preview-gate-message");
 const copyMarkdownButton = document.getElementById("copy-markdown");
 const openTicketLink = document.getElementById("open-ticket");
 const ticketWarnings = document.getElementById("ticket-warnings");
@@ -165,6 +169,7 @@ let suggestionDrawLayer;
 let worldCountryGeometryIndexPromise;
 let openComboKey = null;
 let currentCountryGeometry = null;
+let hasShownCorrectionRegionalHelp = false;
 
 const comboBoxes = {
   current: {
@@ -1299,12 +1304,6 @@ function pointInGeoJson(latlng, geoJson) {
   return pointInFeatureGeometry(latlng, geoJson);
 }
 
-function formatSpeciesList(species) {
-  return species
-    .map((item) => escapeHtml(item.label || item.commonName || item.binomial || "Unknown species"))
-    .join("<br>");
-}
-
 function currentNationalSpecies() {
   return (state.currentCountry?.species || [])
     .filter((entry) => entry.footprintCode === "countrywide")
@@ -1313,44 +1312,35 @@ function currentNationalSpecies() {
 }
 
 function buildMapHoverTooltipHtml(entries, nationalSpecies = []) {
-  const speciesById = new Map();
+  const regionalIds = new Set();
   entries.forEach(({ feature }) => {
     (feature.properties?.species || []).forEach((species) => {
-      const key = species.itemId || species.label;
-      if (!speciesById.has(key)) {
-        speciesById.set(key, species);
-      }
+      regionalIds.add(species.itemId || species.label);
     });
   });
 
-  const species = Array.from(speciesById.values()).sort((left, right) => {
-    return (left.commonName || left.binomial || left.label || "").localeCompare(right.commonName || right.binomial || right.label || "");
-  });
-
+  const regionalCount = regionalIds.size;
   const nationalCount = nationalSpecies.length;
-  const countryName = escapeHtml(state.currentCountry?.countryName || "this country");
 
-  if (!species.length && !nationalCount) {
+  if (!regionalCount && !nationalCount) {
     return "";
   }
 
-  if (!species.length) {
+  if (!regionalCount) {
     return `
       <div class="footprint-tooltip">
         <strong>${nationalCount} national species</strong>
-        <div class="footprint-tooltip-note">These species cover all of ${countryName}.</div>
       </div>
     `;
   }
 
   const nationalNote = nationalCount
-    ? `<div class="footprint-tooltip-note">And ${nationalCount} species are marked national across ${countryName}.</div>`
+    ? `<div class="footprint-tooltip-note">${nationalCount} national species</div>`
     : "";
 
   return `
     <div class="footprint-tooltip">
-      <strong>${species.length} regional species</strong>
-      <div class="footprint-tooltip-list">${formatSpeciesList(species)}</div>
+      <strong>${regionalCount} regional species</strong>
       ${nationalNote}
     </div>
   `;
@@ -1424,7 +1414,7 @@ function clearRegionalOverlays() {
 function handleMapOverlayHover(event) {
   const hits = currentRegionalEntries.filter(({ feature }) => pointInFeatureGeometry(event.latlng, feature.geometry));
   const nationalSpecies = currentNationalSpecies();
-  const showNationalSummary = nationalSpecies.length && pointInGeoJson(event.latlng, currentCountryGeometry) && (hits.length || !currentRegionalEntries.length);
+  const showNationalSummary = nationalSpecies.length && pointInGeoJson(event.latlng, currentCountryGeometry);
 
   if (!hits.length && !showNationalSummary) {
     resetRegionalHoverState();
@@ -2150,22 +2140,6 @@ function updateMapHint() {
   clearDrawingButton.disabled = false;
 }
 
-function hasSeenRegionalHelp() {
-  try {
-    return window.sessionStorage.getItem(REGIONAL_HELP_SEEN_SESSION_KEY) === "seen";
-  } catch {
-    return false;
-  }
-}
-
-function rememberRegionalHelpSeen() {
-  try {
-    window.sessionStorage.setItem(REGIONAL_HELP_SEEN_SESSION_KEY, "seen");
-  } catch {
-    // Ignore storage failures and keep the guide ephemeral.
-  }
-}
-
 function hideRegionalHelp() {
   if (regionalHelpCard) {
     regionalHelpCard.hidden = true;
@@ -2177,18 +2151,160 @@ function maybeShowRegionalHelp() {
     return;
   }
 
-  if (suggestionType() === "removal" || scopeSelect.value !== "regional") {
+  if (suggestionType() !== "correction" || scopeSelect.value !== "regional") {
     hideRegionalHelp();
     return;
   }
 
-  if (hasSeenRegionalHelp()) {
+  if (hasShownCorrectionRegionalHelp) {
     hideRegionalHelp();
     return;
   }
 
   regionalHelpCard.hidden = false;
-  rememberRegionalHelpSeen();
+  hasShownCorrectionRegionalHelp = true;
+}
+
+function normalizedScopeForSpecies(entry) {
+  if (!entry) {
+    return "";
+  }
+
+  if (entry.footprintCode === "countrywide") {
+    return "national";
+  }
+
+  if (entry.footprintCode === "regional") {
+    return "regional";
+  }
+
+  return "";
+}
+
+function currentPackHasSpecies(label, itemId = "") {
+  const normalizedLabel = sortKey(label);
+  return (state.currentCountry?.species || []).some((entry) => {
+    if (itemId && entry.itemId === itemId) {
+      return true;
+    }
+    return normalizedLabel && sortKey(entry.label) === normalizedLabel;
+  });
+}
+
+function ticketBuildState() {
+  if (!state.currentCountry) {
+    return {
+      canBuild: false,
+      message: "Load a country pack to unlock the ticket preview.",
+    };
+  }
+
+  if (requestNotificationInput.checked) {
+    const notificationEmail = cleanText(notificationEmailInput.value);
+    if (!notificationEmail) {
+      return {
+        canBuild: false,
+        message: "Add an email address to unlock the ticket preview.",
+      };
+    }
+
+    if (!NOTIFICATION_EMAIL_PATTERN.test(notificationEmail)) {
+      return {
+        canBuild: false,
+        message: "Enter a valid notification email to unlock the ticket preview.",
+      };
+    }
+  }
+
+  if (suggestionType() === "addition") {
+    const proposedLabel = cleanText(proposedSpeciesInput.value);
+    const proposedItemId = cleanText(proposedSpeciesItemIdInput.value);
+
+    if (!proposedLabel) {
+      return {
+        canBuild: false,
+        message: "Choose a species to unlock the ticket preview.",
+      };
+    }
+
+    if (currentPackHasSpecies(proposedLabel, proposedItemId)) {
+      return {
+        canBuild: false,
+        message: "That species is already in the current pack. Use Correction or Removal instead.",
+      };
+    }
+
+    if (scopeSelect.value === "regional" && !state.drawnPolygons.length) {
+      return {
+        canBuild: false,
+        message: "Draw at least one regional area to unlock the ticket preview.",
+      };
+    }
+
+    return {
+      canBuild: true,
+      message: "Build the ticket preview for this addition.",
+    };
+  }
+
+  if (suggestionType() === "correction") {
+    const currentEntry = currentSpeciesById(currentSpeciesItemIdInput.value);
+    if (!currentEntry) {
+      return {
+        canBuild: false,
+        message: "Choose a current species to unlock the ticket preview.",
+      };
+    }
+
+    if (scopeSelect.value === "regional" && !state.drawnPolygons.length) {
+      return {
+        canBuild: false,
+        message: "Draw at least one regional area to unlock the ticket preview.",
+      };
+    }
+
+    const currentScope = normalizedScopeForSpecies(currentEntry);
+    if (currentScope === scopeSelect.value) {
+      if (scopeSelect.value === "regional" && state.drawnPolygons.length) {
+        return {
+          canBuild: true,
+          message: "Build the ticket preview for this regional correction.",
+        };
+      }
+
+      return {
+        canBuild: false,
+        message: "Choose a different coverage or draw a new regional area to unlock the ticket preview.",
+      };
+    }
+
+    return {
+      canBuild: true,
+      message: "Build the ticket preview for this correction.",
+    };
+  }
+
+  if (!currentSpeciesById(currentSpeciesItemIdInput.value)) {
+    return {
+      canBuild: false,
+      message: "Choose a current species to unlock the ticket preview.",
+    };
+  }
+
+  return {
+    canBuild: true,
+    message: "Build the ticket preview for this removal.",
+  };
+}
+
+function updateTicketPreviewGate() {
+  const buildState = ticketBuildState();
+  const hasPreview = Boolean(state.preview?.title || state.preview?.body);
+
+  ticketPreviewPanel.classList.toggle("locked", !hasPreview);
+  ticketPreviewGate.hidden = hasPreview;
+  buildTicketButton.disabled = !buildState.canBuild;
+  ticketPreviewGateMessage.textContent = buildState.message;
 }
 
 function updateFormVisibility() {
@@ -2218,6 +2334,7 @@ function updateFormVisibility() {
   updateMapHint();
   updateSuggestionGuidance();
   maybeShowRegionalHelp();
+  updateTicketPreviewGate();
 }
 
 function syncCurrentSpeciesLookup() {
@@ -2253,6 +2370,7 @@ function clearTicketPreview() {
   copyMarkdownButton.disabled = true;
   openTicketLink.href = "#";
   openTicketLink.classList.add("disabled");
+  updateTicketPreviewGate();
 }
 
 function renderTicketPreview(preview) {
@@ -2277,6 +2395,8 @@ function renderTicketPreview(preview) {
     ticketWarnings.hidden = true;
     ticketWarnings.innerHTML = "";
   }
+
+  updateTicketPreviewGate();
 }
 
 function buildTicketPayload() {
@@ -2324,6 +2444,7 @@ async function loadCountry(iso3) {
     updateMapSummary();
     clearTicketPreview();
     await loadRegionalOverlays();
+    updateTicketPreviewGate();
     setStatus("Ready.");
   } catch (error) {
     console.error(error);
@@ -2332,6 +2453,13 @@ async function loadCountry(iso3) {
 }
 
 async function buildTicketPreview() {
+  const buildState = ticketBuildState();
+  if (!buildState.canBuild) {
+    updateTicketPreviewGate();
+    setStatus(buildState.message, true);
+    return;
+  }
+
   setStatus("Building ticket...");
   try {
     const preview = buildTicketPreviewData(buildTicketPayload());
@@ -2363,6 +2491,7 @@ async function initialize() {
   updateFormVisibility();
   updateNotificationPreference();
   updateSuggestionGuidance();
+  updateTicketPreviewGate();
 
   try {
     const [animals, countries] = await Promise.all([

@@ -629,11 +629,65 @@ button {
 }
 
 .ticket-preview {
+  position: relative;
   display: grid;
   gap: 14px;
   margin-top: 18px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
+}
+
+.ticket-preview.locked > :not(.ticket-preview-gate) {
+  opacity: 0.28;
+  filter: saturate(0.65);
+  pointer-events: none;
+  user-select: none;
+}
+
+.ticket-preview-gate {
+  position: absolute;
+  inset: 18px 0 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(242, 248, 244, 0.22), rgba(242, 248, 244, 0.64));
+}
+
+.ticket-preview-gate-card {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  width: min(360px, 100%);
+  padding: 18px 18px 16px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 36px rgba(24, 28, 31, 0.1);
+}
+
+.ticket-preview-gate-card button {
+  width: 100%;
+}
+
+.ticket-preview-gate-card button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.ticket-preview-gate-card button:disabled:hover {
+  transform: none;
+}
+
+.ticket-preview-gate-message {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  text-align: center;
 }
 
 .preview-head {
@@ -880,6 +934,11 @@ button {
   .map-help-card {
     position: static;
     width: 100%;
+  }
+
+  .ticket-preview-gate {
+    inset: 12px 0 0;
+    padding: 12px;
   }
 
   #review-map {
