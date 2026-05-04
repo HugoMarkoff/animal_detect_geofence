@@ -47,7 +47,7 @@ const COASTLINE_SNAP_DISTANCE_KM = 8;
 const COASTLINE_FILL_BUFFER_KM = 4;
 const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen";
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
-const DEFAULT_TICKET_REPOSITORY = "HugoMarkoff/animal_detect_geofence";
+const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DATA_ROOT = "./data";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
@@ -643,7 +643,7 @@ function buildSuggestionGuidanceText() {
     return `Correction: choose a species that already exists in ${countryName} and change its coverage to national.`;
   }
 
-  return `Removal: choose a species that already exists in ${countryName} to open an issue asking for its removal from the current pack. No drawing is needed.`;
+  return `Removal: choose a species that already exists in ${countryName} to send a ticket asking for its removal from the current pack. No drawing is needed.`;
 }
 
 function updateSuggestionGuidance() {
@@ -718,13 +718,13 @@ function buildIssueBody(ticket) {
   return lines.join("\n").trim();
 }
 
-function buildIssueUrl(repository, title, body) {
-  if (!repository) {
+function buildEmailUrl(recipient, title, body) {
+  if (!recipient) {
     return null;
   }
 
-  const baseUrl = `https://github.com/${repository}/issues/new`;
-  const fullParams = new URLSearchParams({ title, body });
+  const baseUrl = `mailto:${recipient}`;
+  const fullParams = new URLSearchParams({ subject: title, body });
   const fullUrl = `${baseUrl}?${fullParams.toString()}`;
   if (fullUrl.length <= MAX_TICKET_URL_LENGTH) {
     return {
@@ -733,7 +733,7 @@ function buildIssueUrl(repository, title, body) {
     };
   }
 
-  const titleOnlyParams = new URLSearchParams({ title });
+  const titleOnlyParams = new URLSearchParams({ subject: title });
   return {
     url: `${baseUrl}?${titleOnlyParams.toString()}`,
     includesBody: false,
@@ -744,13 +744,13 @@ function buildTicketPreviewData(payload) {
   const ticket = buildTicketFromPayload(payload);
   const title = buildIssueTitle(ticket);
   const body = buildIssueBody(ticket);
-  const issueLink = buildIssueUrl(DEFAULT_TICKET_REPOSITORY, title, body);
+  const issueLink = buildEmailUrl(DEFAULT_TICKET_EMAIL, title, body);
   const warnings = [];
 
   if (!issueLink) {
-    warnings.push("GitHub issue opening is unavailable right now. Use Copy Ticket instead.");
+    warnings.push("Email draft opening is unavailable right now. Use Copy Ticket instead.");
   } else if (!issueLink.includesBody) {
-    warnings.push("GitHub will open with the title only. Use Copy Ticket to paste the full ticket details.");
+    warnings.push("Your email app will open with the subject only. Use Copy Ticket to paste the full ticket details.");
   }
 
   return {
