@@ -19,7 +19,10 @@ const animalOptions = document.getElementById("animal-options");
 const scopeField = document.getElementById("scope-field");
 const scopeSelect = document.getElementById("scope");
 const mapHint = document.getElementById("map-hint");
-const explanationInput = document.getElementById("explanation");
+const suggestionGuidance = document.getElementById("suggestion-guidance");
+const requestNotificationInput = document.getElementById("requestNotification");
+const notificationEmailField = document.getElementById("notification-email-field");
+const notificationEmailInput = document.getElementById("notificationEmail");
 const clearDrawingButton = document.getElementById("clear-drawing");
 const statusLine = document.getElementById("status-line");
 const ticketTitleInput = document.getElementById("ticket-title");
@@ -41,6 +44,7 @@ const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
 const DEFAULT_TICKET_REPOSITORY = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
 const MAX_TICKET_URL_LENGTH = 7000;
+const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
   likely_false: "Needs Review",
@@ -498,9 +502,13 @@ function buildTicketFromPayload(payload) {
     throw new Error("Suggestion type must be addition, correction, or removal.");
   }
 
-  const explanation = cleanText(payload.explanation);
-  if (!explanation) {
-    throw new Error("Explanation is required.");
+  const notifyOnFix = Boolean(payload.notifyOnFix);
+  const notificationEmail = cleanText(payload.notificationEmail);
+  if (notifyOnFix && !notificationEmail) {
+    throw new Error("Enter an email if you want a notification when the issue is fixed.");
+  }
+  if (notificationEmail && !NOTIFICATION_EMAIL_PATTERN.test(notificationEmail)) {
+    throw new Error("Enter a valid email address for notifications.");
   }
 
   const speciesIndex = new Map((state.currentCountry.species || []).map((entry) => [entry.itemId, entry]));
@@ -542,6 +550,15 @@ function buildTicketFromPayload(payload) {
     scopeLabel = scope === "regional" ? "Regional" : "National";
   }
 
+  const explanation = buildRequestedActionText({
+    suggestionType: suggestion,
+    countryName: state.currentCountry.countryName,
+    currentSpecies,
+    proposedSpecies,
+    scopeLabel,
+    polygons,
+  });
+
   return {
     countryIso3,
     countryName: state.currentCountry.countryName,
@@ -554,26 +571,78 @@ function buildTicketFromPayload(payload) {
     scope,
     scopeLabel,
     explanation,
+    notifyOnFix,
+    notificationEmail: notifyOnFix ? notificationEmail : "",
     currentSpecies,
     proposedSpecies,
     polygons,
   };
 }
 
-function buildIssueTitle(ticket) {
-  const prefix = `[${ticket.countryIso3}]`;
+function buildTicketSummary(ticket) {
+  const countryName = ticket.countryName;
+  const coverage = ticket.scopeLabel ? `${ticket.scopeLabel.toLowerCase()} coverage` : "";
+
   if (ticket.suggestionType === "removal") {
-    return `${prefix} Remove ${ticket.currentSpecies.label} from the country pack`;
+    return `Removing ${ticket.currentSpecies.label} from ${countryName}`;
   }
   if (ticket.suggestionType === "addition") {
-    return `${prefix} Add ${ticket.proposedSpecies.label} as ${ticket.scopeLabel.toLowerCase()}`;
+    return `Adding ${ticket.proposedSpecies.label} to ${coverage} in ${countryName}`;
   }
-  return `${prefix} Adjust ${ticket.currentSpecies.label} to ${ticket.scopeLabel.toLowerCase()}`;
+  return `Updating ${ticket.currentSpecies.label} to ${coverage} in ${countryName}`;
+}
+
+function buildRequestedActionText(ticketLike) {
+  if (ticketLike.suggestionType === "removal") {
+    return `Please remove ${ticketLike.currentSpecies.label} from the ${ticketLike.countryName} country pack.`;
+  }
+
+  if (ticketLike.suggestionType === "addition") {
+    const polygonNote = ticketLike.scopeLabel === "Regional" && ticketLike.polygons.length
+      ? " The selected regional polygons show the requested footprint."
+      : "";
+    return `Please add ${ticketLike.proposedSpecies.label} with ${ticketLike.scopeLabel.toLowerCase()} coverage in ${ticketLike.countryName}.${polygonNote}`;
+  }
+
+  const correctionPolygonNote = ticketLike.scopeLabel === "Regional" && ticketLike.polygons.length
+    ? " The selected regional polygons show the requested corrected footprint."
+    : "";
+  return `Please update ${ticketLike.currentSpecies.label} to ${ticketLike.scopeLabel.toLowerCase()} coverage in ${ticketLike.countryName}.${correctionPolygonNote}`;
+}
+
+function buildSuggestionGuidanceText() {
+  const countryName = state.currentCountry?.countryName || "the selected country";
+
+  if (suggestionType() === "addition") {
+    if (scopeSelect.value === "regional") {
+      return `Addition: search the full species catalog, choose the species you want to add, and draw one or more polygons for the regional footprint in ${countryName}.`;
+    }
+    return `Addition: search the full species catalog and choose whether the species should be added as national coverage in ${countryName}.`;
+  }
+
+  if (suggestionType() === "correction") {
+    if (scopeSelect.value === "regional") {
+      return `Correction: choose a species that already exists in ${countryName}, switch it to regional coverage, and draw the regional footprint you want applied.`;
+    }
+    return `Correction: choose a species that already exists in ${countryName} and change its coverage to national.`;
+  }
+
+  return `Removal: choose a species that already exists in ${countryName} to open an issue asking for its removal from the current pack. No polygons are needed.`;
+}
+
+function updateSuggestionGuidance() {
+  suggestionGuidance.textContent = buildSuggestionGuidanceText();
+}
+
+function buildIssueTitle(ticket) {
+  const prefix = `[${ticket.countryIso3}]`;
+  return `${prefix} ${buildTicketSummary(ticket)}`;
 }
 
 function buildIssueBody(ticket) {
   const lines = [
     "## Requested update",
+    `- Summary: ${buildTicketSummary(ticket)}`,
     `- Country: ${ticket.countryName} (${ticket.countryIso3})`,
     `- Pack mode: ${ticket.countryPrecomputeMode}`,
     `- Suggestion type: ${ticket.suggestionTypeLabel}`,
@@ -593,10 +662,15 @@ function buildIssueBody(ticket) {
     lines.push(`- Requested coverage: ${ticket.scopeLabel}`);
   }
 
+  if (ticket.notifyOnFix) {
+    lines.push(`- Fix notification requested: Yes`);
+    lines.push(`- Notification email: ${ticket.notificationEmail}`);
+  }
+
   const summary = ticket.countrySummary || {};
   lines.push(`- Country pack total: ${summary.total || 0}`);
   lines.push(`- Regional species currently mapped: ${ticket.countryGroups?.regional || 0}`);
-  lines.push("", "## Explanation", ticket.explanation);
+  lines.push("", "## Requested action", ticket.explanation);
 
   if (ticket.polygons.length) {
     lines.push(
@@ -622,37 +696,51 @@ function buildIssueBody(ticket) {
   lines.push(
     "",
     "## Notes",
-    "- This draft is based on the currently loaded country pack."
+    "- This request is based on the currently loaded country pack."
   );
 
   return lines.join("\n").trim();
 }
 
-function buildTicketDraftUrl(repository, title, body) {
+function buildIssueUrl(repository, title, body) {
   if (!repository) {
     return null;
   }
 
-  const params = new URLSearchParams({ title, body });
-  const url = `https://github.com/${repository}/issues/new?${params.toString()}`;
-  return url.length <= MAX_TICKET_URL_LENGTH ? url : null;
+  const baseUrl = `https://github.com/${repository}/issues/new`;
+  const fullParams = new URLSearchParams({ title, body });
+  const fullUrl = `${baseUrl}?${fullParams.toString()}`;
+  if (fullUrl.length <= MAX_TICKET_URL_LENGTH) {
+    return {
+      url: fullUrl,
+      includesBody: true,
+    };
+  }
+
+  const titleOnlyParams = new URLSearchParams({ title });
+  return {
+    url: `${baseUrl}?${titleOnlyParams.toString()}`,
+    includesBody: false,
+  };
 }
 
 function buildTicketPreviewData(payload) {
   const ticket = buildTicketFromPayload(payload);
   const title = buildIssueTitle(ticket);
   const body = buildIssueBody(ticket);
-  const draftUrl = buildTicketDraftUrl(DEFAULT_TICKET_REPOSITORY, title, body);
+  const issueLink = buildIssueUrl(DEFAULT_TICKET_REPOSITORY, title, body);
   const warnings = [];
 
-  if (!draftUrl) {
-    warnings.push("The draft link is too long. Use Copy Ticket instead.");
+  if (!issueLink) {
+    warnings.push("GitHub issue opening is unavailable right now. Use Copy Ticket instead.");
+  } else if (!issueLink.includesBody) {
+    warnings.push("GitHub will open with the title only. Use Copy Ticket to paste the full ticket details.");
   }
 
   return {
     title,
     body,
-    draftUrl,
+    issueUrl: issueLink?.url || null,
     warnings,
     ticket,
   };
@@ -1895,12 +1983,12 @@ function applySpeciesSelection(itemId, fitToMap = false) {
 function updateMapSummary() {
   const regionalCount = state.currentCountry?.groups?.regional || 0;
   const draftCount = state.drawnPolygons.length;
-  mapSummary.textContent = `${regionalCount} current regional species · ${draftCount} drawn draft polygon${draftCount === 1 ? "" : "s"}`;
+  mapSummary.textContent = `${regionalCount} current regional species · ${draftCount} drawn polygon${draftCount === 1 ? "" : "s"}`;
 }
 
 function updateMapHint() {
   if (suggestionType() === "removal") {
-    mapHint.textContent = "Removal suggestions do not use draft polygons.";
+    mapHint.textContent = "Removal suggestions do not use polygons.";
     clearDrawingButton.disabled = true;
     return;
   }
@@ -1944,6 +2032,7 @@ function updateFormVisibility() {
 
   enableDrawing(drawingEnabled);
   updateMapHint();
+  updateSuggestionGuidance();
 }
 
 function syncCurrentSpeciesLookup() {
@@ -1987,8 +2076,8 @@ function renderTicketPreview(preview) {
   ticketBodyInput.value = preview.body || "";
   copyMarkdownButton.disabled = !preview.title || !preview.body;
 
-  if (preview.draftUrl) {
-    openTicketLink.href = preview.draftUrl;
+  if (preview.issueUrl) {
+    openTicketLink.href = preview.issueUrl;
     openTicketLink.classList.remove("disabled");
   } else {
     openTicketLink.href = "#";
@@ -2013,9 +2102,20 @@ function buildTicketPayload() {
     proposedSpeciesItemId: proposedSpeciesItemIdInput.value,
     proposedSpeciesLabel: cleanText(proposedSpeciesInput.value),
     scope: scopeSelect.value,
-    explanation: cleanText(explanationInput.value),
+    notifyOnFix: requestNotificationInput.checked,
+    notificationEmail: cleanText(notificationEmailInput.value),
     polygons: state.drawnPolygons,
   };
+}
+
+function updateNotificationPreference(clearValue = false) {
+  const showNotificationEmail = requestNotificationInput.checked;
+  notificationEmailField.hidden = !showNotificationEmail;
+  notificationEmailInput.required = showNotificationEmail;
+
+  if (!showNotificationEmail && clearValue) {
+    notificationEmailInput.value = "";
+  }
 }
 
 async function loadCountry(iso3) {
@@ -2031,6 +2131,7 @@ async function loadCountry(iso3) {
   try {
     const countryData = await loadCountryData(iso3);
     state.currentCountry = countryData;
+    updateSuggestionGuidance();
     renderCountryHeader();
     populateCurrentSpeciesOptions(countryData.species || []);
     renderGroupChips();
@@ -2075,6 +2176,8 @@ async function copyMarkdownPreview() {
 async function initialize() {
   initializeMap();
   updateFormVisibility();
+  updateNotificationPreference();
+  updateSuggestionGuidance();
 
   try {
     const [animals, countries] = await Promise.all([
@@ -2227,7 +2330,11 @@ scopeSelect.addEventListener("change", () => {
 });
 
 proposedSpeciesInput.addEventListener("input", syncProposedSpeciesLookup);
-explanationInput.addEventListener("input", clearTicketPreview);
+requestNotificationInput.addEventListener("change", () => {
+  updateNotificationPreference(true);
+  clearTicketPreview();
+});
+notificationEmailInput.addEventListener("input", clearTicketPreview);
 
 clearDrawingButton.addEventListener("click", () => {
   clearDrawnPolygons();

@@ -458,6 +458,11 @@ h3 {
   margin: 0;
   padding: 0;
   border: 0;
+  gap: 16px;
+}
+
+.mode-fieldset legend {
+  padding: 0;
 }
 
 .segmented-control {
@@ -517,6 +522,51 @@ h3 {
   border-radius: 14px;
   background: var(--lime-soft);
   color: #3e5800;
+}
+
+.guidance-field {
+  gap: 10px;
+}
+
+.guidance-panel {
+  min-height: 96px;
+  padding: 16px 17px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.notification-block {
+  display: grid;
+  gap: 12px;
+}
+
+.checkbox-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 15px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  cursor: pointer;
+}
+
+.checkbox-card input {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--forest);
+}
+
+.checkbox-card-copy {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 .form-actions,

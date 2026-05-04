@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504f">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260504g">
   </head>
   <body>
     <main class="shell">
@@ -68,7 +68,7 @@
           <div class="section-head">
             <div>
               <p class="section-kicker">Suggestion Ticket</p>
-              <h2>Draft Update</h2>
+              <h2>Create Ticket</h2>
             </div>
           </div>
 
@@ -132,16 +132,22 @@
               </div>
             </div>
 
-            <label class="field">
-              <span>Explanation</span>
-              <textarea
-                id="explanation"
-                name="explanation"
-                rows="6"
-                required
-                placeholder="Explain the proposed change, evidence, and why it should update the current list."
-              ></textarea>
-            </label>
+            <div class="field guidance-field">
+              <span>What This Will Do</span>
+              <div id="suggestion-guidance" class="guidance-panel"></div>
+            </div>
+
+            <div class="notification-block">
+              <label class="checkbox-card" for="requestNotification">
+                <input id="requestNotification" name="requestNotification" type="checkbox">
+                <span class="checkbox-card-copy">Do you want to get a notification when this issue is fixed?</span>
+              </label>
+
+              <label id="notification-email-field" class="field" hidden>
+                <span>Email</span>
+                <input id="notificationEmail" name="notificationEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
+              </label>
+            </div>
 
             <div class="form-actions">
               <button id="build-ticket" type="submit">Build Ticket</button>
@@ -154,11 +160,11 @@
             <div class="section-head preview-head">
               <div>
                 <p class="section-kicker">Preview</p>
-                <h3>Ticket Draft</h3>
+                <h3>Ticket</h3>
               </div>
               <div class="preview-actions">
                 <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
-                <a id="open-ticket" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Open Draft</a>
+                <a id="open-ticket" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Open Issue</a>
               </div>
             </div>
 
@@ -186,6 +192,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260504f"></script>
+    <script src="./assets/app.js?v=20260504g"></script>
   </body>
 </html>
