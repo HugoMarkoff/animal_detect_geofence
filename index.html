@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504l">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260504o">
   </head>
   <body>
     <main class="shell">
@@ -35,35 +35,37 @@
             <div class="map-stage">
               <div id="review-map" aria-label="Country review map"></div>
 
-              <aside id="regional-help-card" class="map-help-card" hidden>
-                <div class="map-help-visual" aria-hidden="true">
-                  <div class="map-help-outline"></div>
-                  <div class="map-help-region"></div>
-                  <div class="map-help-pin map-help-pin-one"></div>
-                  <div class="map-help-pin map-help-pin-two"></div>
-                </div>
-
-                <div class="map-help-copy">
-                  <strong>Regional coverage uses drawn areas</strong>
-                  <p>National coverage already fills the full country. When you switch to regional, use the map tools to draw one or more areas, then edit or remove them from the same toolbar.</p>
-                </div>
-
-                <div class="map-help-toolbar" aria-hidden="true">
-                  <div class="map-help-tool">
-                    <span class="map-help-tool-icon map-help-tool-sprite map-help-tool-sprite-draw"></span>
-                    <span class="map-help-tool-label">Draw an area</span>
+              <aside id="regional-help-card" class="map-help-overlay" hidden>
+                <div class="map-help-card">
+                  <div class="map-help-visual" aria-hidden="true">
+                    <div class="map-help-outline"></div>
+                    <div class="map-help-region"></div>
+                    <div class="map-help-pin map-help-pin-one"></div>
+                    <div class="map-help-pin map-help-pin-two"></div>
                   </div>
-                  <div class="map-help-tool">
-                    <span class="map-help-tool-icon map-help-tool-sprite map-help-tool-sprite-edit"></span>
-                    <span class="map-help-tool-label">Edit</span>
-                  </div>
-                  <div class="map-help-tool">
-                    <span class="map-help-tool-icon map-help-tool-sprite map-help-tool-sprite-remove"></span>
-                    <span class="map-help-tool-label">Remove</span>
-                  </div>
-                </div>
 
-                <button id="dismiss-regional-help" class="secondary-button" type="button">Got it</button>
+                  <div class="map-help-copy">
+                    <strong>Regional coverage uses drawn areas</strong>
+                    <p>National coverage already fills the full country. When you switch to regional, use the map tools to draw one or more areas, then edit or remove them from the same toolbar.</p>
+                  </div>
+
+                  <div class="map-help-toolbar" aria-hidden="true">
+                    <div class="map-help-tool">
+                      <span class="map-help-tool-icon map-help-tool-sprite map-help-tool-sprite-draw"></span>
+                      <span class="map-help-tool-label">Draw an area</span>
+                    </div>
+                    <div class="map-help-tool">
+                      <span class="map-help-tool-icon map-help-tool-sprite map-help-tool-sprite-edit"></span>
+                      <span class="map-help-tool-label">Edit</span>
+                    </div>
+                    <div class="map-help-tool">
+                      <span class="map-help-tool-icon map-help-tool-sprite map-help-tool-sprite-remove"></span>
+                      <span class="map-help-tool-label">Remove</span>
+                    </div>
+                  </div>
+
+                  <button id="dismiss-regional-help" class="secondary-button" type="button">Got it</button>
+                </div>
               </aside>
             </div>
           </section>

@@ -730,26 +730,32 @@ button {
   border: 1px solid rgba(24, 28, 31, 0.08);
 }
 
-.map-help-card {
+.map-help-overlay {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  inset: 0;
   z-index: 500;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(242, 248, 244, 0.18), rgba(242, 248, 244, 0.68));
+  backdrop-filter: blur(2px);
+}
+
+.map-help-card {
   display: grid;
   align-content: start;
   gap: 14px;
-  width: min(360px, calc(100% - 32px));
-  max-width: calc(100% - 32px);
-  max-height: calc(100% - 32px);
-  padding: 16px;
+  width: min(480px, 100%);
+  max-width: 100%;
+  max-height: 100%;
+  padding: 18px;
   border: 1px solid rgba(24, 28, 31, 0.08);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.96);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 20px 42px rgba(24, 28, 31, 0.14);
-  backdrop-filter: blur(18px);
   overflow-y: auto;
   overflow-x: hidden;
-  overscroll-behavior: contain;
 }
 
 .map-help-visual {
@@ -1003,8 +1009,11 @@ button {
   }
 
   .map-help-card {
-    position: static;
-    width: 100%;
+    width: min(100%, 440px);
+  }
+
+  .map-help-overlay {
+    padding: 14px;
   }
 
   .ticket-preview-gate {
