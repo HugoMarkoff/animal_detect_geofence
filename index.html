@@ -17,37 +17,51 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504e">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260504f">
   </head>
   <body>
     <main class="shell">
       <section class="workspace">
-        <section class="panel browser-panel">
-          <div class="section-head">
-            <div>
-              <p class="section-kicker">Current Pack</p>
-              <h2 id="browser-title">Loading...</h2>
+        <section class="top-stage">
+          <section class="panel map-panel">
+            <div class="section-head section-head-compact">
+              <div>
+                <p class="section-kicker">Map</p>
+                <h2>Regional Footprints</h2>
+              </div>
+              <p id="map-summary" class="map-summary">Loading map.</p>
             </div>
-            <label class="field compact-field">
-              <span>Country</span>
-              <select id="countryIso3" name="countryIso3" aria-label="Country">
-                <option value="">Loading countries...</option>
-              </select>
+
+            <div id="review-map" aria-label="Country review map"></div>
+          </section>
+
+          <section class="panel browser-panel">
+            <div class="section-head">
+              <div>
+                <p class="section-kicker">Current Pack</p>
+                <h2 id="browser-title">Loading...</h2>
+              </div>
+              <label class="field compact-field">
+                <span>Country</span>
+                <select id="countryIso3" name="countryIso3" aria-label="Country">
+                  <option value="">Loading countries...</option>
+                </select>
+              </label>
+            </div>
+
+            <p id="country-summary" class="section-copy">Loading current country pack.</p>
+
+            <div id="group-chips" class="group-chips"></div>
+
+            <label class="field search-field">
+              <span>Filter species</span>
+              <input id="speciesFilter" type="search" placeholder="Search common or binomial name">
             </label>
-          </div>
 
-          <p id="country-summary" class="section-copy">Loading current country pack.</p>
-
-          <div id="group-chips" class="group-chips"></div>
-
-          <label class="field search-field">
-            <span>Filter species</span>
-            <input id="speciesFilter" type="search" placeholder="Search common or binomial name">
-          </label>
-
-          <div id="species-list" class="species-list">
-            <article class="empty-card">Loading species...</article>
-          </div>
+            <div id="species-list" class="species-list">
+              <article class="empty-card">Loading species...</article>
+            </div>
+          </section>
         </section>
 
         <section class="panel ticket-panel">
@@ -162,18 +176,6 @@
           </section>
         </section>
       </section>
-
-      <section class="panel map-panel">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">Map</p>
-            <h2>Regional Footprints</h2>
-          </div>
-          <p id="map-summary" class="map-summary">Loading map.</p>
-        </div>
-
-        <div id="review-map" aria-label="Country review map"></div>
-      </section>
     </main>
 
     <script
@@ -184,6 +186,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260504e"></script>
+    <script src="./assets/app.js?v=20260504f"></script>
   </body>
 </html>
