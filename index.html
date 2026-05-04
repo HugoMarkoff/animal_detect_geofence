@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504g">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260504h">
   </head>
   <body>
     <main class="shell">
@@ -27,12 +27,30 @@
             <div class="section-head section-head-compact">
               <div>
                 <p class="section-kicker">Map</p>
-                <h2>Regional Footprints</h2>
+                <h2>Map Overview</h2>
               </div>
               <p id="map-summary" class="map-summary">Loading map.</p>
             </div>
 
-            <div id="review-map" aria-label="Country review map"></div>
+            <div class="map-stage">
+              <div id="review-map" aria-label="Country review map"></div>
+
+              <aside id="regional-help-card" class="map-help-card" hidden>
+                <div class="map-help-visual" aria-hidden="true">
+                  <div class="map-help-outline"></div>
+                  <div class="map-help-region"></div>
+                  <div class="map-help-pin map-help-pin-one"></div>
+                  <div class="map-help-pin map-help-pin-two"></div>
+                </div>
+
+                <div class="map-help-copy">
+                  <strong>Regional coverage uses drawn areas</strong>
+                  <p>National coverage already fills the full country. When you switch to regional, use the map tools to draw one or more areas, then edit or remove them from the same toolbar.</p>
+                </div>
+
+                <button id="dismiss-regional-help" class="secondary-button" type="button">Got it</button>
+              </aside>
+            </div>
           </section>
 
           <section class="panel browser-panel">
@@ -127,8 +145,8 @@
               </label>
 
               <div class="field map-hint-field">
-                <span>Map action</span>
-                <div id="map-hint" class="map-hint-pill">National suggestions do not need polygons.</div>
+                <span>Map overlay</span>
+                <div id="map-hint" class="map-hint-pill">National coverage uses the full country overlay.</div>
               </div>
             </div>
 
@@ -151,7 +169,7 @@
 
             <div class="form-actions">
               <button id="build-ticket" type="submit">Build Ticket</button>
-              <button id="clear-drawing" class="secondary-button" type="button">Clear Drawn Polygons</button>
+              <button id="clear-drawing" class="secondary-button" type="button" hidden>Clear Drawn Areas</button>
               <p id="status-line" class="status-line">Ready.</p>
             </div>
           </form>
@@ -192,6 +210,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260504g"></script>
+    <script src="./assets/app.js?v=20260504h"></script>
   </body>
 </html>

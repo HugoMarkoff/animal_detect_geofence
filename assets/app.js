@@ -24,6 +24,8 @@ const requestNotificationInput = document.getElementById("requestNotification");
 const notificationEmailField = document.getElementById("notification-email-field");
 const notificationEmailInput = document.getElementById("notificationEmail");
 const clearDrawingButton = document.getElementById("clear-drawing");
+const regionalHelpCard = document.getElementById("regional-help-card");
+const dismissRegionalHelpButton = document.getElementById("dismiss-regional-help");
 const statusLine = document.getElementById("status-line");
 const ticketTitleInput = document.getElementById("ticket-title");
 const ticketBodyInput = document.getElementById("ticket-body");
@@ -45,6 +47,7 @@ const DEFAULT_TICKET_REPOSITORY = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
+const REGIONAL_HELP_SEEN_SESSION_KEY = "country-pack-review.regional-help.v1";
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
   likely_false: "Needs Review",
@@ -111,6 +114,13 @@ const CURRENT_REGIONAL_STYLE = {
   fillColor: "#a4ee16",
   fillOpacity: 0.18,
 };
+const CURRENT_NATIONAL_STYLE = {
+  color: "#75b94b",
+  weight: 1,
+  opacity: 0.56,
+  fillColor: "#a4ee16",
+  fillOpacity: 0.1,
+};
 const CURRENT_REGIONAL_HOVER_STYLE = {
   color: "#181c1f",
   weight: 2,
@@ -145,6 +155,7 @@ const state = {
 
 let reviewMap;
 let drawControl = null;
+let currentNationalOverlayLayer;
 let currentRegionalOverlayLayer;
 let currentRegionalEntries = [];
 let currentRegionalHoverTooltip;
@@ -153,6 +164,7 @@ let selectedRegionalLayers = [];
 let suggestionDrawLayer;
 let worldCountryGeometryIndexPromise;
 let openComboKey = null;
+let currentCountryGeometry = null;
 
 const comboBoxes = {
   current: {
@@ -544,7 +556,7 @@ function buildTicketFromPayload(payload) {
 
     polygons = sanitizePolygons(payload.polygons);
     if (scope === "regional" && !polygons.length) {
-      throw new Error("Draw at least one regional polygon before building the ticket.");
+      throw new Error("Draw at least one regional area before building the ticket.");
     }
 
     scopeLabel = scope === "regional" ? "Regional" : "National";
@@ -599,13 +611,13 @@ function buildRequestedActionText(ticketLike) {
 
   if (ticketLike.suggestionType === "addition") {
     const polygonNote = ticketLike.scopeLabel === "Regional" && ticketLike.polygons.length
-      ? " The selected regional polygons show the requested footprint."
+      ? " The selected regional areas show the requested footprint."
       : "";
     return `Please add ${ticketLike.proposedSpecies.label} with ${ticketLike.scopeLabel.toLowerCase()} coverage in ${ticketLike.countryName}.${polygonNote}`;
   }
 
   const correctionPolygonNote = ticketLike.scopeLabel === "Regional" && ticketLike.polygons.length
-    ? " The selected regional polygons show the requested corrected footprint."
+    ? " The selected regional areas show the requested corrected footprint."
     : "";
   return `Please update ${ticketLike.currentSpecies.label} to ${ticketLike.scopeLabel.toLowerCase()} coverage in ${ticketLike.countryName}.${correctionPolygonNote}`;
 }
@@ -615,19 +627,19 @@ function buildSuggestionGuidanceText() {
 
   if (suggestionType() === "addition") {
     if (scopeSelect.value === "regional") {
-      return `Addition: search the full species catalog, choose the species you want to add, and draw one or more polygons for the regional footprint in ${countryName}.`;
+      return `Addition: search the full species catalog, choose the species you want to add, and draw one or more regional areas in ${countryName}.`;
     }
     return `Addition: search the full species catalog and choose whether the species should be added as national coverage in ${countryName}.`;
   }
 
   if (suggestionType() === "correction") {
     if (scopeSelect.value === "regional") {
-      return `Correction: choose a species that already exists in ${countryName}, switch it to regional coverage, and draw the regional footprint you want applied.`;
+      return `Correction: choose a species that already exists in ${countryName}, switch it to regional coverage, and draw the regional area you want applied.`;
     }
     return `Correction: choose a species that already exists in ${countryName} and change its coverage to national.`;
   }
 
-  return `Removal: choose a species that already exists in ${countryName} to open an issue asking for its removal from the current pack. No polygons are needed.`;
+  return `Removal: choose a species that already exists in ${countryName} to open an issue asking for its removal from the current pack. No drawing is needed.`;
 }
 
 function updateSuggestionGuidance() {
@@ -675,7 +687,7 @@ function buildIssueBody(ticket) {
   if (ticket.polygons.length) {
     lines.push(
       "",
-      "## Proposed regional polygons",
+      "## Proposed regional areas",
       "Coordinates are in `[latitude, longitude]` order.",
       "```json",
       JSON.stringify(ticket.polygons, null, 2),
@@ -1271,13 +1283,36 @@ function pointInFeatureGeometry(latlng, geometry) {
   return false;
 }
 
+function pointInGeoJson(latlng, geoJson) {
+  if (!geoJson) {
+    return false;
+  }
+
+  if (geoJson.type === "FeatureCollection") {
+    return (geoJson.features || []).some((feature) => pointInFeatureGeometry(latlng, feature.geometry));
+  }
+
+  if (geoJson.type === "Feature") {
+    return pointInFeatureGeometry(latlng, geoJson.geometry);
+  }
+
+  return pointInFeatureGeometry(latlng, geoJson);
+}
+
 function formatSpeciesList(species) {
   return species
     .map((item) => escapeHtml(item.label || item.commonName || item.binomial || "Unknown species"))
     .join("<br>");
 }
 
-function buildRegionalHoverTooltipHtml(entries) {
+function currentNationalSpecies() {
+  return (state.currentCountry?.species || [])
+    .filter((entry) => entry.footprintCode === "countrywide")
+    .slice()
+    .sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
+}
+
+function buildMapHoverTooltipHtml(entries, nationalSpecies = []) {
   const speciesById = new Map();
   entries.forEach(({ feature }) => {
     (feature.properties?.species || []).forEach((species) => {
@@ -1292,12 +1327,45 @@ function buildRegionalHoverTooltipHtml(entries) {
     return (left.commonName || left.binomial || left.label || "").localeCompare(right.commonName || right.binomial || right.label || "");
   });
 
+  const nationalCount = nationalSpecies.length;
+  const countryName = escapeHtml(state.currentCountry?.countryName || "this country");
+
+  if (!species.length && !nationalCount) {
+    return "";
+  }
+
+  if (!species.length) {
+    return `
+      <div class="footprint-tooltip">
+        <strong>${nationalCount} national species</strong>
+        <div class="footprint-tooltip-note">These species cover all of ${countryName}.</div>
+      </div>
+    `;
+  }
+
+  const nationalNote = nationalCount
+    ? `<div class="footprint-tooltip-note">And ${nationalCount} species are marked national across ${countryName}.</div>`
+    : "";
+
   return `
     <div class="footprint-tooltip">
       <strong>${species.length} regional species</strong>
-      <div>${formatSpeciesList(species)}</div>
+      <div class="footprint-tooltip-list">${formatSpeciesList(species)}</div>
+      ${nationalNote}
     </div>
   `;
+}
+
+function syncMapLayerOrder() {
+  if (currentNationalOverlayLayer?.bringToBack) {
+    currentNationalOverlayLayer.bringToBack();
+  }
+  if (currentRegionalOverlayLayer?.bringToFront) {
+    currentRegionalOverlayLayer.bringToFront();
+  }
+  if (suggestionDrawLayer?.bringToFront) {
+    suggestionDrawLayer.bringToFront();
+  }
 }
 
 function refreshRegionalLayerStyles() {
@@ -1321,6 +1389,8 @@ function refreshRegionalLayerStyles() {
     }
     layer.setStyle(CURRENT_REGIONAL_STYLE);
   });
+
+  syncMapLayerOrder();
 }
 
 function resetRegionalHoverState() {
@@ -1333,10 +1403,15 @@ function resetRegionalHoverState() {
 }
 
 function clearRegionalOverlays() {
+  if (currentNationalOverlayLayer) {
+    reviewMap.removeLayer(currentNationalOverlayLayer);
+    currentNationalOverlayLayer = null;
+  }
   if (currentRegionalOverlayLayer) {
     reviewMap.removeLayer(currentRegionalOverlayLayer);
     currentRegionalOverlayLayer = null;
   }
+  currentCountryGeometry = null;
   currentRegionalEntries = [];
   hoveredRegionalLayers = [];
   selectedRegionalLayers = [];
@@ -1346,14 +1421,12 @@ function clearRegionalOverlays() {
   }
 }
 
-function handleRegionalOverlayHover(event) {
-  if (!currentRegionalEntries.length) {
-    resetRegionalHoverState();
-    return;
-  }
-
+function handleMapOverlayHover(event) {
   const hits = currentRegionalEntries.filter(({ feature }) => pointInFeatureGeometry(event.latlng, feature.geometry));
-  if (!hits.length) {
+  const nationalSpecies = currentNationalSpecies();
+  const showNationalSummary = nationalSpecies.length && pointInGeoJson(event.latlng, currentCountryGeometry) && (hits.length || !currentRegionalEntries.length);
+
+  if (!hits.length && !showNationalSummary) {
     resetRegionalHoverState();
     return;
   }
@@ -1365,7 +1438,13 @@ function handleRegionalOverlayHover(event) {
     currentRegionalHoverTooltip = L.tooltip({ direction: "top", opacity: 0.96, sticky: true });
   }
 
-  currentRegionalHoverTooltip.setLatLng(event.latlng).setContent(buildRegionalHoverTooltipHtml(hits));
+  const tooltipHtml = buildMapHoverTooltipHtml(hits, showNationalSummary ? nationalSpecies : []);
+  if (!tooltipHtml) {
+    resetRegionalHoverState();
+    return;
+  }
+
+  currentRegionalHoverTooltip.setLatLng(event.latlng).setContent(tooltipHtml);
   if (!reviewMap.hasLayer(currentRegionalHoverTooltip)) {
     currentRegionalHoverTooltip.addTo(reviewMap);
   }
@@ -1410,7 +1489,16 @@ async function loadRegionalOverlays() {
     const [countryGeometry] = await Promise.all([
       fetchCountryGeometry(countrySelect.value),
     ]);
+    currentCountryGeometry = countryGeometry;
     const overlayData = buildRegionalOverlayCollection(state.currentCountry);
+    const nationalSpecies = currentNationalSpecies();
+
+    if (countryGeometry && nationalSpecies.length) {
+      currentNationalOverlayLayer = L.geoJSON(countryGeometry, {
+        style: CURRENT_NATIONAL_STYLE,
+        interactive: false,
+      }).addTo(reviewMap);
+    }
 
     const features = (overlayData.features || []).flatMap((feature) =>
       countryGeometry ? clipFeatureToCountry(feature, countryGeometry) : [feature]
@@ -1431,16 +1519,45 @@ async function loadRegionalOverlays() {
       }).addTo(reviewMap);
     }
 
+    syncMapLayerOrder();
+
     await focusSelectedCountry(countryGeometry);
     updateSelectedRegionalLayers(false);
     updateMapSummary();
   } catch (error) {
     console.error(error);
-    mapSummary.textContent = "Could not load the current regional overlays.";
+    mapSummary.textContent = "Could not load the current map overlay.";
+  }
+}
+
+function configureDrawToolCopy() {
+  if (!window.L?.drawLocal) {
+    return;
+  }
+
+  window.L.drawLocal.draw.toolbar.buttons.polygon = "Draw an area";
+  window.L.drawLocal.edit.toolbar.buttons.edit = "Edit drawn areas";
+  window.L.drawLocal.edit.toolbar.buttons.remove = "Remove drawn areas";
+
+  if (window.L.drawLocal.draw.handlers?.polygon?.tooltip) {
+    window.L.drawLocal.draw.handlers.polygon.tooltip.start = "Click on the map to start drawing an area.";
+    window.L.drawLocal.draw.handlers.polygon.tooltip.cont = "Click to keep drawing the area.";
+    window.L.drawLocal.draw.handlers.polygon.tooltip.end = "Click the first point to finish the area.";
+  }
+
+  if (window.L.drawLocal.edit.handlers?.edit?.tooltip) {
+    window.L.drawLocal.edit.handlers.edit.tooltip.text = "Drag handles to edit a drawn area.";
+    window.L.drawLocal.edit.handlers.edit.tooltip.subtext = "Click save when you are done.";
+  }
+
+  if (window.L.drawLocal.edit.handlers?.remove?.tooltip) {
+    window.L.drawLocal.edit.handlers.remove.tooltip.text = "Select a drawn area to remove it.";
   }
 }
 
 function initializeMap() {
+  configureDrawToolCopy();
+
   reviewMap = L.map("review-map", {
     zoomControl: true,
     worldCopyJump: true,
@@ -1454,7 +1571,7 @@ function initializeMap() {
 
   suggestionDrawLayer = new L.FeatureGroup();
   reviewMap.addLayer(suggestionDrawLayer);
-  reviewMap.on("mousemove", handleRegionalOverlayHover);
+  reviewMap.on("mousemove", handleMapOverlayHover);
   reviewMap.on("mouseout", resetRegionalHoverState);
 
   reviewMap.on(L.Draw.Event.CREATED, (event) => {
@@ -1913,6 +2030,22 @@ function renderSpeciesList() {
     return;
   }
 
+  if (state.groupFilter === "all") {
+    const allEntries = entries.slice().sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
+    speciesList.innerHTML = `
+      <section class="species-group">
+        <div class="species-group-head">
+          <h3>${escapeHtml(GROUP_LABELS.all)}</h3>
+          <span class="species-group-count">${allEntries.length}</span>
+        </div>
+        <div class="species-stack">
+          ${allEntries.map((entry) => renderSpeciesCard(entry)).join("")}
+        </div>
+      </section>
+    `;
+    return;
+  }
+
   const groups = new Map();
   GROUP_ORDER.forEach((groupKey) => groups.set(groupKey, []));
   entries.forEach((entry) => {
@@ -1981,30 +2114,81 @@ function applySpeciesSelection(itemId, fitToMap = false) {
 }
 
 function updateMapSummary() {
+  const nationalCount = currentNationalSpecies().length;
   const regionalCount = state.currentCountry?.groups?.regional || 0;
-  const draftCount = state.drawnPolygons.length;
-  mapSummary.textContent = `${regionalCount} current regional species · ${draftCount} drawn polygon${draftCount === 1 ? "" : "s"}`;
+  const drawnCount = state.drawnPolygons.length;
+  const pieces = [
+    `${nationalCount} national species`,
+    `${regionalCount} regional species`,
+  ];
+
+  if (drawnCount) {
+    pieces.push(`${drawnCount} drawn area${drawnCount === 1 ? "" : "s"}`);
+  }
+
+  mapSummary.textContent = `Map overlay: ${pieces.join(" · ")}`;
 }
 
 function updateMapHint() {
   if (suggestionType() === "removal") {
-    mapHint.textContent = "Removal suggestions do not use polygons.";
+    mapHint.textContent = "Map overlay: use the current country coverage as reference. No drawing is needed.";
     clearDrawingButton.disabled = true;
     return;
   }
 
   if (scopeSelect.value !== "regional") {
-    mapHint.textContent = "National suggestions do not need polygons.";
+    mapHint.textContent = "Map overlay: national coverage uses the full country outline. No drawing is needed.";
     clearDrawingButton.disabled = true;
     return;
   }
 
   if (!state.drawnPolygons.length) {
-    mapHint.textContent = "Draw one or more regional polygons on the map.";
+    mapHint.textContent = "Map overlay: use the map tools to draw one or more regional areas.";
   } else {
-    mapHint.textContent = `${state.drawnPolygons.length} regional polygon${state.drawnPolygons.length === 1 ? "" : "s"} ready.`;
+    mapHint.textContent = `Map overlay: ${state.drawnPolygons.length} regional area${state.drawnPolygons.length === 1 ? "" : "s"} ready. You can edit or remove them from the map toolbar.`;
   }
   clearDrawingButton.disabled = false;
+}
+
+function hasSeenRegionalHelp() {
+  try {
+    return window.sessionStorage.getItem(REGIONAL_HELP_SEEN_SESSION_KEY) === "seen";
+  } catch {
+    return false;
+  }
+}
+
+function rememberRegionalHelpSeen() {
+  try {
+    window.sessionStorage.setItem(REGIONAL_HELP_SEEN_SESSION_KEY, "seen");
+  } catch {
+    // Ignore storage failures and keep the guide ephemeral.
+  }
+}
+
+function hideRegionalHelp() {
+  if (regionalHelpCard) {
+    regionalHelpCard.hidden = true;
+  }
+}
+
+function maybeShowRegionalHelp() {
+  if (!regionalHelpCard) {
+    return;
+  }
+
+  if (suggestionType() === "removal" || scopeSelect.value !== "regional") {
+    hideRegionalHelp();
+    return;
+  }
+
+  if (hasSeenRegionalHelp()) {
+    hideRegionalHelp();
+    return;
+  }
+
+  regionalHelpCard.hidden = false;
+  rememberRegionalHelpSeen();
 }
 
 function updateFormVisibility() {
@@ -2033,6 +2217,7 @@ function updateFormVisibility() {
   enableDrawing(drawingEnabled);
   updateMapHint();
   updateSuggestionGuidance();
+  maybeShowRegionalHelp();
 }
 
 function syncCurrentSpeciesLookup() {
@@ -2338,6 +2523,10 @@ notificationEmailInput.addEventListener("input", clearTicketPreview);
 
 clearDrawingButton.addEventListener("click", () => {
   clearDrawnPolygons();
+});
+
+dismissRegionalHelpButton?.addEventListener("click", () => {
+  hideRegionalHelp();
 });
 
 ticketForm.addEventListener("submit", async (event) => {
