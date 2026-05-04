@@ -1305,8 +1305,11 @@ function pointInGeoJson(latlng, geoJson) {
 
 function formatSpeciesList(species) {
   return species
-    .map((item) => escapeHtml(item.label || item.commonName || item.binomial || "Unknown species"))
-    .join("<br>");
+    .map((item) => {
+      const displayName = cleanText(item.commonName) || cleanText(item.binomial) || cleanText(item.label) || "Unknown species";
+      return `<div class="footprint-tooltip-item" title="${escapeHtml(displayName)}">${escapeHtml(displayName)}</div>`;
+    })
+    .join("");
 }
 
 function currentNationalSpecies() {

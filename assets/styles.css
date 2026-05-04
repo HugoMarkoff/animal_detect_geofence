@@ -736,14 +736,20 @@ button {
   left: 16px;
   z-index: 500;
   display: grid;
+  align-content: start;
   gap: 14px;
   width: min(360px, calc(100% - 32px));
+  max-width: calc(100% - 32px);
+  max-height: calc(100% - 32px);
   padding: 16px;
   border: 1px solid rgba(24, 28, 31, 0.08);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 20px 42px rgba(24, 28, 31, 0.14);
   backdrop-filter: blur(18px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
 }
 
 .map-help-visual {
@@ -881,7 +887,7 @@ button {
 }
 
 #review-map .leaflet-tooltip {
-  max-width: 300px;
+  max-width: min(280px, calc(100vw - 48px));
   padding: 10px 12px;
   border: 1px solid rgba(24, 28, 31, 0.08);
   border-radius: 16px;
@@ -902,9 +908,18 @@ button {
 }
 
 .footprint-tooltip-list {
-  max-height: 170px;
+  display: grid;
+  gap: 4px;
+  max-height: min(160px, 28vh);
   overflow: auto;
   padding-right: 4px;
+}
+
+.footprint-tooltip-item {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .footprint-tooltip-note {
