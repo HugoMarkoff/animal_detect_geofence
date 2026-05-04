@@ -89,16 +89,14 @@ const FOOTPRINT_DEFAULTS = {
     note: "This entry has no stored national or regional footprint in the current pack.",
   },
 };
-const GROUP_ORDER = ["countrywide", "regional", "country_pack_only", "needs_review", "no_points", "unscored"];
+const GROUP_ORDER = ["all", "countrywide", "regional", "likely_valid", "needs_review", "new"];
 const GROUP_LABELS = {
   all: "All species",
-  new: "New",
   countrywide: "National",
   regional: "Regional",
-  country_pack_only: "Country-level",
-  needs_review: "Review",
-  no_points: "No points",
-  unscored: "Unscored",
+  likely_valid: "Likely Valid",
+  needs_review: "Needs Review",
+  new: "New",
 };
 
 const countryCenterCache = new Map();
@@ -304,6 +302,42 @@ function speciesSortName(entry) {
 
 function isNewDiscovery(entry) {
   return Boolean(entry) && (entry.expected === false || entry.status === "new_record" || entry.bucket === "New");
+}
+
+function effectiveBucket(entry) {
+  if (!entry) {
+    return "Needs Review";
+  }
+  if (isNewDiscovery(entry)) {
+    return "New";
+  }
+  if (entry.footprintCode === "no_points" || entry.footprintCode === "needs_review") {
+    return "Needs Review";
+  }
+  return entry.bucket || "Needs Review";
+}
+
+function matchesGroupFilter(entry, groupKey) {
+  switch (groupKey) {
+    case "all":
+      return true;
+    case "countrywide":
+      return entry.footprintCode === "countrywide";
+    case "regional":
+      return entry.footprintCode === "regional";
+    case "likely_valid":
+      return effectiveBucket(entry) === "Likely Valid";
+    case "needs_review":
+      return effectiveBucket(entry) === "Needs Review";
+    case "new":
+      return effectiveBucket(entry) === "New";
+    default:
+      return true;
+  }
+}
+
+function groupCount(country, groupKey) {
+  return (country?.species || []).filter((entry) => matchesGroupFilter(entry, groupKey)).length;
 }
 
 function roundCoordinate(value) {
@@ -1937,23 +1971,25 @@ function currentSpeciesById(itemId) {
 }
 
 function buildSummaryText(country) {
-  const summary = country.summary || {};
-  const total = summary.total || country.species.length || 0;
-  const bucketCounts = summary.bucketCounts || {};
+  const total = country.species.length || country.summary?.total || 0;
+  const likelyValidCount = groupCount(country, "likely_valid");
+  const needsReviewCount = groupCount(country, "needs_review");
+  const newCount = groupCount(country, "new");
+  const regionalCount = groupCount(country, "regional");
   const pieces = [`${total} species`, `${country.precomputeMode} pack`];
 
-  if (bucketCounts["Likely Valid"]) {
-    pieces.push(`${bucketCounts["Likely Valid"]} likely valid`);
+  if (likelyValidCount) {
+    pieces.push(`${likelyValidCount} likely valid`);
   }
-  if (bucketCounts["Needs Review"]) {
-    pieces.push(`${bucketCounts["Needs Review"]} review`);
+  if (needsReviewCount) {
+    pieces.push(`${needsReviewCount} review`);
   }
-  if (bucketCounts.New) {
-    pieces.push(`${bucketCounts.New} new`);
+  if (newCount) {
+    pieces.push(`${newCount} new`);
   }
 
-  if (country.groups?.regional) {
-    pieces.push(`${country.groups.regional} regional`);
+  if (regionalCount) {
+    pieces.push(`${regionalCount} regional`);
   }
 
   return pieces.join(" · ");
@@ -1976,33 +2012,13 @@ function renderGroupChips() {
     return;
   }
 
-  const buttons = [];
-  const total = state.currentCountry.species.length;
-  const newCount = state.currentCountry.species.filter((entry) => isNewDiscovery(entry)).length;
-  buttons.push(`
-    <button class="chip ${state.groupFilter === "all" ? "active" : ""}" data-group="all" type="button">
-      ${GROUP_LABELS.all} (${total})
-    </button>
-  `);
-
-  if (newCount) {
-    buttons.push(`
-      <button class="chip ${state.groupFilter === "new" ? "active" : ""}" data-group="new" type="button">
-        ${GROUP_LABELS.new} (${newCount})
-      </button>
-    `);
-  }
-
-  GROUP_ORDER.forEach((groupKey) => {
-    const count = state.currentCountry.groups?.[groupKey] || 0;
-    if (!count) {
-      return;
-    }
-    buttons.push(`
+  const buttons = GROUP_ORDER.map((groupKey) => {
+    const count = groupCount(state.currentCountry, groupKey);
+    return `
       <button class="chip ${state.groupFilter === groupKey ? "active" : ""}" data-group="${groupKey}" type="button">
         ${GROUP_LABELS[groupKey] || groupKey} (${count})
       </button>
-    `);
+    `;
   });
 
   groupChips.innerHTML = buttons.join("");
@@ -2015,10 +2031,7 @@ function filteredSpecies() {
 
   const search = state.speciesFilter.toLocaleLowerCase();
   return state.currentCountry.species.filter((entry) => {
-    if (state.groupFilter === "new" && !isNewDiscovery(entry)) {
-      return false;
-    }
-    if (state.groupFilter !== "all" && state.groupFilter !== "new" && entry.footprintCode !== state.groupFilter) {
+    if (!matchesGroupFilter(entry, state.groupFilter)) {
       return false;
     }
     if (!search) {
@@ -2038,6 +2051,7 @@ function renderSpeciesCard(entry) {
   const classBadge = cleanText(entry.classLabel)
     ? `<span class="badge badge-class">${escapeHtml(entry.classLabel)}</span>`
     : "";
+  const bucketBadge = effectiveBucket(entry);
   return `
     <button class="species-card ${selectedClass}" type="button" data-item-id="${entry.itemId}">
       <div class="species-card-main">
@@ -2049,7 +2063,7 @@ function renderSpeciesCard(entry) {
       <div class="species-card-meta">
         ${classBadge}
         <span class="badge badge-footprint">${escapeHtml(entry.footprintShort)}</span>
-        <span class="badge badge-bucket">${escapeHtml(entry.bucket)}</span>
+        <span class="badge badge-bucket">${escapeHtml(bucketBadge)}</span>
       </div>
     </button>
   `;
@@ -2062,52 +2076,19 @@ function renderSpeciesList() {
     return;
   }
 
-  if (state.groupFilter === "all" || state.groupFilter === "new") {
-    const allEntries = entries.slice().sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
-    const heading = state.groupFilter === "new" ? GROUP_LABELS.new : GROUP_LABELS.all;
-    speciesList.innerHTML = `
-      <section class="species-group">
-        <div class="species-group-head">
-          <h3>${escapeHtml(heading)}</h3>
-          <span class="species-group-count">${allEntries.length}</span>
-        </div>
-        <div class="species-stack">
-          ${allEntries.map((entry) => renderSpeciesCard(entry)).join("")}
-        </div>
-      </section>
-    `;
-    return;
-  }
-
-  const groups = new Map();
-  GROUP_ORDER.forEach((groupKey) => groups.set(groupKey, []));
-  entries.forEach((entry) => {
-    const bucket = groups.get(entry.footprintCode) || [];
-    bucket.push(entry);
-    groups.set(entry.footprintCode, bucket);
-  });
-
-  const sections = GROUP_ORDER
-    .map((groupKey) => {
-      const groupEntries = (groups.get(groupKey) || []).slice().sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
-      if (!groupEntries.length) {
-        return "";
-      }
-      return `
-        <section class="species-group">
-          <div class="species-group-head">
-            <h3>${escapeHtml(GROUP_LABELS[groupKey] || groupKey)}</h3>
-            <span class="species-group-count">${groupEntries.length}</span>
-          </div>
-          <div class="species-stack">
-            ${groupEntries.map((entry) => renderSpeciesCard(entry)).join("")}
-          </div>
-        </section>
-      `;
-    })
-    .filter(Boolean);
-
-  speciesList.innerHTML = sections.join("");
+  const sortedEntries = entries.slice().sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
+  const heading = GROUP_LABELS[state.groupFilter] || GROUP_LABELS.all;
+  speciesList.innerHTML = `
+    <section class="species-group">
+      <div class="species-group-head">
+        <h3>${escapeHtml(heading)}</h3>
+        <span class="species-group-count">${sortedEntries.length}</span>
+      </div>
+      <div class="species-stack">
+        ${sortedEntries.map((entry) => renderSpeciesCard(entry)).join("")}
+      </div>
+    </section>
+  `;
 }
 
 function updateSelectedRegionalLayers(fitToSelection) {
@@ -2127,6 +2108,16 @@ function updateSelectedRegionalLayers(fitToSelection) {
     const bounds = L.featureGroup(selectedRegionalLayers).getBounds();
     if (bounds.isValid()) {
       reviewMap.fitBounds(bounds.pad(0.08), { animate: true });
+    }
+    return;
+  }
+
+  if (fitToSelection) {
+    const selectedEntry = currentSpeciesById(state.highlightedSpeciesId);
+    if (selectedEntry?.footprintCode === "countrywide") {
+      if (!fitGeoJsonBounds(currentCountryGeometry)) {
+        void focusSelectedCountry(currentCountryGeometry);
+      }
     }
   }
 }
