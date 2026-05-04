@@ -764,19 +764,27 @@ button {
 }
 
 .map-help-outline {
-  inset: 16px 30px 18px 24px;
-  border: 1px solid rgba(24, 28, 31, 0.18);
-  border-radius: 38% 52% 44% 48% / 34% 44% 56% 46%;
+  inset: 16px 26px 18px 24px;
+  background: rgba(24, 28, 31, 0.18);
+  clip-path: polygon(14% 16%, 42% 12%, 66% 18%, 86% 34%, 80% 70%, 56% 82%, 24% 76%, 10% 50%);
+}
+
+.map-help-outline::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: rgba(255, 255, 255, 0.92);
+  clip-path: inherit;
 }
 
 .map-help-region {
-  top: 28px;
-  right: 70px;
-  width: 124px;
-  height: 44px;
+  top: 26px;
+  right: 64px;
+  width: 122px;
+  height: 48px;
   border: 2px dashed rgba(24, 28, 31, 0.42);
-  border-radius: 48% 42% 44% 38% / 50% 42% 54% 36%;
   background: rgba(45, 144, 70, 0.18);
+  clip-path: polygon(12% 18%, 56% 10%, 88% 24%, 82% 76%, 42% 88%, 10% 66%);
   animation: map-help-region-pulse 2.2s ease-in-out infinite;
 }
 
@@ -813,6 +821,98 @@ button {
   color: var(--ink);
   font-size: 0.9rem;
   line-height: 1.55;
+}
+
+.map-help-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.map-help-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.map-help-tool-label {
+  color: var(--ink);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.map-help-tool-icon {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border-radius: 8px;
+  background: rgba(24, 28, 31, 0.06);
+  flex: 0 0 auto;
+}
+
+.map-help-tool-icon::before,
+.map-help-tool-icon::after {
+  content: "";
+  position: absolute;
+}
+
+.map-help-tool-icon-draw::before {
+  inset: 4px;
+  border: 2px solid rgba(24, 28, 31, 0.72);
+  clip-path: polygon(18% 18%, 70% 12%, 84% 42%, 74% 80%, 28% 76%, 14% 46%);
+}
+
+.map-help-tool-icon-draw::after {
+  top: 4px;
+  left: 4px;
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 10px -1px 0 var(--green), 12px 10px 0 var(--green), 2px 12px 0 var(--green);
+}
+
+.map-help-tool-icon-edit::before {
+  left: 6px;
+  top: 10px;
+  width: 11px;
+  height: 3px;
+  background: rgba(24, 28, 31, 0.78);
+  border-radius: 999px;
+  transform: rotate(-35deg);
+}
+
+.map-help-tool-icon-edit::after {
+  right: 4px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid rgba(24, 28, 31, 0.78);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transform: rotate(-35deg);
+}
+
+.map-help-tool-icon-remove::before,
+.map-help-tool-icon-remove::after {
+  top: 5px;
+  left: 10px;
+  width: 2px;
+  height: 12px;
+  background: rgba(24, 28, 31, 0.78);
+  border-radius: 999px;
+}
+
+.map-help-tool-icon-remove::before {
+  transform: rotate(45deg);
+}
+
+.map-help-tool-icon-remove::after {
+  transform: rotate(-45deg);
 }
 
 .map-help-card .secondary-button {

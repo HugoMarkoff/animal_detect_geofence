@@ -51,7 +51,6 @@ const DEFAULT_TICKET_REPOSITORY = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
-const REGIONAL_HELP_SEEN_SESSION_KEY = "country-pack-review.regional-help.v1";
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
   likely_false: "Needs Review",
@@ -1304,6 +1303,12 @@ function pointInGeoJson(latlng, geoJson) {
   return pointInFeatureGeometry(latlng, geoJson);
 }
 
+function formatSpeciesList(species) {
+  return species
+    .map((item) => escapeHtml(item.label || item.commonName || item.binomial || "Unknown species"))
+    .join("<br>");
+}
+
 function currentNationalSpecies() {
   return (state.currentCountry?.species || [])
     .filter((entry) => entry.footprintCode === "countrywide")
@@ -1312,14 +1317,21 @@ function currentNationalSpecies() {
 }
 
 function buildMapHoverTooltipHtml(entries, nationalSpecies = []) {
-  const regionalIds = new Set();
+  const speciesById = new Map();
   entries.forEach(({ feature }) => {
     (feature.properties?.species || []).forEach((species) => {
-      regionalIds.add(species.itemId || species.label);
+      const key = species.itemId || species.label;
+      if (!speciesById.has(key)) {
+        speciesById.set(key, species);
+      }
     });
   });
 
-  const regionalCount = regionalIds.size;
+  const species = Array.from(speciesById.values()).sort((left, right) => {
+    return (left.commonName || left.binomial || left.label || "").localeCompare(right.commonName || right.binomial || right.label || "");
+  });
+
+  const regionalCount = species.length;
   const nationalCount = nationalSpecies.length;
 
   if (!regionalCount && !nationalCount) {
@@ -1341,6 +1353,7 @@ function buildMapHoverTooltipHtml(entries, nationalSpecies = []) {
   return `
     <div class="footprint-tooltip">
       <strong>${regionalCount} regional species</strong>
+      <div class="footprint-tooltip-list">${formatSpeciesList(species)}</div>
       ${nationalNote}
     </div>
   `;
