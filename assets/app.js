@@ -189,6 +189,7 @@ const comboBoxes = {
     keyboardMode: false,
     emptyText: "No matching country or region pack.",
     strictSelection: true,
+    showAllOnOpen: false,
   },
   current: {
     key: "current",
@@ -1939,8 +1940,15 @@ function isComboBoxOpen(key) {
   return openComboKey === key && !comboBoxes[key].menu.hidden;
 }
 
+function comboSelectedOption(combo) {
+  if (!combo) {
+    return null;
+  }
+  return combo.options.find((option) => option.itemId === combo.hiddenInput.value) || null;
+}
+
 function filteredComboOptions(combo) {
-  const query = cleanText(combo.input.value).toLocaleLowerCase();
+  const query = combo.showAllOnOpen ? "" : cleanText(combo.input.value).toLocaleLowerCase();
   if (!query) {
     return combo.options;
   }
@@ -1972,7 +1980,7 @@ function closeComboBox(key) {
   }
 
   if (combo.strictSelection) {
-    const selectedOption = combo.options.find((option) => option.itemId === combo.hiddenInput.value) || null;
+    const selectedOption = comboSelectedOption(combo);
     combo.input.value = selectedOption?.label || "";
   }
 
@@ -1982,6 +1990,7 @@ function closeComboBox(key) {
   combo.filteredOptions = [];
   combo.highlightedItemId = "";
   combo.keyboardMode = false;
+  combo.showAllOnOpen = false;
 
   if (openComboKey === key) {
     openComboKey = null;
@@ -2058,6 +2067,12 @@ function openComboBox(key) {
   }
 
   closeAllComboBoxes(key);
+  const selectedOption = comboSelectedOption(combo);
+  combo.showAllOnOpen = Boolean(
+    combo.strictSelection
+      && selectedOption
+      && sortKey(combo.input.value) === sortKey(selectedOption.label)
+  );
   combo.menu.hidden = false;
   combo.root.classList.add("open");
   combo.input.setAttribute("aria-expanded", "true");
@@ -2820,10 +2835,20 @@ Object.entries(comboBoxes).forEach(([key, combo]) => {
 
   combo.input.addEventListener("focus", () => {
     openComboBox(key);
+    if (combo.showAllOnOpen) {
+      requestAnimationFrame(() => {
+        combo.input.select();
+      });
+    }
   });
 
   combo.input.addEventListener("click", () => {
     openComboBox(key);
+    if (combo.showAllOnOpen) {
+      requestAnimationFrame(() => {
+        combo.input.select();
+      });
+    }
   });
 
   combo.input.addEventListener("keydown", (event) => {
