@@ -2562,7 +2562,9 @@ function findCountryOptionByQuery(value) {
 }
 
 function syncCountryLookup(commitSelection = false) {
-  if (document.activeElement === countryInput || isComboBoxOpen("country")) {
+  const comboIsOpen = isComboBoxOpen("country");
+
+  if (document.activeElement === countryInput || comboIsOpen) {
     openComboBox("country");
 
     const exactMatch = findCountryOptionByQuery(countryInput.value);
@@ -2578,7 +2580,9 @@ function syncCountryLookup(commitSelection = false) {
 
   const match = findCountryOptionByQuery(countryInput.value);
   if (!match) {
-    closeComboBox("country");
+    if (!comboIsOpen) {
+      closeComboBox("country");
+    }
     return;
   }
 
@@ -2849,13 +2853,19 @@ Object.entries(comboBoxes).forEach(([key, combo]) => {
     combo.keyboardMode = false;
   });
 
-  combo.menu.addEventListener("click", (event) => {
+  const handleMenuSelection = (event) => {
     const option = event.target.closest("[data-item-id]");
     if (!option) {
       return;
     }
+
+    event.preventDefault();
+    event.stopPropagation();
     selectComboOption(key, option.dataset.itemId);
-  });
+  };
+
+  combo.menu.addEventListener("pointerdown", handleMenuSelection);
+  combo.menu.addEventListener("click", handleMenuSelection);
 });
 
 document.addEventListener("pointerdown", (event) => {
