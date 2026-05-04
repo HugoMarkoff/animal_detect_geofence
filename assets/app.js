@@ -35,6 +35,7 @@ const ticketPreviewGate = document.getElementById("ticket-preview-gate");
 const ticketPreviewGateMessage = document.getElementById("ticket-preview-gate-message");
 const copyMarkdownButton = document.getElementById("copy-markdown");
 const openTicketLink = document.getElementById("open-ticket");
+const openGithubLink = document.getElementById("open-github");
 const ticketWarnings = document.getElementById("ticket-warnings");
 const mapSummary = document.getElementById("map-summary");
 
@@ -48,6 +49,7 @@ const COASTLINE_FILL_BUFFER_KM = 4;
 const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen";
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
+const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
 const DATA_VERSION = "20260504s";
 const MAX_TICKET_URL_LENGTH = 7000;
@@ -784,23 +786,40 @@ function buildEmailUrl(recipient, title, body) {
   };
 }
 
+function buildGitHubIssueUrl(repository, title, body) {
+  if (!repository) {
+    return null;
+  }
+
+  const baseUrl = `https://github.com/${repository}/issues/new`;
+  const params = new URLSearchParams({ title, body });
+  const url = `${baseUrl}?${params.toString()}`;
+  return url.length <= MAX_TICKET_URL_LENGTH ? url : null;
+}
+
 function buildTicketPreviewData(payload) {
   const ticket = buildTicketFromPayload(payload);
   const title = buildIssueTitle(ticket);
   const body = buildIssueBody(ticket);
-  const issueLink = buildEmailUrl(DEFAULT_TICKET_EMAIL, title, body);
+  const emailLink = buildEmailUrl(DEFAULT_TICKET_EMAIL, title, body);
+  const githubIssueUrl = buildGitHubIssueUrl(DEFAULT_GITHUB_REPO, title, body);
   const warnings = [];
 
-  if (!issueLink) {
+  if (!emailLink) {
     warnings.push("Email draft opening is unavailable right now. Use Copy Ticket instead.");
-  } else if (!issueLink.includesBody) {
+  } else if (!emailLink.includesBody) {
     warnings.push("Your email app will open with the subject only. Use Copy Ticket to paste the full ticket details.");
+  }
+
+  if (!githubIssueUrl) {
+    warnings.push("The GitHub issue draft URL is too long right now. Use Copy Ticket or Send Email instead.");
   }
 
   return {
     title,
     body,
-    issueUrl: issueLink?.url || null,
+    issueUrl: emailLink?.url || null,
+    githubIssueUrl,
     warnings,
     ticket,
   };
@@ -2404,6 +2423,8 @@ function clearTicketPreview() {
   copyMarkdownButton.disabled = true;
   openTicketLink.href = "#";
   openTicketLink.classList.add("disabled");
+  openGithubLink.href = "#";
+  openGithubLink.classList.add("disabled");
   updateTicketPreviewGate();
 }
 
@@ -2419,6 +2440,14 @@ function renderTicketPreview(preview) {
   } else {
     openTicketLink.href = "#";
     openTicketLink.classList.add("disabled");
+  }
+
+  if (preview.githubIssueUrl) {
+    openGithubLink.href = preview.githubIssueUrl;
+    openGithubLink.classList.remove("disabled");
+  } else {
+    openGithubLink.href = "#";
+    openGithubLink.classList.add("disabled");
   }
 
   const warnings = preview.warnings || [];

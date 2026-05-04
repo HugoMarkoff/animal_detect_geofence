@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504u">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260504w">
   </head>
   <body>
     <main class="shell">
@@ -206,6 +206,10 @@
               <div class="preview-actions">
                 <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
                 <a id="open-ticket" class="draft-link disabled" href="#">Send Email</a>
+                <div class="preview-action-stack">
+                  <a id="open-github" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Make GitHub Issue</a>
+                  <p class="preview-action-note">requires GitHub account</p>
+                </div>
               </div>
             </div>
 
@@ -233,6 +237,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260504u"></script>
+    <script src="./assets/app.js?v=20260504w"></script>
   </body>
 </html>
