@@ -7,16 +7,16 @@
   "selectionMode": "expected-dnk",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/denmark_new_candidates.csv",
   "summary": {
-    "total": 208,
+    "total": 207,
     "statusCounts": {
       "likely_true_one_source": 118,
       "likely_false": 41,
-      "new_record": 49
+      "new_record": 48
     },
     "bucketCounts": {
       "Likely Valid": 118,
       "Needs Review": 41,
-      "New": 49
+      "New": 48
     }
   },
   "entries": [
@@ -9048,91 +9048,6 @@
         "label": "National footprint",
         "short": "National",
         "note": "Dropped 9 likely outlier points before scoring. 3 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
-      }
-    },
-    {
-      "itemId": "89851bea-765b-431a-bb03-6f821931ebdc",
-      "countryIso3": "DNK",
-      "status": "new_record",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 22,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 465,
-      "rawInatCount": null,
-      "gbifUsageKey": 9326020,
-      "inatTaxonId": 882,
-      "inatPlaceId": 8051,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 79,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 465,
-        "qualifiedTotal": 22,
-        "specimenOrSampleCount": 79,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 80,
-        "outlierPointCount": 10,
-        "clusterCount": 2,
-        "clusterSpreadKm": 132.4798724821975,
-        "maxDistanceKm": 133.26947627924653,
-        "unique25kmCells": 3,
-        "unique50kmCells": 2,
-        "countryDiameterKm": 234.24129640355284,
-        "spreadRatio": 0.5689409951422433,
-        "coverageAreaKm2": 9077.741933874491,
-        "coverageRatio": 0.2106497872992642,
-        "footprintPolygonLatLngs": [
-          [
-            55.71743587687288,
-            9.76946297347494
-          ],
-          [
-            55.42442238077433,
-            10.165809580147098
-          ],
-          [
-            55.42357211734119,
-            10.167095067875785
-          ],
-          [
-            55.42149019159982,
-            10.170912230278798
-          ],
-          [
-            55.42220642672839,
-            10.171255165743604
-          ],
-          [
-            57.04994592681469,
-            10.273793305568827
-          ],
-          [
-            57.04969960007269,
-            10.26889196474334
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 10 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
       }
     },
     {

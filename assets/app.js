@@ -49,6 +49,7 @@ const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DATA_ROOT = "./data";
+const DATA_VERSION = "20260504s";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const STATUS_TO_BUCKET = {
@@ -91,6 +92,7 @@ const FOOTPRINT_DEFAULTS = {
 const GROUP_ORDER = ["countrywide", "regional", "country_pack_only", "needs_review", "no_points", "unscored"];
 const GROUP_LABELS = {
   all: "All species",
+  new: "New",
   countrywide: "National",
   regional: "Regional",
   country_pack_only: "Country-level",
@@ -225,6 +227,10 @@ function searchableText(values) {
   return values.filter(Boolean).join(" ").toLocaleLowerCase();
 }
 
+function dataUrl(path) {
+  return `${DATA_ROOT}/${path}?v=${encodeURIComponent(DATA_VERSION)}`;
+}
+
 function statusToBucket(status) {
   return STATUS_TO_BUCKET[status || ""] || "Needs Review";
 }
@@ -296,6 +302,10 @@ function speciesSortName(entry) {
   return (entry.commonName || entry.binomial || entry.label || "").toLocaleLowerCase();
 }
 
+function isNewDiscovery(entry) {
+  return Boolean(entry) && (entry.expected === false || entry.status === "new_record" || entry.bucket === "New");
+}
+
 function roundCoordinate(value) {
   return Math.round(Number(value) * 1e6) / 1e6;
 }
@@ -319,7 +329,7 @@ async function loadAnimalCatalog() {
     return animalCatalogCache;
   }
 
-  const dataset = await fetchJson(`${DATA_ROOT}/animals-global.json`);
+  const dataset = await fetchJson(dataUrl("animals-global.json"));
   animalCatalogCache = (dataset.items || [])
     .filter((item) => cleanText(item.id))
     .map((item) => {
@@ -344,7 +354,7 @@ async function loadCountryCatalog() {
     return countryCatalogCache;
   }
 
-  const payload = await fetchJson(`${DATA_ROOT}/precomputed-countries/index.json`);
+  const payload = await fetchJson(dataUrl("precomputed-countries/index.json"));
   countryCatalogCache = (payload.countries || []).slice().sort((left, right) => sortKey(left.countryName).localeCompare(sortKey(right.countryName)));
   return countryCatalogCache;
 }
@@ -356,7 +366,7 @@ async function loadCountryPack(iso3) {
   }
 
   if (!countryPackCache.has(normalizedIso3)) {
-    countryPackCache.set(normalizedIso3, fetchJson(`${DATA_ROOT}/precomputed-countries/${encodeURIComponent(normalizedIso3)}.json`));
+    countryPackCache.set(normalizedIso3, fetchJson(dataUrl(`precomputed-countries/${encodeURIComponent(normalizedIso3)}.json`)));
   }
 
   try {
@@ -1968,11 +1978,20 @@ function renderGroupChips() {
 
   const buttons = [];
   const total = state.currentCountry.species.length;
+  const newCount = state.currentCountry.species.filter((entry) => isNewDiscovery(entry)).length;
   buttons.push(`
     <button class="chip ${state.groupFilter === "all" ? "active" : ""}" data-group="all" type="button">
       ${GROUP_LABELS.all} (${total})
     </button>
   `);
+
+  if (newCount) {
+    buttons.push(`
+      <button class="chip ${state.groupFilter === "new" ? "active" : ""}" data-group="new" type="button">
+        ${GROUP_LABELS.new} (${newCount})
+      </button>
+    `);
+  }
 
   GROUP_ORDER.forEach((groupKey) => {
     const count = state.currentCountry.groups?.[groupKey] || 0;
@@ -1996,7 +2015,10 @@ function filteredSpecies() {
 
   const search = state.speciesFilter.toLocaleLowerCase();
   return state.currentCountry.species.filter((entry) => {
-    if (state.groupFilter !== "all" && entry.footprintCode !== state.groupFilter) {
+    if (state.groupFilter === "new" && !isNewDiscovery(entry)) {
+      return false;
+    }
+    if (state.groupFilter !== "all" && state.groupFilter !== "new" && entry.footprintCode !== state.groupFilter) {
       return false;
     }
     if (!search) {
@@ -2013,6 +2035,9 @@ function filteredSpecies() {
 
 function renderSpeciesCard(entry) {
   const selectedClass = state.highlightedSpeciesId === entry.itemId ? "selected" : "";
+  const classBadge = cleanText(entry.classLabel)
+    ? `<span class="badge badge-class">${escapeHtml(entry.classLabel)}</span>`
+    : "";
   return `
     <button class="species-card ${selectedClass}" type="button" data-item-id="${entry.itemId}">
       <div class="species-card-main">
@@ -2022,6 +2047,7 @@ function renderSpeciesCard(entry) {
         </div>
       </div>
       <div class="species-card-meta">
+        ${classBadge}
         <span class="badge badge-footprint">${escapeHtml(entry.footprintShort)}</span>
         <span class="badge badge-bucket">${escapeHtml(entry.bucket)}</span>
       </div>
@@ -2036,12 +2062,13 @@ function renderSpeciesList() {
     return;
   }
 
-  if (state.groupFilter === "all") {
+  if (state.groupFilter === "all" || state.groupFilter === "new") {
     const allEntries = entries.slice().sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
+    const heading = state.groupFilter === "new" ? GROUP_LABELS.new : GROUP_LABELS.all;
     speciesList.innerHTML = `
       <section class="species-group">
         <div class="species-group-head">
-          <h3>${escapeHtml(GROUP_LABELS.all)}</h3>
+          <h3>${escapeHtml(heading)}</h3>
           <span class="species-group-count">${allEntries.length}</span>
         </div>
         <div class="species-stack">
