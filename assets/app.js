@@ -8,10 +8,12 @@ const ticketForm = document.getElementById("ticket-form");
 const speciesSelectionGrid = document.getElementById("species-selection-grid");
 const currentSpeciesField = document.getElementById("current-species-field");
 const currentSpeciesInput = document.getElementById("currentSpeciesLabel");
+const currentSpeciesToggle = document.getElementById("current-species-toggle");
 const currentSpeciesItemIdInput = document.getElementById("currentSpeciesItemId");
 const currentSpeciesOptions = document.getElementById("current-species-options");
 const proposedSpeciesField = document.getElementById("proposed-species-field");
 const proposedSpeciesInput = document.getElementById("proposedSpeciesLabel");
+const proposedSpeciesToggle = document.getElementById("proposed-species-toggle");
 const proposedSpeciesItemIdInput = document.getElementById("proposedSpeciesItemId");
 const animalOptions = document.getElementById("animal-options");
 const scopeField = document.getElementById("scope-field");
@@ -146,6 +148,36 @@ let hoveredRegionalLayers = [];
 let selectedRegionalLayers = [];
 let suggestionDrawLayer;
 let worldCountryGeometryIndexPromise;
+let openComboKey = null;
+
+const comboBoxes = {
+  current: {
+    key: "current",
+    root: document.getElementById("current-species-combobox"),
+    input: currentSpeciesInput,
+    toggle: currentSpeciesToggle,
+    menu: currentSpeciesOptions,
+    hiddenInput: currentSpeciesItemIdInput,
+    options: [],
+    filteredOptions: [],
+    highlightedItemId: "",
+    keyboardMode: false,
+    emptyText: "No matching species in this country pack.",
+  },
+  proposed: {
+    key: "proposed",
+    root: document.getElementById("proposed-species-combobox"),
+    input: proposedSpeciesInput,
+    toggle: proposedSpeciesToggle,
+    menu: animalOptions,
+    hiddenInput: proposedSpeciesItemIdInput,
+    options: [],
+    filteredOptions: [],
+    highlightedItemId: "",
+    keyboardMode: false,
+    emptyText: "No matching species in the catalog.",
+  },
+};
 
 function suggestionType() {
   const selected = document.querySelector('input[name="suggestionType"]:checked');
@@ -167,6 +199,10 @@ function cleanText(value) {
 
 function sortKey(value) {
   return cleanText(value).toLocaleLowerCase();
+}
+
+function searchableText(values) {
+  return values.filter(Boolean).join(" ").toLocaleLowerCase();
 }
 
 function statusToBucket(status) {
@@ -1436,42 +1472,243 @@ function populateCountrySelect(countries) {
 
 function populateAnimalOptions(animals) {
   animalLabelIndex.clear();
-  const options = animals.map((animal) => {
+  comboBoxes.proposed.options = animals.map((animal) => {
     animalLabelIndex.set(animal.label, animal.itemId);
-    const option = document.createElement("option");
-    option.value = animal.label;
-    return option;
+    return {
+      itemId: animal.itemId,
+      label: animal.label,
+      meta: cleanText(animal.classLabel),
+      searchText: searchableText([animal.label, animal.commonName, animal.binomial, animal.classLabel]),
+    };
   });
 
-  animalOptions.replaceChildren(...options);
+  if (openComboKey === "proposed") {
+    renderComboOptions("proposed");
+  }
 }
 
 function setProposedSpeciesValue(label, itemId = "") {
   proposedSpeciesInput.value = label;
   proposedSpeciesItemIdInput.value = itemId;
+
+  if (openComboKey === "proposed") {
+    renderComboOptions("proposed");
+  }
 }
 
 function setCurrentSpeciesValue(label, itemId = "") {
   currentSpeciesInput.value = label;
   currentSpeciesItemIdInput.value = itemId;
+
+  if (openComboKey === "current") {
+    renderComboOptions("current");
+  }
 }
 
 function populateCurrentSpeciesOptions(species) {
   const previous = currentSpeciesItemIdInput.value;
   currentSpeciesLabelIndex.clear();
 
-  const options = species.map((entry) => {
+  comboBoxes.current.options = species.map((entry) => {
     currentSpeciesLabelIndex.set(entry.label, entry.itemId);
-    const option = document.createElement("option");
-    option.value = entry.label;
-    option.label = entry.footprintShort;
-    return option;
+    return {
+      itemId: entry.itemId,
+      label: entry.label,
+      meta: cleanText(entry.footprintShort),
+      searchText: searchableText([
+        entry.label,
+        entry.commonName,
+        entry.binomial,
+        entry.footprintShort,
+        entry.footprintLabel,
+      ]),
+    };
   });
-
-  currentSpeciesOptions.replaceChildren(...options);
 
   const previousEntry = species.find((entry) => entry.itemId === previous) || null;
   setCurrentSpeciesValue(previousEntry?.label || "", previousEntry?.itemId || "");
+
+  if (openComboKey === "current") {
+    renderComboOptions("current");
+  }
+}
+
+function isComboBoxOpen(key) {
+  return openComboKey === key && !comboBoxes[key].menu.hidden;
+}
+
+function filteredComboOptions(combo) {
+  const query = cleanText(combo.input.value).toLocaleLowerCase();
+  if (!query) {
+    return combo.options;
+  }
+  return combo.options.filter((option) => option.searchText.includes(query));
+}
+
+function updateComboBoxLayout(key) {
+  const combo = comboBoxes[key];
+  if (!combo || combo.menu.hidden) {
+    return;
+  }
+
+  const rect = combo.root.getBoundingClientRect();
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+  const spaceBelow = viewportHeight - rect.bottom - 12;
+  const spaceAbove = rect.top - 12;
+  const openUp = spaceBelow < 220 && spaceAbove > spaceBelow;
+  const availableSpace = Math.max(96, (openUp ? spaceAbove : spaceBelow) - 8);
+  const maxHeight = Math.min(360, Math.round(viewportHeight * 0.42), availableSpace);
+
+  combo.root.classList.toggle("open-up", openUp);
+  combo.root.style.setProperty("--combo-menu-max-height", `${Math.max(96, maxHeight)}px`);
+}
+
+function closeComboBox(key) {
+  const combo = comboBoxes[key];
+  if (!combo) {
+    return;
+  }
+
+  combo.root.classList.remove("open", "open-up");
+  combo.menu.hidden = true;
+  combo.input.setAttribute("aria-expanded", "false");
+  combo.filteredOptions = [];
+  combo.highlightedItemId = "";
+  combo.keyboardMode = false;
+
+  if (openComboKey === key) {
+    openComboKey = null;
+  }
+}
+
+function closeAllComboBoxes(exceptKey = "") {
+  Object.keys(comboBoxes).forEach((key) => {
+    if (key !== exceptKey) {
+      closeComboBox(key);
+    }
+  });
+}
+
+function scrollActiveComboOptionIntoView(combo) {
+  combo.menu.querySelector(".combo-option.active")?.scrollIntoView({ block: "nearest" });
+}
+
+function renderComboOptions(key) {
+  const combo = comboBoxes[key];
+  if (!combo) {
+    return;
+  }
+
+  const selectedItemId = combo.hiddenInput.value;
+  const filteredOptions = filteredComboOptions(combo);
+  combo.filteredOptions = filteredOptions;
+
+  if (!filteredOptions.length) {
+    combo.highlightedItemId = "";
+    combo.menu.innerHTML = `<div class="combo-empty">${escapeHtml(combo.emptyText)}</div>`;
+    updateComboBoxLayout(key);
+    return;
+  }
+
+  if (!filteredOptions.some((option) => option.itemId === combo.highlightedItemId)) {
+    combo.highlightedItemId = filteredOptions.find((option) => option.itemId === selectedItemId)?.itemId || filteredOptions[0].itemId;
+  }
+
+  combo.menu.innerHTML = filteredOptions.map((option) => {
+    const classes = ["combo-option"];
+    if (option.itemId === selectedItemId) {
+      classes.push("selected");
+    }
+    if (option.itemId === combo.highlightedItemId) {
+      classes.push("active");
+    }
+
+    const meta = option.meta ? `<span class="combo-option-meta">${escapeHtml(option.meta)}</span>` : "";
+    return `
+      <button
+        class="${classes.join(" ")}"
+        type="button"
+        role="option"
+        aria-selected="${option.itemId === selectedItemId}"
+        data-item-id="${escapeHtml(option.itemId)}"
+      >
+        <span class="combo-option-label">${escapeHtml(option.label)}</span>
+        ${meta}
+      </button>
+    `;
+  }).join("");
+
+  updateComboBoxLayout(key);
+  requestAnimationFrame(() => {
+    scrollActiveComboOptionIntoView(combo);
+  });
+}
+
+function openComboBox(key) {
+  const combo = comboBoxes[key];
+  if (!combo) {
+    return;
+  }
+
+  closeAllComboBoxes(key);
+  combo.menu.hidden = false;
+  combo.root.classList.add("open");
+  combo.input.setAttribute("aria-expanded", "true");
+  combo.keyboardMode = false;
+  openComboKey = key;
+  renderComboOptions(key);
+}
+
+function moveComboHighlight(key, direction) {
+  const combo = comboBoxes[key];
+  if (!combo) {
+    return;
+  }
+
+  if (!isComboBoxOpen(key)) {
+    openComboBox(key);
+    return;
+  }
+
+  const options = combo.filteredOptions;
+  if (!options.length) {
+    return;
+  }
+
+  const currentIndex = options.findIndex((option) => option.itemId === combo.highlightedItemId);
+  const nextIndex = currentIndex < 0
+    ? 0
+    : Math.max(0, Math.min(options.length - 1, currentIndex + direction));
+
+  combo.highlightedItemId = options[nextIndex].itemId;
+  combo.keyboardMode = true;
+  renderComboOptions(key);
+}
+
+function selectComboOption(key, itemId) {
+  const option = comboBoxes[key]?.options.find((candidate) => candidate.itemId === itemId);
+  if (!option) {
+    return;
+  }
+
+  if (key === "current") {
+    applySpeciesSelection(option.itemId, false);
+  } else {
+    setProposedSpeciesValue(option.label, option.itemId);
+    clearTicketPreview();
+  }
+
+  closeComboBox(key);
+}
+
+function toggleComboBox(key) {
+  if (isComboBoxOpen(key)) {
+    closeComboBox(key);
+    return;
+  }
+
+  comboBoxes[key].input.focus();
+  openComboBox(key);
 }
 
 function currentSpeciesById(itemId) {
@@ -1650,6 +1887,8 @@ function applySpeciesSelection(itemId, fitToMap = false) {
     setCurrentSpeciesValue(currentEntry?.label || "", itemId || "");
   }
 
+  closeComboBox("current");
+
   clearTicketPreview();
 }
 
@@ -1692,6 +1931,13 @@ function updateFormVisibility() {
   scopeField.hidden = !showScope;
   speciesSelectionGrid.classList.toggle("single-field", showCurrentSpecies !== showProposedSpecies);
 
+  if (!showCurrentSpecies) {
+    closeComboBox("current");
+  }
+  if (!showProposedSpecies) {
+    closeComboBox("proposed");
+  }
+
   currentSpeciesInput.required = showCurrentSpecies;
   proposedSpeciesInput.required = showProposedSpecies;
   scopeSelect.required = showScope;
@@ -1704,22 +1950,24 @@ function syncCurrentSpeciesLookup() {
   const label = cleanText(currentSpeciesInput.value);
   const itemId = currentSpeciesLabelIndex.get(label) || "";
   currentSpeciesItemIdInput.value = itemId;
-
-  if (itemId) {
-    applySpeciesSelection(itemId, false);
-    return;
-  }
-
-  state.highlightedSpeciesId = "";
+  state.highlightedSpeciesId = itemId;
   renderSpeciesList();
   updateSelectedRegionalLayers(false);
   clearTicketPreview();
+
+  if (document.activeElement === currentSpeciesInput || isComboBoxOpen("current")) {
+    openComboBox("current");
+  }
 }
 
 function syncProposedSpeciesLookup() {
   const label = cleanText(proposedSpeciesInput.value);
   proposedSpeciesItemIdInput.value = animalLabelIndex.get(label) || "";
   clearTicketPreview();
+
+  if (document.activeElement === proposedSpeciesInput || isComboBoxOpen("proposed")) {
+    openComboBox("proposed");
+  }
 }
 
 function clearTicketPreview() {
@@ -1776,6 +2024,7 @@ async function loadCountry(iso3) {
   }
 
   setStatus("Loading country pack...");
+  closeAllComboBoxes();
   clearDrawnPolygons();
   state.highlightedSpeciesId = "";
 
@@ -1843,6 +2092,8 @@ async function initialize() {
 }
 
 function handleSuggestionTypeChange() {
+  closeAllComboBoxes();
+
   if (suggestionType() === "addition") {
     setCurrentSpeciesValue("", "");
     state.highlightedSpeciesId = "";
@@ -1891,6 +2142,82 @@ document.querySelectorAll(".segment-option").forEach((option) => {
   });
 });
 
+Object.entries(comboBoxes).forEach(([key, combo]) => {
+  combo.toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    toggleComboBox(key);
+  });
+
+  combo.input.addEventListener("focus", () => {
+    openComboBox(key);
+  });
+
+  combo.input.addEventListener("click", () => {
+    openComboBox(key);
+  });
+
+  combo.input.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      moveComboHighlight(key, 1);
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      moveComboHighlight(key, -1);
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeComboBox(key);
+      return;
+    }
+
+    if (event.key === "Enter" && isComboBoxOpen(key) && combo.keyboardMode && combo.highlightedItemId) {
+      event.preventDefault();
+      selectComboOption(key, combo.highlightedItemId);
+      return;
+    }
+
+    combo.keyboardMode = false;
+  });
+
+  combo.menu.addEventListener("click", (event) => {
+    const option = event.target.closest("[data-item-id]");
+    if (!option) {
+      return;
+    }
+    selectComboOption(key, option.dataset.itemId);
+  });
+});
+
+document.addEventListener("pointerdown", (event) => {
+  if (!openComboKey) {
+    return;
+  }
+
+  const combo = comboBoxes[openComboKey];
+  if (combo.root.contains(event.target)) {
+    return;
+  }
+
+  closeAllComboBoxes();
+});
+
+document.addEventListener("focusin", (event) => {
+  if (!openComboKey) {
+    return;
+  }
+
+  const combo = comboBoxes[openComboKey];
+  if (combo.root.contains(event.target)) {
+    return;
+  }
+
+  closeAllComboBoxes();
+});
+
 currentSpeciesInput.addEventListener("input", syncCurrentSpeciesLookup);
 currentSpeciesInput.addEventListener("change", syncCurrentSpeciesLookup);
 
@@ -1919,6 +2246,16 @@ window.addEventListener("resize", () => {
   if (reviewMap) {
     reviewMap.invalidateSize();
   }
+
+  if (openComboKey) {
+    updateComboBoxLayout(openComboKey);
+  }
 });
+
+window.addEventListener("scroll", () => {
+  if (openComboKey) {
+    updateComboBoxLayout(openComboKey);
+  }
+}, true);
 
 initialize();

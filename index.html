@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504d">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260504e">
   </head>
   <body>
     <main class="shell">
@@ -80,16 +80,26 @@
             <div id="species-selection-grid" class="field-grid two-up">
               <label id="current-species-field" class="field">
                 <span>Current species</span>
-                <input id="currentSpeciesLabel" name="currentSpeciesLabel" list="current-species-options" placeholder="Select from current country pack">
+                <div id="current-species-combobox" class="combo-box">
+                  <div class="combo-input-shell">
+                    <input id="currentSpeciesLabel" name="currentSpeciesLabel" placeholder="Select from current country pack" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="current-species-options">
+                    <button id="current-species-toggle" class="combo-toggle" type="button" aria-label="Toggle current country species"></button>
+                  </div>
+                  <div id="current-species-options" class="combo-menu" role="listbox" hidden></div>
+                </div>
                 <input id="currentSpeciesItemId" name="currentSpeciesItemId" type="hidden">
-                <datalist id="current-species-options"></datalist>
               </label>
 
               <label id="proposed-species-field" class="field">
                 <span>Proposed species</span>
-                <input id="proposedSpeciesLabel" name="proposedSpeciesLabel" list="animal-options" placeholder="Search all species">
+                <div id="proposed-species-combobox" class="combo-box">
+                  <div class="combo-input-shell">
+                    <input id="proposedSpeciesLabel" name="proposedSpeciesLabel" placeholder="Search all species" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="animal-options">
+                    <button id="proposed-species-toggle" class="combo-toggle" type="button" aria-label="Toggle all species"></button>
+                  </div>
+                  <div id="animal-options" class="combo-menu" role="listbox" hidden></div>
+                </div>
                 <input id="proposedSpeciesItemId" name="proposedSpeciesItemId" type="hidden">
-                <datalist id="animal-options"></datalist>
               </label>
             </div>
 
@@ -174,6 +184,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260504d"></script>
+    <script src="./assets/app.js?v=20260504e"></script>
   </body>
 </html>

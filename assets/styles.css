@@ -144,6 +144,144 @@ h3 {
   resize: vertical;
 }
 
+.combo-box {
+  position: relative;
+  --combo-menu-max-height: 280px;
+}
+
+.combo-input-shell {
+  display: flex;
+  align-items: stretch;
+  min-height: 52px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 14px;
+  background: var(--panel-solid);
+  overflow: hidden;
+}
+
+.combo-input-shell:focus-within {
+  border-color: rgba(45, 144, 70, 0.36);
+  box-shadow: 0 0 0 3px rgba(164, 238, 22, 0.18);
+}
+
+.combo-box input {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  min-height: 50px;
+  padding: 0 15px;
+  padding-right: 0;
+}
+
+.combo-box input:focus {
+  outline: none;
+}
+
+.combo-toggle,
+.combo-option {
+  color: var(--ink);
+  background: transparent;
+  box-shadow: none;
+}
+
+.combo-toggle {
+  flex: 0 0 48px;
+  min-width: 48px;
+  padding: 0;
+  border-left: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 0;
+}
+
+.combo-toggle::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  margin: 0 auto;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 140ms ease;
+}
+
+.combo-box.open .combo-toggle::before {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+.combo-toggle:hover,
+.combo-option:hover,
+.combo-toggle:focus-visible,
+.combo-option:focus-visible {
+  transform: none;
+}
+
+.combo-toggle:hover,
+.combo-toggle:focus-visible {
+  background: rgba(24, 28, 31, 0.04);
+}
+
+.combo-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 16px;
+  background: var(--panel-solid);
+  box-shadow: 0 22px 44px rgba(24, 28, 31, 0.14);
+  max-height: min(var(--combo-menu-max-height), 42vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.combo-box.open-up .combo-menu {
+  top: auto;
+  bottom: calc(100% + 8px);
+}
+
+.combo-option {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 13px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.combo-option.active,
+.combo-option:hover,
+.combo-option:focus-visible {
+  background: rgba(24, 28, 31, 0.05);
+}
+
+.combo-option.selected {
+  background: rgba(45, 144, 70, 0.14);
+}
+
+.combo-option-label {
+  min-width: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.combo-option-meta,
+.combo-empty {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.combo-empty {
+  padding: 12px 13px;
+}
+
 .search-field {
   margin-top: 16px;
 }
