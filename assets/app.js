@@ -51,10 +51,11 @@ const COASTLINE_SNAP_DISTANCE_KM = 8;
 const COASTLINE_FILL_BUFFER_KM = 4;
 const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen";
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
+const GEOBOUNDARIES_LIGHTWEIGHT_ONLY_VERTEX_LIMIT = 200000;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260505b";
+const DATA_VERSION = "20260505c";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const STATUS_TO_BUCKET = {
@@ -109,6 +110,7 @@ const GROUP_LABELS = {
 const countryCenterCache = new Map();
 const countryGeometryCache = new Map();
 const countryBoundarySegmentCache = new WeakMap();
+const countryClipContextCache = new WeakMap();
 const currentSpeciesLabelIndex = new Map();
 const animalLabelIndex = new Map();
 const animalById = new Map();
@@ -972,6 +974,10 @@ function geoBoundariesMediaUrl(url) {
 
 async function fetchCountryGeometryFromGeoBoundaries(iso3) {
   const metadata = await fetchJson(`${GEOBOUNDARIES_API_ROOT}/${encodeURIComponent(iso3)}/ADM0/`);
+  return fetchCountryGeometryFromGeoBoundariesMetadata(metadata, iso3);
+}
+
+function fetchCountryGeometryFromGeoBoundariesMetadata(metadata, iso3) {
   const meanVertices = Number(metadata?.meanVertices);
   const preferFullGeometry = Number.isFinite(meanVertices) && meanVertices <= GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT;
   const downloadUrl = geoBoundariesMediaUrl(
@@ -987,6 +993,49 @@ async function fetchCountryGeometryFromGeoBoundaries(iso3) {
   return fetchJson(downloadUrl);
 }
 
+async function fetchCountryGeometryFromWorldGeometryIndex(iso3) {
+  if (!worldCountryGeometryIndexPromise) {
+    worldCountryGeometryIndexPromise = fetchJson(
+      "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
+    )
+      .then((payload) => {
+        const index = new Map();
+        (payload?.features || []).forEach((feature) => {
+          const featureIso3 = feature?.properties?.["ISO3166-1-Alpha-3"];
+          if (!featureIso3 || index.has(featureIso3)) {
+            return;
+          }
+          index.set(featureIso3, {
+            type: "FeatureCollection",
+            features: [feature],
+          });
+        });
+        return index;
+      })
+      .catch((error) => {
+        worldCountryGeometryIndexPromise = null;
+        throw error;
+      });
+  }
+
+  const index = await worldCountryGeometryIndexPromise;
+  return index.get(iso3) || null;
+}
+
+async function fetchCountryGeometryFromWorldCountryFile(iso3) {
+  return fetchJson(
+    `https://raw.githubusercontent.com/johan/world.geo.json/master/countries/${encodeURIComponent(iso3)}.geo.json`
+  );
+}
+
+async function fetchLightweightCountryGeometry(iso3) {
+  try {
+    return await fetchCountryGeometryFromWorldCountryFile(iso3);
+  } catch {
+    return fetchCountryGeometryFromWorldGeometryIndex(iso3);
+  }
+}
+
 async function fetchCountryGeometry(iso3) {
   if (!iso3) {
     return null;
@@ -995,8 +1044,30 @@ async function fetchCountryGeometry(iso3) {
     return countryGeometryCache.get(iso3);
   }
 
+  let geoboundariesMetadata = null;
   try {
-    const geoboundariesGeometry = await fetchCountryGeometryFromGeoBoundaries(iso3);
+    geoboundariesMetadata = await fetchJson(`${GEOBOUNDARIES_API_ROOT}/${encodeURIComponent(iso3)}/ADM0/`);
+  } catch {
+    geoboundariesMetadata = null;
+  }
+
+  const meanVertices = Number(geoboundariesMetadata?.meanVertices);
+  const preferLightweightGeometry = Number.isFinite(meanVertices) && meanVertices >= GEOBOUNDARIES_LIGHTWEIGHT_ONLY_VERTEX_LIMIT;
+
+  if (preferLightweightGeometry) {
+    try {
+      const lightweightGeometry = await fetchLightweightCountryGeometry(iso3);
+      countryGeometryCache.set(iso3, lightweightGeometry);
+      return lightweightGeometry;
+    } catch {
+      // Fall through to geoBoundaries if lightweight sources fail.
+    }
+  }
+
+  try {
+    const geoboundariesGeometry = geoboundariesMetadata
+      ? await fetchCountryGeometryFromGeoBoundariesMetadata(geoboundariesMetadata, iso3)
+      : await fetchCountryGeometryFromGeoBoundaries(iso3);
     countryGeometryCache.set(iso3, geoboundariesGeometry);
     return geoboundariesGeometry;
   } catch {
@@ -1004,32 +1075,7 @@ async function fetchCountryGeometry(iso3) {
   }
 
   try {
-    if (!worldCountryGeometryIndexPromise) {
-      worldCountryGeometryIndexPromise = fetchJson(
-        "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
-      )
-        .then((payload) => {
-          const index = new Map();
-          (payload?.features || []).forEach((feature) => {
-            const featureIso3 = feature?.properties?.["ISO3166-1-Alpha-3"];
-            if (!featureIso3 || index.has(featureIso3)) {
-              return;
-            }
-            index.set(featureIso3, {
-              type: "FeatureCollection",
-              features: [feature],
-            });
-          });
-          return index;
-        })
-        .catch((error) => {
-          worldCountryGeometryIndexPromise = null;
-          throw error;
-        });
-    }
-
-    const index = await worldCountryGeometryIndexPromise;
-    const indexed = index.get(iso3) || null;
+    const indexed = await fetchCountryGeometryFromWorldGeometryIndex(iso3);
     if (indexed) {
       countryGeometryCache.set(iso3, indexed);
       return indexed;
@@ -1039,9 +1085,7 @@ async function fetchCountryGeometry(iso3) {
   }
 
   try {
-    const direct = await fetchJson(
-      `https://raw.githubusercontent.com/johan/world.geo.json/master/countries/${encodeURIComponent(iso3)}.geo.json`
-    );
+    const direct = await fetchCountryGeometryFromWorldCountryFile(iso3);
     countryGeometryCache.set(iso3, direct);
     return direct;
   } catch {
@@ -1168,7 +1212,7 @@ function nearestPointOnBoundarySegment(point, segmentStart, segmentEnd) {
   };
 }
 
-function getCountryBoundarySegments(countryGeometry) {
+function getCountryBoundarySegments(countryGeometry, countryPolygons = null) {
   if (!countryGeometry) {
     return [];
   }
@@ -1176,7 +1220,7 @@ function getCountryBoundarySegments(countryGeometry) {
     return countryBoundarySegmentCache.get(countryGeometry);
   }
 
-  const polygons = geoJsonToClipMultiPolygon(countryGeometry);
+  const polygons = countryPolygons || geoJsonToClipMultiPolygon(countryGeometry);
   const segments = [];
 
   polygons.forEach((polygon) => {
@@ -1191,6 +1235,25 @@ function getCountryBoundarySegments(countryGeometry) {
 
   countryBoundarySegmentCache.set(countryGeometry, segments);
   return segments;
+}
+
+function getCountryClipContext(countryGeometry) {
+  if (!countryGeometry) {
+    return null;
+  }
+  if (countryClipContextCache.has(countryGeometry)) {
+    return countryClipContextCache.get(countryGeometry);
+  }
+
+  const country = geoJsonToClipMultiPolygon(countryGeometry);
+  const countryBoundarySegments = getCountryBoundarySegments(countryGeometry, country);
+  const clipContext = {
+    country,
+    countryBoundarySegments,
+  };
+
+  countryClipContextCache.set(countryGeometry, clipContext);
+  return clipContext;
 }
 
 function distanceBetweenLngLatPoints(pointA, pointB) {
@@ -1350,10 +1413,10 @@ function bufferFootprintTowardCoastline(footprint, country, countryBoundarySegme
   }
 }
 
-function snapFootprintTowardCoastline(footprint, countryGeometry) {
+function snapFootprintTowardCoastline(footprint, countryClipContext) {
   const clipper = window.polygonClipping;
-  const countryBoundarySegments = getCountryBoundarySegments(countryGeometry);
-  const country = geoJsonToClipMultiPolygon(countryGeometry);
+  const countryBoundarySegments = countryClipContext?.countryBoundarySegments || [];
+  const country = countryClipContext?.country || [];
 
   if (!footprint.length || !country.length || !countryBoundarySegments.length || !clipper?.union) {
     return footprint;
@@ -1389,17 +1452,20 @@ function snapFootprintTowardCoastline(footprint, countryGeometry) {
   }
 }
 
-function clipFeatureToCountry(feature, countryGeometry) {
+function clipFeatureToCountry(feature, countryGeometryOrContext) {
   const clipper = window.polygonClipping;
   const footprint = geoJsonToClipMultiPolygon(feature);
-  const country = geoJsonToClipMultiPolygon(countryGeometry);
+  const countryClipContext = countryGeometryOrContext?.country
+    ? countryGeometryOrContext
+    : getCountryClipContext(countryGeometryOrContext);
+  const country = countryClipContext?.country || [];
 
   if (!footprint.length || !country.length || !clipper?.intersection) {
     return [feature];
   }
 
   try {
-    const expandedFootprint = snapFootprintTowardCoastline(footprint, countryGeometry);
+    const expandedFootprint = snapFootprintTowardCoastline(footprint, countryClipContext);
     const clipped = clipper.intersection(expandedFootprint, country);
     if (!Array.isArray(clipped) || !clipped.length) {
       return [];
@@ -1692,6 +1758,7 @@ async function loadRegionalOverlays() {
       fetchCountryGeometry(countrySelect.value),
     ]);
     currentCountryGeometry = countryGeometry;
+    const countryClipContext = getCountryClipContext(countryGeometry);
     const overlayData = buildRegionalOverlayCollection(state.currentCountry);
     const nationalSpecies = currentNationalSpecies();
 
@@ -1703,7 +1770,7 @@ async function loadRegionalOverlays() {
     }
 
     const features = (overlayData.features || []).flatMap((feature) =>
-      countryGeometry ? clipFeatureToCountry(feature, countryGeometry) : [feature]
+      countryGeometry ? clipFeatureToCountry(feature, countryClipContext) : [feature]
     );
 
     if (features.length) {

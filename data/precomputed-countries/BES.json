@@ -1,18 +1,20 @@
 {
   "generatedFor": "BES",
   "countryName": "Caribbean Netherlands",
-  "generatedAtUtc": "2026-05-04T05:52:56.538683+00:00",
+  "generatedAtUtc": "2026-05-04T19:14:35.665503+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
-  "precomputeMode": "baseline",
+  "precomputeMode": "validated",
   "selectionMode": "expected-country",
   "candidateFile": null,
   "summary": {
     "total": 109,
     "statusCounts": {
-      "likely_true_one_source": 109
+      "likely_true_one_source": 45,
+      "likely_false": 64
     },
     "bucketCounts": {
-      "Likely Valid": 109
+      "Likely Valid": 45,
+      "Needs Review": 64
     }
   },
   "entries": [
@@ -23,18 +25,125 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1433,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1433,
+      "rawInatCount": null,
+      "gbifUsageKey": 5228199,
+      "inatTaxonId": 144479,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1433,
+        "qualifiedTotal": 1433,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 87,
+        "outlierPointCount": 3,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 24.504439417379253,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.1990927869730676,
+        "coverageAreaKm2": 825.5667644764085,
+        "coverageRatio": 2.5169718429158796,
+        "footprintPolygonLatLngs": [
+          [
+            12.332269016735449,
+            -68.40373831602265
+          ],
+          [
+            12.000168742261115,
+            -68.29548199937508
+          ],
+          [
+            12.05743462226266,
+            -68.17512442451591
+          ],
+          [
+            12.18654581918867,
+            -68.14479232109417
+          ],
+          [
+            12.21296720785092,
+            -68.15014463670697
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 3 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": 513889,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "06c15985-fbe7-4da4-9972-22c03280eaf0",
@@ -43,18 +152,137 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 84,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 84,
+      "rawInatCount": null,
+      "gbifUsageKey": 9512459,
+      "inatTaxonId": 4535,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 84,
+        "qualifiedTotal": 84,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 17,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 84,
+        "corePointCount": 82,
+        "outlierPointCount": 2,
+        "clusterCount": 2,
+        "clusterSpreadKm": 817.1758296324933,
+        "maxDistanceKm": 844.5884279066806,
+        "unique25kmCells": 8,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 41.32883330297935,
+        "coverageAreaKm2": 379173.3997866257,
+        "coverageRatio": 1156.0164627641027,
+        "footprintPolygonLatLngs": [
+          [
+            11.300162019589246,
+            -69.42644409825114
+          ],
+          [
+            11.02644794883388,
+            -69.20382781049165
+          ],
+          [
+            10.990504879224877,
+            -69.17093133917402
+          ],
+          [
+            10.985493056081564,
+            -69.15426052742428
+          ],
+          [
+            18.43409925529211,
+            -61.96779020009144
+          ],
+          [
+            18.481674208933153,
+            -61.992698789074126
+          ],
+          [
+            18.874080406451654,
+            -62.26788682556138
+          ],
+          [
+            11.375692634414493,
+            -69.41805523730825
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 2 likely outlier points before scoring. 2 dense observation areas were found in Caribbean Netherlands, so this is treated as national rather than a single regional pocket."
+      }
     },
     {
       "itemId": "0cf1383a-38fc-421a-a769-3e47494d5edc",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 2495858,
+      "inatTaxonId": 3580,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
@@ -63,28 +291,154 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 2,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 2,
+      "rawInatCount": null,
+      "gbifUsageKey": 2441110,
+      "inatTaxonId": 121578,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 2,
+        "qualifiedTotal": 2,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 2,
+        "corePointCount": 2,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 0.2483532218970641,
+        "unique25kmCells": 2,
+        "unique50kmCells": 2,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0.01215284103937036,
+        "coverageAreaKm2": 205.04005098992087,
+        "coverageRatio": 0.6251221066765881,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "12b2a5ea-b9b9-48a6-8c45-ab32f9ff0468",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 5229754,
+      "inatTaxonId": 16079,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7625239,
+      "inatTaxonId": 1289433,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
@@ -93,18 +447,133 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1986,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1986,
+      "rawInatCount": null,
+      "gbifUsageKey": 9752617,
+      "inatTaxonId": 144455,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1986,
+        "qualifiedTotal": 1986,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 83,
+        "outlierPointCount": 7,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 32.22991378350306,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.5771288003900652,
+        "coverageAreaKm2": 1063.7205425164752,
+        "coverageRatio": 3.243050434501449,
+        "footprintPolygonLatLngs": [
+          [
+            12.28477050112117,
+            -68.47616964299681
+          ],
+          [
+            12.250716409288554,
+            -68.46835831652055
+          ],
+          [
+            11.964383409973768,
+            -68.20407686552362
+          ],
+          [
+            12.073311925610467,
+            -68.16220492247263
+          ],
+          [
+            12.174917221668878,
+            -68.14603259515735
+          ],
+          [
+            12.344604391305774,
+            -68.3822439392315
+          ],
+          [
+            12.308755466688583,
+            -68.46840341723471
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 7 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": 123070,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "1965ba9a-cbff-40ba-8e7f-d7c7a5bb4ace",
@@ -113,28 +582,148 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 6,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 6,
+      "rawInatCount": null,
+      "gbifUsageKey": 7341822,
+      "inatTaxonId": 145242,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 6,
+        "qualifiedTotal": 6,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 10875550,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "1a5311ef-a0e0-4593-acd3-e291dd13f620",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 10716565,
+      "inatTaxonId": 9357,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "1ab198a0-04dc-4407-8370-1a458c0c9f8e",
@@ -143,8 +732,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 821,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 821,
+      "rawInatCount": null,
+      "gbifUsageKey": 9685907,
+      "inatTaxonId": 4665,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 821,
+        "qualifiedTotal": 821,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "1b981766-150c-48cb-b130-ec435986cad8",
@@ -153,18 +782,98 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1116,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1116,
+      "rawInatCount": null,
+      "gbifUsageKey": 2482077,
+      "inatTaxonId": 4246,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1116,
+        "qualifiedTotal": 1116,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "1cba8403-375b-4719-8099-daa4712cf386",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 5219666,
+      "inatTaxonId": 46010,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "20fe6172-af93-46ad-8bf6-329dbd14dced",
@@ -173,48 +882,283 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 464,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 464,
+      "rawInatCount": null,
+      "gbifUsageKey": 2474639,
+      "inatTaxonId": 162,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 464,
+        "qualifiedTotal": 464,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 31.77749747623138,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.5549903983838675,
+        "coverageAreaKm2": 973.5339214952725,
+        "coverageRatio": 2.9680912240709527,
+        "footprintPolygonLatLngs": [
+          [
+            12.346373892808911,
+            -68.43533592913195
+          ],
+          [
+            11.979897812178514,
+            -68.27003265853124
+          ],
+          [
+            11.968836481798212,
+            -68.2366159614846
+          ],
+          [
+            12.075575827672719,
+            -68.17061957517835
+          ],
+          [
+            12.191977303396072,
+            -68.139358339429
+          ],
+          [
+            12.205578869176632,
+            -68.14706688926366
+          ],
+          [
+            12.334405653177436,
+            -68.39916596582813
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "22976d14-d424-4f18-a67a-d8e1689cefcc",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2434982,
+      "inatTaxonId": 41997,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": 45998,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "249cae46-0a84-43db-be08-404a6695c171",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 6100884,
+      "inatTaxonId": 201197,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7261423,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "266ebb62-70b1-4d28-860f-e05f6dff276f",
@@ -223,38 +1167,237 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 11617,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 11617,
+      "rawInatCount": null,
+      "gbifUsageKey": 2493744,
+      "inatTaxonId": 10199,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 11617,
+        "qualifiedTotal": 11617,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 86,
+        "outlierPointCount": 4,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 22.94523582805064,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.122795192666117,
+        "coverageAreaKm2": 754.4779229887516,
+        "coverageRatio": 2.3002375700876576,
+        "footprintPolygonLatLngs": [
+          [
+            12.277630656415635,
+            -68.42757019430472
+          ],
+          [
+            12.043151649409241,
+            -68.29804050124575
+          ],
+          [
+            12.04236974099996,
+            -68.29447025147549
+          ],
+          [
+            12.03279292499555,
+            -68.19715510245773
+          ],
+          [
+            12.14801785767228,
+            -68.17507378057329
+          ],
+          [
+            12.215074084186016,
+            -68.18304533718096
+          ],
+          [
+            12.312730382392779,
+            -68.28844600839393
+          ],
+          [
+            12.331922175040479,
+            -68.38318161500129
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 4 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 5786093,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": 62528,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "2f59b4c2-2f9e-4c37-a201-42fdb64184e2",
@@ -263,8 +1406,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 635,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 635,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480863,
+      "inatTaxonId": 4981,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 635,
+        "qualifiedTotal": 635,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "31017238-7b2f-4077-a239-ec8ae713c4d2",
@@ -273,8 +1456,95 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 979,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 979,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480894,
+      "inatTaxonId": 4937,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 979,
+        "qualifiedTotal": 979,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 86,
+        "outlierPointCount": 4,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 31.299756371111087,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.5316127604206828,
+        "coverageAreaKm2": 1005.7562867745149,
+        "coverageRatio": 3.0663301426052283,
+        "footprintPolygonLatLngs": [
+          [
+            12.292541557995982,
+            -68.4704073862989
+          ],
+          [
+            11.966917913767455,
+            -68.2385416941017
+          ],
+          [
+            11.964470054949741,
+            -68.23524097692415
+          ],
+          [
+            11.962008137052155,
+            -68.2295297513847
+          ],
+          [
+            12.072105631481,
+            -68.15061752253885
+          ],
+          [
+            12.088428820476468,
+            -68.15574559509805
+          ],
+          [
+            12.168480858536235,
+            -68.18002071075074
+          ],
+          [
+            12.326010992749055,
+            -68.36589743644247
+          ],
+          [
+            12.342828977402279,
+            -68.38662500634796
+          ],
+          [
+            12.314463177761798,
+            -68.466073302378
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 4 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "3158ec3f-b494-492b-b08c-ce471e23aa63",
@@ -283,18 +1553,125 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 14,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 14,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480519,
+      "inatTaxonId": 201043,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 14,
+        "qualifiedTotal": 14,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 14,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 14,
+        "corePointCount": 14,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 25.139681999253096,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.230177554305588,
+        "coverageAreaKm2": 724.0715688724199,
+        "coverageRatio": 2.2075352709524996,
+        "footprintPolygonLatLngs": [
+          [
+            12.320829973605285,
+            -68.43521224564917
+          ],
+          [
+            12.276894151087149,
+            -68.43092371306804
+          ],
+          [
+            12.02754941987998,
+            -68.20635380551731
+          ],
+          [
+            12.076464770656749,
+            -68.16984563856884
+          ],
+          [
+            12.225168363055722,
+            -68.20413192729991
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "33e2f3bf-4554-4f9a-8f8f-849c089724ba",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480487,
+      "inatTaxonId": 558446,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "33f95ccf-52cd-423f-82c9-c86ef1173905",
@@ -303,28 +1680,148 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 483,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 483,
+      "rawInatCount": null,
+      "gbifUsageKey": 2481817,
+      "inatTaxonId": 144496,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 483,
+        "qualifiedTotal": 483,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "36b9abce-005b-439a-858f-1660e5027ccb",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "38c8d8c6-483a-4c82-9c0d-ce16c0c1870f",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2434444,
+      "inatTaxonId": 42089,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "3a50c7a6-4aaa-4480-bda3-4ddce4b31706",
@@ -333,8 +1830,54 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 2,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 2,
+      "rawInatCount": null,
+      "gbifUsageKey": 2473341,
+      "inatTaxonId": 1428,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 2,
+        "qualifiedTotal": 2,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 2,
+        "corePointCount": 2,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 31.484843498881524,
+        "unique25kmCells": 2,
+        "unique50kmCells": 2,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.540669757648446,
+        "coverageAreaKm2": 705.3862121084624,
+        "coverageRatio": 2.150567719842873,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "3a8b9ae7-a5b0-497d-b4b7-8ffbe7f870d0",
@@ -343,18 +1886,145 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 6149,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 6149,
+      "rawInatCount": null,
+      "gbifUsageKey": 5229128,
+      "inatTaxonId": 4836,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 6149,
+        "qualifiedTotal": 6149,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 34.15349325014529,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.6712566530755801,
+        "coverageAreaKm2": 1116.0436608859363,
+        "coverageRatio": 3.402572136847367,
+        "footprintPolygonLatLngs": [
+          [
+            12.336491007018246,
+            -68.46214227741548
+          ],
+          [
+            12.286737569775886,
+            -68.4745505646058
+          ],
+          [
+            12.251918829570954,
+            -68.4675806603592
+          ],
+          [
+            11.968496800611781,
+            -68.23031914408831
+          ],
+          [
+            11.965336023063033,
+            -68.22141650901118
+          ],
+          [
+            12.037174560244265,
+            -68.18641699842358
+          ],
+          [
+            12.173502353514163,
+            -68.14449349286214
+          ],
+          [
+            12.347984987076316,
+            -68.36090739371348
+          ],
+          [
+            12.365738061784349,
+            -68.43333875127249
+          ],
+          [
+            12.336626717046604,
+            -68.4620652764665
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2434299,
+      "inatTaxonId": 925980,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
@@ -363,48 +2033,248 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 3,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 3,
+      "rawInatCount": null,
+      "gbifUsageKey": 5219173,
+      "inatTaxonId": 47144,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 3,
+        "qualifiedTotal": 3,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "3f3d12c8-daf5-44e6-96e4-30d91083804e",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2481139,
+      "inatTaxonId": 204533,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "442208b3-d712-412e-bfd3-430688698aa0",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2434950,
+      "inatTaxonId": 41988,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "4ae3b7b9-5082-4320-b216-a0aa6e60c97e",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480833,
+      "inatTaxonId": 5036,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "4b7d3cff-8c0a-49b3-a8c0-a2e28f156818",
@@ -413,8 +2283,79 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1090,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1090,
+      "rawInatCount": null,
+      "gbifUsageKey": 2495414,
+      "inatTaxonId": 3017,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1090,
+        "qualifiedTotal": 1090,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 88,
+        "outlierPointCount": 2,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 20.53153872010214,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.0046840723592343,
+        "coverageAreaKm2": 773.1529218466108,
+        "coverageRatio": 2.3571735422152766,
+        "footprintPolygonLatLngs": [
+          [
+            12.264782769018419,
+            -68.43328974795497
+          ],
+          [
+            11.998545850218933,
+            -68.27449108509683
+          ],
+          [
+            12.029126397868309,
+            -68.20521021861146
+          ],
+          [
+            12.07568726648865,
+            -68.15875343104493
+          ],
+          [
+            12.266546587342772,
+            -68.23029277696078
+          ],
+          [
+            12.302450844657242,
+            -68.36435277257914
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 2 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "4cf322e5-831c-4759-9331-cff10333e23f",
@@ -423,28 +2364,148 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 15,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 15,
+      "rawInatCount": null,
+      "gbifUsageKey": 2490821,
+      "inatTaxonId": 12878,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 15,
+        "qualifiedTotal": 15,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "5109acb4-e503-4147-a175-a3c6aa71f1e3",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 2440886,
+      "inatTaxonId": 209233,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 9099332,
+      "inatTaxonId": 13160,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "542f379a-03f4-43df-aa29-f376fdcd97e0",
@@ -453,48 +2514,248 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 217,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 217,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480320,
+      "inatTaxonId": 4793,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 217,
+        "qualifiedTotal": 217,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "5bf1ea7e-141a-4cc2-92ac-5e20bf64b408",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2435146,
+      "inatTaxonId": 197781,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "5c7ce479-8a45-40b3-ae21-7c97dfae22f5",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 2440965,
+      "inatTaxonId": 42223,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "601cf098-9876-4912-84bb-0926834305e9",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "667a4650-a141-4c4e-844e-58cdeaeb4ae1",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2436886,
+      "inatTaxonId": 43111,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "69228514-4d73-4205-b054-c925fc60226b",
@@ -503,28 +2764,148 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 22,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 22,
+      "rawInatCount": null,
+      "gbifUsageKey": 2489590,
+      "inatTaxonId": 62550,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 22,
+        "qualifiedTotal": 22,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7452882,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "6d0d096e-79b8-4fbe-90e1-044e41e24c2c",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2433716,
+      "inatTaxonId": 41774,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "6de041e9-509c-481b-9f7f-4c5e8c1d86bd",
@@ -533,78 +2914,433 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 42,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 42,
+      "rawInatCount": null,
+      "gbifUsageKey": 2498155,
+      "inatTaxonId": 485176,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 42,
+        "qualifiedTotal": 42,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 22,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 42,
+        "corePointCount": 42,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 21.65880610190578,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.0598454316332642,
+        "coverageAreaKm2": 794.2333127086251,
+        "coverageRatio": 2.4214430265506866,
+        "footprintPolygonLatLngs": [
+          [
+            12.261165094214576,
+            -68.43630184029249
+          ],
+          [
+            12.044832281446997,
+            -68.30904945444239
+          ],
+          [
+            12.04310213917484,
+            -68.30366794314028
+          ],
+          [
+            12.050867284285653,
+            -68.184827748939
+          ],
+          [
+            12.062681931623366,
+            -68.15704059236712
+          ],
+          [
+            12.197154161789399,
+            -68.14074140559478
+          ],
+          [
+            12.320958871999657,
+            -68.3767466457649
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7430311,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "71313453-1e2c-448f-88d7-d24e9cd2b930",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 9362027,
+      "inatTaxonId": 558439,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "72891679-0964-4bbb-9572-d9cb9c2aae86",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": 19743,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7503658,
+      "inatTaxonId": 1369285,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7261419,
+      "inatTaxonId": 74722,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2492591,
+      "inatTaxonId": 1585904,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 9530430,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
@@ -613,8 +3349,103 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 113,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 113,
+      "rawInatCount": null,
+      "gbifUsageKey": 2440891,
+      "inatTaxonId": 148030,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 113,
+        "qualifiedTotal": 113,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 89,
+        "outlierPointCount": 1,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 31.631959860180608,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.5478687049361093,
+        "coverageAreaKm2": 1181.3592547861917,
+        "coverageRatio": 3.6017050450798527,
+        "footprintPolygonLatLngs": [
+          [
+            12.327679488373933,
+            -68.43134969656977
+          ],
+          [
+            12.132346700236807,
+            -68.44706788830091
+          ],
+          [
+            11.9652725820197,
+            -68.2510552360385
+          ],
+          [
+            11.95528000599011,
+            -68.23207188569832
+          ],
+          [
+            11.960757229191083,
+            -68.21292072571906
+          ],
+          [
+            11.970531586957867,
+            -68.2009893400281
+          ],
+          [
+            11.97659850246358,
+            -68.19628454988145
+          ],
+          [
+            12.110991634866146,
+            -68.14083034839479
+          ],
+          [
+            12.231102462757146,
+            -68.15120647712432
+          ],
+          [
+            12.322639326782273,
+            -68.23595866528017
+          ],
+          [
+            12.343286176254859,
+            -68.33501576621717
+          ],
+          [
+            12.331341255155236,
+            -68.42866423980752
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 1 likely outlier point before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "8b114dad-7d10-4a1e-bd16-0c26e85ca916",
@@ -623,8 +3454,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1695,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1695,
+      "rawInatCount": null,
+      "gbifUsageKey": 9422220,
+      "inatTaxonId": 558433,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1695,
+        "qualifiedTotal": 1695,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "8c9ba5cf-b98b-4b25-8543-9fcf0e69aed3",
@@ -633,28 +3504,207 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 526,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 526,
+      "rawInatCount": null,
+      "gbifUsageKey": 2481047,
+      "inatTaxonId": 4647,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 526,
+        "qualifiedTotal": 526,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 2,
+        "clusterSpreadKm": 817.1539237571814,
+        "maxDistanceKm": 831.5137717095007,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 40.689042052457125,
+        "coverageAreaKm2": 364156.76993875875,
+        "coverageRatio": 1110.2340546913376,
+        "footprintPolygonLatLngs": [
+          [
+            11.311234801349109,
+            -69.39177747581941
+          ],
+          [
+            11.296658145730914,
+            -69.38131187657685
+          ],
+          [
+            11.048508245486092,
+            -69.19846910085
+          ],
+          [
+            11.096458089615954,
+            -69.13599171780392
+          ],
+          [
+            18.397582745105648,
+            -61.93559149024071
+          ],
+          [
+            18.413852905145422,
+            -61.943012324449924
+          ],
+          [
+            18.449634799886443,
+            -61.98563391762537
+          ],
+          [
+            18.461697556997844,
+            -62.00211582652822
+          ],
+          [
+            18.665999884224746,
+            -62.317021992063026
+          ],
+          [
+            18.671261216845192,
+            -62.32762881266164
+          ],
+          [
+            18.671036308416863,
+            -62.332917774435714
+          ],
+          [
+            18.66827162287521,
+            -62.35393402882617
+          ],
+          [
+            11.353027532982756,
+            -69.36934374607009
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "2 dense observation areas were found in Caribbean Netherlands, so this is treated as national rather than a single regional pocket."
+      }
     },
     {
       "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 8007102,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2437114,
+      "inatTaxonId": 1370747,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "8ed8aff1-cd22-47c4-8f9a-80ed276d88e9",
@@ -663,8 +3713,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 4386,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 4386,
+      "rawInatCount": null,
+      "gbifUsageKey": 9539567,
+      "inatTaxonId": 5020,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 4386,
+        "qualifiedTotal": 4386,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "9212982e-8a58-4775-a6ac-e9a43110d8f5",
@@ -673,8 +3763,75 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 7,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 7,
+      "rawInatCount": null,
+      "gbifUsageKey": 2435035,
+      "inatTaxonId": 118552,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 7,
+        "qualifiedTotal": 7,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Only 7 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 7,
+        "corePointCount": 7,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 20.047969796052517,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0.9810212576767244,
+        "coverageAreaKm2": 559.6046357733633,
+        "coverageRatio": 1.7061116944309855,
+        "footprintPolygonLatLngs": [
+          [
+            12.269893544518021,
+            -68.33307995234733
+          ],
+          [
+            12.229178068206794,
+            -68.34381703461362
+          ],
+          [
+            12.044883829940037,
+            -68.3133575093991
+          ],
+          [
+            11.972559503971066,
+            -68.20204261342404
+          ],
+          [
+            12.243670877351384,
+            -68.29277736109242
+          ]
+        ]
+      }
     },
     {
       "itemId": "96fe1a07-7ef1-4a2f-99e1-ec2c9a78b532",
@@ -683,8 +3840,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1526,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1526,
+      "rawInatCount": null,
+      "gbifUsageKey": 9630752,
+      "inatTaxonId": 4956,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1526,
+        "qualifiedTotal": 1526,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "984f2b7c-95d9-42a5-92ca-25eb65111249",
@@ -693,18 +3890,157 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 3283,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 3283,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480881,
+      "inatTaxonId": 4938,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 3283,
+        "qualifiedTotal": 3283,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 32.147064143064895,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.5730746612783477,
+        "coverageAreaKm2": 1134.0451880174905,
+        "coverageRatio": 3.4574548415167397,
+        "footprintPolygonLatLngs": [
+          [
+            12.31454997512012,
+            -68.46449024014443
+          ],
+          [
+            12.292943481850958,
+            -68.46949589231468
+          ],
+          [
+            12.292628392359399,
+            -68.46946979328634
+          ],
+          [
+            12.262504704500197,
+            -68.46217384780532
+          ],
+          [
+            11.99441326616781,
+            -68.25423632158044
+          ],
+          [
+            11.982939242573233,
+            -68.23838614959546
+          ],
+          [
+            11.96249208359106,
+            -68.21235284634673
+          ],
+          [
+            12.005214983119,
+            -68.17870045701972
+          ],
+          [
+            12.077111880264317,
+            -68.1555138118292
+          ],
+          [
+            12.209525423168607,
+            -68.13771055366712
+          ],
+          [
+            12.347917586157223,
+            -68.36283087901835
+          ],
+          [
+            12.317422099308608,
+            -68.46348452074156
+          ],
+          [
+            12.315809936025413,
+            -68.46410549003811
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2436436,
+      "inatTaxonId": 43584,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
@@ -713,38 +4049,237 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 769,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 769,
+      "rawInatCount": null,
+      "gbifUsageKey": 5789298,
+      "inatTaxonId": 144491,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 769,
+        "qualifiedTotal": 769,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 31.56223071645918,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.5444566002209583,
+        "coverageAreaKm2": 1067.9574533589664,
+        "coverageRatio": 3.255967845606605,
+        "footprintPolygonLatLngs": [
+          [
+            12.307582346085407,
+            -68.46050399453341
+          ],
+          [
+            11.979895969487707,
+            -68.27330233839518
+          ],
+          [
+            11.955079849381374,
+            -68.23189838657495
+          ],
+          [
+            11.959244775999032,
+            -68.21692031388213
+          ],
+          [
+            12.071270506776358,
+            -68.15110248702834
+          ],
+          [
+            12.209967174932997,
+            -68.1457916937409
+          ],
+          [
+            12.228734263995237,
+            -68.16055199647663
+          ],
+          [
+            12.338782611147328,
+            -68.39446981042445
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "9b7dc1b3-01cf-4750-bf61-2653608e713b",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 5219962,
+      "inatTaxonId": 1453430,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "9c564562-9429-405c-8529-04cff7752282",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2435099,
+      "inatTaxonId": 42007,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": 3740,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "a03d4cb1-8ada-4629-9dc8-9a773230266f",
@@ -753,18 +4288,133 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 666,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 666,
+      "rawInatCount": null,
+      "gbifUsageKey": 2481710,
+      "inatTaxonId": 3875,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 666,
+        "qualifiedTotal": 666,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 88,
+        "outlierPointCount": 2,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 27.073926265197134,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.3248272750371126,
+        "coverageAreaKm2": 980.9087021650162,
+        "coverageRatio": 2.990575311478708,
+        "footprintPolygonLatLngs": [
+          [
+            12.282169435269502,
+            -68.47459513813385
+          ],
+          [
+            12.002019719632743,
+            -68.2561965452266
+          ],
+          [
+            12.059529966580113,
+            -68.15972809251649
+          ],
+          [
+            12.160797979524986,
+            -68.13940583009351
+          ],
+          [
+            12.341805628542462,
+            -68.38573854872004
+          ],
+          [
+            12.322880120358255,
+            -68.43292026725743
+          ],
+          [
+            12.303466202229547,
+            -68.46715242963433
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 2 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2493403,
+      "inatTaxonId": 339801,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "a77bd03b-d642-4cc2-bbfc-2f6eaa39c10c",
@@ -773,18 +4423,125 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1433,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1433,
+      "rawInatCount": null,
+      "gbifUsageKey": 5228199,
+      "inatTaxonId": 201282,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1433,
+        "qualifiedTotal": 1433,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 87,
+        "outlierPointCount": 3,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 24.504439417379253,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.1990927869730676,
+        "coverageAreaKm2": 825.5667644764085,
+        "coverageRatio": 2.5169718429158796,
+        "footprintPolygonLatLngs": [
+          [
+            12.332269016735449,
+            -68.40373831602265
+          ],
+          [
+            12.000168742261115,
+            -68.29548199937508
+          ],
+          [
+            12.05743462226266,
+            -68.17512442451591
+          ],
+          [
+            12.18654581918867,
+            -68.14479232109417
+          ],
+          [
+            12.21296720785092,
+            -68.15014463670697
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 3 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 2441022,
+      "inatTaxonId": 74113,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "ad05b76c-8b77-4892-89eb-38d6c46d02d1",
@@ -793,18 +4550,98 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1403,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1403,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480953,
+      "inatTaxonId": 4999,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1403,
+        "qualifiedTotal": 1403,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "b92970dd-2355-4ecc-afe9-429d9c5c1e4c",
@@ -813,28 +4650,148 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 12,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 12,
+      "rawInatCount": null,
+      "gbifUsageKey": 2496209,
+      "inatTaxonId": 1971,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 12,
+        "qualifiedTotal": 12,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "becf3932-4ec8-4897-8d41-f9f248648794",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2433573,
+      "inatTaxonId": 41678,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 9606290,
+      "inatTaxonId": 906,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "c12accc9-9a76-4d13-b9e3-6357f7412bc7",
@@ -843,58 +4800,321 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 10,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 10,
+      "rawInatCount": null,
+      "gbifUsageKey": 7341805,
+      "inatTaxonId": 145245,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 10,
+        "qualifiedTotal": 10,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 6,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Dropped 1 likely outlier point before scoring. Only 9 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 10,
+        "corePointCount": 9,
+        "outlierPointCount": 1,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 21.371665629513057,
+        "unique25kmCells": 2,
+        "unique50kmCells": 2,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.0457945870728307,
+        "coverageAreaKm2": 617.4724546087568,
+        "coverageRatio": 1.8825379713681611,
+        "footprintPolygonLatLngs": [
+          [
+            12.280421531462482,
+            -68.42808039407466
+          ],
+          [
+            12.030057508611407,
+            -68.20102048372961
+          ],
+          [
+            12.131942368897175,
+            -68.18675853255812
+          ],
+          [
+            12.293967427528392,
+            -68.4033730074683
+          ]
+        ]
+      }
     },
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "c1750080-1f8e-4238-b121-066d700f1641",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": 8319,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2493441,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "c56031a6-f8ce-4929-b6eb-b5253d4e1cdc",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 9518324,
+      "inatTaxonId": 41667,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "c5ae795b-300f-4cc7-99f7-e2c2d2810a87",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2434930,
+      "inatTaxonId": 1595820,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "ca2a32c7-82d1-4cc3-8be9-646847e9cef5",
@@ -903,18 +5123,141 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 1419,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1419,
+      "rawInatCount": null,
+      "gbifUsageKey": 2474393,
+      "inatTaxonId": 473,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1419,
+        "qualifiedTotal": 1419,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 27.31470987333977,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 1.3366097068988436,
+        "coverageAreaKm2": 848.250909308117,
+        "coverageRatio": 2.5861308210613325,
+        "footprintPolygonLatLngs": [
+          [
+            12.342199832834966,
+            -68.43990886308492
+          ],
+          [
+            12.311098689269594,
+            -68.44390541790534
+          ],
+          [
+            12.256896358761209,
+            -68.4415359692432
+          ],
+          [
+            12.025880152508387,
+            -68.2112433172267
+          ],
+          [
+            12.067795790252692,
+            -68.17861408026913
+          ],
+          [
+            12.150219352267328,
+            -68.14271476179496
+          ],
+          [
+            12.158474399128318,
+            -68.14721175863589
+          ],
+          [
+            12.328663328399093,
+            -68.38780341935039
+          ],
+          [
+            12.33204551430717,
+            -68.40237348152701
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "ce2e0e86-5580-4ab4-974a-4970753a140f",
@@ -923,8 +5266,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 813,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 813,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480830,
+      "inatTaxonId": 411086,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 813,
+        "qualifiedTotal": 813,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "d0451532-9460-426c-b060-e2640a68b618",
@@ -933,18 +5316,121 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 14,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 14,
+      "rawInatCount": null,
+      "gbifUsageKey": 2481846,
+      "inatTaxonId": 4580,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 14,
+        "qualifiedTotal": 14,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 2,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 14,
+        "corePointCount": 14,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 16.712906939572783,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0.8178243060063914,
+        "coverageAreaKm2": 551.0770054697748,
+        "coverageRatio": 1.6801128215541914,
+        "footprintPolygonLatLngs": [
+          [
+            12.306256049583743,
+            -68.3950413042193
+          ],
+          [
+            12.086699565623857,
+            -68.29696548229383
+          ],
+          [
+            12.142700067353097,
+            -68.149448077399
+          ],
+          [
+            12.15644354996594,
+            -68.14054907881882
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Caribbean Netherlands, so it is treated as national."
+      }
     },
     {
       "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 9142779,
+      "inatTaxonId": 11603,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "d0a759dc-58ec-4c06-abb9-e60a26931962",
@@ -953,48 +5439,248 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 6983,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 6983,
+      "rawInatCount": null,
+      "gbifUsageKey": 2495869,
+      "inatTaxonId": 3545,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 6983,
+        "qualifiedTotal": 6983,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2440943,
+      "inatTaxonId": 42186,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 8493215,
+      "inatTaxonId": 43389,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "d792dde9-0047-4b8e-9643-0e6e05d89f05",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2498387,
+      "inatTaxonId": 7107,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "d8e879d6-1028-4aae-947b-37b6d7505780",
@@ -1003,8 +5689,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 2,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 2,
+      "rawInatCount": null,
+      "gbifUsageKey": 6065824,
+      "inatTaxonId": 144510,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 2,
+        "qualifiedTotal": 2,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "de674f6d-8ee5-4a65-95eb-12a492fb36b2",
@@ -1013,8 +5739,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 3252,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 3252,
+      "rawInatCount": null,
+      "gbifUsageKey": 2481798,
+      "inatTaxonId": 72458,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 3252,
+        "qualifiedTotal": 3252,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "e7bd8ccc-65d7-4c7a-b74c-e0dcf4216529",
@@ -1023,18 +5789,98 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 44,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 44,
+      "rawInatCount": null,
+      "gbifUsageKey": 2497035,
+      "inatTaxonId": 19577,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 44,
+        "qualifiedTotal": 44,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "ebae8364-48b4-462b-9e2b-b13fb4751a22",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2438444,
+      "inatTaxonId": 44744,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "eef88467-b894-4d0d-8a5a-4083eb78ea0f",
@@ -1043,28 +5889,148 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 829,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 829,
+      "rawInatCount": null,
+      "gbifUsageKey": 2475472,
+      "inatTaxonId": 2548,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 829,
+        "qualifiedTotal": 829,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "f48771e0-8cce-40bd-97ef-c13315cfaa0a",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2480487,
+      "inatTaxonId": 559064,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "f8db21f0-6b79-4444-8be4-b87906d56e6a",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": null,
       "inatPresent": null,
       "gbifCount": null,
-      "inatCount": null
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "fc3d18ab-f1f6-4522-94ee-6b89c412820d",
@@ -1073,8 +6039,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 4406,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 4406,
+      "rawInatCount": null,
+      "gbifUsageKey": 2496060,
+      "inatTaxonId": 3280,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 4406,
+        "qualifiedTotal": 4406,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "fcf9131d-f0b5-4d5c-ad6e-405a59071edc",
@@ -1083,18 +6089,137 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 4243,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 4243,
+      "rawInatCount": null,
+      "gbifUsageKey": 5231190,
+      "inatTaxonId": 13858,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 4243,
+        "qualifiedTotal": 4243,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 2,
+        "clusterSpreadKm": 814.0259240006765,
+        "maxDistanceKm": 823.2700280343099,
+        "unique25kmCells": 3,
+        "unique50kmCells": 2,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 40.28564520626911,
+        "coverageAreaKm2": 350322.511150897,
+        "coverageRatio": 1068.0564364356617,
+        "footprintPolygonLatLngs": [
+          [
+            11.347917478787274,
+            -69.40392874422831
+          ],
+          [
+            11.347534701032146,
+            -69.40376020658786
+          ],
+          [
+            10.981099656755951,
+            -69.09416639764942
+          ],
+          [
+            10.980284659529858,
+            -69.09323594918442
+          ],
+          [
+            10.979654999060097,
+            -69.09249525483307
+          ],
+          [
+            18.610723259316973,
+            -62.31789747478367
+          ],
+          [
+            18.613524736303045,
+            -62.333555504745945
+          ],
+          [
+            11.348661545664728,
+            -69.40381493052186
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "2 dense observation areas were found in Caribbean Netherlands, so this is treated as national rather than a single regional pocket."
+      }
     },
     {
       "itemId": "ff28e3a2-9c5e-4697-b949-4ff2f9153ea8",
       "countryIso3": "BES",
-      "status": "likely_true_one_source",
+      "status": "likely_false",
       "expected": true,
-      "gbifPresent": true,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2434883,
+      "inatTaxonId": 925699,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     },
     {
       "itemId": "ff31e033-1f44-4772-9317-c1236e27a635",
@@ -1103,8 +6228,48 @@
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null
+      "gbifCount": 147,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 147,
+      "rawInatCount": null,
+      "gbifUsageKey": 2489985,
+      "inatTaxonId": 10247,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 147,
+        "qualifiedTotal": 147,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 20.435815879801165,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
     }
   ]
 }
