@@ -64,10 +64,11 @@ const COASTLINE_SNAP_DISTANCE_KM = 8;
 const COASTLINE_FILL_BUFFER_KM = 4;
 const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen";
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
+const GEOBOUNDARIES_OUTLINE_ONLY_VERTEX_LIMIT = 200000;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260506h";
+const DATA_VERSION = "20260506i";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260506h";
@@ -259,6 +260,7 @@ let suggestionDrawLayer;
 let worldCountryGeometryIndexPromise;
 let openComboKey = null;
 let currentCountryGeometry = null;
+let currentOverlayLoadId = 0;
 let hasShownCorrectionRegionalHelp = false;
 let onboardingStepIndex = 0;
 let onboardingCompletedActions = new Set();
@@ -550,6 +552,14 @@ function roundCoordinate(value) {
 function setStatus(message, isError = false) {
   statusLine.textContent = message;
   statusLine.classList.toggle("error", Boolean(isError));
+}
+
+function yieldToBrowser() {
+  return new Promise((resolve) => {
+    requestAnimationFrame(() => {
+      window.setTimeout(resolve, 0);
+    });
+  });
 }
 
 async function fetchJson(url, options) {
@@ -1061,6 +1071,9 @@ function geoBoundariesMediaUrl(url) {
 async function fetchCountryGeometryFromGeoBoundaries(iso3) {
   const metadata = await fetchJson(`${GEOBOUNDARIES_API_ROOT}/${encodeURIComponent(iso3)}/ADM0/`);
   const meanVertices = Number(metadata?.meanVertices);
+  if (Number.isFinite(meanVertices) && meanVertices >= GEOBOUNDARIES_OUTLINE_ONLY_VERTEX_LIMIT) {
+    return null;
+  }
   const preferFullGeometry = Number.isFinite(meanVertices) && meanVertices <= GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT;
   const downloadUrl = geoBoundariesMediaUrl(
     preferFullGeometry
@@ -1075,6 +1088,35 @@ async function fetchCountryGeometryFromGeoBoundaries(iso3) {
   return fetchJson(downloadUrl);
 }
 
+async function fetchWorldCountryGeometry(iso3) {
+  if (!worldCountryGeometryIndexPromise) {
+    worldCountryGeometryIndexPromise = fetchJson(
+      "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
+    )
+      .then((payload) => {
+        const index = new Map();
+        (payload?.features || []).forEach((feature) => {
+          const featureIso3 = feature?.properties?.["ISO3166-1-Alpha-3"];
+          if (!featureIso3 || index.has(featureIso3)) {
+            return;
+          }
+          index.set(featureIso3, {
+            type: "FeatureCollection",
+            features: [feature],
+          });
+        });
+        return index;
+      })
+      .catch((error) => {
+        worldCountryGeometryIndexPromise = null;
+        throw error;
+      });
+  }
+
+  const index = await worldCountryGeometryIndexPromise;
+  return index.get(iso3) || null;
+}
+
 async function fetchCountryGeometry(iso3) {
   if (!iso3) {
     return null;
@@ -1085,39 +1127,16 @@ async function fetchCountryGeometry(iso3) {
 
   try {
     const geoboundariesGeometry = await fetchCountryGeometryFromGeoBoundaries(iso3);
-    countryGeometryCache.set(iso3, geoboundariesGeometry);
-    return geoboundariesGeometry;
+    if (geoboundariesGeometry) {
+      countryGeometryCache.set(iso3, geoboundariesGeometry);
+      return geoboundariesGeometry;
+    }
   } catch {
     // Fall through to lighter public sources.
   }
 
   try {
-    if (!worldCountryGeometryIndexPromise) {
-      worldCountryGeometryIndexPromise = fetchJson(
-        "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
-      )
-        .then((payload) => {
-          const index = new Map();
-          (payload?.features || []).forEach((feature) => {
-            const featureIso3 = feature?.properties?.["ISO3166-1-Alpha-3"];
-            if (!featureIso3 || index.has(featureIso3)) {
-              return;
-            }
-            index.set(featureIso3, {
-              type: "FeatureCollection",
-              features: [feature],
-            });
-          });
-          return index;
-        })
-        .catch((error) => {
-          worldCountryGeometryIndexPromise = null;
-          throw error;
-        });
-    }
-
-    const index = await worldCountryGeometryIndexPromise;
-    const indexed = index.get(iso3) || null;
+    const indexed = await fetchWorldCountryGeometry(iso3);
     if (indexed) {
       countryGeometryCache.set(iso3, indexed);
       return indexed;
@@ -1789,6 +1808,7 @@ async function focusSelectedCountry(countryGeometry = null) {
 }
 
 async function loadRegionalOverlays() {
+  const overlayLoadId = ++currentOverlayLoadId;
   if (!countrySelect.value) {
     clearRegionalOverlays();
     updateMapSummary();
@@ -1796,28 +1816,71 @@ async function loadRegionalOverlays() {
   }
 
   clearRegionalOverlays();
+  mapSummary.textContent = "Map overlay: moving to country...";
 
   try {
-    const [countryGeometry] = await Promise.all([
-      fetchCountryGeometry(countrySelect.value),
-    ]);
+    await focusSelectedCountry();
+    if (overlayLoadId !== currentOverlayLoadId) {
+      return;
+    }
+
+    await yieldToBrowser();
+    if (overlayLoadId !== currentOverlayLoadId) {
+      return;
+    }
+
+    mapSummary.textContent = "Map overlay: loading country outline...";
+    const countryGeometry = await fetchCountryGeometry(countrySelect.value);
+    if (overlayLoadId !== currentOverlayLoadId) {
+      return;
+    }
+
     currentCountryGeometry = countryGeometry;
-    const countryClipContext = getCountryClipContext(countryGeometry);
+    await focusSelectedCountry(countryGeometry);
+    if (overlayLoadId !== currentOverlayLoadId) {
+      return;
+    }
+
+    await yieldToBrowser();
+    if (overlayLoadId !== currentOverlayLoadId) {
+      return;
+    }
+
     const overlayData = buildRegionalOverlayCollection(state.currentCountry);
     const nationalSpecies = currentNationalSpecies();
 
     if (countryGeometry && nationalSpecies.length) {
+      mapSummary.textContent = "Map overlay: drawing national coverage...";
+      await yieldToBrowser();
+      if (overlayLoadId !== currentOverlayLoadId) {
+        return;
+      }
+
       currentNationalOverlayLayer = L.geoJSON(countryGeometry, {
         style: CURRENT_NATIONAL_STYLE,
         interactive: false,
       }).addTo(reviewMap);
     }
 
-    const features = (overlayData.features || []).flatMap((feature) =>
-      countryGeometry ? clipFeatureToCountry(feature, countryClipContext) : [feature]
-    );
+    let features = overlayData.features || [];
+    if (countryGeometry && features.length) {
+      mapSummary.textContent = "Map overlay: clipping regional areas...";
+      await yieldToBrowser();
+      if (overlayLoadId !== currentOverlayLoadId) {
+        return;
+      }
+
+      const countryClipContext = getCountryClipContext(countryGeometry);
+      features = features.flatMap((feature) => clipFeatureToCountry(feature, countryClipContext));
+    }
 
     if (features.length) {
+      mapSummary.textContent = "Map overlay: drawing regional areas...";
+      await yieldToBrowser();
+      if (overlayLoadId !== currentOverlayLoadId) {
+        return;
+      }
+
       currentRegionalOverlayLayer = L.geoJSON({ type: "FeatureCollection", features }, {
         style: CURRENT_REGIONAL_STYLE,
         onEachFeature: (feature, layer) => {
@@ -1834,10 +1897,16 @@ async function loadRegionalOverlays() {
 
     syncMapLayerOrder();
 
-    await focusSelectedCountry(countryGeometry);
+    if (overlayLoadId !== currentOverlayLoadId) {
+      return;
+    }
+
     updateSelectedRegionalLayers(false);
     updateMapSummary();
   } catch (error) {
+    if (overlayLoadId !== currentOverlayLoadId) {
+      return;
+    }
     console.error(error);
     mapSummary.textContent = "Could not load the current map overlay.";
   }
@@ -3274,6 +3343,7 @@ async function loadCountry(iso3) {
     renderSpeciesList();
     updateMapSummary();
     clearTicketPreview();
+    setStatus("Loading map overlay...");
     await loadRegionalOverlays();
     updateTicketPreviewGate();
     renderOnboardingStep();
