@@ -5,6 +5,9 @@ const countryOptions = document.getElementById("country-options");
 const browserTitle = document.getElementById("browser-title");
 const countrySummary = document.getElementById("country-summary");
 const groupChips = document.getElementById("group-chips");
+const browserPanel = document.querySelector(".browser-panel");
+const mapPanel = document.querySelector(".map-panel");
+const ticketPanel = document.querySelector(".ticket-panel");
 const speciesFilterInput = document.getElementById("speciesFilter");
 const speciesList = document.getElementById("species-list");
 const ticketForm = document.getElementById("ticket-form");
@@ -29,6 +32,16 @@ const notificationEmailInput = document.getElementById("notificationEmail");
 const clearDrawingButton = document.getElementById("clear-drawing");
 const regionalHelpCard = document.getElementById("regional-help-card");
 const dismissRegionalHelpButton = document.getElementById("dismiss-regional-help");
+const openOnboardingButton = document.getElementById("open-onboarding");
+const onboardingOverlay = document.getElementById("onboarding-overlay");
+const onboardingSpotlight = document.getElementById("onboarding-spotlight");
+const onboardingShell = document.querySelector(".onboarding-shell");
+const onboardingStepLabel = document.getElementById("onboarding-step-label");
+const onboardingTitle = document.getElementById("onboarding-title");
+const onboardingBody = document.getElementById("onboarding-body");
+const onboardingBackButton = document.getElementById("onboarding-back");
+const onboardingSkipButton = document.getElementById("onboarding-skip");
+const onboardingNextButton = document.getElementById("onboarding-next");
 const statusLine = document.getElementById("status-line");
 const ticketTitleInput = document.getElementById("ticket-title");
 const ticketBodyInput = document.getElementById("ticket-body");
@@ -51,13 +64,15 @@ const COASTLINE_SNAP_DISTANCE_KM = 8;
 const COASTLINE_FILL_BUFFER_KM = 4;
 const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen";
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
-const GEOBOUNDARIES_LIGHTWEIGHT_ONLY_VERTEX_LIMIT = 200000;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260505c";
+const DATA_VERSION = "20260506h";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
+const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260506h";
+const ONBOARDING_SCROLL_LOCK_CLASS = "onboarding-scroll-locked";
+const ONBOARDING_LIVE_TARGET_CLASS = "onboarding-live-target";
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
   likely_true_both: "Likely Valid",
@@ -106,6 +121,73 @@ const GROUP_LABELS = {
   needs_review: "Needs Review",
   new: "New",
 };
+const ONBOARDING_STEPS = [
+  {
+    targetKey: "browser",
+    targetSelector: ".browser-panel",
+    title: "What the review buckets mean",
+    bodyHtml: `
+      <ul class="onboarding-list">
+        <li><strong>New</strong> = ask to add a species to the current country list.</li>
+        <li><strong>Needs Review</strong> = ask whether a listed species should stay or be removed.</li>
+        <li><strong>Likely Valid</strong> = the current listing still looks fine.</li>
+      </ul>
+      <p class="onboarding-note">Example: African wildcat is <strong>Needs Review</strong>. Raccoon dog would be <strong>New</strong> if Denmark is missing from its allow list.</p>
+    `,
+  },
+  {
+    targetKey: "map",
+    targetSelector: "#review-map",
+    title: "Try A Regional Example",
+    requiredActions: ["map-regional"],
+    bodyHtml: `
+      <ul class="onboarding-list">
+        <li><strong>Regional</strong> means the species is concentrated in one local area instead of the whole country.</li>
+        <li>Press the button below first.</li>
+      </ul>
+      <div class="onboarding-demo-actions">
+        <button class="secondary-button" type="button" data-demo-action="map-regional">Search moose in Denmark</button>
+      </div>
+      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>Press to filter Denmark to <strong>moose</strong> and zoom to Lille Vildmose.</p>
+    `,
+  },
+  {
+    targetKey: "ticket",
+    targetSelector: "#ticket-preview-content",
+    title: "Watch A Ticket Be Made",
+    requiredActions: ["ticket-removal"],
+    bodyHtml: `
+      <p>Press the button below to load a real removal example in the live form.</p>
+      <div class="onboarding-demo-actions">
+        <button class="secondary-button" type="button" data-demo-action="ticket-removal">Load Denmark + African wildcat removal</button>
+      </div>
+      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>This loads Denmark + African wildcat and builds the removal preview below.</p>
+    `,
+  },
+  {
+    targetKey: "ticket",
+    targetSelector: "#ticket-submit-panel",
+    title: "Then Submit It",
+    bodyHtml: `
+      <p>After the preview is built, this is where you send it.</p>
+      <p class="onboarding-note">Use <strong>Send Email</strong> for a prefilled mail draft or <strong>Make GitHub Issue</strong> to open the same ticket in GitHub.</p>
+    `,
+  },
+  {
+    targetKey: "groups",
+    targetSelector: "#group-chips",
+    title: "Fast Review Flow",
+    bodyHtml: `
+      <ol class="onboarding-list">
+        <li>Pick a country.</li>
+        <li>Use <strong>New</strong> or <strong>Needs Review</strong>.</li>
+        <li>Check the map.</li>
+        <li>Build the ticket.</li>
+      </ol>
+      <p class="onboarding-note">You can reopen this any time from <strong>Guide</strong>.</p>
+    `,
+  },
+];
 
 const countryCenterCache = new Map();
 const countryGeometryCache = new Map();
@@ -178,6 +260,10 @@ let worldCountryGeometryIndexPromise;
 let openComboKey = null;
 let currentCountryGeometry = null;
 let hasShownCorrectionRegionalHelp = false;
+let onboardingStepIndex = 0;
+let onboardingCompletedActions = new Set();
+let onboardingOriginalSpeciesFilter = "";
+let onboardingDemoSpeciesFilter = "";
 
 const comboBoxes = {
   country: {
@@ -974,10 +1060,6 @@ function geoBoundariesMediaUrl(url) {
 
 async function fetchCountryGeometryFromGeoBoundaries(iso3) {
   const metadata = await fetchJson(`${GEOBOUNDARIES_API_ROOT}/${encodeURIComponent(iso3)}/ADM0/`);
-  return fetchCountryGeometryFromGeoBoundariesMetadata(metadata, iso3);
-}
-
-function fetchCountryGeometryFromGeoBoundariesMetadata(metadata, iso3) {
   const meanVertices = Number(metadata?.meanVertices);
   const preferFullGeometry = Number.isFinite(meanVertices) && meanVertices <= GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT;
   const downloadUrl = geoBoundariesMediaUrl(
@@ -993,49 +1075,6 @@ function fetchCountryGeometryFromGeoBoundariesMetadata(metadata, iso3) {
   return fetchJson(downloadUrl);
 }
 
-async function fetchCountryGeometryFromWorldGeometryIndex(iso3) {
-  if (!worldCountryGeometryIndexPromise) {
-    worldCountryGeometryIndexPromise = fetchJson(
-      "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
-    )
-      .then((payload) => {
-        const index = new Map();
-        (payload?.features || []).forEach((feature) => {
-          const featureIso3 = feature?.properties?.["ISO3166-1-Alpha-3"];
-          if (!featureIso3 || index.has(featureIso3)) {
-            return;
-          }
-          index.set(featureIso3, {
-            type: "FeatureCollection",
-            features: [feature],
-          });
-        });
-        return index;
-      })
-      .catch((error) => {
-        worldCountryGeometryIndexPromise = null;
-        throw error;
-      });
-  }
-
-  const index = await worldCountryGeometryIndexPromise;
-  return index.get(iso3) || null;
-}
-
-async function fetchCountryGeometryFromWorldCountryFile(iso3) {
-  return fetchJson(
-    `https://raw.githubusercontent.com/johan/world.geo.json/master/countries/${encodeURIComponent(iso3)}.geo.json`
-  );
-}
-
-async function fetchLightweightCountryGeometry(iso3) {
-  try {
-    return await fetchCountryGeometryFromWorldCountryFile(iso3);
-  } catch {
-    return fetchCountryGeometryFromWorldGeometryIndex(iso3);
-  }
-}
-
 async function fetchCountryGeometry(iso3) {
   if (!iso3) {
     return null;
@@ -1044,30 +1083,8 @@ async function fetchCountryGeometry(iso3) {
     return countryGeometryCache.get(iso3);
   }
 
-  let geoboundariesMetadata = null;
   try {
-    geoboundariesMetadata = await fetchJson(`${GEOBOUNDARIES_API_ROOT}/${encodeURIComponent(iso3)}/ADM0/`);
-  } catch {
-    geoboundariesMetadata = null;
-  }
-
-  const meanVertices = Number(geoboundariesMetadata?.meanVertices);
-  const preferLightweightGeometry = Number.isFinite(meanVertices) && meanVertices >= GEOBOUNDARIES_LIGHTWEIGHT_ONLY_VERTEX_LIMIT;
-
-  if (preferLightweightGeometry) {
-    try {
-      const lightweightGeometry = await fetchLightweightCountryGeometry(iso3);
-      countryGeometryCache.set(iso3, lightweightGeometry);
-      return lightweightGeometry;
-    } catch {
-      // Fall through to geoBoundaries if lightweight sources fail.
-    }
-  }
-
-  try {
-    const geoboundariesGeometry = geoboundariesMetadata
-      ? await fetchCountryGeometryFromGeoBoundariesMetadata(geoboundariesMetadata, iso3)
-      : await fetchCountryGeometryFromGeoBoundaries(iso3);
+    const geoboundariesGeometry = await fetchCountryGeometryFromGeoBoundaries(iso3);
     countryGeometryCache.set(iso3, geoboundariesGeometry);
     return geoboundariesGeometry;
   } catch {
@@ -1075,7 +1092,32 @@ async function fetchCountryGeometry(iso3) {
   }
 
   try {
-    const indexed = await fetchCountryGeometryFromWorldGeometryIndex(iso3);
+    if (!worldCountryGeometryIndexPromise) {
+      worldCountryGeometryIndexPromise = fetchJson(
+        "https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson"
+      )
+        .then((payload) => {
+          const index = new Map();
+          (payload?.features || []).forEach((feature) => {
+            const featureIso3 = feature?.properties?.["ISO3166-1-Alpha-3"];
+            if (!featureIso3 || index.has(featureIso3)) {
+              return;
+            }
+            index.set(featureIso3, {
+              type: "FeatureCollection",
+              features: [feature],
+            });
+          });
+          return index;
+        })
+        .catch((error) => {
+          worldCountryGeometryIndexPromise = null;
+          throw error;
+        });
+    }
+
+    const index = await worldCountryGeometryIndexPromise;
+    const indexed = index.get(iso3) || null;
     if (indexed) {
       countryGeometryCache.set(iso3, indexed);
       return indexed;
@@ -1085,7 +1127,9 @@ async function fetchCountryGeometry(iso3) {
   }
 
   try {
-    const direct = await fetchCountryGeometryFromWorldCountryFile(iso3);
+    const direct = await fetchJson(
+      `https://raw.githubusercontent.com/johan/world.geo.json/master/countries/${encodeURIComponent(iso3)}.geo.json`
+    );
     countryGeometryCache.set(iso3, direct);
     return direct;
   } catch {
@@ -2458,6 +2502,11 @@ function maybeShowRegionalHelp() {
     return;
   }
 
+  if (onboardingIsOpen()) {
+    hideRegionalHelp();
+    return;
+  }
+
   if (suggestionType() !== "correction" || scopeSelect.value !== "regional") {
     hideRegionalHelp();
     return;
@@ -2470,6 +2519,424 @@ function maybeShowRegionalHelp() {
 
   regionalHelpCard.hidden = false;
   hasShownCorrectionRegionalHelp = true;
+}
+
+function hasSeenOnboarding() {
+  try {
+    return window.localStorage.getItem(ONBOARDING_SEEN_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function markOnboardingSeen() {
+  try {
+    window.localStorage.setItem(ONBOARDING_SEEN_KEY, "1");
+  } catch {
+    // Ignore storage failures.
+  }
+}
+
+function onboardingIsOpen() {
+  return Boolean(onboardingOverlay) && !onboardingOverlay.hidden;
+}
+
+function onboardingTargetElement(step) {
+  if (step?.targetSelector) {
+    const selectedTarget = document.querySelector(step.targetSelector);
+    if (selectedTarget) {
+      return selectedTarget;
+    }
+  }
+
+  switch (step?.targetKey) {
+    case "browser":
+      return browserPanel;
+    case "groups":
+      return groupChips;
+    case "map":
+      return mapPanel;
+    case "ticket":
+      return ticketPanel;
+    default:
+      return null;
+  }
+}
+
+function hideOnboardingSpotlight() {
+  if (onboardingSpotlight) {
+    onboardingSpotlight.hidden = true;
+  }
+}
+
+function positionOnboardingSpotlight(target) {
+  if (!onboardingSpotlight || !target) {
+    hideOnboardingSpotlight();
+    return;
+  }
+
+  const rect = target.getBoundingClientRect();
+  if (!Number.isFinite(rect.width) || !Number.isFinite(rect.height) || rect.width < 1 || rect.height < 1) {
+    hideOnboardingSpotlight();
+    return;
+  }
+
+  const padding = 12;
+  const top = Math.max(12, rect.top - padding);
+  const left = Math.max(12, rect.left - padding);
+  const maxWidth = Math.max(40, window.innerWidth - left - 12);
+  const maxHeight = Math.max(40, window.innerHeight - top - 12);
+
+  onboardingSpotlight.style.top = `${top}px`;
+  onboardingSpotlight.style.left = `${left}px`;
+  onboardingSpotlight.style.width = `${Math.min(rect.width + padding * 2, maxWidth)}px`;
+  onboardingSpotlight.style.height = `${Math.min(rect.height + padding * 2, maxHeight)}px`;
+  onboardingSpotlight.hidden = false;
+}
+
+function setOnboardingScrollLock(locked) {
+  document.documentElement.classList.toggle(ONBOARDING_SCROLL_LOCK_CLASS, locked);
+  document.body.classList.toggle(ONBOARDING_SCROLL_LOCK_CLASS, locked);
+}
+
+function clearOnboardingLiveTargets() {
+  openTicketLink?.classList.remove(ONBOARDING_LIVE_TARGET_CLASS);
+  openGithubLink?.classList.remove(ONBOARDING_LIVE_TARGET_CLASS);
+}
+
+function shouldLockOnboardingScroll(target) {
+  return true;
+}
+
+function refreshOnboardingViewportState(target) {
+  positionOnboardingSpotlight(target);
+  setOnboardingScrollLock(shouldLockOnboardingScroll(target));
+}
+
+function scrollOnboardingTargetIntoView(target) {
+  if (!target) {
+    return;
+  }
+
+  target.scrollIntoView({ block: "center", inline: "nearest" });
+}
+
+function onboardingStepComplete(step) {
+  const requiredActions = step?.requiredActions || [];
+  if (!requiredActions.length) {
+    return true;
+  }
+
+  if (step.completionMode === "all") {
+    return requiredActions.every((action) => onboardingCompletedActions.has(action));
+  }
+
+  return requiredActions.some((action) => onboardingCompletedActions.has(action));
+}
+
+function updateOnboardingStepControls(step) {
+  const requiredActions = step?.requiredActions || [];
+  const isComplete = onboardingStepComplete(step);
+
+  onboardingNextButton.hidden = requiredActions.length > 0 && !isComplete;
+  onboardingBody?.querySelectorAll("[data-demo-action]").forEach((button) => {
+    const action = button.dataset.demoAction || "";
+    const isRequired = requiredActions.includes(action);
+    const isDone = onboardingCompletedActions.has(action);
+    button.classList.toggle("onboarding-action-required", isRequired && !isDone);
+  });
+}
+
+function renderOnboardingStep() {
+  if (!onboardingOverlay || onboardingOverlay.hidden) {
+    return;
+  }
+
+  const step = ONBOARDING_STEPS[onboardingStepIndex];
+  if (!step) {
+    return;
+  }
+
+  onboardingStepLabel.textContent = `Quick guide · ${onboardingStepIndex + 1} of ${ONBOARDING_STEPS.length}`;
+  onboardingTitle.textContent = step.title;
+  onboardingBody.innerHTML = step.bodyHtml;
+  onboardingBackButton.hidden = onboardingStepIndex === 0;
+  onboardingNextButton.textContent = onboardingStepIndex === ONBOARDING_STEPS.length - 1 ? "Start reviewing" : "Next";
+  clearOnboardingLiveTargets();
+  updateOnboardingStepControls(step);
+  if (onboardingShell) {
+    onboardingShell.dataset.target = step.targetKey || "";
+  }
+
+  const target = onboardingTargetElement(step);
+  setOnboardingScrollLock(false);
+  scrollOnboardingTargetIntoView(target);
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      const currentStep = ONBOARDING_STEPS[onboardingStepIndex];
+      refreshOnboardingViewportState(onboardingTargetElement(currentStep));
+    });
+  });
+}
+
+function closeOnboarding(markSeen = true) {
+  if (!onboardingOverlay) {
+    return;
+  }
+
+  const shouldRestoreSpeciesFilter = Boolean(
+    onboardingDemoSpeciesFilter
+    && cleanText(state.speciesFilter).toLocaleLowerCase() === cleanText(onboardingDemoSpeciesFilter).toLocaleLowerCase(),
+  );
+
+  onboardingOverlay.hidden = true;
+  hideOnboardingSpotlight();
+  setOnboardingScrollLock(false);
+  clearOnboardingLiveTargets();
+  if (shouldRestoreSpeciesFilter) {
+    setSpeciesFilterValue(onboardingOriginalSpeciesFilter);
+  }
+  onboardingOriginalSpeciesFilter = "";
+  onboardingDemoSpeciesFilter = "";
+  if (markSeen) {
+    markOnboardingSeen();
+  }
+}
+
+function openOnboarding(stepIndex = 0) {
+  if (!onboardingOverlay) {
+    return;
+  }
+
+  onboardingStepIndex = Math.max(0, Math.min(stepIndex, ONBOARDING_STEPS.length - 1));
+  onboardingCompletedActions = new Set();
+  onboardingOriginalSpeciesFilter = state.speciesFilter;
+  onboardingDemoSpeciesFilter = "";
+  hideRegionalHelp();
+  onboardingOverlay.hidden = false;
+  renderOnboardingStep();
+}
+
+function advanceOnboarding(stepOffset) {
+  const nextIndex = onboardingStepIndex + stepOffset;
+  if (nextIndex < 0) {
+    return;
+  }
+
+  if (nextIndex >= ONBOARDING_STEPS.length) {
+    closeOnboarding(true);
+    return;
+  }
+
+  onboardingStepIndex = nextIndex;
+  renderOnboardingStep();
+}
+
+function setOnboardingDemoStatus(message, isError = false) {
+  const status = onboardingBody?.querySelector("[data-onboarding-demo-status]");
+  if (!status) {
+    return;
+  }
+
+  status.textContent = message;
+  status.classList.toggle("error", Boolean(isError));
+}
+
+function setSuggestionTypeValue(type) {
+  const input = document.querySelector(`input[name="suggestionType"][value="${type}"]`);
+  if (!input) {
+    return;
+  }
+
+  input.checked = true;
+  handleSuggestionTypeChange();
+}
+
+function setScopeValue(scope) {
+  if (scopeSelect.value === scope) {
+    updateFormVisibility();
+    clearTicketPreview();
+    return;
+  }
+
+  scopeSelect.value = scope;
+  updateFormVisibility();
+  clearTicketPreview();
+}
+
+function setGroupFilterValue(groupKey) {
+  state.groupFilter = groupKey;
+  renderGroupChips();
+  renderSpeciesList();
+}
+
+async function ensureCountryLoaded(iso3) {
+  if (!iso3) {
+    return;
+  }
+
+  if (countrySelect.value !== iso3 || state.currentCountry?.countryIso3 !== iso3) {
+    const option = comboBoxes.country.options.find((candidate) => candidate.itemId === iso3);
+    if (option) {
+      setCountryValue(option.label, option.itemId);
+    }
+    await loadCountry(iso3);
+  }
+}
+
+function speciesMatchesQuery(entry, query) {
+  const value = sortKey(query);
+  if (!value || !entry) {
+    return false;
+  }
+
+  return [entry.label, entry.commonName, entry.binomial].some((candidate) => sortKey(candidate).includes(value));
+}
+
+function findSpeciesEntry(preferredQueries, predicate) {
+  const species = state.currentCountry?.species || [];
+  for (const query of preferredQueries) {
+    const match = species.find((entry) => predicate(entry) && speciesMatchesQuery(entry, query));
+    if (match) {
+      return match;
+    }
+  }
+  return species.find((entry) => predicate(entry)) || null;
+}
+
+function setSpeciesFilterValue(value) {
+  speciesFilterInput.value = value;
+  state.speciesFilter = value;
+  renderSpeciesList();
+}
+
+function clickSpeciesCard(itemId) {
+  const card = speciesList.querySelector(`[data-item-id="${itemId}"]`);
+  if (!card) {
+    return false;
+  }
+
+  card.click();
+  return true;
+}
+
+function completeOnboardingAction(action) {
+  if (!action) {
+    return;
+  }
+
+  onboardingCompletedActions.add(action);
+  updateOnboardingStepControls(ONBOARDING_STEPS[onboardingStepIndex]);
+}
+
+async function runOnboardingDemo(action) {
+  try {
+    if (action === "map-national") {
+      setOnboardingDemoStatus("Searching Denmark for red deer and selecting it from the live list...");
+      await ensureCountryLoaded("DNK");
+      setGroupFilterValue("all");
+      setSuggestionTypeValue("correction");
+      setScopeValue("national");
+
+      const nationalEntry = findSpeciesEntry(
+        ["red deer", "cervus elaphus"],
+        (entry) => entry.footprintCode === "countrywide",
+      );
+
+      if (!nationalEntry) {
+        throw new Error("Could not find red deer in the Denmark pack.");
+      }
+
+      setSpeciesFilterValue("red deer");
+      if (!clickSpeciesCard(nationalEntry.itemId)) {
+        applySpeciesSelection(nationalEntry.itemId, true);
+      }
+
+      setOnboardingDemoStatus("Loaded red deer and switched the map to national coverage.");
+      return true;
+    }
+
+    if (action === "map-regional") {
+      setOnboardingDemoStatus("Searching Denmark for moose and selecting it from the live list...");
+      await ensureCountryLoaded("DNK");
+      setGroupFilterValue("all");
+      setSuggestionTypeValue("correction");
+      setScopeValue("regional");
+
+      const regionalEntry = findSpeciesEntry(
+        ["moose", "alces alces"],
+        (entry) => entry.footprintCode === "regional",
+      );
+
+      if (!regionalEntry) {
+        throw new Error("Could not find moose in the Denmark pack.");
+      }
+
+      setSpeciesFilterValue("moose");
+      if (!clickSpeciesCard(regionalEntry.itemId)) {
+        applySpeciesSelection(regionalEntry.itemId, true);
+      }
+
+      setOnboardingDemoStatus("Loaded moose and zoomed to the Lille Vildmose regional footprint.");
+      return true;
+    }
+
+    if (action === "ticket-removal") {
+      setOnboardingDemoStatus("Loading the Denmark African wildcat removal demo...");
+      await ensureCountryLoaded("DNK");
+      setGroupFilterValue("needs_review");
+      setSuggestionTypeValue("removal");
+
+      const removalEntry = findSpeciesEntry(
+        ["african wild cat", "felis silvestris lybica"],
+        () => true,
+      );
+
+      if (!removalEntry) {
+        throw new Error("Could not find African wildcat in the Denmark pack.");
+      }
+
+      onboardingDemoSpeciesFilter = "african wild cat";
+      setSpeciesFilterValue("african wild cat");
+      if (!clickSpeciesCard(removalEntry.itemId)) {
+        applySpeciesSelection(removalEntry.itemId, true);
+      }
+
+      await buildTicketPreview();
+      setOnboardingDemoStatus("Loaded Denmark + African wildcat and built the removal preview below.");
+      return true;
+    }
+
+    if (action === "ticket-submit-email") {
+      if (openTicketLink.classList.contains("disabled")) {
+        throw new Error("Build the ticket preview first.");
+      }
+
+      clearOnboardingLiveTargets();
+      openTicketLink.classList.add(ONBOARDING_LIVE_TARGET_CLASS);
+      openTicketLink.scrollIntoView({ block: "center", inline: "nearest" });
+      setOnboardingDemoStatus("Use Send Email below to open a prefilled mail draft.");
+      return true;
+    }
+
+    if (action === "ticket-submit-github") {
+      if (openGithubLink.classList.contains("disabled")) {
+        throw new Error("Build the ticket preview first.");
+      }
+
+      clearOnboardingLiveTargets();
+      openGithubLink.classList.add(ONBOARDING_LIVE_TARGET_CLASS);
+      openGithubLink.scrollIntoView({ block: "center", inline: "nearest" });
+      setOnboardingDemoStatus("Use Make GitHub Issue below to open a prefilled GitHub issue.");
+      return true;
+    }
+  } catch (error) {
+    console.error(error);
+    setOnboardingDemoStatus(error.message || "Could not load the onboarding demo.", true);
+    return false;
+  }
+
+  return false;
 }
 
 function normalizedScopeForSpecies(entry) {
@@ -2809,6 +3276,7 @@ async function loadCountry(iso3) {
     clearTicketPreview();
     await loadRegionalOverlays();
     updateTicketPreviewGate();
+    renderOnboardingStep();
     setStatus("Ready.");
   } catch (error) {
     console.error(error);
@@ -2866,6 +3334,9 @@ async function initialize() {
     populateAnimalOptions(animals || []);
     populateCountrySelect(countries || []);
     await loadCountry(countrySelect.value);
+    if (!hasSeenOnboarding()) {
+      openOnboarding();
+    }
   } catch (error) {
     console.error(error);
     setStatus(error.message || "Could not initialize the review desk.", true);
@@ -3044,6 +3515,38 @@ dismissRegionalHelpButton?.addEventListener("click", () => {
   hideRegionalHelp();
 });
 
+openOnboardingButton?.addEventListener("click", () => {
+  openOnboarding();
+});
+
+onboardingBackButton?.addEventListener("click", () => {
+  advanceOnboarding(-1);
+});
+
+onboardingNextButton?.addEventListener("click", () => {
+  advanceOnboarding(1);
+});
+
+onboardingSkipButton?.addEventListener("click", () => {
+  closeOnboarding(true);
+});
+
+onboardingBody?.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-demo-action]");
+  if (!button) {
+    return;
+  }
+
+  event.preventDefault();
+  const action = button.dataset.demoAction || "";
+  void (async () => {
+    const success = await runOnboardingDemo(action);
+    if (success) {
+      completeOnboardingAction(action);
+    }
+  })();
+});
+
 ticketForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   await buildTicketPreview();
@@ -3058,15 +3561,34 @@ window.addEventListener("resize", () => {
     reviewMap.invalidateSize();
   }
 
+  if (onboardingIsOpen()) {
+    renderOnboardingStep();
+  }
+
   if (openComboKey) {
     updateComboBoxLayout(openComboKey);
   }
 });
 
 window.addEventListener("scroll", () => {
+  if (onboardingIsOpen()) {
+    const step = ONBOARDING_STEPS[onboardingStepIndex];
+    positionOnboardingSpotlight(onboardingTargetElement(step));
+  }
+
   if (openComboKey) {
     updateComboBoxLayout(openComboKey);
   }
 }, true);
+
+document.addEventListener("keydown", (event) => {
+  if (!onboardingIsOpen()) {
+    return;
+  }
+
+  if (event.key === "Escape") {
+    event.preventDefault();
+  }
+});
 
 initialize();

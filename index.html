@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260504w">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260506h">
   </head>
   <body>
     <main class="shell">
@@ -76,17 +76,20 @@
                 <p class="section-kicker">Current Pack</p>
                 <h2 id="browser-title">Loading...</h2>
               </div>
-              <label class="field compact-field">
-                <span>Country</span>
-                <div id="country-combobox" class="combo-box">
-                  <div class="combo-input-shell">
-                    <input id="countryLabel" name="countryLabel" placeholder="Search countries or regions" autocomplete="off" spellcheck="false" aria-label="Country" aria-autocomplete="list" aria-expanded="false" aria-controls="country-options">
-                    <button id="country-toggle" class="combo-toggle" type="button" aria-label="Toggle countries and regions"></button>
+              <div class="browser-header-actions">
+                <button id="open-onboarding" class="secondary-button guide-button" type="button">Guide</button>
+                <label class="field compact-field">
+                  <span>Country</span>
+                  <div id="country-combobox" class="combo-box">
+                    <div class="combo-input-shell">
+                      <input id="countryLabel" name="countryLabel" placeholder="Search countries or regions" autocomplete="off" spellcheck="false" aria-label="Country" aria-autocomplete="list" aria-expanded="false" aria-controls="country-options">
+                      <button id="country-toggle" class="combo-toggle" type="button" aria-label="Toggle countries and regions"></button>
+                    </div>
+                    <div id="country-options" class="combo-menu" role="listbox" hidden></div>
                   </div>
-                  <div id="country-options" class="combo-menu" role="listbox" hidden></div>
-                </div>
-                <input id="countryIso3" name="countryIso3" type="hidden" value="">
-              </label>
+                  <input id="countryIso3" name="countryIso3" type="hidden" value="">
+                </label>
+              </div>
             </div>
 
             <p id="country-summary" class="section-copy">Loading current country pack.</p>
@@ -107,8 +110,8 @@
         <section class="panel ticket-panel">
           <div class="section-head">
             <div>
-              <p class="section-kicker">Suggestion Ticket</p>
-              <h2>Create Ticket</h2>
+              <p class="section-kicker">Create</p>
+              <h2>Ticket</h2>
             </div>
           </div>
 
@@ -203,36 +206,66 @@
               </div>
             </div>
 
-            <div class="section-head preview-head">
-              <div>
-                <p class="section-kicker">Preview</p>
-                <h3>Ticket</h3>
-              </div>
-              <div class="preview-actions">
+            <section id="ticket-preview-content" class="ticket-preview-section">
+              <div class="section-head preview-head">
+                <div>
+                  <p class="section-kicker">Preview</p>
+                  <h3>Ticket</h3>
+                </div>
                 <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
+              </div>
+
+              <label class="field">
+                <span>Title</span>
+                <input id="ticket-title" type="text" readonly placeholder="Build a ticket to preview the title.">
+              </label>
+
+              <label class="field">
+                <span>Body</span>
+                <textarea id="ticket-body" rows="14" readonly placeholder="The ticket body will appear here."></textarea>
+              </label>
+
+              <div id="ticket-warnings" class="warning-list" hidden></div>
+            </section>
+
+            <section id="ticket-submit-panel" class="ticket-preview-section ticket-submit-panel">
+              <div class="section-head preview-head">
+                <div>
+                  <p class="section-kicker">Submit</p>
+                  <h3>Ticket</h3>
+                </div>
+              </div>
+
+              <div class="preview-actions">
                 <a id="open-ticket" class="draft-link disabled" href="#">Send Email</a>
                 <div class="preview-action-stack">
                   <a id="open-github" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Make GitHub Issue</a>
                   <p class="preview-action-note">requires GitHub account</p>
                 </div>
               </div>
-            </div>
-
-            <label class="field">
-              <span>Title</span>
-              <input id="ticket-title" type="text" readonly placeholder="Build a ticket to preview the title.">
-            </label>
-
-            <label class="field">
-              <span>Body</span>
-              <textarea id="ticket-body" rows="14" readonly placeholder="The ticket body will appear here."></textarea>
-            </label>
-
-            <div id="ticket-warnings" class="warning-list" hidden></div>
+            </section>
           </section>
         </section>
       </section>
     </main>
+
+    <aside id="onboarding-overlay" class="onboarding-overlay" hidden>
+      <div id="onboarding-spotlight" class="onboarding-spotlight" hidden aria-hidden="true"></div>
+
+      <div class="onboarding-shell">
+        <section class="onboarding-card" role="dialog" aria-modal="true" aria-labelledby="onboarding-title">
+          <p id="onboarding-step-label" class="section-kicker onboarding-kicker">Quick guide</p>
+          <h3 id="onboarding-title">Review Desk Guide</h3>
+          <div id="onboarding-body" class="onboarding-body"></div>
+
+          <div class="onboarding-actions">
+            <button id="onboarding-back" class="secondary-button" type="button">Back</button>
+            <button id="onboarding-skip" class="secondary-button" type="button">Stop guide</button>
+            <button id="onboarding-next" type="button">Next</button>
+          </div>
+        </section>
+      </div>
+    </aside>
 
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -242,6 +275,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260505c"></script>
+    <script src="./assets/app.js?v=20260506h"></script>
   </body>
 </html>

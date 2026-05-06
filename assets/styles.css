@@ -141,8 +141,24 @@ h3 {
   align-items: end;
 }
 
+.browser-header-actions {
+  display: grid;
+  gap: 10px;
+  justify-items: end;
+  min-width: min(100%, 320px);
+}
+
+.browser-header-actions .field {
+  width: min(320px, 100%);
+}
+
 .compact-field {
   min-width: 212px;
+}
+
+.guide-button {
+  padding: 10px 14px;
+  font-size: 0.84rem;
 }
 
 .field,
@@ -654,6 +670,19 @@ button {
   border-top: 1px solid var(--line);
 }
 
+.ticket-preview-section {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 20px;
+  background: rgba(248, 250, 248, 0.84);
+}
+
+.ticket-preview-section .section-head {
+  padding-bottom: 0;
+}
+
 .ticket-preview.locked > :not(.ticket-preview-gate) {
   opacity: 0.28;
   filter: saturate(0.65);
@@ -709,6 +738,20 @@ button {
 
 .preview-head {
   align-items: center;
+}
+
+.ticket-submit-panel {
+  gap: 12px;
+}
+
+.ticket-submit-panel .preview-actions {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.ticket-submit-panel .draft-link,
+.ticket-submit-panel .preview-action-stack {
+  align-self: stretch;
 }
 
 #ticket-body {
@@ -904,6 +947,176 @@ button {
   justify-self: start;
 }
 
+.onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  pointer-events: auto;
+}
+
+.onboarding-spotlight {
+  position: fixed;
+  z-index: 951;
+  border: 2px solid rgba(164, 238, 22, 0.95);
+  border-radius: 24px;
+  box-shadow:
+    0 0 0 9999px rgba(24, 28, 31, 0.46),
+    0 20px 46px rgba(24, 28, 31, 0.28);
+  pointer-events: none;
+  transition: top 180ms ease, left 180ms ease, width 180ms ease, height 180ms ease;
+}
+
+.onboarding-shell {
+  position: fixed;
+  inset: 0;
+  z-index: 952;
+  display: grid;
+  align-items: end;
+  justify-items: end;
+  padding: 24px;
+  pointer-events: none;
+}
+
+.onboarding-shell[data-target="ticket"] {
+  align-items: start;
+}
+
+.onboarding-card {
+  display: grid;
+  gap: 12px;
+  width: min(460px, calc(100vw - 32px));
+  max-height: min(70vh, 520px);
+  padding: 18px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 26px 54px rgba(24, 28, 31, 0.24);
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.onboarding-kicker {
+  margin-bottom: 0;
+}
+
+.onboarding-body {
+  display: grid;
+  gap: 10px;
+  color: var(--ink);
+  line-height: 1.45;
+}
+
+.onboarding-body p,
+.onboarding-body ul,
+.onboarding-body ol {
+  margin: 0;
+}
+
+.onboarding-body strong {
+  color: var(--green);
+}
+
+.onboarding-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+}
+
+.onboarding-note {
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: var(--green-soft);
+  border: 1px solid rgba(45, 144, 70, 0.12);
+}
+
+.onboarding-demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.onboarding-demo-actions button {
+  padding: 10px 14px;
+  box-shadow: none;
+}
+
+.onboarding-demo-actions button.onboarding-action-required,
+.onboarding-demo-actions button.onboarding-live-target {
+  position: relative;
+  padding-right: 36px;
+}
+
+.onboarding-demo-actions button.onboarding-action-required::after,
+.onboarding-demo-actions button.onboarding-live-target::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--lime);
+  box-shadow: 0 0 0 0 rgba(164, 238, 22, 0.38);
+  animation: onboarding-action-dot 0.92s ease-in-out infinite;
+}
+
+.onboarding-action-required {
+  animation: onboarding-action-pulse 1.05s ease-in-out infinite;
+}
+
+.onboarding-live-target {
+  animation: onboarding-action-pulse 1.05s ease-in-out infinite;
+  box-shadow: 0 0 0 3px rgba(164, 238, 22, 0.35);
+}
+
+.onboarding-scroll-locked {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.onboarding-demo-status {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.onboarding-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.onboarding-actions .secondary-button {
+  min-width: 88px;
+}
+
+@keyframes onboarding-action-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+    box-shadow: 0 0 0 0 rgba(164, 238, 22, 0.18);
+  }
+
+  50% {
+    filter: brightness(1.08);
+    box-shadow: 0 0 0 8px rgba(164, 238, 22, 0.08);
+  }
+}
+
+@keyframes onboarding-action-dot {
+  0%,
+  100% {
+    opacity: 0.38;
+    box-shadow: 0 0 0 0 rgba(164, 238, 22, 0.18);
+  }
+
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 0 6px rgba(164, 238, 22, 0.2);
+  }
+}
+
 #review-map .leaflet-control-attribution,
 #review-map .leaflet-control-scale {
   font-size: 0.7rem;
@@ -1010,6 +1223,15 @@ button {
     gap: 12px;
   }
 
+  .browser-header-actions {
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  .browser-header-actions .field {
+    width: 100%;
+  }
+
   .segmented-control {
     grid-template-columns: 1fr;
   }
@@ -1031,6 +1253,26 @@ button {
 
   .map-help-overlay {
     padding: 14px;
+  }
+
+  .onboarding-shell {
+    align-items: end;
+    justify-items: stretch;
+    padding: 14px;
+  }
+
+  .onboarding-shell[data-target="ticket"] {
+    align-items: end;
+  }
+
+  .onboarding-card {
+    width: min(100%, 100%);
+    max-height: min(72vh, 520px);
+    padding: 16px;
+  }
+
+  .onboarding-spotlight {
+    border-radius: 18px;
   }
 
   .ticket-preview-gate {
