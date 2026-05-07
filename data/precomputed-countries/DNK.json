@@ -28113,50 +28113,215 @@
         "coverageRatio": 0.008568584092952627,
         "footprintPolygonLatLngs": [
           [
-            56.87744495469189,
-            10.027897505331895
+            56.93655,
+            10.244393
           ],
           [
-            56.80478718004636,
-            10.148355523931277
+            56.954333,
+            10.21904
           ],
           [
-            56.802478001124605,
-            10.170709565479443
+            56.938526,
+            10.209081
           ],
           [
-            56.802613813301264,
-            10.17585251787638
+            56.935068,
+            10.195499
           ],
           [
-            56.80262722474568,
-            10.176220785444391
+            56.946431,
+            10.182823
           ],
           [
-            56.81401726387898,
-            10.261234303529967
+            56.95137,
+            10.154755
           ],
           [
-            56.977011848224585,
-            10.323932692665293
+            56.944455,
+            10.146606
           ],
           [
-            56.97938339721767,
-            10.321536248972764
+            56.939514,
+            10.160187
           ],
           [
-            56.98253252188835,
-            10.318330043739747
+            56.927655,
+            10.170147
           ],
           [
-            57.00260578482581,
-            10.1544774886325
+            56.911837,
+            10.178296
+          ],
+          [
+            56.897001,
+            10.17558
+          ],
+          [
+            56.888097,
+            10.169242
+          ],
+          [
+            56.891065,
+            10.154755
+          ],
+          [
+            56.882654,
+            10.163809
+          ],
+          [
+            56.873747,
+            10.163809
+          ],
+          [
+            56.850478,
+            10.152944
+          ],
+          [
+            56.822734,
+            10.174674
+          ],
+          [
+            56.805384,
+            10.20727
+          ],
+          [
+            56.819265,
+            10.232622
+          ],
+          [
+            56.818274,
+            10.266123
+          ],
+          [
+            56.845525,
+            10.26069
+          ],
+          [
+            56.88117,
+            10.265218
+          ],
+          [
+            56.892055,
+            10.253447
+          ],
+          [
+            56.901453,
+            10.242582
+          ],
+          [
+            56.937044,
+            10.259785
           ]
         ],
         "code": "regional",
         "label": "Regional footprint",
         "short": "Regional",
-        "note": "Dropped 1 likely outlier point before scoring. The cleaned outer footprint covers 0.9% of Denmark, so it stays regional."
+        "note": "Manual admin override applied from the review desk."
+      },
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-07T17:22:15.982Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please update moose (alces alces) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
+          "countryIso3": "DNK",
+          "status": "likely_true_one_source",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": null,
+          "gbifCount": 908,
+          "inatCount": null,
+          "rawGbifPresent": true,
+          "rawInatPresent": null,
+          "rawGbifCount": 908,
+          "rawInatCount": null,
+          "gbifUsageKey": 2440940,
+          "inatTaxonId": 522193,
+          "inatPlaceId": 8051,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 908,
+            "qualifiedTotal": 908,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 89,
+            "outlierPointCount": 1,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 6.786043245734109,
+            "unique25kmCells": 4,
+            "unique50kmCells": 4,
+            "countryDiameterKm": 234.24129640355284,
+            "spreadRatio": 0.028970311170251797,
+            "coverageAreaKm2": 369.2545629017005,
+            "coverageRatio": 0.008568584092952627,
+            "footprintPolygonLatLngs": [
+              [
+                56.87744495469189,
+                10.027897505331895
+              ],
+              [
+                56.80478718004636,
+                10.148355523931277
+              ],
+              [
+                56.802478001124605,
+                10.170709565479443
+              ],
+              [
+                56.802613813301264,
+                10.17585251787638
+              ],
+              [
+                56.80262722474568,
+                10.176220785444391
+              ],
+              [
+                56.81401726387898,
+                10.261234303529967
+              ],
+              [
+                56.977011848224585,
+                10.323932692665293
+              ],
+              [
+                56.97938339721767,
+                10.321536248972764
+              ],
+              [
+                56.98253252188835,
+                10.318330043739747
+              ],
+              [
+                57.00260578482581,
+                10.1544774886325
+              ]
+            ],
+            "code": "regional",
+            "label": "Regional footprint",
+            "short": "Regional",
+            "note": "Dropped 1 likely outlier point before scoring. The cleaned outer footprint covers 0.9% of Denmark, so it stays regional."
+          }
+        }
       }
     },
     {
@@ -106782,11 +106947,12 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-07T14:57:37.408221+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-07T17:22:38.081931+00:00",
     "items": [
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-      "2813059e-da3b-4f17-a60c-d9c34f2fce24"
+      "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "429257d4-3ef2-47fb-b849-66ee6c107346"
     ]
   }
 }
