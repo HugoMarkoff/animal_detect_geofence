@@ -7,17 +7,17 @@
   "selectionMode": "global",
   "candidateFile": null,
   "summary": {
-    "total": 2018,
+    "total": 2017,
     "statusCounts": {
       "unlisted": 1851,
       "likely_true_one_source": 118,
-      "likely_false": 41,
+      "likely_false": 40,
       "new_record": 8
     },
     "bucketCounts": {
       "Unlisted": 1851,
       "Likely Valid": 118,
-      "Needs Review": 41,
+      "Needs Review": 40,
       "New": 8
     }
   },
@@ -16330,56 +16330,6 @@
       "rawInatCount": null,
       "gbifUsageKey": 2479311,
       "inatTaxonId": 18921,
-      "inatPlaceId": 8051,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 234.24129640355284,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      }
-    },
-    {
-      "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-      "countryIso3": "DNK",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
       "inatPlaceId": 8051,
       "managedEvidence": {
         "domesticNamed": false,
@@ -106764,5 +106714,71 @@
         "footprintPolygonLatLngs": []
       }
     }
-  ]
+  ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "sourceFile": "data/review-overrides/countries/DNK/2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0.json",
+      "updatedAtUtc": "2026-05-07T09:34:54.959Z",
+      "updatedBy": "HugoMarkoff",
+      "reason": "Please remove common woolly monkey (lagothrix lagotricha) from the Denmark country pack. Applied from the admin panel.",
+      "baseEntry": {
+        "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+        "countryIso3": "DNK",
+        "status": "likely_false",
+        "expected": true,
+        "gbifPresent": null,
+        "inatPresent": null,
+        "gbifCount": null,
+        "inatCount": null,
+        "rawGbifPresent": null,
+        "rawInatPresent": null,
+        "rawGbifCount": null,
+        "rawInatCount": null,
+        "gbifUsageKey": null,
+        "inatTaxonId": null,
+        "inatPlaceId": 8051,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 234.24129640355284,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        }
+      }
+    }
+  ],
+  "manualOverrideSummary": {
+    "count": 1,
+    "appliedAtUtc": "2026-05-07T10:25:55.387392+00:00",
+    "items": [
+      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0"
+    ]
+  }
 }
