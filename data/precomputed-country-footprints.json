@@ -7,16 +7,16 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/denmark_new_candidates.csv",
   "summary": {
-    "total": 164,
+    "total": 166,
     "statusCounts": {
       "likely_true_both": 59,
       "likely_true_one_source": 60,
-      "likely_false": 37,
+      "likely_false": 39,
       "new_record": 8
     },
     "bucketCounts": {
       "Likely Valid": 119,
-      "Needs Review": 37,
+      "Needs Review": 39,
       "New": 8
     }
   },
@@ -1997,6 +1997,56 @@
       }
     },
     {
+      "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "countryIso3": "DNK",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 8051,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 234.24129640355284,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      }
+    },
+    {
       "itemId": "277c1292-8e80-4de1-a630-239ba0f7416d",
       "countryIso3": "DNK",
       "status": "likely_true_one_source",
@@ -2091,6 +2141,56 @@
         "label": "National footprint",
         "short": "National",
         "note": "Dropped 26 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+      }
+    },
+    {
+      "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "countryIso3": "DNK",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 5786093,
+      "inatTaxonId": null,
+      "inatPlaceId": 8051,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 234.24129640355284,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
       }
     },
     {
@@ -3555,223 +3655,58 @@
         "coverageRatio": 0.008219076870553158,
         "footprintPolygonLatLngs": [
           [
-            56.93655,
-            10.244393
+            56.95525499072861,
+            10.077543162451361
           ],
           [
-            56.954333,
-            10.21904
+            56.80372799016701,
+            10.157312979460915
           ],
           [
-            56.938526,
-            10.209081
+            56.802539995683354,
+            10.16204836621982
           ],
           [
-            56.935068,
-            10.195499
+            56.80137163169081,
+            10.182246246314273
           ],
           [
-            56.946431,
-            10.182823
+            56.80173992353105,
+            10.187330828692822
           ],
           [
-            56.95137,
-            10.154755
+            56.81335917808356,
+            10.257597094258694
           ],
           [
-            56.944455,
-            10.146606
+            56.96837579232413,
+            10.340922127127076
           ],
           [
-            56.939514,
-            10.160187
+            56.971465285197105,
+            10.338042179746502
           ],
           [
-            56.927655,
-            10.170147
+            56.97550486276956,
+            10.334132390588461
           ],
           [
-            56.911837,
-            10.178296
+            57.00245918752736,
+            10.153528843347049
           ],
           [
-            56.897001,
-            10.17558
+            56.99502035011054,
+            10.139635882262683
           ],
           [
-            56.888097,
-            10.169242
-          ],
-          [
-            56.891065,
-            10.154755
-          ],
-          [
-            56.882654,
-            10.163809
-          ],
-          [
-            56.873747,
-            10.163809
-          ],
-          [
-            56.850478,
-            10.152944
-          ],
-          [
-            56.822734,
-            10.174674
-          ],
-          [
-            56.805384,
-            10.20727
-          ],
-          [
-            56.819265,
-            10.232622
-          ],
-          [
-            56.818274,
-            10.266123
-          ],
-          [
-            56.845525,
-            10.26069
-          ],
-          [
-            56.88117,
-            10.265218
-          ],
-          [
-            56.892055,
-            10.253447
-          ],
-          [
-            56.901453,
-            10.242582
-          ],
-          [
-            56.937044,
-            10.259785
+            56.96450839025857,
+            10.087863571563735
           ]
         ],
         "code": "regional",
         "label": "Regional footprint",
         "short": "Regional",
-        "note": "Manual admin override applied from the review desk."
-      },
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-05-07T17:22:15.982Z",
-        "updatedBy": "HugoMarkoff",
-        "reason": "Please update moose (alces alces) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint. Applied from the admin panel.",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
-          "countryIso3": "DNK",
-          "status": "likely_true_one_source",
-          "expected": true,
-          "gbifPresent": true,
-          "inatPresent": null,
-          "gbifCount": 911,
-          "inatCount": null,
-          "rawGbifPresent": true,
-          "rawInatPresent": null,
-          "rawGbifCount": 911,
-          "rawInatCount": null,
-          "gbifUsageKey": 2440940,
-          "inatTaxonId": 522193,
-          "inatPlaceId": 8051,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 911,
-            "qualifiedTotal": 911,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "significant": true,
-            "totalPoints": 90,
-            "corePointCount": 89,
-            "outlierPointCount": 1,
-            "clusterCount": 1,
-            "clusterSpreadKm": 0.0,
-            "maxDistanceKm": 6.786043245734109,
-            "unique25kmCells": 4,
-            "unique50kmCells": 4,
-            "countryDiameterKm": 234.24129640355284,
-            "spreadRatio": 0.028970311170251797,
-            "coverageAreaKm2": 354.19289865961775,
-            "coverageRatio": 0.008219076870553158,
-            "footprintPolygonLatLngs": [
-              [
-                56.95525499072861,
-                10.077543162451361
-              ],
-              [
-                56.80372799016701,
-                10.157312979460915
-              ],
-              [
-                56.802539995683354,
-                10.16204836621982
-              ],
-              [
-                56.80137163169081,
-                10.182246246314273
-              ],
-              [
-                56.80173992353105,
-                10.187330828692822
-              ],
-              [
-                56.81335917808356,
-                10.257597094258694
-              ],
-              [
-                56.96837579232413,
-                10.340922127127076
-              ],
-              [
-                56.971465285197105,
-                10.338042179746502
-              ],
-              [
-                56.97550486276956,
-                10.334132390588461
-              ],
-              [
-                57.00245918752736,
-                10.153528843347049
-              ],
-              [
-                56.99502035011054,
-                10.139635882262683
-              ],
-              [
-                56.96450839025857,
-                10.087863571563735
-              ]
-            ],
-            "code": "regional",
-            "label": "Regional footprint",
-            "short": "Regional",
-            "note": "Dropped 1 likely outlier point before scoring. The cleaned outer footprint covers 0.8% of Denmark, so it stays regional."
-          }
-        }
+        "note": "Dropped 1 likely outlier point before scoring. The cleaned outer footprint covers 0.8% of Denmark, so it stays regional."
       }
     },
     {
@@ -14028,130 +13963,5 @@
         "note": "Dropped 5 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
       }
     }
-  ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-      "sourceFile": "data/review-overrides/countries/DNK/2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0.json",
-      "updatedAtUtc": "2026-05-07T10:34:25.270Z",
-      "updatedBy": "HugoMarkoff",
-      "reason": "Please remove common woolly monkey (lagothrix lagotricha) from the Denmark country pack. Applied from the admin panel.",
-      "baseEntry": {
-        "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-        "countryIso3": "DNK",
-        "status": "likely_false",
-        "expected": true,
-        "gbifPresent": null,
-        "inatPresent": null,
-        "gbifCount": null,
-        "inatCount": null,
-        "rawGbifPresent": null,
-        "rawInatPresent": null,
-        "rawGbifCount": null,
-        "rawInatCount": null,
-        "gbifUsageKey": null,
-        "inatTaxonId": null,
-        "inatPlaceId": 8051,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 0,
-          "qualifiedTotal": 0,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "no_points",
-          "label": "No mapped points",
-          "short": "No points",
-          "note": "No mapped coordinates were returned in the sampled observations.",
-          "significant": false,
-          "totalPoints": 0,
-          "maxDistanceKm": 0,
-          "unique25kmCells": 0,
-          "unique50kmCells": 0,
-          "countryDiameterKm": 234.24129640355284,
-          "spreadRatio": 0,
-          "footprintPolygonLatLngs": []
-        }
-      }
-    },
-    {
-      "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
-      "sourceFile": "data/review-overrides/countries/DNK/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
-      "updatedAtUtc": "2026-05-07T14:57:20.768Z",
-      "updatedBy": "HugoMarkoff",
-      "reason": "Please remove pur\u00fas red howler monkey (alouatta puruensis) from the Denmark country pack. Applied from the admin panel.",
-      "baseEntry": {
-        "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
-        "countryIso3": "DNK",
-        "status": "likely_false",
-        "expected": true,
-        "gbifPresent": false,
-        "inatPresent": null,
-        "gbifCount": 0,
-        "inatCount": null,
-        "rawGbifPresent": false,
-        "rawInatPresent": null,
-        "rawGbifCount": 0,
-        "rawInatCount": null,
-        "gbifUsageKey": 5786093,
-        "inatTaxonId": null,
-        "inatPlaceId": 8051,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 0,
-          "qualifiedTotal": 0,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "no_points",
-          "label": "No mapped points",
-          "short": "No points",
-          "note": "No mapped coordinates were returned in the sampled observations.",
-          "significant": false,
-          "totalPoints": 0,
-          "maxDistanceKm": 0,
-          "unique25kmCells": 0,
-          "unique50kmCells": 0,
-          "countryDiameterKm": 234.24129640355284,
-          "spreadRatio": 0,
-          "footprintPolygonLatLngs": []
-        }
-      }
-    }
-  ],
-  "manualOverrideSummary": {
-    "count": 3,
-    "appliedAtUtc": "2026-05-07T19:27:14.113659+00:00",
-    "items": [
-      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-      "2813059e-da3b-4f17-a60c-d9c34f2fce24",
-      "429257d4-3ef2-47fb-b849-66ee6c107346"
-    ]
-  }
+  ]
 }
