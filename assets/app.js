@@ -36,6 +36,7 @@ const openOnboardingButton = document.getElementById("open-onboarding");
 const onboardingOverlay = document.getElementById("onboarding-overlay");
 const onboardingSpotlight = document.getElementById("onboarding-spotlight");
 const onboardingShell = document.querySelector(".onboarding-shell");
+const onboardingCard = document.querySelector(".onboarding-card");
 const onboardingStepLabel = document.getElementById("onboarding-step-label");
 const onboardingTitle = document.getElementById("onboarding-title");
 const onboardingBody = document.getElementById("onboarding-body");
@@ -46,7 +47,6 @@ const statusLine = document.getElementById("status-line");
 const ticketTitleInput = document.getElementById("ticket-title");
 const ticketBodyInput = document.getElementById("ticket-body");
 const ticketPreviewPanel = document.getElementById("ticket-preview-panel");
-const buildTicketButton = document.getElementById("build-ticket");
 const ticketPreviewGate = document.getElementById("ticket-preview-gate");
 const ticketPreviewGateMessage = document.getElementById("ticket-preview-gate-message");
 const copyMarkdownButton = document.getElementById("copy-markdown");
@@ -65,10 +65,11 @@ const COASTLINE_FILL_BUFFER_KM = 4;
 const GEOBOUNDARIES_API_ROOT = "https://www.geoboundaries.org/api/current/gbOpen";
 const GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT = 50000;
 const GEOBOUNDARIES_OUTLINE_ONLY_VERTEX_LIMIT = 200000;
+const COUNTRY_FIT_PAD = 0.03;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260506i";
+const DATA_VERSION = "20260507a";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260506h";
@@ -140,29 +141,37 @@ const ONBOARDING_STEPS = [
     targetKey: "map",
     targetSelector: "#review-map",
     title: "Try A Regional Example",
-    requiredActions: ["map-regional"],
+    nextAction: "map-regional",
     bodyHtml: `
       <ul class="onboarding-list">
         <li><strong>Regional</strong> means the species is concentrated in one local area instead of the whole country.</li>
-        <li>Press the button below first.</li>
+        <li>Press <strong>Next</strong> to load a real regional example.</li>
       </ul>
-      <div class="onboarding-demo-actions">
-        <button class="secondary-button" type="button" data-demo-action="map-regional">Search moose in Denmark</button>
-      </div>
-      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>Press to filter Denmark to <strong>moose</strong> and zoom to Lille Vildmose.</p>
+      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>Next will filter Denmark to <strong>moose</strong> and zoom to Lille Vildmose.</p>
+    `,
+  },
+  {
+    targetKey: "ticket",
+    targetSelector: "#ticket-form .segmented-control",
+    title: "Choose The Change Type",
+    nextAction: "ticket-removal-select",
+    bodyHtml: `
+      <ul class="onboarding-list">
+        <li><strong>Addition</strong> = add a species that is missing from the country pack.</li>
+        <li><strong>Correction</strong> = keep the species, but change its coverage.</li>
+        <li><strong>Removal</strong> = remove a species that should not stay in the pack.</li>
+      </ul>
+      <p>Press <strong>Next</strong> to switch the live form to a real <strong>Removal</strong> example.</p>
+      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>Next will switch to <strong>Removal</strong> and select <strong>African wildcat</strong> in the current country pack.</p>
     `,
   },
   {
     targetKey: "ticket",
     targetSelector: "#ticket-preview-content",
-    title: "Watch A Ticket Be Made",
-    requiredActions: ["ticket-removal"],
+    title: "Preview Fills In Automatically",
     bodyHtml: `
-      <p>Press the button below to load a real removal example in the live form.</p>
-      <div class="onboarding-demo-actions">
-        <button class="secondary-button" type="button" data-demo-action="ticket-removal">Load Denmark + African wildcat removal</button>
-      </div>
-      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>This loads Denmark + African wildcat and builds the removal preview below.</p>
+      <p>As soon as the fields describe a valid change, the ticket preview fills in automatically here.</p>
+      <p class="onboarding-note">For this example, choosing <strong>Removal</strong> and selecting <strong>African wildcat</strong> should already fill the title and body below.</p>
     `,
   },
   {
@@ -176,14 +185,17 @@ const ONBOARDING_STEPS = [
   },
   {
     targetKey: "groups",
+    shellTargetKey: "ticket",
     targetSelector: "#group-chips",
+    hideSpotlight: true,
+    scrollToTop: true,
     title: "Fast Review Flow",
     bodyHtml: `
       <ol class="onboarding-list">
         <li>Pick a country.</li>
         <li>Use <strong>New</strong> or <strong>Needs Review</strong>.</li>
         <li>Check the map.</li>
-        <li>Build the ticket.</li>
+        <li>Preview the ticket and send it.</li>
       </ol>
       <p class="onboarding-note">You can reopen this any time from <strong>Guide</strong>.</p>
     `,
@@ -266,6 +278,11 @@ let onboardingStepIndex = 0;
 let onboardingCompletedActions = new Set();
 let onboardingOriginalSpeciesFilter = "";
 let onboardingDemoSpeciesFilter = "";
+let onboardingAutoActionKey = "";
+let onboardingDemoPlaybackId = 0;
+let onboardingViewportTarget = null;
+let onboardingViewportFollowsTarget = false;
+let ticketPreviewRefreshFrame = 0;
 
 const comboBoxes = {
   country: {
@@ -552,6 +569,23 @@ function roundCoordinate(value) {
 function setStatus(message, isError = false) {
   statusLine.textContent = message;
   statusLine.classList.toggle("error", Boolean(isError));
+}
+
+function cancelTicketPreviewRefresh() {
+  if (!ticketPreviewRefreshFrame) {
+    return;
+  }
+
+  cancelAnimationFrame(ticketPreviewRefreshFrame);
+  ticketPreviewRefreshFrame = 0;
+}
+
+function scheduleTicketPreviewRefresh() {
+  cancelTicketPreviewRefresh();
+  ticketPreviewRefreshFrame = requestAnimationFrame(() => {
+    ticketPreviewRefreshFrame = 0;
+    void buildTicketPreview({ announce: false, silentIncomplete: true });
+  });
 }
 
 function yieldToBrowser() {
@@ -1789,22 +1823,44 @@ function fitGeoJsonBounds(geoJson) {
   if (!bounds.isValid()) {
     return false;
   }
-  reviewMap.fitBounds(bounds.pad(0.06), { animate: false });
+  reviewMap.fitBounds(bounds.pad(COUNTRY_FIT_PAD), { animate: false });
   return true;
 }
 
-async function focusSelectedCountry(countryGeometry = null) {
-  if (countryGeometry && fitGeoJsonBounds(countryGeometry)) {
-    return;
+function countryGeometryBoundsView(countryGeometry) {
+  if (!countryGeometry || !reviewMap) {
+    return null;
+  }
+
+  const bounds = L.geoJSON(countryGeometry).getBounds();
+  if (!bounds.isValid()) {
+    return null;
+  }
+
+  const paddedBounds = bounds.pad(COUNTRY_FIT_PAD);
+  return {
+    bounds: paddedBounds,
+  };
+}
+
+async function focusSelectedCountry(countryGeometry = null, options = {}) {
+  const { animate = false } = options;
+
+  if (countryGeometry) {
+    const geometryView = countryGeometryBoundsView(countryGeometry);
+    if (geometryView) {
+      reviewMap.fitBounds(geometryView.bounds, { animate });
+      return;
+    }
   }
 
   const focus = await getCountryCenter(countrySelect.value);
   if (focus) {
-    reviewMap.setView(focus.latlng, focus.zoom, { animate: false });
+    reviewMap.setView(focus.latlng, focus.zoom, { animate });
     return;
   }
 
-  reviewMap.setView(DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM, { animate: false });
+  reviewMap.setView(DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM, { animate });
 }
 
 async function loadRegionalOverlays() {
@@ -1944,6 +2000,8 @@ function initializeMap() {
     zoomControl: true,
     worldCopyJump: true,
     minZoom: 2,
+    zoomSnap: 0.1,
+    zoomDelta: 0.5,
   }).setView(DEFAULT_MAP_CENTER, DEFAULT_MAP_ZOOM);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -2035,14 +2093,18 @@ function syncDrawnPolygons() {
   clearTicketPreview();
   updateMapHint();
   updateMapSummary();
+  scheduleTicketPreviewRefresh();
 }
 
-function clearDrawnPolygons() {
+function clearDrawnPolygons(refreshPreview = true) {
   suggestionDrawLayer.clearLayers();
   state.drawnPolygons = [];
   clearTicketPreview();
   updateMapHint();
   updateMapSummary();
+  if (refreshPreview) {
+    scheduleTicketPreviewRefresh();
+  }
 }
 
 function populateCountrySelect(countries) {
@@ -2337,6 +2399,7 @@ function selectComboOption(key, itemId) {
   } else {
     setProposedSpeciesValue(option.label, option.itemId);
     clearTicketPreview();
+    scheduleTicketPreviewRefresh();
   }
 
   closeComboBox(key);
@@ -2501,9 +2564,7 @@ function updateSelectedRegionalLayers(fitToSelection) {
   if (fitToSelection) {
     const selectedEntry = currentSpeciesById(state.highlightedSpeciesId);
     if (selectedEntry?.footprintCode === "countrywide") {
-      if (!fitGeoJsonBounds(currentCountryGeometry)) {
-        void focusSelectedCountry(currentCountryGeometry);
-      }
+      void focusSelectedCountry(currentCountryGeometry, { animate: true });
     }
   }
 }
@@ -2521,6 +2582,7 @@ function applySpeciesSelection(itemId, fitToMap = false) {
   closeComboBox("current");
 
   clearTicketPreview();
+  scheduleTicketPreviewRefresh();
 }
 
 function updateMapSummary() {
@@ -2632,6 +2694,18 @@ function onboardingTargetElement(step) {
   }
 }
 
+function onboardingViewportBaseTarget(step) {
+  if (step?.hideSpotlight) {
+    return null;
+  }
+
+  return onboardingTargetElement(step);
+}
+
+function onboardingShellTargetKey(step) {
+  return step?.shellTargetKey || step?.targetKey || "";
+}
+
 function hideOnboardingSpotlight() {
   if (onboardingSpotlight) {
     onboardingSpotlight.hidden = true;
@@ -2668,18 +2742,104 @@ function setOnboardingScrollLock(locked) {
   document.body.classList.toggle(ONBOARDING_SCROLL_LOCK_CLASS, locked);
 }
 
+function resetOnboardingCardPosition() {
+  if (!onboardingShell) {
+    return;
+  }
+
+  onboardingShell.classList.remove("following-target");
+  onboardingShell.style.removeProperty("--onboarding-card-top");
+  onboardingShell.style.removeProperty("--onboarding-card-left");
+  onboardingShell.style.removeProperty("--onboarding-card-width");
+  onboardingShell.style.removeProperty("--onboarding-card-max-height");
+}
+
+function positionOnboardingCardNearTarget(target) {
+  if (!onboardingShell || !onboardingCard || !target) {
+    resetOnboardingCardPosition();
+    return;
+  }
+
+  const rect = target.getBoundingClientRect();
+  if (!Number.isFinite(rect.width) || !Number.isFinite(rect.height) || rect.width < 1 || rect.height < 1) {
+    resetOnboardingCardPosition();
+    return;
+  }
+
+  const viewportPadding = 16;
+  const gap = 18;
+  const cardRect = onboardingCard.getBoundingClientRect();
+  const cardWidth = Math.min(cardRect.width || 460, Math.max(280, window.innerWidth - viewportPadding * 2));
+  const cardHeight = Math.min(cardRect.height || 360, Math.max(200, window.innerHeight - viewportPadding * 2));
+  const spaceRight = window.innerWidth - rect.right - gap - viewportPadding;
+  const spaceLeft = rect.left - gap - viewportPadding;
+  const spaceBelow = window.innerHeight - rect.bottom - gap - viewportPadding;
+  const spaceAbove = rect.top - gap - viewportPadding;
+
+  let left = rect.right + gap;
+  let top = rect.top + rect.height / 2 - cardHeight / 2;
+
+  if (spaceRight >= Math.min(280, cardWidth)) {
+    left = rect.right + gap;
+  } else if (spaceLeft >= Math.min(280, cardWidth)) {
+    left = rect.left - gap - cardWidth;
+  } else if (spaceBelow >= spaceAbove) {
+    left = rect.left + rect.width / 2 - cardWidth / 2;
+    top = rect.bottom + gap;
+  } else {
+    left = rect.left + rect.width / 2 - cardWidth / 2;
+    top = rect.top - gap - cardHeight;
+  }
+
+  left = Math.max(viewportPadding, Math.min(left, window.innerWidth - cardWidth - viewportPadding));
+  top = Math.max(viewportPadding, Math.min(top, window.innerHeight - cardHeight - viewportPadding));
+
+  onboardingShell.classList.add("following-target");
+  onboardingShell.style.setProperty("--onboarding-card-top", `${Math.round(top)}px`);
+  onboardingShell.style.setProperty("--onboarding-card-left", `${Math.round(left)}px`);
+  onboardingShell.style.setProperty("--onboarding-card-width", `${Math.round(cardWidth)}px`);
+  onboardingShell.style.setProperty("--onboarding-card-max-height", `${Math.round(window.innerHeight - viewportPadding * 2)}px`);
+}
+
+function setOnboardingViewportTarget(target, followsTarget = false) {
+  onboardingViewportTarget = target || null;
+  onboardingViewportFollowsTarget = Boolean(target && followsTarget);
+  refreshOnboardingViewportState(onboardingViewportTarget);
+}
+
 function clearOnboardingLiveTargets() {
-  openTicketLink?.classList.remove(ONBOARDING_LIVE_TARGET_CLASS);
-  openGithubLink?.classList.remove(ONBOARDING_LIVE_TARGET_CLASS);
+  document.querySelectorAll(`.${ONBOARDING_LIVE_TARGET_CLASS}`).forEach((element) => {
+    element.classList.remove(ONBOARDING_LIVE_TARGET_CLASS);
+  });
 }
 
 function shouldLockOnboardingScroll(target) {
   return true;
 }
 
-function refreshOnboardingViewportState(target) {
+function refreshOnboardingViewportState(target = onboardingViewportTarget) {
   positionOnboardingSpotlight(target);
+  if (onboardingViewportFollowsTarget && target) {
+    positionOnboardingCardNearTarget(target);
+  } else {
+    resetOnboardingCardPosition();
+  }
   setOnboardingScrollLock(shouldLockOnboardingScroll(target));
+}
+
+function onboardingTargetNeedsScroll(target) {
+  if (!target) {
+    return false;
+  }
+
+  const rect = target.getBoundingClientRect();
+  const verticalMargin = 96;
+  const horizontalMargin = 32;
+
+  return rect.top < verticalMargin
+    || rect.bottom > window.innerHeight - verticalMargin
+    || rect.left < horizontalMargin
+    || rect.right > window.innerWidth - horizontalMargin;
 }
 
 function scrollOnboardingTargetIntoView(target) {
@@ -2687,7 +2847,20 @@ function scrollOnboardingTargetIntoView(target) {
     return;
   }
 
-  target.scrollIntoView({ block: "center", inline: "nearest" });
+  if (!onboardingTargetNeedsScroll(target)) {
+    return;
+  }
+
+  target.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+}
+
+function scrollOnboardingStepIntoView(step, target) {
+  if (step?.scrollToTop) {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    return;
+  }
+
+  scrollOnboardingTargetIntoView(target);
 }
 
 function onboardingStepComplete(step) {
@@ -2705,9 +2878,9 @@ function onboardingStepComplete(step) {
 
 function updateOnboardingStepControls(step) {
   const requiredActions = step?.requiredActions || [];
-  const isComplete = onboardingStepComplete(step);
-
-  onboardingNextButton.hidden = requiredActions.length > 0 && !isComplete;
+  onboardingNextButton.hidden = false;
+  onboardingNextButton.disabled = false;
+  onboardingBackButton.disabled = false;
   onboardingBody?.querySelectorAll("[data-demo-action]").forEach((button) => {
     const action = button.dataset.demoAction || "";
     const isRequired = requiredActions.includes(action);
@@ -2732,18 +2905,21 @@ function renderOnboardingStep() {
   onboardingBackButton.hidden = onboardingStepIndex === 0;
   onboardingNextButton.textContent = onboardingStepIndex === ONBOARDING_STEPS.length - 1 ? "Start reviewing" : "Next";
   clearOnboardingLiveTargets();
+  onboardingViewportTarget = null;
+  onboardingViewportFollowsTarget = false;
   updateOnboardingStepControls(step);
   if (onboardingShell) {
-    onboardingShell.dataset.target = step.targetKey || "";
+    onboardingShell.dataset.target = onboardingShellTargetKey(step);
   }
 
   const target = onboardingTargetElement(step);
+  const viewportTarget = onboardingViewportBaseTarget(step);
   setOnboardingScrollLock(false);
-  scrollOnboardingTargetIntoView(target);
+  scrollOnboardingStepIntoView(step, target);
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       const currentStep = ONBOARDING_STEPS[onboardingStepIndex];
-      refreshOnboardingViewportState(onboardingTargetElement(currentStep));
+      setOnboardingViewportTarget(onboardingViewportBaseTarget(currentStep), false);
     });
   });
 }
@@ -2753,6 +2929,9 @@ function closeOnboarding(markSeen = true) {
     return;
   }
 
+  onboardingAutoActionKey = "";
+  onboardingDemoPlaybackId += 1;
+
   const shouldRestoreSpeciesFilter = Boolean(
     onboardingDemoSpeciesFilter
     && cleanText(state.speciesFilter).toLocaleLowerCase() === cleanText(onboardingDemoSpeciesFilter).toLocaleLowerCase(),
@@ -2760,6 +2939,9 @@ function closeOnboarding(markSeen = true) {
 
   onboardingOverlay.hidden = true;
   hideOnboardingSpotlight();
+  resetOnboardingCardPosition();
+  onboardingViewportTarget = null;
+  onboardingViewportFollowsTarget = false;
   setOnboardingScrollLock(false);
   clearOnboardingLiveTargets();
   if (shouldRestoreSpeciesFilter) {
@@ -2777,6 +2959,8 @@ function openOnboarding(stepIndex = 0) {
     return;
   }
 
+  onboardingAutoActionKey = "";
+  onboardingDemoPlaybackId += 1;
   onboardingStepIndex = Math.max(0, Math.min(stepIndex, ONBOARDING_STEPS.length - 1));
   onboardingCompletedActions = new Set();
   onboardingOriginalSpeciesFilter = state.speciesFilter;
@@ -2797,6 +2981,8 @@ function advanceOnboarding(stepOffset) {
     return;
   }
 
+  onboardingAutoActionKey = "";
+  onboardingDemoPlaybackId += 1;
   onboardingStepIndex = nextIndex;
   renderOnboardingStep();
 }
@@ -2809,6 +2995,146 @@ function setOnboardingDemoStatus(message, isError = false) {
 
   status.textContent = message;
   status.classList.toggle("error", Boolean(isError));
+}
+
+function startOnboardingDemoPlayback() {
+  onboardingDemoPlaybackId += 1;
+  clearOnboardingLiveTargets();
+  return onboardingDemoPlaybackId;
+}
+
+function onboardingDemoPlaybackActive(playbackId) {
+  return playbackId === onboardingDemoPlaybackId && !onboardingOverlay?.hidden;
+}
+
+async function pauseOnboardingDemo(durationMs, playbackId) {
+  await new Promise((resolve) => {
+    window.setTimeout(resolve, durationMs);
+  });
+  return onboardingDemoPlaybackActive(playbackId);
+}
+
+function setOnboardingLiveTarget(target) {
+  clearOnboardingLiveTargets();
+  if (!target) {
+    setOnboardingViewportTarget(onboardingViewportBaseTarget(ONBOARDING_STEPS[onboardingStepIndex]), false);
+    return;
+  }
+
+  target.classList.add(ONBOARDING_LIVE_TARGET_CLASS);
+  target.scrollIntoView({ block: "center", inline: "nearest" });
+  setOnboardingViewportTarget(target, true);
+}
+
+async function typeOnboardingInputValue(input, value, playbackId, stepDelayMs = 52) {
+  input.focus();
+  input.value = "";
+  input.dispatchEvent(new Event("input", { bubbles: true }));
+  await yieldToBrowser();
+
+  for (const character of value) {
+    if (!onboardingDemoPlaybackActive(playbackId)) {
+      return false;
+    }
+
+    input.value += character;
+    input.dispatchEvent(new Event("input", { bubbles: true }));
+    await yieldToBrowser();
+
+    if (!(await pauseOnboardingDemo(stepDelayMs, playbackId))) {
+      return false;
+    }
+  }
+
+  return onboardingDemoPlaybackActive(playbackId);
+}
+
+async function playOnboardingRemovalSelectionDemo() {
+  const playbackId = startOnboardingDemoPlayback();
+
+  setOnboardingDemoStatus("Loading Denmark so the live form uses the real country pack...");
+  await ensureCountryLoaded("DNK");
+  if (!onboardingDemoPlaybackActive(playbackId)) {
+    return false;
+  }
+
+  setGroupFilterValue("needs_review");
+
+  const removalEntry = findSpeciesEntry(
+    ["african wild cat", "felis silvestris lybica"],
+    () => true,
+  );
+  if (!removalEntry) {
+    throw new Error("Could not find African wildcat in the Denmark pack.");
+  }
+
+  const removalOption = document
+    .querySelector('input[name="suggestionType"][value="removal"]')
+    ?.closest(".segment-option")
+    ?.querySelector("span");
+  if (!removalOption) {
+    throw new Error("Could not find the Removal option in the live form.");
+  }
+
+  const currentSpeciesControl = document.querySelector("#current-species-combobox .combo-input-shell") || currentSpeciesField;
+  const currentSpeciesGuideTarget = currentSpeciesToggle || currentSpeciesControl;
+
+  onboardingDemoSpeciesFilter = "";
+  setOnboardingLiveTarget(removalOption);
+  setOnboardingDemoStatus("First, the guide zooms to the live Removal option...");
+  if (!(await pauseOnboardingDemo(860, playbackId))) {
+    return false;
+  }
+
+  removalOption.click();
+  await yieldToBrowser();
+  setOnboardingDemoStatus("Now switch the live form from Addition to Removal...");
+  if (!(await pauseOnboardingDemo(700, playbackId))) {
+    return false;
+  }
+
+  setOnboardingLiveTarget(currentSpeciesGuideTarget);
+  setOnboardingDemoStatus("Next, the guide moves to Current species...");
+  if (!(await pauseOnboardingDemo(720, playbackId))) {
+    return false;
+  }
+
+  openComboBox("current");
+  currentSpeciesInput.focus();
+  currentSpeciesInput.select();
+  await yieldToBrowser();
+  setOnboardingDemoStatus("Open the Current species selector...");
+  if (!(await pauseOnboardingDemo(560, playbackId))) {
+    return false;
+  }
+
+  setOnboardingDemoStatus("Type african wild cat into the live selector...");
+  if (!(await typeOnboardingInputValue(currentSpeciesInput, "african wild cat", playbackId, 96))) {
+    return false;
+  }
+
+  openComboBox("current");
+  await yieldToBrowser();
+  const optionButton = currentSpeciesOptions.querySelector(`[data-item-id="${removalEntry.itemId}"]`);
+  if (!optionButton) {
+    throw new Error("Could not find African wildcat in the live selector results.");
+  }
+
+  setOnboardingLiveTarget(currentSpeciesGuideTarget);
+  setOnboardingDemoStatus("Select African wildcat from the live results...");
+  if (!(await pauseOnboardingDemo(620, playbackId))) {
+    return false;
+  }
+
+  optionButton.click();
+  await yieldToBrowser();
+  if (!(await pauseOnboardingDemo(520, playbackId))) {
+    return false;
+  }
+
+  setOnboardingLiveTarget(currentSpeciesGuideTarget);
+  setOnboardingDemoStatus("African wildcat is now selected as the current species. The preview below updates automatically.");
+  return true;
 }
 
 function setSuggestionTypeValue(type) {
@@ -2825,12 +3151,14 @@ function setScopeValue(scope) {
   if (scopeSelect.value === scope) {
     updateFormVisibility();
     clearTicketPreview();
+    scheduleTicketPreviewRefresh();
     return;
   }
 
   scopeSelect.value = scope;
   updateFormVisibility();
   clearTicketPreview();
+  scheduleTicketPreviewRefresh();
 }
 
 function setGroupFilterValue(groupKey) {
@@ -2898,6 +3226,67 @@ function completeOnboardingAction(action) {
   updateOnboardingStepControls(ONBOARDING_STEPS[onboardingStepIndex]);
 }
 
+async function runOnboardingGuideAction(action) {
+  const success = await runOnboardingDemo(action);
+  if (success) {
+    completeOnboardingAction(action);
+  }
+  return success;
+}
+
+async function handleOnboardingNext() {
+  if (!onboardingIsOpen()) {
+    return;
+  }
+
+  const step = ONBOARDING_STEPS[onboardingStepIndex];
+  const nextAction = step?.nextAction || "";
+  if (!nextAction || onboardingCompletedActions.has(nextAction)) {
+    advanceOnboarding(1);
+    return;
+  }
+
+  onboardingNextButton.disabled = true;
+  onboardingBackButton.disabled = true;
+
+  const success = await runOnboardingGuideAction(nextAction);
+  if (!success) {
+    onboardingNextButton.disabled = false;
+    onboardingBackButton.disabled = false;
+    return;
+  }
+
+  onboardingNextButton.disabled = false;
+  onboardingBackButton.disabled = false;
+}
+
+async function loadOnboardingRemovalExample({ buildPreview = false } = {}) {
+  await ensureCountryLoaded("DNK");
+  setGroupFilterValue("needs_review");
+  setSuggestionTypeValue("removal");
+
+  const removalEntry = findSpeciesEntry(
+    ["african wild cat", "felis silvestris lybica"],
+    () => true,
+  );
+
+  if (!removalEntry) {
+    throw new Error("Could not find African wildcat in the Denmark pack.");
+  }
+
+  onboardingDemoSpeciesFilter = "african wild cat";
+  setSpeciesFilterValue("african wild cat");
+  if (!clickSpeciesCard(removalEntry.itemId)) {
+    applySpeciesSelection(removalEntry.itemId, true);
+  }
+
+  if (buildPreview) {
+    await buildTicketPreview();
+  }
+
+  return removalEntry;
+}
+
 async function runOnboardingDemo(action) {
   try {
     if (action === "map-national") {
@@ -2946,39 +3335,36 @@ async function runOnboardingDemo(action) {
         applySpeciesSelection(regionalEntry.itemId, true);
       }
 
-      setOnboardingDemoStatus("Loaded moose and zoomed to the Lille Vildmose regional footprint.");
+      setOnboardingDemoStatus("Loaded moose and zoomed to the Lille Vildmose regional footprint. Press Next to continue.");
       return true;
     }
 
     if (action === "ticket-removal") {
       setOnboardingDemoStatus("Loading the Denmark African wildcat removal demo...");
-      await ensureCountryLoaded("DNK");
-      setGroupFilterValue("needs_review");
-      setSuggestionTypeValue("removal");
-
-      const removalEntry = findSpeciesEntry(
-        ["african wild cat", "felis silvestris lybica"],
-        () => true,
-      );
-
-      if (!removalEntry) {
-        throw new Error("Could not find African wildcat in the Denmark pack.");
-      }
-
-      onboardingDemoSpeciesFilter = "african wild cat";
-      setSpeciesFilterValue("african wild cat");
-      if (!clickSpeciesCard(removalEntry.itemId)) {
-        applySpeciesSelection(removalEntry.itemId, true);
-      }
-
-      await buildTicketPreview();
+      await loadOnboardingRemovalExample({ buildPreview: true });
       setOnboardingDemoStatus("Loaded Denmark + African wildcat and built the removal preview below.");
+      return true;
+    }
+
+    if (action === "ticket-removal-select") {
+      setOnboardingDemoStatus("Switching the live form to Removal and selecting African wildcat...");
+      await loadOnboardingRemovalExample({ buildPreview: false });
+      await yieldToBrowser();
+      await yieldToBrowser();
+      setOnboardingDemoStatus("Selected African wildcat as a live Removal example. Press Next to continue.");
+      return true;
+    }
+
+    if (action === "ticket-removal-preview") {
+      setOnboardingDemoStatus("Building the live removal preview...");
+      await loadOnboardingRemovalExample({ buildPreview: true });
+      setOnboardingDemoStatus("Built the African wildcat removal preview below.");
       return true;
     }
 
     if (action === "ticket-submit-email") {
       if (openTicketLink.classList.contains("disabled")) {
-        throw new Error("Build the ticket preview first.");
+        throw new Error("Wait for the ticket preview to fill in first.");
       }
 
       clearOnboardingLiveTargets();
@@ -2990,7 +3376,7 @@ async function runOnboardingDemo(action) {
 
     if (action === "ticket-submit-github") {
       if (openGithubLink.classList.contains("disabled")) {
-        throw new Error("Build the ticket preview first.");
+        throw new Error("Wait for the ticket preview to fill in first.");
       }
 
       clearOnboardingLiveTargets();
@@ -3038,7 +3424,7 @@ function ticketBuildState() {
   if (!state.currentCountry) {
     return {
       canBuild: false,
-      message: "Load a country pack to unlock the ticket preview.",
+      message: "Load a country pack to preview a ticket.",
     };
   }
 
@@ -3047,14 +3433,14 @@ function ticketBuildState() {
     if (!notificationEmail) {
       return {
         canBuild: false,
-        message: "Add an email address to unlock the ticket preview.",
+        message: "Add an email address to include notifications in the preview.",
       };
     }
 
     if (!NOTIFICATION_EMAIL_PATTERN.test(notificationEmail)) {
       return {
         canBuild: false,
-        message: "Enter a valid notification email to unlock the ticket preview.",
+        message: "Enter a valid notification email to preview the ticket.",
       };
     }
   }
@@ -3066,7 +3452,7 @@ function ticketBuildState() {
     if (!proposedLabel) {
       return {
         canBuild: false,
-        message: "Choose a species to unlock the ticket preview.",
+        message: "Choose a species to preview the ticket.",
       };
     }
 
@@ -3080,13 +3466,13 @@ function ticketBuildState() {
     if (scopeSelect.value === "regional" && !state.drawnPolygons.length) {
       return {
         canBuild: false,
-        message: "Draw at least one regional area to unlock the ticket preview.",
+        message: "Draw at least one regional area to preview the ticket.",
       };
     }
 
     return {
       canBuild: true,
-      message: "Build the ticket preview for this addition.",
+      message: "The ticket preview updates automatically for this addition.",
     };
   }
 
@@ -3095,14 +3481,14 @@ function ticketBuildState() {
     if (!currentEntry) {
       return {
         canBuild: false,
-        message: "Choose a current species to unlock the ticket preview.",
+        message: "Choose a current species to preview the ticket.",
       };
     }
 
     if (scopeSelect.value === "regional" && !state.drawnPolygons.length) {
       return {
         canBuild: false,
-        message: "Draw at least one regional area to unlock the ticket preview.",
+        message: "Draw at least one regional area to preview the ticket.",
       };
     }
 
@@ -3111,32 +3497,32 @@ function ticketBuildState() {
       if (scopeSelect.value === "regional" && state.drawnPolygons.length) {
         return {
           canBuild: true,
-          message: "Build the ticket preview for this regional correction.",
+          message: "The ticket preview updates automatically for this regional correction.",
         };
       }
 
       return {
         canBuild: false,
-        message: "Choose a different coverage or draw a new regional area to unlock the ticket preview.",
+        message: "Choose a different coverage or draw a new regional area to preview the ticket.",
       };
     }
 
     return {
       canBuild: true,
-      message: "Build the ticket preview for this correction.",
+      message: "The ticket preview updates automatically for this correction.",
     };
   }
 
   if (!currentSpeciesById(currentSpeciesItemIdInput.value)) {
     return {
       canBuild: false,
-      message: "Choose a current species to unlock the ticket preview.",
+      message: "Choose a current species to preview the ticket.",
     };
   }
 
   return {
     canBuild: true,
-    message: "Build the ticket preview for this removal.",
+    message: "The ticket preview updates automatically for this removal.",
   };
 }
 
@@ -3146,7 +3532,6 @@ function updateTicketPreviewGate() {
 
   ticketPreviewPanel.classList.toggle("locked", !hasPreview);
   ticketPreviewGate.hidden = hasPreview;
-  buildTicketButton.disabled = !buildState.canBuild;
   ticketPreviewGateMessage.textContent = buildState.message;
 }
 
@@ -3188,6 +3573,7 @@ function syncCurrentSpeciesLookup() {
   renderSpeciesList();
   updateSelectedRegionalLayers(false);
   clearTicketPreview();
+  scheduleTicketPreviewRefresh();
 
   if (document.activeElement === currentSpeciesInput || isComboBoxOpen("current")) {
     openComboBox("current");
@@ -3245,6 +3631,7 @@ function syncProposedSpeciesLookup() {
   const label = cleanText(proposedSpeciesInput.value);
   proposedSpeciesItemIdInput.value = animalLabelIndex.get(label) || "";
   clearTicketPreview();
+  scheduleTicketPreviewRefresh();
 
   if (document.activeElement === proposedSpeciesInput || isComboBoxOpen("proposed")) {
     openComboBox("proposed");
@@ -3252,6 +3639,7 @@ function syncProposedSpeciesLookup() {
 }
 
 function clearTicketPreview() {
+  cancelTicketPreviewRefresh();
   state.preview = null;
   ticketTitleInput.value = "";
   ticketBodyInput.value = "";
@@ -3330,7 +3718,7 @@ async function loadCountry(iso3) {
 
   setStatus("Loading country pack...");
   closeAllComboBoxes();
-  clearDrawnPolygons();
+  clearDrawnPolygons(false);
   state.highlightedSpeciesId = "";
 
   try {
@@ -3346,6 +3734,7 @@ async function loadCountry(iso3) {
     setStatus("Loading map overlay...");
     await loadRegionalOverlays();
     updateTicketPreviewGate();
+    scheduleTicketPreviewRefresh();
     renderOnboardingStep();
     setStatus("Ready.");
   } catch (error) {
@@ -3354,23 +3743,33 @@ async function loadCountry(iso3) {
   }
 }
 
-async function buildTicketPreview() {
+async function buildTicketPreview(options = {}) {
+  const { announce = true, silentIncomplete = false } = options;
   const buildState = ticketBuildState();
   if (!buildState.canBuild) {
+    clearTicketPreview();
     updateTicketPreviewGate();
-    setStatus(buildState.message, true);
-    return;
+    if (!silentIncomplete) {
+      setStatus(buildState.message, true);
+    }
+    return false;
   }
 
-  setStatus("Building ticket...");
+  if (announce) {
+    setStatus(state.preview ? "Updating ticket preview..." : "Building ticket...");
+  }
   try {
     const preview = buildTicketPreviewData(buildTicketPayload());
 
     renderTicketPreview(preview);
-    setStatus("Ticket ready.");
+    if (announce) {
+      setStatus("Ticket ready.");
+    }
+    return true;
   } catch (error) {
     clearTicketPreview();
     setStatus(error.message || "Could not build ticket.", true);
+    return false;
   }
 }
 
@@ -3425,6 +3824,7 @@ function handleSuggestionTypeChange() {
 
   updateFormVisibility();
   clearTicketPreview();
+  scheduleTicketPreviewRefresh();
 }
 
 groupChips.addEventListener("click", (event) => {
@@ -3568,14 +3968,19 @@ countryInput.addEventListener("change", () => {
 scopeSelect.addEventListener("change", () => {
   updateFormVisibility();
   clearTicketPreview();
+  scheduleTicketPreviewRefresh();
 });
 
 proposedSpeciesInput.addEventListener("input", syncProposedSpeciesLookup);
 requestNotificationInput.addEventListener("change", () => {
   updateNotificationPreference(true);
   clearTicketPreview();
+  scheduleTicketPreviewRefresh();
 });
-notificationEmailInput.addEventListener("input", clearTicketPreview);
+notificationEmailInput.addEventListener("input", () => {
+  clearTicketPreview();
+  scheduleTicketPreviewRefresh();
+});
 
 clearDrawingButton.addEventListener("click", () => {
   clearDrawnPolygons();
@@ -3594,7 +3999,7 @@ onboardingBackButton?.addEventListener("click", () => {
 });
 
 onboardingNextButton?.addEventListener("click", () => {
-  advanceOnboarding(1);
+  void handleOnboardingNext();
 });
 
 onboardingSkipButton?.addEventListener("click", () => {
@@ -3610,16 +4015,13 @@ onboardingBody?.addEventListener("click", (event) => {
   event.preventDefault();
   const action = button.dataset.demoAction || "";
   void (async () => {
-    const success = await runOnboardingDemo(action);
-    if (success) {
-      completeOnboardingAction(action);
-    }
+    await runOnboardingGuideAction(action);
   })();
 });
 
 ticketForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  await buildTicketPreview();
+  await buildTicketPreview({ announce: true, silentIncomplete: false });
 });
 
 copyMarkdownButton.addEventListener("click", async () => {
@@ -3632,7 +4034,7 @@ window.addEventListener("resize", () => {
   }
 
   if (onboardingIsOpen()) {
-    renderOnboardingStep();
+    refreshOnboardingViewportState(onboardingViewportTarget || onboardingViewportBaseTarget(ONBOARDING_STEPS[onboardingStepIndex]));
   }
 
   if (openComboKey) {
@@ -3642,8 +4044,7 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("scroll", () => {
   if (onboardingIsOpen()) {
-    const step = ONBOARDING_STEPS[onboardingStepIndex];
-    positionOnboardingSpotlight(onboardingTargetElement(step));
+    refreshOnboardingViewportState(onboardingViewportTarget || onboardingViewportBaseTarget(ONBOARDING_STEPS[onboardingStepIndex]));
   }
 
   if (openComboKey) {

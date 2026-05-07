@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260506i">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260506q">
   </head>
   <body>
     <main class="shell">
@@ -201,8 +201,7 @@
           <section id="ticket-preview-panel" class="ticket-preview locked">
             <div id="ticket-preview-gate" class="ticket-preview-gate">
               <div class="ticket-preview-gate-card">
-                <button id="build-ticket" type="submit" form="ticket-form" disabled>Build Ticket</button>
-                <p id="ticket-preview-gate-message" class="ticket-preview-gate-message">Select a change to unlock the ticket preview.</p>
+                <p id="ticket-preview-gate-message" class="ticket-preview-gate-message">Fill in the form to preview the ticket automatically.</p>
               </div>
             </div>
 
@@ -217,12 +216,12 @@
 
               <label class="field">
                 <span>Title</span>
-                <input id="ticket-title" type="text" readonly placeholder="Build a ticket to preview the title.">
+                <input id="ticket-title" type="text" readonly placeholder="Fill in the form to preview the title.">
               </label>
 
               <label class="field">
                 <span>Body</span>
-                <textarea id="ticket-body" rows="14" readonly placeholder="The ticket body will appear here."></textarea>
+                <textarea id="ticket-body" rows="14" readonly placeholder="The ticket body will update automatically here."></textarea>
               </label>
 
               <div id="ticket-warnings" class="warning-list" hidden></div>
@@ -275,6 +274,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260506i"></script>
+    <script src="./assets/app.js?v=20260507a"></script>
   </body>
 </html>
