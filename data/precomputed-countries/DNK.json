@@ -7,17 +7,17 @@
   "selectionMode": "global",
   "candidateFile": null,
   "summary": {
-    "total": 2017,
+    "total": 2016,
     "statusCounts": {
       "unlisted": 1851,
       "likely_true_one_source": 118,
-      "likely_false": 40,
+      "likely_false": 39,
       "new_record": 8
     },
     "bucketCounts": {
       "Unlisted": 1851,
       "Likely Valid": 118,
-      "Needs Review": 40,
+      "Needs Review": 39,
       "New": 8
     }
   },
@@ -16823,56 +16823,6 @@
       "rawInatCount": null,
       "gbifUsageKey": 2490523,
       "inatTaxonId": 116905,
-      "inatPlaceId": 8051,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 234.24129640355284,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      }
-    },
-    {
-      "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
-      "countryIso3": "DNK",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 5786093,
-      "inatTaxonId": null,
       "inatPlaceId": 8051,
       "managedEvidence": {
         "domesticNamed": false,
@@ -106772,13 +106722,71 @@
           "footprintPolygonLatLngs": []
         }
       }
+    },
+    {
+      "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "sourceFile": "data/review-overrides/countries/DNK/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
+      "updatedAtUtc": "2026-05-07T14:57:20.768Z",
+      "updatedBy": "HugoMarkoff",
+      "reason": "Please remove pur\u00fas red howler monkey (alouatta puruensis) from the Denmark country pack. Applied from the admin panel.",
+      "baseEntry": {
+        "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+        "countryIso3": "DNK",
+        "status": "likely_false",
+        "expected": true,
+        "gbifPresent": false,
+        "inatPresent": null,
+        "gbifCount": 0,
+        "inatCount": null,
+        "rawGbifPresent": false,
+        "rawInatPresent": null,
+        "rawGbifCount": 0,
+        "rawInatCount": null,
+        "gbifUsageKey": 5786093,
+        "inatTaxonId": null,
+        "inatPlaceId": 8051,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 234.24129640355284,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        }
+      }
     }
   ],
   "manualOverrideSummary": {
-    "count": 1,
-    "appliedAtUtc": "2026-05-07T10:34:45.077616+00:00",
+    "count": 2,
+    "appliedAtUtc": "2026-05-07T14:57:37.408221+00:00",
     "items": [
-      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0"
+      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "2813059e-da3b-4f17-a60c-d9c34f2fce24"
     ]
   }
 }
