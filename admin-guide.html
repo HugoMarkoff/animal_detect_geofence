@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260507g">
+  </head>
+  <body class="guide-page">
+    <main class="guide-shell">
+      <section class="panel guide-hero">
+        <div>
+          <p class="section-kicker">Admin Guide</p>
+          <h1>Set up GitHub admin access</h1>
+        </div>
+
+        <div class="guide-actions">
+          <a class="draft-link" href="./index.html" target="_blank" rel="noreferrer">Open Review Desk</a>
+        </div>
+
+        <p class="guide-note">If GitHub shows an extra confirmation or password page before the token form, just continue through it until you reach the real token creation screen.</p>
+      </section>
+
+      <section class="guide-flow">
+        <article id="step-1" class="panel guide-step-card">
+          <div class="guide-step-head">
+            <p class="section-kicker">Step 1</p>
+            <h2>Get repository access first</h2>
+          </div>
+          <img class="guide-step-image" src="./assets/guide-screenshots/github-fine-grained-tokens.png" alt="GitHub fine-grained token overview page with Generate new token.">
+          <p class="guide-step-copy">Before anything else, ask Hugo Markoff on LinkedIn or email <a class="guide-inline-link" href="mailto:hugo@animaldetect.com">hugo@animaldetect.com</a> to be invited to the repository. After you have access, open the token page.</p>
+          <a class="draft-link guide-step-action" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noreferrer">Open GitHub Token Page</a>
+        </article>
+
+        <article id="step-2" class="panel guide-step-card">
+          <div class="guide-step-head">
+            <p class="section-kicker">Step 2</p>
+            <h2>Give the token a name</h2>
+          </div>
+          <img class="guide-step-image" src="./assets/guide-screenshots/github-live-token-name.png" alt="Live GitHub token form showing token name and expiration.">
+          <p class="guide-step-copy">Set Token name to Country Review Desk Admin. The default 30 day expiration is fine.</p>
+        </article>
+
+        <article id="step-3" class="panel guide-step-card">
+          <div class="guide-step-head">
+            <p class="section-kicker">Step 3</p>
+            <h2>Select the correct repository</h2>
+          </div>
+          <img class="guide-step-image" src="./assets/guide-screenshots/github-live-repository-access.png" alt="Live GitHub token form showing Only select repositories and the selected repository.">
+          <p class="guide-step-copy">Choose Only select repositories and select HugoMarkoff/animal_detect_geofence.</p>
+        </article>
+
+        <article id="step-4" class="panel guide-step-card">
+          <div class="guide-step-head">
+            <p class="section-kicker">Step 4</p>
+            <h2>Set the minimal permission</h2>
+          </div>
+          <img class="guide-step-image" src="./assets/guide-screenshots/github-live-permissions.png" alt="Live GitHub token form showing Contents access set to Read and write.">
+          <p class="guide-step-copy">Set Contents to Read and write. Leave everything else alone.</p>
+        </article>
+
+        <article id="step-5" class="panel guide-step-card">
+          <div class="guide-step-head">
+            <p class="section-kicker">Step 5</p>
+            <h2>Generate and copy the token</h2>
+          </div>
+          <img class="guide-step-image" src="./assets/guide-screenshots/github-live-generate.png" alt="Live GitHub token form showing the Generate token button.">
+          <p class="guide-step-copy">Click Generate token. GitHub shows the token only once, so copy it immediately and save it somewhere secure.</p>
+        </article>
+
+        <article id="step-6" class="panel guide-step-card">
+          <div class="guide-step-head">
+            <p class="section-kicker">Step 6</p>
+            <h2>Paste it here and open the review desk</h2>
+          </div>
+          <p class="guide-step-copy">Paste the token below. This opens the review desk in the same tab and carries the token into the Admin field for you.</p>
+          <label class="field guide-token-field">
+            <span>GitHub fine-grained token</span>
+            <textarea id="guide-admin-token" rows="3" autocomplete="off" spellcheck="false" placeholder="Paste the token GitHub just showed you"></textarea>
+          </label>
+          <div class="guide-token-actions">
+            <button id="guide-open-review" type="button">Open Review Desk With Token</button>
+            <p id="guide-token-status" class="guide-token-status">This token stays in this browser tab only and is passed straight into the review desk.</p>
+          </div>
+        </article>
+
+        <article class="panel guide-note-card">
+          <div class="guide-step-head">
+            <p class="section-kicker">Important</p>
+            <h2>Token reuse</h2>
+          </div>
+          <p class="guide-step-copy">You can reuse the same saved token until it expires or you revoke it. But you still need to paste it again each new browser session, because the site keeps it only in memory.</p>
+        </article>
+      </section>
+
+      <section class="panel guide-card guide-links-panel">
+        <div>
+          <p class="section-kicker">Related Links</p>
+          <h2>Useful pages</h2>
+        </div>
+
+        <div class="resource-actions">
+          <a class="draft-link" href="https://animaldetect.com" target="_blank" rel="noreferrer">Animal Detect</a>
+          <a class="draft-link" href="https://github.com/google/cameratrapai#speciesnet" target="_blank" rel="noreferrer">SpeciesNet GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/admin-guide.js?v=20260507a"></script>
+  </body>
+</html>

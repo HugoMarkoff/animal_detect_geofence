@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260506q">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260507g">
   </head>
   <body>
     <main class="shell">
@@ -123,6 +123,10 @@
                   <input type="radio" name="suggestionType" value="addition" checked>
                   <span>Addition</span>
                 </label>
+                <label id="accept-new-option" class="segment-option" hidden>
+                  <input type="radio" name="suggestionType" value="accept_new">
+                  <span>Accept new</span>
+                </label>
                 <label class="segment-option">
                   <input type="radio" name="suggestionType" value="correction">
                   <span>Correction</span>
@@ -211,7 +215,6 @@
                   <p class="section-kicker">Preview</p>
                   <h3>Ticket</h3>
                 </div>
-                <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
               </div>
 
               <label class="field">
@@ -236,13 +239,57 @@
               </div>
 
               <div class="preview-actions">
+                <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
                 <a id="open-ticket" class="draft-link disabled" href="#">Send Email</a>
-                <div class="preview-action-stack">
-                  <a id="open-github" class="draft-link disabled" href="#" target="_blank" rel="noreferrer">Make GitHub Issue</a>
-                  <p class="preview-action-note">requires GitHub account</p>
-                </div>
+                <a id="open-github" class="draft-link draft-link-stack disabled" href="#" target="_blank" rel="noreferrer">
+                  <span>Make GitHub Issue</span>
+                  <span class="draft-link-note">requires GitHub account</span>
+                </a>
+                <button id="admin-apply" type="button" hidden disabled>Apply Changes (Admin)</button>
               </div>
             </section>
+          </section>
+
+          <section id="admin-panel" class="ticket-preview-section admin-panel">
+            <div class="section-head preview-head">
+              <div>
+                <p class="section-kicker">Admin</p>
+                <h3>Apply Changes</h3>
+              </div>
+            </div>
+
+            <p id="admin-auth-status" class="admin-auth-status">Connect a GitHub admin session to write override files directly.</p>
+
+            <label id="admin-token-field" class="field">
+              <span>GitHub fine-grained token</span>
+              <input id="admin-token" type="password" autocomplete="off" spellcheck="false" placeholder="Paste a token with access to this repo">
+            </label>
+
+            <div class="admin-actions">
+              <button id="admin-connect" class="secondary-button" type="button">Connect GitHub</button>
+              <button id="admin-disconnect" class="secondary-button" type="button" hidden>Disconnect</button>
+            </div>
+
+            <a id="admin-last-commit" class="draft-link admin-commit-link" href="#" target="_blank" rel="noreferrer" hidden>View Last Admin Commit</a>
+            <p class="preview-action-note admin-note">Static GitHub Pages cannot complete GitHub OAuth directly because GitHub blocks the token exchange with CORS. This admin flow now keeps your token on this browser until you disconnect it.</p>
+          </section>
+
+          <section class="ticket-preview-section resource-panel">
+            <div class="section-head preview-head">
+              <div>
+                <p class="section-kicker">More</p>
+                <h3>Open Links</h3>
+              </div>
+            </div>
+
+            <p class="resource-copy">Need the setup steps or the related projects? Open these shortcuts in a new tab.</p>
+
+            <div class="resource-actions">
+              <a class="draft-link" href="./admin-guide.html" target="_blank" rel="noreferrer">Open Admin Guide</a>
+              <a class="draft-link" href="https://animaldetect.com" target="_blank" rel="noreferrer">Animal Detect</a>
+              <a class="draft-link" href="https://github.com/google/cameratrapai#speciesnet" target="_blank" rel="noreferrer">SpeciesNet GitHub</a>
+            </div>
+          </section>
           </section>
         </section>
       </section>
@@ -274,6 +321,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260507a"></script>
+    <script src="./assets/app.js?v=20260507c"></script>
   </body>
 </html>

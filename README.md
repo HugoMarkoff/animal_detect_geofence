@@ -8,6 +8,8 @@ Standalone repository for the country-pack review and ticket workflow.
 - `assets/`: static JavaScript and CSS used by the GitHub Pages app.
 - `data/animals-global.json`: global animal catalog used for lookup and ticket forms.
 - `data/precomputed-countries/`: precomputed country packs and regional footprint polygons.
+- `data/review-overrides/`: git-tracked per-country override files applied on top of published packs.
+- `tools/apply_country_overrides.py`: reapplies override files into published country packs and refreshes the country index.
 - `HANDOVER_GUIDE.md`: project context, transfer notes, and next-step guidance.
 - `suggestion_app/`: earlier Flask prototype kept as a reference while the Pages version becomes primary.
 
@@ -20,6 +22,18 @@ python -m http.server 8081
 Open `http://127.0.0.1:8081/`.
 
 By default, GitHub issue drafts target `HugoMarkoff/animal_detect_geofence`.
+
+## Country Overrides
+
+Manual country corrections now have a git-native override layer under [data/review-overrides/README.md](data/review-overrides/README.md).
+
+To apply overrides locally:
+
+```bash
+python tools/apply_country_overrides.py
+```
+
+The workflow in [.github/workflows/apply-country-overrides.yml](.github/workflows/apply-country-overrides.yml) runs the same command whenever override files change and commits regenerated files in `data/precomputed-countries/`.
 
 ## GitHub Pages
 

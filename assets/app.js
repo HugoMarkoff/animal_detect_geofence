@@ -12,6 +12,7 @@ const speciesFilterInput = document.getElementById("speciesFilter");
 const speciesList = document.getElementById("species-list");
 const ticketForm = document.getElementById("ticket-form");
 const speciesSelectionGrid = document.getElementById("species-selection-grid");
+const acceptNewOption = document.getElementById("accept-new-option");
 const currentSpeciesField = document.getElementById("current-species-field");
 const currentSpeciesInput = document.getElementById("currentSpeciesLabel");
 const currentSpeciesToggle = document.getElementById("current-species-toggle");
@@ -52,6 +53,13 @@ const ticketPreviewGateMessage = document.getElementById("ticket-preview-gate-me
 const copyMarkdownButton = document.getElementById("copy-markdown");
 const openTicketLink = document.getElementById("open-ticket");
 const openGithubLink = document.getElementById("open-github");
+const adminAuthStatus = document.getElementById("admin-auth-status");
+const adminTokenField = document.getElementById("admin-token-field");
+const adminTokenInput = document.getElementById("admin-token");
+const adminConnectButton = document.getElementById("admin-connect");
+const adminDisconnectButton = document.getElementById("admin-disconnect");
+const adminApplyButton = document.getElementById("admin-apply");
+const adminLastCommitLink = document.getElementById("admin-last-commit");
 const ticketWarnings = document.getElementById("ticket-warnings");
 const mapSummary = document.getElementById("map-summary");
 
@@ -68,19 +76,32 @@ const GEOBOUNDARIES_OUTLINE_ONLY_VERTEX_LIMIT = 200000;
 const COUNTRY_FIT_PAD = 0.03;
 const DEFAULT_TICKET_EMAIL = "hugo@animaldetect.com";
 const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
+const DEFAULT_GITHUB_BRANCH = "main";
+const GITHUB_API_ROOT = "https://api.github.com";
+const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
 const DATA_VERSION = "20260507a";
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260506h";
+const ADMIN_TOKEN_HANDOFF_KEY = "country-pack-review-admin-token-handoff-20260507a";
+const ADMIN_SESSION_TOKEN_KEY = "country-pack-review-admin-session-token-20260507a";
+const ADMIN_PERSISTENT_TOKEN_KEY = "country-pack-review-admin-persistent-token-20260507a";
 const ONBOARDING_SCROLL_LOCK_CLASS = "onboarding-scroll-locked";
 const ONBOARDING_LIVE_TARGET_CLASS = "onboarding-live-target";
+const ADMIN_OVERRIDE_NOTE = "Manual admin override applied from the review desk.";
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
   likely_true_both: "Likely Valid",
   likely_false: "Needs Review",
   new_record: "New",
   unlisted: "Unlisted",
+};
+const SUGGESTION_TYPE_LABELS = {
+  addition: "Addition",
+  accept_new: "Accept new",
+  correction: "Correction",
+  removal: "Removal",
 };
 const FOOTPRINT_DEFAULTS = {
   countrywide: {
@@ -258,6 +279,17 @@ const state = {
   highlightedSpeciesId: "",
   preview: null,
   drawnPolygons: [],
+  admin: {
+    token: "",
+    login: "",
+    canWrite: false,
+    permissionLabel: "",
+    isConnecting: false,
+    isApplying: false,
+    message: "",
+    messageIsError: false,
+    lastCommitUrl: "",
+  },
 };
 
 let reviewMap;
@@ -511,6 +543,37 @@ function isNewDiscovery(entry) {
   return Boolean(entry) && (entry.status === "new_record" || entry.bucket === "New");
 }
 
+function suggestionTypeLabel(value) {
+  return SUGGESTION_TYPE_LABELS[value] || (cleanText(value).charAt(0).toUpperCase() + cleanText(value).slice(1));
+}
+
+function currentCountryNewSpecies() {
+  return (state.currentCountry?.species || []).filter((entry) => isNewDiscovery(entry));
+}
+
+function canAcceptNewSuggestions() {
+  return currentCountryNewSpecies().length > 0;
+}
+
+function syncSuggestionTypeAvailability() {
+  if (!acceptNewOption) {
+    return false;
+  }
+
+  const showAcceptNew = canAcceptNewSuggestions();
+  acceptNewOption.hidden = !showAcceptNew;
+
+  if (!showAcceptNew && suggestionType() === "accept_new") {
+    const additionOption = document.querySelector('input[name="suggestionType"][value="addition"]');
+    if (additionOption) {
+      additionOption.checked = true;
+    }
+    return true;
+  }
+
+  return false;
+}
+
 function effectiveBucket(entry) {
   if (!entry) {
     return "Needs Review";
@@ -664,70 +727,83 @@ async function loadCountryPack(packKey) {
   }
 }
 
-async function loadCountryData(packKey) {
-  const normalizedPackKey = normalizePackKey(packKey);
-  await loadAnimalCatalog();
-  const countries = await loadCountryCatalog();
-  const catalogEntry = countries.find((entry) => countryPackKey(entry) === normalizedPackKey) || null;
-  const pack = await loadCountryPack(normalizedPackKey);
-  const species = [];
+function buildCountrySpeciesEntry(rawEntry, packMode) {
+  const itemId = cleanText(rawEntry?.itemId);
+  if (!itemId) {
+    return null;
+  }
+
+  const bucket = statusToBucket(rawEntry.status);
+  if (bucket === "Unlisted") {
+    return null;
+  }
+
+  const animal = animalById.get(itemId) || {};
+  const observationProfile = resolveObservationProfile(rawEntry, packMode);
+  const footprintCode = observationProfile.code;
+
+  return {
+    itemId,
+    label: speciesLabel(animal),
+    commonName: animal.commonName,
+    binomial: animal.binomial,
+    classLabel: animal.classLabel,
+    status: rawEntry.status,
+    bucket,
+    expected: rawEntry.expected,
+    footprintCode,
+    footprintLabel: observationProfile.label,
+    footprintShort: observationProfile.short,
+    footprintNote: observationProfile.note,
+    polygonLatLngs: observationProfile.footprintPolygonLatLngs,
+    hasPolygon: observationProfile.footprintPolygonLatLngs.length >= 3,
+  };
+}
+
+function rebuildCountryDerivedState(country) {
   const groups = {};
   const summary = {
     total: 0,
     statusCounts: {},
     bucketCounts: {},
   };
+  const species = (country?.species || [])
+    .filter((entry) => isVisibleSpecies(entry))
+    .slice()
+    .sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
 
-  (pack.entries || []).forEach((rawEntry) => {
-    const itemId = cleanText(rawEntry.itemId);
-    if (!itemId) {
-      return;
-    }
-
-    const bucket = statusToBucket(rawEntry.status);
-    if (bucket === "Unlisted") {
-      return;
-    }
-
-    const animal = animalById.get(itemId) || {};
-    const observationProfile = resolveObservationProfile(rawEntry, pack.precomputeMode);
-    const footprintCode = observationProfile.code;
-    const speciesEntry = {
-      itemId,
-      label: speciesLabel(animal),
-      commonName: animal.commonName,
-      binomial: animal.binomial,
-      classLabel: animal.classLabel,
-      status: rawEntry.status,
-      bucket,
-      expected: rawEntry.expected,
-      footprintCode,
-      footprintLabel: observationProfile.label,
-      footprintShort: observationProfile.short,
-      footprintNote: observationProfile.note,
-      polygonLatLngs: observationProfile.footprintPolygonLatLngs,
-      hasPolygon: observationProfile.footprintPolygonLatLngs.length >= 3,
-    };
-
-    groups[footprintCode] = (groups[footprintCode] || 0) + 1;
+  species.forEach((entry) => {
+    entry.bucket = effectiveBucket(entry);
+    groups[entry.footprintCode] = (groups[entry.footprintCode] || 0) + 1;
     summary.total += 1;
-    summary.statusCounts[rawEntry.status] = (summary.statusCounts[rawEntry.status] || 0) + 1;
-
-    const resolvedBucket = effectiveBucket(speciesEntry);
-    summary.bucketCounts[resolvedBucket] = (summary.bucketCounts[resolvedBucket] || 0) + 1;
-    species.push(speciesEntry);
+    if (cleanText(entry.status)) {
+      summary.statusCounts[entry.status] = (summary.statusCounts[entry.status] || 0) + 1;
+    }
+    summary.bucketCounts[entry.bucket] = (summary.bucketCounts[entry.bucket] || 0) + 1;
   });
 
-  species.sort((left, right) => sortKey(left.commonName).localeCompare(sortKey(right.commonName)) || sortKey(left.binomial).localeCompare(sortKey(right.binomial)));
+  country.species = species;
+  country.groups = groups;
+  country.summary = summary;
+  return country;
+}
 
-  return {
+async function loadCountryData(packKey) {
+  const normalizedPackKey = normalizePackKey(packKey);
+  await loadAnimalCatalog();
+  const countries = await loadCountryCatalog();
+  const catalogEntry = countries.find((entry) => countryPackKey(entry) === normalizedPackKey) || null;
+  const pack = await loadCountryPack(normalizedPackKey);
+  const species = (pack.entries || [])
+    .map((rawEntry) => buildCountrySpeciesEntry(rawEntry, pack.precomputeMode))
+    .filter(Boolean);
+
+  return rebuildCountryDerivedState({
     iso3: normalizedPackKey,
     countryName: countryPackLabel(catalogEntry) || pack.countryName || normalizedPackKey,
     precomputeMode: pack.precomputeMode || "unknown",
-    summary,
-    groups,
     species,
-  };
+  });
 }
 
 function buildRegionalOverlayCollection(countryData) {
@@ -825,8 +901,8 @@ function buildTicketFromPayload(payload) {
   }
 
   const suggestion = cleanText(payload.suggestionType).toLowerCase();
-  if (!["addition", "correction", "removal"].includes(suggestion)) {
-    throw new Error("Suggestion type must be addition, correction, or removal.");
+  if (!["addition", "accept_new", "correction", "removal"].includes(suggestion)) {
+    throw new Error("Suggestion type must be addition, accept new, correction, or removal.");
   }
 
   const notifyOnFix = Boolean(payload.notifyOnFix);
@@ -840,8 +916,11 @@ function buildTicketFromPayload(payload) {
 
   const speciesIndex = new Map((state.currentCountry.species || []).map((entry) => [entry.itemId, entry]));
   const currentSpecies = speciesIndex.get(cleanText(payload.currentSpeciesItemId)) || null;
-  if (["correction", "removal"].includes(suggestion) && !currentSpecies) {
+  if (["accept_new", "correction", "removal"].includes(suggestion) && !currentSpecies) {
     throw new Error("Select a current species from the chosen country.");
+  }
+  if (suggestion === "accept_new" && !isNewDiscovery(currentSpecies)) {
+    throw new Error("Accept new only works for species currently marked New in this country.");
   }
 
   let scope = null;
@@ -856,7 +935,7 @@ function buildTicketFromPayload(payload) {
     isKnown: false,
   };
 
-  if (suggestion !== "removal") {
+  if (!["accept_new", "removal"].includes(suggestion)) {
     scope = cleanText(payload.scope).toLowerCase();
     if (!["national", "regional"].includes(scope)) {
       throw new Error("Choose national or regional coverage for additions and corrections.");
@@ -894,7 +973,7 @@ function buildTicketFromPayload(payload) {
     countryGroups: state.currentCountry.groups,
     githubRepo: cleanText(payload.githubRepo),
     suggestionType: suggestion,
-    suggestionTypeLabel: suggestion.charAt(0).toUpperCase() + suggestion.slice(1),
+    suggestionTypeLabel: suggestionTypeLabel(suggestion),
     scope,
     scopeLabel,
     explanation,
@@ -913,6 +992,9 @@ function buildTicketSummary(ticket) {
   if (ticket.suggestionType === "removal") {
     return `Removing ${ticket.currentSpecies.label} from ${countryName}`;
   }
+  if (ticket.suggestionType === "accept_new") {
+    return `Approving ${ticket.currentSpecies.label} for the permanent ${countryName} list`;
+  }
   if (ticket.suggestionType === "addition") {
     return `Adding ${ticket.proposedSpecies.label} to ${coverage} in ${countryName}`;
   }
@@ -922,6 +1004,11 @@ function buildTicketSummary(ticket) {
 function buildRequestedActionText(ticketLike) {
   if (ticketLike.suggestionType === "removal") {
     return `Please remove ${ticketLike.currentSpecies.label} from the ${ticketLike.countryName} country pack.`;
+  }
+
+  if (ticketLike.suggestionType === "accept_new") {
+    const footprint = cleanText(ticketLike.currentSpecies?.footprintLabel || "current").toLowerCase();
+    return `Please accept ${ticketLike.currentSpecies.label} into the permanent ${ticketLike.countryName} country pack and keep its current ${footprint} coverage.`;
   }
 
   if (ticketLike.suggestionType === "addition") {
@@ -945,6 +1032,10 @@ function buildSuggestionGuidanceText() {
       return `Addition: search the full species catalog, choose the species you want to add, and draw one or more regional areas in ${countryName}.`;
     }
     return `Addition: search the full species catalog and choose whether the species should be added as national coverage in ${countryName}.`;
+  }
+
+  if (suggestionType() === "accept_new") {
+    return `Accept new: choose one of the species currently marked New in ${countryName} to approve it into the permanent country pack without changing its existing coverage.`;
   }
 
   if (suggestionType() === "correction") {
@@ -1088,6 +1179,566 @@ function buildTicketPreviewData(payload) {
     warnings,
     ticket,
   };
+}
+
+function parseGitHubRepo(repository) {
+  const [owner, repo] = cleanText(repository).split("/");
+  if (!owner || !repo) {
+    throw new Error("GitHub repository must use the owner/repo format.");
+  }
+
+  return { owner, repo };
+}
+
+function encodeGitHubPath(path) {
+  return cleanText(path)
+    .split("/")
+    .filter(Boolean)
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+}
+
+function toBase64Utf8(value) {
+  const bytes = new TextEncoder().encode(String(value ?? ""));
+  let binary = "";
+  const chunkSize = 0x8000;
+
+  for (let index = 0; index < bytes.length; index += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(index, index + chunkSize));
+  }
+
+  return btoa(binary);
+}
+
+async function fetchGitHubJson(path, options = {}) {
+  const {
+    method = "GET",
+    token = "",
+    body = null,
+    allowNotFound = false,
+  } = options;
+
+  const response = await fetch(`${GITHUB_API_ROOT}${path}`, {
+    method,
+    headers: {
+      Accept: "application/vnd.github+json",
+      Authorization: `Bearer ${token}`,
+      "X-GitHub-Api-Version": GITHUB_API_VERSION,
+      ...(body ? { "Content-Type": "application/json" } : {}),
+    },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+
+  if (allowNotFound && response.status === 404) {
+    return null;
+  }
+
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    throw new Error(payload.message || `GitHub request failed with ${response.status}.`);
+  }
+
+  return payload;
+}
+
+function adminOverrideTarget(ticket) {
+  const itemId = ticket.suggestionType === "addition"
+    ? cleanText(ticket.proposedSpecies?.itemId)
+    : cleanText(ticket.currentSpecies?.itemId);
+
+  if (!itemId) {
+    throw new Error("Admin apply needs a real catalog species selection.");
+  }
+
+  return {
+    itemId,
+    path: `data/review-overrides/countries/${ticket.countryIso3}/${itemId}.json`,
+  };
+}
+
+function adminOverrideStatus(ticket) {
+  if (ticket.suggestionType === "accept_new") {
+    return "likely_true_one_source";
+  }
+
+  if (ticket.suggestionType === "addition") {
+    return "likely_true_one_source";
+  }
+
+  const currentStatus = cleanText(ticket.currentSpecies?.status);
+  if (["likely_true_both", "likely_true_one_source"].includes(currentStatus)) {
+    return currentStatus;
+  }
+
+  return "likely_true_one_source";
+}
+
+function adminObservationProfile(ticket) {
+  if (ticket.scope === "regional") {
+    return {
+      code: "regional",
+      label: "Regional footprint",
+      short: "Regional",
+      note: ADMIN_OVERRIDE_NOTE,
+      significant: true,
+      footprintPolygonLatLngs: sanitizePolygon(ticket.polygons[0] || []),
+    };
+  }
+
+  return {
+    code: "countrywide",
+    label: "National footprint",
+    short: "National",
+    note: ADMIN_OVERRIDE_NOTE,
+    significant: true,
+    footprintPolygonLatLngs: [],
+  };
+}
+
+function adminObservationProfileForCurrentSpecies(entry) {
+  const code = cleanText(entry?.footprintCode) || "unscored";
+  const defaults = FOOTPRINT_DEFAULTS[code] || FOOTPRINT_DEFAULTS.unscored;
+  return {
+    code,
+    label: cleanText(entry?.footprintLabel) || defaults.label,
+    short: cleanText(entry?.footprintShort) || defaults.short,
+    note: ADMIN_OVERRIDE_NOTE,
+    significant: code === "countrywide" || code === "regional",
+    footprintPolygonLatLngs: code === "regional" ? sanitizePolygon(entry?.polygonLatLngs || []) : [],
+  };
+}
+
+function validateAdminTicket(ticket) {
+  if (!ticket) {
+    return {
+      ok: false,
+      message: "Build a ticket preview to enable Apply Changes.",
+    };
+  }
+
+  if (ticket.suggestionType === "addition" && !ticket.proposedSpecies?.itemId) {
+    return {
+      ok: false,
+      message: "Admin apply currently needs a species from the catalog. Use Make GitHub Issue for custom typed species.",
+    };
+  }
+
+  if (ticket.suggestionType === "accept_new" && !isNewDiscovery(ticket.currentSpecies)) {
+    return {
+      ok: false,
+      message: "Accept new only works for species that are still marked New in the current pack.",
+    };
+  }
+
+  if (ticket.scope === "regional" && ticket.polygons.length !== 1) {
+    return {
+      ok: false,
+      message: "Admin apply currently supports exactly one regional polygon. Keep one area or use Make GitHub Issue.",
+    };
+  }
+
+  return {
+    ok: true,
+    message: "Apply Changes is ready.",
+  };
+}
+
+function buildAdminOverridePayload(ticket, login) {
+  const target = adminOverrideTarget(ticket);
+  const updatedAtUtc = new Date().toISOString();
+
+  if (ticket.suggestionType === "removal") {
+    return {
+      countryIso3: ticket.countryIso3,
+      itemId: target.itemId,
+      action: "remove",
+      updatedBy: login,
+      updatedAtUtc,
+      reason: `${ticket.explanation} Applied from the admin panel.`,
+    };
+  }
+
+  if (ticket.suggestionType === "accept_new") {
+    return {
+      countryIso3: ticket.countryIso3,
+      itemId: target.itemId,
+      action: "upsert",
+      updatedBy: login,
+      updatedAtUtc,
+      reason: `${ticket.explanation} Applied from the admin panel.`,
+      patch: {
+        status: adminOverrideStatus(ticket),
+        expected: Boolean(ticket.currentSpecies?.expected),
+        observationProfile: adminObservationProfileForCurrentSpecies(ticket.currentSpecies),
+      },
+    };
+  }
+
+  return {
+    countryIso3: ticket.countryIso3,
+    itemId: target.itemId,
+    action: "upsert",
+    updatedBy: login,
+    updatedAtUtc,
+    reason: `${ticket.explanation} Applied from the admin panel.`,
+    patch: {
+      status: adminOverrideStatus(ticket),
+      expected: ticket.suggestionType === "addition" ? true : Boolean(ticket.currentSpecies?.expected),
+      observationProfile: adminObservationProfile(ticket),
+    },
+  };
+}
+
+function adminCommitMessage(ticket) {
+  const summary = buildTicketSummary(ticket);
+  return `Apply admin override for ${ticket.countryIso3}: ${summary}`;
+}
+
+function buildAdminSessionSpeciesEntry(ticket) {
+  if (!state.currentCountry) {
+    return null;
+  }
+
+  const itemId = adminOverrideTarget(ticket).itemId;
+  const observationProfile = ticket.suggestionType === "accept_new"
+    ? adminObservationProfileForCurrentSpecies(ticket.currentSpecies)
+    : adminObservationProfile(ticket);
+
+  return buildCountrySpeciesEntry({
+    itemId,
+    status: adminOverrideStatus(ticket),
+    expected: ticket.suggestionType === "addition" ? true : Boolean(ticket.currentSpecies?.expected),
+    observationProfile,
+  }, state.currentCountry.precomputeMode);
+}
+
+async function applyAdminOverrideLocally(ticket) {
+  if (!state.currentCountry || state.currentCountry.iso3 !== ticket.countryIso3) {
+    return false;
+  }
+
+  const target = adminOverrideTarget(ticket);
+  const nextSpecies = (state.currentCountry.species || []).filter((entry) => entry.itemId !== target.itemId);
+
+  if (ticket.suggestionType === "removal") {
+    if (state.highlightedSpeciesId === target.itemId) {
+      state.highlightedSpeciesId = "";
+    }
+  } else {
+    const nextEntry = buildAdminSessionSpeciesEntry(ticket);
+    if (!nextEntry) {
+      return false;
+    }
+    nextSpecies.push(nextEntry);
+    state.highlightedSpeciesId = target.itemId;
+  }
+
+  state.currentCountry = rebuildCountryDerivedState({
+    ...state.currentCountry,
+    species: nextSpecies,
+  });
+
+  syncSuggestionTypeAvailability();
+  updateCurrentSpeciesOptions();
+  updateFormVisibility();
+  renderCountryHeader();
+  renderGroupChips();
+  renderSpeciesList();
+  updateMapSummary();
+  clearTicketPreview();
+  await loadRegionalOverlays();
+  updateTicketPreviewGate();
+  scheduleTicketPreviewRefresh();
+  return true;
+}
+
+function setAdminMessage(message, isError = false) {
+  state.admin.message = message;
+  state.admin.messageIsError = Boolean(isError);
+}
+
+function clearAdminMessage() {
+  state.admin.message = "";
+  state.admin.messageIsError = false;
+}
+
+function adminApplyState() {
+  if (state.admin.isConnecting) {
+    return {
+      canApply: false,
+      message: "Connecting GitHub admin session...",
+      isError: false,
+    };
+  }
+
+  if (!state.admin.login) {
+    return {
+      canApply: false,
+      message: "Connect a GitHub admin session to write override files directly.",
+      isError: false,
+    };
+  }
+
+  if (!state.admin.canWrite) {
+    return {
+      canApply: false,
+      message: `@${state.admin.login} does not have write access to ${DEFAULT_GITHUB_REPO}.`,
+      isError: true,
+    };
+  }
+
+  if (state.admin.isApplying) {
+    return {
+      canApply: false,
+      message: "Applying admin override...",
+      isError: false,
+    };
+  }
+
+  const validation = validateAdminTicket(state.preview?.ticket || null);
+  return {
+    canApply: validation.ok,
+    message: validation.message,
+    isError: !validation.ok,
+  };
+}
+
+function derivedAdminMessage() {
+  const applyState = adminApplyState();
+  if (state.admin.message) {
+    return {
+      message: state.admin.message,
+      isError: state.admin.messageIsError,
+      canApply: applyState.canApply,
+    };
+  }
+
+  if (!state.admin.login) {
+    return applyState;
+  }
+
+  const permissionText = state.admin.canWrite
+    ? `Connected as @${state.admin.login} with ${state.admin.permissionLabel || "write"} access to ${DEFAULT_GITHUB_REPO}.`
+    : `Connected as @${state.admin.login}, but this account cannot push to ${DEFAULT_GITHUB_REPO}.`;
+
+  return {
+    message: applyState.canApply ? `${permissionText} ${applyState.message}` : `${permissionText} ${applyState.message}`,
+    isError: applyState.isError,
+    canApply: applyState.canApply,
+  };
+}
+
+function renderAdminState() {
+  const connected = Boolean(state.admin.login);
+  const status = derivedAdminMessage();
+
+  adminTokenField.hidden = connected;
+  adminConnectButton.hidden = connected;
+  adminConnectButton.disabled = state.admin.isConnecting || state.admin.isApplying;
+  adminConnectButton.textContent = state.admin.isConnecting ? "Connecting..." : "Connect GitHub";
+
+  adminDisconnectButton.hidden = !connected;
+  adminDisconnectButton.disabled = state.admin.isConnecting || state.admin.isApplying;
+
+  adminApplyButton.hidden = !connected;
+  adminApplyButton.disabled = !status.canApply || state.admin.isConnecting || state.admin.isApplying;
+  adminApplyButton.textContent = state.admin.isApplying ? "Applying..." : "Apply Changes (Admin)";
+
+  adminAuthStatus.textContent = status.message;
+  adminAuthStatus.classList.toggle("error", Boolean(status.isError));
+
+  adminLastCommitLink.hidden = !state.admin.lastCommitUrl;
+  if (state.admin.lastCommitUrl) {
+    adminLastCommitLink.href = state.admin.lastCommitUrl;
+  } else {
+    adminLastCommitLink.href = "#";
+  }
+}
+
+function readPersistedAdminToken() {
+  try {
+    return cleanText(window.localStorage.getItem(ADMIN_PERSISTENT_TOKEN_KEY) || window.sessionStorage.getItem(ADMIN_SESSION_TOKEN_KEY) || "");
+  } catch {
+    return "";
+  }
+}
+
+function persistAdminToken(token) {
+  try {
+    window.sessionStorage.setItem(ADMIN_SESSION_TOKEN_KEY, token);
+    window.localStorage.setItem(ADMIN_PERSISTENT_TOKEN_KEY, token);
+  } catch {
+    // Ignore storage failures and continue with in-memory auth.
+  }
+}
+
+function clearPersistedAdminToken() {
+  try {
+    window.sessionStorage.removeItem(ADMIN_SESSION_TOKEN_KEY);
+    window.localStorage.removeItem(ADMIN_PERSISTENT_TOKEN_KEY);
+  } catch {
+    // Ignore storage failures.
+  }
+}
+
+async function connectAdminSession() {
+  const token = cleanText(adminTokenInput.value);
+  if (!token) {
+    setAdminMessage("Paste a GitHub fine-grained token first.", true);
+    renderAdminState();
+    return;
+  }
+
+  state.admin.isConnecting = true;
+  state.admin.lastCommitUrl = "";
+  clearAdminMessage();
+  renderAdminState();
+
+  try {
+    const { owner, repo } = parseGitHubRepo(DEFAULT_GITHUB_REPO);
+    const [user, repository] = await Promise.all([
+      fetchGitHubJson("/user", { token }),
+      fetchGitHubJson(`/repos/${owner}/${repo}`, { token }),
+    ]);
+
+    const permissions = repository.permissions || {};
+    const canWrite = Boolean(permissions.admin || permissions.maintain || permissions.push);
+    const permissionLabel = permissions.admin ? "admin" : permissions.maintain ? "maintain" : permissions.push ? "write" : permissions.pull ? "read" : "no";
+
+    state.admin.token = token;
+    state.admin.login = cleanText(user.login);
+    state.admin.canWrite = canWrite;
+    state.admin.permissionLabel = permissionLabel;
+    persistAdminToken(token);
+    clearAdminMessage();
+    adminTokenInput.value = "";
+
+    if (!canWrite) {
+      setAdminMessage(`@${state.admin.login} is connected, but this account cannot push to ${DEFAULT_GITHUB_REPO}.`, true);
+    }
+
+    setStatus(canWrite ? `Admin session connected as @${state.admin.login}.` : `Admin session connected as @${state.admin.login}, but push access is missing.`, !canWrite);
+  } catch (error) {
+    state.admin.token = "";
+    state.admin.login = "";
+    state.admin.canWrite = false;
+    state.admin.permissionLabel = "";
+    state.admin.lastCommitUrl = "";
+    clearPersistedAdminToken();
+    setAdminMessage(error.message || "Could not connect the GitHub admin session.", true);
+    setStatus(error.message || "Could not connect the GitHub admin session.", true);
+  } finally {
+    state.admin.isConnecting = false;
+    renderAdminState();
+  }
+}
+
+function disconnectAdminSession() {
+  state.admin.token = "";
+  state.admin.login = "";
+  state.admin.canWrite = false;
+  state.admin.permissionLabel = "";
+  state.admin.isConnecting = false;
+  state.admin.isApplying = false;
+  state.admin.lastCommitUrl = "";
+  clearPersistedAdminToken();
+  adminTokenInput.value = "";
+  clearAdminMessage();
+  renderAdminState();
+  setStatus("Admin session disconnected.");
+}
+
+function consumeAdminTokenHandoff() {
+  let token = "";
+
+  try {
+    token = cleanText(window.sessionStorage.getItem(ADMIN_TOKEN_HANDOFF_KEY) || "");
+    window.sessionStorage.removeItem(ADMIN_TOKEN_HANDOFF_KEY);
+  } catch {
+    return;
+  }
+
+  if (!token || state.admin.login) {
+    return;
+  }
+
+  adminTokenInput.value = token;
+  void connectAdminSession();
+
+  requestAnimationFrame(() => {
+    document.getElementById("admin-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
+function restorePersistedAdminSession() {
+  const token = readPersistedAdminToken();
+  if (!token || state.admin.login || state.admin.isConnecting) {
+    return;
+  }
+
+  adminTokenInput.value = token;
+  void connectAdminSession();
+}
+
+async function applyAdminChanges() {
+  const applyState = adminApplyState();
+  if (!applyState.canApply || !state.preview?.ticket) {
+    setAdminMessage(applyState.message, applyState.isError);
+    renderAdminState();
+    return;
+  }
+
+  state.admin.isApplying = true;
+  state.admin.lastCommitUrl = "";
+  clearAdminMessage();
+  renderAdminState();
+  setStatus("Committing admin override to GitHub...");
+
+  try {
+    const ticket = state.preview.ticket;
+    const { owner, repo } = parseGitHubRepo(DEFAULT_GITHUB_REPO);
+    const target = adminOverrideTarget(ticket);
+    const encodedPath = encodeGitHubPath(target.path);
+    const existing = await fetchGitHubJson(`/repos/${owner}/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(DEFAULT_GITHUB_BRANCH)}`, {
+      token: state.admin.token,
+      allowNotFound: true,
+    });
+
+    const content = `${JSON.stringify(buildAdminOverridePayload(ticket, state.admin.login), null, 2)}\n`;
+    const result = await fetchGitHubJson(`/repos/${owner}/${repo}/contents/${encodedPath}`, {
+      method: "PUT",
+      token: state.admin.token,
+      body: {
+        message: adminCommitMessage(ticket),
+        branch: DEFAULT_GITHUB_BRANCH,
+        content: toBase64Utf8(content),
+        ...(existing?.sha ? { sha: existing.sha } : {}),
+      },
+    });
+
+    state.admin.lastCommitUrl = cleanText(result?.commit?.html_url);
+    let sessionUpdated = false;
+    try {
+      sessionUpdated = await applyAdminOverrideLocally(ticket);
+    } catch (localError) {
+      console.error(localError);
+    }
+
+    const publishedNote = "The published country pack updates after the rebuild step commits regenerated pack files.";
+    if (sessionUpdated) {
+      setAdminMessage(`Override committed for ${target.itemId}. This browser session now shows the change. ${publishedNote}`);
+      setStatus("Admin override committed. This browser session now shows the change.");
+    } else {
+      setAdminMessage(`Override committed for ${target.itemId}. ${publishedNote}`);
+      setStatus("Admin override committed.");
+    }
+  } catch (error) {
+    setAdminMessage(error.message || "Could not commit the admin override.", true);
+    setStatus(error.message || "Could not commit the admin override.", true);
+  } finally {
+    state.admin.isApplying = false;
+    renderAdminState();
+  }
 }
 
 function geoBoundariesMediaUrl(url) {
@@ -2207,6 +2858,13 @@ function populateCurrentSpeciesOptions(species) {
   }
 }
 
+function updateCurrentSpeciesOptions() {
+  comboBoxes.current.emptyText = suggestionType() === "accept_new"
+    ? "No new species are waiting for approval in this country."
+    : "No matching species in this country pack.";
+  populateCurrentSpeciesOptions(suggestionType() === "accept_new" ? currentCountryNewSpecies() : (state.currentCountry?.species || []));
+}
+
 function isComboBoxOpen(key) {
   return openComboKey === key && !comboBoxes[key].menu.hidden;
 }
@@ -2576,7 +3234,8 @@ function applySpeciesSelection(itemId, fitToMap = false) {
 
   if (suggestionType() !== "addition") {
     const currentEntry = currentSpeciesById(itemId);
-    setCurrentSpeciesValue(currentEntry?.label || "", itemId || "");
+    const isSelectable = suggestionType() !== "accept_new" || isNewDiscovery(currentEntry);
+    setCurrentSpeciesValue(isSelectable ? currentEntry?.label || "" : "", isSelectable ? itemId || "" : "");
   }
 
   closeComboBox("current");
@@ -2602,7 +3261,7 @@ function updateMapSummary() {
 }
 
 function updateMapHint() {
-  if (suggestionType() === "removal") {
+  if (["accept_new", "removal"].includes(suggestionType())) {
     mapHint.textContent = "Map overlay: use the current country coverage as reference. No drawing is needed.";
     clearDrawingButton.disabled = true;
     return;
@@ -3476,6 +4135,28 @@ function ticketBuildState() {
     };
   }
 
+  if (suggestionType() === "accept_new") {
+    const currentEntry = currentSpeciesById(currentSpeciesItemIdInput.value);
+    if (!currentEntry) {
+      return {
+        canBuild: false,
+        message: "Choose a species from the current New list to preview the ticket.",
+      };
+    }
+
+    if (!isNewDiscovery(currentEntry)) {
+      return {
+        canBuild: false,
+        message: "Accept new only works for species currently marked New in this country.",
+      };
+    }
+
+    return {
+      canBuild: true,
+      message: "The ticket preview updates automatically for this approval.",
+    };
+  }
+
   if (suggestionType() === "correction") {
     const currentEntry = currentSpeciesById(currentSpeciesItemIdInput.value);
     if (!currentEntry) {
@@ -3533,13 +4214,14 @@ function updateTicketPreviewGate() {
   ticketPreviewPanel.classList.toggle("locked", !hasPreview);
   ticketPreviewGate.hidden = hasPreview;
   ticketPreviewGateMessage.textContent = buildState.message;
+  renderAdminState();
 }
 
 function updateFormVisibility() {
   const type = suggestionType();
   const showCurrentSpecies = type !== "addition";
   const showProposedSpecies = type === "addition";
-  const showScope = type !== "removal";
+  const showScope = !["accept_new", "removal"].includes(type);
   const drawingEnabled = showScope && scopeSelect.value === "regional";
 
   currentSpeciesField.hidden = !showCurrentSpecies;
@@ -3724,11 +4406,13 @@ async function loadCountry(iso3) {
   try {
     const countryData = await loadCountryData(iso3);
     state.currentCountry = countryData;
+    syncSuggestionTypeAvailability();
+    updateCurrentSpeciesOptions();
     updateSuggestionGuidance();
     renderCountryHeader();
-    populateCurrentSpeciesOptions(countryData.species || []);
     renderGroupChips();
     renderSpeciesList();
+    updateFormVisibility();
     updateMapSummary();
     clearTicketPreview();
     setStatus("Loading map overlay...");
@@ -3793,6 +4477,9 @@ async function initialize() {
   updateNotificationPreference();
   updateSuggestionGuidance();
   updateTicketPreviewGate();
+  renderAdminState();
+  consumeAdminTokenHandoff();
+  restorePersistedAdminSession();
 
   try {
     const [animals, countries] = await Promise.all([
@@ -3821,6 +4508,8 @@ function handleSuggestionTypeChange() {
     updateSelectedRegionalLayers(false);
     renderSpeciesList();
   }
+
+  updateCurrentSpeciesOptions();
 
   updateFormVisibility();
   clearTicketPreview();
@@ -4026,6 +4715,18 @@ ticketForm.addEventListener("submit", async (event) => {
 
 copyMarkdownButton.addEventListener("click", async () => {
   await copyMarkdownPreview();
+});
+
+adminConnectButton?.addEventListener("click", () => {
+  void connectAdminSession();
+});
+
+adminDisconnectButton?.addEventListener("click", () => {
+  disconnectAdminSession();
+});
+
+adminApplyButton?.addEventListener("click", () => {
+  void applyAdminChanges();
 });
 
 window.addEventListener("resize", () => {
