@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-05-08T13:23:58.470337+00:00",
+  "generatedAtUtc": "2026-05-08T18:44:06.679341+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
   "countries": [
     {
@@ -59,13 +59,13 @@
       "countryName": "American Samoa",
       "path": "./ASM.json",
       "precomputeMode": "validated",
-      "total": 68,
+      "total": 67,
       "bucketCounts": {
-        "Needs Review": 60,
+        "Needs Review": 59,
         "Likely Valid": 8
       },
       "statusCounts": {
-        "likely_false": 60,
+        "likely_false": 59,
         "likely_true_one_source": 8
       }
     },
@@ -74,14 +74,14 @@
       "countryName": "Andorra",
       "path": "./AND.json",
       "precomputeMode": "validated",
-      "total": 152,
+      "total": 151,
       "bucketCounts": {
         "Likely Valid": 62,
-        "Needs Review": 90
+        "Needs Review": 89
       },
       "statusCounts": {
         "likely_true_one_source": 62,
-        "likely_false": 90
+        "likely_false": 89
       }
     },
     {
@@ -121,13 +121,13 @@
       "countryName": "Antarctica",
       "path": "./ATA.json",
       "precomputeMode": "validated",
-      "total": 63,
+      "total": 62,
       "bucketCounts": {
-        "Needs Review": 59,
+        "Needs Review": 58,
         "Likely Valid": 4
       },
       "statusCounts": {
-        "likely_false": 59,
+        "likely_false": 58,
         "likely_true_one_source": 4
       }
     },
@@ -529,14 +529,14 @@
       "countryName": "Bouvet Island",
       "path": "./BVT.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 2016,
       "bucketCounts": {
         "Unlisted": 1971,
-        "Needs Review": 46
+        "Needs Review": 45
       },
       "statusCounts": {
         "unlisted": 1971,
-        "likely_false": 46
+        "likely_false": 45
       }
     },
     {
@@ -941,16 +941,16 @@
       "countryName": "Cook Islands",
       "path": "./COK.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 2016,
       "bucketCounts": {
         "Unlisted": 1965,
-        "Needs Review": 48,
+        "Needs Review": 47,
         "Likely Valid": 3,
         "New": 1
       },
       "statusCounts": {
         "unlisted": 1965,
-        "likely_false": 48,
+        "likely_false": 47,
         "likely_true_one_source": 3,
         "new_record": 1
       }
@@ -1428,15 +1428,15 @@
       "countryName": "French Polynesia",
       "path": "./PYF.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 2016,
       "bucketCounts": {
         "Unlisted": 1958,
-        "Needs Review": 52,
+        "Needs Review": 51,
         "Likely Valid": 7
       },
       "statusCounts": {
         "unlisted": 1958,
-        "likely_false": 52,
+        "likely_false": 51,
         "likely_true_one_source": 7
       }
     },
@@ -1557,17 +1557,17 @@
       "countryName": "Gibraltar",
       "path": "./GIB.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 2016,
       "bucketCounts": {
         "Unlisted": 1902,
         "Likely Valid": 9,
-        "Needs Review": 102,
+        "Needs Review": 101,
         "New": 4
       },
       "statusCounts": {
         "unlisted": 1902,
         "likely_true_one_source": 9,
-        "likely_false": 102,
+        "likely_false": 101,
         "new_record": 4
       }
     },
@@ -1595,16 +1595,16 @@
       "countryName": "Greenland",
       "path": "./GRL.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 2016,
       "bucketCounts": {
         "Unlisted": 1937,
-        "Needs Review": 69,
+        "Needs Review": 68,
         "Likely Valid": 9,
         "New": 2
       },
       "statusCounts": {
         "unlisted": 1937,
-        "likely_false": 69,
+        "likely_false": 68,
         "likely_true_one_source": 9,
         "new_record": 2
       }
@@ -1782,14 +1782,14 @@
       "countryName": "Heard Island and McDonald Islands",
       "path": "./HMD.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 2016,
       "bucketCounts": {
         "Unlisted": 1970,
-        "Needs Review": 47
+        "Needs Review": 46
       },
       "statusCounts": {
         "unlisted": 1970,
-        "likely_false": 47
+        "likely_false": 46
       }
     },
     {
@@ -1950,91 +1950,136 @@
       "iso3": "IRL",
       "countryName": "Ireland",
       "path": "./IRL.json",
-      "precomputeMode": "baseline",
-      "total": 133,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 133
+        "Unlisted": 1860,
+        "Likely Valid": 57,
+        "Needs Review": 76,
+        "New": 26
       },
       "statusCounts": {
-        "likely_true_one_source": 133
+        "unlisted": 1860,
+        "likely_true_one_source": 55,
+        "likely_false": 76,
+        "new_record": 26,
+        "likely_true_both": 2
       }
     },
     {
       "iso3": "IMN",
       "countryName": "Isle of Man",
       "path": "./IMN.json",
-      "precomputeMode": "baseline",
-      "total": 123,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 123
+        "Unlisted": 1889,
+        "Needs Review": 79,
+        "Likely Valid": 44,
+        "New": 7
       },
       "statusCounts": {
-        "likely_true_one_source": 123
+        "unlisted": 1889,
+        "likely_false": 79,
+        "likely_true_one_source": 43,
+        "new_record": 7,
+        "likely_true_both": 1
       }
     },
     {
       "iso3": "ISR",
       "countryName": "Israel",
       "path": "./ISR.json",
-      "precomputeMode": "baseline",
-      "total": 174,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 174
+        "Needs Review": 100,
+        "Unlisted": 1820,
+        "Likely Valid": 74,
+        "New": 25
       },
       "statusCounts": {
-        "likely_true_one_source": 174
+        "likely_false": 100,
+        "unlisted": 1820,
+        "likely_true_one_source": 74,
+        "new_record": 25
       }
     },
     {
       "iso3": "ITA",
       "countryName": "Italy",
       "path": "./ITA.json",
-      "precomputeMode": "baseline",
-      "total": 190,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 190
+        "Unlisted": 1800,
+        "Likely Valid": 99,
+        "Needs Review": 91,
+        "New": 29
       },
       "statusCounts": {
-        "likely_true_one_source": 190
+        "unlisted": 1800,
+        "likely_true_one_source": 98,
+        "likely_false": 91,
+        "new_record": 29,
+        "likely_true_both": 1
       }
     },
     {
       "iso3": "CIV",
       "countryName": "Ivory Coast",
       "path": "./CIV.json",
-      "precomputeMode": "baseline",
-      "total": 204,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 204
+        "Unlisted": 1812,
+        "Likely Valid": 80,
+        "Needs Review": 124,
+        "New": 3
       },
       "statusCounts": {
-        "likely_true_one_source": 204
+        "unlisted": 1812,
+        "likely_true_one_source": 80,
+        "likely_false": 124,
+        "new_record": 3
       }
     },
     {
       "iso3": "JAM",
       "countryName": "Jamaica",
       "path": "./JAM.json",
-      "precomputeMode": "baseline",
-      "total": 116,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 116
+        "Unlisted": 1893,
+        "Likely Valid": 41,
+        "Needs Review": 75,
+        "New": 10
       },
       "statusCounts": {
-        "likely_true_one_source": 116
+        "unlisted": 1893,
+        "likely_true_one_source": 41,
+        "likely_false": 75,
+        "new_record": 10
       }
     },
     {
       "iso3": "JPN",
       "countryName": "Japan",
       "path": "./JPN.json",
-      "precomputeMode": "baseline",
-      "total": 166,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 166
+        "Unlisted": 1835,
+        "Needs Review": 100,
+        "New": 18,
+        "Likely Valid": 66
       },
       "statusCounts": {
-        "likely_true_one_source": 166
+        "unlisted": 1835,
+        "likely_false": 100,
+        "new_record": 18,
+        "likely_true_one_source": 66
       }
     },
     {
@@ -2054,65 +2099,93 @@
       "iso3": "JOR",
       "countryName": "Jordan",
       "path": "./JOR.json",
-      "precomputeMode": "baseline",
-      "total": 157,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 157
+        "New": 7,
+        "Unlisted": 1855,
+        "Likely Valid": 58,
+        "Needs Review": 99
       },
       "statusCounts": {
-        "likely_true_one_source": 157
+        "new_record": 7,
+        "unlisted": 1855,
+        "likely_true_one_source": 58,
+        "likely_false": 99
       }
     },
     {
       "iso3": "KAZ",
       "countryName": "Kazakhstan",
       "path": "./KAZ.json",
-      "precomputeMode": "baseline",
-      "total": 205,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 205
+        "Unlisted": 1811,
+        "Likely Valid": 89,
+        "Needs Review": 116,
+        "New": 3
       },
       "statusCounts": {
-        "likely_true_one_source": 205
+        "unlisted": 1811,
+        "likely_true_one_source": 89,
+        "likely_false": 116,
+        "new_record": 3
       }
     },
     {
       "iso3": "KEN",
       "countryName": "Kenya",
       "path": "./KEN.json",
-      "precomputeMode": "baseline",
-      "total": 325,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 325
+        "Unlisted": 1685,
+        "Needs Review": 153,
+        "Likely Valid": 172,
+        "New": 9
       },
       "statusCounts": {
-        "likely_true_one_source": 325
+        "unlisted": 1685,
+        "likely_false": 153,
+        "likely_true_one_source": 172,
+        "new_record": 9
       }
     },
     {
       "iso3": "KIR",
       "countryName": "Kiribati",
       "path": "./KIR.json",
-      "precomputeMode": "baseline",
-      "total": 65,
+      "precomputeMode": "validated",
+      "total": 2018,
       "bucketCounts": {
-        "Likely Valid": 65
+        "Unlisted": 1954,
+        "Needs Review": 60,
+        "Likely Valid": 4
       },
       "statusCounts": {
-        "likely_true_one_source": 65
+        "unlisted": 1954,
+        "likely_false": 60,
+        "likely_true_one_source": 4
       }
     },
     {
       "iso3": "KWT",
       "countryName": "Kuwait",
       "path": "./KWT.json",
-      "precomputeMode": "baseline",
-      "total": 121,
+      "precomputeMode": "validated",
+      "total": 2019,
       "bucketCounts": {
-        "Likely Valid": 121
+        "Unlisted": 1892,
+        "Likely Valid": 31,
+        "Needs Review": 90,
+        "New": 6
       },
       "statusCounts": {
-        "likely_true_one_source": 121
+        "unlisted": 1892,
+        "likely_true_one_source": 31,
+        "likely_false": 90,
+        "new_record": 6
       }
     },
     {
@@ -2341,12 +2414,12 @@
       "countryName": "Marshall Islands",
       "path": "./MHL.json",
       "precomputeMode": "baseline",
-      "total": 62,
+      "total": 61,
       "bucketCounts": {
-        "Likely Valid": 62
+        "Likely Valid": 61
       },
       "statusCounts": {
-        "likely_true_one_source": 62
+        "likely_true_one_source": 61
       }
     },
     {
@@ -2380,12 +2453,12 @@
       "countryName": "Mauritius",
       "path": "./MUS.json",
       "precomputeMode": "baseline",
-      "total": 70,
+      "total": 69,
       "bucketCounts": {
-        "Likely Valid": 70
+        "Likely Valid": 69
       },
       "statusCounts": {
-        "likely_true_one_source": 70
+        "likely_true_one_source": 69
       }
     },
     {
@@ -2445,12 +2518,12 @@
       "countryName": "Monaco",
       "path": "./MCO.json",
       "precomputeMode": "baseline",
-      "total": 127,
+      "total": 126,
       "bucketCounts": {
-        "Likely Valid": 127
+        "Likely Valid": 126
       },
       "statusCounts": {
-        "likely_true_one_source": 127
+        "likely_true_one_source": 126
       }
     },
     {
@@ -2549,12 +2622,12 @@
       "countryName": "Nauru",
       "path": "./NRU.json",
       "precomputeMode": "baseline",
-      "total": 61,
+      "total": 60,
       "bucketCounts": {
-        "Likely Valid": 61
+        "Likely Valid": 60
       },
       "statusCounts": {
-        "likely_true_one_source": 61
+        "likely_true_one_source": 60
       }
     },
     {
@@ -2653,12 +2726,12 @@
       "countryName": "Niue",
       "path": "./NIU.json",
       "precomputeMode": "baseline",
-      "total": 67,
+      "total": 66,
       "bucketCounts": {
-        "Likely Valid": 67
+        "Likely Valid": 66
       },
       "statusCounts": {
-        "likely_true_one_source": 67
+        "likely_true_one_source": 66
       }
     },
     {
@@ -2848,12 +2921,12 @@
       "countryName": "Pitcairn Islands",
       "path": "./PCN.json",
       "precomputeMode": "baseline",
-      "total": 61,
+      "total": 60,
       "bucketCounts": {
-        "Likely Valid": 61
+        "Likely Valid": 60
       },
       "statusCounts": {
-        "likely_true_one_source": 61
+        "likely_true_one_source": 60
       }
     },
     {
@@ -2965,12 +3038,12 @@
       "countryName": "R\u00e9union",
       "path": "./REU.json",
       "precomputeMode": "baseline",
-      "total": 67,
+      "total": 66,
       "bucketCounts": {
-        "Likely Valid": 67
+        "Likely Valid": 66
       },
       "statusCounts": {
-        "likely_true_one_source": 67
+        "likely_true_one_source": 66
       }
     },
     {
@@ -3069,12 +3142,12 @@
       "countryName": "Samoa",
       "path": "./WSM.json",
       "precomputeMode": "baseline",
-      "total": 68,
+      "total": 67,
       "bucketCounts": {
-        "Likely Valid": 68
+        "Likely Valid": 67
       },
       "statusCounts": {
-        "likely_true_one_source": 68
+        "likely_true_one_source": 67
       }
     },
     {
@@ -3082,12 +3155,12 @@
       "countryName": "San Marino",
       "path": "./SMR.json",
       "precomputeMode": "baseline",
-      "total": 132,
+      "total": 131,
       "bucketCounts": {
-        "Likely Valid": 132
+        "Likely Valid": 131
       },
       "statusCounts": {
-        "likely_true_one_source": 132
+        "likely_true_one_source": 131
       }
     },
     {
@@ -3251,12 +3324,12 @@
       "countryName": "South Georgia",
       "path": "./SGS.json",
       "precomputeMode": "baseline",
-      "total": 60,
+      "total": 59,
       "bucketCounts": {
-        "Likely Valid": 60
+        "Likely Valid": 59
       },
       "statusCounts": {
-        "likely_true_one_source": 60
+        "likely_true_one_source": 59
       }
     },
     {
@@ -3485,12 +3558,12 @@
       "countryName": "Tokelau",
       "path": "./TKL.json",
       "precomputeMode": "baseline",
-      "total": 60,
+      "total": 59,
       "bucketCounts": {
-        "Likely Valid": 60
+        "Likely Valid": 59
       },
       "statusCounts": {
-        "likely_true_one_source": 60
+        "likely_true_one_source": 59
       }
     },
     {
@@ -3498,12 +3571,12 @@
       "countryName": "Tonga",
       "path": "./TON.json",
       "precomputeMode": "baseline",
-      "total": 68,
+      "total": 67,
       "bucketCounts": {
-        "Likely Valid": 68
+        "Likely Valid": 67
       },
       "statusCounts": {
-        "likely_true_one_source": 68
+        "likely_true_one_source": 67
       }
     },
     {
@@ -3576,12 +3649,12 @@
       "countryName": "Tuvalu",
       "path": "./TUV.json",
       "precomputeMode": "baseline",
-      "total": 62,
+      "total": 61,
       "bucketCounts": {
-        "Likely Valid": 62
+        "Likely Valid": 61
       },
       "statusCounts": {
-        "likely_true_one_source": 62
+        "likely_true_one_source": 61
       }
     },
     {
@@ -3654,12 +3727,12 @@
       "countryName": "United States Minor Outlying Islands",
       "path": "./UMI.json",
       "precomputeMode": "baseline",
-      "total": 69,
+      "total": 68,
       "bucketCounts": {
-        "Likely Valid": 69
+        "Likely Valid": 68
       },
       "statusCounts": {
-        "likely_true_one_source": 69
+        "likely_true_one_source": 68
       }
     },
     {
@@ -3719,12 +3792,12 @@
       "countryName": "Vatican City",
       "path": "./VAT.json",
       "precomputeMode": "baseline",
-      "total": 82,
+      "total": 81,
       "bucketCounts": {
-        "Likely Valid": 82
+        "Likely Valid": 81
       },
       "statusCounts": {
-        "likely_true_one_source": 82
+        "likely_true_one_source": 81
       }
     },
     {
@@ -3758,12 +3831,12 @@
       "countryName": "Wallis and Futuna",
       "path": "./WLF.json",
       "precomputeMode": "baseline",
-      "total": 65,
+      "total": 64,
       "bucketCounts": {
-        "Likely Valid": 65
+        "Likely Valid": 64
       },
       "statusCounts": {
-        "likely_true_one_source": 65
+        "likely_true_one_source": 64
       }
     },
     {

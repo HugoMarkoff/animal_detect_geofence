@@ -3651,6 +3651,7 @@
         "short": "Regional",
         "note": "Manual admin override applied from the review desk."
       },
+      "bucket": "Likely Valid",
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
         "action": "upsert",
@@ -3761,10 +3762,10 @@
             "label": "Regional footprint",
             "short": "Regional",
             "note": "Dropped 1 likely outlier point before scoring. The cleaned outer footprint covers 0.8% of Denmark, so it stays regional."
-          }
+          },
+          "bucket": "Likely Valid"
         }
-      },
-      "bucket": "Likely Valid"
+      }
     },
     {
       "itemId": "43e731f6-47cc-4ae0-9909-82ff3de1f1d1",
@@ -14146,7 +14147,8 @@
           "countryDiameterKm": 234.24129640355284,
           "spreadRatio": 0,
           "footprintPolygonLatLngs": []
-        }
+        },
+        "bucket": "Needs Review"
       }
     },
     {
@@ -14203,13 +14205,14 @@
           "countryDiameterKm": 234.24129640355284,
           "spreadRatio": 0,
           "footprintPolygonLatLngs": []
-        }
+        },
+        "bucket": "Needs Review"
       }
     }
   ],
   "manualOverrideSummary": {
     "count": 5,
-    "appliedAtUtc": "2026-05-08T12:24:54.970716+00:00",
+    "appliedAtUtc": "2026-05-08T18:43:59.644012+00:00",
     "items": [
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "2813059e-da3b-4f17-a60c-d9c34f2fce24",
