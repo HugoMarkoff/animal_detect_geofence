@@ -42,7 +42,7 @@ To apply overrides locally:
 python tools/apply_country_overrides.py
 ```
 
-The workflow in [.github/workflows/apply-country-overrides.yml](.github/workflows/apply-country-overrides.yml) runs the same command whenever override files change and commits regenerated files in `data/precomputed-countries/`, `data/animals-global.json`, and `data/geofence-simple.json`.
+The workflow in [.github/workflows/apply-country-overrides.yml](.github/workflows/apply-country-overrides.yml) runs the same command whenever override files change, commits regenerated files in `data/precomputed-countries/`, `data/animals-global.json`, and `data/geofence-simple.json`, then requests a Pages rebuild from `main`.
 
 ## GitHub Pages
 
@@ -50,4 +50,4 @@ This repository now has a root `index.html`, so it can be published directly at:
 
 `https://hugomarkoff.github.io/animal_detect_geofence/`
 
-Use the repository root as the Pages source.
+Use the repository root on `main` as the Pages source.

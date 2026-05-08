@@ -50,6 +50,7 @@ animal_detect_geofence/
 
 - The GitHub Pages version is fully static and has no backend.
 - The frontend has no build step.
+- Pages can publish directly from the repository root on `main`; no dedicated `gh-pages` content branch is required.
 - Leaflet, Leaflet.Draw, Turf, and polygon-clipping are loaded from CDNs.
 - For local static preview, use `python -m http.server 8081` from the repo root.
 - GitHub draft links default to `HugoMarkoff/animal_detect_geofence` unless `GITHUB_ISSUE_REPO` is overridden.

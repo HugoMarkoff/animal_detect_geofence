@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
   apply:
@@ -32,15 +33,44 @@ jobs:
       - name: Apply tracked overrides
         run: python tools/apply_country_overrides.py
 
-      - name: Commit regenerated packs and publish
+      - name: Commit regenerated packs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet --exit-code -- data/precomputed-countries data/animals-global.json data/geofence-simple.json; then
             echo "No regenerated override-derived artifacts to commit."
-            git push origin HEAD:gh-pages
             exit 0
           fi
           git add data/precomputed-countries data/animals-global.json data/geofence-simple.json
           git commit -m "Apply country overrides"
-          git push --atomic origin HEAD:main HEAD:gh-pages
+          git push origin HEAD:main
+
+      - name: Request GitHub Pages rebuild
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from urllib.request import Request, urlopen
+
+          repository = os.environ["GH_REPOSITORY"]
+          token = os.environ["GH_TOKEN"]
+          request = Request(
+              f"https://api.github.com/repos/{repository}/pages/builds",
+              data=b"{}",
+              method="POST",
+              headers={
+                  "Accept": "application/vnd.github+json",
+                  "Authorization": f"Bearer {token}",
+                  "X-GitHub-Api-Version": "2026-03-10",
+                  "User-Agent": "github-actions-pages-rebuild",
+                  "Content-Type": "application/json",
+              },
+          )
+          with urlopen(request) as response:
+              payload = json.load(response)
+          print(json.dumps(payload, indent=2))
+          PY
