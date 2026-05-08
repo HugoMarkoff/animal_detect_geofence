@@ -7,16 +7,16 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/denmark_new_candidates.csv",
   "summary": {
-    "total": 164,
+    "total": 163,
     "statusCounts": {
       "likely_true_both": 59,
       "likely_true_one_source": 60,
-      "likely_false": 37,
+      "likely_false": 36,
       "new_record": 8
     },
     "bucketCounts": {
       "Likely Valid": 119,
-      "Needs Review": 37,
+      "Needs Review": 36,
       "New": 8
     }
   },
@@ -2965,57 +2965,6 @@
         "footprintPolygonLatLngs": []
       },
       "bucket": "Likely Valid"
-    },
-    {
-      "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
-      "countryIso3": "DNK",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2434299,
-      "inatTaxonId": 925980,
-      "inatPlaceId": 8051,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 234.24129640355284,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
     },
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
@@ -14306,14 +14255,73 @@
           "footprintPolygonLatLngs": []
         }
       }
+    },
+    {
+      "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+      "sourceFile": "data/review-overrides/countries/DNK/3b0ae87d-0cb4-46c4-822b-c65047e69a88.json",
+      "updatedAtUtc": "2026-05-08T10:14:46.987Z",
+      "updatedBy": "HugoMarkoff",
+      "reason": "Please remove long-nosed mongoose (herpestes naso) from the Denmark country pack. Applied from the admin panel.",
+      "baseEntry": {
+        "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+        "countryIso3": "DNK",
+        "status": "likely_false",
+        "expected": true,
+        "gbifPresent": false,
+        "inatPresent": null,
+        "gbifCount": 0,
+        "inatCount": null,
+        "rawGbifPresent": false,
+        "rawInatPresent": null,
+        "rawGbifCount": 0,
+        "rawInatCount": null,
+        "gbifUsageKey": 2434299,
+        "inatTaxonId": 925980,
+        "inatPlaceId": 8051,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 234.24129640355284,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "bucket": "Needs Review"
+      }
     }
   ],
   "manualOverrideSummary": {
-    "count": 3,
-    "appliedAtUtc": "2026-05-08T10:07:00.464044+00:00",
+    "count": 4,
+    "appliedAtUtc": "2026-05-08T10:15:33.232427+00:00",
     "items": [
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "429257d4-3ef2-47fb-b849-66ee6c107346"
     ]
   }
