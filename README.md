@@ -7,6 +7,7 @@ Standalone repository for the country-pack review and ticket workflow.
 - `index.html`: GitHub Pages entry for the review and ticket workflow.
 - `assets/`: static JavaScript and CSS used by the GitHub Pages app.
 - `data/animals-global.json`: global animal catalog used for lookup and ticket forms.
+- `data/geofence-simple.json`: generated item-level expected-country snapshot derived from `animals-global.json` plus the binary override file.
 - `data/precomputed-countries/`: precomputed country packs and regional footprint polygons.
 - `data/review-overrides/`: git-tracked per-country override files applied on top of published packs.
 - `data/review-overrides/geofence-binary-overrides.json`: global binary species-country decisions with `allow_regional` for reviewed regional approvals.
@@ -41,7 +42,7 @@ To apply overrides locally:
 python tools/apply_country_overrides.py
 ```
 
-The workflow in [.github/workflows/apply-country-overrides.yml](.github/workflows/apply-country-overrides.yml) runs the same command whenever override files change and commits regenerated files in `data/precomputed-countries/`.
+The workflow in [.github/workflows/apply-country-overrides.yml](.github/workflows/apply-country-overrides.yml) runs the same command whenever override files change and commits regenerated files in `data/precomputed-countries/`, `data/animals-global.json`, and `data/geofence-simple.json`.
 
 ## GitHub Pages
 

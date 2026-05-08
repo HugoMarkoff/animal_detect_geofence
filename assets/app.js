@@ -82,6 +82,7 @@ const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
 const DATA_VERSION = "20260508c";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
+const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
 const ADMIN_GEOFENCE_TRACKING_SCHEMA_VERSION = 1;
 const ADMIN_CHANGE_LOG_SCHEMA_VERSION = 1;
@@ -1283,33 +1284,35 @@ function buildFileInstructions(ticket) {
   const trackedSpecies = adminTrackedSpecies(ticket, { requireCatalog: false });
   const overridePath = adminOverrideTarget(ticket, { strict: false }).path;
   const requestedCoverage = adminRequestedCoverage(ticket);
+  const itemIdText = trackedSpecies.itemId || "<CATALOG_ITEM_ID>";
   const files = [
-    `${sourceGeofencePath()} in the source dataset repo`,
+    ADMIN_SIMPLE_GEOFENCE_PATH,
     ADMIN_GEOFENCE_TRACKING_PATH,
     overridePath,
     ADMIN_CHANGE_LOG_PATH,
   ];
   const instructions = [];
   const matchedKeyText = trackedSpecies.matchedKey || "<MATCHED_KEY_FROM_ANIMALS_GLOBAL>";
+  const trackedLabel = trackedSpecies.label || matchedKeyText;
 
   if (ticket.suggestionType === "removal") {
-    instructions.push(`In ${sourceGeofencePath()}, make sure ${matchedKeyText} does not keep ${ticket.countryIso3} in allow and blocks it if needed.`);
-    instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, set ${matchedKeyText} so ${ticket.countryIso3} is blocked and not marked in allow_regional.`);
+    instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, set ${itemIdText} (${trackedLabel}) so ${ticket.countryIso3} is blocked and not marked in allow_regional.`);
+    instructions.push(`After the rebuild, ${ADMIN_SIMPLE_GEOFENCE_PATH} should no longer list ${ticket.countryIso3} in expectedCountries for ${trackedLabel}.`);
     instructions.push(`In ${overridePath}, keep the remove action so the published country pack drops ${trackedSpecies.label}.`);
   } else {
-    instructions.push(`In ${sourceGeofencePath()}, make sure ${matchedKeyText} allows ${ticket.countryIso3} in the binary country list.`);
+    instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, mirror the binary allow decision for ${itemIdText} (${matchedKeyText}) and ${ticket.countryIso3}.`);
     if (requestedCoverage === "regional") {
-      instructions.push(`In ${sourceGeofencePath()}, add ${ticket.countryIso3} under the new allow_regional field for ${matchedKeyText}.`);
+      instructions.push(`After the rebuild, ${ADMIN_SIMPLE_GEOFENCE_PATH} should list ${ticket.countryIso3} in both expectedCountries and allowRegionalCountries for ${trackedLabel}.`);
       instructions.push(`In ${overridePath}, keep the regional observationProfile and the approved polygon for ${trackedSpecies.label}.`);
     } else {
-      instructions.push(`In ${sourceGeofencePath()}, keep ${ticket.countryIso3} as allowed but remove it from allow_regional for ${matchedKeyText}.`);
+      instructions.push(`After the rebuild, ${ADMIN_SIMPLE_GEOFENCE_PATH} should list ${ticket.countryIso3} in expectedCountries but not allowRegionalCountries for ${trackedLabel}.`);
       instructions.push(`In ${overridePath}, keep ${trackedSpecies.label} as national coverage with no polygon.`);
     }
-    instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, mirror the same binary allow decision for ${matchedKeyText} and ${ticket.countryIso3}.`);
   }
 
   instructions.push(`In ${ADMIN_CHANGE_LOG_PATH}, append this review change so later rebuilds and audits can trace who changed what.`);
-  instructions.push(`After editing the binary source in ${sourceGeofencePath()}, rebuild from ${sourceTaxonomyPath()} + ${sourceGeofencePath()} so animals-global.json stays aligned.`);
+  instructions.push(`The workflow rebuilds ${ADMIN_SIMPLE_GEOFENCE_PATH}, data/animals-global.json, and the country packs from ${ADMIN_GEOFENCE_TRACKING_PATH} + override files.`);
+  instructions.push(`The upstream source dataset is still ${sourceTaxonomyPath()} + ${sourceGeofencePath()}, but this repo keeps the generated simple geofence snapshot in ${ADMIN_SIMPLE_GEOFENCE_PATH}.`);
 
   return { files, instructions };
 }
@@ -3522,9 +3525,12 @@ function buildAdminShortcutPayload(entry, suggestion) {
 }
 
 function adminShortcutPrompt(ticket) {
-  const actionText = ticket.suggestionType === "accept_new"
-    ? "approve this species into the permanent pack"
-    : "remove this species from the current pack";
+  let actionText = "remove this species from the current pack";
+  if (ticket.suggestionType === "accept_new") {
+    actionText = "approve this species into the permanent pack";
+  } else if (ticket.suggestionType === "correction") {
+    actionText = "move this species into Likely Valid with its current coverage";
+  }
   return `${buildTicketSummary(ticket)}\n\nThis will ${actionText} by committing the admin override files directly to GitHub for ${ticket.countryIso3}. Continue?`;
 }
 
@@ -3568,10 +3574,16 @@ function renderSpeciesAdminActions(entry) {
   const disabledAttr = disabled ? " disabled" : "";
   const safeLabel = escapeHtml(entry.commonName || entry.label);
   const buttons = [];
+  const isNew = isNewDiscovery(entry);
+  const isNeedsReview = effectiveBucket(entry) === "Needs Review";
 
-  if (isNewDiscovery(entry)) {
+  if (isNew || isNeedsReview) {
+    const shortcut = isNew ? "accept_new" : "correction";
+    const actionLabel = isNew
+      ? `Approve ${safeLabel} into the permanent pack`
+      : `Move ${safeLabel} to Likely Valid`;
     buttons.push(`
-      <button class="species-card-action species-card-action-accept" type="button" data-admin-shortcut="accept_new" data-item-id="${entry.itemId}" title="Approve ${safeLabel} into the permanent pack" aria-label="Approve ${safeLabel} into the permanent pack"${disabledAttr}>
+      <button class="species-card-action species-card-action-accept" type="button" data-admin-shortcut="${shortcut}" data-item-id="${entry.itemId}" title="${actionLabel}" aria-label="${actionLabel}"${disabledAttr}>
         &#10003;
       </button>
     `);

@@ -84,7 +84,15 @@ Run the local applier after changing override files:
 python tools/apply_country_overrides.py
 ```
 
-The GitHub Actions workflow in [.github/workflows/apply-country-overrides.yml](../../.github/workflows/apply-country-overrides.yml) runs the same command and commits updated files in `data/precomputed-countries/`.
+The GitHub Actions workflow in [.github/workflows/apply-country-overrides.yml](../../.github/workflows/apply-country-overrides.yml) runs the same command and commits updated files in `data/precomputed-countries/`, `data/animals-global.json`, and `data/geofence-simple.json`.
+
+## Published simple geofence snapshot
+
+The publish repo also keeps `data/geofence-simple.json` as the human-readable item-level snapshot of the current binary geofence state.
+
+- It is generated from `data/animals-global.json` plus `geofence-binary-overrides.json`.
+- It lists `expectedCountries` and `allowRegionalCountries` per item.
+- It is not the upstream taxonomy-keyed source file; it is the publish-side derived view kept in sync for review and audit work.
 
 ## Binary geofence tracking
 

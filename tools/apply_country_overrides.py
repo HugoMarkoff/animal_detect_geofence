@@ -25,6 +25,8 @@ PACK_DIR = DATA_DIR / "precomputed-countries"
 INDEX_PATH = PACK_DIR / "index.json"
 OVERRIDES_DIR = DATA_DIR / "review-overrides" / "countries"
 ANIMALS_PATH = DATA_DIR / "animals-global.json"
+GEOFENCE_TRACKING_PATH = DATA_DIR / "review-overrides" / "geofence-binary-overrides.json"
+SIMPLE_GEOFENCE_PATH = DATA_DIR / "geofence-simple.json"
 
 STATUS_TO_BUCKET = {
     "likely_true_both": "Likely Valid",
@@ -65,6 +67,49 @@ def write_json_if_changed(path: Path, payload: Any) -> bool:
 
 def status_to_bucket(status: object) -> str:
     return STATUS_TO_BUCKET.get(clean_text(status), "Needs Review")
+
+
+def normalize_country_codes(values: object) -> list[str]:
+    if not isinstance(values, list):
+        return []
+
+    normalized = {
+        str(iso3 or "").strip().upper()
+        for iso3 in values
+        if str(iso3 or "").strip()
+    }
+    return sorted(normalized)
+
+
+def normalize_override_country_map(raw_mapping: object) -> set[str]:
+    if not isinstance(raw_mapping, dict):
+        return set()
+
+    countries: set[str] = set()
+    for iso3, enabled in raw_mapping.items():
+        normalized_iso3 = str(iso3 or "").strip().upper()
+        if normalized_iso3 and bool(enabled):
+            countries.add(normalized_iso3)
+    return countries
+
+
+def apply_item_country_overrides(
+    expected_countries: list[str],
+    item_override: dict[str, object] | None,
+) -> tuple[list[str], list[str]]:
+    expected = {str(iso3 or "").strip().upper() for iso3 in expected_countries if str(iso3 or "").strip()}
+    if not isinstance(item_override, dict):
+        return sorted(expected), []
+
+    allow = normalize_override_country_map(item_override.get("allow"))
+    block = normalize_override_country_map(item_override.get("block"))
+    allow_regional = normalize_override_country_map(item_override.get("allow_regional"))
+
+    expected.update(allow)
+    expected.update(allow_regional)
+    expected.difference_update(block)
+    regional = sorted((allow_regional - block) & expected)
+    return sorted(expected), regional
 
 
 def empty_managed_evidence() -> dict[str, Any]:
@@ -129,6 +174,23 @@ def load_animals_by_id() -> dict[str, dict[str, Any]]:
     payload = load_json_file(ANIMALS_PATH)
     items = payload.get("items") or []
     return {clean_text(item.get("id")): item for item in items if clean_text(item.get("id"))}
+
+
+def load_geofence_tracking_items() -> dict[str, dict[str, object]]:
+    if not GEOFENCE_TRACKING_PATH.exists():
+        return {}
+
+    payload = load_json_file(GEOFENCE_TRACKING_PATH)
+    raw_items = payload.get("items") or {}
+    if not isinstance(raw_items, dict):
+        return {}
+
+    items: dict[str, dict[str, object]] = {}
+    for raw_item_id, raw_item in raw_items.items():
+        item_id = clean_text(raw_item_id)
+        if item_id and isinstance(raw_item, dict):
+            items[item_id] = raw_item
+    return items
 
 
 def collect_override_files() -> dict[str, list[Path]]:
@@ -266,9 +328,13 @@ def recompute_pack_summary(pack: dict[str, Any]) -> None:
     }
 
 
-def apply_country_overrides(pack: dict[str, Any], override_paths: list[Path], animals_by_id: dict[str, dict[str, Any]]) -> dict[str, Any]:
+def apply_country_overrides(
+    pack: dict[str, Any],
+    override_paths: list[Path],
+    animals_by_id: dict[str, dict[str, Any]],
+    previous_override_summary: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     iso3 = clean_text(pack.get("generatedFor")).upper()
-    applied_at = now_utc_iso()
     entries_by_id = {
         clean_text(entry.get("itemId")): deepcopy(entry)
         for entry in pack.get("entries") or []
@@ -320,12 +386,17 @@ def apply_country_overrides(pack: dict[str, Any], override_paths: list[Path], an
         merged_entry["manualOverride"] = {
             "sourceFile": override["sourceFile"],
             "action": action,
-            "updatedAtUtc": override["updatedAtUtc"] or applied_at,
+            "updatedAtUtc": override["updatedAtUtc"] or now_utc_iso(),
             "updatedBy": override["updatedBy"],
             "reason": override["reason"],
             "addedByOverride": added_by_override,
             "baseEntry": base_entry,
         }
+        status = clean_text(merged_entry.get("status"))
+        if status:
+            merged_entry["bucket"] = status_to_bucket(status)
+        else:
+            merged_entry.pop("bucket", None)
         entries_by_id[item_id] = merged_entry
 
     pack["entries"] = sorted(entries_by_id.values(), key=lambda entry: clean_text(entry.get("itemId")))
@@ -335,6 +406,13 @@ def apply_country_overrides(pack: dict[str, Any], override_paths: list[Path], an
         pack.pop("manualOverrideRemovedEntries", None)
 
     if override_paths:
+        previous_items = previous_override_summary.get("items") if isinstance(previous_override_summary, dict) else None
+        previous_count = previous_override_summary.get("count") if isinstance(previous_override_summary, dict) else None
+        applied_at = now_utc_iso()
+        if previous_count == len(override_paths) and previous_items == active_items:
+            previous_applied_at = clean_text(previous_override_summary.get("appliedAtUtc"))
+            if previous_applied_at:
+                applied_at = previous_applied_at
         pack["manualOverrideSummary"] = {
             "count": len(override_paths),
             "appliedAtUtc": applied_at,
@@ -430,6 +508,72 @@ def update_index(changed_countries: set[str]) -> bool:
     return write_json_if_changed(INDEX_PATH, index_payload)
 
 
+def build_simple_geofence_item(item: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "itemId": clean_text(item.get("id")),
+        "commonName": clean_text(item.get("commonName")),
+        "binomial": clean_text(item.get("binomial")),
+        "classLabel": clean_text(item.get("classLabel")),
+        "matchedKey": clean_text(item.get("matchedKey")),
+        "matchLevel": item.get("matchLevel") or 0,
+        "expectedCountries": normalize_country_codes(item.get("expectedCountries")),
+        "allowRegionalCountries": normalize_country_codes(item.get("allowRegionalCountries")),
+    }
+
+
+def refresh_global_artifacts() -> list[str]:
+    try:
+        animals_payload = load_json_file(ANIMALS_PATH)
+    except Exception as exc:  # noqa: BLE001
+        raise SystemExit(f"Failed to parse {ANIMALS_PATH.relative_to(ROOT).as_posix()}: {exc}") from exc
+
+    items = animals_payload.get("items") or []
+    geofence_tracking_items = load_geofence_tracking_items()
+    next_items: list[Any] = []
+    simple_items: list[dict[str, Any]] = []
+
+    for raw_item in items:
+        if not isinstance(raw_item, dict):
+            next_items.append(raw_item)
+            continue
+
+        item = deepcopy(raw_item)
+        item_id = clean_text(item.get("id"))
+        next_expected, next_regional = apply_item_country_overrides(
+            normalize_country_codes(item.get("expectedCountries")),
+            geofence_tracking_items.get(item_id),
+        )
+        item["expectedCountries"] = next_expected
+        if next_regional:
+            item["allowRegionalCountries"] = next_regional
+        else:
+            item.pop("allowRegionalCountries", None)
+        next_items.append(item)
+
+        if item_id:
+            simple_items.append(build_simple_geofence_item(item))
+
+    animals_payload["items"] = next_items
+    simple_payload = {
+        "generatedFor": clean_text(animals_payload.get("generatedFor")) or "Global",
+        "dataset": clean_text(animals_payload.get("dataset")),
+        "sourceMode": clean_text(animals_payload.get("sourceMode")),
+        "sourceFiles": deepcopy(animals_payload.get("sourceFiles") or {}),
+        "summary": {
+            "total": len(simple_items),
+            "countries": int(((animals_payload.get("summary") or {}).get("countries")) or 0),
+        },
+        "items": simple_items,
+    }
+
+    changed_paths: list[str] = []
+    if write_json_if_changed(ANIMALS_PATH, animals_payload):
+        changed_paths.append(ANIMALS_PATH.relative_to(ROOT).as_posix())
+    if write_json_if_changed(SIMPLE_GEOFENCE_PATH, simple_payload):
+        changed_paths.append(SIMPLE_GEOFENCE_PATH.relative_to(ROOT).as_posix())
+    return changed_paths
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Apply git-tracked country override files to published country packs.")
     parser.add_argument(
@@ -454,10 +598,6 @@ def main() -> None:
     else:
         countries_to_process = active_countries | derived_countries
 
-    if not countries_to_process:
-        print("No country overrides to apply.")
-        return
-
     changed_countries: set[str] = set()
     for iso3 in sorted(countries_to_process):
         pack_path = PACK_DIR / f"{iso3}.json"
@@ -470,7 +610,12 @@ def main() -> None:
             raise SystemExit(f"Failed to parse {pack_path.relative_to(ROOT).as_posix()}: {exc}") from exc
 
         restored_pack = restore_pack_base(current_pack)
-        next_pack = apply_country_overrides(restored_pack, override_files.get(iso3, []), animals_by_id)
+        next_pack = apply_country_overrides(
+            restored_pack,
+            override_files.get(iso3, []),
+            animals_by_id,
+            previous_override_summary=current_pack.get("manualOverrideSummary") if isinstance(current_pack.get("manualOverrideSummary"), dict) else None,
+        )
         if write_json_if_changed(pack_path, next_pack):
             changed_countries.add(iso3)
             print(f"Updated {pack_path.relative_to(ROOT).as_posix()} ({len(override_files.get(iso3, []))} overrides)")
@@ -481,6 +626,13 @@ def main() -> None:
         print(f"Updated {INDEX_PATH.relative_to(ROOT).as_posix()}")
     elif changed_countries:
         print(f"No index changes needed in {INDEX_PATH.relative_to(ROOT).as_posix()}")
+
+    global_artifact_paths = refresh_global_artifacts()
+    if global_artifact_paths:
+        for relative_path in global_artifact_paths:
+            print(f"Updated {relative_path}")
+    elif not changed_countries:
+        print("No override-derived artifacts changed.")
 
 
 if __name__ == "__main__":
