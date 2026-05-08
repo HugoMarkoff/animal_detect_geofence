@@ -93,6 +93,13 @@ def normalize_override_country_map(raw_mapping: object) -> set[str]:
     return countries
 
 
+def item_expected_in_country(item: dict[str, Any] | None, country_iso3: str) -> bool:
+    if not isinstance(item, dict):
+        return False
+
+    return country_iso3 in normalize_country_codes(item.get("expectedCountries"))
+
+
 def apply_item_country_overrides(
     expected_countries: list[str],
     item_override: dict[str, object] | None,
@@ -335,11 +342,21 @@ def apply_country_overrides(
     previous_override_summary: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     iso3 = clean_text(pack.get("generatedFor")).upper()
-    entries_by_id = {
-        clean_text(entry.get("itemId")): deepcopy(entry)
-        for entry in pack.get("entries") or []
-        if isinstance(entry, dict) and clean_text(entry.get("itemId"))
-    }
+    entries_by_id: dict[str, dict[str, Any]] = {}
+    for raw_entry in pack.get("entries") or []:
+        if not isinstance(raw_entry, dict):
+            continue
+
+        item_id = clean_text(raw_entry.get("itemId"))
+        if not item_id:
+            continue
+
+        # Drop stale expected entries that are no longer in the current global dataset
+        # for this country. Explicit override upserts can still add items back afterward.
+        if raw_entry.get("expected") and not item_expected_in_country(animals_by_id.get(item_id), iso3):
+            continue
+
+        entries_by_id[item_id] = deepcopy(raw_entry)
     removed_entries: list[dict[str, Any]] = []
     active_items: list[str] = []
 
@@ -590,13 +607,16 @@ def main() -> None:
     args = parse_args()
     animals_by_id = load_animals_by_id()
     override_files = collect_override_files()
-    active_countries = set(override_files)
-    derived_countries = collect_derived_override_countries()
+    pack_countries = {
+        path.stem.upper()
+        for path in PACK_DIR.glob("*.json")
+        if path.name != INDEX_PATH.name
+    }
 
     if args.countries:
         countries_to_process = {clean_text(country).upper() for country in args.countries if clean_text(country)}
     else:
-        countries_to_process = active_countries | derived_countries
+        countries_to_process = pack_countries
 
     changed_countries: set[str] = set()
     for iso3 in sorted(countries_to_process):

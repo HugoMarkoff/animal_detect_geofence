@@ -7,15 +7,15 @@
   "selectionMode": "expected-country",
   "candidateFile": null,
   "summary": {
-    "total": 159,
+    "total": 157,
     "statusCounts": {
       "likely_true_both": 80,
       "likely_true_one_source": 37,
-      "likely_false": 42
+      "likely_false": 40
     },
     "bucketCounts": {
       "Likely Valid": 117,
-      "Needs Review": 42
+      "Needs Review": 40
     }
   },
   "entries": [
@@ -2580,57 +2580,6 @@
         "note": "Dropped 17 likely outlier points before scoring. 73 cleaned observations are spread widely across Estonia, so this is treated as national coverage."
       },
       "bucket": "Likely Valid"
-    },
-    {
-      "itemId": "36b9abce-005b-439a-858f-1660e5027ccb",
-      "countryIso3": "EST",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 8265,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 239.96834143223396,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
     },
     {
       "itemId": "39275fa6-053d-4472-beab-dd2b6099a782",
@@ -8122,57 +8071,6 @@
         "note": "Dropped 11 likely outlier points before scoring. 2 dense observation areas were found in Estonia, so this is treated as national rather than a single regional pocket."
       },
       "bucket": "Likely Valid"
-    },
-    {
-      "itemId": "9b7dc1b3-01cf-4750-bf61-2653608e713b",
-      "countryIso3": "EST",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5219962,
-      "inatTaxonId": 1453430,
-      "inatPlaceId": 8265,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 239.96834143223396,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
     },
     {
       "itemId": "9ba3565d-9934-4e74-8ef4-d110ad587014",
