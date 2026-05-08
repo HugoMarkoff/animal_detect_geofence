@@ -1,5 +1,30 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "",
-  "items": {}
+  "updatedAtUtc": "2026-05-08T10:14:46.680Z",
+  "items": {
+    "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
+      "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+      "matchedKey": "mammalia;carnivora;herpestidae;herpestes;naso",
+      "speciesLabel": "long-nosed mongoose (herpestes naso)",
+      "commonName": "long-nosed mongoose",
+      "binomial": "herpestes naso",
+      "classLabel": "Mammal",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "allow": {},
+      "block": {
+        "DNK": true
+      },
+      "allow_regional": {},
+      "metadata": {
+        "DNK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "data/review-overrides/countries/DNK/3b0ae87d-0cb4-46c4-822b-c65047e69a88.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-05-08T10:14:46.680Z",
+          "reason": "Please remove long-nosed mongoose (herpestes naso) from the Denmark country pack."
+        }
+      }
+    }
+  }
 }
