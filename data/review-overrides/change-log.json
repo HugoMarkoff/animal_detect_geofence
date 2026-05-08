@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-05-08T10:14:46.987Z",
+  "updatedAtUtc": "2026-05-08T12:24:16.050Z",
   "entries": [
     {
       "id": "2026-05-08T10:14:46.987Z__DNK__3b0ae87d-0cb4-46c4-822b-c65047e69a88__removal",
@@ -19,6 +19,24 @@
         "data/review-overrides/geofence-binary-overrides.json"
       ],
       "reason": "Please remove long-nosed mongoose (herpestes naso) from the Denmark country pack."
+    },
+    {
+      "id": "2026-05-08T12:24:16.050Z__DNK__8e840c5c-c75f-47a1-90e3-5559ad64422b__removal",
+      "updatedAtUtc": "2026-05-08T12:24:16.050Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "DNK",
+      "countryName": "Denmark",
+      "suggestionType": "removal",
+      "requestedCoverage": "removed",
+      "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+      "matchedKey": "mammalia;eulipotyphla;erinaceidae;echinosorex;gymnura",
+      "speciesLabel": "moonrat (echinosorex gymnura)",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/countries/DNK/8e840c5c-c75f-47a1-90e3-5559ad64422b.json",
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Please remove moonrat (echinosorex gymnura) from the Denmark country pack."
     }
   ]
 }
