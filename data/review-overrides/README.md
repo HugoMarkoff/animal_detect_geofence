@@ -5,8 +5,17 @@ This directory is the git-native admin edit layer for published country packs.
 ## Layout
 
 - `countries/<ISO3>/<ITEM_ID>.json`: one override file per species per country.
+- `geofence-binary-overrides.json`: item-level binary `allow`, `block`, and `allow_regional` decisions captured from reviewed admin changes.
+- `change-log.json`: append-only audit log for review-desk changes.
 
 Keeping overrides split per item keeps merge conflicts low when multiple editors are working in the same country.
+
+The binary geofence file is intentionally non-spatial:
+
+- `geofence-binary-overrides.json` stores only country-level decisions.
+- `countries/<ISO3>/<ITEM_ID>.json` stores the national or regional country-pack override, including polygons when needed.
+
+This keeps the global geofence binary while the country pack remains the detailed polygon-bearing layer.
 
 ## Actions
 
@@ -76,3 +85,19 @@ python tools/apply_country_overrides.py
 ```
 
 The GitHub Actions workflow in [.github/workflows/apply-country-overrides.yml](../../.github/workflows/apply-country-overrides.yml) runs the same command and commits updated files in `data/precomputed-countries/`.
+
+## Binary geofence tracking
+
+`geofence-binary-overrides.json` is keyed by `itemId` because review-desk approvals are species-specific.
+
+Per item, it stores:
+
+- `allow.<ISO3> = true`: this species should be allowed in that country.
+- `block.<ISO3> = true`: this species should be removed from that country.
+- `allow_regional.<ISO3> = true`: this species is allowed in that country, but the approved coverage is regional instead of national.
+
+The root dataset builder reads this file during `build_global_animals_dataset.py`, adjusts `expectedCountries`, and emits `allowRegionalCountries` in the generated `animals-global.json`.
+
+## Change log
+
+`change-log.json` records each admin-reviewed action with the country, species, matched geofence key, requested coverage, touched files, reviewer login, and reason text.

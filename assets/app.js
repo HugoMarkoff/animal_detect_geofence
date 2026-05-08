@@ -80,7 +80,11 @@ const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260507a";
+const DATA_VERSION = "20260508c";
+const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
+const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
+const ADMIN_GEOFENCE_TRACKING_SCHEMA_VERSION = 1;
+const ADMIN_CHANGE_LOG_SCHEMA_VERSION = 1;
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
 const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260506h";
@@ -234,6 +238,7 @@ const countryPackCache = new Map();
 
 let animalCatalogCache = null;
 let countryCatalogCache = null;
+let globalDatasetInfo = null;
 
 const CURRENT_REGIONAL_STYLE = {
   color: "#2d9046",
@@ -674,6 +679,14 @@ async function loadAnimalCatalog() {
   }
 
   const dataset = await fetchJson(dataUrl("animals-global.json"));
+  globalDatasetInfo = {
+    dataset: cleanText(dataset?.dataset),
+    sourceMode: cleanText(dataset?.sourceMode),
+    sourceFiles: {
+      taxonomy: cleanText(dataset?.sourceFiles?.taxonomy),
+      geofence: cleanText(dataset?.sourceFiles?.geofence),
+    },
+  };
   animalCatalogCache = (dataset.items || [])
     .filter((item) => cleanText(item.id))
     .map((item) => {
@@ -733,7 +746,7 @@ function buildCountrySpeciesEntry(rawEntry, packMode) {
     return null;
   }
 
-  const bucket = statusToBucket(rawEntry.status);
+  const bucket = cleanText(rawEntry?.bucket) || statusToBucket(rawEntry.status);
   if (bucket === "Unlisted") {
     return null;
   }
@@ -1090,6 +1103,17 @@ function buildIssueBody(ticket) {
   lines.push(`- Regional species currently mapped: ${ticket.countryGroups?.regional || 0}`);
   lines.push("", "## Requested action", ticket.explanation);
 
+  const fileInstructions = buildFileInstructions(ticket);
+  lines.push("", "## Files to update");
+  fileInstructions.files.forEach((fileEntry) => {
+    lines.push(`- ${fileEntry}`);
+  });
+
+  lines.push("", "## Update instructions");
+  fileInstructions.instructions.forEach((instruction) => {
+    lines.push(`- ${instruction}`);
+  });
+
   if (ticket.polygons.length) {
     lines.push(
       "",
@@ -1126,8 +1150,7 @@ function buildEmailUrl(recipient, title, body) {
   }
 
   const baseUrl = `mailto:${recipient}`;
-  const fullParams = new URLSearchParams({ subject: title, body });
-  const fullUrl = `${baseUrl}?${fullParams.toString()}`;
+  const fullUrl = `${baseUrl}?subject=${encodeMailtoComponent(title)}&body=${encodeMailtoComponent(body)}`;
   if (fullUrl.length <= MAX_TICKET_URL_LENGTH) {
     return {
       url: fullUrl,
@@ -1135,9 +1158,8 @@ function buildEmailUrl(recipient, title, body) {
     };
   }
 
-  const titleOnlyParams = new URLSearchParams({ subject: title });
   return {
-    url: `${baseUrl}?${titleOnlyParams.toString()}`,
+    url: `${baseUrl}?subject=${encodeMailtoComponent(title)}`,
     includesBody: false,
   };
 }
@@ -1179,6 +1201,234 @@ function buildTicketPreviewData(payload) {
     warnings,
     ticket,
   };
+}
+
+function encodeMailtoComponent(value) {
+  return encodeURIComponent(String(value ?? "")).replace(/%20/g, "+");
+}
+
+function sourceGeofencePath() {
+  return cleanText(globalDatasetInfo?.sourceFiles?.geofence) || "geofence_new.json";
+}
+
+function sourceTaxonomyPath() {
+  return cleanText(globalDatasetInfo?.sourceFiles?.taxonomy) || "taxonomy_release.txt";
+}
+
+function adminTrackedSpecies(ticket, options = {}) {
+  const { requireCatalog = true } = options;
+  const target = adminOverrideTarget(ticket, { strict: requireCatalog });
+  const itemId = cleanText(target.itemId);
+  const fallbackLabel = cleanText(ticket.proposedSpecies?.label || ticket.currentSpecies?.label || "Selected species");
+  const fallbackCommonName = cleanText(ticket.proposedSpecies?.commonName || ticket.currentSpecies?.commonName);
+  const fallbackBinomial = cleanText(ticket.proposedSpecies?.binomial || ticket.currentSpecies?.binomial);
+
+  if (!itemId) {
+    return {
+      itemId: "",
+      matchedKey: "",
+      label: fallbackLabel,
+      commonName: fallbackCommonName,
+      binomial: fallbackBinomial,
+      classLabel: cleanText(ticket.proposedSpecies?.classLabel || ticket.currentSpecies?.classLabel),
+      expectedCountries: [],
+    };
+  }
+
+  const animal = animalById.get(itemId) || null;
+  if (!animal) {
+    if (requireCatalog) {
+      throw new Error("Could not resolve the selected species in the global catalog.");
+    }
+    return {
+      itemId,
+      matchedKey: "",
+      label: fallbackLabel,
+      commonName: fallbackCommonName,
+      binomial: fallbackBinomial,
+      classLabel: cleanText(ticket.proposedSpecies?.classLabel || ticket.currentSpecies?.classLabel),
+      expectedCountries: [],
+    };
+  }
+
+  const matchedKey = cleanText(animal.matchedKey);
+  if (!matchedKey && requireCatalog) {
+    throw new Error("The selected species does not expose a geofence matchedKey in the current global catalog.");
+  }
+
+  return {
+    itemId,
+    matchedKey,
+    label: speciesLabel(animal),
+    commonName: cleanText(animal.commonName),
+    binomial: cleanText(animal.binomial),
+    classLabel: cleanText(animal.classLabel),
+    expectedCountries: Array.isArray(animal.expectedCountries) ? animal.expectedCountries.map((iso3) => cleanText(iso3).toUpperCase()).filter(Boolean) : [],
+  };
+}
+
+function adminRequestedCoverage(ticket) {
+  if (ticket.suggestionType === "removal") {
+    return "removed";
+  }
+
+  if (ticket.scope === "regional" || ticket.currentSpecies?.footprintCode === "regional") {
+    return "regional";
+  }
+
+  return "national";
+}
+
+function buildFileInstructions(ticket) {
+  const trackedSpecies = adminTrackedSpecies(ticket, { requireCatalog: false });
+  const overridePath = adminOverrideTarget(ticket, { strict: false }).path;
+  const requestedCoverage = adminRequestedCoverage(ticket);
+  const files = [
+    `${sourceGeofencePath()} in the source dataset repo`,
+    ADMIN_GEOFENCE_TRACKING_PATH,
+    overridePath,
+    ADMIN_CHANGE_LOG_PATH,
+  ];
+  const instructions = [];
+  const matchedKeyText = trackedSpecies.matchedKey || "<MATCHED_KEY_FROM_ANIMALS_GLOBAL>";
+
+  if (ticket.suggestionType === "removal") {
+    instructions.push(`In ${sourceGeofencePath()}, make sure ${matchedKeyText} does not keep ${ticket.countryIso3} in allow and blocks it if needed.`);
+    instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, set ${matchedKeyText} so ${ticket.countryIso3} is blocked and not marked in allow_regional.`);
+    instructions.push(`In ${overridePath}, keep the remove action so the published country pack drops ${trackedSpecies.label}.`);
+  } else {
+    instructions.push(`In ${sourceGeofencePath()}, make sure ${matchedKeyText} allows ${ticket.countryIso3} in the binary country list.`);
+    if (requestedCoverage === "regional") {
+      instructions.push(`In ${sourceGeofencePath()}, add ${ticket.countryIso3} under the new allow_regional field for ${matchedKeyText}.`);
+      instructions.push(`In ${overridePath}, keep the regional observationProfile and the approved polygon for ${trackedSpecies.label}.`);
+    } else {
+      instructions.push(`In ${sourceGeofencePath()}, keep ${ticket.countryIso3} as allowed but remove it from allow_regional for ${matchedKeyText}.`);
+      instructions.push(`In ${overridePath}, keep ${trackedSpecies.label} as national coverage with no polygon.`);
+    }
+    instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, mirror the same binary allow decision for ${matchedKeyText} and ${ticket.countryIso3}.`);
+  }
+
+  instructions.push(`In ${ADMIN_CHANGE_LOG_PATH}, append this review change so later rebuilds and audits can trace who changed what.`);
+  instructions.push(`After editing the binary source in ${sourceGeofencePath()}, rebuild from ${sourceTaxonomyPath()} + ${sourceGeofencePath()} so animals-global.json stays aligned.`);
+
+  return { files, instructions };
+}
+
+function createEmptyGeofenceTrackingPayload() {
+  return {
+    schemaVersion: ADMIN_GEOFENCE_TRACKING_SCHEMA_VERSION,
+    updatedAtUtc: new Date().toISOString(),
+    items: {},
+  };
+}
+
+function createEmptyChangeLogPayload() {
+  return {
+    schemaVersion: ADMIN_CHANGE_LOG_SCHEMA_VERSION,
+    updatedAtUtc: new Date().toISOString(),
+    entries: [],
+  };
+}
+
+function cloneJson(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+function applyGeofenceDecision(trackingPayload, ticket, login) {
+  const payload = cloneJson(trackingPayload || createEmptyGeofenceTrackingPayload());
+  const trackedSpecies = adminTrackedSpecies(ticket);
+  const requestedCoverage = adminRequestedCoverage(ticket);
+  const iso3 = ticket.countryIso3;
+  const updatedAtUtc = new Date().toISOString();
+
+  payload.schemaVersion = ADMIN_GEOFENCE_TRACKING_SCHEMA_VERSION;
+  payload.updatedAtUtc = updatedAtUtc;
+  payload.items ||= {};
+  payload.items[trackedSpecies.itemId] ||= {
+    itemId: trackedSpecies.itemId,
+    matchedKey: trackedSpecies.matchedKey,
+    speciesLabel: trackedSpecies.label,
+    commonName: trackedSpecies.commonName,
+    binomial: trackedSpecies.binomial,
+    classLabel: trackedSpecies.classLabel,
+    sourceDataset: cleanText(globalDatasetInfo?.dataset),
+    allow: {},
+    block: {},
+    allow_regional: {},
+    metadata: {},
+  };
+
+  const entry = payload.items[trackedSpecies.itemId];
+  entry.matchedKey = trackedSpecies.matchedKey;
+  entry.speciesLabel = trackedSpecies.label;
+  entry.commonName = trackedSpecies.commonName;
+  entry.binomial = trackedSpecies.binomial;
+  entry.classLabel = trackedSpecies.classLabel;
+  entry.sourceDataset = cleanText(globalDatasetInfo?.dataset);
+  entry.allow ||= {};
+  entry.block ||= {};
+  entry.allow_regional ||= {};
+  entry.metadata ||= {};
+
+  delete entry.allow[iso3];
+  delete entry.block[iso3];
+  delete entry.allow_regional[iso3];
+
+  if (ticket.suggestionType === "removal") {
+    entry.block[iso3] = true;
+    entry.metadata[iso3] = {
+      decision: "block",
+      coverage: requestedCoverage,
+      overridePath: adminOverrideTarget(ticket).path,
+      updatedBy: login,
+      updatedAtUtc,
+      reason: ticket.explanation,
+    };
+  } else {
+    entry.allow[iso3] = true;
+    if (requestedCoverage === "regional") {
+      entry.allow_regional[iso3] = true;
+    }
+    entry.metadata[iso3] = {
+      decision: "allow",
+      coverage: requestedCoverage,
+      overridePath: adminOverrideTarget(ticket).path,
+      updatedBy: login,
+      updatedAtUtc,
+      reason: ticket.explanation,
+    };
+  }
+
+  return payload;
+}
+
+function appendChangeLog(changeLogPayload, ticket, login) {
+  const payload = cloneJson(changeLogPayload || createEmptyChangeLogPayload());
+  const trackedSpecies = adminTrackedSpecies(ticket);
+  const updatedAtUtc = new Date().toISOString();
+
+  payload.schemaVersion = ADMIN_CHANGE_LOG_SCHEMA_VERSION;
+  payload.updatedAtUtc = updatedAtUtc;
+  payload.entries = Array.isArray(payload.entries) ? payload.entries : [];
+  payload.entries.push({
+    id: `${updatedAtUtc}__${ticket.countryIso3}__${trackedSpecies.itemId}__${ticket.suggestionType}`,
+    updatedAtUtc,
+    updatedBy: login,
+    countryIso3: ticket.countryIso3,
+    countryName: ticket.countryName,
+    suggestionType: ticket.suggestionType,
+    requestedCoverage: adminRequestedCoverage(ticket),
+    itemId: trackedSpecies.itemId,
+    matchedKey: trackedSpecies.matchedKey,
+    speciesLabel: trackedSpecies.label,
+    sourceDataset: cleanText(globalDatasetInfo?.dataset),
+    files: [
+      adminOverrideTarget(ticket).path,
+      ADMIN_GEOFENCE_TRACKING_PATH,
+    ],
+    reason: ticket.explanation,
+  });
+  return payload;
 }
 
 function parseGitHubRepo(repository) {
@@ -1241,12 +1491,119 @@ async function fetchGitHubJson(path, options = {}) {
   return payload;
 }
 
-function adminOverrideTarget(ticket) {
+function fromBase64Utf8(value) {
+  const normalized = cleanText(value).replace(/\n/g, "");
+  if (!normalized) {
+    return "";
+  }
+
+  const binary = atob(normalized);
+  const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+async function readGitHubContentsJson(owner, repo, path, token, createFallback) {
+  const encodedPath = encodeGitHubPath(path);
+  const contents = await fetchGitHubJson(`/repos/${owner}/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(DEFAULT_GITHUB_BRANCH)}`, {
+    token,
+    allowNotFound: true,
+  });
+
+  if (!contents) {
+    return createFallback();
+  }
+
+  const decoded = fromBase64Utf8(contents.content || "");
+  if (!cleanText(decoded)) {
+    return createFallback();
+  }
+
+  try {
+    return JSON.parse(decoded);
+  } catch (error) {
+    throw new Error(`Could not parse ${path}: ${error.message || error}`);
+  }
+}
+
+async function commitGitHubFiles(owner, repo, branch, message, fileEntries, token) {
+  const ref = await fetchGitHubJson(`/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`, { token });
+  const parentSha = cleanText(ref?.object?.sha);
+  if (!parentSha) {
+    throw new Error(`Could not resolve the current ${branch} branch head.`);
+  }
+
+  const parentCommit = await fetchGitHubJson(`/repos/${owner}/${repo}/git/commits/${parentSha}`, { token });
+  const baseTreeSha = cleanText(parentCommit?.tree?.sha);
+  if (!baseTreeSha) {
+    throw new Error("Could not resolve the current Git tree for the admin commit.");
+  }
+
+  const tree = [];
+  for (const fileEntry of fileEntries) {
+    const blob = await fetchGitHubJson(`/repos/${owner}/${repo}/git/blobs`, {
+      method: "POST",
+      token,
+      body: {
+        content: fileEntry.content,
+        encoding: "utf-8",
+      },
+    });
+
+    tree.push({
+      path: fileEntry.path,
+      mode: "100644",
+      type: "blob",
+      sha: cleanText(blob?.sha),
+    });
+  }
+
+  const nextTree = await fetchGitHubJson(`/repos/${owner}/${repo}/git/trees`, {
+    method: "POST",
+    token,
+    body: {
+      base_tree: baseTreeSha,
+      tree,
+    },
+  });
+
+  const nextCommit = await fetchGitHubJson(`/repos/${owner}/${repo}/git/commits`, {
+    method: "POST",
+    token,
+    body: {
+      message,
+      tree: cleanText(nextTree?.sha),
+      parents: [parentSha],
+    },
+  });
+
+  await fetchGitHubJson(`/repos/${owner}/${repo}/git/refs/heads/${encodeURIComponent(branch)}`, {
+    method: "PATCH",
+    token,
+    body: {
+      sha: cleanText(nextCommit?.sha),
+      force: false,
+    },
+  });
+
+  return {
+    sha: cleanText(nextCommit?.sha),
+    htmlUrl: cleanText(nextCommit?.html_url) || `https://github.com/${owner}/${repo}/commit/${cleanText(nextCommit?.sha)}`,
+  };
+}
+
+function adminOverrideTarget(ticket, options = {}) {
+  const { strict = true } = options;
   const itemId = ticket.suggestionType === "addition"
     ? cleanText(ticket.proposedSpecies?.itemId)
     : cleanText(ticket.currentSpecies?.itemId);
 
   if (!itemId) {
+    if (!strict) {
+      return {
+        itemId: "",
+        path: `data/review-overrides/countries/${ticket.countryIso3}/<CATALOG_ITEM_ID>.json`,
+      };
+    }
     throw new Error("Admin apply needs a real catalog species selection.");
   }
 
@@ -1389,9 +1746,41 @@ function buildAdminOverridePayload(ticket, login) {
   };
 }
 
+function serializeJsonFile(payload) {
+  return `${JSON.stringify(payload, null, 2)}\n`;
+}
+
+async function buildAdminFileEntries(owner, repo, ticket, login, token) {
+  const geofenceTrackingPayload = applyGeofenceDecision(
+    await readGitHubContentsJson(owner, repo, ADMIN_GEOFENCE_TRACKING_PATH, token, createEmptyGeofenceTrackingPayload),
+    ticket,
+    login,
+  );
+  const changeLogPayload = appendChangeLog(
+    await readGitHubContentsJson(owner, repo, ADMIN_CHANGE_LOG_PATH, token, createEmptyChangeLogPayload),
+    ticket,
+    login,
+  );
+
+  return [
+    {
+      path: adminOverrideTarget(ticket).path,
+      content: serializeJsonFile(buildAdminOverridePayload(ticket, login)),
+    },
+    {
+      path: ADMIN_GEOFENCE_TRACKING_PATH,
+      content: serializeJsonFile(geofenceTrackingPayload),
+    },
+    {
+      path: ADMIN_CHANGE_LOG_PATH,
+      content: serializeJsonFile(changeLogPayload),
+    },
+  ];
+}
+
 function adminCommitMessage(ticket) {
   const summary = buildTicketSummary(ticket);
-  return `Apply admin override for ${ticket.countryIso3}: ${summary}`;
+  return `Apply admin review files for ${ticket.countryIso3}: ${summary}`;
 }
 
 function buildAdminSessionSpeciesEntry(ticket) {
@@ -1698,25 +2087,10 @@ async function applyAdminChanges() {
     const ticket = state.preview.ticket;
     const { owner, repo } = parseGitHubRepo(DEFAULT_GITHUB_REPO);
     const target = adminOverrideTarget(ticket);
-    const encodedPath = encodeGitHubPath(target.path);
-    const existing = await fetchGitHubJson(`/repos/${owner}/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(DEFAULT_GITHUB_BRANCH)}`, {
-      token: state.admin.token,
-      allowNotFound: true,
-    });
+    const fileEntries = await buildAdminFileEntries(owner, repo, ticket, state.admin.login, state.admin.token);
+    const result = await commitGitHubFiles(owner, repo, DEFAULT_GITHUB_BRANCH, adminCommitMessage(ticket), fileEntries, state.admin.token);
 
-    const content = `${JSON.stringify(buildAdminOverridePayload(ticket, state.admin.login), null, 2)}\n`;
-    const result = await fetchGitHubJson(`/repos/${owner}/${repo}/contents/${encodedPath}`, {
-      method: "PUT",
-      token: state.admin.token,
-      body: {
-        message: adminCommitMessage(ticket),
-        branch: DEFAULT_GITHUB_BRANCH,
-        content: toBase64Utf8(content),
-        ...(existing?.sha ? { sha: existing.sha } : {}),
-      },
-    });
-
-    state.admin.lastCommitUrl = cleanText(result?.commit?.html_url);
+    state.admin.lastCommitUrl = cleanText(result?.htmlUrl);
     let sessionUpdated = false;
     try {
       sessionUpdated = await applyAdminOverrideLocally(ticket);
@@ -1724,7 +2098,7 @@ async function applyAdminChanges() {
       console.error(localError);
     }
 
-    const publishedNote = "The published country pack updates after the rebuild step commits regenerated pack files.";
+    const publishedNote = "The country override, binary geofence tracking file, and change log were committed. The published country pack updates after the rebuild step commits regenerated pack files.";
     if (sessionUpdated) {
       setAdminMessage(`Override committed for ${target.itemId}. This browser session now shows the change. ${publishedNote}`);
       setStatus("Admin override committed. This browser session now shows the change.");
@@ -3077,6 +3451,145 @@ function currentSpeciesById(itemId) {
   return state.currentCountry?.species?.find((entry) => entry.itemId === itemId) || null;
 }
 
+function adminShortcutState(entry, suggestion) {
+  if (!state.currentCountry) {
+    return {
+      ok: false,
+      message: "Load a country pack before using admin shortcuts.",
+    };
+  }
+
+  if (!state.admin.login) {
+    return {
+      ok: false,
+      message: "Connect a GitHub admin session to use admin shortcuts.",
+    };
+  }
+
+  if (!state.admin.canWrite) {
+    return {
+      ok: false,
+      message: `@${state.admin.login} does not have write access to ${DEFAULT_GITHUB_REPO}.`,
+    };
+  }
+
+  if (state.admin.isConnecting) {
+    return {
+      ok: false,
+      message: "Wait for the GitHub admin session to finish connecting.",
+    };
+  }
+
+  if (state.admin.isApplying) {
+    return {
+      ok: false,
+      message: "Another admin change is already being committed.",
+    };
+  }
+
+  if (!entry) {
+    return {
+      ok: false,
+      message: "Choose a species from the current pack first.",
+    };
+  }
+
+  if (suggestion === "accept_new" && !isNewDiscovery(entry)) {
+    return {
+      ok: false,
+      message: "Approve is only available for species currently marked New.",
+    };
+  }
+
+  return {
+    ok: true,
+    message: "Admin shortcut ready.",
+  };
+}
+
+function buildAdminShortcutPayload(entry, suggestion) {
+  return {
+    countryIso3: state.currentCountry?.iso3 || "",
+    suggestionType: suggestion,
+    currentSpeciesItemId: entry.itemId,
+    proposedSpeciesItemId: "",
+    proposedSpeciesLabel: "",
+    scope: normalizedScopeForSpecies(entry),
+    notifyOnFix: false,
+    notificationEmail: "",
+    polygons: [],
+  };
+}
+
+function adminShortcutPrompt(ticket) {
+  const actionText = ticket.suggestionType === "accept_new"
+    ? "approve this species into the permanent pack"
+    : "remove this species from the current pack";
+  return `${buildTicketSummary(ticket)}\n\nThis will ${actionText} by committing the admin override files directly to GitHub for ${ticket.countryIso3}. Continue?`;
+}
+
+async function runAdminShortcutAction(itemId, suggestion) {
+  const entry = currentSpeciesById(cleanText(itemId));
+  const shortcutState = adminShortcutState(entry, suggestion);
+  if (!shortcutState.ok) {
+    setAdminMessage(shortcutState.message, true);
+    setStatus(shortcutState.message, true);
+    renderAdminState();
+    return;
+  }
+
+  setSuggestionTypeValue(suggestion);
+  applySpeciesSelection(entry.itemId, true);
+
+  try {
+    cancelTicketPreviewRefresh();
+    const preview = buildTicketPreviewData(buildAdminShortcutPayload(entry, suggestion));
+    renderTicketPreview(preview);
+
+    if (!window.confirm(adminShortcutPrompt(preview.ticket))) {
+      setStatus("Admin shortcut cancelled.");
+      return;
+    }
+
+    await applyAdminChanges();
+  } catch (error) {
+    setAdminMessage(error.message || "Could not prepare the admin shortcut.", true);
+    setStatus(error.message || "Could not prepare the admin shortcut.", true);
+    renderAdminState();
+  }
+}
+
+function renderSpeciesAdminActions(entry) {
+  if (!state.admin.login) {
+    return "";
+  }
+
+  const disabled = !state.admin.canWrite || state.admin.isConnecting || state.admin.isApplying;
+  const disabledAttr = disabled ? " disabled" : "";
+  const safeLabel = escapeHtml(entry.commonName || entry.label);
+  const buttons = [];
+
+  if (isNewDiscovery(entry)) {
+    buttons.push(`
+      <button class="species-card-action species-card-action-accept" type="button" data-admin-shortcut="accept_new" data-item-id="${entry.itemId}" title="Approve ${safeLabel} into the permanent pack" aria-label="Approve ${safeLabel} into the permanent pack"${disabledAttr}>
+        &#10003;
+      </button>
+    `);
+  }
+
+  buttons.push(`
+    <button class="species-card-action species-card-action-remove" type="button" data-admin-shortcut="removal" data-item-id="${entry.itemId}" title="Remove ${safeLabel} from the current pack" aria-label="Remove ${safeLabel} from the current pack"${disabledAttr}>
+      &#10005;
+    </button>
+  `);
+
+  return `
+    <div class="species-card-actions">
+      ${buttons.join("")}
+    </div>
+  `;
+}
+
 function buildSummaryText(country) {
   const total = visibleSpecies(country).length || country.summary?.total || 0;
   const likelyValidCount = groupCount(country, "likely_valid");
@@ -3158,21 +3671,29 @@ function renderSpeciesCard(entry) {
   const classBadge = cleanText(entry.classLabel)
     ? `<span class="badge badge-class">${escapeHtml(entry.classLabel)}</span>`
     : "";
+  const expectedBadge = entry.expected === false
+    ? '<span class="badge badge-expected-false">Not in geofence</span>'
+    : "";
   const bucketBadge = effectiveBucket(entry);
+  const adminActions = renderSpeciesAdminActions(entry);
   return `
-    <button class="species-card ${selectedClass}" type="button" data-item-id="${entry.itemId}">
-      <div class="species-card-main">
-        <div>
-          <strong>${escapeHtml(entry.commonName || entry.label)}</strong>
-          ${entry.binomial ? `<em>${escapeHtml(entry.binomial)}</em>` : ""}
+    <article class="species-card ${selectedClass}">
+      <button class="species-card-select" type="button" data-item-id="${entry.itemId}">
+        <div class="species-card-main">
+          <div>
+            <strong>${escapeHtml(entry.commonName || entry.label)}</strong>
+            ${entry.binomial ? `<em>${escapeHtml(entry.binomial)}</em>` : ""}
+          </div>
         </div>
-      </div>
-      <div class="species-card-meta">
-        ${classBadge}
-        <span class="badge badge-footprint">${escapeHtml(entry.footprintShort)}</span>
-        <span class="badge badge-bucket">${escapeHtml(bucketBadge)}</span>
-      </div>
-    </button>
+        <div class="species-card-meta">
+          ${classBadge}
+          ${expectedBadge}
+          <span class="badge badge-footprint">${escapeHtml(entry.footprintShort)}</span>
+          <span class="badge badge-bucket">${escapeHtml(bucketBadge)}</span>
+        </div>
+      </button>
+      ${adminActions}
+    </article>
   `;
 }
 
@@ -4527,6 +5048,14 @@ groupChips.addEventListener("click", (event) => {
 });
 
 speciesList.addEventListener("click", (event) => {
+  const shortcutButton = event.target.closest("[data-admin-shortcut]");
+  if (shortcutButton) {
+    event.preventDefault();
+    event.stopPropagation();
+    void runAdminShortcutAction(shortcutButton.dataset.itemId, shortcutButton.dataset.adminShortcut);
+    return;
+  }
+
   const card = event.target.closest("[data-item-id]");
   if (!card) {
     return;

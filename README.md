@@ -9,6 +9,8 @@ Standalone repository for the country-pack review and ticket workflow.
 - `data/animals-global.json`: global animal catalog used for lookup and ticket forms.
 - `data/precomputed-countries/`: precomputed country packs and regional footprint polygons.
 - `data/review-overrides/`: git-tracked per-country override files applied on top of published packs.
+- `data/review-overrides/geofence-binary-overrides.json`: global binary species-country decisions with `allow_regional` for reviewed regional approvals.
+- `data/review-overrides/change-log.json`: append-only audit trail for admin-reviewed changes.
 - `tools/apply_country_overrides.py`: reapplies override files into published country packs and refreshes the country index.
 - `HANDOVER_GUIDE.md`: project context, transfer notes, and next-step guidance.
 - `suggestion_app/`: earlier Flask prototype kept as a reference while the Pages version becomes primary.
@@ -26,6 +28,12 @@ By default, GitHub issue drafts target `HugoMarkoff/animal_detect_geofence`.
 ## Country Overrides
 
 Manual country corrections now have a git-native override layer under [data/review-overrides/README.md](data/review-overrides/README.md).
+
+Admin Apply now writes three linked artifacts in one GitHub commit:
+
+- the country override file under `data/review-overrides/countries/<ISO3>/<ITEM_ID>.json`
+- the binary global decision in `data/review-overrides/geofence-binary-overrides.json`
+- the audit entry in `data/review-overrides/change-log.json`
 
 To apply overrides locally:
 
