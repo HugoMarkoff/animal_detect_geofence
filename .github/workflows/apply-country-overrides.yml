@@ -32,14 +32,15 @@ jobs:
       - name: Apply tracked overrides
         run: python tools/apply_country_overrides.py
 
-      - name: Commit regenerated packs
+      - name: Commit regenerated packs and publish
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet --exit-code -- data/precomputed-countries; then
             echo "No regenerated country packs to commit."
+            git push origin HEAD:gh-pages
             exit 0
           fi
           git add data/precomputed-countries
           git commit -m "Apply country overrides"
-          git push
+          git push --atomic origin HEAD:main HEAD:gh-pages
