@@ -93,7 +93,7 @@ const ADMIN_GEOFENCE_TRACKING_SCHEMA_VERSION = 1;
 const ADMIN_CHANGE_LOG_SCHEMA_VERSION = 1;
 const MAX_TICKET_URL_LENGTH = 7000;
 const NOTIFICATION_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/i;
-const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260506h";
+const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260510g";
 const ADMIN_TOKEN_HANDOFF_KEY = "country-pack-review-admin-token-handoff-20260507a";
 const ADMIN_SESSION_TOKEN_KEY = "country-pack-review-admin-session-token-20260507a";
 const ADMIN_PERSISTENT_TOKEN_KEY = "country-pack-review-admin-persistent-token-20260507a";
@@ -156,16 +156,43 @@ const GROUP_LABELS = {
 };
 const ONBOARDING_STEPS = [
   {
+    intro: true,
+    hideSpotlight: true,
+    scrollToTop: true,
+    fullScreen: true,
+    stepLabel: "Welcome",
+    nextLabel: "Continue to guide",
+    skipLabel: "Exit",
+    title: "Welcome To The Review Desk",
+    bodyHtml: `
+      <p><strong>Welcome.</strong> Please spend a minute reading this before you start reviewing countries.</p>
+      <p>This page is used to <strong>add</strong>, <strong>remove</strong>, or <strong>correct</strong> species in the country packs used by Animal Detect.</p>
+      <p>The current geofencing is based on human observations and machine-validated records, but it is not perfect. This review desk exists so you can suggest where the country packs should change.</p>
+      <ul class="onboarding-list">
+        <li>The model currently works with <strong>2019 species</strong>.</li>
+        <li>Each country is limited to species that could reasonably be detected there, so the model can fall back to a higher taxonomic level instead of forcing a wrong species label.</li>
+        <li>That country-level filter is called <strong>geofencing</strong>.</li>
+        <li><strong>National</strong> means the species should be allowed across most of the country.</li>
+        <li><strong>Regional</strong> means the species should be allowed only in one or a few limited areas.</li>
+        <li><strong>Examples:</strong> Moose in Denmark is regional because rewilded animals are concentrated in Lille Vildmose rather than across Denmark. Migratory birds are often regional because they are seen in specific stopover areas instead of nationwide.</li>
+        <li>Suggest a change when a species should be <strong>added</strong>, <strong>removed</strong>, or kept with different coverage.</li>
+        <li>Accepted changes are implemented in the <strong>Animal Detect API within 24 hours</strong>.</li>
+      </ul>
+      <p class="onboarding-note">Rule of thumb: if a species could realistically appear on a camera trap in the wild in that country, it should usually be in scope. There is some gray area for semi-domestic species if they roam public land and can still pass camera traps.</p>
+      <p class="onboarding-note">Requests with GPS latitude and longitude can match both national and regional species. Requests with only a 3-letter ISO country code use national species only. Accepted national changes are also candidates for SpeciesNet follow-up. For the United States, you can review either the whole country or switch into individual state packs.</p>
+    `,
+  },
+  {
     targetKey: "browser",
     targetSelector: ".browser-panel",
-    title: "What the review buckets mean",
+    title: "What The Review Buckets Mean",
     bodyHtml: `
       <ul class="onboarding-list">
         <li><strong>New</strong> = ask to add a species to the current country list.</li>
         <li><strong>Needs Review</strong> = ask whether a listed species should stay or be removed.</li>
         <li><strong>Likely Valid</strong> = the current listing still looks fine.</li>
       </ul>
-      <p class="onboarding-note">Example: African wildcat is <strong>Needs Review</strong>. Raccoon dog would be <strong>New</strong> if Denmark is missing from its allow list.</p>
+      <p class="onboarding-note">Example: African wildcat is <strong>Needs Review</strong>. A missing Denmark entry for raccoon dog would show up as <strong>New</strong>.</p>
     `,
   },
   {
@@ -232,6 +259,8 @@ const ONBOARDING_STEPS = [
     `,
   },
 ];
+
+const ONBOARDING_GUIDE_STEPS = ONBOARDING_STEPS.filter((step) => !step.intro);
 
 const countryCenterCache = new Map();
 const countryGeometryCache = new Map();
@@ -4143,6 +4172,8 @@ function updateOnboardingStepControls(step) {
   onboardingNextButton.hidden = false;
   onboardingNextButton.disabled = false;
   onboardingBackButton.disabled = false;
+  onboardingSkipButton.textContent = step?.skipLabel || "Stop guide";
+  onboardingNextButton.textContent = step?.nextLabel || (onboardingStepIndex === ONBOARDING_STEPS.length - 1 ? "Start reviewing" : "Next");
   onboardingBody?.querySelectorAll("[data-demo-action]").forEach((button) => {
     const action = button.dataset.demoAction || "";
     const isRequired = requiredActions.includes(action);
@@ -4161,17 +4192,18 @@ function renderOnboardingStep() {
     return;
   }
 
-  onboardingStepLabel.textContent = `Quick guide · ${onboardingStepIndex + 1} of ${ONBOARDING_STEPS.length}`;
+  const guideStepIndex = ONBOARDING_GUIDE_STEPS.indexOf(step);
+  onboardingStepLabel.textContent = step.stepLabel || `Quick guide · ${guideStepIndex + 1} of ${ONBOARDING_GUIDE_STEPS.length}`;
   onboardingTitle.textContent = step.title;
   onboardingBody.innerHTML = step.bodyHtml;
   onboardingBackButton.hidden = onboardingStepIndex === 0;
-  onboardingNextButton.textContent = onboardingStepIndex === ONBOARDING_STEPS.length - 1 ? "Start reviewing" : "Next";
   clearOnboardingLiveTargets();
   onboardingViewportTarget = null;
   onboardingViewportFollowsTarget = false;
   updateOnboardingStepControls(step);
   if (onboardingShell) {
     onboardingShell.dataset.target = onboardingShellTargetKey(step);
+    onboardingShell.classList.toggle("is-welcome", Boolean(step.fullScreen));
   }
 
   const target = onboardingTargetElement(step);
@@ -4202,6 +4234,7 @@ function closeOnboarding(markSeen = true) {
   onboardingOverlay.hidden = true;
   hideOnboardingSpotlight();
   resetOnboardingCardPosition();
+  onboardingShell?.classList.remove("is-welcome");
   onboardingViewportTarget = null;
   onboardingViewportFollowsTarget = false;
   setOnboardingScrollLock(false);

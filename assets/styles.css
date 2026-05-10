@@ -1515,6 +1515,11 @@ button {
   padding: 0;
 }
 
+.onboarding-shell.is-welcome {
+  align-items: stretch;
+  justify-items: stretch;
+}
+
 .onboarding-card {
   display: grid;
   gap: 12px;
@@ -1527,6 +1532,16 @@ button {
   box-shadow: 0 26px 54px rgba(24, 28, 31, 0.24);
   overflow: hidden;
   pointer-events: auto;
+}
+
+.onboarding-shell.is-welcome .onboarding-card {
+  gap: 18px;
+  width: min(100%, calc(100vw - 48px));
+  max-height: none;
+  height: calc(100vh - 48px);
+  padding: 32px clamp(20px, 4vw, 48px);
+  border-radius: 30px;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 .onboarding-shell.following-target .onboarding-card {
@@ -1542,11 +1557,32 @@ button {
   margin-bottom: 0;
 }
 
+.onboarding-shell.is-welcome .onboarding-kicker,
+.onboarding-shell.is-welcome #onboarding-title,
+.onboarding-shell.is-welcome .onboarding-body,
+.onboarding-shell.is-welcome .onboarding-actions {
+  width: min(100%, 880px);
+  margin: 0 auto;
+}
+
+.onboarding-shell.is-welcome #onboarding-title {
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.02;
+}
+
 .onboarding-body {
   display: grid;
   gap: 10px;
   color: var(--ink);
   line-height: 1.45;
+}
+
+.onboarding-shell.is-welcome .onboarding-body {
+  align-content: start;
+  gap: 16px;
+  font-size: clamp(1rem, 1.4vw, 1.08rem);
+  overflow: auto;
+  padding-right: 8px;
 }
 
 .onboarding-body p,
@@ -1563,6 +1599,10 @@ button {
   display: grid;
   gap: 8px;
   padding-left: 20px;
+}
+
+.onboarding-shell.is-welcome .onboarding-list {
+  gap: 12px;
 }
 
 .onboarding-note {
@@ -1628,6 +1668,12 @@ button {
   justify-content: space-between;
   gap: 10px;
   padding-top: 4px;
+}
+
+.onboarding-shell.is-welcome .onboarding-actions {
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid rgba(24, 28, 31, 0.08);
 }
 
 .onboarding-actions .secondary-button {
@@ -1857,6 +1903,16 @@ button {
     width: min(100%, 100%);
     max-height: min(72vh, 520px);
     padding: 16px;
+  }
+
+  .onboarding-shell.is-welcome .onboarding-card {
+    height: calc(100vh - 28px);
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .onboarding-shell.is-welcome #onboarding-title {
+    font-size: clamp(1.8rem, 8vw, 2.4rem);
   }
 
   .onboarding-spotlight {
