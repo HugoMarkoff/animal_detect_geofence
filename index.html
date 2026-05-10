@@ -17,7 +17,7 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260508b">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260510b">
   </head>
   <body>
     <main class="shell">
@@ -88,6 +88,17 @@
                     <div id="country-options" class="combo-menu" role="listbox" hidden></div>
                   </div>
                   <input id="countryIso3" name="countryIso3" type="hidden" value="">
+                </label>
+                <label class="field compact-field" id="state-field" hidden>
+                  <span>State</span>
+                  <div id="state-combobox" class="combo-box">
+                    <div class="combo-input-shell">
+                      <input id="stateLabel" name="stateLabel" placeholder="All states" autocomplete="off" spellcheck="false" aria-label="State" aria-autocomplete="list" aria-expanded="false" aria-controls="state-options">
+                      <button id="state-toggle" class="combo-toggle" type="button" aria-label="Toggle states"></button>
+                    </div>
+                    <div id="state-options" class="combo-menu" role="listbox" hidden></div>
+                  </div>
+                  <input id="stateIso" name="stateIso" type="hidden" value="">
                 </label>
               </div>
             </div>
@@ -321,6 +332,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260508c"></script>
+    <script src="./assets/app.js?v=20260510b"></script>
   </body>
 </html>

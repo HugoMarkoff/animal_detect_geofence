@@ -1,22 +1,25 @@
 {
   "generatedFor": "AIA",
   "countryName": "Anguilla",
-  "generatedAtUtc": "2026-05-07T16:29:20.587815+00:00",
+  "generatedAtUtc": "2026-05-10T07:49:17.541590+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
   "precomputeMode": "validated",
-  "selectionMode": "expected-country",
-  "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/country-validation/AIA/new_candidates.csv",
+  "selectionMode": "country-indexed",
+  "candidateFile": null,
   "summary": {
-    "total": 96,
+    "total": 117,
     "statusCounts": {
-      "likely_true_one_source": 22,
-      "likely_false": 73,
-      "unlisted": 1
+      "likely_true_one_source": 9,
+      "likely_false": 64,
+      "likely_true_both": 25,
+      "unlisted": 12,
+      "new_record": 7
     },
     "bucketCounts": {
-      "Likely Valid": 22,
-      "Needs Review": 73,
-      "Unlisted": 1
+      "Likely Valid": 34,
+      "Needs Review": 64,
+      "Unlisted": 12,
+      "New": 7
     }
   },
   "entries": [
@@ -24,16 +27,17 @@
       "itemId": "022ddce9-d300-4356-9eca-00ce5847c581",
       "countryIso3": "AIA",
       "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 544,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 544,
-      "rawInatCount": null,
-      "gbifUsageKey": 5228199,
+      "gbifPresent": null,
+      "inatPresent": true,
+      "gbifCount": null,
+      "inatCount": 4,
+      "rawGbifPresent": null,
+      "rawInatPresent": true,
+      "rawGbifCount": null,
+      "rawInatCount": 4,
+      "gbifUsageKey": null,
       "inatTaxonId": 144479,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -46,8 +50,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 544,
-        "qualifiedTotal": 544,
+        "rawTotal": 4,
+        "qualifiedTotal": 4,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -56,56 +60,45 @@
         "note": ""
       },
       "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 90,
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Only 4 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 4,
+        "corePointCount": 4,
         "outlierPointCount": 0,
         "clusterCount": 1,
         "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 16.002032041114795,
+        "maxDistanceKm": 11.799693624604807,
         "unique25kmCells": 2,
         "unique50kmCells": 2,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 1.4866179768825012,
-        "coverageAreaKm2": 528.768746945241,
-        "coverageRatio": 5.810645570826824,
+        "spreadRatio": 1.0962130696259555,
+        "coverageAreaKm2": 391.83785233816366,
+        "coverageRatio": 4.305910465254546,
         "footprintPolygonLatLngs": [
           [
-            18.15452148211194,
-            -63.207042048195596
+            18.146823193194514,
+            -63.22873689006461
           ],
           [
-            18.141371538606638,
-            -63.19841184346085
+            18.21403403287563,
+            -62.97587658971609
           ],
           [
-            18.136246777323123,
-            -63.18555747386558
-          ],
-          [
-            18.176796223131888,
-            -62.97555833567008
-          ],
-          [
-            18.26491411426183,
-            -62.92744332260782
-          ],
-          [
-            18.30925739320692,
-            -62.981856447918226
+            18.21804365725397,
+            -62.97667212318314
           ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+        ]
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -116,7 +109,7 @@
       "rawGbifCount": null,
       "rawInatCount": null,
       "gbifUsageKey": null,
-      "inatTaxonId": 513889,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": false,
@@ -151,21 +144,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "06c15985-fbe7-4da4-9972-22c03280eaf0",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 197,
-      "inatCount": null,
+      "inatCount": 3,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 197,
-      "rawInatCount": null,
+      "rawInatCount": 3,
       "gbifUsageKey": 9512459,
       "inatTaxonId": 4535,
       "inatPlaceId": 10281,
@@ -179,8 +173,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 197,
-        "qualifiedTotal": 197,
+        "rawTotal": 200,
+        "qualifiedTotal": 200,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -233,21 +227,74 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
+    },
+    {
+      "itemId": "07cb3a18-62e7-4f97-81db-70d03949944b",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 1,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 1,
+      "rawInatCount": 0,
+      "gbifUsageKey": 5229155,
+      "inatTaxonId": 4334,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "0aee0a05-b5b5-4123-8088-66f577b33c7a",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2489514,
       "inatTaxonId": 367607,
       "inatPlaceId": 10281,
@@ -284,21 +331,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2441110,
       "inatTaxonId": 121578,
       "inatPlaceId": 10281,
@@ -335,21 +383,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 7625239,
       "inatTaxonId": 1289433,
       "inatPlaceId": 10281,
@@ -386,21 +435,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 740,
+      "inatCount": 13,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 740,
+      "rawInatCount": 13,
       "gbifUsageKey": 9752617,
       "inatTaxonId": 144455,
       "inatPlaceId": 10281,
@@ -414,8 +464,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 753,
+        "qualifiedTotal": 753,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -424,25 +474,77 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 20.238900103673362,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.880230751266129,
+        "coverageAreaKm2": 618.2317592339975,
+        "coverageRatio": 6.793755595977995,
+        "footprintPolygonLatLngs": [
+          [
+            18.142003183087976,
+            -63.2278912798801
+          ],
+          [
+            18.133250030982204,
+            -63.22532185249962
+          ],
+          [
+            18.12154800119994,
+            -63.20467958521686
+          ],
+          [
+            18.114512746394837,
+            -63.13908931352261
+          ],
+          [
+            18.138311358053418,
+            -63.00289462567864
+          ],
+          [
+            18.223466879905455,
+            -62.93878400796915
+          ],
+          [
+            18.26340088703552,
+            -62.926778610080206
+          ],
+          [
+            18.281563371166943,
+            -62.92002074805338
+          ],
+          [
+            18.30242543858212,
+            -62.94656116696203
+          ],
+          [
+            18.31464936899127,
+            -62.98935647457382
+          ],
+          [
+            18.314712257062276,
+            -63.00723841513446
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -453,7 +555,7 @@
       "rawGbifCount": null,
       "rawInatCount": null,
       "gbifUsageKey": null,
-      "inatTaxonId": 123070,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": true,
@@ -488,20 +590,21 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
+      "gbifCount": 0,
       "inatCount": null,
-      "rawGbifPresent": null,
+      "rawGbifPresent": false,
       "rawInatPresent": null,
-      "rawGbifCount": null,
+      "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 10875550,
       "inatTaxonId": null,
@@ -539,21 +642,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "1a5311ef-a0e0-4593-acd3-e291dd13f620",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
       "gbifUsageKey": 10716565,
       "inatTaxonId": 9357,
       "inatPlaceId": 10281,
@@ -590,21 +694,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "1ab198a0-04dc-4407-8370-1a458c0c9f8e",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 698,
+      "inatCount": 12,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 698,
+      "rawInatCount": 12,
       "gbifUsageKey": 9685907,
       "inatTaxonId": 4665,
       "inatPlaceId": 10281,
@@ -618,8 +723,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 710,
+        "qualifiedTotal": 710,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -628,34 +733,94 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 21.095186067927155,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.9597812798828165,
+        "coverageAreaKm2": 630.1782215773608,
+        "coverageRatio": 6.925035401949019,
+        "footprintPolygonLatLngs": [
+          [
+            18.137500557228478,
+            -63.22624737703937
+          ],
+          [
+            18.13161265046215,
+            -63.224429062743795
+          ],
+          [
+            18.126687956820955,
+            -63.2181946984913
+          ],
+          [
+            18.113766474854884,
+            -63.146905063135726
+          ],
+          [
+            18.143549171492268,
+            -62.99640822794124
+          ],
+          [
+            18.213056007896853,
+            -62.93989889635373
+          ],
+          [
+            18.2788965813692,
+            -62.92052880115223
+          ],
+          [
+            18.287934334081477,
+            -62.92048279368305
+          ],
+          [
+            18.298923398604657,
+            -62.920895445505415
+          ],
+          [
+            18.30823586487633,
+            -62.94476870324518
+          ],
+          [
+            18.310487940190782,
+            -62.995624671157145
+          ],
+          [
+            18.30326959004545,
+            -63.084843662068
+          ],
+          [
+            18.148156401342852,
+            -63.215672607172245
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "1b981766-150c-48cb-b130-ec435986cad8",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 107,
-      "inatCount": null,
+      "inatCount": 1,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 107,
-      "rawInatCount": null,
+      "rawInatCount": 1,
       "gbifUsageKey": 2482077,
       "inatTaxonId": 4246,
       "inatPlaceId": 10281,
@@ -669,8 +834,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 107,
-        "qualifiedTotal": 107,
+        "rawTotal": 108,
+        "qualifiedTotal": 108,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 23,
         "staleInatCount": 0,
@@ -723,22 +888,23 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "1e62cb8c-cd40-40ee-9d9d-ca91a80e104a",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2489540,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 522292,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -774,21 +940,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "20fe6172-af93-46ad-8bf6-329dbd14dced",
       "countryIso3": "AIA",
       "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 50,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 50,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2474639,
       "inatTaxonId": 162,
       "inatPlaceId": 10281,
@@ -864,21 +1031,22 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "230af9fb-e146-4a27-976a-43a2cdea6314",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 6101086,
       "inatTaxonId": 367606,
       "inatPlaceId": 10281,
@@ -915,21 +1083,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": null,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": null,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": null,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 45998,
       "inatPlaceId": 10281,
@@ -966,21 +1135,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "249cae46-0a84-43db-be08-404a6695c171",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 6100884,
       "inatTaxonId": 201197,
       "inatPlaceId": 10281,
@@ -1017,20 +1187,21 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
+      "gbifCount": 0,
       "inatCount": null,
-      "rawGbifPresent": null,
+      "rawGbifPresent": false,
       "rawInatPresent": null,
-      "rawGbifCount": null,
+      "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 7261423,
       "inatTaxonId": null,
@@ -1068,21 +1239,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "266ebb62-70b1-4d28-860f-e05f6dff276f",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 2992,
-      "inatCount": null,
+      "inatCount": 48,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 2992,
-      "rawInatCount": null,
+      "rawInatCount": 48,
       "gbifUsageKey": 2493744,
       "inatTaxonId": 10199,
       "inatPlaceId": 10281,
@@ -1096,8 +1268,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 2992,
-        "qualifiedTotal": 2992,
+        "rawTotal": 3040,
+        "qualifiedTotal": 3040,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1158,12 +1330,13 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -1209,12 +1382,13 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -1260,21 +1434,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": null,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": null,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": null,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 62528,
       "inatPlaceId": 10281,
@@ -1311,21 +1486,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "2f59b4c2-2f9e-4c37-a201-42fdb64184e2",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 2,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 2,
+      "rawInatCount": 0,
       "gbifUsageKey": 2480863,
       "inatTaxonId": 4981,
       "inatPlaceId": 10281,
@@ -1339,8 +1515,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 2,
+        "qualifiedTotal": 2,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1349,34 +1525,41 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
         "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "totalPoints": 2,
+        "corePointCount": 2,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 0.0,
+        "unique25kmCells": 1,
+        "unique50kmCells": 1,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
+        "spreadRatio": 0.0,
+        "coverageAreaKm2": 201.06192982974676,
+        "coverageRatio": 2.2094717563708435,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "31017238-7b2f-4077-a239-ec8ae713c4d2",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 67,
-      "inatCount": null,
+      "inatCount": 2,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 67,
-      "rawInatCount": null,
+      "rawInatCount": 2,
       "gbifUsageKey": 2480894,
       "inatTaxonId": 4937,
       "inatPlaceId": 10281,
@@ -1390,8 +1573,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 67,
-        "qualifiedTotal": 67,
+        "rawTotal": 69,
+        "qualifiedTotal": 69,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 26,
         "staleInatCount": 0,
@@ -1448,22 +1631,23 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "33e2f3bf-4554-4f9a-8f8f-849c089724ba",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2480487,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 558446,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -1499,21 +1683,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "33f95ccf-52cd-423f-82c9-c86ef1173905",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 17,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 17,
+      "rawInatCount": 0,
       "gbifUsageKey": 2481817,
       "inatTaxonId": 144496,
       "inatPlaceId": 10281,
@@ -1527,44 +1712,76 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 17,
+        "qualifiedTotal": 17,
         "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
+        "staleGbifCount": 16,
         "staleInatCount": 0,
         "captiveInatCount": 0,
         "rejected": false,
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 17,
+        "corePointCount": 17,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 20.730324332835117,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.9258849588986613,
+        "coverageAreaKm2": 561.1740504688255,
+        "coverageRatio": 6.166747807349731,
+        "footprintPolygonLatLngs": [
+          [
+            18.142448282594536,
+            -63.23111238057853
+          ],
+          [
+            18.137992207689862,
+            -63.11456642502236
+          ],
+          [
+            18.147570398177695,
+            -63.00046593370318
+          ],
+          [
+            18.265919996202275,
+            -62.92791206433521
+          ],
+          [
+            18.28842415639203,
+            -62.91981069555725
+          ],
+          [
+            18.191482300312224,
+            -63.163422818169096
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "3a4acc3a-7565-4706-9b31-6c89df14130a",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2489502,
       "inatTaxonId": 14384,
       "inatPlaceId": 10281,
@@ -1601,12 +1818,13 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "3a50c7a6-4aaa-4480-bda3-4ddce4b31706",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -1617,7 +1835,7 @@
       "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": true,
@@ -1652,21 +1870,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "3a8b9ae7-a5b0-497d-b4b7-8ffbe7f870d0",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 1848,
+      "inatCount": 31,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 1848,
+      "rawInatCount": 31,
       "gbifUsageKey": 5229128,
       "inatTaxonId": 4836,
       "inatPlaceId": 10281,
@@ -1680,8 +1899,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 1879,
+        "qualifiedTotal": 1879,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1690,34 +1909,74 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 20.68594738176435,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.9217622591658066,
+        "coverageAreaKm2": 582.6991268145438,
+        "coverageRatio": 6.40328710785213,
+        "footprintPolygonLatLngs": [
+          [
+            18.134199748283667,
+            -63.22585715881721
+          ],
+          [
+            18.130358692948086,
+            -63.21637645848435
+          ],
+          [
+            18.14320048151156,
+            -62.99679849097448
+          ],
+          [
+            18.265089150204325,
+            -62.9275262801031
+          ],
+          [
+            18.266304672797233,
+            -62.92668286301641
+          ],
+          [
+            18.28917680098215,
+            -62.91958138052654
+          ],
+          [
+            18.29270782809357,
+            -62.97354962829972
+          ],
+          [
+            18.15424798996659,
+            -63.206924181296046
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
       "gbifUsageKey": 2434299,
       "inatTaxonId": 925980,
       "inatPlaceId": 10281,
@@ -1754,22 +2013,23 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 5219173,
+      "gbifPresent": null,
+      "inatPresent": true,
+      "gbifCount": null,
+      "inatCount": 1,
+      "rawGbifPresent": null,
+      "rawInatPresent": true,
+      "rawGbifCount": null,
+      "rawInatCount": 1,
+      "gbifUsageKey": null,
       "inatTaxonId": 47144,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -1782,8 +2042,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1792,25 +2052,32 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Only 1 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
         "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "totalPoints": 1,
+        "corePointCount": 1,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 0.0,
+        "unique25kmCells": 1,
+        "unique50kmCells": 1,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
+        "spreadRatio": 0.0,
+        "coverageAreaKm2": 201.06192982974676,
+        "coverageRatio": 2.2094717563708435,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -1856,21 +2123,115 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "4325d580-8a3e-4bd8-a705-be1fe9230fe3",
+      "countryIso3": "AIA",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 718,
+      "inatCount": 2,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 887,
+      "rawInatCount": 2,
+      "gbifUsageKey": 2481720,
+      "inatTaxonId": 3892,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 889,
+        "qualifiedTotal": 720,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 18.865433805998094,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 1.7526332259318365,
+        "coverageAreaKm2": 560.6523943072245,
+        "coverageRatio": 6.161015322057413,
+        "footprintPolygonLatLngs": [
+          [
+            18.14443855577988,
+            -63.23193644974826
+          ],
+          [
+            18.136120705019007,
+            -63.225747201872096
+          ],
+          [
+            18.137022400490764,
+            -63.19708058245677
+          ],
+          [
+            18.16495153010468,
+            -62.98015077657109
+          ],
+          [
+            18.22574110028492,
+            -62.94115944366737
+          ],
+          [
+            18.26815859008572,
+            -62.92902598704284
+          ],
+          [
+            18.268432765837844,
+            -62.929394175851556
+          ],
+          [
+            18.293659202263786,
+            -62.974560378136715
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": [
+        "not in geofence"
+      ]
     },
     {
       "itemId": "45613340-19ff-4b4c-875b-561d7f0f499f",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2489527,
       "inatTaxonId": 14389,
       "inatPlaceId": 10281,
@@ -1907,23 +2268,24 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
-      "itemId": "4b7d3cff-8c0a-49b3-a8c0-a2e28f156818",
+      "itemId": "479e2063-c763-4f03-b2ac-367adc8fb8c6",
       "countryIso3": "AIA",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": null,
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
+      "gbifCount": 0,
       "inatCount": null,
-      "rawGbifPresent": null,
+      "rawGbifPresent": true,
       "rawInatPresent": null,
-      "rawGbifCount": null,
+      "rawGbifCount": 2,
       "rawInatCount": null,
-      "gbifUsageKey": 2495414,
-      "inatTaxonId": 3017,
+      "gbifUsageKey": 2498264,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": false,
@@ -1935,14 +2297,14 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
+        "rawTotal": 2,
         "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
         "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
+        "rejected": true,
+        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
       },
       "observationProfile": {
         "code": "no_points",
@@ -1958,22 +2320,158 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "4a54bb5f-d951-4a96-8ae1-a6ab9bdfce5b",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 1,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2473702,
+      "inatTaxonId": 890,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": true,
+        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "4b7d3cff-8c0a-49b3-a8c0-a2e28f156818",
+      "countryIso3": "AIA",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 70,
+      "inatCount": 1,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 70,
+      "rawInatCount": 1,
+      "gbifUsageKey": 2495414,
+      "inatTaxonId": 3017,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 71,
+        "qualifiedTotal": 71,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 12,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 70,
+        "corePointCount": 70,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 26.526811950593817,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 2.464389235930254,
+        "coverageAreaKm2": 699.7970867624423,
+        "coverageRatio": 7.690077876510355,
+        "footprintPolygonLatLngs": [
+          [
+            18.13794048056446,
+            -63.22896570742441
+          ],
+          [
+            18.13037943594027,
+            -63.16313607785438
+          ],
+          [
+            18.185027939628743,
+            -62.95605626523241
+          ],
+          [
+            18.26027348145813,
+            -62.92584292642474
+          ],
+          [
+            18.335661719574542,
+            -62.88515365804233
+          ],
+          [
+            18.321092820862106,
+            -63.002058220063425
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": []
     },
     {
       "itemId": "4ee5341f-9df0-4187-b134-8ecf24fcbdb3",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2489545,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 367611,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -2009,21 +2507,74 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "50b5a8ef-65df-49b7-b317-d9a91323cc50",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 2,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 8,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2489613,
+      "inatTaxonId": 10286,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 8,
+        "qualifiedTotal": 2,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "5109acb4-e503-4147-a175-a3c6aa71f1e3",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2440886,
       "inatTaxonId": 209233,
       "inatPlaceId": 10281,
@@ -2060,21 +2611,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 9099332,
       "inatTaxonId": 13160,
       "inatPlaceId": 10281,
@@ -2111,21 +2663,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "542f379a-03f4-43df-aa29-f376fdcd97e0",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 1434,
-      "inatCount": null,
+      "inatCount": 19,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 1434,
-      "rawInatCount": null,
+      "rawInatCount": 19,
       "gbifUsageKey": 2480320,
       "inatTaxonId": 4793,
       "inatPlaceId": 10281,
@@ -2139,8 +2692,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 1434,
-        "qualifiedTotal": 1434,
+        "rawTotal": 1453,
+        "qualifiedTotal": 1453,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -2205,63 +2758,13 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "578da960-5e3e-4014-a055-3b02314ff7b6",
       "countryIso3": "AIA",
       "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2489514,
-      "inatTaxonId": 367607,
-      "inatPlaceId": 10281,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
-    },
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "countryIso3": "AIA",
-      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -2307,21 +2810,307 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "countryIso3": "AIA",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "60a26250-1387-4997-bb2a-4b2603f94deb",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 2,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2489670,
+      "inatTaxonId": 9721,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 2,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": true,
+        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "6395f8b8-1dd6-4887-9a57-b39923588d0e",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 1,
+      "rawInatCount": 0,
+      "gbifUsageKey": 9362842,
+      "inatTaxonId": 10094,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": true,
+        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "652398dc-e64a-4ed5-a53c-7e7f72f248ed",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 1,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2480824,
+      "inatTaxonId": 62528,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": true,
+        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "68574b5e-4576-4953-a704-6bbf9d8e6e80",
+      "countryIso3": "AIA",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 12,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 12,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2480258,
+      "inatTaxonId": 4885,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 12,
+        "qualifiedTotal": 12,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 12,
+        "corePointCount": 12,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 0.0,
+        "unique25kmCells": 1,
+        "unique50kmCells": 1,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0.0,
+        "coverageAreaKm2": 201.06192982974676,
+        "coverageRatio": 2.2094717563708435,
+        "footprintPolygonLatLngs": [
+          [
+            18.10636310600072,
+            -63.186300037752524
+          ],
+          [
+            18.10636310600072,
+            -63.035019962247475
+          ],
+          [
+            18.250092893999284,
+            -63.035019962247475
+          ],
+          [
+            18.250092893999284,
+            -63.186300037752524
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": [
+        "not in geofence"
+      ]
     },
     {
       "itemId": "69228514-4d73-4205-b054-c925fc60226b",
       "countryIso3": "AIA",
       "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 5,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 5,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2489590,
       "inatTaxonId": 62550,
       "inatPlaceId": 10281,
@@ -2377,20 +3166,73 @@
           ]
         ]
       },
-      "bucket": "Likely Valid"
+      "tags": []
+    },
+    {
+      "itemId": "69288f26-c835-4ec5-a3e3-29d70df638a1",
+      "countryIso3": "AIA",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 19743,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
+      "gbifCount": 0,
       "inatCount": null,
-      "rawGbifPresent": null,
+      "rawGbifPresent": false,
       "rawInatPresent": null,
-      "rawGbifCount": null,
+      "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 7452882,
       "inatTaxonId": null,
@@ -2428,21 +3270,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "6de041e9-509c-481b-9f7f-4c5e8c1d86bd",
       "countryIso3": "AIA",
       "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 6,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 6,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2498155,
       "inatTaxonId": 485176,
       "inatPlaceId": 10281,
@@ -2498,12 +3341,13 @@
           ]
         ]
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2549,21 +3393,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "72891679-0964-4bbb-9572-d9cb9c2aae86",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": null,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": null,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": null,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 19743,
       "inatPlaceId": 10281,
@@ -2600,23 +3445,24 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "72cf826c-aebc-4b97-bbd3-3c4b5a836d60",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
+      "gbifCount": 0,
       "inatCount": null,
-      "rawGbifPresent": null,
+      "rawGbifPresent": false,
       "rawInatPresent": null,
-      "rawGbifCount": null,
+      "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 2489520,
-      "inatTaxonId": 14415,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": false,
@@ -2651,22 +3497,23 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 7503658,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 1369285,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -2702,21 +3549,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
       "countryIso3": "AIA",
-      "status": "unlisted",
+      "status": "new_record",
+      "bucket": "New",
       "expected": false,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 197,
+      "inatCount": 3,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 202,
+      "rawInatCount": 3,
       "gbifUsageKey": 2495696,
       "inatTaxonId": 2969,
       "inatPlaceId": 10281,
@@ -2730,8 +3578,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 205,
+        "qualifiedTotal": 200,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -2740,34 +3588,64 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 15.858983392606564,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.4733284964031041,
+        "coverageAreaKm2": 500.101935173449,
+        "coverageRatio": 5.4956256612466925,
+        "footprintPolygonLatLngs": [
+          [
+            18.149271436713438,
+            -63.20458736665814
+          ],
+          [
+            18.150379107195615,
+            -63.19536744115242
+          ],
+          [
+            18.19192437129223,
+            -62.979107352805215
+          ],
+          [
+            18.2589686085168,
+            -62.926467845097385
+          ],
+          [
+            18.307430621470864,
+            -62.988061262556826
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Unlisted"
+      "tags": [
+        "not in geofence"
+      ]
     },
     {
       "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 7261419,
       "inatTaxonId": 74722,
       "inatPlaceId": 10281,
@@ -2804,22 +3682,23 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2492591,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 1585904,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -2855,21 +3734,74 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "83133617-8358-4910-82ee-4c23e40ba3dc",
+      "countryIso3": "AIA",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2473341,
+      "inatTaxonId": 1428,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "8860b06d-fa8a-462e-8a8d-0f65dfd9ac5c",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2489546,
       "inatTaxonId": 14380,
       "inatPlaceId": 10281,
@@ -2906,22 +3838,116 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "89851bea-765b-431a-bb03-6f821931ebdc",
+      "countryIso3": "AIA",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 24,
+      "inatCount": 14,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 24,
+      "rawInatCount": 14,
+      "gbifUsageKey": 9326020,
+      "inatTaxonId": 882,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 38,
+        "qualifiedTotal": 38,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 24,
+        "corePointCount": 24,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 15.286326038578208,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 1.4201275832375027,
+        "coverageAreaKm2": 482.2436549467867,
+        "coverageRatio": 5.299380823591063,
+        "footprintPolygonLatLngs": [
+          [
+            18.14144484247342,
+            -63.20733744584817
+          ],
+          [
+            18.130476447222918,
+            -63.07298406401761
+          ],
+          [
+            18.272469685627236,
+            -62.95872798331134
+          ],
+          [
+            18.29218471726823,
+            -62.95810222298345
+          ],
+          [
+            18.296059655140027,
+            -62.9601923692306
+          ],
+          [
+            18.304087171814604,
+            -62.97345510152799
+          ],
+          [
+            18.305375767865158,
+            -62.98066695663487
+          ],
+          [
+            18.152265123139273,
+            -63.20029084993759
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": [
+        "not in geofence"
+      ]
     },
     {
       "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
+      "gbifPresent": null,
       "inatPresent": null,
-      "gbifCount": 0,
+      "gbifCount": null,
       "inatCount": null,
-      "rawGbifPresent": false,
+      "rawGbifPresent": null,
       "rawInatPresent": null,
-      "rawGbifCount": 0,
+      "rawGbifCount": null,
       "rawInatCount": null,
-      "gbifUsageKey": 9530430,
+      "gbifUsageKey": null,
       "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -2957,21 +3983,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2440891,
       "inatTaxonId": 148030,
       "inatPlaceId": 10281,
@@ -3008,21 +4035,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "8b114dad-7d10-4a1e-bd16-0c26e85ca916",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 199,
-      "inatCount": null,
+      "inatCount": 5,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 199,
-      "rawInatCount": null,
+      "rawInatCount": 5,
       "gbifUsageKey": 9422220,
       "inatTaxonId": 558433,
       "inatPlaceId": 10281,
@@ -3036,8 +4064,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 199,
-        "qualifiedTotal": 199,
+        "rawTotal": 204,
+        "qualifiedTotal": 204,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -3102,21 +4130,22 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "8c9ba5cf-b98b-4b25-8543-9fcf0e69aed3",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 180,
-      "inatCount": null,
+      "inatCount": 3,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 180,
-      "rawInatCount": null,
+      "rawInatCount": 3,
       "gbifUsageKey": 2481047,
       "inatTaxonId": 4647,
       "inatPlaceId": 10281,
@@ -3130,8 +4159,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 180,
-        "qualifiedTotal": 180,
+        "rawTotal": 183,
+        "qualifiedTotal": 183,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -3188,12 +4217,13 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -3239,21 +4269,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2437114,
       "inatTaxonId": 1370747,
       "inatPlaceId": 10281,
@@ -3290,21 +4321,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "8ed8aff1-cd22-47c4-8f9a-80ed276d88e9",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 768,
-      "inatCount": null,
+      "inatCount": 6,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 768,
-      "rawInatCount": null,
+      "rawInatCount": 6,
       "gbifUsageKey": 9539567,
       "inatTaxonId": 5020,
       "inatPlaceId": 10281,
@@ -3318,8 +4350,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 768,
-        "qualifiedTotal": 768,
+        "rawTotal": 774,
+        "qualifiedTotal": 774,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -3372,21 +4404,119 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
+    },
+    {
+      "itemId": "91785c44-5b0b-4635-82dd-bd811cfa2c4f",
+      "countryIso3": "AIA",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 804,
+      "inatCount": 4,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 832,
+      "rawInatCount": 4,
+      "gbifUsageKey": 2495370,
+      "inatTaxonId": 3460,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 836,
+        "qualifiedTotal": 808,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 20.447109956703905,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 1.8995738265508166,
+        "coverageAreaKm2": 611.5829245417027,
+        "coverageRatio": 6.72069147848025,
+        "footprintPolygonLatLngs": [
+          [
+            18.13367490517073,
+            -63.224739068154726
+          ],
+          [
+            18.13128533006371,
+            -63.22323959163033
+          ],
+          [
+            18.11601579911974,
+            -63.141098505971904
+          ],
+          [
+            18.200342358348887,
+            -62.94102478176546
+          ],
+          [
+            18.25894107196145,
+            -62.92505241259466
+          ],
+          [
+            18.288091187621877,
+            -62.92057412346211
+          ],
+          [
+            18.3003329031258,
+            -62.94091260787591
+          ],
+          [
+            18.317155049757595,
+            -62.99363357999761
+          ],
+          [
+            18.316546862414505,
+            -63.003087586639026
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": [
+        "not in geofence"
+      ]
     },
     {
       "itemId": "9212982e-8a58-4775-a6ac-e9a43110d8f5",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 2,
-      "inatCount": null,
+      "inatCount": 2,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 2,
-      "rawInatCount": null,
+      "rawInatCount": 2,
       "gbifUsageKey": 2435035,
       "inatTaxonId": 118552,
       "inatPlaceId": 10281,
@@ -3400,8 +4530,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 2,
-        "qualifiedTotal": 2,
+        "rawTotal": 4,
+        "qualifiedTotal": 4,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -3429,21 +4559,74 @@
         "coverageRatio": 2.7325847049508294,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Likely Valid"
+      "tags": []
+    },
+    {
+      "itemId": "94d8284e-6193-43b5-b80c-9029cf951675",
+      "countryIso3": "AIA",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 9606290,
+      "inatTaxonId": 906,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "963093c7-0731-4770-8f7f-d2396ffe1c0a",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2481134,
       "inatTaxonId": 4364,
       "inatPlaceId": 10281,
@@ -3480,21 +4663,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "96fe1a07-7ef1-4a2f-99e1-ec2c9a78b532",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 173,
-      "inatCount": null,
+      "inatCount": 4,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 173,
-      "rawInatCount": null,
+      "rawInatCount": 4,
       "gbifUsageKey": 9630752,
       "inatTaxonId": 4956,
       "inatPlaceId": 10281,
@@ -3508,8 +4692,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 173,
-        "qualifiedTotal": 173,
+        "rawTotal": 177,
+        "qualifiedTotal": 177,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 5,
         "staleInatCount": 0,
@@ -3582,21 +4766,22 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "984f2b7c-95d9-42a5-92ca-25eb65111249",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 126,
+      "inatCount": 2,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 126,
+      "rawInatCount": 2,
       "gbifUsageKey": 2480881,
       "inatTaxonId": 4938,
       "inatPlaceId": 10281,
@@ -3610,8 +4795,107 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 128,
+        "qualifiedTotal": 128,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 11.34362329473004,
+        "unique25kmCells": 2,
+        "unique50kmCells": 2,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 1.0538433037504382,
+        "coverageAreaKm2": 411.270034442373,
+        "coverageRatio": 4.5194509279381645,
+        "footprintPolygonLatLngs": [
+          [
+            18.13429672959895,
+            -63.21844518445526
+          ],
+          [
+            18.133528743025206,
+            -63.208838772875765
+          ],
+          [
+            18.206530449917814,
+            -62.97381684537429
+          ],
+          [
+            18.209172105286996,
+            -62.97360639343272
+          ],
+          [
+            18.209919721110733,
+            -62.9736050217233
+          ],
+          [
+            18.22197939834365,
+            -62.97821130969269
+          ],
+          [
+            18.27299675362786,
+            -63.06567813036341
+          ],
+          [
+            18.274952703531937,
+            -63.076543778517944
+          ],
+          [
+            18.16717195634395,
+            -63.21094040685017
+          ],
+          [
+            18.1599893320247,
+            -63.212741457992294
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": []
+    },
+    {
+      "itemId": "988f4e11-beef-49b4-97e5-bb9cae8f50c5",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 2,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 2,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2498408,
+      "inatTaxonId": 7109,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 2,
+        "qualifiedTotal": 2,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -3633,21 +4917,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2436436,
       "inatTaxonId": 43584,
       "inatPlaceId": 10281,
@@ -3684,21 +4969,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 400,
-      "inatCount": null,
+      "inatCount": 3,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 400,
-      "rawInatCount": null,
+      "rawInatCount": 3,
       "gbifUsageKey": 5789298,
       "inatTaxonId": 144491,
       "inatPlaceId": 10281,
@@ -3712,8 +4998,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 400,
-        "qualifiedTotal": 400,
+        "rawTotal": 403,
+        "qualifiedTotal": 403,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -3774,21 +5060,22 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": null,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": null,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": null,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 3740,
       "inatPlaceId": 10281,
@@ -3825,12 +5112,13 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "a03d4cb1-8ada-4629-9dc8-9a773230266f",
       "countryIso3": "AIA",
       "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
@@ -3841,7 +5129,7 @@
       "rawGbifCount": 14,
       "rawInatCount": null,
       "gbifUsageKey": 2481710,
-      "inatTaxonId": 3875,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": false,
@@ -3899,22 +5187,23 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2493403,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 339801,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -3950,21 +5239,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "a77bd03b-d642-4cc2-bbfc-2f6eaa39c10c",
       "countryIso3": "AIA",
       "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 544,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 544,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 5228199,
       "inatTaxonId": 201282,
       "inatPlaceId": 10281,
@@ -4032,22 +5322,23 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "a808a3bc-1c36-42ed-8ffd-604ee2dedc6f",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": null,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": null,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": 2489560,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 367601,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -4083,23 +5374,24 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
+      "gbifCount": 0,
       "inatCount": null,
-      "rawGbifPresent": null,
+      "rawGbifPresent": false,
       "rawInatPresent": null,
-      "rawGbifCount": null,
+      "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 2441022,
-      "inatTaxonId": 74113,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": true,
@@ -4134,21 +5426,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "ad05b76c-8b77-4892-89eb-38d6c46d02d1",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 480,
-      "inatCount": null,
+      "inatCount": 12,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 480,
-      "rawInatCount": null,
+      "rawInatCount": 12,
       "gbifUsageKey": 2480953,
       "inatTaxonId": 4999,
       "inatPlaceId": 10281,
@@ -4162,8 +5455,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 480,
-        "qualifiedTotal": 480,
+        "rawTotal": 492,
+        "qualifiedTotal": 492,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -4228,12 +5521,13 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -4279,21 +5573,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
       "gbifUsageKey": 9606290,
       "inatTaxonId": 906,
       "inatPlaceId": 10281,
@@ -4330,21 +5625,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "c12accc9-9a76-4d13-b9e3-6357f7412bc7",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 20,
+      "inatCount": 1,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 20,
+      "rawInatCount": 1,
       "gbifUsageKey": 7341805,
       "inatTaxonId": 145245,
       "inatPlaceId": 10281,
@@ -4358,35 +5654,71 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 21,
+        "qualifiedTotal": 21,
         "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
+        "staleGbifCount": 1,
         "staleInatCount": 0,
         "captiveInatCount": 0,
         "rejected": false,
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 20,
+        "corePointCount": 19,
+        "outlierPointCount": 1,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 18.865433805998094,
+        "unique25kmCells": 2,
+        "unique50kmCells": 2,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.7526332259318365,
+        "coverageAreaKm2": 517.6354835783865,
+        "coverageRatio": 5.688302017344906,
+        "footprintPolygonLatLngs": [
+          [
+            18.1460728705796,
+            -63.23255716778938
+          ],
+          [
+            18.136102440037796,
+            -63.22735118573238
+          ],
+          [
+            18.135470123791492,
+            -63.22659563383722
+          ],
+          [
+            18.134284456787057,
+            -63.22484403852008
+          ],
+          [
+            18.13038612803464,
+            -63.204853564314455
+          ],
+          [
+            18.266496316008666,
+            -62.92819701891361
+          ],
+          [
+            18.266702708620375,
+            -62.92852623270504
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 1 likely outlier point before scoring. The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -4432,21 +5764,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "c1750080-1f8e-4238-b121-066d700f1641",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": null,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": null,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": null,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 8319,
       "inatPlaceId": 10281,
@@ -4483,22 +5816,23 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
+      "gbifPresent": null,
       "inatPresent": null,
-      "gbifCount": 0,
+      "gbifCount": null,
       "inatCount": null,
-      "rawGbifPresent": false,
+      "rawGbifPresent": null,
       "rawInatPresent": null,
-      "rawGbifCount": 0,
+      "rawGbifCount": null,
       "rawInatCount": null,
-      "gbifUsageKey": 2493441,
+      "gbifUsageKey": null,
       "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -4534,12 +5868,65 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "c5734460-e8a4-4278-a86d-230f522aa03f",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 1,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 1,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2481174,
+      "inatTaxonId": 4381,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "c7939461-118f-4b63-8ae4-38071dbcf892",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -4549,8 +5936,8 @@
       "rawInatPresent": null,
       "rawGbifCount": null,
       "rawInatCount": null,
-      "gbifUsageKey": 2489508,
-      "inatTaxonId": 367603,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": false,
@@ -4585,21 +5972,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "c9a652c0-bb3f-485c-a1ee-dfc31723914c",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
       "gbifUsageKey": 2433868,
       "inatTaxonId": 74558,
       "inatPlaceId": 10281,
@@ -4636,21 +6024,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "ca2a32c7-82d1-4cc3-8be9-646847e9cef5",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 208,
-      "inatCount": null,
+      "inatCount": 3,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 208,
-      "rawInatCount": null,
+      "rawInatCount": 3,
       "gbifUsageKey": 2474393,
       "inatTaxonId": 473,
       "inatPlaceId": 10281,
@@ -4664,8 +6053,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 208,
-        "qualifiedTotal": 208,
+        "rawTotal": 211,
+        "qualifiedTotal": 211,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -4714,12 +6103,13 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -4765,21 +6155,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "ce2e0e86-5580-4ab4-974a-4970753a140f",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 558,
+      "inatCount": 19,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 558,
+      "rawInatCount": 19,
       "gbifUsageKey": 2480830,
       "inatTaxonId": 411086,
       "inatPlaceId": 10281,
@@ -4793,8 +6184,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 577,
+        "qualifiedTotal": 577,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -4803,34 +6194,82 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 21.285035388438498,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.9774186281924522,
+        "coverageAreaKm2": 627.7198988650122,
+        "coverageRatio": 6.898020866648485,
+        "footprintPolygonLatLngs": [
+          [
+            18.13884610892368,
+            -63.22942549545391
+          ],
+          [
+            18.131169809622566,
+            -63.22417548762676
+          ],
+          [
+            18.12638195108274,
+            -63.206420353253584
+          ],
+          [
+            18.116200268805446,
+            -63.13525229643674
+          ],
+          [
+            18.142835616761126,
+            -62.99787406968036
+          ],
+          [
+            18.260413235216554,
+            -62.925584299061526
+          ],
+          [
+            18.28942323460633,
+            -62.91425431529041
+          ],
+          [
+            18.30784030064055,
+            -62.94442501923764
+          ],
+          [
+            18.31139746738592,
+            -62.98460629238512
+          ],
+          [
+            18.31171078951354,
+            -62.994061699945284
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
       "gbifUsageKey": 9142779,
       "inatTaxonId": 11603,
       "inatPlaceId": 10281,
@@ -4867,21 +6306,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "d0a759dc-58ec-4c06-abb9-e60a26931962",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 947,
-      "inatCount": null,
+      "inatCount": 7,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 947,
-      "rawInatCount": null,
+      "rawInatCount": 7,
       "gbifUsageKey": 2495869,
       "inatTaxonId": 3545,
       "inatPlaceId": 10281,
@@ -4895,8 +6335,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 947,
-        "qualifiedTotal": 947,
+        "rawTotal": 954,
+        "qualifiedTotal": 954,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -4957,22 +6397,23 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2440943,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 42186,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -5008,23 +6449,24 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
+      "gbifPresent": false,
       "inatPresent": null,
-      "gbifCount": null,
+      "gbifCount": 0,
       "inatCount": null,
-      "rawGbifPresent": null,
+      "rawGbifPresent": false,
       "rawInatPresent": null,
-      "rawGbifCount": null,
+      "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 8493215,
-      "inatTaxonId": 43389,
+      "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
         "domesticNamed": false,
@@ -5059,12 +6501,65 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "d5636405-819a-495a-b2d1-0f802d52c1bd",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": true,
+      "rawInatPresent": null,
+      "rawGbifCount": 1,
+      "rawInatCount": null,
+      "gbifUsageKey": 2494936,
+      "inatTaxonId": null,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": true,
+        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -5110,21 +6605,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "de674f6d-8ee5-4a65-95eb-12a492fb36b2",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 795,
+      "inatCount": 4,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 795,
+      "rawInatCount": 4,
       "gbifUsageKey": 2481798,
       "inatTaxonId": 72458,
       "inatPlaceId": 10281,
@@ -5138,8 +6634,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 799,
+        "qualifiedTotal": 799,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -5148,34 +6644,82 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 21.285035388438498,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 1.9774186281924522,
+        "coverageAreaKm2": 625.1662524834917,
+        "coverageRatio": 6.869958818499908,
+        "footprintPolygonLatLngs": [
+          [
+            18.139892045833747,
+            -63.22994306863662
+          ],
+          [
+            18.132555183257534,
+            -63.22495124454351
+          ],
+          [
+            18.128884928185297,
+            -63.215518450066355
+          ],
+          [
+            18.12510898946235,
+            -63.03382026483918
+          ],
+          [
+            18.214744974003036,
+            -62.938405523386564
+          ],
+          [
+            18.261074658993984,
+            -62.92583269138244
+          ],
+          [
+            18.280582214490295,
+            -62.919490124440394
+          ],
+          [
+            18.291277000100685,
+            -62.915323954549
+          ],
+          [
+            18.311636294482728,
+            -62.94795629669799
+          ],
+          [
+            18.317772511942586,
+            -62.99479375599988
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "e1468ade-3f05-4f98-b51a-aca72916825c",
       "countryIso3": "AIA",
-      "status": "likely_true_one_source",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": true,
       "gbifCount": 1213,
-      "inatCount": null,
+      "inatCount": 12,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": true,
       "rawGbifCount": 1213,
-      "rawInatCount": null,
+      "rawInatCount": 12,
       "gbifUsageKey": 2480873,
       "inatTaxonId": 4940,
       "inatPlaceId": 10281,
@@ -5189,8 +6733,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 1213,
-        "qualifiedTotal": 1213,
+        "rawTotal": 1225,
+        "qualifiedTotal": 1225,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -5247,22 +6791,23 @@
         "short": "National",
         "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Likely Valid"
+      "tags": []
     },
     {
       "itemId": "e3e24144-0b43-4128-94ba-60e9dc7b204f",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2489452,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
       "inatTaxonId": 367605,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -5298,21 +6843,126 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "e694a321-d807-4c57-b53a-758d6df448ac",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 1,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 1,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2492109,
+      "inatTaxonId": 9135,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "e6e4883c-6ae2-438d-93e6-4118af51ce80",
+      "countryIso3": "AIA",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 4,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 5,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2498112,
+      "inatTaxonId": 6933,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 5,
+        "qualifiedTotal": 4,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
     },
     {
       "itemId": "e7bd8ccc-65d7-4c7a-b74c-e0dcf4216529",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
       "gbifUsageKey": 2497035,
       "inatTaxonId": 19577,
       "inatPlaceId": 10281,
@@ -5349,21 +6999,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "ebae8364-48b4-462b-9e2b-b13fb4751a22",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 0,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": false,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 0,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2438444,
       "inatTaxonId": 44744,
       "inatPlaceId": 10281,
@@ -5400,21 +7051,22 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "eef88467-b894-4d0d-8a5a-4083eb78ea0f",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
       "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 222,
+      "inatCount": 3,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 222,
+      "rawInatCount": 3,
       "gbifUsageKey": 2475472,
       "inatTaxonId": 2548,
       "inatPlaceId": 10281,
@@ -5428,8 +7080,8 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
+        "rawTotal": 225,
+        "qualifiedTotal": 225,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -5438,25 +7090,73 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 22.259650576368532,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
         "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
+        "spreadRatio": 2.0679621576140175,
+        "coverageAreaKm2": 635.297656279479,
+        "coverageRatio": 6.981292926148122,
+        "footprintPolygonLatLngs": [
+          [
+            18.127834250261778,
+            -63.23981959554441
+          ],
+          [
+            18.12869107999805,
+            -63.215402109819834
+          ],
+          [
+            18.13900083042489,
+            -63.0019502229156
+          ],
+          [
+            18.213438743411672,
+            -62.939901127959736
+          ],
+          [
+            18.219317579110758,
+            -62.93816011769321
+          ],
+          [
+            18.285646373828435,
+            -62.918156371812515
+          ],
+          [
+            18.30005822545608,
+            -62.94156346163332
+          ],
+          [
+            18.30705951560463,
+            -62.97065213583119
+          ],
+          [
+            18.300716145655663,
+            -63.09466641040381
+          ],
+          [
+            18.152005207190157,
+            -63.21492025318854
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
       },
-      "bucket": "Needs Review"
+      "tags": []
     },
     {
       "itemId": "f48771e0-8cce-40bd-97ef-c13315cfaa0a",
       "countryIso3": "AIA",
       "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -5467,57 +7167,6 @@
       "rawGbifCount": 0,
       "rawInatCount": null,
       "gbifUsageKey": 2480487,
-      "inatTaxonId": 559064,
-      "inatPlaceId": 10281,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 10.764051215546116,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
-    },
-    {
-      "itemId": "f8db21f0-6b79-4444-8be4-b87906d56e6a",
-      "countryIso3": "AIA",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
       "inatTaxonId": null,
       "inatPlaceId": 10281,
       "managedEvidence": {
@@ -5553,21 +7202,295 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "tags": []
+    },
+    {
+      "itemId": "f64c3cbb-8dca-4532-baf7-d005626313d4",
+      "countryIso3": "AIA",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 274,
+      "inatCount": 6,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 337,
+      "rawInatCount": 6,
+      "gbifUsageKey": 9515886,
+      "inatTaxonId": 11901,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 343,
+        "qualifiedTotal": 280,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 89,
+        "outlierPointCount": 1,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 22.818984486611026,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 2.119925298539496,
+        "coverageAreaKm2": 807.4387135643246,
+        "coverageRatio": 8.87295289631126,
+        "footprintPolygonLatLngs": [
+          [
+            18.30576187391726,
+            -63.23964718308667
+          ],
+          [
+            18.121509714685434,
+            -63.23605094426815
+          ],
+          [
+            18.11925596028507,
+            -63.212878995169035
+          ],
+          [
+            18.173476229729513,
+            -62.97660017518238
+          ],
+          [
+            18.21666140210017,
+            -62.940016735324356
+          ],
+          [
+            18.285214258468766,
+            -62.912088448507525
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 1 likely outlier point before scoring. The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": [
+        "not in geofence"
+      ]
+    },
+    {
+      "itemId": "f8db21f0-6b79-4444-8be4-b87906d56e6a",
+      "countryIso3": "AIA",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 740,
+      "inatCount": 13,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 740,
+      "rawInatCount": 13,
+      "gbifUsageKey": 9752617,
+      "inatTaxonId": 144455,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 753,
+        "qualifiedTotal": 753,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 90,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 20.238900103673362,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 1.880230751266129,
+        "coverageAreaKm2": 618.2317592339975,
+        "coverageRatio": 6.793755595977995,
+        "footprintPolygonLatLngs": [
+          [
+            18.142003183087976,
+            -63.2278912798801
+          ],
+          [
+            18.133250030982204,
+            -63.22532185249962
+          ],
+          [
+            18.12154800119994,
+            -63.20467958521686
+          ],
+          [
+            18.114512746394837,
+            -63.13908931352261
+          ],
+          [
+            18.138311358053418,
+            -63.00289462567864
+          ],
+          [
+            18.223466879905455,
+            -62.93878400796915
+          ],
+          [
+            18.26340088703552,
+            -62.926778610080206
+          ],
+          [
+            18.281563371166943,
+            -62.92002074805338
+          ],
+          [
+            18.30242543858212,
+            -62.94656116696203
+          ],
+          [
+            18.31464936899127,
+            -62.98935647457382
+          ],
+          [
+            18.314712257062276,
+            -63.00723841513446
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": []
+    },
+    {
+      "itemId": "fcf9131d-f0b5-4d5c-ad6e-405a59071edc",
+      "countryIso3": "AIA",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 59,
+      "inatCount": 1,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 63,
+      "rawInatCount": 1,
+      "gbifUsageKey": 5231190,
+      "inatTaxonId": 13858,
+      "inatPlaceId": 10281,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 64,
+        "qualifiedTotal": 60,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 4,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 59,
+        "corePointCount": 59,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 16.966437792459036,
+        "unique25kmCells": 3,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 10.764051215546116,
+        "spreadRatio": 1.5762130310152227,
+        "coverageAreaKm2": 548.4928395467643,
+        "coverageRatio": 6.027393841173234,
+        "footprintPolygonLatLngs": [
+          [
+            18.133577396622865,
+            -63.20685052525956
+          ],
+          [
+            18.113042938525034,
+            -63.13649629055615
+          ],
+          [
+            18.263842092650698,
+            -62.92843454364167
+          ],
+          [
+            18.264894568610323,
+            -62.927432170556024
+          ],
+          [
+            18.31338489817727,
+            -62.98741337712329
+          ],
+          [
+            18.15415479952157,
+            -63.206890099313156
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "The cleaned footprint still covers more than 5% of Anguilla, so it is treated as national."
+      },
+      "tags": [
+        "not in geofence"
+      ]
     },
     {
       "itemId": "ff31e033-1f44-4772-9317-c1236e27a635",
       "countryIso3": "AIA",
       "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
-      "inatPresent": null,
+      "inatPresent": false,
       "gbifCount": 8,
-      "inatCount": null,
+      "inatCount": 0,
       "rawGbifPresent": true,
-      "rawInatPresent": null,
+      "rawInatPresent": false,
       "rawGbifCount": 8,
-      "rawInatCount": null,
+      "rawInatCount": 0,
       "gbifUsageKey": 2489985,
       "inatTaxonId": 10247,
       "inatPlaceId": 10281,
@@ -5623,7 +7546,7 @@
           ]
         ]
       },
-      "bucket": "Likely Valid"
+      "tags": []
     }
   ]
 }

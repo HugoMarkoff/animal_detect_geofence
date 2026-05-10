@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-05-08T18:44:06.679341+00:00",
+  "generatedAtUtc": "2026-05-10T08:42:44.425293+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
   "countries": [
     {
@@ -7,14 +7,19 @@
       "countryName": "Afghanistan",
       "path": "./AFG.json",
       "precomputeMode": "validated",
-      "total": 177,
+      "total": 220,
       "bucketCounts": {
-        "Likely Valid": 94,
-        "Needs Review": 83
+        "Likely Valid": 89,
+        "Needs Review": 91,
+        "Unlisted": 38,
+        "New": 2
       },
       "statusCounts": {
-        "likely_true_one_source": 94,
-        "likely_false": 83
+        "likely_true_both": 30,
+        "likely_false": 91,
+        "unlisted": 38,
+        "likely_true_one_source": 59,
+        "new_record": 2
       }
     },
     {
@@ -22,17 +27,19 @@
       "countryName": "Albania",
       "path": "./ALB.json",
       "precomputeMode": "validated",
-      "total": 162,
+      "total": 209,
       "bucketCounts": {
-        "Likely Valid": 97,
-        "Needs Review": 64,
-        "New": 1
+        "Likely Valid": 116,
+        "Needs Review": 48,
+        "Unlisted": 34,
+        "New": 11
       },
       "statusCounts": {
-        "likely_true_one_source": 96,
-        "likely_false": 64,
-        "new_record": 1,
-        "likely_true_both": 1
+        "likely_true_both": 94,
+        "likely_false": 48,
+        "unlisted": 34,
+        "new_record": 11,
+        "likely_true_one_source": 22
       }
     },
     {
@@ -40,18 +47,19 @@
       "countryName": "Algeria",
       "path": "./DZA.json",
       "precomputeMode": "validated",
-      "total": 172,
+      "total": 221,
       "bucketCounts": {
-        "Likely Valid": 72,
-        "Needs Review": 97,
-        "New": 1,
-        "Unlisted": 2
+        "Likely Valid": 111,
+        "Needs Review": 61,
+        "Unlisted": 40,
+        "New": 9
       },
       "statusCounts": {
-        "likely_true_one_source": 72,
-        "likely_false": 97,
-        "new_record": 1,
-        "unlisted": 2
+        "likely_true_both": 91,
+        "likely_false": 61,
+        "likely_true_one_source": 20,
+        "unlisted": 40,
+        "new_record": 9
       }
     },
     {
@@ -59,14 +67,19 @@
       "countryName": "American Samoa",
       "path": "./ASM.json",
       "precomputeMode": "validated",
-      "total": 67,
+      "total": 82,
       "bucketCounts": {
-        "Needs Review": 59,
-        "Likely Valid": 8
+        "Needs Review": 62,
+        "Likely Valid": 8,
+        "Unlisted": 10,
+        "New": 2
       },
       "statusCounts": {
-        "likely_false": 59,
-        "likely_true_one_source": 8
+        "likely_false": 62,
+        "likely_true_both": 3,
+        "unlisted": 10,
+        "likely_true_one_source": 5,
+        "new_record": 2
       }
     },
     {
@@ -74,14 +87,19 @@
       "countryName": "Andorra",
       "path": "./AND.json",
       "precomputeMode": "validated",
-      "total": 151,
+      "total": 169,
       "bucketCounts": {
-        "Likely Valid": 62,
-        "Needs Review": 89
+        "Likely Valid": 94,
+        "Needs Review": 60,
+        "Unlisted": 12,
+        "New": 3
       },
       "statusCounts": {
-        "likely_true_one_source": 62,
-        "likely_false": 89
+        "likely_true_one_source": 39,
+        "likely_false": 60,
+        "unlisted": 12,
+        "likely_true_both": 55,
+        "new_record": 3
       }
     },
     {
@@ -89,14 +107,19 @@
       "countryName": "Angola",
       "path": "./AGO.json",
       "precomputeMode": "validated",
-      "total": 276,
+      "total": 329,
       "bucketCounts": {
-        "Likely Valid": 128,
-        "Needs Review": 148
+        "Unlisted": 46,
+        "Likely Valid": 193,
+        "Needs Review": 86,
+        "New": 4
       },
       "statusCounts": {
-        "likely_true_one_source": 128,
-        "likely_false": 148
+        "unlisted": 46,
+        "likely_true_one_source": 61,
+        "likely_false": 86,
+        "likely_true_both": 132,
+        "new_record": 4
       }
     },
     {
@@ -104,16 +127,19 @@
       "countryName": "Anguilla",
       "path": "./AIA.json",
       "precomputeMode": "validated",
-      "total": 96,
+      "total": 117,
       "bucketCounts": {
-        "Likely Valid": 22,
-        "Needs Review": 73,
-        "Unlisted": 1
+        "Likely Valid": 34,
+        "Needs Review": 64,
+        "Unlisted": 12,
+        "New": 7
       },
       "statusCounts": {
-        "likely_true_one_source": 22,
-        "likely_false": 73,
-        "unlisted": 1
+        "likely_true_one_source": 9,
+        "likely_false": 64,
+        "likely_true_both": 25,
+        "unlisted": 12,
+        "new_record": 7
       }
     },
     {
@@ -121,14 +147,19 @@
       "countryName": "Antarctica",
       "path": "./ATA.json",
       "precomputeMode": "validated",
-      "total": 62,
+      "total": 89,
       "bucketCounts": {
-        "Needs Review": 58,
-        "Likely Valid": 4
+        "Needs Review": 63,
+        "Unlisted": 23,
+        "Likely Valid": 2,
+        "New": 1
       },
       "statusCounts": {
-        "likely_false": 58,
-        "likely_true_one_source": 4
+        "likely_false": 63,
+        "unlisted": 23,
+        "likely_true_one_source": 1,
+        "likely_true_both": 1,
+        "new_record": 1
       }
     },
     {
@@ -136,19 +167,19 @@
       "countryName": "Antigua and Barbuda",
       "path": "./ATG.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 130,
       "bucketCounts": {
-        "Unlisted": 1927,
-        "Likely Valid": 44,
-        "Needs Review": 43,
-        "New": 3
+        "Likely Valid": 46,
+        "Needs Review": 45,
+        "New": 12,
+        "Unlisted": 27
       },
       "statusCounts": {
-        "unlisted": 1927,
-        "likely_true_both": 33,
-        "likely_false": 43,
-        "likely_true_one_source": 11,
-        "new_record": 3
+        "likely_true_one_source": 14,
+        "likely_false": 45,
+        "new_record": 12,
+        "likely_true_both": 32,
+        "unlisted": 27
       }
     },
     {
@@ -156,19 +187,19 @@
       "countryName": "Argentina",
       "path": "./ARG.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 429,
       "bucketCounts": {
-        "Unlisted": 1716,
-        "Likely Valid": 254,
-        "Needs Review": 38,
-        "New": 9
+        "Unlisted": 104,
+        "Likely Valid": 255,
+        "Needs Review": 41,
+        "New": 29
       },
       "statusCounts": {
-        "unlisted": 1716,
-        "likely_true_both": 200,
-        "likely_true_one_source": 54,
-        "likely_false": 38,
-        "new_record": 9
+        "unlisted": 104,
+        "likely_true_one_source": 47,
+        "likely_true_both": 208,
+        "likely_false": 41,
+        "new_record": 29
       }
     },
     {
@@ -176,19 +207,19 @@
       "countryName": "Armenia",
       "path": "./ARM.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 202,
       "bucketCounts": {
-        "Unlisted": 1854,
         "Likely Valid": 108,
-        "Needs Review": 54,
-        "New": 1
+        "Needs Review": 70,
+        "New": 9,
+        "Unlisted": 15
       },
       "statusCounts": {
-        "unlisted": 1854,
-        "likely_true_both": 89,
-        "likely_true_one_source": 19,
-        "likely_false": 54,
-        "new_record": 1
+        "likely_true_both": 87,
+        "likely_false": 70,
+        "likely_true_one_source": 21,
+        "new_record": 9,
+        "unlisted": 15
       }
     },
     {
@@ -196,17 +227,19 @@
       "countryName": "Aruba",
       "path": "./ABW.json",
       "precomputeMode": "validated",
-      "total": 108,
+      "total": 175,
       "bucketCounts": {
-        "Likely Valid": 39,
-        "Needs Review": 58,
-        "New": 11
+        "Likely Valid": 38,
+        "Needs Review": 62,
+        "Unlisted": 32,
+        "New": 43
       },
       "statusCounts": {
-        "likely_true_both": 30,
-        "likely_false": 58,
-        "likely_true_one_source": 9,
-        "new_record": 11
+        "likely_true_one_source": 12,
+        "likely_false": 62,
+        "likely_true_both": 26,
+        "unlisted": 32,
+        "new_record": 43
       }
     },
     {
@@ -713,19 +746,19 @@
       "countryName": "Canada",
       "path": "./CAN.json",
       "precomputeMode": "validated",
-      "total": 2017,
+      "total": 573,
       "bucketCounts": {
-        "Unlisted": 1671,
-        "Likely Valid": 294,
-        "Needs Review": 45,
-        "New": 7
+        "Likely Valid": 297,
+        "Unlisted": 173,
+        "Needs Review": 47,
+        "New": 56
       },
       "statusCounts": {
-        "unlisted": 1671,
-        "likely_true_one_source": 293,
-        "likely_false": 45,
-        "new_record": 7,
-        "likely_true_both": 1
+        "likely_true_both": 227,
+        "unlisted": 173,
+        "likely_true_one_source": 70,
+        "likely_false": 47,
+        "new_record": 56
       }
     },
     {
@@ -1097,17 +1130,19 @@
       "countryName": "Denmark",
       "path": "./DNK.json",
       "precomputeMode": "validated",
-      "total": 162,
+      "total": 427,
       "bucketCounts": {
-        "Likely Valid": 119,
-        "Needs Review": 35,
-        "New": 8
+        "Unlisted": 221,
+        "Likely Valid": 117,
+        "Needs Review": 40,
+        "New": 49
       },
       "statusCounts": {
-        "likely_true_both": 59,
-        "likely_true_one_source": 60,
-        "likely_false": 35,
-        "new_record": 8
+        "unlisted": 221,
+        "likely_true_both": 90,
+        "likely_false": 40,
+        "new_record": 49,
+        "likely_true_one_source": 27
       },
       "manualOverrideCount": 5,
       "hasManualOverrides": true

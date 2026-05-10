@@ -2,6 +2,11 @@ const countrySelect = document.getElementById("countryIso3");
 const countryInput = document.getElementById("countryLabel");
 const countryToggle = document.getElementById("country-toggle");
 const countryOptions = document.getElementById("country-options");
+const stateField = document.getElementById("state-field");
+const stateSelect = document.getElementById("stateIso");
+const stateInput = document.getElementById("stateLabel");
+const stateToggle = document.getElementById("state-toggle");
+const stateOptions = document.getElementById("state-options");
 const browserTitle = document.getElementById("browser-title");
 const countrySummary = document.getElementById("country-summary");
 const groupChips = document.getElementById("group-chips");
@@ -80,7 +85,7 @@ const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260508c";
+const DATA_VERSION = "20260510b";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -337,6 +342,21 @@ const comboBoxes = {
     emptyText: "No matching country or region pack.",
     strictSelection: true,
     showAllOnOpen: false,
+  },
+  state: {
+    key: "state",
+    root: document.getElementById("state-combobox"),
+    input: stateInput,
+    toggle: stateToggle,
+    menu: stateOptions,
+    hiddenInput: stateSelect,
+    options: [],
+    filteredOptions: [],
+    highlightedItemId: "",
+    keyboardMode: false,
+    emptyText: "No matching state.",
+    strictSelection: true,
+    showAllOnOpen: true,
   },
   current: {
     key: "current",
@@ -755,6 +775,9 @@ function buildCountrySpeciesEntry(rawEntry, packMode) {
   const animal = animalById.get(itemId) || {};
   const observationProfile = resolveObservationProfile(rawEntry, packMode);
   const footprintCode = observationProfile.code;
+  const tags = Array.isArray(rawEntry?.tags)
+    ? rawEntry.tags.map((tag) => cleanText(tag)).filter(Boolean)
+    : [];
 
   return {
     itemId,
@@ -771,6 +794,7 @@ function buildCountrySpeciesEntry(rawEntry, packMode) {
     footprintNote: observationProfile.note,
     polygonLatLngs: observationProfile.footprintPolygonLatLngs,
     hasPolygon: observationProfile.footprintPolygonLatLngs.length >= 3,
+    tags,
   };
 }
 
@@ -3136,7 +3160,9 @@ function clearDrawnPolygons(refreshPreview = true) {
 }
 
 function populateCountrySelect(countries) {
-  comboBoxes.country.options = countries.map((country) => {
+  // Exclude state-level entries from country combobox; they appear via state dropdown
+  const topLevelCountries = countries.filter((c) => !countryPackKey(c).startsWith("USA-"));
+  comboBoxes.country.options = topLevelCountries.map((country) => {
     const itemId = countryPackKey(country);
     const label = countryPackLabel(country);
     const aliases = countryPackAliases(country);
@@ -3155,11 +3181,39 @@ function populateCountrySelect(countries) {
     };
   });
 
+  // Populate state dropdown with USA-* entries
+  const stateEntries = countries.filter((c) => countryPackKey(c).startsWith("USA-"));
+  comboBoxes.state.options = [
+    { itemId: "", label: "All states (whole USA)", meta: "", searchText: "all usa united states" },
+    ...stateEntries.map((s) => {
+      const itemId = countryPackKey(s);
+      const stateCode = itemId.replace("USA-", "");
+      const stateNameFull = (s.countryName || "").replace("United States \u2013 ", "").replace("United States - ", "");
+      return {
+        itemId,
+        label: stateNameFull,
+        meta: stateCode,
+        searchText: searchableText([stateNameFull, stateCode, "USA", "United States"]),
+      };
+    }),
+  ];
+
   const defaultOption = comboBoxes.country.options.find((option) => option.itemId === "DNK") || comboBoxes.country.options[0] || null;
   setCountryValue(defaultOption?.label || "", defaultOption?.itemId || "");
 
   if (openComboKey === "country") {
     renderComboOptions("country");
+  }
+}
+
+function updateStateFieldVisibility() {
+  const selectedCountry = countrySelect.value;
+  if (selectedCountry === "USA") {
+    stateField.hidden = false;
+  } else {
+    stateField.hidden = true;
+    stateSelect.value = "";
+    stateInput.value = "";
   }
 }
 
@@ -3429,6 +3483,17 @@ function selectComboOption(key, itemId) {
     return;
   }
 
+  if (key === "state") {
+    const hasChanged = stateSelect.value !== option.itemId;
+    stateInput.value = option.label;
+    stateSelect.value = option.itemId;
+    closeComboBox(key);
+    if (hasChanged) {
+      stateSelect.dispatchEvent(new Event("change"));
+    }
+    return;
+  }
+
   if (key === "current") {
     applySpeciesSelection(option.itemId, false);
   } else {
@@ -3670,7 +3735,7 @@ function filteredSpecies() {
       return true;
     }
 
-    const haystack = [entry.label, entry.commonName, entry.binomial, entry.footprintLabel]
+    const haystack = [entry.label, entry.commonName, entry.binomial, entry.footprintLabel, ...(entry.tags || [])]
       .filter(Boolean)
       .join(" ")
       .toLocaleLowerCase();
@@ -3687,6 +3752,10 @@ function renderSpeciesCard(entry) {
     ? '<span class="badge badge-expected-false">Not in geofence</span>'
     : "";
   const bucketBadge = effectiveBucket(entry);
+  const tagBadges = (entry.tags || [])
+    .filter((tag) => !(entry.expected === false && cleanText(tag).toLocaleLowerCase() === "not in geofence"))
+    .map((tag) => `<span class="badge badge-tag">${escapeHtml(tag)}</span>`)
+    .join("");
   const adminActions = renderSpeciesAdminActions(entry);
   return `
     <article class="species-card ${selectedClass}">
@@ -3702,6 +3771,7 @@ function renderSpeciesCard(entry) {
           ${expectedBadge}
           <span class="badge badge-footprint">${escapeHtml(entry.footprintShort)}</span>
           <span class="badge badge-bucket">${escapeHtml(bucketBadge)}</span>
+          ${tagBadges}
         </div>
       </button>
       ${adminActions}
@@ -5022,6 +5092,7 @@ async function initialize() {
 
     populateAnimalOptions(animals || []);
     populateCountrySelect(countries || []);
+    updateStateFieldVisibility();
     await loadCountry(countrySelect.value);
     if (!hasSeenOnboarding()) {
       openOnboarding();
@@ -5076,7 +5147,15 @@ speciesList.addEventListener("click", (event) => {
 });
 
 countrySelect.addEventListener("change", () => {
-  loadCountry(countrySelect.value);
+  updateStateFieldVisibility();
+  // If USA is selected and a state is already chosen, load that state pack
+  const activeKey = (stateSelect.value && countrySelect.value === "USA") ? stateSelect.value : countrySelect.value;
+  loadCountry(activeKey);
+});
+
+stateSelect.addEventListener("change", () => {
+  const activeKey = stateSelect.value || "USA";
+  loadCountry(activeKey);
 });
 
 speciesFilterInput.addEventListener("input", () => {
