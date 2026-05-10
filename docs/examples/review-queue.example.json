@@ -1,0 +1,35 @@
+{
+  "countryIso3": "DNK",
+  "generatedAtUtc": "2026-05-10T06:54:08.602130+00:00",
+  "policy": {
+    "publishExpectedBuckets": [
+      "Likely Valid",
+      "Needs Review"
+    ],
+    "publishUnexpectedBuckets": []
+  },
+  "rows": [
+    {
+      "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
+      "commonName": "moose",
+      "binomial": "alces alces",
+      "expected": true,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "footprintCode": "regional",
+      "publishAction": "keep_in_geofence",
+      "note": "Country-allowed, but should be checked against the regional polygon."
+    },
+    {
+      "itemId": "example-new-id",
+      "commonName": "example species",
+      "binomial": "example species",
+      "expected": false,
+      "status": "new_record",
+      "bucket": "New",
+      "footprintCode": "countrywide",
+      "publishAction": "pending_add",
+      "note": "Keep excluded until a reviewer explicitly approves it."
+    }
+  ]
+}

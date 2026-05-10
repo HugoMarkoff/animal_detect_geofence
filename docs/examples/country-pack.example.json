@@ -1,0 +1,50 @@
+{
+  "generatedFor": "DNK",
+  "countryName": "Denmark",
+  "generatedAtUtc": "2026-05-10T06:54:08.602130+00:00",
+  "sourceDataset": "data/animals-global.json",
+  "precomputeMode": "validated",
+  "selectionMode": "country-indexed",
+  "summary": {
+    "total": 427,
+    "bucketCounts": {
+      "Likely Valid": 117,
+      "Needs Review": 40,
+      "New": 49,
+      "Unlisted": 221
+    }
+  },
+  "entries": [
+    {
+      "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
+      "countryIso3": "DNK",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 911,
+      "inatCount": 77,
+      "observationProfile": {
+        "code": "regional",
+        "label": "Regional footprint",
+        "short": "Regional",
+        "note": "Manual admin override applied from the review desk.",
+        "significant": true,
+        "footprintPolygonLatLngs": [
+          [56.93655, 10.244393],
+          [56.954333, 10.21904],
+          [56.938526, 10.209081],
+          [56.937044, 10.259785]
+        ]
+      },
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
+        "action": "upsert",
+        "updatedBy": "HugoMarkoff",
+        "updatedAtUtc": "2026-05-07T17:22:15.982Z",
+        "addedByOverride": false
+      }
+    }
+  ]
+}
