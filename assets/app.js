@@ -3777,9 +3777,6 @@ function renderSpeciesCard(entry) {
   const classBadge = cleanText(entry.classLabel)
     ? `<span class="badge badge-class">${escapeHtml(entry.classLabel)}</span>`
     : "";
-  const expectedBadge = entry.expected === false
-    ? '<span class="badge badge-expected-false">Not in geofence</span>'
-    : "";
   const bucketBadge = effectiveBucket(entry);
   const tagBadges = (entry.tags || [])
     .filter((tag) => !(entry.expected === false && cleanText(tag).toLocaleLowerCase() === "not in geofence"))
@@ -3797,7 +3794,6 @@ function renderSpeciesCard(entry) {
         </div>
         <div class="species-card-meta">
           ${classBadge}
-          ${expectedBadge}
           <span class="badge badge-footprint">${escapeHtml(entry.footprintShort)}</span>
           <span class="badge badge-bucket">${escapeHtml(bucketBadge)}</span>
           ${tagBadges}
