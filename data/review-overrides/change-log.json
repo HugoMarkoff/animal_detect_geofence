@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-05-08T12:24:16.050Z",
+  "updatedAtUtc": "2026-05-10T16:39:18.436Z",
   "entries": [
     {
       "id": "2026-05-08T10:14:46.987Z__DNK__3b0ae87d-0cb4-46c4-822b-c65047e69a88__removal",
@@ -37,6 +37,24 @@
         "data/review-overrides/geofence-binary-overrides.json"
       ],
       "reason": "Please remove moonrat (echinosorex gymnura) from the Denmark country pack."
+    },
+    {
+      "id": "2026-05-10T16:39:18.436Z__DNK__429257d4-3ef2-47fb-b849-66ee6c107346__correction",
+      "updatedAtUtc": "2026-05-10T16:39:18.436Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "DNK",
+      "countryName": "Denmark",
+      "suggestionType": "correction",
+      "requestedCoverage": "regional",
+      "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
+      "matchedKey": "mammalia;artiodactyla;cervidae;alces;alces",
+      "speciesLabel": "moose (alces alces)",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Please update moose (alces alces) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint."
     }
   ]
 }
