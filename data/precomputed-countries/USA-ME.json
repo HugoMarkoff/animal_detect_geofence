@@ -1,7 +1,7 @@
 {
   "generatedFor": "USA-ME",
   "countryName": "United States \u2013 Maine",
-  "generatedAtUtc": "2026-05-11T08:39:57.171887+00:00",
+  "generatedAtUtc": "2026-05-11T12:15:44.694827+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json + geofence_new.json",
   "precomputeMode": "validated",
   "selectionMode": "country-indexed",
@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 272,
+    "total": 334,
     "statusCounts": {
-      "likely_true_one_source": 220,
-      "likely_false": 21,
-      "unlisted": 20,
-      "new_record": 11
+      "likely_true_one_source": 226,
+      "likely_false": 85,
+      "unlisted": 17,
+      "new_record": 6
     },
     "bucketCounts": {
-      "Likely Valid": 220,
-      "Needs Review": 21,
-      "Unlisted": 20,
-      "New": 11
+      "Likely Valid": 226,
+      "Needs Review": 85,
+      "Unlisted": 17,
+      "New": 6
     }
   },
   "entries": [
@@ -355,6 +355,52 @@
       "tags": []
     },
     {
+      "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7478670,
+      "inatTaxonId": 179982,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "07843615-e1fc-49d8-9821-fd1d7ff2e773",
       "countryIso3": "USA-ME",
       "status": "unlisted",
@@ -402,6 +448,52 @@
         "unique50kmCells": 0,
         "countryDiameterKm": 341.5710163387947,
         "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "07c94304-20e3-44dc-93f4-bbf3b19da6bd",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7679679,
+      "inatTaxonId": 179986,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -527,6 +619,52 @@
       "evidenceQuality": {
         "rawTotal": 6365,
         "qualifiedTotal": 6365,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2437399,
+      "inatTaxonId": 45949,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -685,12 +823,12 @@
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "USA-ME",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 1,
+      "gbifCount": 4,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -710,7 +848,7 @@
       },
       "evidenceQuality": {
         "rawTotal": 4,
-        "qualifiedTotal": 1,
+        "qualifiedTotal": 4,
         "specimenOrSampleCount": 1,
         "staleGbifCount": 1,
         "staleInatCount": 0,
@@ -722,11 +860,11 @@
         "code": "needs_review",
         "label": "Pending review",
         "short": "",
-        "note": "Only 1 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "note": "Dropped 1 likely outlier point before scoring. Only 1 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
         "significant": false,
-        "totalPoints": 1,
+        "totalPoints": 2,
         "corePointCount": 1,
-        "outlierPointCount": 0,
+        "outlierPointCount": 1,
         "clusterCount": 1,
         "clusterSpreadKm": 0.0,
         "maxDistanceKm": 0.0,
@@ -1155,6 +1293,52 @@
       "tags": []
     },
     {
+      "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7625239,
+      "inatTaxonId": 1289433,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -1247,6 +1431,58 @@
       "tags": []
     },
     {
+      "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 123070,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "1965ba9a-cbff-40ba-8e7f-d7c7a5bb4ace",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -1275,6 +1511,144 @@
       "evidenceQuality": {
         "rawTotal": 32302,
         "qualifiedTotal": 32302,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 10875550,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "19cb4cb0-7a99-41cb-a962-1d7598a61173",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2497380,
+      "inatTaxonId": 19757,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "1a5311ef-a0e0-4593-acd3-e291dd13f620",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 10716565,
+      "inatTaxonId": 9357,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1413,6 +1787,52 @@
       "evidenceQuality": {
         "rawTotal": 8274,
         "qualifiedTotal": 8274,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "1c3a9b8c-8413-457a-b62a-803792cc4a7d",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 5219663,
+      "inatTaxonId": 46009,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1661,6 +2081,52 @@
       "tags": []
     },
     {
+      "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 45998,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "23140944-2bd7-46ce-819a-c26508c53d62",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -1689,6 +2155,52 @@
       "evidenceQuality": {
         "rawTotal": 341784,
         "qualifiedTotal": 341784,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "249cae46-0a84-43db-be08-404a6695c171",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 6100884,
+      "inatTaxonId": 201197,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1799,6 +2311,52 @@
       "tags": []
     },
     {
+      "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7261423,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "266e985f-1dee-4d11-ac96-8ade6aee7c9a",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -1827,6 +2385,52 @@
       "evidenceQuality": {
         "rawTotal": 75,
         "qualifiedTotal": 75,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -1965,6 +2569,52 @@
       "evidenceQuality": {
         "rawTotal": 82,
         "qualifiedTotal": 82,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 5786093,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -2173,6 +2823,52 @@
       "tags": []
     },
     {
+      "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 62528,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "2f59b4c2-2f9e-4c37-a201-42fdb64184e2",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -2326,6 +3022,52 @@
       "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 144515,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "317171d7-d306-4e71-9a4a-33e62012076b",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 5220126,
+      "inatTaxonId": 42184,
       "inatPlaceId": 4181,
       "managedEvidence": {
         "domesticNamed": false,
@@ -2681,12 +3423,12 @@
     {
       "itemId": "3a50c7a6-4aaa-4480-bda3-4ddce4b31706",
       "countryIso3": "USA-ME",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 20,
+      "gbifCount": 24,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -2706,7 +3448,7 @@
       },
       "evidenceQuality": {
         "rawTotal": 24,
-        "qualifiedTotal": 20,
+        "qualifiedTotal": 24,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 2,
         "staleInatCount": 0,
@@ -2716,48 +3458,52 @@
       },
       "observationProfile": {
         "significant": true,
-        "totalPoints": 20,
-        "corePointCount": 10,
-        "outlierPointCount": 10,
+        "totalPoints": 22,
+        "corePointCount": 16,
+        "outlierPointCount": 6,
         "clusterCount": 1,
         "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 140.18828121405642,
-        "unique25kmCells": 9,
-        "unique50kmCells": 5,
+        "maxDistanceKm": 209.8457960154166,
+        "unique25kmCells": 13,
+        "unique50kmCells": 8,
         "countryDiameterKm": 341.5710163387947,
-        "spreadRatio": 0.4104220630798709,
-        "coverageAreaKm2": 12942.812040585039,
-        "coverageRatio": 0.14124618904308534,
+        "spreadRatio": 0.614354807573241,
+        "coverageAreaKm2": 32884.66324048136,
+        "coverageRatio": 0.35887358528566515,
         "footprintPolygonLatLngs": [
           [
-            44.102582102843044,
-            -69.9172343430356
+            44.26537923772445,
+            -70.97829939656164
           ],
           [
-            43.82350052600498,
-            -68.81289317717612
+            43.901144560689964,
+            -70.90914837865691
           ],
           [
-            44.37918507081815,
-            -67.991074529014
+            43.4969889049825,
+            -70.46119661863598
           ],
           [
-            44.70112111808183,
-            -67.67212865062045
+            43.966183351402414,
+            -68.34430514005243
           ],
           [
-            44.66322923794269,
-            -69.0621954395288
+            44.27882754243529,
+            -67.79427468024458
           ],
           [
-            44.41106322018702,
-            -69.47301103896855
+            44.7332071660123,
+            -67.52083341576748
+          ],
+          [
+            44.457107885217304,
+            -70.70739823596847
           ]
         ],
         "code": "countrywide",
         "label": "National footprint",
         "short": "National",
-        "note": "Dropped 10 likely outlier points before scoring. The cleaned footprint still covers more than 5% of United States \u2013 Maine, so it is treated as national."
+        "note": "Dropped 6 likely outlier points before scoring. 16 cleaned observations are spread widely across United States \u2013 Maine, so this is treated as national coverage."
       },
       "tags": []
     },
@@ -2854,6 +3600,98 @@
       "tags": []
     },
     {
+      "itemId": "3a8f6da9-0910-49a0-bfa8-c5217d15e2d9",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2480635,
+      "inatTaxonId": 1578973,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2434299,
+      "inatTaxonId": 925980,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "3ca3aec2-2579-4196-ad14-fe52bd70d64e",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -2895,6 +3733,58 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 47144,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -2987,6 +3877,58 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -3342,6 +4284,52 @@
       "evidenceQuality": {
         "rawTotal": 296,
         "qualifiedTotal": 296,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2437413,
+      "inatTaxonId": 45964,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -3964,6 +4952,58 @@
       "tags": []
     },
     {
+      "itemId": "5109acb4-e503-4147-a175-a3c6aa71f1e3",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2440886,
+      "inatTaxonId": 209233,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "512152a2-2327-4a54-a996-b6adc12cec19",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -3992,6 +5032,52 @@
       "evidenceQuality": {
         "rawTotal": 234855,
         "qualifiedTotal": 234855,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 9099332,
+      "inatTaxonId": 13160,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -4384,6 +5470,52 @@
       "tags": []
     },
     {
+      "itemId": "5a9bec72-e7b1-495a-9d8e-bcd4b3c0ef97",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "5c7ce479-8a45-40b3-ae21-7c97dfae22f5",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -4550,6 +5682,52 @@
       "evidenceQuality": {
         "rawTotal": 248,
         "qualifiedTotal": 248,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -5103,6 +6281,52 @@
       "tags": []
     },
     {
+      "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2437524,
+      "inatTaxonId": 46187,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "68574b5e-4576-4953-a704-6bbf9d8e6e80",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -5223,6 +6447,52 @@
       "evidenceQuality": {
         "rawTotal": 117277,
         "qualifiedTotal": 117277,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "69288f26-c835-4ec5-a3e3-29d70df638a1",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 19743,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -5470,6 +6740,52 @@
       "tags": []
     },
     {
+      "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7452882,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "6cced5c0-5992-4bc6-ae91-27786b320087",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -5608,6 +6924,52 @@
       "tags": []
     },
     {
+      "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 7430311,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "71313453-1e2c-448f-88d7-d24e9cd2b930",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -5700,6 +7062,98 @@
       "tags": []
     },
     {
+      "itemId": "72891679-0964-4bbb-9572-d9cb9c2aae86",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 19743,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "73baf300-5592-4ab5-9da8-7da898477934",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2433875,
+      "inatTaxonId": 855297,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -5728,6 +7182,98 @@
       "evidenceQuality": {
         "rawTotal": 47,
         "qualifiedTotal": 47,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2434552,
+      "inatTaxonId": 855311,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 1369285,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -5884,6 +7430,52 @@
       "tags": []
     },
     {
+      "itemId": "7921cb6a-4459-4a87-ad65-0610a8ab4556",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2434825,
+      "inatTaxonId": 75102,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "798797e3-280c-44f0-8ce9-b191288fae78",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -5912,6 +7504,98 @@
       "evidenceQuality": {
         "rawTotal": 176234,
         "qualifiedTotal": 176234,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 332338,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7261419,
+      "inatTaxonId": 74722,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -6022,6 +7706,52 @@
       "tags": []
     },
     {
+      "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 1585904,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "828b8955-2d2c-444b-8722-d0b084b804b1",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -6070,12 +7800,12 @@
     {
       "itemId": "83133617-8358-4910-82ee-4c23e40ba3dc",
       "countryIso3": "USA-ME",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 20,
+      "gbifCount": 24,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -6095,58 +7825,21 @@
       },
       "evidenceQuality": {
         "rawTotal": 24,
-        "qualifiedTotal": 20,
+        "qualifiedTotal": 24,
         "specimenOrSampleCount": 0,
-        "staleGbifCount": 2,
+        "staleGbifCount": 0,
         "staleInatCount": 0,
         "captiveInatCount": 0,
         "rejected": false,
         "note": ""
       },
       "observationProfile": {
-        "significant": true,
-        "totalPoints": 20,
-        "corePointCount": 10,
-        "outlierPointCount": 10,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 140.18828121405642,
-        "unique25kmCells": 9,
-        "unique50kmCells": 5,
-        "countryDiameterKm": 341.5710163387947,
-        "spreadRatio": 0.4104220630798709,
-        "coverageAreaKm2": 12942.812040585039,
-        "coverageRatio": 0.14124618904308534,
-        "footprintPolygonLatLngs": [
-          [
-            44.102582102843044,
-            -69.9172343430356
-          ],
-          [
-            43.82350052600498,
-            -68.81289317717612
-          ],
-          [
-            44.37918507081815,
-            -67.991074529014
-          ],
-          [
-            44.70112111808183,
-            -67.67212865062045
-          ],
-          [
-            44.66322923794269,
-            -69.0621954395288
-          ],
-          [
-            44.41106322018702,
-            -69.47301103896855
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 10 likely outlier points before scoring. The cleaned footprint still covers more than 5% of United States \u2013 Maine, so it is treated as national."
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
       },
       "tags": []
     },
@@ -6696,6 +8389,104 @@
       "tags": []
     },
     {
+      "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2440891,
+      "inatTaxonId": 148030,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "8b073a27-8240-413b-b775-484eca29f6c5",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -6788,6 +8579,52 @@
       "tags": []
     },
     {
+      "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2437384,
+      "inatTaxonId": 45991,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "8c9ba5cf-b98b-4b25-8543-9fcf0e69aed3",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -6862,6 +8699,98 @@
       "evidenceQuality": {
         "rawTotal": 181,
         "qualifiedTotal": 181,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 8007102,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2437114,
+      "inatTaxonId": 1370747,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -7020,12 +8949,12 @@
     {
       "itemId": "9212982e-8a58-4775-a6ac-e9a43110d8f5",
       "countryIso3": "USA-ME",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 53,
+      "gbifCount": 61,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -7045,7 +8974,7 @@
       },
       "evidenceQuality": {
         "rawTotal": 61,
-        "qualifiedTotal": 53,
+        "qualifiedTotal": 61,
         "specimenOrSampleCount": 4,
         "staleGbifCount": 7,
         "staleInatCount": 0,
@@ -7055,56 +8984,52 @@
       },
       "observationProfile": {
         "significant": true,
-        "totalPoints": 53,
-        "corePointCount": 39,
-        "outlierPointCount": 14,
+        "totalPoints": 60,
+        "corePointCount": 49,
+        "outlierPointCount": 11,
         "clusterCount": 2,
-        "clusterSpreadKm": 118.59052596487298,
-        "maxDistanceKm": 215.57177319370055,
-        "unique25kmCells": 18,
-        "unique50kmCells": 10,
+        "clusterSpreadKm": 129.14546628765277,
+        "maxDistanceKm": 248.9865865384,
+        "unique25kmCells": 25,
+        "unique50kmCells": 13,
         "countryDiameterKm": 341.5710163387947,
-        "spreadRatio": 0.6311184581887386,
-        "coverageAreaKm2": 38792.04363217987,
-        "coverageRatio": 0.42334141228792976,
+        "spreadRatio": 0.7289452987177261,
+        "coverageAreaKm2": 57731.526481023786,
+        "coverageRatio": 0.6300298634883043,
         "footprintPolygonLatLngs": [
           [
-            44.514669968106375,
-            -71.25233267368482
+            44.85930532411043,
+            -71.52677399536043
           ],
           [
-            43.412090225013756,
-            -70.75635645247807
+            43.430967265480945,
+            -70.89190125560837
           ],
           [
-            43.238353925744285,
-            -70.58438019847954
+            43.24525878298723,
+            -70.73331354450112
           ],
           [
-            43.23813755597238,
-            -70.58390790331686
+            43.24502237740318,
+            -70.73287502377285
           ],
           [
-            44.23301492724257,
-            -68.58572308302024
+            44.54502072636217,
+            -67.38124491325625
           ],
           [
-            44.63332436366028,
-            -68.41093806332304
+            44.66927228311693,
+            -67.32758950566401
           ],
           [
-            45.24859754931197,
-            -68.22659179927312
-          ],
-          [
-            44.82242511366665,
-            -70.87462316457369
+            45.328022543100694,
+            -68.22912101127883
           ]
         ],
         "code": "countrywide",
         "label": "National footprint",
         "short": "National",
-        "note": "Dropped 14 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Maine, so this is treated as national rather than a single regional pocket."
+        "note": "Dropped 11 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Maine, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
     },
@@ -7249,12 +9174,12 @@
     {
       "itemId": "94d8284e-6193-43b5-b80c-9029cf951675",
       "countryIso3": "USA-ME",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 55356,
+      "gbifCount": 68008,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -7274,7 +9199,7 @@
       },
       "evidenceQuality": {
         "rawTotal": 68008,
-        "qualifiedTotal": 55356,
+        "qualifiedTotal": 68008,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -7283,53 +9208,12 @@
         "note": ""
       },
       "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 84,
-        "outlierPointCount": 6,
-        "clusterCount": 2,
-        "clusterSpreadKm": 138.94138542817464,
-        "maxDistanceKm": 263.08696428256815,
-        "unique25kmCells": 25,
-        "unique50kmCells": 14,
-        "countryDiameterKm": 341.5710163387947,
-        "spreadRatio": 0.7702262536866405,
-        "coverageAreaKm2": 60862.1232126104,
-        "coverageRatio": 0.6641943755263977,
-        "footprintPolygonLatLngs": [
-          [
-            44.142062328021666,
-            -71.43212030894676
-          ],
-          [
-            42.743920242243384,
-            -71.07011264174162
-          ],
-          [
-            44.24450179513116,
-            -67.70182972927545
-          ],
-          [
-            44.35700086805923,
-            -67.60476609209198
-          ],
-          [
-            44.427634493120735,
-            -67.60871961114337
-          ],
-          [
-            45.33320020970576,
-            -68.4197025797138
-          ],
-          [
-            44.89410293679456,
-            -70.6149775395477
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 6 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Maine, so this is treated as national rather than a single regional pocket."
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
       },
       "tags": []
     },
@@ -7800,6 +9684,52 @@
       "tags": []
     },
     {
+      "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2436436,
+      "inatTaxonId": 43584,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -7985,6 +9915,52 @@
         "unique50kmCells": 0,
         "countryDiameterKm": 341.5710163387947,
         "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 3740,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -8594,6 +10570,52 @@
       "tags": []
     },
     {
+      "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 339801,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "a70c87e9-62bc-41c2-9e36-96fed9136046",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -8780,12 +10802,12 @@
     {
       "itemId": "aba05f1e-020f-49ce-a5c3-528482e1c5ce",
       "countryIso3": "USA-ME",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 0,
+      "gbifCount": 1,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -8805,26 +10827,66 @@
       },
       "evidenceQuality": {
         "rawTotal": 1,
+        "qualifiedTotal": 1,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "ac01bf53-e125-4edd-8873-db9f519f1123",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7261816,
+      "inatTaxonId": 1596132,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
         "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
         "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+        "rejected": false,
+        "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 341.5710163387947,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -8878,12 +10940,12 @@
     {
       "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "countryIso3": "USA-ME",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 0,
+      "gbifCount": 1,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -8903,26 +10965,32 @@
       },
       "evidenceQuality": {
         "rawTotal": 1,
-        "qualifiedTotal": 0,
+        "qualifiedTotal": 1,
         "specimenOrSampleCount": 1,
         "staleGbifCount": 1,
         "staleInatCount": 0,
         "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only specimen/sample records, older GBIF records."
+        "rejected": false,
+        "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Only 1 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
         "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
+        "totalPoints": 1,
+        "corePointCount": 1,
+        "outlierPointCount": 0,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 0.0,
+        "unique25kmCells": 1,
+        "unique50kmCells": 1,
         "countryDiameterKm": 341.5710163387947,
-        "spreadRatio": 0,
+        "spreadRatio": 0.0,
+        "coverageAreaKm2": 201.06192982974676,
+        "coverageRatio": 0.0021942087438995422,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -9247,6 +11315,150 @@
       "tags": []
     },
     {
+      "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2474251,
+      "inatTaxonId": 1330,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2481661,
+      "inatTaxonId": 3820,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
       "countryIso3": "USA-ME",
       "status": "likely_false",
@@ -9385,6 +11597,52 @@
       "tags": []
     },
     {
+      "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 520585,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "b9a7f328-3bb9-4326-9665-cc8ab5d870e1",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -9505,6 +11763,52 @@
       "evidenceQuality": {
         "rawTotal": 176,
         "qualifiedTotal": 176,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "bb082446-52b9-4085-b43b-fee020807540",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": null,
+      "gbifCount": 0,
+      "inatCount": null,
+      "rawGbifPresent": false,
+      "rawInatPresent": null,
+      "rawGbifCount": 0,
+      "rawInatCount": null,
+      "gbifUsageKey": 2436718,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -9755,12 +12059,12 @@
     {
       "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
       "countryIso3": "USA-ME",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
-      "gbifCount": 55356,
+      "gbifCount": 68008,
       "inatCount": 0,
       "rawGbifPresent": true,
       "rawInatPresent": false,
@@ -9780,7 +12084,7 @@
       },
       "evidenceQuality": {
         "rawTotal": 68008,
-        "qualifiedTotal": 55356,
+        "qualifiedTotal": 68008,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -9886,6 +12190,58 @@
       "tags": []
     },
     {
+      "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "c1679de2-13f3-4a44-9eae-16ed7cc7e286",
       "countryIso3": "USA-ME",
       "status": "new_record",
@@ -9977,6 +12333,52 @@
       "tags": []
     },
     {
+      "itemId": "c1750080-1f8e-4238-b121-066d700f1641",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 8319,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "c2e2bf4d-87b4-473d-8627-0766605efb77",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -10005,6 +12407,52 @@
       "evidenceQuality": {
         "rawTotal": 5603,
         "qualifiedTotal": 5603,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -10143,6 +12591,52 @@
       "evidenceQuality": {
         "rawTotal": 5048,
         "qualifiedTotal": 5048,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "c61962ee-d112-42d6-9eaf-640fe97bff57",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2495853,
+      "inatTaxonId": 3570,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -10300,6 +12794,58 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": true,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 341.5710163387947,
+        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -10581,6 +13127,52 @@
       "tags": []
     },
     {
+      "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 9142779,
+      "inatTaxonId": 11603,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "d195f0ca-438e-4826-8fce-5e0de1ee27b6",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -10771,6 +13363,52 @@
       "tags": []
     },
     {
+      "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": false,
+      "gbifCount": null,
+      "inatCount": 0,
+      "rawGbifPresent": null,
+      "rawInatPresent": false,
+      "rawGbifCount": null,
+      "rawInatCount": 0,
+      "gbifUsageKey": null,
+      "inatTaxonId": 42186,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "d437edb5-ebbd-4ac1-997e-4f5adc461179",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -10863,6 +13501,52 @@
       "tags": []
     },
     {
+      "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 8493215,
+      "inatTaxonId": 43389,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "d5636405-819a-495a-b2d1-0f802d52c1bd",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -10891,6 +13575,52 @@
       "evidenceQuality": {
         "rawTotal": 183300,
         "qualifiedTotal": 183300,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -11744,6 +14474,52 @@
         "unique50kmCells": 0,
         "countryDiameterKm": 341.5710163387947,
         "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "ebae8364-48b4-462b-9e2b-b13fb4751a22",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2438444,
+      "inatTaxonId": 44744,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -12894,6 +15670,52 @@
       "evidenceQuality": {
         "rawTotal": 13573,
         "qualifiedTotal": 13573,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "ff28e3a2-9c5e-4697-b949-4ff2f9153ea8",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "bucket": "Needs Review",
+      "expected": true,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": false,
+      "rawInatPresent": false,
+      "rawGbifCount": 0,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2434883,
+      "inatTaxonId": 925699,
+      "inatPlaceId": 4181,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
