@@ -85,7 +85,7 @@ const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260510b";
+const DATA_VERSION = "20260511a";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -169,7 +169,7 @@ const ONBOARDING_STEPS = [
       <p>This page is used to <strong>add</strong>, <strong>remove</strong>, or <strong>correct</strong> species in the country packs used by Animal Detect.</p>
       <p>The current geofencing is based on human observations and machine-validated records, but it is not perfect. This review desk exists so you can suggest where the country packs should change.</p>
       <ul class="onboarding-list">
-        <li>The model currently works with <strong>2019 species</strong>.</li>
+        <li>The model currently works with <strong>__MODEL_SPECIES_TOTAL__ species</strong>.</li>
         <li>Each country is limited to species that could reasonably be detected there, so the model can fall back to a higher taxonomic level instead of forcing a wrong species label.</li>
         <li>That country-level filter is called <strong>geofencing</strong>.</li>
         <li><strong>National</strong> means the species should be allowed across most of the country.</li>
@@ -274,6 +274,24 @@ const countryPackCache = new Map();
 let animalCatalogCache = null;
 let countryCatalogCache = null;
 let globalDatasetInfo = null;
+
+function currentModelSpeciesTotalLabel() {
+  const explicitTotal = Number(globalDatasetInfo?.summaryTotal);
+  if (Number.isFinite(explicitTotal) && explicitTotal > 0) {
+    return explicitTotal.toLocaleString("en-US");
+  }
+
+  if (Array.isArray(animalCatalogCache) && animalCatalogCache.length > 0) {
+    return animalCatalogCache.length.toLocaleString("en-US");
+  }
+
+  return "current";
+}
+
+function renderOnboardingBodyHtml(step) {
+  const bodyHtml = typeof step?.bodyHtml === "string" ? step.bodyHtml : "";
+  return bodyHtml.replaceAll("__MODEL_SPECIES_TOTAL__", currentModelSpeciesTotalLabel());
+}
 
 const CURRENT_REGIONAL_STYLE = {
   color: "#2d9046",
@@ -732,6 +750,7 @@ async function loadAnimalCatalog() {
   globalDatasetInfo = {
     dataset: cleanText(dataset?.dataset),
     sourceMode: cleanText(dataset?.sourceMode),
+    summaryTotal: Number(dataset?.summary?.total) || (dataset.items || []).length,
     sourceFiles: {
       taxonomy: cleanText(dataset?.sourceFiles?.taxonomy),
       geofence: cleanText(dataset?.sourceFiles?.geofence),
@@ -4191,7 +4210,7 @@ function renderOnboardingStep() {
   const guideStepIndex = ONBOARDING_GUIDE_STEPS.indexOf(step);
   onboardingStepLabel.textContent = step.stepLabel || `Quick guide · ${guideStepIndex + 1} of ${ONBOARDING_GUIDE_STEPS.length}`;
   onboardingTitle.textContent = step.title;
-  onboardingBody.innerHTML = step.bodyHtml;
+  onboardingBody.innerHTML = renderOnboardingBodyHtml(step);
   onboardingBackButton.hidden = onboardingStepIndex === 0;
   clearOnboardingLiveTargets();
   onboardingViewportTarget = null;
