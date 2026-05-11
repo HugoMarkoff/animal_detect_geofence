@@ -342,6 +342,8 @@ def apply_country_overrides(
     previous_override_summary: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     iso3 = clean_text(pack.get("generatedFor")).upper()
+    unit_type = clean_text(pack.get("unitType")).lower()
+    uses_subnational_expected_membership = unit_type not in {"", "country"}
     entries_by_id: dict[str, dict[str, Any]] = {}
     for raw_entry in pack.get("entries") or []:
         if not isinstance(raw_entry, dict):
@@ -353,7 +355,11 @@ def apply_country_overrides(
 
         # Drop stale expected entries that are no longer in the current global dataset
         # for this country. Explicit override upserts can still add items back afterward.
-        if raw_entry.get("expected") and not item_expected_in_country(animals_by_id.get(item_id), iso3):
+        if (
+            raw_entry.get("expected")
+            and not uses_subnational_expected_membership
+            and not item_expected_in_country(animals_by_id.get(item_id), iso3)
+        ):
             continue
 
         entries_by_id[item_id] = deepcopy(raw_entry)
