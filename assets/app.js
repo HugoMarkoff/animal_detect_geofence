@@ -85,7 +85,7 @@ const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260511b";
+const DATA_VERSION = "20260511c";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -264,6 +264,7 @@ const ONBOARDING_GUIDE_STEPS = ONBOARDING_STEPS.filter((step) => !step.intro);
 
 const countryCenterCache = new Map();
 const countryGeometryCache = new Map();
+const usaStateGeometryCache = new Map();
 const countryBoundarySegmentCache = new WeakMap();
 const countryClipContextCache = new WeakMap();
 const currentSpeciesLabelIndex = new Map();
@@ -274,6 +275,7 @@ const countryPackCache = new Map();
 let animalCatalogCache = null;
 let countryCatalogCache = null;
 let globalDatasetInfo = null;
+let usaStateGeometryIndexPromise = null;
 
 function currentModelSpeciesTotalLabel() {
   const explicitTotal = Number(globalDatasetInfo?.summaryTotal);
@@ -531,6 +533,27 @@ function countryPackPath(entry, packKey) {
     return relativePath;
   }
   return `${normalizePackKey(packKey)}.json`;
+}
+
+function selectedCountryPackKey() {
+  if (normalizePackKey(countrySelect.value) === "USA" && normalizePackKey(stateSelect.value)) {
+    return normalizePackKey(stateSelect.value);
+  }
+
+  return normalizePackKey(countrySelect.value);
+}
+
+function activeCountryPackKey() {
+  return normalizePackKey(state.currentCountry?.iso3) || selectedCountryPackKey();
+}
+
+function usaStateCodeFromPackKey(packKey) {
+  const match = /^USA-([A-Z]{2})$/.exec(normalizePackKey(packKey));
+  return match ? match[1] : "";
+}
+
+function packCountryIso3(packKey) {
+  return usaStateCodeFromPackKey(packKey) ? "USA" : normalizePackKey(packKey);
 }
 
 function searchableText(values) {
@@ -2202,13 +2225,15 @@ function geoBoundariesMediaUrl(url) {
   return url;
 }
 
-async function fetchCountryGeometryFromGeoBoundaries(iso3) {
-  const metadata = await fetchJson(`${GEOBOUNDARIES_API_ROOT}/${encodeURIComponent(iso3)}/ADM0/`);
+async function fetchGeoBoundariesGeometry(iso3, boundaryType = "ADM0") {
+  const metadata = await fetchJson(`${GEOBOUNDARIES_API_ROOT}/${encodeURIComponent(iso3)}/${encodeURIComponent(boundaryType)}/`);
   const meanVertices = Number(metadata?.meanVertices);
   if (Number.isFinite(meanVertices) && meanVertices >= GEOBOUNDARIES_OUTLINE_ONLY_VERTEX_LIMIT) {
     return null;
   }
-  const preferFullGeometry = Number.isFinite(meanVertices) && meanVertices <= GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT;
+  const preferFullGeometry = boundaryType === "ADM0"
+    && Number.isFinite(meanVertices)
+    && meanVertices <= GEOBOUNDARIES_FULL_GEOMETRY_VERTEX_LIMIT;
   const downloadUrl = geoBoundariesMediaUrl(
     preferFullGeometry
       ? metadata?.gjDownloadURL || metadata?.simplifiedGeometryGeoJSON
@@ -2220,6 +2245,50 @@ async function fetchCountryGeometryFromGeoBoundaries(iso3) {
   }
 
   return fetchJson(downloadUrl);
+}
+
+async function fetchCountryGeometryFromGeoBoundaries(iso3) {
+  return fetchGeoBoundariesGeometry(iso3, "ADM0");
+}
+
+async function fetchUsStateGeometry(stateCode) {
+  const normalizedStateCode = cleanText(stateCode).toUpperCase();
+  if (!normalizedStateCode) {
+    return null;
+  }
+
+  if (usaStateGeometryCache.has(normalizedStateCode)) {
+    return usaStateGeometryCache.get(normalizedStateCode);
+  }
+
+  if (!usaStateGeometryIndexPromise) {
+    usaStateGeometryIndexPromise = fetchGeoBoundariesGeometry("USA", "ADM1")
+      .then((payload) => {
+        const index = new Map();
+        (payload?.features || []).forEach((feature) => {
+          const shapeIso = cleanText(feature?.properties?.shapeISO).toUpperCase();
+          const code = (/^[A-Z]{2}-([A-Z]{2})$/.exec(shapeIso) || [])[1] || "";
+          if (!code || index.has(code)) {
+            return;
+          }
+
+          index.set(code, {
+            type: "FeatureCollection",
+            features: [feature],
+          });
+        });
+        return index;
+      })
+      .catch((error) => {
+        usaStateGeometryIndexPromise = null;
+        throw error;
+      });
+  }
+
+  const index = await usaStateGeometryIndexPromise;
+  const geometry = index.get(normalizedStateCode) || null;
+  usaStateGeometryCache.set(normalizedStateCode, geometry);
+  return geometry;
 }
 
 async function fetchWorldCountryGeometry(iso3) {
@@ -2289,6 +2358,15 @@ async function fetchCountryGeometry(iso3) {
     countryGeometryCache.set(iso3, null);
     return null;
   }
+}
+
+async function fetchGeometryForPack(packKey) {
+  const stateCode = usaStateCodeFromPackKey(packKey);
+  if (stateCode) {
+    return fetchUsStateGeometry(stateCode);
+  }
+
+  return fetchCountryGeometry(packCountryIso3(packKey));
 }
 
 async function getCountryCenter(iso3) {
@@ -2771,9 +2849,14 @@ function formatSpeciesList(species) {
     .join("");
 }
 
+function usesWholePackOverlay(entry) {
+  return isVisibleSpecies(entry)
+    && ["countrywide", "country_pack_only"].includes(cleanText(entry?.footprintCode));
+}
+
 function currentNationalSpecies() {
   return (state.currentCountry?.species || [])
-    .filter((entry) => isVisibleSpecies(entry) && entry.footprintCode === "countrywide")
+    .filter((entry) => usesWholePackOverlay(entry))
     .slice()
     .sort((left, right) => speciesSortName(left).localeCompare(speciesSortName(right)));
 }
@@ -2916,15 +2999,88 @@ function handleMapOverlayHover(event) {
 }
 
 function fitGeoJsonBounds(geoJson) {
-  if (!geoJson) {
+  const geometryView = countryGeometryBoundsView(geoJson);
+  if (!geometryView) {
     return false;
   }
-  const bounds = L.geoJSON(geoJson).getBounds();
-  if (!bounds.isValid()) {
-    return false;
+
+  return focusGeometryView(geometryView, { animate: false });
+}
+
+function wrapLongitude(longitude) {
+  let nextLongitude = Number(longitude);
+  if (!Number.isFinite(nextLongitude)) {
+    return longitude;
   }
-  reviewMap.fitBounds(bounds.pad(COUNTRY_FIT_PAD), { animate: false });
-  return true;
+
+  while (nextLongitude > 180) {
+    nextLongitude -= 360;
+  }
+  while (nextLongitude <= -180) {
+    nextLongitude += 360;
+  }
+
+  return nextLongitude;
+}
+
+function visitCoordinateArray(value, visitor) {
+  if (!Array.isArray(value)) {
+    return;
+  }
+
+  if (value.length >= 2 && typeof value[0] !== "object" && typeof value[1] !== "object") {
+    const longitude = Number(value[0]);
+    const latitude = Number(value[1]);
+    if (Number.isFinite(longitude) && Number.isFinite(latitude)) {
+      visitor(latitude, longitude);
+    }
+    return;
+  }
+
+  value.forEach((item) => visitCoordinateArray(item, visitor));
+}
+
+function visitGeoJsonCoordinates(geoJson, visitor) {
+  if (!geoJson || typeof visitor !== "function") {
+    return;
+  }
+
+  if (geoJson.type === "FeatureCollection") {
+    (geoJson.features || []).forEach((feature) => visitGeoJsonCoordinates(feature, visitor));
+    return;
+  }
+
+  if (geoJson.type === "Feature") {
+    visitGeoJsonCoordinates(geoJson.geometry, visitor);
+    return;
+  }
+
+  visitCoordinateArray(geoJson.coordinates, visitor);
+}
+
+function geoJsonLatLngBounds(geoJson, transformLongitude = (longitude) => longitude) {
+  let minLatitude = Infinity;
+  let maxLatitude = -Infinity;
+  let minLongitude = Infinity;
+  let maxLongitude = -Infinity;
+
+  visitGeoJsonCoordinates(geoJson, (latitude, longitude) => {
+    const nextLongitude = Number(transformLongitude(longitude));
+    if (!Number.isFinite(nextLongitude)) {
+      return;
+    }
+
+    minLatitude = Math.min(minLatitude, latitude);
+    maxLatitude = Math.max(maxLatitude, latitude);
+    minLongitude = Math.min(minLongitude, nextLongitude);
+    maxLongitude = Math.max(maxLongitude, nextLongitude);
+  });
+
+  if (![minLatitude, maxLatitude, minLongitude, maxLongitude].every((value) => Number.isFinite(value))) {
+    return null;
+  }
+
+  return L.latLngBounds([minLatitude, minLongitude], [maxLatitude, maxLongitude]);
 }
 
 function countryGeometryBoundsView(countryGeometry) {
@@ -2932,29 +3088,70 @@ function countryGeometryBoundsView(countryGeometry) {
     return null;
   }
 
-  const bounds = L.geoJSON(countryGeometry).getBounds();
-  if (!bounds.isValid()) {
+  const bounds = geoJsonLatLngBounds(countryGeometry);
+  if (!bounds?.isValid()) {
     return null;
   }
 
   const paddedBounds = bounds.pad(COUNTRY_FIT_PAD);
+  const longitudeSpan = bounds.getEast() - bounds.getWest();
+  if (longitudeSpan <= 180) {
+    return {
+      bounds: paddedBounds,
+      wrapsAntimeridian: false,
+    };
+  }
+
+  const shiftedBounds = geoJsonLatLngBounds(countryGeometry, (longitude) => (longitude < 0 ? longitude + 360 : longitude));
+  if (!shiftedBounds?.isValid()) {
+    return {
+      bounds: paddedBounds,
+      wrapsAntimeridian: false,
+    };
+  }
+
+  const shiftedLongitudeSpan = shiftedBounds.getEast() - shiftedBounds.getWest();
+  if (shiftedLongitudeSpan >= longitudeSpan) {
+    return {
+      bounds: paddedBounds,
+      wrapsAntimeridian: false,
+    };
+  }
+
   return {
-    bounds: paddedBounds,
+    bounds: shiftedBounds.pad(COUNTRY_FIT_PAD),
+    wrapsAntimeridian: true,
   };
 }
 
-async function focusSelectedCountry(countryGeometry = null, options = {}) {
+function focusGeometryView(geometryView, options = {}) {
+  if (!geometryView?.bounds || !reviewMap) {
+    return false;
+  }
+
   const { animate = false } = options;
+  if (!geometryView.wrapsAntimeridian) {
+    reviewMap.fitBounds(geometryView.bounds, { animate });
+    return true;
+  }
+
+  const zoom = reviewMap.getBoundsZoom(geometryView.bounds, false);
+  const center = geometryView.bounds.getCenter();
+  reviewMap.setView([center.lat, wrapLongitude(center.lng)], zoom, { animate });
+  return true;
+}
+
+async function focusSelectedCountry(countryGeometry = null, options = {}) {
+  const { animate = false, packKey = activeCountryPackKey() } = options;
 
   if (countryGeometry) {
     const geometryView = countryGeometryBoundsView(countryGeometry);
-    if (geometryView) {
-      reviewMap.fitBounds(geometryView.bounds, { animate });
+    if (focusGeometryView(geometryView, { animate })) {
       return;
     }
   }
 
-  const focus = await getCountryCenter(countrySelect.value);
+  const focus = await getCountryCenter(packCountryIso3(packKey));
   if (focus) {
     reviewMap.setView(focus.latlng, focus.zoom, { animate });
     return;
@@ -2965,17 +3162,18 @@ async function focusSelectedCountry(countryGeometry = null, options = {}) {
 
 async function loadRegionalOverlays() {
   const overlayLoadId = ++currentOverlayLoadId;
-  if (!countrySelect.value) {
+  const activePackKey = activeCountryPackKey();
+  if (!activePackKey) {
     clearRegionalOverlays();
     updateMapSummary();
     return;
   }
 
   clearRegionalOverlays();
-  mapSummary.textContent = "Map overlay: moving to country...";
+  mapSummary.textContent = "Map overlay: moving to selection...";
 
   try {
-    await focusSelectedCountry();
+    await focusSelectedCountry(null, { packKey: activePackKey });
     if (overlayLoadId !== currentOverlayLoadId) {
       return;
     }
@@ -2985,14 +3183,14 @@ async function loadRegionalOverlays() {
       return;
     }
 
-    mapSummary.textContent = "Map overlay: loading country outline...";
-    const countryGeometry = await fetchCountryGeometry(countrySelect.value);
+    mapSummary.textContent = "Map overlay: loading boundary...";
+    const countryGeometry = await fetchGeometryForPack(activePackKey);
     if (overlayLoadId !== currentOverlayLoadId) {
       return;
     }
 
     currentCountryGeometry = countryGeometry;
-    await focusSelectedCountry(countryGeometry);
+    await focusSelectedCountry(countryGeometry, { packKey: activePackKey });
     if (overlayLoadId !== currentOverlayLoadId) {
       return;
     }
@@ -3868,7 +4066,7 @@ function updateSelectedRegionalLayers(fitToSelection) {
 
   if (fitToSelection) {
     const selectedEntry = currentSpeciesById(state.highlightedSpeciesId);
-    if (selectedEntry?.footprintCode === "countrywide") {
+    if (usesWholePackOverlay(selectedEntry)) {
       void focusSelectedCountry(currentCountryGeometry, { animate: true });
     }
   }
