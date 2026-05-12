@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-05-10T16:39:18.111Z",
+  "updatedAtUtc": "2026-05-12T19:02:21.584Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -73,6 +73,30 @@
           "updatedBy": "HugoMarkoff",
           "updatedAtUtc": "2026-05-10T16:39:18.111Z",
           "reason": "Please update moose (alces alces) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint."
+        }
+      }
+    },
+    "746d3e98-64af-4897-9cd3-c09b169a8c69": {
+      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+      "matchedKey": "mammalia;carnivora;canidae;nyctereutes;procyonoides",
+      "speciesLabel": "raccoon dog (nyctereutes procyonoides)",
+      "commonName": "raccoon dog",
+      "binomial": "nyctereutes procyonoides",
+      "classLabel": "Mammal",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "allow": {
+        "DNK": true
+      },
+      "block": {},
+      "allow_regional": {},
+      "metadata": {
+        "DNK": {
+          "decision": "allow",
+          "coverage": "national",
+          "overridePath": "data/review-overrides/countries/DNK/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-05-12T19:02:21.584Z",
+          "reason": "Please accept raccoon dog (nyctereutes procyonoides) into the permanent Denmark country pack and keep its current national footprint coverage."
         }
       }
     }
