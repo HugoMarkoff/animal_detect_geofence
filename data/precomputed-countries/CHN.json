@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 507,
+    "total": 506,
     "statusCounts": {
       "unlisted": 81,
       "likely_true_both": 282,
-      "likely_false": 68,
+      "likely_false": 67,
       "new_record": 18,
       "likely_true_one_source": 58
     },
     "bucketCounts": {
       "Unlisted": 81,
       "Likely Valid": 340,
-      "Needs Review": 68,
+      "Needs Review": 67,
       "New": 18
     }
   },
@@ -11442,58 +11442,6 @@
       "evidenceQuality": {
         "rawTotal": 273,
         "qualifiedTotal": 273,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 3515.577705641276,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "countryIso3": "CHN",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 6903,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -28984,5 +28932,73 @@
       },
       "tags": []
     }
-  ]
+  ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "sourceFile": "data/review-overrides/countries/CHN/601cf098-9876-4912-84bb-0926834305e9.json",
+      "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+      "updatedBy": "hugo",
+      "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for China (CHN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback.",
+      "baseEntry": {
+        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+        "countryIso3": "CHN",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": null,
+        "inatPresent": null,
+        "gbifCount": null,
+        "inatCount": null,
+        "rawGbifPresent": null,
+        "rawInatPresent": null,
+        "rawGbifCount": null,
+        "rawInatCount": null,
+        "gbifUsageKey": null,
+        "inatTaxonId": null,
+        "inatPlaceId": 6903,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 3515.577705641276,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
+  "manualOverrideSummary": {
+    "count": 1,
+    "appliedAtUtc": "2026-05-15T21:46:06.651613+00:00",
+    "items": [
+      "601cf098-9876-4912-84bb-0926834305e9"
+    ]
+  }
 }

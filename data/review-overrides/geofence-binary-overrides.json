@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-05-15T05:52:34.223Z",
+  "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -50,79 +50,2241 @@
         }
       }
     },
-    "429257d4-3ef2-47fb-b849-66ee6c107346": {
-      "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
-      "matchedKey": "mammalia;artiodactyla;cervidae;alces;alces",
-      "speciesLabel": "moose (alces alces)",
-      "commonName": "moose",
-      "binomial": "alces alces",
+    "601cf098-9876-4912-84bb-0926834305e9": {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "matchedKey": "mammalia;carnivora;ursidae;ursus;u. arctos",
+      "speciesLabel": "grizzly bear (ursus u. arctos)",
+      "commonName": "grizzly bear",
+      "binomial": "ursus u. arctos",
       "classLabel": "Mammal",
-      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
-      "allow": {
-        "DNK": true
+      "sourceDataset": "systematic_review_proposals.json",
+      "allow": {},
+      "block": {
+        "ABW": true,
+        "AFG": true,
+        "AGO": true,
+        "AIA": true,
+        "ALA": true,
+        "ALB": true,
+        "AND": true,
+        "ARE": true,
+        "ARG": true,
+        "ARM": true,
+        "ASM": true,
+        "ATA": true,
+        "ATF": true,
+        "ATG": true,
+        "AUS": true,
+        "AUT": true,
+        "AZE": true,
+        "BDI": true,
+        "BEL": true,
+        "BEN": true,
+        "BES": true,
+        "BFA": true,
+        "BGD": true,
+        "BGR": true,
+        "BHR": true,
+        "BHS": true,
+        "BIH": true,
+        "BLM": true,
+        "BLR": true,
+        "BLZ": true,
+        "BMU": true,
+        "BOL": true,
+        "BRA": true,
+        "BRB": true,
+        "BRN": true,
+        "BTN": true,
+        "BVT": true,
+        "BWA": true,
+        "CAF": true,
+        "CCK": true,
+        "CHE": true,
+        "CHL": true,
+        "CHN": true,
+        "CIV": true,
+        "CMR": true,
+        "COD": true,
+        "COG": true,
+        "COK": true,
+        "COL": true,
+        "COM": true,
+        "CPV": true,
+        "CRI": true,
+        "CUB": true,
+        "CUW": true,
+        "CXR": true,
+        "CYM": true,
+        "CYP": true,
+        "CZE": true,
+        "DEU": true,
+        "DJI": true,
+        "DMA": true,
+        "DNK": true,
+        "DOM": true,
+        "DZA": true,
+        "ECU": true,
+        "EGY": true,
+        "ERI": true,
+        "ESH": true,
+        "ESP": true,
+        "EST": true,
+        "ETH": true,
+        "FIN": true,
+        "FJI": true,
+        "FLK": true,
+        "FRA": true,
+        "FRO": true,
+        "FSM": true,
+        "GAB": true,
+        "GBR": true,
+        "GEO": true,
+        "GGY": true,
+        "GHA": true,
+        "GIB": true,
+        "GIN": true,
+        "GLP": true,
+        "GMB": true,
+        "GNB": true,
+        "GNQ": true,
+        "GRC": true,
+        "GRD": true,
+        "GRL": true,
+        "GTM": true,
+        "GUF": true,
+        "GUM": true,
+        "GUY": true,
+        "HKG": true,
+        "HMD": true,
+        "HND": true,
+        "HRV": true,
+        "HTI": true,
+        "HUN": true,
+        "IDN": true,
+        "IMN": true,
+        "IND": true,
+        "IOT": true,
+        "IRL": true,
+        "IRN": true,
+        "IRQ": true,
+        "ISL": true,
+        "ISR": true,
+        "ITA": true,
+        "JAM": true,
+        "JEY": true,
+        "JOR": true,
+        "JPN": true,
+        "KAZ": true,
+        "KEN": true,
+        "KGZ": true,
+        "KHM": true,
+        "KIR": true,
+        "KNA": true,
+        "KOR": true,
+        "KWT": true,
+        "LAO": true,
+        "LBN": true,
+        "LBR": true,
+        "LBY": true,
+        "LCA": true,
+        "LIE": true,
+        "LKA": true,
+        "LSO": true,
+        "LTU": true,
+        "LUX": true,
+        "LVA": true,
+        "MAC": true,
+        "MAF": true,
+        "MAR": true,
+        "MCO": true,
+        "MDA": true,
+        "MDG": true,
+        "MDV": true,
+        "MEX": true,
+        "MHL": true,
+        "MKD": true,
+        "MLI": true,
+        "MLT": true,
+        "MMR": true,
+        "MNE": true,
+        "MNG": true,
+        "MNP": true,
+        "MOZ": true,
+        "MRT": true,
+        "MSR": true,
+        "MTQ": true,
+        "MUS": true,
+        "MWI": true,
+        "MYS": true,
+        "MYT": true,
+        "NAM": true,
+        "NCL": true,
+        "NER": true,
+        "NFK": true,
+        "NGA": true,
+        "NIC": true,
+        "NIU": true,
+        "NLD": true,
+        "NOR": true,
+        "NPL": true,
+        "NRU": true,
+        "NZL": true,
+        "OMN": true,
+        "PAK": true,
+        "PAN": true,
+        "PCN": true,
+        "PER": true,
+        "PHL": true,
+        "PLW": true,
+        "PNG": true,
+        "POL": true,
+        "PRI": true,
+        "PRK": true,
+        "PRT": true,
+        "PRY": true,
+        "PSE": true,
+        "PYF": true,
+        "QAT": true,
+        "REU": true,
+        "ROU": true,
+        "RUS": true,
+        "RWA": true,
+        "SAU": true,
+        "SDN": true,
+        "SEN": true,
+        "SGP": true,
+        "SGS": true,
+        "SHN": true,
+        "SJM": true,
+        "SLB": true,
+        "SLE": true,
+        "SLV": true,
+        "SMR": true,
+        "SOM": true,
+        "SPM": true,
+        "SRB": true,
+        "SSD": true,
+        "STP": true,
+        "SUR": true,
+        "SVK": true,
+        "SVN": true,
+        "SWE": true,
+        "SWZ": true,
+        "SXM": true,
+        "SYC": true,
+        "SYR": true,
+        "TCA": true,
+        "TCD": true,
+        "TGO": true,
+        "THA": true,
+        "TJK": true,
+        "TKL": true,
+        "TKM": true,
+        "TLS": true,
+        "TON": true,
+        "TTO": true,
+        "TUN": true,
+        "TUR": true,
+        "TUV": true,
+        "TWN": true,
+        "TZA": true,
+        "UGA": true,
+        "UKR": true,
+        "UMI": true,
+        "URY": true,
+        "UZB": true,
+        "VAT": true,
+        "VCT": true,
+        "VEN": true,
+        "VGB": true,
+        "VIR": true,
+        "VNM": true,
+        "VUT": true,
+        "WLF": true,
+        "WSM": true,
+        "YEM": true,
+        "ZAF": true,
+        "ZMB": true,
+        "ZWE": true
       },
-      "block": {},
-      "allow_regional": {
-        "DNK": true
-      },
-      "metadata": {
-        "DNK": {
-          "decision": "allow",
-          "coverage": "regional",
-          "overridePath": "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
-          "updatedBy": "HugoMarkoff",
-          "updatedAtUtc": "2026-05-10T16:39:18.111Z",
-          "reason": "Please update moose (alces alces) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint."
-        }
-      }
-    },
-    "746d3e98-64af-4897-9cd3-c09b169a8c69": {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "matchedKey": "mammalia;carnivora;canidae;nyctereutes;procyonoides",
-      "speciesLabel": "raccoon dog (nyctereutes procyonoides)",
-      "commonName": "raccoon dog",
-      "binomial": "nyctereutes procyonoides",
-      "classLabel": "Mammal",
-      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
-      "allow": {
-        "DNK": true
-      },
-      "block": {},
       "allow_regional": {},
       "metadata": {
+        "ABW": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ABW/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Aruba (ABW). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "AFG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/AFG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Afghanistan (AFG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "AGO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/AGO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Angola (AGO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "AIA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/AIA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Anguilla (AIA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ALA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ALA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for \u00c5land Islands (ALA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ALB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ALB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Albania (ALB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "AND": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/AND/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Andorra (AND). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ARE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ARE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for United Arab Emirates (ARE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ARG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ARG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Argentina (ARG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ARM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ARM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Armenia (ARM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ASM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ASM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for American Samoa (ASM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ATA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ATA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Antarctica (ATA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ATF": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ATF/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for French Southern and Antarctic Lands (ATF). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ATG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ATG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Antigua and Barbuda (ATG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "AUS": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/AUS/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Australia (AUS). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "AUT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/AUT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Austria (AUT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "AZE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/AZE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Azerbaijan (AZE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BDI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BDI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Burundi (BDI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BEL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BEL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Belgium (BEL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BEN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BEN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Benin (BEN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BES": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BES/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Caribbean Netherlands (BES). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BFA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BFA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Burkina Faso (BFA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BGD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BGD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bangladesh (BGD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BGR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BGR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bulgaria (BGR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BHR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BHR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bahrain (BHR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BHS": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BHS/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bahamas (BHS). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BIH": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BIH/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bosnia and Herzegovina (BIH). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BLM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BLM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Barth\u00e9lemy (BLM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BLR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BLR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Belarus (BLR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BLZ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BLZ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Belize (BLZ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BMU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BMU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bermuda (BMU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BOL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BOL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bolivia (BOL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BRA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BRA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Brazil (BRA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BRB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BRB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Barbados (BRB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BRN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BRN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Brunei (BRN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BTN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BTN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bhutan (BTN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BVT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BVT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Bouvet Island (BVT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "BWA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/BWA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Botswana (BWA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CAF": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CAF/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Central African Republic (CAF). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CCK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CCK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cocos (Keeling) Islands (CCK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CHE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CHE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Switzerland (CHE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CHL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CHL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Chile (CHL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CHN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CHN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for China (CHN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CIV": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CIV/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Ivory Coast (CIV). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CMR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CMR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cameroon (CMR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "COD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/COD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for DR Congo (COD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "COG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/COG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Republic of the Congo (COG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "COK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/COK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cook Islands (COK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "COL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/COL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Colombia (COL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "COM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/COM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Comoros (COM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CPV": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CPV/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cape Verde (CPV). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CRI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CRI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Costa Rica (CRI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CUB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CUB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cuba (CUB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CUW": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CUW/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cura\u00e7ao (CUW). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CXR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CXR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Christmas Island (CXR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CYM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CYM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cayman Islands (CYM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CYP": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CYP/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cyprus (CYP). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "CZE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/CZE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Czechia (CZE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "DEU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/DEU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Germany (DEU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "DJI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/DJI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Djibouti (DJI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "DMA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/DMA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Dominica (DMA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
         "DNK": {
-          "decision": "allow",
-          "coverage": "national",
-          "overridePath": "data/review-overrides/countries/DNK/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
-          "updatedBy": "HugoMarkoff",
-          "updatedAtUtc": "2026-05-12T19:02:21.584Z",
-          "reason": "Please accept raccoon dog (nyctereutes procyonoides) into the permanent Denmark country pack and keep its current national footprint coverage."
-        }
-      }
-    },
-    "e415387d-26d7-4ef1-9c47-539870f7429b": {
-      "itemId": "e415387d-26d7-4ef1-9c47-539870f7429b",
-      "matchedKey": "mammalia;artiodactyla;cervidae;cervus;nippon",
-      "speciesLabel": "sika deer (cervus nippon)",
-      "commonName": "sika deer",
-      "binomial": "cervus nippon",
-      "classLabel": "Mammal",
-      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
-      "allow": {
-        "DNK": true
-      },
-      "block": {},
-      "allow_regional": {
-        "DNK": true
-      },
-      "metadata": {
-        "DNK": {
-          "decision": "allow",
-          "coverage": "regional",
-          "overridePath": "data/review-overrides/countries/DNK/e415387d-26d7-4ef1-9c47-539870f7429b.json",
-          "updatedBy": "HugoMarkoff",
-          "updatedAtUtc": "2026-05-15T05:52:34.223Z",
-          "reason": "Please update sika deer (cervus nippon) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint."
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/DNK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Denmark (DNK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "DOM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/DOM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Dominican Republic (DOM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "DZA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/DZA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Algeria (DZA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ECU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ECU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Ecuador (ECU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "EGY": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/EGY/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Egypt (EGY). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ERI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ERI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Eritrea (ERI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ESH": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ESH/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Western Sahara (ESH). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ESP": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ESP/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Spain (ESP). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "EST": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/EST/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Estonia (EST). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ETH": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ETH/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Ethiopia (ETH). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "FIN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/FIN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Finland (FIN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "FJI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/FJI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Fiji (FJI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "FLK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/FLK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Falkland Islands (FLK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "FRA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/FRA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for France (FRA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "FRO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/FRO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Faroe Islands (FRO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "FSM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/FSM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Micronesia (FSM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GAB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GAB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Gabon (GAB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GBR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GBR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for United Kingdom (GBR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GEO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GEO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Georgia (GEO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GGY": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GGY/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Guernsey (GGY). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GHA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GHA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Ghana (GHA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GIB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GIB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Gibraltar (GIB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GIN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GIN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Guinea (GIN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GLP": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GLP/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Guadeloupe (GLP). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GMB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GMB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Gambia (GMB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GNB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GNB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Guinea-Bissau (GNB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GNQ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GNQ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Equatorial Guinea (GNQ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GRC": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GRC/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Greece (GRC). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GRD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GRD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Grenada (GRD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GRL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GRL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Greenland (GRL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GTM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GTM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Guatemala (GTM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GUF": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GUF/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for French Guiana (GUF). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GUM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GUM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Guam (GUM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "GUY": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GUY/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Guyana (GUY). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "HKG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/HKG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Hong Kong (HKG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "HMD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/HMD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Heard Island and McDonald Islands (HMD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "HND": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/HND/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Honduras (HND). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "HRV": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/HRV/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Croatia (HRV). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "HTI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/HTI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Haiti (HTI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "HUN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/HUN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Hungary (HUN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "IDN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/IDN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Indonesia (IDN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "IMN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/IMN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Isle of Man (IMN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "IND": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/IND/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for India (IND). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "IOT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/IOT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for British Indian Ocean Territory (IOT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "IRL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/IRL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Ireland (IRL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "IRN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/IRN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Iran (IRN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "IRQ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/IRQ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Iraq (IRQ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ISL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ISL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Iceland (ISL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ISR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ISR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Israel (ISR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ITA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ITA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Italy (ITA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "JAM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/JAM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Jamaica (JAM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "JEY": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/JEY/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Jersey (JEY). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "JOR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/JOR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Jordan (JOR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "JPN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/JPN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Japan (JPN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KAZ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KAZ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Kazakhstan (KAZ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KEN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KEN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Kenya (KEN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KGZ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KGZ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Kyrgyzstan (KGZ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KHM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KHM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cambodia (KHM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KIR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KIR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Kiribati (KIR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KNA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KNA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Kitts and Nevis (KNA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KOR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KOR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for South Korea (KOR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "KWT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/KWT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Kuwait (KWT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LAO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LAO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Laos (LAO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LBN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LBN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Lebanon (LBN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LBR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LBR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Liberia (LBR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LBY": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LBY/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Libya (LBY). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LCA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LCA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Lucia (LCA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LIE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LIE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Liechtenstein (LIE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LKA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LKA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Sri Lanka (LKA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LSO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LSO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Lesotho (LSO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LTU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LTU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Lithuania (LTU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LUX": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LUX/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Luxembourg (LUX). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "LVA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/LVA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Latvia (LVA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MAC": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MAC/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Macau (MAC). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MAF": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MAF/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Martin (MAF). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MAR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MAR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Morocco (MAR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MCO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MCO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Monaco (MCO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MDA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MDA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Moldova (MDA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MDG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MDG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Madagascar (MDG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MDV": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MDV/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Maldives (MDV). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MEX": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MEX/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Mexico (MEX). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MHL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MHL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Marshall Islands (MHL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MKD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MKD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for North Macedonia (MKD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MLI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MLI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Mali (MLI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MLT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MLT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Malta (MLT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MMR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MMR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Myanmar (MMR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MNE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MNE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Montenegro (MNE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MNG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MNG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Mongolia (MNG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MNP": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MNP/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Northern Mariana Islands (MNP). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MOZ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MOZ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Mozambique (MOZ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MRT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MRT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Mauritania (MRT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MSR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MSR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Montserrat (MSR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MTQ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MTQ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Martinique (MTQ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MUS": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MUS/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Mauritius (MUS). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MWI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MWI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Malawi (MWI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MYS": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MYS/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Malaysia (MYS). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "MYT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/MYT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Mayotte (MYT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NAM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NAM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Namibia (NAM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NCL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NCL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for New Caledonia (NCL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NER": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NER/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Niger (NER). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NFK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NFK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Norfolk Island (NFK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NGA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NGA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Nigeria (NGA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NIC": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NIC/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Nicaragua (NIC). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NIU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NIU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Niue (NIU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NLD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NLD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Netherlands (NLD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NOR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NOR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Norway (NOR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NPL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NPL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Nepal (NPL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NRU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NRU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Nauru (NRU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "NZL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/NZL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for New Zealand (NZL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "OMN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/OMN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Oman (OMN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PAK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PAK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Pakistan (PAK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PAN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PAN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Panama (PAN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PCN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PCN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Pitcairn Islands (PCN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PER": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PER/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Peru (PER). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PHL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PHL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Philippines (PHL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PLW": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PLW/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Palau (PLW). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PNG": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PNG/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Papua New Guinea (PNG). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "POL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/POL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Poland (POL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PRI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PRI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Puerto Rico (PRI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PRK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PRK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for North Korea (PRK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PRT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PRT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Portugal (PRT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PRY": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PRY/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Paraguay (PRY). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PSE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PSE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Palestine (PSE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "PYF": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/PYF/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for French Polynesia (PYF). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "QAT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/QAT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Qatar (QAT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "REU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/REU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for R\u00e9union (REU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ROU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ROU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Romania (ROU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "RUS": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/RUS/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Russia (RUS). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "RWA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/RWA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Rwanda (RWA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SAU": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SAU/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saudi Arabia (SAU). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SDN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SDN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Sudan (SDN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SEN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SEN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Senegal (SEN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SGP": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SGP/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Singapore (SGP). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SGS": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SGS/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for South Georgia (SGS). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SHN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SHN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Helena, Ascension and Tristan da Cunha (SHN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SJM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SJM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Svalbard and Jan Mayen (SJM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SLB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SLB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Solomon Islands (SLB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SLE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SLE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Sierra Leone (SLE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SLV": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SLV/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for El Salvador (SLV). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SMR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SMR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for San Marino (SMR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SOM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SOM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Somalia (SOM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SPM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SPM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Pierre and Miquelon (SPM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SRB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SRB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Serbia (SRB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SSD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SSD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for South Sudan (SSD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "STP": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/STP/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for S\u00e3o Tom\u00e9 and Pr\u00edncipe (STP). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SUR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SUR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Suriname (SUR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SVK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SVK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Slovakia (SVK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SVN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SVN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Slovenia (SVN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SWE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SWE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Sweden (SWE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SWZ": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SWZ/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Eswatini (SWZ). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SXM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SXM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Sint Maarten (SXM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SYC": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SYC/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Seychelles (SYC). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "SYR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/SYR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Syria (SYR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TCA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TCA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Turks and Caicos Islands (TCA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TCD": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TCD/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Chad (TCD). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TGO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TGO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Togo (TGO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "THA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/THA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Thailand (THA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TJK": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TJK/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Tajikistan (TJK). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TKL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TKL/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Tokelau (TKL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TKM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TKM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Turkmenistan (TKM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TLS": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TLS/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Timor-Leste (TLS). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TON": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TON/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Tonga (TON). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TTO": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TTO/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Trinidad and Tobago (TTO). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TUN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TUN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Tunisia (TUN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TUR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TUR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Turkey (TUR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TUV": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TUV/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Tuvalu (TUV). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TWN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TWN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Taiwan (TWN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "TZA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/TZA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Tanzania (TZA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "UGA": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/UGA/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Uganda (UGA). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "UKR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/UKR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Ukraine (UKR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "UMI": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/UMI/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for United States Minor Outlying Islands (UMI). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "URY": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/URY/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Uruguay (URY). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "UZB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/UZB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Uzbekistan (UZB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "VAT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/VAT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Vatican City (VAT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "VCT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/VCT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Vincent and the Grenadines (VCT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "VEN": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/VEN/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Venezuela (VEN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "VGB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/VGB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for British Virgin Islands (VGB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "VIR": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/VIR/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for United States Virgin Islands (VIR). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "VNM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/VNM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Vietnam (VNM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "VUT": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/VUT/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Vanuatu (VUT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "WLF": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/WLF/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Wallis and Futuna (WLF). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "WSM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/WSM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Samoa (WSM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "YEM": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/YEM/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Yemen (YEM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ZAF": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ZAF/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for South Africa (ZAF). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ZMB": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ZMB/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Zambia (ZMB). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
+        },
+        "ZWE": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ZWE/601cf098-9876-4912-84bb-0926834305e9.json",
+          "updatedBy": "hugo",
+          "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+          "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Zimbabwe (ZWE). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback."
         }
       }
     }

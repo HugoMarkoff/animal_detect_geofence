@@ -7,15 +7,15 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 95,
+    "total": 94,
     "statusCounts": {
-      "likely_false": 62,
+      "likely_false": 61,
       "likely_true_one_source": 13,
       "new_record": 6,
       "unlisted": 14
     },
     "bucketCounts": {
-      "Needs Review": 62,
+      "Needs Review": 61,
       "Likely Valid": 13,
       "New": 6,
       "Unlisted": 14
@@ -2078,58 +2078,6 @@
         "captiveInatCount": 0,
         "rejected": true,
         "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 22.397686948112614,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "countryIso3": "SHN",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": null,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
       },
       "observationProfile": {
         "code": "no_points",
@@ -5345,5 +5293,73 @@
       },
       "tags": []
     }
-  ]
+  ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "sourceFile": "data/review-overrides/countries/SHN/601cf098-9876-4912-84bb-0926834305e9.json",
+      "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+      "updatedBy": "hugo",
+      "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Saint Helena, Ascension and Tristan da Cunha (SHN). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback.",
+      "baseEntry": {
+        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+        "countryIso3": "SHN",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": null,
+        "inatPresent": null,
+        "gbifCount": null,
+        "inatCount": null,
+        "rawGbifPresent": null,
+        "rawInatPresent": null,
+        "rawGbifCount": null,
+        "rawInatCount": null,
+        "gbifUsageKey": null,
+        "inatTaxonId": null,
+        "inatPlaceId": null,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 22.397686948112614,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
+  "manualOverrideSummary": {
+    "count": 1,
+    "appliedAtUtc": "2026-05-15T21:46:08.927498+00:00",
+    "items": [
+      "601cf098-9876-4912-84bb-0926834305e9"
+    ]
+  }
 }
