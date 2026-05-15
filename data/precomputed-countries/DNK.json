@@ -26482,19 +26482,76 @@
         "spreadRatio": 0.7745190785643381,
         "coverageAreaKm2": 18725.866574580745,
         "coverageRatio": 0.43453535468001914,
-        "footprintPolygonLatLngs": [],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
+        "footprintPolygonLatLngs": [
+          [
+            55.221509,
+            12.194074
+          ],
+          [
+            55.203958,
+            11.676445
+          ],
+          [
+            55.082354,
+            11.604695
+          ],
+          [
+            55.026555,
+            11.843009
+          ],
+          [
+            54.986862,
+            11.873759
+          ],
+          [
+            54.95449,
+            12.02751
+          ],
+          [
+            54.911778,
+            12.012135
+          ],
+          [
+            54.871971,
+            12.204324
+          ],
+          [
+            54.947129,
+            12.3427
+          ],
+          [
+            54.932404,
+            12.514389
+          ],
+          [
+            54.985391,
+            12.591264
+          ],
+          [
+            55.050059,
+            12.350388
+          ],
+          [
+            55.101425,
+            12.206887
+          ],
+          [
+            55.146865,
+            12.145386
+          ]
+        ],
+        "code": "regional",
+        "label": "Regional footprint",
+        "short": "Regional",
         "note": "Manual admin override applied from the review desk."
       },
       "tags": [],
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/DNK/e415387d-26d7-4ef1-9c47-539870f7429b.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-05-15T05:50:17.519Z",
+        "updatedAtUtc": "2026-05-15T05:52:34.408Z",
         "updatedBy": "HugoMarkoff",
-        "reason": "Please accept sika deer (cervus nippon) into the permanent Denmark country pack and keep its current national footprint coverage. Applied from the admin panel.",
+        "reason": "Please update sika deer (cervus nippon) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint. Applied from the admin panel.",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "e415387d-26d7-4ef1-9c47-539870f7429b",
