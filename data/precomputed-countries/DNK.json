@@ -12,14 +12,14 @@
       "unlisted": 221,
       "likely_true_both": 90,
       "likely_false": 40,
-      "new_record": 48,
-      "likely_true_one_source": 28
+      "new_record": 47,
+      "likely_true_one_source": 29
     },
     "bucketCounts": {
       "Unlisted": 221,
-      "Likely Valid": 118,
+      "Likely Valid": 119,
       "Needs Review": 40,
-      "New": 48
+      "New": 47
     }
   },
   "entries": [
@@ -26435,8 +26435,8 @@
     {
       "itemId": "e415387d-26d7-4ef1-9c47-539870f7429b",
       "countryIso3": "DNK",
-      "status": "new_record",
-      "bucket": "New",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": true,
@@ -26482,42 +26482,108 @@
         "spreadRatio": 0.7745190785643381,
         "coverageAreaKm2": 18725.866574580745,
         "coverageRatio": 0.43453535468001914,
-        "footprintPolygonLatLngs": [
-          [
-            56.229203512537204,
-            9.26962966463365
-          ],
-          [
-            55.6751629374429,
-            13.060508125802588
-          ],
-          [
-            55.68655054136958,
-            13.077709693653722
-          ],
-          [
-            55.819584349852676,
-            13.10742695969588
-          ],
-          [
-            56.45063962104922,
-            9.469578501830675
-          ],
-          [
-            56.45284418298977,
-            9.395404505246903
-          ],
-          [
-            56.42319288189365,
-            9.32621941919304
-          ]
-        ],
+        "footprintPolygonLatLngs": [],
         "code": "countrywide",
         "label": "National footprint",
         "short": "National",
-        "note": "Dropped 7 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+        "note": "Manual admin override applied from the review desk."
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/DNK/e415387d-26d7-4ef1-9c47-539870f7429b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-15T05:50:17.519Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please accept sika deer (cervus nippon) into the permanent Denmark country pack and keep its current national footprint coverage. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "e415387d-26d7-4ef1-9c47-539870f7429b",
+          "countryIso3": "DNK",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 541,
+          "inatCount": 165,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 953,
+          "rawInatCount": 169,
+          "gbifUsageKey": 2440954,
+          "inatTaxonId": 42210,
+          "inatPlaceId": 8051,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 1122,
+            "qualifiedTotal": 706,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 83,
+            "outlierPointCount": 7,
+            "clusterCount": 2,
+            "clusterSpreadKm": 175.82698331830878,
+            "maxDistanceKm": 181.42435305219576,
+            "unique25kmCells": 5,
+            "unique50kmCells": 3,
+            "countryDiameterKm": 234.24129640355284,
+            "spreadRatio": 0.7745190785643381,
+            "coverageAreaKm2": 18725.866574580745,
+            "coverageRatio": 0.43453535468001914,
+            "footprintPolygonLatLngs": [
+              [
+                56.229203512537204,
+                9.26962966463365
+              ],
+              [
+                55.6751629374429,
+                13.060508125802588
+              ],
+              [
+                55.68655054136958,
+                13.077709693653722
+              ],
+              [
+                55.819584349852676,
+                13.10742695969588
+              ],
+              [
+                56.45063962104922,
+                9.469578501830675
+              ],
+              [
+                56.45284418298977,
+                9.395404505246903
+              ],
+              [
+                56.42319288189365,
+                9.32621941919304
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "Dropped 7 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "e6c03f93-b93d-4049-ae1a-1e0ea29ebba9",
@@ -29853,8 +29919,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 9,
-    "appliedAtUtc": "2026-05-13T11:56:19.627939+00:00",
+    "count": 10,
+    "appliedAtUtc": "2026-05-15T05:50:36.799979+00:00",
     "items": [
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "2813059e-da3b-4f17-a60c-d9c34f2fce24",
@@ -29864,6 +29930,7 @@
       "75e7ac24-a298-4a2f-bc12-9a153b08b7e6",
       "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "d372cda5-a8ca-4b7b-97ed-4e4fab9c9b4b",
+      "e415387d-26d7-4ef1-9c47-539870f7429b",
       "eb3829b0-772e-4088-ae90-f11b9fe38284"
     ]
   }
