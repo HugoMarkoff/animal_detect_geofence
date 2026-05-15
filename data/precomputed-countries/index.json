@@ -1,5 +1,5 @@
 {
-  "generatedAtUtc": "2026-05-15T05:50:46.213581+00:00",
+  "generatedAtUtc": "2026-05-15T20:51:24.966470+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
   "countries": [
     {
@@ -59,15 +59,17 @@
       "countryName": "American Samoa",
       "path": "./ASM.json",
       "precomputeMode": "validated",
-      "total": 67,
+      "total": 68,
       "bucketCounts": {
         "Needs Review": 59,
-        "Likely Valid": 8
+        "Likely Valid": 9
       },
       "statusCounts": {
         "likely_false": 59,
-        "likely_true_one_source": 8
-      }
+        "likely_true_one_source": 9
+      },
+      "manualOverrideCount": 1,
+      "hasManualOverrides": true
     },
     {
       "iso3": "AND",
@@ -1667,20 +1669,22 @@
       "countryName": "Greenland",
       "path": "./GRL.json",
       "precomputeMode": "validated",
-      "total": 152,
+      "total": 151,
       "bucketCounts": {
-        "Needs Review": 74,
+        "Needs Review": 73,
         "New": 7,
         "Unlisted": 52,
         "Likely Valid": 19
       },
       "statusCounts": {
-        "likely_false": 74,
+        "likely_false": 73,
         "new_record": 7,
         "unlisted": 52,
         "likely_true_both": 11,
         "likely_true_one_source": 8
-      }
+      },
+      "manualOverrideCount": 1,
+      "hasManualOverrides": true
     },
     {
       "iso3": "GRD",

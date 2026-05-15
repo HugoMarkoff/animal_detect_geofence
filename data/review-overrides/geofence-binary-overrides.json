@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-05-15T05:52:34.223Z",
+  "updatedAtUtc": "2026-05-15T20:51:14.086984Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -50,79 +50,37 @@
         }
       }
     },
-    "429257d4-3ef2-47fb-b849-66ee6c107346": {
-      "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
-      "matchedKey": "mammalia;artiodactyla;cervidae;alces;alces",
-      "speciesLabel": "moose (alces alces)",
-      "commonName": "moose",
-      "binomial": "alces alces",
-      "classLabel": "Mammal",
-      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+    "f64c3cbb-8dca-4532-baf7-d005626313d4": {
+      "itemId": "f64c3cbb-8dca-4532-baf7-d005626313d4",
+      "matchedKey": "aves;passeriformes;hirundinidae;hirundo;rustica",
+      "speciesLabel": "barn swallow (hirundo rustica)",
+      "commonName": "barn swallow",
+      "binomial": "hirundo rustica",
+      "classLabel": "Bird",
+      "sourceDataset": "systematic_review_proposals.json",
       "allow": {
-        "DNK": true
+        "ASM": true
       },
-      "block": {},
-      "allow_regional": {
-        "DNK": true
+      "block": {
+        "GRL": true
       },
-      "metadata": {
-        "DNK": {
-          "decision": "allow",
-          "coverage": "regional",
-          "overridePath": "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
-          "updatedBy": "HugoMarkoff",
-          "updatedAtUtc": "2026-05-10T16:39:18.111Z",
-          "reason": "Please update moose (alces alces) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint."
-        }
-      }
-    },
-    "746d3e98-64af-4897-9cd3-c09b169a8c69": {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "matchedKey": "mammalia;carnivora;canidae;nyctereutes;procyonoides",
-      "speciesLabel": "raccoon dog (nyctereutes procyonoides)",
-      "commonName": "raccoon dog",
-      "binomial": "nyctereutes procyonoides",
-      "classLabel": "Mammal",
-      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
-      "allow": {
-        "DNK": true
-      },
-      "block": {},
       "allow_regional": {},
       "metadata": {
-        "DNK": {
+        "GRL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/GRL/f64c3cbb-8dca-4532-baf7-d005626313d4.json",
+          "updatedBy": "copilot-e2e-test",
+          "updatedAtUtc": "2026-05-15T20:51:14.086984Z",
+          "reason": "Systematic review approval: remove barn swallow (hirundo rustica) for Greenland (GRL). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: End-to-end add/remove/keep GitHub publish test."
+        },
+        "ASM": {
           "decision": "allow",
           "coverage": "national",
-          "overridePath": "data/review-overrides/countries/DNK/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
-          "updatedBy": "HugoMarkoff",
-          "updatedAtUtc": "2026-05-12T19:02:21.584Z",
-          "reason": "Please accept raccoon dog (nyctereutes procyonoides) into the permanent Denmark country pack and keep its current national footprint coverage."
-        }
-      }
-    },
-    "e415387d-26d7-4ef1-9c47-539870f7429b": {
-      "itemId": "e415387d-26d7-4ef1-9c47-539870f7429b",
-      "matchedKey": "mammalia;artiodactyla;cervidae;cervus;nippon",
-      "speciesLabel": "sika deer (cervus nippon)",
-      "commonName": "sika deer",
-      "binomial": "cervus nippon",
-      "classLabel": "Mammal",
-      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
-      "allow": {
-        "DNK": true
-      },
-      "block": {},
-      "allow_regional": {
-        "DNK": true
-      },
-      "metadata": {
-        "DNK": {
-          "decision": "allow",
-          "coverage": "regional",
-          "overridePath": "data/review-overrides/countries/DNK/e415387d-26d7-4ef1-9c47-539870f7429b.json",
-          "updatedBy": "HugoMarkoff",
-          "updatedAtUtc": "2026-05-15T05:52:34.223Z",
-          "reason": "Please update sika deer (cervus nippon) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint."
+          "overridePath": "animal_detect_geofence/data/review-overrides/countries/ASM/f64c3cbb-8dca-4532-baf7-d005626313d4.json",
+          "updatedBy": "copilot-e2e-test",
+          "updatedAtUtc": "2026-05-15T20:51:14.086984Z",
+          "reason": "Systematic review approval: add barn swallow (hirundo rustica) for American Samoa (ASM). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: End-to-end add/remove/keep GitHub publish test."
         }
       }
     }
