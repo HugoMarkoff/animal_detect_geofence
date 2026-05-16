@@ -8,21 +8,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/styles.css?v=20260516a">
-    <link rel="stylesheet" href="../assets/systematic-review.css?v=20260516b">
+    <link rel="stylesheet" href="../assets/systematic-review.css?v=20260516c">
   </head>
   <body>
     <main class="shell review-shell">
       <section class="panel hero-panel">
         <div class="hero-grid">
-          <div>
+          <div class="review-hero-main">
+            <div class="review-brand-lockup">
+              <a class="review-brand-logo-link" href="https://www.animaldetect.com/" target="_blank" rel="noreferrer" aria-label="Animal Detect homepage">
+                <img class="review-brand-logo" src="https://www.animaldetect.com/images/logo_dark_green_box.svg" alt="Animal Detect logo">
+              </a>
+              <span class="review-brand-chip">Systematic review</span>
+            </div>
+
             <p class="eyebrow">Systematic Error Review</p>
             <h1>Approve the repeated false positives first.</h1>
-            <p class="section-copy">
+            <p class="section-copy review-hero-copy">
               This queue starts from the most frequent country-wide Needs Review issues. Accepting a proposal writes
               country override files, updates binary geofence tracking, and lets the published override workflow rebuild
               the packs. Keep and add mean the species should stay expected on trail cameras there; remove means it
               should not stay expected unless specifically supported.
             </p>
+
+            <section class="review-hero-metrics" aria-label="Systematic review workflow summary">
+              <article class="review-mini-card">
+                <span>Priority</span>
+                <strong>Ranked queue</strong>
+                <p>Start with the most repeated false positives across the 248-country review backlog.</p>
+              </article>
+
+              <article class="review-mini-card">
+                <span>Output</span>
+                <strong>Override-ready</strong>
+                <p>Accepted proposals write per-country overrides and update the published geofence workflow.</p>
+              </article>
+
+              <article class="review-mini-card">
+                <span>Decision</span>
+                <strong>Keep, remove, add</strong>
+                <p>Move flagged countries between keep and remove, and add only explicit expansions.</p>
+              </article>
+            </section>
           </div>
 
           <div class="hero-actions review-hero-actions">
@@ -186,7 +213,7 @@
         </div>
 
         <section class="country-columns country-columns-wide">
-          <div class="country-column">
+          <div class="country-column country-column-keep">
             <div class="country-column-head">
               <div>
                 <h4>Keep</h4>
@@ -200,7 +227,7 @@
             </div>
           </div>
 
-          <div class="country-column">
+          <div class="country-column country-column-remove">
             <div class="country-column-head">
               <div>
                 <h4>Remove</h4>
@@ -214,7 +241,7 @@
             </div>
           </div>
 
-          <div class="country-column">
+          <div class="country-column country-column-add">
             <div class="country-column-head">
               <div>
                 <h4>Add</h4>
