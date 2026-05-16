@@ -1,4 +1,5 @@
 .review-shell {
+  width: min(1760px, calc(100vw - 24px));
   display: grid;
   gap: 22px;
 }
@@ -29,7 +30,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 470px);
   align-items: end;
   gap: 26px;
 }
@@ -169,11 +170,10 @@
 }
 
 .review-workspace {
-  --review-stage-height: clamp(720px, calc(100vh - 140px), 980px);
   display: grid;
-  grid-template-columns: minmax(320px, 0.92fr) minmax(360px, 1.08fr);
+  grid-template-columns: minmax(560px, 620px) minmax(0, 1fr);
   gap: 22px;
-  align-items: stretch;
+  align-items: start;
   margin-top: 0;
 }
 
@@ -182,7 +182,7 @@
   display: flex;
   flex-direction: column;
   min-height: 0;
-  height: var(--review-stage-height);
+  height: var(--review-stage-height, auto);
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 250, 248, 0.94));
 }
@@ -191,8 +191,7 @@
   display: grid;
   gap: 18px;
   min-height: 0;
-  height: var(--review-stage-height);
-  overflow: auto;
+  overflow: visible;
   align-content: start;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 248, 245, 0.96));
 }
@@ -533,7 +532,6 @@
 @media (max-width: 1180px) {
   .review-workspace {
     grid-template-columns: 1fr;
-    --review-stage-height: auto;
   }
 
   .review-queue-panel {
@@ -542,7 +540,6 @@
   }
 
   .review-detail-panel {
-    height: auto;
     overflow: visible;
   }
 
@@ -558,6 +555,10 @@
 }
 
 @media (max-width: 860px) {
+  .review-shell {
+    width: min(100vw - 16px, 100%);
+  }
+
   .review-brand-logo {
     width: min(100%, 180px);
   }

@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260516a";
+const ASSET_VERSION = "20260516b";
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
 const SYSTEMATIC_REVIEW_PROPOSALS_PATH = "data/systematic-review/proposals.json";
@@ -62,6 +62,9 @@ const state = {
 };
 
 const elements = {
+  reviewWorkspace: document.querySelector(".review-workspace"),
+  reviewQueuePanel: document.querySelector(".review-queue-panel"),
+  reviewDetailPanel: document.querySelector(".review-detail-panel"),
   queueSummary: document.querySelector("#queue-summary"),
   reviewQueue: document.querySelector("#review-queue"),
   issueTitle: document.querySelector("#issue-title"),
@@ -103,6 +106,10 @@ const elements = {
   adminLastCommitLink: document.querySelector("#admin-last-commit"),
   adminAuthStatus: document.querySelector("#admin-auth-status"),
 };
+
+let reviewStageSyncFrame = 0;
+let reviewStageResizeObserver = null;
+const reviewStageBreakpoint = window.matchMedia("(max-width: 1180px)");
 
 function cleanText(value) {
   return String(value || "").trim();
@@ -611,6 +618,59 @@ function renderEvidenceList(lines) {
   elements.evidenceList.innerHTML = lines.map((line) => `<li>${escapeHtml(line)}</li>`).join("");
 }
 
+function syncReviewStageHeight() {
+  if (!elements.reviewWorkspace || !elements.reviewQueuePanel || !elements.reviewDetailPanel) {
+    return;
+  }
+
+  if (reviewStageBreakpoint.matches) {
+    elements.reviewWorkspace.style.removeProperty("--review-stage-height");
+    return;
+  }
+
+  const detailHeight = Math.ceil(elements.reviewDetailPanel.getBoundingClientRect().height);
+  if (!detailHeight) {
+    elements.reviewWorkspace.style.removeProperty("--review-stage-height");
+    return;
+  }
+
+  elements.reviewWorkspace.style.setProperty("--review-stage-height", `${detailHeight}px`);
+}
+
+function scheduleReviewStageHeightSync() {
+  if (reviewStageSyncFrame) {
+    cancelAnimationFrame(reviewStageSyncFrame);
+  }
+
+  reviewStageSyncFrame = requestAnimationFrame(() => {
+    reviewStageSyncFrame = 0;
+    syncReviewStageHeight();
+  });
+}
+
+function setupReviewStageSync() {
+  if (!elements.reviewWorkspace || !elements.reviewQueuePanel || !elements.reviewDetailPanel) {
+    return;
+  }
+
+  if ("ResizeObserver" in window) {
+    reviewStageResizeObserver?.disconnect();
+    reviewStageResizeObserver = new ResizeObserver(() => {
+      scheduleReviewStageHeightSync();
+    });
+    reviewStageResizeObserver.observe(elements.reviewDetailPanel);
+  }
+
+  window.addEventListener("resize", scheduleReviewStageHeightSync, { passive: true });
+  if (reviewStageBreakpoint.addEventListener) {
+    reviewStageBreakpoint.addEventListener("change", scheduleReviewStageHeightSync);
+  } else {
+    reviewStageBreakpoint.addListener(scheduleReviewStageHeightSync);
+  }
+
+  scheduleReviewStageHeightSync();
+}
+
 function renderQueue() {
   elements.queueSummary.textContent = `${formatCount(state.issues.length)} active ranked issues loaded from the 248-country needs-review report.`;
 
@@ -643,6 +703,8 @@ function renderQueue() {
       `;
     })
     .join("");
+
+  scheduleReviewStageHeightSync();
 }
 
 function renderDetail(detail) {
@@ -722,6 +784,8 @@ function renderDetail(detail) {
   if (!state.admin.isApplying) {
     setDecisionStatus("Use Keep and Remove only for countries flagged in this review pass. Use Add only for countries outside the current expected list.");
   }
+
+  scheduleReviewStageHeightSync();
 }
 
 function renderEmptyDetail() {
@@ -760,6 +824,7 @@ function renderEmptyDetail() {
     button.disabled = true;
   });
   setDecisionStatus("No pending issues remain in the active queue.");
+  scheduleReviewStageHeightSync();
 }
 
 function applySelection(itemId) {
@@ -1715,6 +1780,7 @@ async function init() {
     updateCountryOptions();
     elements.reviewer.value = state.settings.defaultReviewer;
     syncSelection("");
+    setupReviewStageSync();
     renderAdminState();
     consumeAdminTokenHandoff();
     restorePersistedAdminSession();
