@@ -2,7 +2,8 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260516e";
+const ASSET_VERSION = "20260516f";
+const POINTER_DRAG_THRESHOLD_PX = 8;
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
 const SYSTEMATIC_REVIEW_PROPOSALS_PATH = "data/systematic-review/proposals.json";
@@ -44,6 +45,7 @@ const state = {
   },
   activeAddBucket: null,
   draggedCountry: null,
+  pointerDrag: null,
   hasUnsavedDraft: false,
   settings: {
     defaultReviewer: "github-review",
@@ -690,6 +692,38 @@ function localDraftStatusMessage(actionMessage) {
   return `${actionMessage} Save Draft or Accept to commit.`;
 }
 
+function bucketContainerFor(bucket) {
+  if (bucket === "keep") {
+    return elements.keepCountries;
+  }
+  if (bucket === "remove") {
+    return elements.removeCountries;
+  }
+  if (bucket === "add") {
+    return elements.addCountries;
+  }
+  return null;
+}
+
+function clearBucketDropTargets() {
+  [elements.keepCountries, elements.removeCountries, elements.addCountries].forEach((container) => {
+    container?.classList.remove("drag-target");
+  });
+}
+
+function dropBucketFromPoint(clientX, clientY) {
+  return document.elementFromPoint(clientX, clientY)?.closest(".country-pill-grid[data-bucket]")?.dataset.bucket || "";
+}
+
+function clearPointerDragState() {
+  if (state.pointerDrag?.element) {
+    state.pointerDrag.element.classList.remove("dragging");
+  }
+  document.body.classList.remove("review-pointer-dragging");
+  clearBucketDropTargets();
+  state.pointerDrag = null;
+}
+
 function syncReviewStageHeight() {
   if (!elements.reviewWorkspace || !elements.reviewQueuePanel || !elements.reviewDetailPanel) {
     return;
@@ -849,7 +883,7 @@ function renderDetail(detail) {
   }
 
   if (!state.admin.isApplying) {
-    setDecisionStatus("Use Move to Remove and Move to Keep, or drag a country pill between the two buckets. Use Add only for countries outside the current expected list.");
+    setDecisionStatus("Drag the pill body, or use Move to Remove and Move to Keep. Use Add only for countries outside the current expected list.");
   }
 
   scheduleReviewStageHeightSync();
@@ -1915,6 +1949,86 @@ document.addEventListener("keydown", (event) => {
   void addCountryToBucket(input.dataset.bucketInput, input.value);
 });
 
+document.addEventListener("pointerdown", (event) => {
+  if (event.button !== 0 || !canEditLocalDraft()) {
+    return;
+  }
+
+  if (event.target.closest(".country-pill-move")) {
+    return;
+  }
+
+  const pill = event.target.closest("[data-country-iso3][draggable='true']");
+  if (!pill) {
+    return;
+  }
+
+  state.pointerDrag = {
+    pointerId: event.pointerId,
+    iso3: pill.dataset.countryIso3,
+    sourceBucket: pill.dataset.bucket,
+    startX: event.clientX,
+    startY: event.clientY,
+    targetBucket: "",
+    active: false,
+    element: pill,
+  };
+
+  event.preventDefault();
+});
+
+document.addEventListener("pointermove", (event) => {
+  const drag = state.pointerDrag;
+  if (!drag || drag.pointerId !== event.pointerId || !canEditLocalDraft()) {
+    return;
+  }
+
+  if (!drag.active) {
+    const distance = Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY);
+    if (distance < POINTER_DRAG_THRESHOLD_PX) {
+      return;
+    }
+
+    drag.active = true;
+    drag.element?.classList.add("dragging");
+    document.body.classList.add("review-pointer-dragging");
+  }
+
+  const targetBucket = dropBucketFromPoint(event.clientX, event.clientY);
+  if (!targetBucket || targetBucket === drag.sourceBucket || incompatibleBucketMessage(drag.iso3, targetBucket)) {
+    drag.targetBucket = "";
+    clearBucketDropTargets();
+    event.preventDefault();
+    return;
+  }
+
+  drag.targetBucket = targetBucket;
+  clearBucketDropTargets();
+  bucketContainerFor(targetBucket)?.classList.add("drag-target");
+  event.preventDefault();
+});
+
+document.addEventListener("pointerup", (event) => {
+  const drag = state.pointerDrag;
+  if (!drag || drag.pointerId !== event.pointerId) {
+    return;
+  }
+
+  const { active, iso3, sourceBucket, targetBucket } = drag;
+  clearPointerDragState();
+
+  if (!active || !targetBucket || targetBucket === sourceBucket) {
+    return;
+  }
+
+  applyCountryMove(iso3, targetBucket);
+  event.preventDefault();
+});
+
+document.addEventListener("pointercancel", () => {
+  clearPointerDragState();
+});
+
 document.addEventListener("dragstart", (event) => {
   const pill = event.target.closest("[data-country-iso3][draggable='true']");
   if (!pill || !canEditLocalDraft()) {
@@ -1934,9 +2048,7 @@ document.addEventListener("dragend", (event) => {
   const pill = event.target.closest("[data-country-iso3]");
   pill?.classList.remove("dragging");
   state.draggedCountry = null;
-  [elements.keepCountries, elements.removeCountries, elements.addCountries].forEach((container) => {
-    container.classList.remove("drag-target");
-  });
+  clearBucketDropTargets();
 });
 
 [elements.keepCountries, elements.removeCountries, elements.addCountries].forEach((container) => {
@@ -1946,6 +2058,7 @@ document.addEventListener("dragend", (event) => {
     }
 
     event.preventDefault();
+    clearBucketDropTargets();
     container.classList.add("drag-target");
   });
 

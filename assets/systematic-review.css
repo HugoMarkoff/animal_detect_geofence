@@ -498,6 +498,8 @@ body[data-review-access="checking"] .review-admin-card {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .country-pill strong {
@@ -518,12 +520,21 @@ body[data-review-access="checking"] .review-admin-card {
   cursor: grab;
 }
 
+.country-pill-card[draggable="true"] .country-pill-copy {
+  cursor: grab;
+}
+
 .country-pill-card:hover {
   transform: none;
 }
 
 .country-pill-card.dragging {
   opacity: 0.56;
+}
+
+body.review-pointer-dragging .country-pill-card,
+body.review-pointer-dragging .country-pill-copy {
+  cursor: grabbing;
 }
 
 .country-pill-actions {
