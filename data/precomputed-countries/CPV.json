@@ -1,24 +1,24 @@
 {
   "generatedFor": "CPV",
   "countryName": "Cape Verde",
-  "generatedAtUtc": "2026-05-10T10:02:31.475026+00:00",
+  "generatedAtUtc": "2026-05-15T10:05:34.717482+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
   "precomputeMode": "validated",
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 115,
+    "total": 120,
     "statusCounts": {
-      "likely_false": 54,
+      "likely_false": 53,
       "unlisted": 27,
       "likely_true_both": 15,
-      "likely_true_one_source": 5,
+      "likely_true_one_source": 11,
       "new_record": 14
     },
     "bucketCounts": {
-      "Needs Review": 54,
+      "Needs Review": 53,
       "Unlisted": 27,
-      "Likely Valid": 20,
+      "Likely Valid": 26,
       "New": 14
     }
   },
@@ -1089,6 +1089,23 @@
       "tags": []
     },
     {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "CPV",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
       "countryIso3": "CPV",
       "status": "unlisted",
@@ -1945,6 +1962,23 @@
       "tags": []
     },
     {
+      "itemId": "446887df-3477-4f4a-a434-852f96ba48d9",
+      "countryIso3": "CPV",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "45613340-19ff-4b4c-875b-561d7f0f499f",
       "countryIso3": "CPV",
       "status": "likely_false",
@@ -2412,6 +2446,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
+      "countryIso3": "CPV",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "578da960-5e3e-4014-a055-3b02314ff7b6",
@@ -4515,6 +4566,23 @@
       "tags": []
     },
     {
+      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
+      "countryIso3": "CPV",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "a51fd282-2db6-4945-bebe-d64e52153bcf",
       "countryIso3": "CPV",
       "status": "new_record",
@@ -5699,58 +5767,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "CPV",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 9445,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 71.65874045723181,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "de674f6d-8ee5-4a65-95eb-12a492fb36b2",
       "countryIso3": "CPV",
       "status": "unlisted",
@@ -5967,6 +5983,40 @@
       "tags": [
         "not in geofence"
       ]
+    },
+    {
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "countryIso3": "CPV",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
+      "itemId": "ea7e5297-8c71-4c93-a55b-27b1fe8f49de",
+      "countryIso3": "CPV",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "ebae8364-48b4-462b-9e2b-b13fb4751a22",
@@ -6537,9 +6587,70 @@
       "tags": []
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "sourceFile": "data/review-overrides/countries/CPV/601cf098-9876-4912-84bb-0926834305e9.json",
+      "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+      "updatedBy": "hugo",
+      "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Cape Verde (CPV). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback.",
+      "baseEntry": {
+        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+        "countryIso3": "CPV",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": null,
+        "inatPresent": null,
+        "gbifCount": null,
+        "inatCount": null,
+        "rawGbifPresent": null,
+        "rawInatPresent": null,
+        "rawGbifCount": null,
+        "rawInatCount": null,
+        "gbifUsageKey": null,
+        "inatTaxonId": null,
+        "inatPlaceId": 9445,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 71.65874045723181,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
   "manualOverrideSummary": {
     "count": 1,
-    "appliedAtUtc": "2026-05-15T21:46:06.794316+00:00",
+    "appliedAtUtc": "2026-05-15T21:46:00.922293+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9"
     ]

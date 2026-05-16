@@ -65,6 +65,7 @@ const adminConnectButton = document.getElementById("admin-connect");
 const adminDisconnectButton = document.getElementById("admin-disconnect");
 const adminApplyButton = document.getElementById("admin-apply");
 const adminLastCommitLink = document.getElementById("admin-last-commit");
+const openSystematicReviewLink = document.getElementById("open-systematic-review");
 const ticketWarnings = document.getElementById("ticket-warnings");
 const mapSummary = document.getElementById("map-summary");
 
@@ -86,6 +87,7 @@ const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
 const DATA_VERSION = "20260511e";
+const SYSTEMATIC_REVIEW_URL = "http://127.0.0.1:5070/systematic-review";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -2019,6 +2021,13 @@ function derivedAdminMessage() {
   };
 }
 
+function systematicReviewUrl() {
+  if ((window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") && window.location.port === "5070") {
+    return "/systematic-review";
+  }
+  return SYSTEMATIC_REVIEW_URL;
+}
+
 function renderAdminState() {
   const connected = Boolean(state.admin.login);
   const status = derivedAdminMessage();
@@ -2043,6 +2052,12 @@ function renderAdminState() {
     adminLastCommitLink.href = state.admin.lastCommitUrl;
   } else {
     adminLastCommitLink.href = "#";
+  }
+
+  if (openSystematicReviewLink) {
+    const canOpenSystematicReview = connected && state.admin.canWrite;
+    openSystematicReviewLink.hidden = !canOpenSystematicReview;
+    openSystematicReviewLink.href = canOpenSystematicReview ? systematicReviewUrl() : SYSTEMATIC_REVIEW_URL;
   }
 }
 

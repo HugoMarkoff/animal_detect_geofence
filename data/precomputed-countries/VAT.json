@@ -1,24 +1,24 @@
 {
   "generatedFor": "VAT",
   "countryName": "Vatican City",
-  "generatedAtUtc": "2026-05-11T05:23:32.141071+00:00",
+  "generatedAtUtc": "2026-05-15T10:05:34.717482+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
   "precomputeMode": "validated",
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 95,
+    "total": 100,
     "statusCounts": {
       "new_record": 4,
-      "likely_false": 65,
+      "likely_false": 64,
       "likely_true_both": 9,
-      "likely_true_one_source": 9,
+      "likely_true_one_source": 15,
       "unlisted": 8
     },
     "bucketCounts": {
       "New": 4,
-      "Needs Review": 65,
-      "Likely Valid": 18,
+      "Needs Review": 64,
+      "Likely Valid": 24,
       "Unlisted": 8
     }
   },
@@ -1085,6 +1085,23 @@
       "tags": []
     },
     {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "VAT",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
       "countryIso3": "VAT",
       "status": "likely_false",
@@ -1690,6 +1707,23 @@
       "tags": []
     },
     {
+      "itemId": "446887df-3477-4f4a-a434-852f96ba48d9",
+      "countryIso3": "VAT",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "460c94a3-c0c9-4747-8162-24e33043e36d",
       "countryIso3": "VAT",
       "status": "unlisted",
@@ -1931,6 +1965,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
+      "countryIso3": "VAT",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "5d86ee10-93d5-4375-9224-e121efcfe40c",
@@ -3586,6 +3637,23 @@
       "tags": []
     },
     {
+      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
+      "countryIso3": "VAT",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
       "countryIso3": "VAT",
       "status": "likely_false",
@@ -4853,58 +4921,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "VAT",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 9213,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 0.7898654169668589,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "d8e879d6-1028-4aae-947b-37b6d7505780",
       "countryIso3": "VAT",
       "status": "likely_true_one_source",
@@ -5007,6 +5023,40 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "countryIso3": "VAT",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
+      "itemId": "ea7e5297-8c71-4c93-a55b-27b1fe8f49de",
+      "countryIso3": "VAT",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "ebae8364-48b4-462b-9e2b-b13fb4751a22",
@@ -5285,9 +5335,70 @@
       "tags": []
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "sourceFile": "data/review-overrides/countries/VAT/601cf098-9876-4912-84bb-0926834305e9.json",
+      "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+      "updatedBy": "hugo",
+      "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Vatican City (VAT). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback.",
+      "baseEntry": {
+        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+        "countryIso3": "VAT",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": null,
+        "inatPresent": null,
+        "gbifCount": null,
+        "inatCount": null,
+        "rawGbifPresent": null,
+        "rawInatPresent": null,
+        "rawGbifCount": null,
+        "rawInatCount": null,
+        "gbifUsageKey": null,
+        "inatTaxonId": null,
+        "inatPlaceId": 9213,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 0.7898654169668589,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
   "manualOverrideSummary": {
     "count": 1,
-    "appliedAtUtc": "2026-05-15T21:46:10.419748+00:00",
+    "appliedAtUtc": "2026-05-15T21:46:04.583800+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9"
     ]

@@ -1,23 +1,23 @@
 {
   "generatedFor": "LUX",
   "countryName": "Luxembourg",
-  "generatedAtUtc": "2026-05-10T17:59:09.968132+00:00",
+  "generatedAtUtc": "2026-05-15T10:05:34.717482+00:00",
   "sourceDataset": "web-plugin/data/animals-global.json",
   "precomputeMode": "validated",
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 201,
+    "total": 206,
     "statusCounts": {
       "likely_true_both": 93,
-      "likely_false": 50,
+      "likely_false": 49,
       "unlisted": 33,
-      "likely_true_one_source": 9,
+      "likely_true_one_source": 15,
       "new_record": 16
     },
     "bucketCounts": {
-      "Likely Valid": 102,
-      "Needs Review": 50,
+      "Likely Valid": 108,
+      "Needs Review": 49,
       "Unlisted": 33,
       "New": 16
     }
@@ -1475,6 +1475,23 @@
       "tags": []
     },
     {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "LUX",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
       "countryIso3": "LUX",
       "status": "new_record",
@@ -2906,6 +2923,23 @@
       "tags": []
     },
     {
+      "itemId": "446887df-3477-4f4a-a434-852f96ba48d9",
+      "countryIso3": "LUX",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "448349bf-58aa-4768-9d60-49d66b367b5d",
       "countryIso3": "LUX",
       "status": "unlisted",
@@ -3673,6 +3707,23 @@
       "tags": [
         "not in geofence"
       ]
+    },
+    {
+      "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
+      "countryIso3": "LUX",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "57b058ea-5162-41b9-ae7b-18d2a6cd2240",
@@ -7490,6 +7541,23 @@
       "tags": []
     },
     {
+      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
+      "countryIso3": "LUX",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "a51fd282-2db6-4945-bebe-d64e52153bcf",
       "countryIso3": "LUX",
       "status": "likely_true_both",
@@ -9892,58 +9960,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "LUX",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 8147,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 57.381159474910675,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "d792dde9-0047-4b8e-9643-0e6e05d89f05",
       "countryIso3": "LUX",
       "status": "unlisted",
@@ -10613,6 +10629,23 @@
       ]
     },
     {
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "countryIso3": "LUX",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
+    },
+    {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",
       "countryIso3": "LUX",
       "status": "unlisted",
@@ -10769,6 +10802,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "ea7e5297-8c71-4c93-a55b-27b1fe8f49de",
+      "countryIso3": "LUX",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "eb3829b0-772e-4088-ae90-f11b9fe38284",
@@ -11900,9 +11950,70 @@
       "tags": []
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "sourceFile": "data/review-overrides/countries/LUX/601cf098-9876-4912-84bb-0926834305e9.json",
+      "updatedAtUtc": "2026-05-15T21:45:59.535340Z",
+      "updatedBy": "hugo",
+      "reason": "Systematic review approval: remove grizzly bear (ursus u. arctos) for Luxembourg (LUX). The current geofence appears much broader than the observed/native footprint. Use public range and occurrence sources to keep supported countries and remove the rest. Reviewer note: Corrected grizzly bear to CAN/USA only after removing the brown-bear seeder fallback.",
+      "baseEntry": {
+        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+        "countryIso3": "LUX",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": null,
+        "inatPresent": null,
+        "gbifCount": null,
+        "inatCount": null,
+        "rawGbifPresent": null,
+        "rawInatPresent": null,
+        "rawGbifCount": null,
+        "rawInatCount": null,
+        "gbifUsageKey": null,
+        "inatTaxonId": null,
+        "inatPlaceId": 8147,
+        "managedEvidence": {
+          "domesticNamed": false,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 57.381159474910675,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
   "manualOverrideSummary": {
     "count": 1,
-    "appliedAtUtc": "2026-05-15T21:46:08.029490+00:00",
+    "appliedAtUtc": "2026-05-15T21:46:02.174674+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9"
     ]
