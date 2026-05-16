@@ -47,27 +47,33 @@ body {
 }
 
 .desk-brand-copy {
-  display: flex;
-  align-items: center;
-  gap: 16px;
   min-width: 0;
 }
 
 .desk-brand-logo-link,
 .desk-footer-logo-link {
-  flex: 0 0 auto;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .desk-brand-logo,
 .desk-footer-logo {
   display: block;
-  width: 64px;
-  height: 64px;
+  max-width: 100%;
+  height: auto;
+}
+
+.desk-brand-logo {
+  width: min(100%, 220px);
+}
+
+.desk-footer-logo {
+  width: min(100%, 188px);
 }
 
 .desk-brand-text {
   display: grid;
-  gap: 8px;
+  gap: 12px;
   min-width: 0;
 }
 
@@ -2112,15 +2118,12 @@ button {
     padding-top: 14px;
   }
 
-  .desk-brand-copy {
-    flex-direction: column;
-    align-items: flex-start;
+  .desk-brand-logo {
+    width: min(100%, 180px);
   }
 
-  .desk-brand-logo,
   .desk-footer-logo {
-    width: 58px;
-    height: 58px;
+    width: min(100%, 156px);
   }
 
   .desk-footer-links {
