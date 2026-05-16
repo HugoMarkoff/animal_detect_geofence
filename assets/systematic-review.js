@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260516d";
+const ASSET_VERSION = "20260516e";
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
 const SYSTEMATIC_REVIEW_PROPOSALS_PATH = "data/systematic-review/proposals.json";
@@ -158,15 +158,19 @@ function statusLabel(status) {
   return "Unseeded";
 }
 
+function hasReviewAccess() {
+  return Boolean(state.admin.login && state.admin.canWrite);
+}
+
 function bucketLabel(bucket) {
   if (bucket === "keep") {
-    return "Keep";
+    return "Move to Keep";
   }
   if (bucket === "remove") {
-    return "Remove";
+    return "Move to Remove";
   }
   if (bucket === "add") {
-    return "Add";
+    return "Move to Add";
   }
   return String(bucket || "");
 }
@@ -679,19 +683,11 @@ function renderEvidenceList(lines) {
 }
 
 function canEditLocalDraft() {
-  return Boolean(state.selectedDetail?.editable) && !state.admin.isApplying;
+  return hasReviewAccess() && Boolean(state.selectedDetail?.editable) && !state.admin.isApplying;
 }
 
 function localDraftStatusMessage(actionMessage) {
-  if (state.admin.login && state.admin.canWrite) {
-    return `${actionMessage} Save Draft or Accept to commit.`;
-  }
-
-  if (state.admin.login && !state.admin.canWrite) {
-    return `${actionMessage} This account cannot push, so the change is local only.`;
-  }
-
-  return `${actionMessage} Connect GitHub with write access to save or apply it.`;
+  return `${actionMessage} Save Draft or Accept to commit.`;
 }
 
 function syncReviewStageHeight() {
@@ -792,8 +788,8 @@ function renderDetail(detail) {
   const topGbifCountries = Array.isArray(detail.gbif?.countryCounts)
     ? detail.gbif.countryCounts.slice(0, 6).map((entry) => `${entry.iso3} ${formatCount(entry.count)}`).join(", ")
     : "";
-  const canWrite = Boolean(state.admin.login && state.admin.canWrite);
-  const editable = Boolean(detail.editable) && !state.admin.isApplying;
+  const accessGranted = hasReviewAccess();
+  const editable = Boolean(detail.editable) && accessGranted && !state.admin.isApplying;
 
   elements.issueTitle.textContent = summary.label || "Unknown issue";
   elements.issueStatus.className = `status-pill ${statusClass(detail.status)}`;
@@ -825,9 +821,9 @@ function renderDetail(detail) {
   renderCountryPills(elements.addCountries, addCountries, "No explicit additions.", editable);
   renderBucketAddRows(editable);
 
-  elements.saveDraft.disabled = !detail.editable || !canWrite || !state.hasUnsavedDraft || state.admin.isApplying;
-  elements.acceptIssue.disabled = !detail.editable || !canWrite || state.admin.isApplying;
-  elements.rejectIssue.disabled = !detail.editable || !canWrite || state.admin.isApplying;
+  elements.saveDraft.disabled = !detail.editable || !accessGranted || !state.hasUnsavedDraft || state.admin.isApplying;
+  elements.acceptIssue.disabled = !detail.editable || !accessGranted || state.admin.isApplying;
+  elements.rejectIssue.disabled = !detail.editable || !accessGranted || state.admin.isApplying;
   document.querySelectorAll("[data-bucket-add]").forEach((button) => {
     button.disabled = !editable;
   });
@@ -842,28 +838,18 @@ function renderDetail(detail) {
     return;
   }
 
+  if (!accessGranted) {
+    setDecisionStatus("Open systematic review from Country Desk after connecting GitHub there.", true);
+    return;
+  }
+
   if (state.hasUnsavedDraft) {
-    if (canWrite) {
-      setDecisionStatus("Draft changed locally. Save Draft or Accept to commit the current bucket layout.");
-      return;
-    }
-
-    setDecisionStatus("Draft changed locally. Connect GitHub with write access to save or apply the current bucket layout.");
-    return;
-  }
-
-  if (!state.admin.login) {
-    setDecisionStatus("Local draft mode. You can rearrange Keep, Remove, and Add now. Connect GitHub to save drafts or apply this proposal.");
-    return;
-  }
-
-  if (!state.admin.canWrite) {
-    setDecisionStatus(`@${state.admin.login} can review locally, but this account does not have write access to ${DEFAULT_GITHUB_REPO}.`, true);
+    setDecisionStatus("Draft changed locally. Save Draft or Accept to commit the current bucket layout.");
     return;
   }
 
   if (!state.admin.isApplying) {
-    setDecisionStatus("Drag a country pill or use its move buttons. Use Keep and Remove only for countries flagged in this review pass. Use Add only for countries outside the current expected list.");
+    setDecisionStatus("Use Move to Remove and Move to Keep, or drag a country pill between the two buckets. Use Add only for countries outside the current expected list.");
   }
 
   scheduleReviewStageHeightSync();
@@ -1482,55 +1468,64 @@ function derivedAdminMessage() {
     };
   }
 
-  if (!state.admin.login) {
+  if (state.admin.isConnecting) {
     return {
-      message: "Read-only mode. Connect GitHub to save drafts or apply accepted proposals.",
+      message: "Checking the GitHub review session carried from Country Desk.",
       isError: false,
     };
   }
 
-  if (!state.admin.canWrite) {
+  if (!hasReviewAccess()) {
     return {
-      message: `Connected as @${state.admin.login}, but this account cannot push to ${DEFAULT_GITHUB_REPO}.`,
+      message: "Open this page from Country Desk after connecting GitHub there.",
       isError: true,
     };
   }
 
   return {
-    message: `Connected as @${state.admin.login} with ${state.admin.permissionLabel || "write"} access to ${DEFAULT_GITHUB_REPO}.`,
+    message: `Signed in as @${state.admin.login}. Review session ready.`,
     isError: false,
   };
 }
 
 function renderAdminState() {
-  const connected = Boolean(state.admin.login);
+  const accessState = state.admin.isConnecting ? "checking" : hasReviewAccess() ? "granted" : "blocked";
   const status = derivedAdminMessage();
 
-  elements.adminTokenField.hidden = connected;
-  elements.adminConnectButton.hidden = connected;
-  elements.adminConnectButton.disabled = state.admin.isConnecting || state.admin.isApplying;
-  elements.adminConnectButton.textContent = state.admin.isConnecting ? "Connecting..." : "Connect GitHub";
+  document.body.dataset.reviewAccess = accessState;
 
-  elements.adminDisconnectButton.hidden = !connected;
-  elements.adminDisconnectButton.disabled = state.admin.isConnecting || state.admin.isApplying;
+  if (elements.adminTokenField) {
+    elements.adminTokenField.hidden = true;
+  }
+  if (elements.adminConnectButton) {
+    elements.adminConnectButton.hidden = true;
+    elements.adminConnectButton.disabled = state.admin.isConnecting || state.admin.isApplying;
+    elements.adminConnectButton.textContent = state.admin.isConnecting ? "Connecting..." : "Connect GitHub";
+  }
+  if (elements.adminDisconnectButton) {
+    elements.adminDisconnectButton.hidden = true;
+    elements.adminDisconnectButton.disabled = state.admin.isConnecting || state.admin.isApplying;
+  }
 
   elements.adminAuthStatus.textContent = status.message;
   elements.adminAuthStatus.classList.toggle("error", Boolean(status.isError));
 
-  elements.adminLastCommitLink.hidden = !state.admin.lastCommitUrl;
+  elements.adminLastCommitLink.hidden = !state.admin.lastCommitUrl || accessState !== "granted";
   elements.adminLastCommitLink.href = state.admin.lastCommitUrl || "#";
 
-  if (state.selectedDetail) {
+  if (accessState === "granted" && state.selectedDetail) {
     renderDetail(state.selectedDetail);
-  } else {
+  } else if (accessState === "granted") {
     renderEmptyDetail();
+  } else {
+    scheduleReviewStageHeightSync();
   }
 }
 
 async function connectAdminSession(tokenOverride = "") {
-  const token = cleanText(tokenOverride || elements.adminTokenInput.value);
+  const token = cleanText(tokenOverride || elements.adminTokenInput?.value);
   if (!token) {
-    setAdminMessage("Paste a GitHub fine-grained token first.", true);
+    setAdminMessage("Open systematic review from Country Desk after connecting GitHub there.", true);
     renderAdminState();
     return;
   }
@@ -1557,14 +1552,16 @@ async function connectAdminSession(tokenOverride = "") {
     state.admin.permissionLabel = permissionLabel;
     persistAdminToken(token);
     clearAdminMessage();
-    elements.adminTokenInput.value = "";
+    if (elements.adminTokenInput) {
+      elements.adminTokenInput.value = "";
+    }
 
     if (!elements.reviewer.value.trim()) {
       elements.reviewer.value = state.admin.login;
     }
 
     if (!canWrite) {
-      setAdminMessage(`@${state.admin.login} is connected, but this account cannot push to ${DEFAULT_GITHUB_REPO}.`, true);
+      setAdminMessage("This GitHub account does not have access to systematic review. Open it from an approved Country Desk session.", true);
     }
   } catch (error) {
     state.admin.token = "";
@@ -1590,7 +1587,9 @@ function disconnectAdminSession() {
   state.admin.lastCommitUrl = "";
   clearPersistedAdminToken();
   clearAdminMessage();
-  elements.adminTokenInput.value = "";
+  if (elements.adminTokenInput) {
+    elements.adminTokenInput.value = "";
+  }
   renderAdminState();
 }
 
@@ -1609,10 +1608,6 @@ function consumeAdminTokenHandoff() {
   }
 
   void connectAdminSession(token);
-
-  requestAnimationFrame(() => {
-    elements.adminPanel?.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
 }
 
 function restorePersistedAdminSession() {
@@ -1644,8 +1639,8 @@ async function saveDraftToGitHub() {
     return;
   }
 
-  if (!state.admin.login || !state.admin.canWrite) {
-    setDecisionStatus("Connect GitHub with repo write access to save this draft.", true);
+  if (!hasReviewAccess()) {
+    setDecisionStatus("Open systematic review from Country Desk after connecting GitHub there.", true);
     return;
   }
 
@@ -1699,8 +1694,8 @@ async function submitDecision(decision) {
     return;
   }
 
-  if (!state.admin.login || !state.admin.canWrite) {
-    setDecisionStatus("Connect GitHub with repo write access to apply this decision.", true);
+  if (!hasReviewAccess()) {
+    setDecisionStatus("Open systematic review from Country Desk after connecting GitHub there.", true);
     return;
   }
 
@@ -1849,9 +1844,9 @@ async function init() {
     elements.reviewer.value = state.settings.defaultReviewer;
     syncSelection("");
     setupReviewStageSync();
-    renderAdminState();
     consumeAdminTokenHandoff();
     restorePersistedAdminSession();
+    renderAdminState();
   } catch (error) {
     elements.queueSummary.textContent = error.message || "Failed to load queue.";
     elements.reviewQueue.innerHTML = `<article class="empty-card">${escapeHtml(error.message || "Failed to load queue.")}</article>`;
@@ -1974,11 +1969,11 @@ document.addEventListener("dragend", (event) => {
   });
 });
 
-elements.adminConnectButton.addEventListener("click", () => {
+elements.adminConnectButton?.addEventListener("click", () => {
   void connectAdminSession();
 });
 
-elements.adminDisconnectButton.addEventListener("click", () => {
+elements.adminDisconnectButton?.addEventListener("click", () => {
   disconnectAdminSession();
 });
 

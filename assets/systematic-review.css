@@ -4,6 +4,13 @@
   gap: 22px;
 }
 
+body[data-review-access="blocked"] .review-workspace,
+body[data-review-access="blocked"] .review-plan-panel,
+body[data-review-access="checking"] .review-workspace,
+body[data-review-access="checking"] .review-plan-panel {
+  display: none;
+}
+
 .hero-panel {
   position: relative;
   overflow: hidden;
@@ -155,6 +162,12 @@
 .review-admin-card > * {
   position: relative;
   z-index: 1;
+}
+
+body[data-review-access="blocked"] .review-admin-card,
+body[data-review-access="checking"] .review-admin-card {
+  min-height: 220px;
+  align-content: start;
 }
 
 .review-link-row {
@@ -521,16 +534,17 @@
 
 .country-pill-move {
   min-height: 28px;
-  padding: 0 10px;
+  padding: 0 12px;
   border: 1px solid rgba(24, 28, 31, 0.08);
   border-radius: 999px;
   background: rgba(233, 244, 236, 0.96);
   color: var(--green);
   font: inherit;
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
   line-height: 1;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .country-pill-move:hover {

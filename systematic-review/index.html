@@ -8,9 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/styles.css?v=20260516a">
-    <link rel="stylesheet" href="../assets/systematic-review.css?v=20260516h">
+    <link rel="stylesheet" href="../assets/systematic-review.css?v=20260516i">
   </head>
-  <body>
+  <body data-review-access="checking">
     <main class="shell review-shell">
       <section class="panel hero-panel">
         <div class="hero-grid">
@@ -55,27 +55,20 @@
           <div class="hero-actions review-hero-actions">
             <section id="admin-panel" class="detail-card admin-panel review-admin-card">
               <div>
-                <p class="section-kicker">GitHub</p>
-                <h3>Write Access</h3>
+                <p class="section-kicker">GitHub Session</p>
+                <h3>Review Access</h3>
               </div>
 
               <p class="section-copy">
-                The page is readable without a token. Connect a fine-grained GitHub token with repo write access to save
-                drafts or apply accepted proposals.
+                Systematic review expects the GitHub review session you already opened on Country Desk. Open this page
+                from there instead of reconnecting here.
               </p>
 
-              <label id="admin-token-field" class="field admin-token-field">
-                <span>Fine-grained token</span>
-                <input id="admin-token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_...">
-              </label>
-
               <div class="admin-actions">
-                <button id="admin-connect" type="button">Connect GitHub</button>
-                <button id="admin-disconnect" class="secondary-button" type="button" hidden>Disconnect</button>
                 <a id="admin-last-commit" class="draft-link admin-commit-link" href="#" target="_blank" rel="noreferrer" hidden>Open Last Commit</a>
               </div>
 
-              <p id="admin-auth-status" class="admin-auth-status">Read-only mode. Connect GitHub to save or apply decisions.</p>
+              <p id="admin-auth-status" class="admin-auth-status">Checking the carried GitHub review session.</p>
             </section>
 
             <div class="review-link-row">
@@ -260,6 +253,6 @@
 
     <datalist id="country-options"></datalist>
 
-    <script src="../assets/systematic-review.js?v=20260516d"></script>
+    <script src="../assets/systematic-review.js?v=20260516e"></script>
   </body>
 </html>
