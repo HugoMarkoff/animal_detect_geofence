@@ -169,21 +169,31 @@
 }
 
 .review-workspace {
+  --review-stage-height: clamp(720px, calc(100vh - 140px), 980px);
   display: grid;
   grid-template-columns: minmax(320px, 0.92fr) minmax(360px, 1.08fr);
   gap: 22px;
-  align-items: start;
+  align-items: stretch;
   margin-top: 0;
 }
 
 .review-queue-panel {
-  min-height: 880px;
+  grid-area: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: var(--review-stage-height);
+  overflow: hidden;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(247, 250, 248, 0.94));
 }
 
 .review-detail-panel {
   display: grid;
   gap: 18px;
+  min-height: 0;
+  height: var(--review-stage-height);
+  overflow: auto;
+  align-content: start;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(244, 248, 245, 0.96));
 }
 
@@ -204,7 +214,11 @@
 }
 
 .review-queue-list {
+  flex: 1 1 auto;
+  min-height: 0;
   margin-top: 20px;
+  overflow: auto;
+  padding-right: 8px;
 }
 
 .review-issue-card {
@@ -501,10 +515,22 @@
 @media (max-width: 1180px) {
   .review-workspace {
     grid-template-columns: 1fr;
+    --review-stage-height: auto;
   }
 
   .review-queue-panel {
     min-height: 0;
+    height: auto;
+  }
+
+  .review-detail-panel {
+    height: auto;
+    overflow: visible;
+  }
+
+  .review-queue-list {
+    flex: 0 1 auto;
+    max-height: clamp(360px, 54vh, 620px);
   }
 
   .inline-stat-grid,
