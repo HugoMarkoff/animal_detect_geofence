@@ -481,6 +481,12 @@
   font-size: 0.82rem;
 }
 
+.country-pill-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .country-pill strong {
   color: var(--green);
   font-size: 0.76rem;
@@ -488,18 +494,48 @@
   text-transform: uppercase;
 }
 
-.country-pill-button {
+.country-pill-card {
+  justify-content: space-between;
+  flex-wrap: wrap;
   box-shadow: none;
   color: var(--ink);
+}
+
+.country-pill-card[draggable="true"] {
   cursor: grab;
 }
 
-.country-pill-button:hover {
+.country-pill-card:hover {
   transform: none;
 }
 
-.country-pill-button.dragging {
+.country-pill-card.dragging {
   opacity: 0.56;
+}
+
+.country-pill-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.country-pill-move {
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid rgba(24, 28, 31, 0.08);
+  border-radius: 999px;
+  background: rgba(233, 244, 236, 0.96);
+  color: var(--green);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.country-pill-move:hover {
+  transform: none;
+  background: rgba(223, 238, 228, 0.98);
 }
 
 .country-pill-grid.drag-target {

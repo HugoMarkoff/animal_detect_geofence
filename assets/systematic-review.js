@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260516c";
+const ASSET_VERSION = "20260516d";
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
 const SYSTEMATIC_REVIEW_PROPOSALS_PATH = "data/systematic-review/proposals.json";
@@ -156,6 +156,19 @@ function statusLabel(status) {
     return "Pending";
   }
   return "Unseeded";
+}
+
+function bucketLabel(bucket) {
+  if (bucket === "keep") {
+    return "Keep";
+  }
+  if (bucket === "remove") {
+    return "Remove";
+  }
+  if (bucket === "add") {
+    return "Add";
+  }
+  return String(bucket || "");
 }
 
 function setDecisionStatus(message, isError = false) {
@@ -543,6 +556,35 @@ function moveCountryToBucket(iso3, targetBucket) {
   return true;
 }
 
+function availableMoveTargetsForCountry(iso3, currentBucket) {
+  return ["keep", "remove", "add"].filter((targetBucket) => {
+    return targetBucket !== currentBucket && !incompatibleBucketMessage(iso3, targetBucket);
+  });
+}
+
+function applyCountryMove(iso3, targetBucket, options = {}) {
+  const { closeAddRow = false } = options;
+  const incompatibleMessage = incompatibleBucketMessage(iso3, targetBucket);
+  if (incompatibleMessage) {
+    setDecisionStatus(incompatibleMessage, true);
+    return false;
+  }
+
+  if (!moveCountryToBucket(iso3, targetBucket)) {
+    setDecisionStatus("That country could not be moved.", true);
+    return false;
+  }
+
+  if (closeAddRow) {
+    state.activeAddBucket = null;
+  }
+
+  renderDetail(state.selectedDetail);
+  const country = state.countryByIso.get(iso3);
+  setDecisionStatus(localDraftStatusMessage(`Moved ${country?.countryName || iso3} into ${targetBucket}.`));
+  return true;
+}
+
 function renderCountryPills(container, countries, emptyText, editable) {
   const bucket = container.dataset.bucket;
   if (!countries.length) {
@@ -551,20 +593,38 @@ function renderCountryPills(container, countries, emptyText, editable) {
   }
 
   container.innerHTML = countries
-    .map(
-      (country) => `
-        <button
-          type="button"
-          class="country-pill country-pill-button"
+    .map((country) => {
+      const moveTargets = editable ? availableMoveTargetsForCountry(country.iso3, bucket) : [];
+      return `
+        <div
+          class="country-pill country-pill-card"
           draggable="${editable}"
           data-country-iso3="${escapeHtml(country.iso3)}"
           data-bucket="${escapeHtml(bucket)}"
         >
-          <strong>${escapeHtml(country.iso3)}</strong>
-          <span>${escapeHtml(country.countryName)}</span>
-        </button>
-      `,
-    )
+          <span class="country-pill-copy">
+            <strong>${escapeHtml(country.iso3)}</strong>
+            <span>${escapeHtml(country.countryName)}</span>
+          </span>
+          ${moveTargets.length ? `
+            <span class="country-pill-actions">
+              ${moveTargets
+                .map(
+                  (targetBucket) => `
+                    <button
+                      type="button"
+                      class="country-pill-move"
+                      data-country-move-iso3="${escapeHtml(country.iso3)}"
+                      data-country-move-target="${escapeHtml(targetBucket)}"
+                    >${escapeHtml(bucketLabel(targetBucket))}</button>
+                  `,
+                )
+                .join("")}
+            </span>
+          ` : ""}
+        </div>
+      `;
+    })
     .join("");
 }
 
@@ -803,7 +863,7 @@ function renderDetail(detail) {
   }
 
   if (!state.admin.isApplying) {
-    setDecisionStatus("Use Keep and Remove only for countries flagged in this review pass. Use Add only for countries outside the current expected list.");
+    setDecisionStatus("Drag a country pill or use its move buttons. Use Keep and Remove only for countries flagged in this review pass. Use Add only for countries outside the current expected list.");
   }
 
   scheduleReviewStageHeightSync();
@@ -1751,20 +1811,7 @@ async function addCountryToBucket(bucket, rawValue) {
     return;
   }
 
-  const incompatibleMessage = incompatibleBucketMessage(country.iso3, bucket);
-  if (incompatibleMessage) {
-    setDecisionStatus(incompatibleMessage, true);
-    return;
-  }
-
-  if (!moveCountryToBucket(country.iso3, bucket)) {
-    setDecisionStatus("That country could not be moved into the requested bucket.", true);
-    return;
-  }
-
-  state.activeAddBucket = null;
-  renderDetail(state.selectedDetail);
-  setDecisionStatus(localDraftStatusMessage(`Moved ${country.countryName} into ${bucket}.`));
+  applyCountryMove(country.iso3, bucket, { closeAddRow: true });
 }
 
 async function init() {
@@ -1827,6 +1874,16 @@ elements.reviewQueue.addEventListener("click", (event) => {
 });
 
 document.addEventListener("click", (event) => {
+  const moveButton = event.target.closest("[data-country-move-target]");
+  if (moveButton) {
+    if (!canEditLocalDraft()) {
+      return;
+    }
+
+    applyCountryMove(moveButton.dataset.countryMoveIso3, moveButton.dataset.countryMoveTarget);
+    return;
+  }
+
   const addButton = event.target.closest("[data-bucket-add]");
   if (addButton) {
     if (!canEditLocalDraft()) {
@@ -1913,19 +1970,7 @@ document.addEventListener("dragend", (event) => {
       return;
     }
 
-    const incompatibleMessage = incompatibleBucketMessage(state.draggedCountry.iso3, targetBucket);
-    if (incompatibleMessage) {
-      setDecisionStatus(incompatibleMessage, true);
-      return;
-    }
-
-    if (!moveCountryToBucket(state.draggedCountry.iso3, targetBucket)) {
-      setDecisionStatus("That country could not be moved.", true);
-      return;
-    }
-
-    renderDetail(state.selectedDetail);
-    setDecisionStatus(localDraftStatusMessage(`Moved ${state.draggedCountry.iso3} into ${targetBucket}.`));
+    applyCountryMove(state.draggedCountry.iso3, targetBucket);
   });
 });
 
