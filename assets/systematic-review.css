@@ -7,8 +7,8 @@
 }
 
 .hero-grid {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
   align-items: flex-start;
   gap: 22px;
 }
@@ -28,7 +28,7 @@
   display: grid;
   gap: 12px;
   justify-items: stretch;
-  width: min(430px, 100%);
+  width: 100%;
 }
 
 .review-admin-card {
@@ -278,6 +278,16 @@
   line-height: 1.6;
 }
 
+@media (max-width: 1040px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-hero-actions {
+    max-width: 560px;
+  }
+}
+
 @media (max-width: 1180px) {
   .review-workspace {
     grid-template-columns: 1fr;
@@ -294,7 +304,6 @@
 }
 
 @media (max-width: 860px) {
-  .hero-grid,
   .inline-stat-grid,
   .compact-grid,
   .country-columns {
