@@ -165,11 +165,11 @@ const ONBOARDING_STEPS = [
     stepLabel: "Welcome",
     nextLabel: "Continue to guide",
     skipLabel: "Exit",
-    title: "Welcome To The Review Desk",
+    title: "Welcome To Animal Detect Geofence",
     bodyHtml: `
       <p><strong>Welcome.</strong> Please spend a minute reading this before you start reviewing countries.</p>
       <p>This page is used to <strong>add</strong>, <strong>remove</strong>, or <strong>correct</strong> species in the country packs used by Animal Detect.</p>
-      <p>The current geofencing is based on human observations and machine-validated records, but it is not perfect. This review desk exists so you can suggest where the country packs should change.</p>
+      <p>The current geofencing is based on human observations and machine-validated records, but it is not perfect. This geofence workspace exists so you can suggest where the country packs should change.</p>
       <ul class="onboarding-list">
         <li>The model currently works with <strong>__MODEL_SPECIES_TOTAL__ species</strong>.</li>
         <li>Each country is limited to species that could reasonably be detected there, so the model can fall back to a higher taxonomic level instead of forcing a wrong species label.</li>

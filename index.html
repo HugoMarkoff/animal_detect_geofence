@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Country Pack Review Desk</title>
+    <title>Animal Detect Geofence</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,10 +17,74 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260516a">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260516b">
   </head>
   <body>
     <main class="shell">
+      <section class="panel brand-hero">
+        <div class="brand-hero-grid">
+          <div class="brand-copy">
+            <div class="brand-lockup">
+              <div class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="brand-lens" x1="25" y1="25" x2="63" y2="63" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#A4EE16"/>
+                      <stop offset="1" stop-color="#2D9046"/>
+                    </linearGradient>
+                  </defs>
+                  <rect x="10" y="14" width="58" height="58" rx="20" fill="#181C1F"/>
+                  <path d="M29 31C29 28.2386 31.2386 26 34 26H44C46.7614 26 49 28.2386 49 31V36H54C56.7614 36 59 38.2386 59 41V51C59 53.7614 56.7614 56 54 56H34C31.2386 56 29 53.7614 29 51V31Z" fill="url(#brand-lens)"/>
+                  <circle cx="44" cy="46" r="10.5" fill="#F2F8F4"/>
+                  <circle cx="44" cy="46" r="6.5" fill="#181C1F"/>
+                  <circle cx="73.5" cy="27.5" r="12.5" fill="#A4EE16"/>
+                  <circle cx="67.5" cy="24.5" r="3.5" fill="#181C1F"/>
+                  <circle cx="79.5" cy="22.5" r="3" fill="#181C1F"/>
+                  <circle cx="65.5" cy="34.5" r="3" fill="#181C1F"/>
+                  <circle cx="78.5" cy="34.5" r="3.5" fill="#181C1F"/>
+                  <path d="M72.5 28.5C69.5 28.5 67 30.9 67 33.9C67 37.2 69.9 40.3 72.5 42.3C75.1 40.3 78 37.2 78 33.9C78 30.9 75.5 28.5 72.5 28.5Z" fill="#181C1F"/>
+                </svg>
+              </div>
+
+              <div class="brand-lockup-copy">
+                <p class="section-kicker">Animal Detect Product Surface</p>
+                <h1>Animal Detect Geofence</h1>
+              </div>
+            </div>
+
+            <p class="brand-lead">Review national and regional species packs in a map-first workspace, then turn changes into tickets or GitHub-backed overrides without leaving the published product surface.</p>
+
+            <div class="brand-actions">
+              <a class="draft-link" href="./systematic-review/" target="_blank" rel="noreferrer">Open Systematic Review</a>
+              <a class="draft-link" href="./admin-guide.html" target="_blank" rel="noreferrer">Open Admin Guide</a>
+              <a class="draft-link" href="https://animaldetect.com" target="_blank" rel="noreferrer">Animal Detect</a>
+            </div>
+          </div>
+
+          <div class="brand-side">
+            <div class="brand-mini-grid">
+              <article class="brand-mini-card">
+                <span>Review Flow</span>
+                <strong>Map, pack, and ticket in one layout</strong>
+                <p>Keep the context visible while you move between countries, species buckets, and submission actions.</p>
+              </article>
+
+              <article class="brand-mini-card">
+                <span>Coverage Model</span>
+                <strong>National and regional geofence editing</strong>
+                <p>Switch quickly between whole-country expectations and local drawn-area review without losing the current pack state.</p>
+              </article>
+
+              <article class="brand-mini-card">
+                <span>Publishing</span>
+                <strong>Preview first, apply later</strong>
+                <p>Use email and GitHub issue drafting for review, then connect GitHub only when a change is ready to be written.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="workspace">
         <section class="top-stage">
           <section class="panel map-panel">
@@ -126,180 +190,186 @@
             </div>
           </div>
 
-          <form id="ticket-form" class="ticket-form">
-            <fieldset class="mode-fieldset">
-              <legend>Suggestion type</legend>
-              <div class="segmented-control">
-                <label class="segment-option">
-                  <input type="radio" name="suggestionType" value="addition" checked>
-                  <span>Addition</span>
-                </label>
-                <label id="accept-new-option" class="segment-option" hidden>
-                  <input type="radio" name="suggestionType" value="accept_new">
-                  <span>Accept new</span>
-                </label>
-                <label class="segment-option">
-                  <input type="radio" name="suggestionType" value="correction">
-                  <span>Correction</span>
-                </label>
-                <label class="segment-option">
-                  <input type="radio" name="suggestionType" value="removal">
-                  <span>Removal</span>
-                </label>
-              </div>
-            </fieldset>
-
-            <div id="species-selection-grid" class="field-grid two-up">
-              <label id="current-species-field" class="field">
-                <span>Current species</span>
-                <div id="current-species-combobox" class="combo-box">
-                  <div class="combo-input-shell">
-                    <input id="currentSpeciesLabel" name="currentSpeciesLabel" placeholder="Select from current country pack" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="current-species-options">
-                    <button id="current-species-toggle" class="combo-toggle" type="button" aria-label="Toggle current country species"></button>
+          <div class="ticket-layout">
+            <div class="ticket-compose">
+              <form id="ticket-form" class="ticket-form">
+                <fieldset class="mode-fieldset">
+                  <legend>Suggestion type</legend>
+                  <div class="segmented-control">
+                    <label class="segment-option">
+                      <input type="radio" name="suggestionType" value="addition" checked>
+                      <span>Addition</span>
+                    </label>
+                    <label id="accept-new-option" class="segment-option" hidden>
+                      <input type="radio" name="suggestionType" value="accept_new">
+                      <span>Accept new</span>
+                    </label>
+                    <label class="segment-option">
+                      <input type="radio" name="suggestionType" value="correction">
+                      <span>Correction</span>
+                    </label>
+                    <label class="segment-option">
+                      <input type="radio" name="suggestionType" value="removal">
+                      <span>Removal</span>
+                    </label>
                   </div>
-                  <div id="current-species-options" class="combo-menu" role="listbox" hidden></div>
-                </div>
-                <input id="currentSpeciesItemId" name="currentSpeciesItemId" type="hidden">
-              </label>
+                </fieldset>
 
-              <label id="proposed-species-field" class="field">
-                <span>Proposed species</span>
-                <div id="proposed-species-combobox" class="combo-box">
-                  <div class="combo-input-shell">
-                    <input id="proposedSpeciesLabel" name="proposedSpeciesLabel" placeholder="Search all species" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="animal-options">
-                    <button id="proposed-species-toggle" class="combo-toggle" type="button" aria-label="Toggle all species"></button>
+                <div id="species-selection-grid" class="field-grid two-up">
+                  <label id="current-species-field" class="field">
+                    <span>Current species</span>
+                    <div id="current-species-combobox" class="combo-box">
+                      <div class="combo-input-shell">
+                        <input id="currentSpeciesLabel" name="currentSpeciesLabel" placeholder="Select from current country pack" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="current-species-options">
+                        <button id="current-species-toggle" class="combo-toggle" type="button" aria-label="Toggle current country species"></button>
+                      </div>
+                      <div id="current-species-options" class="combo-menu" role="listbox" hidden></div>
+                    </div>
+                    <input id="currentSpeciesItemId" name="currentSpeciesItemId" type="hidden">
+                  </label>
+
+                  <label id="proposed-species-field" class="field">
+                    <span>Proposed species</span>
+                    <div id="proposed-species-combobox" class="combo-box">
+                      <div class="combo-input-shell">
+                        <input id="proposedSpeciesLabel" name="proposedSpeciesLabel" placeholder="Search all species" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-controls="animal-options">
+                        <button id="proposed-species-toggle" class="combo-toggle" type="button" aria-label="Toggle all species"></button>
+                      </div>
+                      <div id="animal-options" class="combo-menu" role="listbox" hidden></div>
+                    </div>
+                    <input id="proposedSpeciesItemId" name="proposedSpeciesItemId" type="hidden">
+                  </label>
+                </div>
+
+                <div class="field-grid two-up">
+                  <label id="scope-field" class="field">
+                    <span>Coverage</span>
+                    <select id="scope" name="scope">
+                      <option value="national">National</option>
+                      <option value="regional">Regional</option>
+                    </select>
+                  </label>
+
+                  <div class="field map-hint-field">
+                    <span>Map overlay</span>
+                    <div id="map-hint" class="map-hint-pill">National coverage uses the full country overlay.</div>
                   </div>
-                  <div id="animal-options" class="combo-menu" role="listbox" hidden></div>
                 </div>
-                <input id="proposedSpeciesItemId" name="proposedSpeciesItemId" type="hidden">
-              </label>
-            </div>
 
-            <div class="field-grid two-up">
-              <label id="scope-field" class="field">
-                <span>Coverage</span>
-                <select id="scope" name="scope">
-                  <option value="national">National</option>
-                  <option value="regional">Regional</option>
-                </select>
-              </label>
-
-              <div class="field map-hint-field">
-                <span>Map overlay</span>
-                <div id="map-hint" class="map-hint-pill">National coverage uses the full country overlay.</div>
-              </div>
-            </div>
-
-            <div class="field guidance-field">
-              <span>What This Will Do</span>
-              <div id="suggestion-guidance" class="guidance-panel"></div>
-            </div>
-
-            <div class="notification-block">
-              <label class="checkbox-card" for="requestNotification">
-                <input id="requestNotification" name="requestNotification" type="checkbox">
-                <span class="checkbox-card-copy">Do you want to get a notification when this ticket is fixed?</span>
-              </label>
-
-              <label id="notification-email-field" class="field" hidden>
-                <span>Email</span>
-                <input id="notificationEmail" name="notificationEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button id="clear-drawing" class="secondary-button" type="button" hidden>Clear Drawn Areas</button>
-              <p id="status-line" class="status-line">Ready.</p>
-            </div>
-          </form>
-
-          <section id="ticket-preview-panel" class="ticket-preview locked">
-            <div id="ticket-preview-gate" class="ticket-preview-gate">
-              <div class="ticket-preview-gate-card">
-                <p id="ticket-preview-gate-message" class="ticket-preview-gate-message">Fill in the form to preview the ticket automatically.</p>
-              </div>
-            </div>
-
-            <section id="ticket-preview-content" class="ticket-preview-section">
-              <div class="section-head preview-head">
-                <div>
-                  <p class="section-kicker">Preview</p>
-                  <h3>Ticket</h3>
+                <div class="field guidance-field">
+                  <span>What This Will Do</span>
+                  <div id="suggestion-guidance" class="guidance-panel"></div>
                 </div>
-              </div>
 
-              <label class="field">
-                <span>Title</span>
-                <input id="ticket-title" type="text" readonly placeholder="Fill in the form to preview the title.">
-              </label>
+                <div class="notification-block">
+                  <label class="checkbox-card" for="requestNotification">
+                    <input id="requestNotification" name="requestNotification" type="checkbox">
+                    <span class="checkbox-card-copy">Do you want to get a notification when this ticket is fixed?</span>
+                  </label>
 
-              <label class="field">
-                <span>Body</span>
-                <textarea id="ticket-body" rows="14" readonly placeholder="The ticket body will update automatically here."></textarea>
-              </label>
-
-              <div id="ticket-warnings" class="warning-list" hidden></div>
-            </section>
-
-            <section id="ticket-submit-panel" class="ticket-preview-section ticket-submit-panel">
-              <div class="section-head preview-head">
-                <div>
-                  <p class="section-kicker">Submit</p>
-                  <h3>Ticket</h3>
+                  <label id="notification-email-field" class="field" hidden>
+                    <span>Email</span>
+                    <input id="notificationEmail" name="notificationEmail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
+                  </label>
                 </div>
-              </div>
 
-              <div class="preview-actions">
-                <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
-                <a id="open-ticket" class="draft-link disabled" href="#">Send Email</a>
-                <a id="open-github" class="draft-link draft-link-stack disabled" href="#" target="_blank" rel="noreferrer">
-                  <span>Make GitHub Issue</span>
-                  <span class="draft-link-note">requires GitHub account</span>
-                </a>
-                <button id="admin-apply" type="button" hidden disabled>Apply Changes (Admin)</button>
-              </div>
-            </section>
-          </section>
-
-          <section id="admin-panel" class="ticket-preview-section admin-panel">
-            <div class="section-head preview-head">
-              <div>
-                <p class="section-kicker">Admin</p>
-                <h3>Apply Changes</h3>
-              </div>
+                <div class="form-actions">
+                  <button id="clear-drawing" class="secondary-button" type="button" hidden>Clear Drawn Areas</button>
+                  <p id="status-line" class="status-line">Ready.</p>
+                </div>
+              </form>
             </div>
 
-            <p id="admin-auth-status" class="admin-auth-status">Connect a GitHub admin session to write override files directly.</p>
+            <div class="ticket-sidebar">
+              <section id="ticket-preview-panel" class="ticket-preview locked">
+                <div id="ticket-preview-gate" class="ticket-preview-gate">
+                  <div class="ticket-preview-gate-card">
+                    <p id="ticket-preview-gate-message" class="ticket-preview-gate-message">Fill in the form to preview the ticket automatically.</p>
+                  </div>
+                </div>
 
-            <label id="admin-token-field" class="field">
-              <span>GitHub fine-grained token</span>
-              <input id="admin-token" type="password" autocomplete="off" spellcheck="false" placeholder="Paste a token with access to this repo">
-            </label>
+                <section id="ticket-preview-content" class="ticket-preview-section">
+                  <div class="section-head preview-head">
+                    <div>
+                      <p class="section-kicker">Preview</p>
+                      <h3>Ticket</h3>
+                    </div>
+                  </div>
 
-            <div class="admin-actions">
-              <button id="admin-connect" class="secondary-button" type="button">Connect GitHub</button>
-              <button id="admin-disconnect" class="secondary-button" type="button" hidden>Disconnect</button>
-            </div>
+                  <label class="field">
+                    <span>Title</span>
+                    <input id="ticket-title" type="text" readonly placeholder="Fill in the form to preview the title.">
+                  </label>
 
-            <a id="admin-last-commit" class="draft-link admin-commit-link" href="#" target="_blank" rel="noreferrer" hidden>View Last Admin Commit</a>
-            <p class="preview-action-note admin-note">Static GitHub Pages cannot complete GitHub OAuth directly because GitHub blocks the token exchange with CORS. This admin flow now keeps your token on this browser until you disconnect it.</p>
-          </section>
+                  <label class="field">
+                    <span>Body</span>
+                    <textarea id="ticket-body" rows="14" readonly placeholder="The ticket body will update automatically here."></textarea>
+                  </label>
 
-          <section class="ticket-preview-section resource-panel">
-            <div class="section-head preview-head">
-              <div>
-                <p class="section-kicker">More</p>
-                <h3>Open Links</h3>
-              </div>
-            </div>
+                  <div id="ticket-warnings" class="warning-list" hidden></div>
+                </section>
 
-            <p class="resource-copy">Need the setup steps or the related projects? Open these shortcuts in a new tab.</p>
+                <section id="ticket-submit-panel" class="ticket-preview-section ticket-submit-panel">
+                  <div class="section-head preview-head">
+                    <div>
+                      <p class="section-kicker">Submit</p>
+                      <h3>Ticket</h3>
+                    </div>
+                  </div>
 
-            <div class="resource-actions">
-              <a id="open-systematic-review" class="draft-link" href="./systematic-review/" target="_blank" rel="noreferrer">Open Systematic Review</a>
-              <a class="draft-link" href="./admin-guide.html" target="_blank" rel="noreferrer">Open Admin Guide</a>
-              <a class="draft-link" href="https://animaldetect.com" target="_blank" rel="noreferrer">Animal Detect</a>
-              <a class="draft-link" href="https://github.com/google/cameratrapai#speciesnet" target="_blank" rel="noreferrer">SpeciesNet GitHub</a>
+                  <div class="preview-actions">
+                    <button id="copy-markdown" class="secondary-button" type="button" disabled>Copy Ticket</button>
+                    <a id="open-ticket" class="draft-link disabled" href="#">Send Email</a>
+                    <a id="open-github" class="draft-link draft-link-stack disabled" href="#" target="_blank" rel="noreferrer">
+                      <span>Make GitHub Issue</span>
+                      <span class="draft-link-note">requires GitHub account</span>
+                    </a>
+                    <button id="admin-apply" type="button" hidden disabled>Apply Changes (Admin)</button>
+                  </div>
+                </section>
+              </section>
+
+              <section id="admin-panel" class="ticket-preview-section admin-panel">
+                <div class="section-head preview-head">
+                  <div>
+                    <p class="section-kicker">Admin</p>
+                    <h3>Apply Changes</h3>
+                  </div>
+                </div>
+
+                <p id="admin-auth-status" class="admin-auth-status">Connect a GitHub admin session to write override files directly.</p>
+
+                <label id="admin-token-field" class="field">
+                  <span>GitHub fine-grained token</span>
+                  <input id="admin-token" type="password" autocomplete="off" spellcheck="false" placeholder="Paste a token with access to this repo">
+                </label>
+
+                <div class="admin-actions">
+                  <button id="admin-connect" class="secondary-button" type="button">Connect GitHub</button>
+                  <button id="admin-disconnect" class="secondary-button" type="button" hidden>Disconnect</button>
+                </div>
+
+                <a id="admin-last-commit" class="draft-link admin-commit-link" href="#" target="_blank" rel="noreferrer" hidden>View Last Admin Commit</a>
+                <p class="preview-action-note admin-note">Static GitHub Pages cannot complete GitHub OAuth directly because GitHub blocks the token exchange with CORS. This admin flow now keeps your token on this browser until you disconnect it.</p>
+              </section>
+
+              <section class="ticket-preview-section resource-panel">
+                <div class="section-head preview-head">
+                  <div>
+                    <p class="section-kicker">More</p>
+                    <h3>Open Links</h3>
+                  </div>
+                </div>
+
+                <p class="resource-copy">Need the setup steps or the related projects? Open these shortcuts in a new tab.</p>
+
+                <div class="resource-actions">
+                  <a id="open-systematic-review" class="draft-link" href="./systematic-review/" target="_blank" rel="noreferrer">Open Systematic Review</a>
+                  <a class="draft-link" href="./admin-guide.html" target="_blank" rel="noreferrer">Open Admin Guide</a>
+                  <a class="draft-link" href="https://animaldetect.com" target="_blank" rel="noreferrer">Animal Detect</a>
+                  <a class="draft-link" href="https://github.com/google/cameratrapai#speciesnet" target="_blank" rel="noreferrer">SpeciesNet GitHub</a>
+                </div>
+              </section>
             </div>
           </section>
           </section>
@@ -313,7 +383,7 @@
       <div class="onboarding-shell">
         <section class="onboarding-card" role="dialog" aria-modal="true" aria-labelledby="onboarding-title">
           <p id="onboarding-step-label" class="section-kicker onboarding-kicker">Quick guide</p>
-          <h3 id="onboarding-title">Review Desk Guide</h3>
+          <h3 id="onboarding-title">Animal Detect Geofence Guide</h3>
           <div id="onboarding-body" class="onboarding-body"></div>
 
           <div class="onboarding-actions">
@@ -333,6 +403,6 @@
     <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
     <script src="https://unpkg.com/polygon-clipping@0.15.7/dist/polygon-clipping.umd.min.js"></script>
     <script src="https://unpkg.com/@turf/turf@7.2.0/turf.min.js"></script>
-    <script src="./assets/app.js?v=20260516a"></script>
+    <script src="./assets/app.js?v=20260516b"></script>
   </body>
 </html>
