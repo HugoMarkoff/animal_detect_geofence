@@ -234,6 +234,7 @@ def load_country_species(iso3: str) -> dict[str, Any]:
                 "footprintNote": observation_profile["note"],
                 "polygonLatLngs": observation_profile["footprintPolygonLatLngs"],
                 "hasPolygon": len(observation_profile["footprintPolygonLatLngs"]) >= 3,
+                "exactGeometry": footprint_code == "regional" and isinstance(raw_entry.get("manualOverride"), dict),
             }
         )
 
@@ -277,8 +278,10 @@ def load_country_regional_overlay(iso3: str) -> dict[str, Any]:
             {
                 "polygon": polygon,
                 "species": [],
+                "exactGeometry": False,
             },
         )
+        feature["exactGeometry"] = feature["exactGeometry"] or bool(entry.get("exactGeometry"))
         feature["species"].append(
             {
                 "itemId": entry.get("itemId"),
@@ -302,6 +305,7 @@ def load_country_regional_overlay(iso3: str) -> dict[str, Any]:
                 "properties": {
                     "countryIso3": country_species["iso3"],
                     "countryName": country_species["countryName"],
+                    "exactGeometry": bool(entry.get("exactGeometry")),
                     "species": species,
                     "speciesCount": len(species),
                 },

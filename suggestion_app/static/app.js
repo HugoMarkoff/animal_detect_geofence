@@ -581,7 +581,9 @@ function clipFeatureToCountry(feature, countryGeometry) {
   }
 
   try {
-    const expandedFootprint = snapFootprintTowardCoastline(footprint, countryGeometry);
+    const expandedFootprint = feature?.properties?.exactGeometry
+      ? footprint
+      : snapFootprintTowardCoastline(footprint, countryGeometry);
     const clipped = clipper.intersection(expandedFootprint, country);
     if (!Array.isArray(clipped) || !clipped.length) {
       return [];

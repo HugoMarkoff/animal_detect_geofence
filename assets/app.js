@@ -865,6 +865,7 @@ function buildCountrySpeciesEntry(rawEntry, packMode) {
     footprintNote: observationProfile.note,
     polygonLatLngs: observationProfile.footprintPolygonLatLngs,
     hasPolygon: observationProfile.footprintPolygonLatLngs.length >= 3,
+    exactGeometry: footprintCode === "regional" && Boolean(rawEntry?.manualOverride),
     tags,
   };
 }
@@ -929,10 +930,12 @@ function buildRegionalOverlayCollection(countryData) {
 
     const polygonKey = JSON.stringify(polygon);
     if (!grouped.has(polygonKey)) {
-      grouped.set(polygonKey, { polygon, species: [] });
+      grouped.set(polygonKey, { polygon, species: [], exactGeometry: false });
     }
 
-    grouped.get(polygonKey).species.push({
+    const groupedEntry = grouped.get(polygonKey);
+    groupedEntry.exactGeometry ||= Boolean(entry.exactGeometry);
+    groupedEntry.species.push({
       itemId: entry.itemId,
       label: entry.label,
       commonName: entry.commonName,
@@ -947,6 +950,7 @@ function buildRegionalOverlayCollection(countryData) {
     properties: {
       countryIso3: countryData.iso3,
       countryName: countryData.countryName,
+      exactGeometry: Boolean(entry.exactGeometry),
       species: entry.species.sort((left, right) => sortKey(left.commonName).localeCompare(sortKey(right.commonName)) || sortKey(left.binomial).localeCompare(sortKey(right.binomial))),
       speciesCount: entry.species.length,
     },
@@ -2740,7 +2744,9 @@ function clipFeatureToCountry(feature, countryGeometryOrContext) {
   }
 
   try {
-    const expandedFootprint = snapFootprintTowardCoastline(footprint, countryClipContext);
+    const expandedFootprint = feature?.properties?.exactGeometry
+      ? footprint
+      : snapFootprintTowardCoastline(footprint, countryClipContext);
     const clipped = clipper.intersection(expandedFootprint, country);
     if (!Array.isArray(clipped) || !clipped.length) {
       return [];
