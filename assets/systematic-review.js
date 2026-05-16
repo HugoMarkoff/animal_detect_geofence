@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260516b";
+const ASSET_VERSION = "20260516c";
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
 const SYSTEMATIC_REVIEW_PROPOSALS_PATH = "data/systematic-review/proposals.json";
@@ -618,6 +618,22 @@ function renderEvidenceList(lines) {
   elements.evidenceList.innerHTML = lines.map((line) => `<li>${escapeHtml(line)}</li>`).join("");
 }
 
+function canEditLocalDraft() {
+  return Boolean(state.selectedDetail?.editable) && !state.admin.isApplying;
+}
+
+function localDraftStatusMessage(actionMessage) {
+  if (state.admin.login && state.admin.canWrite) {
+    return `${actionMessage} Save Draft or Accept to commit.`;
+  }
+
+  if (state.admin.login && !state.admin.canWrite) {
+    return `${actionMessage} This account cannot push, so the change is local only.`;
+  }
+
+  return `${actionMessage} Connect GitHub with write access to save or apply it.`;
+}
+
 function syncReviewStageHeight() {
   if (!elements.reviewWorkspace || !elements.reviewQueuePanel || !elements.reviewDetailPanel) {
     return;
@@ -717,7 +733,7 @@ function renderDetail(detail) {
     ? detail.gbif.countryCounts.slice(0, 6).map((entry) => `${entry.iso3} ${formatCount(entry.count)}`).join(", ")
     : "";
   const canWrite = Boolean(state.admin.login && state.admin.canWrite);
-  const editable = Boolean(detail.editable) && canWrite && !state.admin.isApplying;
+  const editable = Boolean(detail.editable) && !state.admin.isApplying;
 
   elements.issueTitle.textContent = summary.label || "Unknown issue";
   elements.issueStatus.className = `status-pill ${statusClass(detail.status)}`;
@@ -766,18 +782,23 @@ function renderDetail(detail) {
     return;
   }
 
+  if (state.hasUnsavedDraft) {
+    if (canWrite) {
+      setDecisionStatus("Draft changed locally. Save Draft or Accept to commit the current bucket layout.");
+      return;
+    }
+
+    setDecisionStatus("Draft changed locally. Connect GitHub with write access to save or apply the current bucket layout.");
+    return;
+  }
+
   if (!state.admin.login) {
-    setDecisionStatus("Read-only mode. Connect GitHub to save drafts or apply this proposal.");
+    setDecisionStatus("Local draft mode. You can rearrange Keep, Remove, and Add now. Connect GitHub to save drafts or apply this proposal.");
     return;
   }
 
   if (!state.admin.canWrite) {
-    setDecisionStatus(`@${state.admin.login} does not have write access to ${DEFAULT_GITHUB_REPO}.`, true);
-    return;
-  }
-
-  if (state.hasUnsavedDraft) {
-    setDecisionStatus("Draft changed locally. Save Draft or Accept to commit the current bucket layout.");
+    setDecisionStatus(`@${state.admin.login} can review locally, but this account does not have write access to ${DEFAULT_GITHUB_REPO}.`, true);
     return;
   }
 
@@ -1743,7 +1764,7 @@ async function addCountryToBucket(bucket, rawValue) {
 
   state.activeAddBucket = null;
   renderDetail(state.selectedDetail);
-  setDecisionStatus(`Moved ${country.countryName} into ${bucket}. Save Draft or Accept to commit.`);
+  setDecisionStatus(localDraftStatusMessage(`Moved ${country.countryName} into ${bucket}.`));
 }
 
 async function init() {
@@ -1808,7 +1829,7 @@ elements.reviewQueue.addEventListener("click", (event) => {
 document.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-bucket-add]");
   if (addButton) {
-    if (!state.selectedDetail?.editable || !state.admin.canWrite) {
+    if (!canEditLocalDraft()) {
       return;
     }
     const bucket = addButton.dataset.bucketAdd;
@@ -1844,7 +1865,7 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener("dragstart", (event) => {
   const pill = event.target.closest("[data-country-iso3][draggable='true']");
-  if (!pill || !state.selectedDetail?.editable || !state.admin.canWrite) {
+  if (!pill || !canEditLocalDraft()) {
     return;
   }
 
@@ -1868,7 +1889,7 @@ document.addEventListener("dragend", (event) => {
 
 [elements.keepCountries, elements.removeCountries, elements.addCountries].forEach((container) => {
   container.addEventListener("dragover", (event) => {
-    if (!state.draggedCountry || !state.selectedDetail?.editable || !state.admin.canWrite) {
+    if (!state.draggedCountry || !canEditLocalDraft()) {
       return;
     }
 
@@ -1881,7 +1902,7 @@ document.addEventListener("dragend", (event) => {
   });
 
   container.addEventListener("drop", (event) => {
-    if (!state.draggedCountry || !state.selectedDetail?.editable || !state.admin.canWrite) {
+    if (!state.draggedCountry || !canEditLocalDraft()) {
       return;
     }
 
@@ -1904,7 +1925,7 @@ document.addEventListener("dragend", (event) => {
     }
 
     renderDetail(state.selectedDetail);
-    setDecisionStatus(`Moved ${state.draggedCountry.iso3} into ${targetBucket}. Save Draft or Accept to commit.`);
+    setDecisionStatus(localDraftStatusMessage(`Moved ${state.draggedCountry.iso3} into ${targetBucket}.`));
   });
 });
 
