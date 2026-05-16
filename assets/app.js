@@ -87,7 +87,7 @@ const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const DATA_ROOT = "./data";
 const DATA_VERSION = "20260511e";
-const SYSTEMATIC_REVIEW_URL = "http://127.0.0.1:5070/systematic-review";
+const SYSTEMATIC_REVIEW_URL = "./systematic-review/";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -2055,9 +2055,8 @@ function renderAdminState() {
   }
 
   if (openSystematicReviewLink) {
-    const canOpenSystematicReview = connected && state.admin.canWrite;
-    openSystematicReviewLink.hidden = !canOpenSystematicReview;
-    openSystematicReviewLink.href = canOpenSystematicReview ? systematicReviewUrl() : SYSTEMATIC_REVIEW_URL;
+    openSystematicReviewLink.hidden = false;
+    openSystematicReviewLink.href = systematicReviewUrl();
   }
 }
 
@@ -5614,6 +5613,16 @@ adminDisconnectButton?.addEventListener("click", () => {
 
 adminApplyButton?.addEventListener("click", () => {
   void applyAdminChanges();
+});
+
+openSystematicReviewLink?.addEventListener("click", () => {
+  try {
+    if (cleanText(state.admin.token)) {
+      window.sessionStorage.setItem(ADMIN_TOKEN_HANDOFF_KEY, state.admin.token);
+    }
+  } catch {
+    // Ignore storage failures and continue to the linked page.
+  }
 });
 
 window.addEventListener("resize", () => {
