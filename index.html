@@ -17,73 +17,29 @@
       rel="stylesheet"
       href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css"
     >
-    <link rel="stylesheet" href="./assets/styles.css?v=20260516b">
+    <link rel="stylesheet" href="./assets/styles.css?v=20260516c">
   </head>
   <body>
     <main class="shell">
-      <section class="panel brand-hero">
-        <div class="brand-hero-grid">
-          <div class="brand-copy">
-            <div class="brand-lockup">
-              <div class="brand-mark" aria-hidden="true">
-                <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="brand-lens" x1="25" y1="25" x2="63" y2="63" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#A4EE16"/>
-                      <stop offset="1" stop-color="#2D9046"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="10" y="14" width="58" height="58" rx="20" fill="#181C1F"/>
-                  <path d="M29 31C29 28.2386 31.2386 26 34 26H44C46.7614 26 49 28.2386 49 31V36H54C56.7614 36 59 38.2386 59 41V51C59 53.7614 56.7614 56 54 56H34C31.2386 56 29 53.7614 29 51V31Z" fill="url(#brand-lens)"/>
-                  <circle cx="44" cy="46" r="10.5" fill="#F2F8F4"/>
-                  <circle cx="44" cy="46" r="6.5" fill="#181C1F"/>
-                  <circle cx="73.5" cy="27.5" r="12.5" fill="#A4EE16"/>
-                  <circle cx="67.5" cy="24.5" r="3.5" fill="#181C1F"/>
-                  <circle cx="79.5" cy="22.5" r="3" fill="#181C1F"/>
-                  <circle cx="65.5" cy="34.5" r="3" fill="#181C1F"/>
-                  <circle cx="78.5" cy="34.5" r="3.5" fill="#181C1F"/>
-                  <path d="M72.5 28.5C69.5 28.5 67 30.9 67 33.9C67 37.2 69.9 40.3 72.5 42.3C75.1 40.3 78 37.2 78 33.9C78 30.9 75.5 28.5 72.5 28.5Z" fill="#181C1F"/>
-                </svg>
-              </div>
+      <header class="panel desk-brand-header">
+        <div class="desk-brand-copy">
+          <a class="desk-brand-logo-link" href="https://www.animaldetect.com/" target="_blank" rel="noreferrer" aria-label="Animal Detect homepage">
+            <img class="desk-brand-logo" src="https://www.animaldetect.com/images/logo_dark_green_box.svg" alt="Animal Detect logo">
+          </a>
 
-              <div class="brand-lockup-copy">
-                <p class="section-kicker">Animal Detect Product Surface</p>
-                <h1>Animal Detect Geofence</h1>
-              </div>
-            </div>
-
-            <p class="brand-lead">Review national and regional species packs in a map-first workspace, then turn changes into tickets or GitHub-backed overrides without leaving the published product surface.</p>
-
-            <div class="brand-actions">
-              <a class="draft-link" href="./systematic-review/" target="_blank" rel="noreferrer">Open Systematic Review</a>
-              <a class="draft-link" href="./admin-guide.html" target="_blank" rel="noreferrer">Open Admin Guide</a>
-              <a class="draft-link" href="https://animaldetect.com" target="_blank" rel="noreferrer">Animal Detect</a>
-            </div>
-          </div>
-
-          <div class="brand-side">
-            <div class="brand-mini-grid">
-              <article class="brand-mini-card">
-                <span>Review Flow</span>
-                <strong>Map, pack, and ticket in one layout</strong>
-                <p>Keep the context visible while you move between countries, species buckets, and submission actions.</p>
-              </article>
-
-              <article class="brand-mini-card">
-                <span>Coverage Model</span>
-                <strong>National and regional geofence editing</strong>
-                <p>Switch quickly between whole-country expectations and local drawn-area review without losing the current pack state.</p>
-              </article>
-
-              <article class="brand-mini-card">
-                <span>Publishing</span>
-                <strong>Preview first, apply later</strong>
-                <p>Use email and GitHub issue drafting for review, then connect GitHub only when a change is ready to be written.</p>
-              </article>
-            </div>
+          <div class="desk-brand-text">
+            <p class="section-kicker">Animal Detect</p>
+            <h1 class="desk-brand-title">Geofence Review Workspace</h1>
+            <p class="desk-brand-lead">Easy camera trap geofence review for wildlife teams. Check national and regional species packs, send corrections, and keep published country coverage aligned with real-world use.</p>
           </div>
         </div>
-      </section>
+
+        <div class="desk-brand-actions">
+          <a class="draft-link" href="./systematic-review/" target="_blank" rel="noreferrer">Systematic Review</a>
+          <a class="draft-link" href="./admin-guide.html" target="_blank" rel="noreferrer">Admin Guide</a>
+          <a class="draft-link" href="https://www.animaldetect.com/" target="_blank" rel="noreferrer">Animal Detect</a>
+        </div>
+      </header>
 
       <section class="workspace">
         <section class="top-stage">
@@ -190,9 +146,7 @@
             </div>
           </div>
 
-          <div class="ticket-layout">
-            <div class="ticket-compose">
-              <form id="ticket-form" class="ticket-form">
+          <form id="ticket-form" class="ticket-form">
                 <fieldset class="mode-fieldset">
                   <legend>Suggestion type</legend>
                   <div class="segmented-control">
@@ -277,11 +231,9 @@
                   <button id="clear-drawing" class="secondary-button" type="button" hidden>Clear Drawn Areas</button>
                   <p id="status-line" class="status-line">Ready.</p>
                 </div>
-              </form>
-            </div>
+          </form>
 
-            <div class="ticket-sidebar">
-              <section id="ticket-preview-panel" class="ticket-preview locked">
+          <section id="ticket-preview-panel" class="ticket-preview locked">
                 <div id="ticket-preview-gate" class="ticket-preview-gate">
                   <div class="ticket-preview-gate-card">
                     <p id="ticket-preview-gate-message" class="ticket-preview-gate-message">Fill in the form to preview the ticket automatically.</p>
@@ -370,10 +322,47 @@
                   <a class="draft-link" href="https://github.com/google/cameratrapai#speciesnet" target="_blank" rel="noreferrer">SpeciesNet GitHub</a>
                 </div>
               </section>
-            </div>
-          </section>
           </section>
         </section>
+
+        <footer class="panel desk-footer">
+          <div class="desk-footer-top">
+            <div class="desk-footer-brand">
+              <a class="desk-footer-logo-link" href="https://www.animaldetect.com/" target="_blank" rel="noreferrer" aria-label="Animal Detect homepage">
+                <img class="desk-footer-logo" src="https://www.animaldetect.com/images/logo_dark_green_box.svg" alt="Animal Detect logo">
+              </a>
+              <p class="desk-footer-copy">Animal Detect Geofence keeps national and regional species packs aligned with trail-camera expectations, systematic review decisions, and published override workflows.</p>
+            </div>
+
+            <div class="desk-footer-links">
+              <section class="desk-footer-group">
+                <p class="section-kicker">Workflows</p>
+                <a href="./index.html">Country Desk</a>
+                <a href="./systematic-review/">Systematic Review</a>
+                <a href="./admin-guide.html">Admin Guide</a>
+              </section>
+
+              <section class="desk-footer-group">
+                <p class="section-kicker">Resources</p>
+                <a href="https://www.animaldetect.com/" target="_blank" rel="noreferrer">Animal Detect</a>
+                <a href="https://www.animaldetect.com/api" target="_blank" rel="noreferrer">API</a>
+                <a href="https://github.com/google/cameratrapai#speciesnet" target="_blank" rel="noreferrer">SpeciesNet GitHub</a>
+                <a href="mailto:support@animaldetect.com">support@animaldetect.com</a>
+              </section>
+
+              <section class="desk-footer-group">
+                <p class="section-kicker">Legal</p>
+                <a href="https://www.animaldetect.com/tos" target="_blank" rel="noreferrer">Terms of Service</a>
+                <a href="https://www.animaldetect.com/privacy-policy" target="_blank" rel="noreferrer">Privacy Policy</a>
+              </section>
+            </div>
+          </div>
+
+          <div class="desk-footer-bottom">
+            <p>Copyright © 2026 - All rights reserved</p>
+            <p>Animal Detect Geofence</p>
+          </div>
+        </footer>
       </section>
     </main>
 

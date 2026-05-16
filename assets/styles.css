@@ -32,9 +32,131 @@ body {
 }
 
 .shell {
-  width: min(1440px, calc(100vw - 36px));
+  width: min(1360px, calc(100vw - 30px));
   margin: 0 auto;
-  padding: 22px 0 42px;
+  padding: 26px 0 42px;
+}
+
+.desk-brand-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 20px 22px;
+}
+
+.desk-brand-copy {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.desk-brand-logo-link,
+.desk-footer-logo-link {
+  flex: 0 0 auto;
+}
+
+.desk-brand-logo,
+.desk-footer-logo {
+  display: block;
+  width: 64px;
+  height: 64px;
+}
+
+.desk-brand-text {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.desk-brand-title {
+  max-width: none;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1;
+}
+
+.desk-brand-lead {
+  max-width: 60ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
+.desk-brand-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.desk-footer {
+  display: grid;
+  gap: 18px;
+  padding: 22px;
+}
+
+.desk-footer-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.4fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.desk-footer-brand {
+  display: grid;
+  gap: 12px;
+}
+
+.desk-footer-copy {
+  max-width: 40ch;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.desk-footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.desk-footer-group {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.desk-footer-group .section-kicker {
+  margin-bottom: 2px;
+}
+
+.desk-footer-group a {
+  color: var(--ink);
+  line-height: 1.55;
+  text-decoration: none;
+}
+
+.desk-footer-group a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.desk-footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.desk-footer-bottom p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
 }
 
 .brand-hero {
@@ -216,14 +338,14 @@ h3 {
 .workspace {
   display: grid;
   gap: 22px;
-  margin-top: 22px;
+  margin-top: 0;
 }
 
 .top-stage {
-  --top-stage-height: clamp(600px, 72vh, 820px);
+  --top-stage-height: clamp(580px, calc(100vh - 124px), 840px);
   display: grid;
   grid-template-areas: "map browser";
-  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(330px, 0.92fr);
   gap: 22px;
   align-items: stretch;
 }
@@ -246,7 +368,7 @@ h3 {
 
 .ticket-panel {
   display: grid;
-  gap: 18px;
+  gap: 20px;
 }
 
 .ticket-layout {
@@ -1059,21 +1181,14 @@ button {
 }
 
 .resource-actions {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
 .resource-actions .draft-link,
 .guide-actions .draft-link {
   align-self: flex-start;
-}
-
-.resource-actions .draft-link {
-  display: grid;
-  place-items: center;
-  min-height: 48px;
-  text-align: center;
 }
 
 .guide-inline-link {
@@ -1942,13 +2057,8 @@ button {
   display: none !important;
 }
 
-@media (max-width: 1040px) {
-  .brand-hero-grid,
+@media (max-width: 1180px) {
   .top-stage {
-    grid-template-columns: 1fr;
-  }
-
-  .ticket-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1963,6 +2073,19 @@ button {
   .map-panel {
     min-height: 0;
     height: auto;
+  }
+
+  .desk-brand-header,
+  .desk-footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .desk-brand-actions {
+    justify-content: flex-start;
+  }
+
+  .desk-footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .species-list {
@@ -1989,28 +2112,28 @@ button {
     padding-top: 14px;
   }
 
-  .brand-hero {
-    padding: 18px;
-  }
-
-  .brand-lockup {
+  .desk-brand-copy {
+    flex-direction: column;
     align-items: flex-start;
   }
 
-  .brand-mark {
-    width: 72px;
-    height: 72px;
+  .desk-brand-logo,
+  .desk-footer-logo {
+    width: 58px;
+    height: 58px;
   }
 
-  .brand-mark svg {
-    width: 62px;
-    height: 62px;
-  }
-
-  .brand-actions,
-  .resource-actions {
+  .desk-footer-links {
     grid-template-columns: 1fr;
+  }
+
+  .desk-footer-bottom {
+    flex-direction: column;
+  }
+
+  .resource-actions {
     display: grid;
+    grid-template-columns: 1fr;
   }
 
   .guide-shell {
