@@ -9,14 +9,14 @@
   "summary": {
     "total": 195,
     "statusCounts": {
-      "likely_false": 112,
-      "likely_true_one_source": 64,
+      "likely_false": 111,
+      "likely_true_one_source": 65,
       "unlisted": 16,
       "new_record": 3
     },
     "bucketCounts": {
-      "Needs Review": 112,
-      "Likely Valid": 64,
+      "Needs Review": 111,
+      "Likely Valid": 65,
       "Unlisted": 16,
       "New": 3
     }
@@ -8028,8 +8028,8 @@
     {
       "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
       "countryIso3": "LSO",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
@@ -8062,10 +8062,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -8075,7 +8075,67 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/LSO/c10547c3-1748-48bf-a451-8066c820f22f.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T08:44:03.529Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep domestic turkey (meleagris gallopavo) for Lesotho (LSO). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+          "countryIso3": "LSO",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": null,
+          "gbifCount": 1,
+          "inatCount": null,
+          "rawGbifPresent": true,
+          "rawInatPresent": null,
+          "rawGbifCount": 1,
+          "rawInatCount": null,
+          "gbifUsageKey": 9606290,
+          "inatTaxonId": 906,
+          "inatPlaceId": 8489,
+          "managedEvidence": {
+            "domesticNamed": true,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 1,
+            "qualifiedTotal": 1,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 196.59396323497796,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -10788,11 +10848,12 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-17T07:41:07.448776+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-17T08:44:34.092084+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9",
-      "990ae9dd-7a59-4344-afcb-1b7b21368000"
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
   }
 }

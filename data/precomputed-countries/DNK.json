@@ -11,14 +11,14 @@
     "statusCounts": {
       "unlisted": 221,
       "likely_true_both": 90,
-      "likely_false": 38,
+      "likely_false": 37,
       "new_record": 49,
-      "likely_true_one_source": 33
+      "likely_true_one_source": 34
     },
     "bucketCounts": {
       "Unlisted": 221,
-      "Likely Valid": 123,
-      "Needs Review": 38,
+      "Likely Valid": 124,
+      "Needs Review": 37,
       "New": 49
     }
   },
@@ -22736,8 +22736,8 @@
     {
       "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
       "countryIso3": "DNK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": null,
@@ -22797,12 +22797,91 @@
             12.456183964031528
           ]
         ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "Dropped 44 likely outlier points before scoring. The cleaned outer footprint covers 3.8% of Denmark, so it stays regional."
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue."
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/DNK/c10547c3-1748-48bf-a451-8066c820f22f.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T08:44:03.529Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep domestic turkey (meleagris gallopavo) for Denmark (DNK). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+          "countryIso3": "DNK",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": null,
+          "gbifCount": 85,
+          "inatCount": null,
+          "rawGbifPresent": true,
+          "rawInatPresent": null,
+          "rawGbifCount": 85,
+          "rawInatCount": null,
+          "gbifUsageKey": 9606290,
+          "inatTaxonId": null,
+          "inatPlaceId": 8051,
+          "managedEvidence": {
+            "domesticNamed": true,
+            "materialSampleCount": 32,
+            "atlasCount": 43,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": true,
+            "note": "domestic turkey is a domestic taxon and the sampled records are dominated by atlas/material or captive-style evidence, so it stays in review."
+          },
+          "evidenceQuality": {
+            "rawTotal": 85,
+            "qualifiedTotal": 85,
+            "specimenOrSampleCount": 32,
+            "staleGbifCount": 43,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 76,
+            "corePointCount": 32,
+            "outlierPointCount": 44,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 54.730572388449886,
+            "unique25kmCells": 3,
+            "unique50kmCells": 3,
+            "countryDiameterKm": 234.24129640355284,
+            "spreadRatio": 0.23365039909171098,
+            "coverageAreaKm2": 1639.2661346457476,
+            "coverageRatio": 0.03803931254109035,
+            "footprintPolygonLatLngs": [
+              [
+                55.70148959277108,
+                11.531281612575693
+              ],
+              [
+                55.559529923929944,
+                12.687958990081302
+              ],
+              [
+                55.727274487082724,
+                12.456183964031528
+              ]
+            ],
+            "code": "regional",
+            "label": "Regional footprint",
+            "short": "Regional",
+            "note": "Dropped 44 likely outlier points before scoring. The cleaned outer footprint covers 3.8% of Denmark, so it stays regional."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -29769,8 +29848,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 9,
-    "appliedAtUtc": "2026-05-15T21:46:01.112055+00:00",
+    "count": 10,
+    "appliedAtUtc": "2026-05-17T08:44:31.350871+00:00",
     "items": [
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "2813059e-da3b-4f17-a60c-d9c34f2fce24",
@@ -29779,6 +29858,7 @@
       "601cf098-9876-4912-84bb-0926834305e9",
       "75e7ac24-a298-4a2f-bc12-9a153b08b7e6",
       "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+      "c10547c3-1748-48bf-a451-8066c820f22f",
       "d372cda5-a8ca-4b7b-97ed-4e4fab9c9b4b",
       "eb3829b0-772e-4088-ae90-f11b9fe38284"
     ]

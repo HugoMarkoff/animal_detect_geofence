@@ -9,12 +9,12 @@
   "summary": {
     "total": 185,
     "statusCounts": {
-      "likely_true_one_source": 104,
-      "likely_false": 81
+      "likely_true_one_source": 105,
+      "likely_false": 80
     },
     "bucketCounts": {
-      "Likely Valid": 104,
-      "Needs Review": 81
+      "Likely Valid": 105,
+      "Needs Review": 80
     }
   },
   "entries": [
@@ -8335,7 +8335,7 @@
     {
       "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
       "countryIso3": "AFG",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -8368,10 +8368,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -8381,7 +8381,66 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid",
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/AFG/c10547c3-1748-48bf-a451-8066c820f22f.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T08:44:03.529Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep domestic turkey (meleagris gallopavo) for Afghanistan (AFG). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+          "countryIso3": "AFG",
+          "status": "likely_false",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 9606290,
+          "inatTaxonId": 906,
+          "inatPlaceId": 7341,
+          "managedEvidence": {
+            "domesticNamed": true,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 911.2875661736065,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "bucket": "Needs Review"
+        }
+      }
     },
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -11107,11 +11166,12 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-17T07:41:01.271853+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-17T08:44:28.023197+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9",
-      "990ae9dd-7a59-4344-afcb-1b7b21368000"
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
   }
 }

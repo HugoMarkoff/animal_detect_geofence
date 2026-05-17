@@ -7,13 +7,13 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/country-validation/ATA/new_candidates.csv",
   "summary": {
-    "total": 69,
+    "total": 68,
     "statusCounts": {
-      "likely_false": 56,
+      "likely_false": 55,
       "likely_true_one_source": 13
     },
     "bucketCounts": {
-      "Needs Review": 56,
+      "Needs Review": 55,
       "Likely Valid": 13
     }
   },
@@ -2575,57 +2575,6 @@
       "bucket": "Likely Valid"
     },
     {
-      "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
-      "countryIso3": "ATA",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 9606290,
-      "inatTaxonId": 906,
-      "inatPlaceId": 206462,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 4222.008245644752,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
-    },
-    {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "ATA",
       "status": "likely_false",
@@ -3323,11 +3272,72 @@
       "bucket": "Needs Review"
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+      "sourceFile": "data/review-overrides/countries/ATA/c10547c3-1748-48bf-a451-8066c820f22f.json",
+      "updatedAtUtc": "2026-05-17T08:44:03.529Z",
+      "updatedBy": "github-review",
+      "reason": "Systematic review approval: remove domestic turkey (meleagris gallopavo) for Antarctica (ATA). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+      "baseEntry": {
+        "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+        "countryIso3": "ATA",
+        "status": "likely_false",
+        "expected": true,
+        "gbifPresent": false,
+        "inatPresent": null,
+        "gbifCount": 0,
+        "inatCount": null,
+        "rawGbifPresent": false,
+        "rawInatPresent": null,
+        "rawGbifCount": 0,
+        "rawInatCount": null,
+        "gbifUsageKey": 9606290,
+        "inatTaxonId": 906,
+        "inatPlaceId": 206462,
+        "managedEvidence": {
+          "domesticNamed": true,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 4222.008245644752,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "bucket": "Needs Review"
+      }
+    }
+  ],
   "manualOverrideSummary": {
-    "count": 1,
-    "appliedAtUtc": "2026-05-15T21:46:00.144638+00:00",
+    "count": 2,
+    "appliedAtUtc": "2026-05-17T08:44:28.823774+00:00",
     "items": [
-      "601cf098-9876-4912-84bb-0926834305e9"
+      "601cf098-9876-4912-84bb-0926834305e9",
+      "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
   }
 }

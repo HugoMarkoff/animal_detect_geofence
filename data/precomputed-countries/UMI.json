@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 110,
+    "total": 109,
     "statusCounts": {
       "likely_true_one_source": 10,
-      "likely_false": 61,
+      "likely_false": 60,
       "likely_true_both": 4,
       "unlisted": 20,
       "new_record": 15
     },
     "bucketCounts": {
       "Likely Valid": 14,
-      "Needs Review": 61,
+      "Needs Review": 60,
       "Unlisted": 20,
       "New": 15
     }
@@ -4431,58 +4431,6 @@
       "tags": []
     },
     {
-      "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
-      "countryIso3": "UMI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 9606290,
-      "inatTaxonId": 906,
-      "inatPlaceId": 10316,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 6.598847810788075,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "UMI",
       "status": "likely_false",
@@ -5956,12 +5904,74 @@
       "tags": []
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+      "sourceFile": "data/review-overrides/countries/UMI/c10547c3-1748-48bf-a451-8066c820f22f.json",
+      "updatedAtUtc": "2026-05-17T08:44:03.529Z",
+      "updatedBy": "github-review",
+      "reason": "Systematic review approval: remove domestic turkey (meleagris gallopavo) for United States Minor Outlying Islands (UMI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+      "baseEntry": {
+        "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+        "countryIso3": "UMI",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": false,
+        "inatPresent": false,
+        "gbifCount": 0,
+        "inatCount": 0,
+        "rawGbifPresent": false,
+        "rawInatPresent": false,
+        "rawGbifCount": 0,
+        "rawInatCount": 0,
+        "gbifUsageKey": 9606290,
+        "inatTaxonId": 906,
+        "inatPlaceId": 10316,
+        "managedEvidence": {
+          "domesticNamed": true,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 6.598847810788075,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-17T07:41:11.351639+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-17T08:44:37.891332+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9",
-      "990ae9dd-7a59-4344-afcb-1b7b21368000"
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
   }
 }

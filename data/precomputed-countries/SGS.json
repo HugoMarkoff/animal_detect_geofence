@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 80,
+    "total": 79,
     "statusCounts": {
-      "likely_false": 58,
+      "likely_false": 57,
       "new_record": 2,
       "likely_true_one_source": 7,
       "unlisted": 12,
       "likely_true_both": 1
     },
     "bucketCounts": {
-      "Needs Review": 58,
+      "Needs Review": 57,
       "New": 2,
       "Likely Valid": 8,
       "Unlisted": 12
@@ -3118,58 +3118,6 @@
       "tags": []
     },
     {
-      "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
-      "countryIso3": "SGS",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 9606290,
-      "inatTaxonId": 906,
-      "inatPlaceId": 7985,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 70.49435398031065,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "SGS",
       "status": "likely_false",
@@ -4111,12 +4059,74 @@
       "tags": []
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+      "sourceFile": "data/review-overrides/countries/SGS/c10547c3-1748-48bf-a451-8066c820f22f.json",
+      "updatedAtUtc": "2026-05-17T08:44:03.529Z",
+      "updatedBy": "github-review",
+      "reason": "Systematic review approval: remove domestic turkey (meleagris gallopavo) for South Georgia (SGS). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+      "baseEntry": {
+        "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+        "countryIso3": "SGS",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": false,
+        "inatPresent": false,
+        "gbifCount": 0,
+        "inatCount": 0,
+        "rawGbifPresent": false,
+        "rawInatPresent": false,
+        "rawGbifCount": 0,
+        "rawInatCount": 0,
+        "gbifUsageKey": 9606290,
+        "inatTaxonId": 906,
+        "inatPlaceId": 7985,
+        "managedEvidence": {
+          "domesticNamed": true,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 70.49435398031065,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-17T07:41:09.974390+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-17T08:44:36.552610+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9",
-      "990ae9dd-7a59-4344-afcb-1b7b21368000"
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
   }
 }

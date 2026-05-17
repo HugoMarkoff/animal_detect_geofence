@@ -11,14 +11,14 @@
     "statusCounts": {
       "likely_true_both": 103,
       "unlisted": 66,
-      "likely_false": 41,
+      "likely_false": 40,
       "new_record": 31,
-      "likely_true_one_source": 21
+      "likely_true_one_source": 22
     },
     "bucketCounts": {
-      "Likely Valid": 124,
+      "Likely Valid": 125,
       "Unlisted": 66,
-      "Needs Review": 41,
+      "Needs Review": 40,
       "New": 31
     }
   },
@@ -11238,8 +11238,8 @@
     {
       "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
       "countryIso3": "FIN",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
@@ -11272,10 +11272,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 85 likely outlier points before scoring. Only 5 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue.",
         "significant": false,
         "totalPoints": 90,
         "corePointCount": 5,
@@ -11308,7 +11308,90 @@
           ]
         ]
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/FIN/c10547c3-1748-48bf-a451-8066c820f22f.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T08:44:03.529Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep domestic turkey (meleagris gallopavo) for Finland (FIN). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
+          "countryIso3": "FIN",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 164,
+          "inatCount": 1,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 164,
+          "rawInatCount": 1,
+          "gbifUsageKey": 9606290,
+          "inatTaxonId": 906,
+          "inatPlaceId": 7020,
+          "managedEvidence": {
+            "domesticNamed": true,
+            "materialSampleCount": 0,
+            "atlasCount": 83,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": true,
+            "note": "domestic turkey is a domestic taxon and the sampled records are dominated by atlas/material or captive-style evidence, so it stays in review."
+          },
+          "evidenceQuality": {
+            "rawTotal": 165,
+            "qualifiedTotal": 165,
+            "specimenOrSampleCount": 6,
+            "staleGbifCount": 89,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "needs_review",
+            "label": "Pending review",
+            "short": "",
+            "note": "Dropped 85 likely outlier points before scoring. Only 5 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+            "significant": false,
+            "totalPoints": 90,
+            "corePointCount": 5,
+            "outlierPointCount": 85,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 62.2705656259485,
+            "unique25kmCells": 3,
+            "unique50kmCells": 3,
+            "countryDiameterKm": 656.4558554185799,
+            "spreadRatio": 0.09485872524701992,
+            "coverageAreaKm2": 2535.1963425968534,
+            "coverageRatio": 0.007490497533193049,
+            "footprintPolygonLatLngs": [
+              [
+                61.0801699303063,
+                23.212929277221633
+              ],
+              [
+                61.00340687962608,
+                24.707854679815743
+              ],
+              [
+                61.07616171579186,
+                24.786689965976088
+              ],
+              [
+                61.314834186573975,
+                23.970424307589475
+              ]
+            ]
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -15040,11 +15123,12 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-17T07:41:05.137902+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-17T08:44:31.806593+00:00",
     "items": [
       "601cf098-9876-4912-84bb-0926834305e9",
-      "990ae9dd-7a59-4344-afcb-1b7b21368000"
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
   }
 }
