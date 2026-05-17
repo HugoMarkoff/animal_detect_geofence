@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260517b";
+const ASSET_VERSION = "20260517c";
 const POINTER_DRAG_THRESHOLD_PX = 8;
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
@@ -1049,6 +1049,19 @@ function fromBase64Utf8(value) {
   return new TextDecoder().decode(bytes);
 }
 
+async function readGitHubBlobUtf8(owner, repo, sha, token) {
+  const normalizedSha = cleanText(sha);
+  if (!normalizedSha) {
+    return "";
+  }
+
+  const blob = await fetchGitHubJson(`/repos/${owner}/${repo}/git/blobs/${normalizedSha}`, { token });
+  if (cleanText(blob?.encoding).toLowerCase() === "base64") {
+    return fromBase64Utf8(blob.content || "");
+  }
+  return cleanText(blob?.content);
+}
+
 async function readGitHubContentsJson(owner, repo, path, token, createFallback) {
   const encodedPath = encodeGitHubPath(path);
   const contents = await fetchGitHubJson(`/repos/${owner}/${repo}/contents/${encodedPath}?ref=${encodeURIComponent(DEFAULT_GITHUB_BRANCH)}`, {
@@ -1060,9 +1073,12 @@ async function readGitHubContentsJson(owner, repo, path, token, createFallback) 
     return createFallback();
   }
 
-  const decoded = fromBase64Utf8(contents.content || "");
+  let decoded = fromBase64Utf8(contents.content || "");
+  if (!cleanText(decoded) && cleanText(contents?.encoding).toLowerCase() === "none") {
+    decoded = await readGitHubBlobUtf8(owner, repo, contents?.sha, token);
+  }
   if (!cleanText(decoded)) {
-    return createFallback();
+    throw new Error(`GitHub returned no readable content for ${path}.`);
   }
 
   try {
