@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260517a";
+const ASSET_VERSION = "20260517b";
 const POINTER_DRAG_THRESHOLD_PX = 8;
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
@@ -1534,6 +1534,55 @@ function reviewLabel(itemId) {
   return buildSystematicReviewSummary(itemId)?.label || itemId;
 }
 
+function summarizePromptCountries(iso3List, limit = 8) {
+  if (!Array.isArray(iso3List) || !iso3List.length) {
+    return "none";
+  }
+
+  const labels = iso3List.map((iso3) => countryNameForIso3(iso3) || iso3);
+  const visible = labels.slice(0, limit);
+  const remainder = labels.length - visible.length;
+  if (remainder > 0) {
+    return `${visible.join(", ")}, +${formatCount(remainder)} more`;
+  }
+  return visible.join(", ");
+}
+
+function buildSystematicDecisionPrompt(decision, itemId, plan, note) {
+  const trimmedNote = cleanText(note);
+  const noteLine = trimmedNote ? `Reviewer note: ${trimmedNote}` : "Reviewer note: none";
+  const label = reviewLabel(itemId);
+
+  if (decision === "reject") {
+    return [
+      label,
+      "",
+      `Current bucket layout: Keep ${formatCount(plan.keepCountries.length)}, Remove ${formatCount(plan.removeCountries.length)}, Add ${formatCount(plan.addCountries.length)}.`,
+      noteLine,
+      "",
+      `This will reject the issue by updating ${SYSTEMATIC_REVIEW_PROPOSALS_PATH} and ${SYSTEMATIC_REVIEW_LOG_PATH} in ${DEFAULT_GITHUB_REPO}.`,
+      "Continue?",
+    ].join("\n");
+  }
+
+  const countryOverrideCount = plan.keepCountries.length + plan.removeCountries.length + plan.addCountries.length;
+  const countryOverrideLabel = `${formatCount(countryOverrideCount)} country override ${countryOverrideCount === 1 ? "file" : "files"}`;
+
+  return [
+    label,
+    "",
+    `Keep (${formatCount(plan.keepCountries.length)}): ${summarizePromptCountries(plan.keepCountries)}`,
+    `Remove (${formatCount(plan.removeCountries.length)}): ${summarizePromptCountries(plan.removeCountries)}`,
+    `Add (${formatCount(plan.addCountries.length)}): ${summarizePromptCountries(plan.addCountries)}`,
+    "",
+    noteLine,
+    "",
+    `This will commit the current systematic review decision directly to GitHub for ${DEFAULT_GITHUB_REPO}.`,
+    `Files written: ${countryOverrideLabel}; ${SYSTEMATIC_REVIEW_PROPOSALS_PATH}; ${SYSTEMATIC_REVIEW_LOG_PATH}; ${ADMIN_GEOFENCE_TRACKING_PATH}; ${ADMIN_CHANGE_LOG_PATH}.`,
+    "Continue?",
+  ].join("\n");
+}
+
 function readPersistedAdminToken() {
   try {
     return cleanText(window.localStorage.getItem(ADMIN_PERSISTENT_TOKEN_KEY) || window.sessionStorage.getItem(ADMIN_SESSION_TOKEN_KEY) || "");
@@ -1809,6 +1858,13 @@ async function submitDecision(decision) {
     return;
   }
 
+  const note = cleanText(elements.decisionNote.value);
+  const plan = currentDraftPlan();
+  if (!window.confirm(buildSystematicDecisionPrompt(decision, state.selectedItemId, plan, note))) {
+    setDecisionStatus(decision === "accept" ? "Accept And Apply cancelled." : "Reject cancelled.");
+    return;
+  }
+
   state.admin.isApplying = true;
   state.admin.lastCommitUrl = "";
   clearAdminMessage();
@@ -1820,8 +1876,6 @@ async function submitDecision(decision) {
 
   try {
     const reviewer = resolveReviewer();
-    const note = cleanText(elements.decisionNote.value);
-    const plan = currentDraftPlan();
     const { owner, repo } = parseGitHubRepo(DEFAULT_GITHUB_REPO);
 
     const fetches = [
