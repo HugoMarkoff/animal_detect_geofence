@@ -2,9 +2,10 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260517e";
+const ASSET_VERSION = "20260517f";
 const POINTER_DRAG_THRESHOLD_PX = 8;
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
+const LIVE_GEOFENCE_PATH = "../data/geofence-simple.json";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
 const SYSTEMATIC_REVIEW_PROPOSALS_PATH = "data/systematic-review/proposals.json";
 const SYSTEMATIC_REVIEW_LOG_PATH = "data/systematic-review/log.json";
@@ -2026,12 +2027,13 @@ async function addCountryToBucket(bucket, rawValue) {
 
 async function init() {
   try {
-    const [rankingsPayload, proposalsPayload, logPayload, flaggedPayload, catalogPayload, countriesPayload] = await Promise.all([
+    const [rankingsPayload, proposalsPayload, logPayload, flaggedPayload, catalogPayload, liveGeofencePayload, countriesPayload] = await Promise.all([
       fetchJson(withVersion(`${SYSTEMATIC_DATA_ROOT}/rankings.json`)),
       fetchJson(withVersion(`${SYSTEMATIC_DATA_ROOT}/proposals.json`)),
       fetchJson(withVersion(`${SYSTEMATIC_DATA_ROOT}/log.json`)),
       fetchJson(withVersion(`${SYSTEMATIC_DATA_ROOT}/flagged-review-countries.json`)),
       fetchJson(withVersion(`${SYSTEMATIC_DATA_ROOT}/catalog.json`)),
+      fetchJson(withVersion(LIVE_GEOFENCE_PATH)),
       fetchJson(withVersion(COUNTRY_INDEX_PATH)),
     ]);
 
@@ -2039,11 +2041,26 @@ async function init() {
     state.proposalsPayload = proposalsPayload && typeof proposalsPayload === "object" ? proposalsPayload : createEmptyProposalsPayload();
     state.logPayload = logPayload && typeof logPayload === "object" ? logPayload : createEmptySystematicLogPayload();
     state.flaggedByItem = flaggedPayload?.items && typeof flaggedPayload.items === "object" ? flaggedPayload.items : {};
-    state.catalogById = new Map(
+    const catalogById = new Map(
       (Array.isArray(catalogPayload?.items) ? catalogPayload.items : [])
         .map((item) => [cleanText(item?.itemId), item])
         .filter(([itemId]) => itemId),
     );
+    for (const item of Array.isArray(liveGeofencePayload?.items) ? liveGeofencePayload.items : []) {
+      const itemId = cleanText(item?.itemId || item?.id);
+      if (!itemId) {
+        continue;
+      }
+
+      const existing = catalogById.get(itemId) || {};
+      catalogById.set(itemId, {
+        ...existing,
+        ...item,
+        itemId,
+        expectedCountries: normalizeCountryCodes(item?.expectedCountries),
+      });
+    }
+    state.catalogById = catalogById;
 
     state.countries = normalizeCountries(
       (Array.isArray(countriesPayload?.countries) ? countriesPayload.countries : [])
