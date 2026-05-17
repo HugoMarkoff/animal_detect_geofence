@@ -312,6 +312,39 @@ def load_geofence_tracking_items() -> dict[str, dict[str, object]]:
     return items
 
 
+def load_regional_country_override_items() -> dict[str, list[str]]:
+    regional_by_item: dict[str, set[str]] = defaultdict(set)
+    if not OVERRIDES_DIR.exists():
+        return {}
+
+    for path in sorted(OVERRIDES_DIR.glob("*/*.json")):
+        override = load_override_file(path)
+        if override["action"] != "upsert":
+            continue
+
+        patch = override.get("patch")
+        if not isinstance(patch, dict):
+            continue
+
+        observation_profile = patch.get("observationProfile")
+        if not isinstance(observation_profile, dict):
+            continue
+
+        if clean_text(observation_profile.get("code")).lower() != "regional":
+            continue
+
+        item_id = clean_text(override.get("itemId"))
+        country_iso3 = clean_text(override.get("countryIso3")).upper()
+        if item_id and country_iso3:
+            regional_by_item[item_id].add(country_iso3)
+
+    return {
+        item_id: sorted(countries)
+        for item_id, countries in regional_by_item.items()
+        if countries
+    }
+
+
 def collect_override_files() -> dict[str, list[Path]]:
     by_country: dict[str, list[Path]] = defaultdict(list)
     if not OVERRIDES_DIR.exists():
@@ -670,6 +703,7 @@ def refresh_global_artifacts() -> list[str]:
 
     items = animals_payload.get("items") or []
     geofence_tracking_items = load_geofence_tracking_items()
+    regional_country_overrides = load_regional_country_override_items()
     next_items: list[Any] = []
     simple_items: list[dict[str, Any]] = []
 
@@ -680,17 +714,16 @@ def refresh_global_artifacts() -> list[str]:
 
         item = deepcopy(raw_item)
         item_id = clean_text(item.get("id"))
+        current_regional = set(normalize_country_codes(item.get("allowRegionalCountries")))
+        current_regional.update(regional_country_overrides.get(item_id, []))
         next_expected, next_regional, next_subdivisions = apply_item_country_overrides(
             normalize_country_codes(item.get("expectedCountries")),
-            normalize_country_codes(item.get("allowRegionalCountries")),
+            sorted(current_regional),
             normalize_expected_subdivisions(item.get("expectedSubdivisions")),
             geofence_tracking_items.get(item_id),
         )
         item["expectedCountries"] = next_expected
-        if next_regional:
-            item["allowRegionalCountries"] = next_regional
-        else:
-            item.pop("allowRegionalCountries", None)
+        item["allowRegionalCountries"] = next_regional
         if next_subdivisions:
             item["expectedSubdivisions"] = next_subdivisions
         else:
