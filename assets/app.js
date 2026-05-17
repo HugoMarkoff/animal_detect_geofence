@@ -85,6 +85,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
+const GITHUB_BLOB_WRITE_CONCURRENCY = 8;
 const DATA_ROOT = "./data";
 const DATA_VERSION = "20260511e";
 const SYSTEMATIC_REVIEW_URL = "./systematic-review/";
@@ -1645,6 +1646,38 @@ async function readGitHubContentsJson(owner, repo, path, token, createFallback) 
   }
 }
 
+async function createGitHubTreeEntries(owner, repo, fileEntries, token) {
+  const tree = new Array(fileEntries.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < fileEntries.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      const fileEntry = fileEntries[currentIndex];
+      const blob = await fetchGitHubJson(`/repos/${owner}/${repo}/git/blobs`, {
+        method: "POST",
+        token,
+        body: {
+          content: fileEntry.content,
+          encoding: "utf-8",
+        },
+      });
+
+      tree[currentIndex] = {
+        path: fileEntry.path,
+        mode: "100644",
+        type: "blob",
+        sha: cleanText(blob?.sha),
+      };
+    }
+  }
+
+  const workerCount = Math.min(GITHUB_BLOB_WRITE_CONCURRENCY, Math.max(fileEntries.length, 1));
+  await Promise.all(Array.from({ length: workerCount }, () => worker()));
+  return tree;
+}
+
 async function commitGitHubFiles(owner, repo, branch, message, fileEntries, token) {
   const ref = await fetchGitHubJson(`/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`, { token });
   const parentSha = cleanText(ref?.object?.sha);
@@ -1658,24 +1691,7 @@ async function commitGitHubFiles(owner, repo, branch, message, fileEntries, toke
     throw new Error("Could not resolve the current Git tree for the admin commit.");
   }
 
-  const tree = [];
-  for (const fileEntry of fileEntries) {
-    const blob = await fetchGitHubJson(`/repos/${owner}/${repo}/git/blobs`, {
-      method: "POST",
-      token,
-      body: {
-        content: fileEntry.content,
-        encoding: "utf-8",
-      },
-    });
-
-    tree.push({
-      path: fileEntry.path,
-      mode: "100644",
-      type: "blob",
-      sha: cleanText(blob?.sha),
-    });
-  }
+  const tree = await createGitHubTreeEntries(owner, repo, fileEntries, token);
 
   const nextTree = await fetchGitHubJson(`/repos/${owner}/${repo}/git/trees`, {
     method: "POST",

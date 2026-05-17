@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260517c";
+const ASSET_VERSION = "20260517d";
 const POINTER_DRAG_THRESHOLD_PX = 8;
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
@@ -16,6 +16,7 @@ const ADMIN_SESSION_TOKEN_KEY = "country-pack-review-admin-session-token-2026050
 const ADMIN_PERSISTENT_TOKEN_KEY = "country-pack-review-admin-persistent-token-20260507a";
 const GEOFENCE_TRACKING_SCHEMA_VERSION = 1;
 const CHANGE_LOG_SCHEMA_VERSION = 1;
+const GITHUB_BLOB_WRITE_CONCURRENCY = 8;
 const numberFormat = new Intl.NumberFormat();
 
 const state = {
@@ -1088,6 +1089,38 @@ async function readGitHubContentsJson(owner, repo, path, token, createFallback) 
   }
 }
 
+async function createGitHubTreeEntries(owner, repo, fileEntries, token) {
+  const tree = new Array(fileEntries.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < fileEntries.length) {
+      const currentIndex = nextIndex;
+      nextIndex += 1;
+      const fileEntry = fileEntries[currentIndex];
+      const blob = await fetchGitHubJson(`/repos/${owner}/${repo}/git/blobs`, {
+        method: "POST",
+        token,
+        body: {
+          content: fileEntry.content,
+          encoding: "utf-8",
+        },
+      });
+
+      tree[currentIndex] = {
+        path: fileEntry.path,
+        mode: "100644",
+        type: "blob",
+        sha: cleanText(blob?.sha),
+      };
+    }
+  }
+
+  const workerCount = Math.min(GITHUB_BLOB_WRITE_CONCURRENCY, Math.max(fileEntries.length, 1));
+  await Promise.all(Array.from({ length: workerCount }, () => worker()));
+  return tree;
+}
+
 async function commitGitHubFiles(owner, repo, branch, message, fileEntries, token) {
   const ref = await fetchGitHubJson(`/repos/${owner}/${repo}/git/ref/heads/${encodeURIComponent(branch)}`, { token });
   const parentSha = cleanText(ref?.object?.sha);
@@ -1101,24 +1134,7 @@ async function commitGitHubFiles(owner, repo, branch, message, fileEntries, toke
     throw new Error("Could not resolve the current Git tree for the commit.");
   }
 
-  const tree = [];
-  for (const fileEntry of fileEntries) {
-    const blob = await fetchGitHubJson(`/repos/${owner}/${repo}/git/blobs`, {
-      method: "POST",
-      token,
-      body: {
-        content: fileEntry.content,
-        encoding: "utf-8",
-      },
-    });
-
-    tree.push({
-      path: fileEntry.path,
-      mode: "100644",
-      type: "blob",
-      sha: cleanText(blob?.sha),
-    });
-  }
+  const tree = await createGitHubTreeEntries(owner, repo, fileEntries, token);
 
   const nextTree = await fetchGitHubJson(`/repos/${owner}/${repo}/git/trees`, {
     method: "POST",
@@ -1946,6 +1962,8 @@ async function submitDecision(decision) {
       path: SYSTEMATIC_REVIEW_LOG_PATH,
       content: serializeJsonFile(logPayload),
     });
+
+    setDecisionStatus(`Committing ${formatCount(fileEntries.length)} files to GitHub...`);
 
     const result = await commitGitHubFiles(
       owner,
