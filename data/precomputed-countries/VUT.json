@@ -9,16 +9,16 @@
   "summary": {
     "total": 107,
     "statusCounts": {
-      "likely_false": 61,
+      "likely_false": 60,
       "new_record": 6,
-      "likely_true_one_source": 18,
+      "likely_true_one_source": 19,
       "unlisted": 10,
       "likely_true_both": 12
     },
     "bucketCounts": {
-      "Needs Review": 61,
+      "Needs Review": 60,
       "New": 6,
-      "Likely Valid": 30,
+      "Likely Valid": 31,
       "Unlisted": 10
     }
   },
@@ -3312,8 +3312,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "VUT",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -3346,10 +3346,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -3359,7 +3359,67 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/VUT/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T07:39:49.845Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep human (homo sapiens) for Vanuatu (VUT). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
+          "countryIso3": "VUT",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2436436,
+          "inatTaxonId": 43584,
+          "inatPlaceId": 7082,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 124.57735272021516,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
@@ -5873,10 +5933,11 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 1,
-    "appliedAtUtc": "2026-05-15T21:46:04.666415+00:00",
+    "count": 2,
+    "appliedAtUtc": "2026-05-17T07:41:14.406723+00:00",
     "items": [
-      "601cf098-9876-4912-84bb-0926834305e9"
+      "601cf098-9876-4912-84bb-0926834305e9",
+      "990ae9dd-7a59-4344-afcb-1b7b21368000"
     ]
   }
 }

@@ -10,16 +10,16 @@
     "total": 277,
     "statusCounts": {
       "unlisted": 49,
-      "likely_false": 89,
+      "likely_false": 88,
       "new_record": 38,
-      "likely_true_one_source": 38,
+      "likely_true_one_source": 39,
       "likely_true_both": 63
     },
     "bucketCounts": {
       "Unlisted": 49,
-      "Needs Review": 89,
+      "Needs Review": 88,
       "New": 38,
-      "Likely Valid": 101
+      "Likely Valid": 102
     }
   },
   "entries": [
@@ -9513,8 +9513,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "SGP",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -9547,10 +9547,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -9560,7 +9560,67 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/SGP/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T07:39:49.845Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep human (homo sapiens) for Singapore (SGP). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
+          "countryIso3": "SGP",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2436436,
+          "inatTaxonId": 43584,
+          "inatPlaceId": 6734,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 30.066594033278285,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "9a995cba-e6a6-4297-b098-233d4527d49f",
@@ -15308,10 +15368,11 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 1,
-    "appliedAtUtc": "2026-05-15T21:46:03.073347+00:00",
+    "count": 2,
+    "appliedAtUtc": "2026-05-17T07:41:09.950938+00:00",
     "items": [
-      "601cf098-9876-4912-84bb-0926834305e9"
+      "601cf098-9876-4912-84bb-0926834305e9",
+      "990ae9dd-7a59-4344-afcb-1b7b21368000"
     ]
   }
 }

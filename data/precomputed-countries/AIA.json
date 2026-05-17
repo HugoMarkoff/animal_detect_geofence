@@ -9,13 +9,13 @@
   "summary": {
     "total": 104,
     "statusCounts": {
-      "likely_true_one_source": 32,
-      "likely_false": 71,
+      "likely_true_one_source": 33,
+      "likely_false": 70,
       "unlisted": 1
     },
     "bucketCounts": {
-      "Likely Valid": 32,
-      "Needs Review": 71,
+      "Likely Valid": 33,
+      "Needs Review": 70,
       "Unlisted": 1
     }
   },
@@ -3706,7 +3706,7 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "AIA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -3739,10 +3739,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -3752,7 +3752,66 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid",
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/AIA/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T07:39:49.845Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep human (homo sapiens) for Anguilla (AIA). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
+          "countryIso3": "AIA",
+          "status": "likely_false",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2436436,
+          "inatTaxonId": 43584,
+          "inatPlaceId": 10281,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 10.764051215546116,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "bucket": "Needs Review"
+        }
+      }
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
@@ -5695,10 +5754,11 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 1,
-    "appliedAtUtc": "2026-05-15T21:45:59.854500+00:00",
+    "count": 2,
+    "appliedAtUtc": "2026-05-17T07:41:01.348989+00:00",
     "items": [
-      "601cf098-9876-4912-84bb-0926834305e9"
+      "601cf098-9876-4912-84bb-0926834305e9",
+      "990ae9dd-7a59-4344-afcb-1b7b21368000"
     ]
   }
 }
