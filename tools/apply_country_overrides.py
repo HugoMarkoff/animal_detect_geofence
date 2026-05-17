@@ -37,6 +37,12 @@ STATUS_TO_BUCKET = {
 }
 ALLOWED_ACTIONS = {"upsert", "remove"}
 DISALLOWED_PATCH_KEYS = {"itemId", "countryIso3", "manualOverride"}
+USA_PARENT_ISO3 = "USA"
+USA_STATE_CODES = {
+    "AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS",
+    "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV",
+    "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY",
+}
 
 
 def clean_text(value: object) -> str:
@@ -76,21 +82,84 @@ def normalize_country_codes(values: object) -> list[str]:
     normalized = {
         str(iso3 or "").strip().upper()
         for iso3 in values
-        if str(iso3 or "").strip()
+        if len(str(iso3 or "").strip()) == 3 and str(iso3 or "").strip().isalpha()
     }
     return sorted(normalized)
 
 
-def normalize_override_country_map(raw_mapping: object) -> set[str]:
+def normalize_usa_state_codes(values: object) -> list[str]:
+    if not isinstance(values, list):
+        return []
+
+    normalized = {
+        str(state_code or "").strip().upper()
+        for state_code in values
+        if str(state_code or "").strip().upper() in USA_STATE_CODES
+    }
+    return sorted(normalized)
+
+
+def usa_state_code_from_scope(scope: object) -> str:
+    normalized_scope = str(scope or "").strip().upper()
+    prefix = f"{USA_PARENT_ISO3}-"
+    if not normalized_scope.startswith(prefix):
+        return ""
+
+    state_code = normalized_scope[len(prefix):]
+    return state_code if state_code in USA_STATE_CODES else ""
+
+
+def split_override_scope_map(raw_mapping: object) -> tuple[set[str], set[str]]:
     if not isinstance(raw_mapping, dict):
-        return set()
+        return set(), set()
 
     countries: set[str] = set()
-    for iso3, enabled in raw_mapping.items():
-        normalized_iso3 = str(iso3 or "").strip().upper()
-        if normalized_iso3 and bool(enabled):
-            countries.add(normalized_iso3)
-    return countries
+    usa_states: set[str] = set()
+    for scope, enabled in raw_mapping.items():
+        if not bool(enabled):
+            continue
+
+        normalized_scope = str(scope or "").strip().upper()
+        if not normalized_scope:
+            continue
+
+        state_code = usa_state_code_from_scope(normalized_scope)
+        if state_code:
+            usa_states.add(state_code)
+            continue
+
+        if len(normalized_scope) == 3 and normalized_scope.isalpha():
+            countries.add(normalized_scope)
+    return countries, usa_states
+
+
+def normalize_expected_subdivisions(raw_mapping: object) -> dict[str, list[str]]:
+    if not isinstance(raw_mapping, dict):
+        return {}
+
+    raw_usa_states = raw_mapping.get(USA_PARENT_ISO3)
+    if not isinstance(raw_usa_states, list):
+        return {}
+
+    normalized_states = normalize_usa_state_codes(raw_usa_states)
+    if raw_usa_states and not normalized_states:
+        return {}
+
+    return {USA_PARENT_ISO3: normalized_states}
+
+
+def serialize_expected_subdivisions(expected_countries: set[str], usa_states_known: bool, usa_states: set[str]) -> dict[str, list[str]]:
+    if USA_PARENT_ISO3 not in expected_countries or not usa_states_known:
+        return {}
+
+    normalized_states = {state_code for state_code in usa_states if state_code in USA_STATE_CODES}
+    if not normalized_states:
+        return {}
+
+    if normalized_states == USA_STATE_CODES:
+        return {USA_PARENT_ISO3: []}
+
+    return {USA_PARENT_ISO3: sorted(normalized_states)}
 
 
 def item_expected_in_country(item: dict[str, Any] | None, country_iso3: str) -> bool:
@@ -102,21 +171,64 @@ def item_expected_in_country(item: dict[str, Any] | None, country_iso3: str) -> 
 
 def apply_item_country_overrides(
     expected_countries: list[str],
+    allow_regional_countries: list[str],
+    expected_subdivisions: dict[str, list[str]],
     item_override: dict[str, object] | None,
-) -> tuple[list[str], list[str]]:
-    expected = {str(iso3 or "").strip().upper() for iso3 in expected_countries if str(iso3 or "").strip()}
-    if not isinstance(item_override, dict):
-        return sorted(expected), []
+) -> tuple[list[str], list[str], dict[str, list[str]]]:
+    expected = set(normalize_country_codes(expected_countries))
+    regional = set(normalize_country_codes(allow_regional_countries)) & expected
+    normalized_subdivisions = normalize_expected_subdivisions(expected_subdivisions)
 
-    allow = normalize_override_country_map(item_override.get("allow"))
-    block = normalize_override_country_map(item_override.get("block"))
-    allow_regional = normalize_override_country_map(item_override.get("allow_regional"))
+    usa_states_known = False
+    usa_states: set[str] = set()
+    raw_usa_states = normalized_subdivisions.get(USA_PARENT_ISO3)
+    if isinstance(raw_usa_states, list):
+        usa_states_known = True
+        if raw_usa_states:
+            usa_states.update(raw_usa_states)
+        else:
+            usa_states.update(USA_STATE_CODES)
+
+    if not isinstance(item_override, dict):
+        return sorted(expected), sorted(regional & expected), serialize_expected_subdivisions(expected, usa_states_known, usa_states)
+
+    allow, allow_states = split_override_scope_map(item_override.get("allow"))
+    block, block_states = split_override_scope_map(item_override.get("block"))
+    allow_regional, allow_regional_states = split_override_scope_map(item_override.get("allow_regional"))
 
     expected.update(allow)
     expected.update(allow_regional)
     expected.difference_update(block)
-    regional = sorted((allow_regional - block) & expected)
-    return sorted(expected), regional
+    regional.update(allow_regional)
+    regional.difference_update(block)
+
+    if USA_PARENT_ISO3 in allow or USA_PARENT_ISO3 in allow_regional:
+        expected.add(USA_PARENT_ISO3)
+        if not usa_states_known:
+            usa_states_known = True
+            usa_states.update(USA_STATE_CODES)
+
+    if USA_PARENT_ISO3 in block:
+        expected.discard(USA_PARENT_ISO3)
+        regional.discard(USA_PARENT_ISO3)
+        usa_states_known = False
+        usa_states.clear()
+
+    if allow_states or allow_regional_states or block_states:
+        expected.add(USA_PARENT_ISO3)
+        if not usa_states_known:
+            usa_states_known = True
+        usa_states.update(allow_states)
+        usa_states.update(allow_regional_states)
+        usa_states.difference_update(block_states)
+
+    if usa_states_known and not usa_states:
+        expected.discard(USA_PARENT_ISO3)
+        regional.discard(USA_PARENT_ISO3)
+        usa_states_known = False
+
+    next_subdivisions = serialize_expected_subdivisions(expected, usa_states_known, usa_states)
+    return sorted(expected), sorted(regional & expected), next_subdivisions
 
 
 def empty_managed_evidence() -> dict[str, Any]:
@@ -532,7 +644,7 @@ def update_index(changed_countries: set[str]) -> bool:
 
 
 def build_simple_geofence_item(item: dict[str, Any]) -> dict[str, Any]:
-    return {
+    next_item = {
         "itemId": clean_text(item.get("id")),
         "commonName": clean_text(item.get("commonName")),
         "binomial": clean_text(item.get("binomial")),
@@ -542,6 +654,12 @@ def build_simple_geofence_item(item: dict[str, Any]) -> dict[str, Any]:
         "expectedCountries": normalize_country_codes(item.get("expectedCountries")),
         "allowRegionalCountries": normalize_country_codes(item.get("allowRegionalCountries")),
     }
+
+    expected_subdivisions = normalize_expected_subdivisions(item.get("expectedSubdivisions"))
+    if expected_subdivisions:
+        next_item["expectedSubdivisions"] = expected_subdivisions
+
+    return next_item
 
 
 def refresh_global_artifacts() -> list[str]:
@@ -562,8 +680,10 @@ def refresh_global_artifacts() -> list[str]:
 
         item = deepcopy(raw_item)
         item_id = clean_text(item.get("id"))
-        next_expected, next_regional = apply_item_country_overrides(
+        next_expected, next_regional, next_subdivisions = apply_item_country_overrides(
             normalize_country_codes(item.get("expectedCountries")),
+            normalize_country_codes(item.get("allowRegionalCountries")),
+            normalize_expected_subdivisions(item.get("expectedSubdivisions")),
             geofence_tracking_items.get(item_id),
         )
         item["expectedCountries"] = next_expected
@@ -571,6 +691,10 @@ def refresh_global_artifacts() -> list[str]:
             item["allowRegionalCountries"] = next_regional
         else:
             item.pop("allowRegionalCountries", None)
+        if next_subdivisions:
+            item["expectedSubdivisions"] = next_subdivisions
+        else:
+            item.pop("expectedSubdivisions", None)
         next_items.append(item)
 
         if item_id:

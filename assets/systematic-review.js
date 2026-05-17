@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260517d";
+const ASSET_VERSION = "20260517e";
 const POINTER_DRAG_THRESHOLD_PX = 8;
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
@@ -967,6 +967,23 @@ function syncSelection(preferredItemId = state.selectedItemId) {
   }
 
   applySelection(nextItemId);
+}
+
+function showResolvedSelection(itemId) {
+  state.issues = buildSystematicReviewQueue(false);
+  const detail = buildSystematicReviewDetail(itemId);
+  if (!detail) {
+    syncSelection();
+    return;
+  }
+
+  state.selectedItemId = itemId;
+  state.activeAddBucket = null;
+  state.hasUnsavedDraft = false;
+  hydrateDraftFromDetail(detail);
+  window.history.replaceState({}, "", `#${itemId}`);
+  renderQueue();
+  renderDetail(detail);
 }
 
 function maybeDiscardUnsavedDraft(nextItemId) {
@@ -1979,11 +1996,11 @@ async function submitDecision(decision) {
     state.admin.lastCommitUrl = cleanText(result.htmlUrl);
 
     const previousItemId = state.selectedItemId;
-    syncSelection(previousItemId);
+    showResolvedSelection(previousItemId);
     if (decision === "accept") {
-      finalStatusMessage = `Accepted and committed. ${formatCount(applySummary?.changedFiles?.length || 0)} published files queued for rebuild.`;
+      finalStatusMessage = `Accepted and committed. ${formatCount(applySummary?.changedFiles?.length || 0)} published files queued for rebuild. Select the next issue when ready.`;
     } else {
-      finalStatusMessage = "Rejected and logged.";
+      finalStatusMessage = "Rejected and logged. Select the next issue when ready.";
     }
   } catch (error) {
     finalStatusMessage = error.message || "Decision failed.";
