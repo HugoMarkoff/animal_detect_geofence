@@ -2,7 +2,7 @@ const DEFAULT_GITHUB_REPO = "HugoMarkoff/animal_detect_geofence";
 const DEFAULT_GITHUB_BRANCH = "main";
 const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
-const ASSET_VERSION = "20260516f";
+const ASSET_VERSION = "20260517a";
 const POINTER_DRAG_THRESHOLD_PX = 8;
 const SYSTEMATIC_DATA_ROOT = "../data/systematic-review";
 const COUNTRY_INDEX_PATH = "../data/precomputed-countries/index.json";
@@ -438,10 +438,10 @@ function buildSystematicReviewDetail(itemId) {
   return {
     summary,
     status: cleanText(proposal?.status) || "unseeded",
-    editable: Boolean(proposal) && !["accepted", "rejected"].includes(cleanText(proposal?.status)),
-    proposalSummary: cleanText(proposal?.proposalSummary),
-    researchSummary: cleanText(proposal?.researchSummary),
-    proposalReason: cleanText(proposal?.proposal?.reason),
+    editable: !["accepted", "rejected"].includes(cleanText(proposal?.status)),
+    proposalSummary: cleanText(proposal?.proposalSummary) || defaultSystematicProposalSummary(itemId),
+    researchSummary: cleanText(proposal?.researchSummary) || defaultSystematicResearchSummary(itemId),
+    proposalReason: cleanText(proposal?.proposal?.reason) || defaultSystematicProposalReason(),
     evidenceSummary: Array.isArray(evidence?.summary) ? evidence.summary.map((line) => cleanText(line)).filter(Boolean) : [],
     autoSeedNote,
     reviewScopeNote,
@@ -689,7 +689,7 @@ function canEditLocalDraft() {
 }
 
 function localDraftStatusMessage(actionMessage) {
-  return `${actionMessage} Save Draft or Accept to commit.`;
+  return `${actionMessage} Accept And Apply to commit.`;
 }
 
 function bucketContainerFor(bucket) {
@@ -855,17 +855,12 @@ function renderDetail(detail) {
   renderCountryPills(elements.addCountries, addCountries, "No explicit additions.", editable);
   renderBucketAddRows(editable);
 
-  elements.saveDraft.disabled = !detail.editable || !accessGranted || !state.hasUnsavedDraft || state.admin.isApplying;
+  elements.saveDraft.disabled = true;
   elements.acceptIssue.disabled = !detail.editable || !accessGranted || state.admin.isApplying;
   elements.rejectIssue.disabled = !detail.editable || !accessGranted || state.admin.isApplying;
   document.querySelectorAll("[data-bucket-add]").forEach((button) => {
     button.disabled = !editable;
   });
-
-  if (!summary.proposalReady) {
-    setDecisionStatus("This ranked issue has no curated proposal yet.");
-    return;
-  }
 
   if (!detail.editable) {
     setDecisionStatus(`This issue is already marked as ${statusLabel(detail.status).toLowerCase()}.`);
@@ -878,7 +873,12 @@ function renderDetail(detail) {
   }
 
   if (state.hasUnsavedDraft) {
-    setDecisionStatus("Draft changed locally. Save Draft or Accept to commit the current bucket layout.");
+    setDecisionStatus("Bucket layout changed locally. Accept And Apply commits the current Keep / Remove / Add plan.");
+    return;
+  }
+
+  if (!summary.proposalReady) {
+    setDecisionStatus("This issue has no seeded proposal yet. Accept And Apply will commit the current Keep / Remove / Add bucket layout directly.");
     return;
   }
 
@@ -955,7 +955,7 @@ function syncSelection(preferredItemId = state.selectedItemId) {
   state.issues = buildSystematicReviewQueue(false);
   const hashItemId = cleanText(window.location.hash.slice(1));
   const seeded = state.issues.find((issue) => issue.proposalReady);
-  const nextItemId = [preferredItemId, hashItemId, seeded?.itemId, state.issues[0]?.itemId].find(
+  const nextItemId = [preferredItemId, hashItemId, state.issues[0]?.itemId, seeded?.itemId].find(
     (candidate) => candidate && state.issues.some((issue) => issue.itemId === candidate),
   ) || "";
 
@@ -1177,7 +1177,7 @@ function countryNameForIso3(iso3) {
 function buildSystematicCountryReason(action, itemId, countryIso3, note) {
   const summary = buildSystematicReviewSummary(itemId);
   const proposal = proposalIndex().get(itemId) || {};
-  const proposalReason = cleanText(proposal?.proposal?.reason);
+  const proposalReason = cleanText(proposal?.proposal?.reason) || "Applied from the current systematic review Keep / Remove / Add bucket layout.";
   const parts = [
     `Systematic review approval: ${action} ${(summary || {}).label || itemId} for ${countryNameForIso3(countryIso3)} (${countryIso3}).`,
     proposalReason,
@@ -1188,7 +1188,7 @@ function buildSystematicCountryReason(action, itemId, countryIso3, note) {
   return parts.filter(Boolean).join(" ");
 }
 
-function buildAdditionPatch() {
+function buildLikelyValidPatch() {
   return {
     status: "likely_true_one_source",
     expected: true,
@@ -1201,71 +1201,102 @@ function buildAdditionPatch() {
   };
 }
 
-function updateProposalPlan(proposalsPayload, itemId, reviewer, keepCountries, removeCountries, addCountries) {
+function defaultSystematicProposalSummary(itemId) {
+  return `Apply the current systematic Keep / Remove / Add bucket plan for ${reviewLabel(itemId)}.`;
+}
+
+function defaultSystematicResearchSummary(itemId) {
+  const summary = buildSystematicReviewSummary(itemId);
+  return `No seeded systematic proposal exists yet. Accept And Apply will commit the current bucket layout for ${summary?.countryCount || 0} flagged countries on ${reviewLabel(itemId)}.`;
+}
+
+function defaultSystematicProposalReason() {
+  return "Generated from the current systematic review Keep / Remove / Add bucket layout.";
+}
+
+function ensureProposalIssueRecord(proposalsPayload, itemId) {
   const issues = Array.isArray(proposalsPayload?.issues) ? proposalsPayload.issues : [];
-  const updatedAtUtc = nowUtcIso();
+  proposalsPayload.issues = issues;
 
   for (const issue of issues) {
     if (cleanText(issue?.itemId) !== itemId) {
       continue;
     }
 
-    const status = cleanText(issue?.status) || "pending";
-    if (["accepted", "rejected"].includes(status)) {
-      throw new Error(`This issue is already marked as ${status} and can no longer be edited.`);
-    }
-
-    if (!issue.proposal || typeof issue.proposal !== "object") {
-      throw new Error("This issue does not have a seeded systematic-review proposal yet.");
-    }
-
-    const normalizedPlan = normalizeSystematicCountryPlan(itemId, keepCountries, removeCountries, addCountries);
-    issue.proposal.keepCountries = normalizedPlan.keepCountries;
-    issue.proposal.removeCountries = normalizedPlan.removeCountries;
-    issue.proposal.addCountries = normalizedPlan.addCountries;
-    issue.lastEditedBy = reviewer;
-    issue.lastEditedAtUtc = updatedAtUtc;
-    proposalsPayload.updatedAtUtc = updatedAtUtc;
-    return {
-      issue,
-      normalizedPlan,
-      updatedAtUtc,
-    };
+    issue.proposal ||= {};
+    issue.evidence ||= {};
+    issue.proposal.reason = cleanText(issue.proposal.reason) || defaultSystematicProposalReason();
+    issue.proposalSummary = cleanText(issue.proposalSummary) || defaultSystematicProposalSummary(itemId);
+    issue.researchSummary = cleanText(issue.researchSummary) || defaultSystematicResearchSummary(itemId);
+    return issue;
   }
 
-  throw new Error("This issue does not have a seeded systematic-review proposal yet.");
+  const issue = {
+    itemId,
+    status: "pending",
+    kind: "country_allowlist",
+    proposalSummary: defaultSystematicProposalSummary(itemId),
+    researchSummary: defaultSystematicResearchSummary(itemId),
+    evidence: {
+      summary: [],
+      ebird: {},
+      inat: {},
+      gbif: {},
+    },
+    proposal: {
+      reason: defaultSystematicProposalReason(),
+      keepCountries: [],
+      removeCountries: [],
+      addCountries: [],
+    },
+  };
+  issues.push(issue);
+  return issue;
+}
+
+function updateProposalPlan(proposalsPayload, itemId, reviewer, keepCountries, removeCountries, addCountries) {
+  const updatedAtUtc = nowUtcIso();
+  const issue = ensureProposalIssueRecord(proposalsPayload, itemId);
+  const status = cleanText(issue?.status) || "pending";
+  if (["accepted", "rejected"].includes(status)) {
+    throw new Error(`This issue is already marked as ${status} and can no longer be edited.`);
+  }
+
+  const normalizedPlan = normalizeSystematicCountryPlan(itemId, keepCountries, removeCountries, addCountries);
+  issue.proposal.keepCountries = normalizedPlan.keepCountries;
+  issue.proposal.removeCountries = normalizedPlan.removeCountries;
+  issue.proposal.addCountries = normalizedPlan.addCountries;
+  issue.lastEditedBy = reviewer;
+  issue.lastEditedAtUtc = updatedAtUtc;
+  proposalsPayload.updatedAtUtc = updatedAtUtc;
+  return {
+    issue,
+    normalizedPlan,
+    updatedAtUtc,
+  };
 }
 
 function markProposalDecision(proposalsPayload, itemId, decision, reviewer, note, applySummary) {
-  const issues = Array.isArray(proposalsPayload?.issues) ? proposalsPayload.issues : [];
   const targetStatus = decision === "accept" ? "accepted" : "rejected";
   const updatedAtUtc = nowUtcIso();
-
-  for (const issue of issues) {
-    if (cleanText(issue?.itemId) !== itemId) {
-      continue;
-    }
-
-    const currentStatus = cleanText(issue?.status) || "pending";
-    if (currentStatus === targetStatus) {
-      throw new Error(`This issue is already marked as ${targetStatus}.`);
-    }
-
-    issue.status = targetStatus;
-    issue.decidedBy = reviewer;
-    issue.decidedAtUtc = updatedAtUtc;
-    issue.decisionNote = note;
-    if (applySummary?.updatedAtUtc) {
-      issue.lastAppliedAtUtc = applySummary.updatedAtUtc;
-    }
-    proposalsPayload.updatedAtUtc = updatedAtUtc;
-    return {
-      targetStatus,
-      updatedAtUtc,
-    };
+  const issue = ensureProposalIssueRecord(proposalsPayload, itemId);
+  const currentStatus = cleanText(issue?.status) || "pending";
+  if (currentStatus === targetStatus) {
+    throw new Error(`This issue is already marked as ${targetStatus}.`);
   }
 
-  throw new Error("This issue does not have a seeded systematic-review proposal yet.");
+  issue.status = targetStatus;
+  issue.decidedBy = reviewer;
+  issue.decidedAtUtc = updatedAtUtc;
+  issue.decisionNote = note;
+  if (applySummary?.updatedAtUtc) {
+    issue.lastAppliedAtUtc = applySummary.updatedAtUtc;
+  }
+  proposalsPayload.updatedAtUtc = updatedAtUtc;
+  return {
+    targetStatus,
+    updatedAtUtc,
+  };
 }
 
 function appendSystematicReviewLogEntry(logPayload, entry) {
@@ -1278,6 +1309,24 @@ function appendSystematicReviewLogEntry(logPayload, entry) {
 function appendPublishedChangeLogEntries(changeLogPayload, itemId, reviewer, note, updatedAtUtc, countryFiles, plan) {
   const animal = state.catalogById.get(itemId) || {};
   const entries = Array.isArray(changeLogPayload?.entries) ? changeLogPayload.entries : [];
+
+  for (const iso3 of plan.keepCountries) {
+    entries.push({
+      id: `${updatedAtUtc}__${iso3}__${itemId}__likely_valid`,
+      updatedAtUtc,
+      updatedBy: reviewer,
+      countryIso3: iso3,
+      countryName: countryNameForIso3(iso3),
+      suggestionType: "likely_valid",
+      requestedCoverage: "national",
+      itemId,
+      matchedKey: cleanText(animal.matchedKey),
+      speciesLabel: speciesLabel(animal, itemId),
+      sourceDataset: "systematic_review_proposals.json",
+      files: [...(countryFiles[iso3] || []), ADMIN_GEOFENCE_TRACKING_PATH],
+      reason: buildSystematicCountryReason("keep", itemId, iso3, note),
+    });
+  }
 
   for (const iso3 of plan.removeCountries) {
     entries.push({
@@ -1326,6 +1375,25 @@ function applySystematicAcceptance(geofenceTrackingPayload, changeLogPayload, it
   const countryFiles = {};
   const fileEntries = [];
 
+  for (const iso3 of plan.keepCountries) {
+    const path = `${COUNTRY_OVERRIDE_ROOT}/${iso3}/${itemId}.json`;
+    const payload = {
+      countryIso3: iso3,
+      itemId,
+      action: "upsert",
+      updatedBy: reviewer,
+      updatedAtUtc,
+      reason: buildSystematicCountryReason("keep", itemId, iso3, note),
+      patch: buildLikelyValidPatch(),
+    };
+    fileEntries.push({
+      path,
+      content: serializeJsonFile(payload),
+    });
+    changedFiles.push(path);
+    countryFiles[iso3] = [...(countryFiles[iso3] || []), path];
+  }
+
   for (const iso3 of plan.removeCountries) {
     const path = `${COUNTRY_OVERRIDE_ROOT}/${iso3}/${itemId}.json`;
     const payload = {
@@ -1353,7 +1421,7 @@ function applySystematicAcceptance(geofenceTrackingPayload, changeLogPayload, it
       updatedBy: reviewer,
       updatedAtUtc,
       reason: buildSystematicCountryReason("add", itemId, iso3, note),
-      patch: buildAdditionPatch(),
+      patch: buildLikelyValidPatch(),
     };
     fileEntries.push({
       path,
@@ -1389,10 +1457,18 @@ function applySystematicAcceptance(geofenceTrackingPayload, changeLogPayload, it
   const metadata = itemTracking.metadata && typeof itemTracking.metadata === "object" ? itemTracking.metadata : {};
 
   for (const iso3 of plan.keepCountries) {
+    const path = `${COUNTRY_OVERRIDE_ROOT}/${iso3}/${itemId}.json`;
+    allow[iso3] = true;
     delete block[iso3];
-    if (cleanText(metadata[iso3]?.decision) === "block") {
-      delete metadata[iso3];
-    }
+    delete allowRegional[iso3];
+    metadata[iso3] = {
+      decision: "allow",
+      coverage: "national",
+      overridePath: path,
+      updatedBy: reviewer,
+      updatedAtUtc,
+      reason: buildSystematicCountryReason("keep", itemId, iso3, note),
+    };
   }
 
   for (const iso3 of plan.removeCountries) {
@@ -2090,7 +2166,7 @@ elements.adminDisconnectButton?.addEventListener("click", () => {
   disconnectAdminSession();
 });
 
-elements.saveDraft.addEventListener("click", () => {
+elements.saveDraft?.addEventListener("click", () => {
   void saveDraftToGitHub();
 });
 

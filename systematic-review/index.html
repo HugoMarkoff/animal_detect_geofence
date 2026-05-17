@@ -180,16 +180,16 @@
               </div>
 
               <div class="form-actions">
-                <button id="save-draft" class="secondary-button" type="button">Save Draft</button>
+                <button id="save-draft" class="secondary-button" type="button" hidden>Save Draft</button>
                 <button id="accept-issue" type="button">Accept And Apply</button>
                 <button id="reject-issue" class="secondary-button" type="button">Reject</button>
                 <p id="decision-status" class="status-line">Ready.</p>
               </div>
 
               <p class="source-note">
-                Save Draft commits the proposal JSON only. Accept writes per-country override files, updates geofence
-                binary tracking, appends the published change log, and relies on the repo workflow to rebuild the
-                published packs.
+                Accept And Apply commits the current Keep / Remove / Add bucket layout, writes the per-country override
+                files, updates geofence binary tracking, appends the published change log, and relies on the repo
+                workflow to rebuild the published packs. Reject only records the decision.
               </p>
             </article>
           </section>
@@ -253,6 +253,6 @@
 
     <datalist id="country-options"></datalist>
 
-    <script src="../assets/systematic-review.js?v=20260516f"></script>
+    <script src="../assets/systematic-review.js?v=20260517a"></script>
   </body>
 </html>
