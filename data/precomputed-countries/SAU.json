@@ -10,15 +10,15 @@
     "total": 204,
     "statusCounts": {
       "unlisted": 27,
-      "likely_true_one_source": 34,
-      "likely_false": 63,
+      "likely_true_one_source": 35,
+      "likely_false": 62,
       "likely_true_both": 63,
       "new_record": 17
     },
     "bucketCounts": {
       "Unlisted": 27,
-      "Likely Valid": 97,
-      "Needs Review": 63,
+      "Likely Valid": 98,
+      "Needs Review": 62,
       "New": 17
     }
   },
@@ -637,8 +637,8 @@
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "SAU",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
@@ -702,12 +702,95 @@
             44.52221061111241
           ]
         ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "The cleaned outer footprint covers 0.0% of Saudi Arabia, so it stays regional."
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the systematic review queue."
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/SAU/0de8422e-f59d-4802-9e93-ab8559e43e55.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T09:53:58.597Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep domestic sheep (ovis aries) for Saudi Arabia (SAU). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
+          "countryIso3": "SAU",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 63,
+          "inatCount": 1,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 63,
+          "rawInatCount": 1,
+          "gbifUsageKey": 2441110,
+          "inatTaxonId": 121578,
+          "inatPlaceId": 7358,
+          "managedEvidence": {
+            "domesticNamed": true,
+            "materialSampleCount": 17,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": true,
+            "note": "domestic sheep is a domestic taxon and the sampled records are dominated by atlas/material or captive-style evidence, so it stays in review."
+          },
+          "evidenceQuality": {
+            "rawTotal": 64,
+            "qualifiedTotal": 64,
+            "specimenOrSampleCount": 17,
+            "staleGbifCount": 17,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 17,
+            "corePointCount": 17,
+            "outlierPointCount": 0,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 0.0,
+            "unique25kmCells": 1,
+            "unique50kmCells": 1,
+            "countryDiameterKm": 1654.4093559097555,
+            "spreadRatio": 0.0,
+            "coverageAreaKm2": 201.06192982974676,
+            "coverageRatio": 9.35306624814493e-05,
+            "footprintPolygonLatLngs": [
+              [
+                24.064173106000716,
+                44.52221061111241
+              ],
+              [
+                24.064173106000716,
+                44.67970938888759
+              ],
+              [
+                24.20790289399928,
+                44.67970938888759
+              ],
+              [
+                24.20790289399928,
+                44.52221061111241
+              ]
+            ],
+            "code": "regional",
+            "label": "Regional footprint",
+            "short": "Regional",
+            "note": "The cleaned outer footprint covers 0.0% of Saudi Arabia, so it stays regional."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0f132580-6fc9-4ffa-8e6d-39cdc00c359e",
@@ -11384,9 +11467,10 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 3,
-    "appliedAtUtc": "2026-05-17T08:44:36.396440+00:00",
+    "count": 4,
+    "appliedAtUtc": "2026-05-17T09:54:32.017859+00:00",
     "items": [
+      "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "601cf098-9876-4912-84bb-0926834305e9",
       "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "c10547c3-1748-48bf-a451-8066c820f22f"

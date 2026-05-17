@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 197,
+    "total": 196,
     "statusCounts": {
       "unlisted": 102,
-      "likely_false": 58,
+      "likely_false": 57,
       "new_record": 17,
       "likely_true_one_source": 15,
       "likely_true_both": 5
     },
     "bucketCounts": {
       "Unlisted": 102,
-      "Needs Review": 58,
+      "Needs Review": 57,
       "New": 17,
       "Likely Valid": 20
     }
@@ -505,58 +505,6 @@
       "inatPlaceId": 7353,
       "managedEvidence": {
         "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 279.5990608124324,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
-      "countryIso3": "SJM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2441110,
-      "inatTaxonId": 121578,
-      "inatPlaceId": 7353,
-      "managedEvidence": {
-        "domesticNamed": true,
         "materialSampleCount": 0,
         "atlasCount": 0,
         "managedCount": 0,
@@ -10554,10 +10502,72 @@
       "tags": []
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
+      "sourceFile": "data/review-overrides/countries/SJM/0de8422e-f59d-4802-9e93-ab8559e43e55.json",
+      "updatedAtUtc": "2026-05-17T09:53:58.597Z",
+      "updatedBy": "github-review",
+      "reason": "Systematic review approval: remove domestic sheep (ovis aries) for Svalbard and Jan Mayen (SJM). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+      "baseEntry": {
+        "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
+        "countryIso3": "SJM",
+        "status": "likely_false",
+        "bucket": "Needs Review",
+        "expected": true,
+        "gbifPresent": false,
+        "inatPresent": false,
+        "gbifCount": 0,
+        "inatCount": 0,
+        "rawGbifPresent": false,
+        "rawInatPresent": false,
+        "rawGbifCount": 0,
+        "rawInatCount": 0,
+        "gbifUsageKey": 2441110,
+        "inatTaxonId": 121578,
+        "inatPlaceId": 7353,
+        "managedEvidence": {
+          "domesticNamed": true,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 279.5990608124324,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "tags": []
+      }
+    }
+  ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-17T07:41:10.019458+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-17T09:54:32.230994+00:00",
     "items": [
+      "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "601cf098-9876-4912-84bb-0926834305e9",
       "990ae9dd-7a59-4344-afcb-1b7b21368000"
     ]

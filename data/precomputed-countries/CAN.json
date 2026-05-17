@@ -9,9 +9,9 @@
   "summary": {
     "total": 579,
     "statusCounts": {
-      "likely_true_both": 227,
+      "likely_true_both": 226,
       "unlisted": 173,
-      "likely_true_one_source": 77,
+      "likely_true_one_source": 78,
       "likely_false": 46,
       "new_record": 56
     },
@@ -1908,7 +1908,7 @@
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "CAN",
-      "status": "likely_true_both",
+      "status": "likely_true_one_source",
       "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
@@ -1980,9 +1980,96 @@
         "code": "countrywide",
         "label": "National footprint",
         "short": "National",
-        "note": "Dropped 22 likely outlier points before scoring. 2 dense observation areas were found in Canada, so this is treated as national rather than a single regional pocket."
+        "note": "Approved from the systematic review queue."
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/CAN/0de8422e-f59d-4802-9e93-ab8559e43e55.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-05-17T09:53:58.597Z",
+        "updatedBy": "github-review",
+        "reason": "Systematic review approval: keep domestic sheep (ovis aries) for Canada (CAN). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
+          "countryIso3": "CAN",
+          "status": "likely_true_both",
+          "bucket": "Likely Valid",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 69,
+          "inatCount": 30,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 69,
+          "rawInatCount": 30,
+          "gbifUsageKey": 2441110,
+          "inatTaxonId": 121578,
+          "inatPlaceId": 6712,
+          "managedEvidence": {
+            "domesticNamed": true,
+            "materialSampleCount": 1,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 99,
+            "qualifiedTotal": 99,
+            "specimenOrSampleCount": 28,
+            "staleGbifCount": 31,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 54,
+            "corePointCount": 32,
+            "outlierPointCount": 22,
+            "clusterCount": 2,
+            "clusterSpreadKm": 3614.6058659068317,
+            "maxDistanceKm": 3618.7731388538637,
+            "unique25kmCells": 5,
+            "unique50kmCells": 2,
+            "countryDiameterKm": 3565.5121210186394,
+            "spreadRatio": 1.0149378310961983,
+            "coverageAreaKm2": 6237819.811519882,
+            "coverageRatio": 0.6247397071230077,
+            "footprintPolygonLatLngs": [
+              [
+                50.17644336529429,
+                -132.98166169528207
+              ],
+              [
+                50.109915636739785,
+                -132.97903348146824
+              ],
+              [
+                44.69275656688905,
+                -67.01803302404947
+              ],
+              [
+                50.23603443980431,
+                -132.8700789638252
+              ],
+              [
+                50.23838712269255,
+                -132.9529697915636
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "Dropped 22 likely outlier points before scoring. 2 dense observation areas were found in Canada, so this is treated as national rather than a single regional pocket."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0e450336-1615-4b22-90e3-ab9773c6e408",
@@ -42881,5 +42968,12 @@
       },
       "tags": []
     }
-  ]
+  ],
+  "manualOverrideSummary": {
+    "count": 1,
+    "appliedAtUtc": "2026-05-17T09:54:25.555037+00:00",
+    "items": [
+      "0de8422e-f59d-4802-9e93-ab8559e43e55"
+    ]
+  }
 }

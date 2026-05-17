@@ -7,13 +7,13 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/country-validation/ATA/new_candidates.csv",
   "summary": {
-    "total": 68,
+    "total": 67,
     "statusCounts": {
-      "likely_false": 55,
+      "likely_false": 54,
       "likely_true_one_source": 13
     },
     "bucketCounts": {
-      "Needs Review": 55,
+      "Needs Review": 54,
       "Likely Valid": 13
     }
   },
@@ -87,57 +87,6 @@
       "inatPlaceId": 206462,
       "managedEvidence": {
         "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 4222.008245644752,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
-    },
-    {
-      "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
-      "countryIso3": "ATA",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2441110,
-      "inatTaxonId": 121578,
-      "inatPlaceId": 206462,
-      "managedEvidence": {
-        "domesticNamed": true,
         "materialSampleCount": 0,
         "atlasCount": 0,
         "managedCount": 0,
@@ -3272,10 +3221,71 @@
       "bucket": "Needs Review"
     }
   ],
+  "manualOverrideRemovedEntries": [
+    {
+      "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
+      "sourceFile": "data/review-overrides/countries/ATA/0de8422e-f59d-4802-9e93-ab8559e43e55.json",
+      "updatedAtUtc": "2026-05-17T09:53:58.597Z",
+      "updatedBy": "github-review",
+      "reason": "Systematic review approval: remove domestic sheep (ovis aries) for Antarctica (ATA). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+      "baseEntry": {
+        "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
+        "countryIso3": "ATA",
+        "status": "likely_false",
+        "expected": true,
+        "gbifPresent": false,
+        "inatPresent": null,
+        "gbifCount": 0,
+        "inatCount": null,
+        "rawGbifPresent": false,
+        "rawInatPresent": null,
+        "rawGbifCount": 0,
+        "rawInatCount": null,
+        "gbifUsageKey": 2441110,
+        "inatTaxonId": 121578,
+        "inatPlaceId": 206462,
+        "managedEvidence": {
+          "domesticNamed": true,
+          "materialSampleCount": 0,
+          "atlasCount": 0,
+          "managedCount": 0,
+          "captiveInatCount": 0,
+          "needsReview": false,
+          "note": ""
+        },
+        "evidenceQuality": {
+          "rawTotal": 0,
+          "qualifiedTotal": 0,
+          "specimenOrSampleCount": 0,
+          "staleGbifCount": 0,
+          "staleInatCount": 0,
+          "captiveInatCount": 0,
+          "rejected": false,
+          "note": ""
+        },
+        "observationProfile": {
+          "code": "no_points",
+          "label": "No mapped points",
+          "short": "No points",
+          "note": "No mapped coordinates were returned in the sampled observations.",
+          "significant": false,
+          "totalPoints": 0,
+          "maxDistanceKm": 0,
+          "unique25kmCells": 0,
+          "unique50kmCells": 0,
+          "countryDiameterKm": 4222.008245644752,
+          "spreadRatio": 0,
+          "footprintPolygonLatLngs": []
+        },
+        "bucket": "Needs Review"
+      }
+    }
+  ],
   "manualOverrideSummary": {
-    "count": 2,
-    "appliedAtUtc": "2026-05-17T08:44:28.823774+00:00",
+    "count": 3,
+    "appliedAtUtc": "2026-05-17T09:54:24.047379+00:00",
     "items": [
+      "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "601cf098-9876-4912-84bb-0926834305e9",
       "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
