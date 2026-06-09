@@ -65,7 +65,6 @@ const adminConnectButton = document.getElementById("admin-connect");
 const adminDisconnectButton = document.getElementById("admin-disconnect");
 const adminApplyButton = document.getElementById("admin-apply");
 const adminLastCommitLink = document.getElementById("admin-last-commit");
-const openSystematicReviewLink = document.getElementById("open-systematic-review");
 const ticketWarnings = document.getElementById("ticket-warnings");
 const mapSummary = document.getElementById("map-summary");
 
@@ -87,8 +86,7 @@ const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const GITHUB_BLOB_WRITE_CONCURRENCY = 8;
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260511e";
-const SYSTEMATIC_REVIEW_URL = "./systematic-review/";
+const DATA_VERSION = "20260609a";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -2053,13 +2051,6 @@ function derivedAdminMessage() {
   };
 }
 
-function systematicReviewUrl() {
-  if ((window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") && window.location.port === "5070") {
-    return "/systematic-review";
-  }
-  return SYSTEMATIC_REVIEW_URL;
-}
-
 function renderAdminState() {
   const connected = Boolean(state.admin.login);
   const status = derivedAdminMessage();
@@ -2086,10 +2077,6 @@ function renderAdminState() {
     adminLastCommitLink.href = "#";
   }
 
-  if (openSystematicReviewLink) {
-    openSystematicReviewLink.hidden = false;
-    openSystematicReviewLink.href = systematicReviewUrl();
-  }
 }
 
 function readPersistedAdminToken() {
@@ -5645,16 +5632,6 @@ adminDisconnectButton?.addEventListener("click", () => {
 
 adminApplyButton?.addEventListener("click", () => {
   void applyAdminChanges();
-});
-
-openSystematicReviewLink?.addEventListener("click", () => {
-  try {
-    if (cleanText(state.admin.token)) {
-      window.sessionStorage.setItem(ADMIN_TOKEN_HANDOFF_KEY, state.admin.token);
-    }
-  } catch {
-    // Ignore storage failures and continue to the linked page.
-  }
 });
 
 window.addEventListener("resize", () => {
