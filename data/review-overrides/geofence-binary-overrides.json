@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-09T07:09:33.519586Z",
+  "updatedAtUtc": "2026-06-09T07:51:12.636Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -1410,6 +1410,30 @@
       },
       "allow_regional": {},
       "metadata": {}
+    },
+    "b57debc1-dff2-48d3-a400-f2b5021e71b0": {
+      "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
+      "matchedKey": "mammalia;carnivora;procyonidae;procyon;lotor",
+      "speciesLabel": "northern raccoon (procyon lotor)",
+      "commonName": "northern raccoon",
+      "binomial": "procyon lotor",
+      "classLabel": "Mammal",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "allow": {
+        "DNK": true
+      },
+      "block": {},
+      "allow_regional": {},
+      "metadata": {
+        "DNK": {
+          "decision": "allow",
+          "coverage": "national",
+          "overridePath": "data/review-overrides/countries/DNK/b57debc1-dff2-48d3-a400-f2b5021e71b0.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-06-09T07:51:12.636Z",
+          "reason": "Please accept northern raccoon (procyon lotor) into the permanent Denmark country pack and keep its current national footprint coverage."
+        }
+      }
     }
   }
 }
