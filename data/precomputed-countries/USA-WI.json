@@ -11,19 +11,19 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 421,
+    "total": 396,
     "statusCounts": {
-      "likely_true_one_source": 255,
-      "likely_false": 74,
+      "likely_true_one_source": 289,
+      "likely_false": 28,
       "likely_true_both": 15,
-      "unlisted": 73,
-      "new_record": 4
+      "unlisted": 62,
+      "new_record": 2
     },
     "bucketCounts": {
-      "Likely Valid": 270,
-      "Needs Review": 74,
-      "Unlisted": 73,
-      "New": 4
+      "Likely Valid": 304,
+      "Needs Review": 28,
+      "Unlisted": 62,
+      "New": 2
     }
   },
   "entries": [
@@ -214,8 +214,8 @@
     {
       "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -255,7 +255,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/033f2ecb-bf36-4ce1-bf3f-7efcd71fe374.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for grey-necked wood-rail (aramides cajaneus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 513889,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0364fc81-17d7-4495-a48c-4fc396b44d5d",
@@ -404,8 +458,8 @@
     {
       "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -445,7 +499,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/072d8e15-64e0-41a6-9e81-007bef444fff.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for lesser tropical ground squirel (notocitellus adocetus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7478670,
+          "inatTaxonId": 179982,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "07843615-e1fc-49d8-9821-fd1d7ff2e773",
@@ -784,8 +892,8 @@
     {
       "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -825,7 +933,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for variable squirrel (callosciurus finlaysonii) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437399,
+          "inatTaxonId": 45949,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0b1aa700-f41f-4665-9f9a-bc9ebf30489b",
@@ -1002,10 +1164,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -1019,9 +1181,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/0de8422e-f59d-4802-9e93-ab8559e43e55.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic sheep (ovis aries) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 16 Dan review decisions (reject remove). Effective scope for domestic sheep (ovis aries) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
@@ -1690,8 +1852,8 @@
     {
       "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -1731,7 +1893,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/169ed977-68c0-4685-a5e9-9ddbc90b6997.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked wren-babbler (turdinus brevicaudatus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7625239,
+          "inatTaxonId": 1289433,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
@@ -1862,10 +2078,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -1879,9 +2095,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goat (capra aegagrus hircus) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
@@ -1986,8 +2202,8 @@
     {
       "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2027,53 +2243,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "19cb4cb0-7a99-41cb-a962-1d7598a61173",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2497380,
-      "inatTaxonId": 19757,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/199a9842-5e9d-43f8-ace6-2bfe868a81c9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for olive-winged trumpeter (psophia dextralis) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 10875550,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "1a5311ef-a0e0-4593-acd3-e291dd13f620",
@@ -2590,8 +2814,8 @@
     {
       "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -2631,7 +2855,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/230c8c2d-4758-42c6-ac85-36a722f04977.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for brazilian squirrel (guerlinguetus brasiliensis) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 45998,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "23140944-2bd7-46ce-819a-c26508c53d62",
@@ -2682,8 +2960,8 @@
     {
       "itemId": "249cae46-0a84-43db-be08-404a6695c171",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -2723,7 +3001,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/249cae46-0a84-43db-be08-404a6695c171.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-eared ground-thrush (geokichla camaronensis) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "249cae46-0a84-43db-be08-404a6695c171",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 6100884,
+          "inatTaxonId": 201197,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "24b341f7-149b-4a57-96b9-69f8ff6724c2",
@@ -2820,8 +3152,8 @@
     {
       "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2861,7 +3193,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/25ca4716-54f4-4f69-9b15-ab5af6d38cbd.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese serow (capricornis milneedwardsii) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7261423,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "266e985f-1dee-4d11-ac96-8ade6aee7c9a",
@@ -2912,8 +3298,8 @@
     {
       "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -2953,7 +3339,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for common woolly monkey (lagothrix lagotricha) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "277c1292-8e80-4de1-a630-239ba0f7416d",
@@ -3096,8 +3536,8 @@
     {
       "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -3137,59 +3577,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5220114,
-      "inatTaxonId": 42199,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for pur\u00fas red howler monkey (alouatta puruensis) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 5786093,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "29f4ab9b-df46-4d87-9923-a9869fa5d503",
@@ -3434,52 +3876,6 @@
       "tags": []
     },
     {
-      "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 62528,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "2f59b4c2-2f9e-4c37-a201-42fdb64184e2",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -3633,52 +4029,6 @@
       "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 144515,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "317171d7-d306-4e71-9a4a-33e62012076b",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5220126,
-      "inatTaxonId": 42184,
       "inatPlaceId": 4208,
       "managedEvidence": {
         "domesticNamed": false,
@@ -4332,97 +4682,6 @@
       "tags": []
     },
     {
-      "itemId": "3a50c7a6-4aaa-4480-bda3-4ddce4b31706",
-      "countryIso3": "USA-WI",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 87,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 87,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 87,
-        "qualifiedTotal": 87,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 7,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 86,
-        "corePointCount": 53,
-        "outlierPointCount": 33,
-        "clusterCount": 2,
-        "clusterSpreadKm": 257.1890691825862,
-        "maxDistanceKm": 381.3973367383732,
-        "unique25kmCells": 25,
-        "unique50kmCells": 13,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0.8206533466884757,
-        "coverageAreaKm2": 113241.6908464046,
-        "coverageRatio": 0.6675451449631546,
-        "footprintPolygonLatLngs": [
-          [
-            45.20676639200296,
-            -92.34793614834223
-          ],
-          [
-            42.05202070640884,
-            -90.13946189680642
-          ],
-          [
-            42.404968171111115,
-            -87.18853485891081
-          ],
-          [
-            43.092682638571084,
-            -87.10785312571471
-          ],
-          [
-            43.51731805506653,
-            -87.22865253264928
-          ],
-          [
-            43.688569592999954,
-            -87.32474777942794
-          ],
-          [
-            44.9174814003558,
-            -89.78226636382067
-          ],
-          [
-            45.32624981038752,
-            -92.0760921686596
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 33 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Wisconsin, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
       "itemId": "3a7272f0-5947-4f1a-9f93-31cc6c852569",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -4515,56 +4774,10 @@
       "tags": []
     },
     {
-      "itemId": "3a8f6da9-0910-49a0-bfa8-c5217d15e2d9",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2480635,
-      "inatTaxonId": 1578973,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -4604,7 +4817,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/3b0ae87d-0cb4-46c4-822b-c65047e69a88.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for long-nosed mongoose (herpestes naso) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2434299,
+          "inatTaxonId": 925980,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "3ca3aec2-2579-4196-ad14-fe52bd70d64e",
@@ -4689,10 +4956,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -4706,9 +4973,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic dog (canis familiaris) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
@@ -4763,58 +5030,6 @@
           "tags": []
         }
       }
-    },
-    {
-      "itemId": "3e6938fe-1de2-4508-8813-c15793a0f7b7",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2495134,
-      "inatTaxonId": 20504,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
     },
     {
       "itemId": "3eb4472d-b8da-4bd8-9533-7b9b4e844f6a",
@@ -4945,10 +5160,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -4962,9 +5177,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goose (anser anser domesticus) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
@@ -5437,8 +5652,8 @@
     {
       "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -5478,7 +5693,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/4385382e-2007-4b12-a150-54e63bbfee0d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for redness tree squirrel (funisciurus anerythrus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437413,
+          "inatTaxonId": 45964,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "43d4ed66-72e7-4114-94f3-e7765c79fb49",
@@ -5522,58 +5791,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "43d9103c-362c-40c6-9a16-4c82b8bed23c",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440946,
-      "inatTaxonId": 42187,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -6045,58 +6262,6 @@
       "tags": []
     },
     {
-      "itemId": "4f20e9f2-cdf0-458a-9110-69588acfabd2",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2498252,
-      "inatTaxonId": 72486,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "4f8ba742-4d2c-4827-a4f3-56ed8f525493",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -6335,8 +6500,8 @@
     {
       "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -6376,7 +6541,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/514d9dd8-f2de-4a19-87df-3859e9063270.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white-vented shama (kittacincla nigra) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 9099332,
+          "inatTaxonId": 13160,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "51d9a879-319f-4c64-85cf-1ea51e585575",
@@ -6949,58 +7168,6 @@
       "tags": []
     },
     {
-      "itemId": "5a565886-156e-4b19-a017-6a5bbae4df0f",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 3,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 12,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436940,
-      "inatTaxonId": 43151,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 12,
-        "qualifiedTotal": 3,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "5a9b1344-2dd5-4162-9d85-77ee4648ad9c",
       "countryIso3": "USA-WI",
       "status": "unlisted",
@@ -7081,104 +7248,6 @@
       "evidenceQuality": {
         "rawTotal": 0,
         "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "5aa2382d-7b13-43e6-8266-10e6382da531",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 25,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5228229,
-      "inatTaxonId": 53,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 25,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "5c7ce479-8a45-40b3-ae21-7c97dfae22f5",
-      "countryIso3": "USA-WI",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 5981,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 5981,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440965,
-      "inatTaxonId": 42223,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 5981,
-        "qualifiedTotal": 5981,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -7548,6 +7617,106 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "countryIso3": "USA-WI",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4208,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/601cf098-9876-4912-84bb-0926834305e9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for grizzly bear (ursus u. arctos) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "608f0305-b94a-4f39-b445-654fbb07ba73",
@@ -8260,8 +8429,8 @@
     {
       "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -8301,7 +8470,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/67f8d7af-2d29-4b22-8810-71e798cac94d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for three-striped ground squirrel (lariscus insignis) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437524,
+          "inatTaxonId": 46187,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "68574b5e-4576-4953-a704-6bbf9d8e6e80",
@@ -8719,8 +8942,8 @@
     {
       "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -8760,7 +8983,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/6c7c93e1-741a-4152-8f0f-8f161a388d78.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for limestone wren-babbler (turdinus crispifrons) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7452882,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "6cced5c0-5992-4bc6-ae91-27786b320087",
@@ -8903,8 +9180,8 @@
     {
       "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -8944,7 +9221,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/711807fc-ba18-4107-bb8f-daf9caea5c13.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ochre-winged trumpeter (psophia ochroptera) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7430311,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "71313453-1e2c-448f-88d7-d24e9cd2b930",
@@ -9039,52 +9370,6 @@
       "tags": []
     },
     {
-      "itemId": "73baf300-5592-4ab5-9da8-7da898477934",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2433875,
-      "inatTaxonId": 855297,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -9133,8 +9418,8 @@
     {
       "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -9174,7 +9459,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 46 Dan review decisions (custom scope rules, reject remove). Effective scope for raccoon dog (nyctereutes procyonoides) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2434552,
+          "inatTaxonId": 855311,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "74ad9376-b86f-4c46-be31-eae5f582c2c4",
@@ -9225,8 +9564,8 @@
     {
       "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -9266,7 +9605,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/7582ac8c-c63c-4531-a436-d4b532e753be.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for horsfield's tarsier (tarsius bancanus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1369285,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7631afd3-ab8e-4e88-9243-2c21386595eb",
@@ -9505,52 +9898,6 @@
       "tags": []
     },
     {
-      "itemId": "7921cb6a-4459-4a87-ad65-0610a8ab4556",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434825,
-      "inatTaxonId": 75102,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "796a6de7-4ce1-4bba-9d97-72597f3a5763",
       "countryIso3": "USA-WI",
       "status": "unlisted",
@@ -9651,8 +9998,8 @@
     {
       "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -9692,7 +10039,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/7a3f5fb1-8e10-44c8-b040-d0672788540c.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for argentine gray fox (lycalopex griseus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 332338,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7a839b39-9916-45ec-a01b-d88d814a11ed",
@@ -9749,8 +10150,8 @@
     {
       "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -9790,7 +10191,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/7ade12e0-5b31-4402-b97b-7a3631bcec6e.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese goral (naemorhedus griseus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7261419,
+          "inatTaxonId": 74722,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7bef348d-37cf-4b5b-bf91-e4fe2dfc483c",
@@ -10037,8 +10492,8 @@
     {
       "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -10078,7 +10533,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/82557fe4-2c1e-45ff-9920-c6407a348bf3.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for archer's robin-chat (dessonornis archeri) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1585904,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "828b8955-2d2c-444b-8722-d0b084b804b1",
@@ -10115,104 +10624,6 @@
         "captiveInatCount": 0,
         "rejected": false,
         "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "83133617-8358-4910-82ee-4c23e40ba3dc",
-      "countryIso3": "USA-WI",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 87,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 87,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 87,
-        "qualifiedTotal": 87,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "837b9391-b201-41ad-a24a-b0549588efd8",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437140,
-      "inatTaxonId": 43055,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
       },
       "observationProfile": {
         "code": "no_points",
@@ -10663,64 +11074,6 @@
       "tags": []
     },
     {
-      "itemId": "89851bea-765b-431a-bb03-6f821931ebdc",
-      "countryIso3": "USA-WI",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 9,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 9,
-      "rawInatCount": 0,
-      "gbifUsageKey": 9326020,
-      "inatTaxonId": 882,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 9,
-        "qualifiedTotal": 9,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 7 likely outlier points before scoring. Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 9,
-        "corePointCount": 2,
-        "outlierPointCount": 7,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 8.806996121447586,
-        "unique25kmCells": 2,
-        "unique50kmCells": 2,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0.018950029654497092,
-        "coverageAreaKm2": 342.1323776758776,
-        "coverageRatio": 0.0020168261878216543,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "89f17afb-fc00-4f9c-a2e1-69e22aada406",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -10861,8 +11214,8 @@
     {
       "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -10902,7 +11255,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/8a57d557-41a8-4282-9e37-59f1b9e806ea.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white/crandall's saddleback tamarin (saguinus melanoleucus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
@@ -10941,10 +11348,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -10958,9 +11365,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/8a766598-fcfe-4c06-b899-7213f9b20dfa.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic donkey (equus asinus) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 35 Dan review decisions (reject remove). Effective scope for domestic donkey (equus asinus) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
@@ -11163,8 +11570,8 @@
     {
       "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -11204,7 +11611,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/8bff2ed4-679e-4a5d-8874-948b9c4700b5.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for black flying squirrel (aeromys tephromelas) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437384,
+          "inatTaxonId": 45991,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8c9ba5cf-b98b-4b25-8543-9fcf0e69aed3",
@@ -11301,8 +11762,8 @@
     {
       "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -11342,13 +11803,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/8d3957d7-0150-4d46-9a8b-c7278d9d0b9d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-winged trumpeter (psophia obscura) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 8007102,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -11388,7 +11903,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/8e840c5c-c75f-47a1-90e3-5559ad64422b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for moonrat (echinosorex gymnura) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437114,
+          "inatTaxonId": 1370747,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8ed8aff1-cd22-47c4-8f9a-80ed276d88e9",
@@ -11432,58 +12001,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "8ff5f9db-dbd5-4ad3-a834-22ade546c36b",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 2,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434126,
-      "inatTaxonId": 41943,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 2,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -12522,8 +13039,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -12563,7 +13080,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 37 Dan review decisions (reject remove). Effective scope for human (homo sapiens) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2436436,
+          "inatTaxonId": 43584,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
@@ -12758,8 +13329,8 @@
     {
       "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12799,7 +13370,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/9c7fff26-21ba-4c40-8f6f-747d182b5b46.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for australian ibis (threskiornis moluccus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 3740,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "9c970db3-1497-4397-bb06-06e3827570dd",
@@ -13460,8 +14085,8 @@
     {
       "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -13501,7 +14126,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/a6ae199d-c8fa-4f5d-bf4c-844d7b26320d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ashy-headed babbler (trichastoma cinereiceps) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 339801,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "a70c87e9-62bc-41c2-9e36-96fed9136046",
@@ -13591,58 +14270,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "a82c12d4-6f47-4068-b5e4-48915755d0b2",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2493737,
-      "inatTaxonId": 14069,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -13814,98 +14441,6 @@
       "evidenceQuality": {
         "rawTotal": 835,
         "qualifiedTotal": 835,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "aba05f1e-020f-49ce-a5c3-528482e1c5ce",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 8211070,
-      "inatTaxonId": 46001,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "ac01bf53-e125-4edd-8873-db9f519f1123",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 7261816,
-      "inatTaxonId": 1596132,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -14369,8 +14904,8 @@
     {
       "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -14410,7 +14945,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/b0cf0d5c-7609-49ff-b31e-20394b4bb71d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for bearded wood-partridge (dendrortyx barbatus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2474251,
+          "inatTaxonId": 1330,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b18690c8-a11a-4029-8029-fb280d40e7f7",
@@ -14501,10 +15090,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -14518,9 +15107,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic mule (equus mulus) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -14579,8 +15168,8 @@
     {
       "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -14620,7 +15209,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/b2019c82-1245-44fe-b86e-a25bc1702de9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 50 Dan review decisions (custom scope rules, reject remove). Effective scope for emperor penguin (aptenodytes forsteri) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2481661,
+          "inatTaxonId": 3820,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b2970a27-4413-4b99-b777-29f0b56632a0",
@@ -14815,8 +15458,8 @@
     {
       "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -14856,7 +15499,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for siberian chipmunk (eutamias sibiricus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 520585,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b9a7f328-3bb9-4326-9665-cc8ab5d870e1",
@@ -15562,10 +16259,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -15579,9 +16276,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/c150a21e-952d-4665-8a62-a319841c5a56.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic pig (sus scrofa scrofa) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -15684,52 +16381,6 @@
       "tags": []
     },
     {
-      "itemId": "c1750080-1f8e-4238-b121-066d700f1641",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 8319,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "c2e2bf4d-87b4-473d-8627-0766605efb77",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -15778,8 +16429,8 @@
     {
       "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -15819,7 +16470,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/c30677db-a57e-4556-a7ff-cf77ef39324a.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for eastern moustached laughingthrush (garrulax cinereiceps) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "c35ee773-ead8-4a1b-b292-523162fbafc1",
@@ -16238,10 +16943,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -16255,9 +16960,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WI/cae9534f-f302-4229-9e11-b91138333d92.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic chicken (gallus gallus domesticus) for United States \u2013 Wisconsin (USA-WI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 Wisconsin (USA-WI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
@@ -16667,8 +17372,8 @@
     {
       "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -16708,7 +17413,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/d0642934-f9d4-4f5d-a3b7-67fb0a55c751.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked tuftedcheek (pseudocolaptes boissonneauii) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 9142779,
+          "inatTaxonId": 11603,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d0a759dc-58ec-4c06-abb9-e60a26931962",
@@ -17105,8 +17864,8 @@
     {
       "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -17146,7 +17905,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/d42fc24e-515b-470e-87e2-6f15d93ffdb8.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for sumatran mountain muntjac (muntiacus montanus) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 42186,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d437edb5-ebbd-4ac1-997e-4f5adc461179",
@@ -17243,8 +18056,8 @@
     {
       "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -17284,7 +18097,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/d5120db5-2a59-45d7-a3ee-bc6d06b00b57.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for saddleback tamarin (leontocebus fuscicollis) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 8493215,
+          "inatTaxonId": 43389,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d5636405-819a-495a-b2d1-0f802d52c1bd",
@@ -17335,8 +18202,8 @@
     {
       "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -17376,7 +18243,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WI/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Wisconsin (USA-WI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+          "countryIso3": "USA-WI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4208,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
@@ -17792,58 +18713,6 @@
       },
       "evidenceQuality": {
         "rawTotal": 2,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "dd39bbd5-077c-482e-9d33-bd176116c870",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440892,
-      "inatTaxonId": 43335,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
         "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
@@ -18807,58 +19676,6 @@
       "tags": []
     },
     {
-      "itemId": "e9bc6035-c9d8-4098-ab1c-1e2936610978",
-      "countryIso3": "USA-WI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2474051,
-      "inatTaxonId": 867,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "ea00b9c4-69aa-4f7c-adbe-85505f04b514",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -18901,89 +19718,6 @@
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
         "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "eb3829b0-772e-4088-ae90-f11b9fe38284",
-      "countryIso3": "USA-WI",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 62,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 68,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440958,
-      "inatTaxonId": 204113,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 68,
-        "qualifiedTotal": 62,
-        "specimenOrSampleCount": 1,
-        "staleGbifCount": 4,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 62,
-        "corePointCount": 60,
-        "outlierPointCount": 2,
-        "clusterCount": 2,
-        "clusterSpreadKm": 207.7424334764618,
-        "maxDistanceKm": 270.4881616177833,
-        "unique25kmCells": 11,
-        "unique50kmCells": 7,
-        "countryDiameterKm": 464.74840842043585,
-        "spreadRatio": 0.5820098718295889,
-        "coverageAreaKm2": 44527.11112021138,
-        "coverageRatio": 0.2624815703948466,
-        "footprintPolygonLatLngs": [
-          [
-            46.69577176034401,
-            -91.50877182757796
-          ],
-          [
-            43.47436539161503,
-            -90.91312785033203
-          ],
-          [
-            43.79245640409203,
-            -90.49967536005596
-          ],
-          [
-            43.95857751485479,
-            -90.37059176727938
-          ],
-          [
-            46.589332744606395,
-            -90.77741582005034
-          ],
-          [
-            46.78134403728257,
-            -90.98721110317207
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 2 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Wisconsin, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
     },
@@ -20507,52 +21241,6 @@
       "tags": []
     },
     {
-      "itemId": "ff28e3a2-9c5e-4697-b949-4ff2f9153ea8",
-      "countryIso3": "USA-WI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434883,
-      "inatTaxonId": 925699,
-      "inatPlaceId": 4208,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "ff31e033-1f44-4772-9317-c1236e27a635",
       "countryIso3": "USA-WI",
       "status": "likely_true_one_source",
@@ -20737,74 +21425,55 @@
       "tags": []
     }
   ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "sourceFile": "data/review-overrides/countries/USA-WI/601cf098-9876-4912-84bb-0926834305e9.json",
-      "updatedAtUtc": "2026-06-09T00:00:00Z",
-      "updatedBy": "github-review",
-      "reason": "Manual review correction: remove grizzly bear (ursus u. arctos) from United States \u2013 Wisconsin (USA-WI). Keep grizzly on the national USA/CAN packs only until state-level coverage is explicitly reviewed.",
-      "baseEntry": {
-        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-        "countryIso3": "USA-WI",
-        "status": "likely_false",
-        "bucket": "Needs Review",
-        "expected": true,
-        "gbifPresent": null,
-        "inatPresent": null,
-        "gbifCount": null,
-        "inatCount": null,
-        "rawGbifPresent": null,
-        "rawInatPresent": null,
-        "rawGbifCount": null,
-        "rawInatCount": null,
-        "gbifUsageKey": null,
-        "inatTaxonId": null,
-        "inatPlaceId": 4208,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 0,
-          "qualifiedTotal": 0,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "country_pack_only",
-          "label": "State pack only",
-          "short": "Pack-only",
-          "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-          "significant": false,
-          "footprintPolygonLatLngs": []
-        },
-        "tags": []
-      }
-    }
-  ],
   "manualOverrideSummary": {
-    "count": 9,
-    "appliedAtUtc": "2026-06-09T05:26:06.141096+00:00",
+    "count": 45,
+    "appliedAtUtc": "2026-06-09T10:11:41.060572+00:00",
     "items": [
+      "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+      "072d8e15-64e0-41a6-9e81-007bef444fff",
+      "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
       "0de8422e-f59d-4802-9e93-ab8559e43e55",
+      "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
+      "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+      "230c8c2d-4758-42c6-ac85-36a722f04977",
+      "249cae46-0a84-43db-be08-404a6695c171",
+      "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
+      "4385382e-2007-4b12-a150-54e63bbfee0d",
+      "514d9dd8-f2de-4a19-87df-3859e9063270",
       "601cf098-9876-4912-84bb-0926834305e9",
+      "67f8d7af-2d29-4b22-8810-71e798cac94d",
+      "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+      "711807fc-ba18-4107-bb8f-daf9caea5c13",
+      "746d3e98-64af-4897-9cd3-c09b169a8c69",
+      "7582ac8c-c63c-4531-a436-d4b532e753be",
+      "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+      "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+      "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+      "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "8a766598-fcfe-4c06-b899-7213f9b20dfa",
+      "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+      "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+      "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+      "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+      "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
+      "b2019c82-1245-44fe-b86e-a25bc1702de9",
+      "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92"
+      "c30677db-a57e-4556-a7ff-cf77ef39324a",
+      "cae9534f-f302-4229-9e11-b91138333d92",
+      "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+      "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+      "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+      "d620e25c-eed1-40f1-8101-6d3b33f3a723"
     ]
   }
 }

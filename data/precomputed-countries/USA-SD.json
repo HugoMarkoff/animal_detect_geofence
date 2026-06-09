@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 357,
+    "total": 341,
     "statusCounts": {
-      "likely_true_one_source": 254,
-      "likely_false": 77,
-      "unlisted": 19,
-      "new_record": 7
+      "likely_true_one_source": 290,
+      "likely_false": 31,
+      "unlisted": 15,
+      "new_record": 5
     },
     "bucketCounts": {
-      "Likely Valid": 254,
-      "Needs Review": 77,
-      "Unlisted": 19,
-      "New": 7
+      "Likely Valid": 290,
+      "Needs Review": 31,
+      "Unlisted": 15,
+      "New": 5
     }
   },
   "entries": [
@@ -259,8 +259,8 @@
     {
       "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -300,7 +300,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/033f2ecb-bf36-4ce1-bf3f-7efcd71fe374.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for grey-necked wood-rail (aramides cajaneus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 513889,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0364fc81-17d7-4495-a48c-4fc396b44d5d",
@@ -351,8 +405,8 @@
     {
       "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -392,7 +446,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/072d8e15-64e0-41a6-9e81-007bef444fff.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for lesser tropical ground squirel (notocitellus adocetus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7478670,
+          "inatTaxonId": 179982,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "07c94304-20e3-44dc-93f4-bbf3b19da6bd",
@@ -627,8 +735,8 @@
     {
       "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -668,7 +776,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for variable squirrel (callosciurus finlaysonii) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2437399,
+          "inatTaxonId": 45949,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0ccfe789-41e3-45b8-bdbc-36f0ce73db48",
@@ -1335,8 +1497,8 @@
     {
       "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -1376,7 +1538,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/169ed977-68c0-4685-a5e9-9ddbc90b6997.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked wren-babbler (turdinus brevicaudatus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7625239,
+          "inatTaxonId": 1289433,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
@@ -1507,10 +1723,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -1524,9 +1740,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-SD/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goat (capra aegagrus hircus) for United States \u2013 South Dakota (USA-SD). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 South Dakota (USA-SD).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
@@ -1631,8 +1847,8 @@
     {
       "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -1672,53 +1888,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "19cb4cb0-7a99-41cb-a962-1d7598a61173",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2497380,
-      "inatTaxonId": 19757,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/199a9842-5e9d-43f8-ace6-2bfe868a81c9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for olive-winged trumpeter (psophia dextralis) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 10875550,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "1a5311ef-a0e0-4593-acd3-e291dd13f620",
@@ -2137,8 +2361,8 @@
     {
       "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -2178,7 +2402,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/230c8c2d-4758-42c6-ac85-36a722f04977.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for brazilian squirrel (guerlinguetus brasiliensis) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 45998,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "23140944-2bd7-46ce-819a-c26508c53d62",
@@ -2229,8 +2507,8 @@
     {
       "itemId": "249cae46-0a84-43db-be08-404a6695c171",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2270,7 +2548,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/249cae46-0a84-43db-be08-404a6695c171.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-eared ground-thrush (geokichla camaronensis) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "249cae46-0a84-43db-be08-404a6695c171",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 6100884,
+          "inatTaxonId": 201197,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "24b341f7-149b-4a57-96b9-69f8ff6724c2",
@@ -2367,8 +2699,8 @@
     {
       "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2408,13 +2740,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/25ca4716-54f4-4f69-9b15-ab5af6d38cbd.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese serow (capricornis milneedwardsii) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7261423,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -2454,13 +2840,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for common woolly monkey (lagothrix lagotricha) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2500,7 +2940,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for pur\u00fas red howler monkey (alouatta puruensis) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 5786093,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "29f4ab9b-df46-4d87-9923-a9869fa5d503",
@@ -2623,52 +3117,6 @@
       "evidenceQuality": {
         "rawTotal": 7,
         "qualifiedTotal": 7,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": 62528,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -2840,52 +3288,6 @@
       "rawInatCount": null,
       "gbifUsageKey": null,
       "inatTaxonId": 144515,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "317171d7-d306-4e71-9a4a-33e62012076b",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 5220126,
-      "inatTaxonId": 42184,
       "inatPlaceId": 4201,
       "managedEvidence": {
         "domesticNamed": false,
@@ -3377,77 +3779,6 @@
       "tags": []
     },
     {
-      "itemId": "3a50c7a6-4aaa-4480-bda3-4ddce4b31706",
-      "countryIso3": "USA-SD",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 8,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 8,
-      "rawInatCount": null,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 8,
-        "qualifiedTotal": 8,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 2,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 5 likely outlier points before scoring. Only 3 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 8,
-        "corePointCount": 3,
-        "outlierPointCount": 5,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 0.004285567642705407,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 504.50664137381057,
-        "spreadRatio": 8.494571312352748e-06,
-        "coverageAreaKm2": 201.1358266366504,
-        "coverageRatio": 0.0010061570577857002,
-        "footprintPolygonLatLngs": [
-          [
-            44.283608349098174,
-            -98.22120197183258
-          ],
-          [
-            44.42332178493246,
-            -98.18047083872993
-          ],
-          [
-            44.42611106099965,
-            -98.22950369868262
-          ]
-        ]
-      },
-      "tags": []
-    },
-    {
       "itemId": "3a7272f0-5947-4f1a-9f93-31cc6c852569",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -3540,56 +3871,10 @@
       "tags": []
     },
     {
-      "itemId": "3a8f6da9-0910-49a0-bfa8-c5217d15e2d9",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2480635,
-      "inatTaxonId": 1578973,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -3629,7 +3914,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/3b0ae87d-0cb4-46c4-822b-c65047e69a88.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for long-nosed mongoose (herpestes naso) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2434299,
+          "inatTaxonId": 925980,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "3ca3aec2-2579-4196-ad14-fe52bd70d64e",
@@ -3714,10 +4053,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -3731,9 +4070,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-SD/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic dog (canis familiaris) for United States \u2013 South Dakota (USA-SD). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 South Dakota (USA-SD).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
@@ -4030,10 +4369,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -4047,9 +4386,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-SD/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goose (anser anser domesticus) for United States \u2013 South Dakota (USA-SD). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 South Dakota (USA-SD).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
@@ -4528,8 +4867,8 @@
     {
       "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -4569,7 +4908,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/4385382e-2007-4b12-a150-54e63bbfee0d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for redness tree squirrel (funisciurus anerythrus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2437413,
+          "inatTaxonId": 45964,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "43d4ed66-72e7-4114-94f3-e7765c79fb49",
@@ -4986,58 +5379,6 @@
       "tags": []
     },
     {
-      "itemId": "4f20e9f2-cdf0-458a-9110-69588acfabd2",
-      "countryIso3": "USA-SD",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 3,
-      "rawInatCount": null,
-      "gbifUsageKey": 2498252,
-      "inatTaxonId": 72486,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 3,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 504.50664137381057,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "50a1fe81-1abe-429f-be8a-458bea01296e",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -5253,8 +5594,8 @@
     {
       "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -5294,7 +5635,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/514d9dd8-f2de-4a19-87df-3859e9063270.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white-vented shama (kittacincla nigra) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 9099332,
+          "inatTaxonId": 13160,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "51d9a879-319f-4c64-85cf-1ea51e585575",
@@ -5711,58 +6106,6 @@
       "tags": []
     },
     {
-      "itemId": "5a565886-156e-4b19-a017-6a5bbae4df0f",
-      "countryIso3": "USA-SD",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 1,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 2,
-      "rawInatCount": null,
-      "gbifUsageKey": 2436940,
-      "inatTaxonId": 43151,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 2,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 504.50664137381057,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "5a9bec72-e7b1-495a-9d8e-bcd4b3c0ef97",
       "countryIso3": "USA-SD",
       "status": "likely_false",
@@ -5791,52 +6134,6 @@
       "evidenceQuality": {
         "rawTotal": 0,
         "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "5c7ce479-8a45-40b3-ae21-7c97dfae22f5",
-      "countryIso3": "USA-SD",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 649,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 649,
-      "rawInatCount": null,
-      "gbifUsageKey": 2440965,
-      "inatTaxonId": 42223,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 649,
-        "qualifiedTotal": 649,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -6135,6 +6432,106 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "countryIso3": "USA-SD",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4201,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/601cf098-9876-4912-84bb-0926834305e9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for grizzly bear (ursus u. arctos) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "60a26250-1387-4997-bb2a-4b2603f94deb",
@@ -6691,8 +7088,8 @@
     {
       "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -6732,7 +7129,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/67f8d7af-2d29-4b22-8810-71e798cac94d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for three-striped ground squirrel (lariscus insignis) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2437524,
+          "inatTaxonId": 46187,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "68574b5e-4576-4953-a704-6bbf9d8e6e80",
@@ -7222,8 +7673,8 @@
     {
       "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -7263,7 +7714,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/6c7c93e1-741a-4152-8f0f-8f161a388d78.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for limestone wren-babbler (turdinus crispifrons) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7452882,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "6cced5c0-5992-4bc6-ae91-27786b320087",
@@ -7406,8 +7911,8 @@
     {
       "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -7447,7 +7952,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/711807fc-ba18-4107-bb8f-daf9caea5c13.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ochre-winged trumpeter (psophia ochroptera) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7430311,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "71313453-1e2c-448f-88d7-d24e9cd2b930",
@@ -7542,52 +8101,6 @@
       "tags": []
     },
     {
-      "itemId": "73baf300-5592-4ab5-9da8-7da898477934",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2433875,
-      "inatTaxonId": 855297,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -7636,8 +8149,8 @@
     {
       "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -7677,7 +8190,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 46 Dan review decisions (custom scope rules, reject remove). Effective scope for raccoon dog (nyctereutes procyonoides) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2434552,
+          "inatTaxonId": 855311,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "74ad9376-b86f-4c46-be31-eae5f582c2c4",
@@ -7728,8 +8295,8 @@
     {
       "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -7769,7 +8336,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/7582ac8c-c63c-4531-a436-d4b532e753be.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for horsfield's tarsier (tarsius bancanus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1369285,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "764a8bff-2ae5-4d5c-81d3-eb550732940f",
@@ -7956,52 +8577,6 @@
       "tags": []
     },
     {
-      "itemId": "7921cb6a-4459-4a87-ad65-0610a8ab4556",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2434825,
-      "inatTaxonId": 75102,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "79717041-367a-4b1a-ab23-3fbad67b3c5e",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -8096,8 +8671,8 @@
     {
       "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -8137,13 +8712,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/7a3f5fb1-8e10-44c8-b040-d0672788540c.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for argentine gray fox (lycalopex griseus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 332338,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -8183,7 +8812,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/7ade12e0-5b31-4402-b97b-7a3631bcec6e.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese goral (naemorhedus griseus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7261419,
+          "inatTaxonId": 74722,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7e4cf6ac-66dd-40c7-be59-c03c4a75f4e1",
@@ -8326,8 +9009,8 @@
     {
       "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -8367,53 +9050,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "83133617-8358-4910-82ee-4c23e40ba3dc",
-      "countryIso3": "USA-SD",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 8,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 8,
-      "rawInatCount": null,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 8,
-        "qualifiedTotal": 8,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/82557fe4-2c1e-45ff-9920-c6407a348bf3.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for archer's robin-chat (dessonornis archeri) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1585904,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "85f0d28f-ca8b-4100-8b16-46d4766201e3",
@@ -8874,58 +9565,6 @@
       "tags": []
     },
     {
-      "itemId": "89851bea-765b-431a-bb03-6f821931ebdc",
-      "countryIso3": "USA-SD",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 4,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 5,
-      "rawInatCount": null,
-      "gbifUsageKey": 9326020,
-      "inatTaxonId": 882,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 5,
-        "qualifiedTotal": 4,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 504.50664137381057,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "89f17afb-fc00-4f9c-a2e1-69e22aada406",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -9066,8 +9705,8 @@
     {
       "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -9107,7 +9746,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/8a57d557-41a8-4282-9e37-59f1b9e806ea.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white/crandall's saddleback tamarin (saguinus melanoleucus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
@@ -9303,8 +9996,8 @@
     {
       "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -9344,7 +10037,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/8bff2ed4-679e-4a5d-8874-948b9c4700b5.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for black flying squirrel (aeromys tephromelas) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2437384,
+          "inatTaxonId": 45991,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8c9ba5cf-b98b-4b25-8543-9fcf0e69aed3",
@@ -9395,8 +10142,8 @@
     {
       "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -9436,13 +10183,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/8d3957d7-0150-4d46-9a8b-c7278d9d0b9d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-winged trumpeter (psophia obscura) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 8007102,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -9482,7 +10283,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/8e840c5c-c75f-47a1-90e3-5559ad64422b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for moonrat (echinosorex gymnura) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2437114,
+          "inatTaxonId": 1370747,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8ed8aff1-cd22-47c4-8f9a-80ed276d88e9",
@@ -10352,8 +11207,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -10393,7 +11248,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 37 Dan review decisions (reject remove). Effective scope for human (homo sapiens) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2436436,
+          "inatTaxonId": 43584,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
@@ -10728,8 +11637,8 @@
     {
       "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -10769,7 +11678,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/9c7fff26-21ba-4c40-8f6f-747d182b5b46.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for australian ibis (threskiornis moluccus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 3740,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "9c970db3-1497-4397-bb06-06e3827570dd",
@@ -11424,8 +12387,8 @@
     {
       "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -11465,7 +12428,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/a6ae199d-c8fa-4f5d-bf4c-844d7b26320d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ashy-headed babbler (trichastoma cinereiceps) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 339801,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "a70c87e9-62bc-41c2-9e36-96fed9136046",
@@ -11860,98 +12877,6 @@
       "tags": []
     },
     {
-      "itemId": "aba05f1e-020f-49ce-a5c3-528482e1c5ce",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 8211070,
-      "inatTaxonId": 46001,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "ac01bf53-e125-4edd-8873-db9f519f1123",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 7261816,
-      "inatTaxonId": 1596132,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "ac0e8ba7-7261-4d17-8645-11ed3d02165a",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -12265,8 +13190,8 @@
     {
       "itemId": "af80ecfc-4048-4ae6-b0d5-66913090d777",
       "countryIso3": "USA-SD",
-      "status": "new_record",
-      "bucket": "New",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": null,
@@ -12355,7 +13280,110 @@
         "short": "National",
         "note": "2 dense observation areas were found in United States \u2013 South Dakota, so this is treated as national rather than a single regional pocket."
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/af80ecfc-4048-4ae6-b0d5-66913090d777.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T04:47:07.137529+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 4 Dan review decisions (accept add). Effective scope for mountain goat (oreamnos americanus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "af80ecfc-4048-4ae6-b0d5-66913090d777",
+          "countryIso3": "USA-SD",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": null,
+          "gbifCount": 220,
+          "inatCount": null,
+          "rawGbifPresent": true,
+          "rawInatPresent": null,
+          "rawGbifCount": 275,
+          "rawInatCount": null,
+          "gbifUsageKey": 2441151,
+          "inatTaxonId": 42414,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 275,
+            "qualifiedTotal": 220,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 90,
+            "outlierPointCount": 0,
+            "clusterCount": 2,
+            "clusterSpreadKm": 71.03149341577888,
+            "maxDistanceKm": 99.05686004509515,
+            "unique25kmCells": 5,
+            "unique50kmCells": 2,
+            "countryDiameterKm": 504.50664137381057,
+            "spreadRatio": 0.19634401595855244,
+            "coverageAreaKm2": 6525.948509052767,
+            "coverageRatio": 0.03264524903855715,
+            "footprintPolygonLatLngs": [
+              [
+                44.642713055757035,
+                -104.11750748772377
+              ],
+              [
+                44.47716076491163,
+                -104.06264837167956
+              ],
+              [
+                43.66355621006914,
+                -103.62398382468112
+              ],
+              [
+                43.59791481136043,
+                -103.37445441709949
+              ],
+              [
+                43.58870280277597,
+                -103.31508690990438
+              ],
+              [
+                43.59321459754021,
+                -103.27540249877762
+              ],
+              [
+                43.786176511266255,
+                -103.20525089841775
+              ],
+              [
+                44.66208068362167,
+                -103.86636660527921
+              ],
+              [
+                44.659071665377915,
+                -104.00015374286421
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "2 dense observation areas were found in United States \u2013 South Dakota, so this is treated as national rather than a single regional pocket."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "afb00c34-9ad0-4a3d-ae36-b828d4159afc",
@@ -12406,8 +13434,8 @@
     {
       "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -12447,7 +13475,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/b0cf0d5c-7609-49ff-b31e-20394b4bb71d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for bearded wood-partridge (dendrortyx barbatus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2474251,
+          "inatTaxonId": 1330,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -12486,10 +13568,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -12503,9 +13585,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-SD/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic mule (equus mulus) for United States \u2013 South Dakota (USA-SD). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 South Dakota (USA-SD).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -12564,8 +13646,8 @@
     {
       "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -12605,7 +13687,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/b2019c82-1245-44fe-b86e-a25bc1702de9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 50 Dan review decisions (custom scope rules, reject remove). Effective scope for emperor penguin (aptenodytes forsteri) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 2481661,
+          "inatTaxonId": 3820,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
@@ -12846,8 +13982,8 @@
     {
       "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -12887,7 +14023,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for siberian chipmunk (eutamias sibiricus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 520585,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b9a7f328-3bb9-4326-9665-cc8ab5d870e1",
@@ -13519,10 +14709,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -13536,9 +14726,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-SD/c150a21e-952d-4665-8a62-a319841c5a56.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic pig (sus scrofa scrofa) for United States \u2013 South Dakota (USA-SD). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 South Dakota (USA-SD).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -13641,52 +14831,6 @@
       "tags": []
     },
     {
-      "itemId": "c1750080-1f8e-4238-b121-066d700f1641",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": 8319,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "c2e2bf4d-87b4-473d-8627-0766605efb77",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -13735,8 +14879,8 @@
     {
       "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -13776,7 +14920,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/c30677db-a57e-4556-a7ff-cf77ef39324a.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for eastern moustached laughingthrush (garrulax cinereiceps) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "c35ee773-ead8-4a1b-b292-523162fbafc1",
@@ -14183,10 +15381,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -14200,9 +15398,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-SD/cae9534f-f302-4229-9e11-b91138333d92.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic chicken (gallus gallus domesticus) for United States \u2013 South Dakota (USA-SD). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 South Dakota (USA-SD).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
@@ -14543,8 +15741,8 @@
     {
       "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -14584,7 +15782,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/d0642934-f9d4-4f5d-a3b7-67fb0a55c751.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked tuftedcheek (pseudocolaptes boissonneauii) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 9142779,
+          "inatTaxonId": 11603,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d195f0ca-438e-4826-8fce-5e0de1ee27b6",
@@ -14727,8 +15979,8 @@
     {
       "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -14768,7 +16020,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/d42fc24e-515b-470e-87e2-6f15d93ffdb8.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for sumatran mountain muntjac (muntiacus montanus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": 42186,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d437edb5-ebbd-4ac1-997e-4f5adc461179",
@@ -14865,8 +16171,8 @@
     {
       "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -14906,7 +16212,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/d5120db5-2a59-45d7-a3ee-bc6d06b00b57.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for saddleback tamarin (leontocebus fuscicollis) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 8493215,
+          "inatTaxonId": 43389,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d5636405-819a-495a-b2d1-0f802d52c1bd",
@@ -14957,8 +16317,8 @@
     {
       "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -14998,7 +16358,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+          "countryIso3": "USA-SD",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
@@ -16000,101 +17414,6 @@
       "tags": []
     },
     {
-      "itemId": "eb3829b0-772e-4088-ae90-f11b9fe38284",
-      "countryIso3": "USA-SD",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 143,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 177,
-      "rawInatCount": null,
-      "gbifUsageKey": 2440958,
-      "inatTaxonId": 204113,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 177,
-        "qualifiedTotal": 143,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 84,
-        "outlierPointCount": 6,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 98.94392648552294,
-        "unique25kmCells": 12,
-        "unique50kmCells": 5,
-        "countryDiameterKm": 504.50664137381057,
-        "spreadRatio": 0.19612016645824717,
-        "coverageAreaKm2": 8960.255993782665,
-        "coverageRatio": 0.04482257068999107,
-        "footprintPolygonLatLngs": [
-          [
-            43.967105698215704,
-            -104.203719108213
-          ],
-          [
-            43.641186660095755,
-            -103.99703305153109
-          ],
-          [
-            43.24980961638178,
-            -103.43304779674236
-          ],
-          [
-            43.26589927139791,
-            -103.32793477223964
-          ],
-          [
-            43.37965737493657,
-            -103.13289054227072
-          ],
-          [
-            44.053944999824644,
-            -103.10078802939734
-          ],
-          [
-            44.39729808201132,
-            -103.55898601939273
-          ],
-          [
-            44.430658947473596,
-            -103.77719941714821
-          ],
-          [
-            44.28154787627948,
-            -104.0926015285678
-          ]
-        ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "Dropped 6 likely outlier points before scoring. The cleaned outer footprint covers 4.5% of United States \u2013 South Dakota, so it stays regional."
-      },
-      "tags": []
-    },
-    {
       "itemId": "ebae8364-48b4-462b-9e2b-b13fb4751a22",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -17023,8 +18342,8 @@
     {
       "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
       "countryIso3": "USA-SD",
-      "status": "unlisted",
-      "bucket": "Unlisted",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": null,
@@ -17070,7 +18389,67 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-SD/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject add). Effective scope for house mouse (mus musculus) in United States \u2013 South Dakota (USA-SD).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
+          "countryIso3": "USA-SD",
+          "status": "unlisted",
+          "bucket": "Unlisted",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": null,
+          "gbifCount": 3,
+          "inatCount": null,
+          "rawGbifPresent": true,
+          "rawInatPresent": null,
+          "rawGbifCount": 68,
+          "rawInatCount": null,
+          "gbifUsageKey": 7429082,
+          "inatTaxonId": 44705,
+          "inatPlaceId": 4201,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 68,
+            "qualifiedTotal": 3,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 504.50664137381057,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "fb0b6995-6f9e-4fde-8358-a03f196bf768",
@@ -17355,52 +18734,6 @@
       "tags": []
     },
     {
-      "itemId": "ff28e3a2-9c5e-4697-b949-4ff2f9153ea8",
-      "countryIso3": "USA-SD",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2434883,
-      "inatTaxonId": 925699,
-      "inatPlaceId": 4201,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "ff31e033-1f44-4772-9317-c1236e27a635",
       "countryIso3": "USA-SD",
       "status": "likely_true_one_source",
@@ -17585,73 +18918,56 @@
       "tags": []
     }
   ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "sourceFile": "data/review-overrides/countries/USA-SD/601cf098-9876-4912-84bb-0926834305e9.json",
-      "updatedAtUtc": "2026-06-09T00:00:00Z",
-      "updatedBy": "github-review",
-      "reason": "Manual review correction: remove grizzly bear (ursus u. arctos) from United States \u2013 South Dakota (USA-SD). Keep grizzly on the national USA/CAN packs only until state-level coverage is explicitly reviewed.",
-      "baseEntry": {
-        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-        "countryIso3": "USA-SD",
-        "status": "likely_false",
-        "bucket": "Needs Review",
-        "expected": true,
-        "gbifPresent": null,
-        "inatPresent": null,
-        "gbifCount": null,
-        "inatCount": null,
-        "rawGbifPresent": null,
-        "rawInatPresent": null,
-        "rawGbifCount": null,
-        "rawInatCount": null,
-        "gbifUsageKey": null,
-        "inatTaxonId": null,
-        "inatPlaceId": 4201,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 0,
-          "qualifiedTotal": 0,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "country_pack_only",
-          "label": "State pack only",
-          "short": "Pack-only",
-          "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-          "significant": false,
-          "footprintPolygonLatLngs": []
-        },
-        "tags": []
-      }
-    }
-  ],
   "manualOverrideSummary": {
-    "count": 8,
-    "appliedAtUtc": "2026-06-09T05:26:05.987979+00:00",
+    "count": 46,
+    "appliedAtUtc": "2026-06-09T09:53:26.596517+00:00",
     "items": [
+      "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+      "072d8e15-64e0-41a6-9e81-007bef444fff",
+      "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+      "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
+      "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+      "230c8c2d-4758-42c6-ac85-36a722f04977",
+      "249cae46-0a84-43db-be08-404a6695c171",
+      "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "3e4fac86-1e90-403c-b798-c20a93df373c",
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
+      "4385382e-2007-4b12-a150-54e63bbfee0d",
+      "514d9dd8-f2de-4a19-87df-3859e9063270",
       "601cf098-9876-4912-84bb-0926834305e9",
+      "67f8d7af-2d29-4b22-8810-71e798cac94d",
+      "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+      "711807fc-ba18-4107-bb8f-daf9caea5c13",
+      "746d3e98-64af-4897-9cd3-c09b169a8c69",
+      "7582ac8c-c63c-4531-a436-d4b532e753be",
+      "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+      "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+      "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+      "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+      "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+      "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+      "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+      "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+      "af80ecfc-4048-4ae6-b0d5-66913090d777",
+      "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
+      "b2019c82-1245-44fe-b86e-a25bc1702de9",
+      "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92"
+      "c30677db-a57e-4556-a7ff-cf77ef39324a",
+      "cae9534f-f302-4229-9e11-b91138333d92",
+      "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+      "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+      "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+      "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b"
     ]
   }
 }

@@ -639,6 +639,66 @@ function latLngPolygonToGeoJsonRing(polygon) {
   return ring;
 }
 
+function geoJsonRingToLatLngPolygon(ring) {
+  if (!Array.isArray(ring)) {
+    return [];
+  }
+
+  const normalizedRing = ring.slice();
+  if (normalizedRing.length) {
+    const first = normalizedRing[0];
+    const last = normalizedRing[normalizedRing.length - 1];
+    if (Array.isArray(first) && Array.isArray(last) && first[0] === last[0] && first[1] === last[1]) {
+      normalizedRing.pop();
+    }
+  }
+
+  return sanitizePolygon(normalizedRing.map((point) => [point[1], point[0]]));
+}
+
+function geoJsonGeometryToLatLngPolygons(geometry) {
+  if (!geometry) {
+    return [];
+  }
+
+  if (geometry.type === "Polygon") {
+    return [geoJsonRingToLatLngPolygon(geometry.coordinates?.[0] || [])].filter((polygon) => polygon.length >= 3);
+  }
+
+  if (geometry.type === "MultiPolygon") {
+    return (geometry.coordinates || [])
+      .map((polygon) => geoJsonRingToLatLngPolygon(polygon?.[0] || []))
+      .filter((polygon) => polygon.length >= 3);
+  }
+
+  return [];
+}
+
+function normalizeAdminRegionalPolygons(rawPolygons) {
+  const polygons = sanitizePolygons(rawPolygons);
+  if (!polygons.length || !currentCountryGeometry) {
+    return polygons;
+  }
+
+  const countryClipContext = getCountryClipContext(currentCountryGeometry);
+  if (!countryClipContext?.country?.length) {
+    return polygons;
+  }
+
+  const normalizedPolygons = polygons
+    .flatMap((polygon) => clipFeatureToCountry({
+      type: "Feature",
+      properties: {},
+      geometry: {
+        type: "Polygon",
+        coordinates: [latLngPolygonToGeoJsonRing(polygon)],
+      },
+    }, countryClipContext))
+    .flatMap((feature) => geoJsonGeometryToLatLngPolygons(feature?.geometry));
+
+  return normalizedPolygons.length ? sanitizePolygons(normalizedPolygons) : polygons;
+}
+
 function resolveObservationProfile(entry, packMode) {
   const rawProfile = entry.observationProfile || {};
   const code = cleanText(rawProfile.code) || (packMode === "baseline" ? "country_pack_only" : "unscored");
@@ -1832,7 +1892,7 @@ function adminOverrideStatus(ticket) {
 
 function adminObservationProfile(ticket) {
   if (ticket.scope === "regional") {
-    const polygons = sanitizePolygons(ticket.polygons);
+    const polygons = normalizeAdminRegionalPolygons(ticket.polygons);
     return {
       code: "regional",
       label: "Regional footprint",

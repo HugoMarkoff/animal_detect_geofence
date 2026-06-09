@@ -1,0 +1,20 @@
+{
+  "countryIso3": "USA-OR",
+  "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for australian ibis (threskiornis moluccus) in United States \u2013 Oregon (USA-OR).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": true,
+    "observationProfile": {
+      "code": "country_pack_only",
+      "label": "State pack only",
+      "short": "Pack-only",
+      "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+      "significant": false,
+      "footprintPolygonLatLngs": []
+    }
+  }
+}

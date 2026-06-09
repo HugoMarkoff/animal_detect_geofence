@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 520,
+    "total": 489,
     "statusCounts": {
-      "likely_true_one_source": 314,
-      "likely_false": 76,
-      "unlisted": 122,
-      "new_record": 8
+      "likely_true_one_source": 347,
+      "likely_false": 30,
+      "unlisted": 107,
+      "new_record": 5
     },
     "bucketCounts": {
-      "Likely Valid": 314,
-      "Needs Review": 76,
-      "Unlisted": 122,
-      "New": 8
+      "Likely Valid": 347,
+      "Needs Review": 30,
+      "Unlisted": 107,
+      "New": 5
     }
   },
   "entries": [
@@ -305,8 +305,8 @@
     {
       "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -346,7 +346,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/033f2ecb-bf36-4ce1-bf3f-7efcd71fe374.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for grey-necked wood-rail (aramides cajaneus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 513889,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0364fc81-17d7-4495-a48c-4fc396b44d5d",
@@ -390,58 +444,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "03c512a1-bfb6-4c47-8e1a-ace60d268b11",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 4,
-      "rawInatCount": 0,
-      "gbifUsageKey": 7477334,
-      "inatTaxonId": 496700,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 4,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -495,8 +497,8 @@
     {
       "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -536,7 +538,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/072d8e15-64e0-41a6-9e81-007bef444fff.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for lesser tropical ground squirel (notocitellus adocetus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7478670,
+          "inatTaxonId": 179982,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "07843615-e1fc-49d8-9821-fd1d7ff2e773",
@@ -723,58 +779,6 @@
       "tags": []
     },
     {
-      "itemId": "0a11c18f-e253-4651-bb1b-4c642e8a03a7",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 2,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5219616,
-      "inatTaxonId": 43042,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 2,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "0a2ec348-14c3-44d9-965f-80ec7681551c",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -915,8 +919,8 @@
     {
       "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -956,7 +960,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for variable squirrel (callosciurus finlaysonii) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437399,
+          "inatTaxonId": 45949,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0ccfe789-41e3-45b8-bdbc-36f0ce73db48",
@@ -1047,85 +1105,6 @@
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
         "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "0cf1383a-38fc-421a-a769-3e47494d5edc",
-      "countryIso3": "USA-NM",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 262,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 318,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2495858,
-      "inatTaxonId": 3580,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 318,
-        "qualifiedTotal": 262,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 82,
-        "outlierPointCount": 8,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 12.806406606502398,
-        "unique25kmCells": 4,
-        "unique50kmCells": 4,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0.020224331468262413,
-        "coverageAreaKm2": 410.32938530380204,
-        "coverageRatio": 0.0013029762931305775,
-        "footprintPolygonLatLngs": [
-          [
-            32.25835919854738,
-            -106.87239832948218
-          ],
-          [
-            32.24864188478236,
-            -106.86106934169685
-          ],
-          [
-            32.30756735826279,
-            -106.57176070070396
-          ],
-          [
-            32.265084560147976,
-            -106.87287512224272
-          ],
-          [
-            32.263156749977064,
-            -106.87279920358762
-          ]
-        ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "Dropped 8 likely outlier points before scoring. The cleaned outer footprint covers 0.1% of United States \u2013 New Mexico, so it stays regional."
       },
       "tags": []
     },
@@ -1923,8 +1902,8 @@
     {
       "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -1964,7 +1943,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/169ed977-68c0-4685-a5e9-9ddbc90b6997.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked wren-babbler (turdinus brevicaudatus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7625239,
+          "inatTaxonId": 1289433,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
@@ -2095,10 +2128,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -2112,9 +2145,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-NM/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goat (capra aegagrus hircus) for United States \u2013 New Mexico (USA-NM). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 New Mexico (USA-NM).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
@@ -2219,8 +2252,8 @@
     {
       "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2260,53 +2293,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "19cb4cb0-7a99-41cb-a962-1d7598a61173",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2497380,
-      "inatTaxonId": 19757,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/199a9842-5e9d-43f8-ace6-2bfe868a81c9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for olive-winged trumpeter (psophia dextralis) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 10875550,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "19fd235e-d808-4e22-bfae-42491045b763",
@@ -3089,8 +3130,8 @@
     {
       "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3130,7 +3171,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/230c8c2d-4758-42c6-ac85-36a722f04977.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for brazilian squirrel (guerlinguetus brasiliensis) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 45998,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "23140944-2bd7-46ce-819a-c26508c53d62",
@@ -3181,8 +3276,8 @@
     {
       "itemId": "249cae46-0a84-43db-be08-404a6695c171",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -3222,7 +3317,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/249cae46-0a84-43db-be08-404a6695c171.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-eared ground-thrush (geokichla camaronensis) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "249cae46-0a84-43db-be08-404a6695c171",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 6100884,
+          "inatTaxonId": 201197,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "24b341f7-149b-4a57-96b9-69f8ff6724c2",
@@ -3365,8 +3514,8 @@
     {
       "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -3406,7 +3555,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/25ca4716-54f4-4f69-9b15-ab5af6d38cbd.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese serow (capricornis milneedwardsii) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7261423,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "262a2437-8a73-4251-9717-7571b27fa651",
@@ -3509,8 +3712,8 @@
     {
       "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -3550,7 +3753,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for common woolly monkey (lagothrix lagotricha) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "277c1292-8e80-4de1-a630-239ba0f7416d",
@@ -3745,8 +4002,8 @@
     {
       "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -3786,7 +4043,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for pur\u00fas red howler monkey (alouatta puruensis) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 5786093,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "283061f7-1159-4e65-a75b-e6c1b1a13abd",
@@ -4123,52 +4434,6 @@
       "tags": []
     },
     {
-      "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 62528,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "2f59b4c2-2f9e-4c37-a201-42fdb64184e2",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -4368,52 +4633,6 @@
       "rawInatCount": 0,
       "gbifUsageKey": null,
       "inatTaxonId": 201043,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "317171d7-d306-4e71-9a4a-33e62012076b",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5220126,
-      "inatTaxonId": 42184,
       "inatPlaceId": 4192,
       "managedEvidence": {
         "domesticNamed": false,
@@ -5159,81 +5378,6 @@
       "tags": []
     },
     {
-      "itemId": "3a50c7a6-4aaa-4480-bda3-4ddce4b31706",
-      "countryIso3": "USA-NM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 30,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 30,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 30,
-        "qualifiedTotal": 30,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 8,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 30,
-        "corePointCount": 17,
-        "outlierPointCount": 13,
-        "clusterCount": 2,
-        "clusterSpreadKm": 122.37928391933433,
-        "maxDistanceKm": 163.00064717941748,
-        "unique25kmCells": 5,
-        "unique50kmCells": 5,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0.2574164025390236,
-        "coverageAreaKm2": 13142.462815070015,
-        "coverageRatio": 0.04173310051559622,
-        "footprintPolygonLatLngs": [
-          [
-            33.82075500259201,
-            -106.96558770329653
-          ],
-          [
-            33.55346060249795,
-            -106.91033284748356
-          ],
-          [
-            35.52300381709084,
-            -106.54217926439883
-          ],
-          [
-            35.42661196913981,
-            -106.63307295076012
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 13 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 New Mexico, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
       "itemId": "3a7272f0-5947-4f1a-9f93-31cc6c852569",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -5326,56 +5470,10 @@
       "tags": []
     },
     {
-      "itemId": "3a8f6da9-0910-49a0-bfa8-c5217d15e2d9",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2480635,
-      "inatTaxonId": 1578973,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -5415,7 +5513,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/3b0ae87d-0cb4-46c4-822b-c65047e69a88.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for long-nosed mongoose (herpestes naso) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2434299,
+          "inatTaxonId": 925980,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "3b2e6713-957d-44e5-abe7-dfe8b8313cd2",
@@ -5510,58 +5662,6 @@
       "tags": []
     },
     {
-      "itemId": "3cf50332-d826-4a1d-8ff0-7e431612d8fb",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5231397,
-      "inatTaxonId": 15559,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -5598,10 +5698,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -5615,9 +5715,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-NM/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic dog (canis familiaris) for United States \u2013 New Mexico (USA-NM). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 New Mexico (USA-NM).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
@@ -5786,58 +5886,6 @@
       }
     },
     {
-      "itemId": "3e6938fe-1de2-4508-8813-c15793a0f7b7",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 31,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2495134,
-      "inatTaxonId": 20504,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 31,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "3eb4472d-b8da-4bd8-9533-7b9b4e844f6a",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -5966,10 +6014,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -5983,9 +6031,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-NM/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goose (anser anser domesticus) for United States \u2013 New Mexico (USA-NM). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 New Mexico (USA-NM).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
@@ -6366,8 +6414,8 @@
     {
       "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -6407,7 +6455,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/4385382e-2007-4b12-a150-54e63bbfee0d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for redness tree squirrel (funisciurus anerythrus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437413,
+          "inatTaxonId": 45964,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "43d4ed66-72e7-4114-94f3-e7765c79fb49",
@@ -6451,58 +6553,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "43d9103c-362c-40c6-9a16-4c82b8bed23c",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 2,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440946,
-      "inatTaxonId": 42187,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 2,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -7393,89 +7443,6 @@
       "tags": []
     },
     {
-      "itemId": "4f20e9f2-cdf0-458a-9110-69588acfabd2",
-      "countryIso3": "USA-NM",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 192,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 220,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2498252,
-      "inatTaxonId": 72486,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 220,
-        "qualifiedTotal": 192,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 88,
-        "outlierPointCount": 2,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 12.771767398884952,
-        "unique25kmCells": 4,
-        "unique50kmCells": 4,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0.020169628003178192,
-        "coverageAreaKm2": 457.50738167182396,
-        "coverageRatio": 0.001452787184152726,
-        "footprintPolygonLatLngs": [
-          [
-            34.35736371968403,
-            -103.27503167388755
-          ],
-          [
-            34.33602593409661,
-            -103.18902736788034
-          ],
-          [
-            34.33678532718229,
-            -103.17046136301579
-          ],
-          [
-            34.33707558153098,
-            -103.16712061448868
-          ],
-          [
-            34.591341501367594,
-            -103.1579156329183
-          ],
-          [
-            34.58392534143574,
-            -103.16892600566844
-          ]
-        ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "Dropped 2 likely outlier points before scoring. The cleaned outer footprint covers 0.1% of United States \u2013 New Mexico, so it stays regional."
-      },
-      "tags": []
-    },
-    {
       "itemId": "4f8ba742-4d2c-4827-a4f3-56ed8f525493",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -7517,58 +7484,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "502958f0-482d-4a66-96d8-5018edd893ee",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 5,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473339,
-      "inatTaxonId": 1449,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 5,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -7861,8 +7776,8 @@
     {
       "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -7902,7 +7817,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/514d9dd8-f2de-4a19-87df-3859e9063270.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white-vented shama (kittacincla nigra) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 9099332,
+          "inatTaxonId": 13160,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "51be2961-ffb2-4ccc-9289-47f66f187112",
@@ -8619,58 +8588,6 @@
       "tags": []
     },
     {
-      "itemId": "5a565886-156e-4b19-a017-6a5bbae4df0f",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 2,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 9,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436940,
-      "inatTaxonId": 43151,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 9,
-        "qualifiedTotal": 2,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "5a9b1344-2dd5-4162-9d85-77ee4648ad9c",
       "countryIso3": "USA-NM",
       "status": "unlisted",
@@ -8960,52 +8877,6 @@
         "unique50kmCells": 0,
         "countryDiameterKm": 633.2177964250241,
         "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "5c7ce479-8a45-40b3-ae21-7c97dfae22f5",
-      "countryIso3": "USA-NM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 228,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 228,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440965,
-      "inatTaxonId": 42223,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 228,
-        "qualifiedTotal": 228,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -9403,6 +9274,106 @@
       "tags": []
     },
     {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "countryIso3": "USA-NM",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": 4192,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/601cf098-9876-4912-84bb-0926834305e9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for grizzly bear (ursus u. arctos) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
+    },
+    {
       "itemId": "6038ccfc-94bd-4f04-9ec8-77a4f1fb78fe",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -9640,58 +9611,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "61fb7ee1-6dfa-4795-853e-6f2d005b55cf",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2479646,
-      "inatTaxonId": 18998,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -10361,8 +10280,8 @@
     {
       "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -10402,7 +10321,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/67f8d7af-2d29-4b22-8810-71e798cac94d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for three-striped ground squirrel (lariscus insignis) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437524,
+          "inatTaxonId": 46187,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "68574b5e-4576-4953-a704-6bbf9d8e6e80",
@@ -10779,52 +10752,6 @@
       "tags": []
     },
     {
-      "itemId": "6a98bd16-7d55-4c3b-a270-1b353ff46233",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 1584359,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "6acc4360-3b6c-4b7e-9d77-3c266e17255b",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -11023,8 +10950,8 @@
     {
       "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -11064,7 +10991,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/6c7c93e1-741a-4152-8f0f-8f161a388d78.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for limestone wren-babbler (turdinus crispifrons) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7452882,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "6cced5c0-5992-4bc6-ae91-27786b320087",
@@ -11305,8 +11286,8 @@
     {
       "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -11346,7 +11327,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/711807fc-ba18-4107-bb8f-daf9caea5c13.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ochre-winged trumpeter (psophia ochroptera) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7430311,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7118bbdb-e089-49e0-8a42-606499c94170",
@@ -11545,52 +11580,6 @@
       "tags": []
     },
     {
-      "itemId": "73baf300-5592-4ab5-9da8-7da898477934",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2433875,
-      "inatTaxonId": 855297,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -11619,52 +11608,6 @@
       "evidenceQuality": {
         "rawTotal": 1023,
         "qualifiedTotal": 1023,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "USA-NM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 3,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 3,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 3,
-        "qualifiedTotal": 3,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -11731,8 +11674,8 @@
     {
       "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -11772,7 +11715,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/7582ac8c-c63c-4531-a436-d4b532e753be.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for horsfield's tarsier (tarsius bancanus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1369285,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7631afd3-ab8e-4e88-9243-2c21386595eb",
@@ -12011,52 +12008,6 @@
       "tags": []
     },
     {
-      "itemId": "7921cb6a-4459-4a87-ad65-0610a8ab4556",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434825,
-      "inatTaxonId": 75102,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "79717041-367a-4b1a-ab23-3fbad67b3c5e",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -12151,8 +12102,8 @@
     {
       "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12192,7 +12143,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/7a3f5fb1-8e10-44c8-b040-d0672788540c.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for argentine gray fox (lycalopex griseus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 332338,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7a839b39-9916-45ec-a01b-d88d814a11ed",
@@ -12249,8 +12254,8 @@
     {
       "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -12290,7 +12295,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/7ade12e0-5b31-4402-b97b-7a3631bcec6e.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese goral (naemorhedus griseus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7261419,
+          "inatTaxonId": 74722,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7bef348d-37cf-4b5b-bf91-e4fe2dfc483c",
@@ -12589,8 +12648,8 @@
     {
       "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12630,105 +12689,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "83133617-8358-4910-82ee-4c23e40ba3dc",
-      "countryIso3": "USA-NM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 30,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 30,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 30,
-        "qualifiedTotal": 30,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "837b9391-b201-41ad-a24a-b0549588efd8",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 3,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437140,
-      "inatTaxonId": 43055,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 3,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/82557fe4-2c1e-45ff-9920-c6407a348bf3.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for archer's robin-chat (dessonornis archeri) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1585904,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "85dba961-ba18-4330-9783-8ffd476ffa96",
@@ -13346,58 +13361,6 @@
       "tags": []
     },
     {
-      "itemId": "89851bea-765b-431a-bb03-6f821931ebdc",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 6,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 14,
-      "rawInatCount": 0,
-      "gbifUsageKey": 9326020,
-      "inatTaxonId": 882,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 14,
-        "qualifiedTotal": 6,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "89f17afb-fc00-4f9c-a2e1-69e22aada406",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -13538,8 +13501,8 @@
     {
       "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -13579,7 +13542,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/8a57d557-41a8-4282-9e37-59f1b9e806ea.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white/crandall's saddleback tamarin (saguinus melanoleucus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
@@ -13807,8 +13824,8 @@
     {
       "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -13848,7 +13865,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/8bff2ed4-679e-4a5d-8874-948b9c4700b5.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for black flying squirrel (aeromys tephromelas) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437384,
+          "inatTaxonId": 45991,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8c3a4d44-b86e-4678-b39c-bbc13b88aecd",
@@ -13997,8 +14068,8 @@
     {
       "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -14038,7 +14109,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/8d3957d7-0150-4d46-9a8b-c7278d9d0b9d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-winged trumpeter (psophia obscura) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 8007102,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8d86a4a1-7ffc-404c-b228-7aa0aacb6b1f",
@@ -14087,62 +14212,10 @@
       "tags": []
     },
     {
-      "itemId": "8d89eb76-e6bc-406b-bc71-dbc0837dca16",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 10,
-      "rawInatCount": 0,
-      "gbifUsageKey": 4267251,
-      "inatTaxonId": 74091,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 10,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -14182,7 +14255,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/8e840c5c-c75f-47a1-90e3-5559ad64422b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for moonrat (echinosorex gymnura) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437114,
+          "inatTaxonId": 1370747,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8ed8aff1-cd22-47c4-8f9a-80ed276d88e9",
@@ -14226,58 +14353,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "8ff5f9db-dbd5-4ad3-a834-22ade546c36b",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 4,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434126,
-      "inatTaxonId": 41943,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 4,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -16097,8 +16172,8 @@
     {
       "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -16138,7 +16213,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/9c7fff26-21ba-4c40-8f6f-747d182b5b46.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for australian ibis (threskiornis moluccus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 3740,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "9c970db3-1497-4397-bb06-06e3827570dd",
@@ -16955,8 +17084,8 @@
     {
       "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -16996,7 +17125,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/a6ae199d-c8fa-4f5d-bf4c-844d7b26320d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ashy-headed babbler (trichastoma cinereiceps) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 339801,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "a70c87e9-62bc-41c2-9e36-96fed9136046",
@@ -17547,98 +17730,6 @@
       "tags": []
     },
     {
-      "itemId": "aba05f1e-020f-49ce-a5c3-528482e1c5ce",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 8211070,
-      "inatTaxonId": 46001,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "ac01bf53-e125-4edd-8873-db9f519f1123",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 7261816,
-      "inatTaxonId": 1596132,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "ac0e8ba7-7261-4d17-8645-11ed3d02165a",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -18100,8 +18191,8 @@
     {
       "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -18141,7 +18232,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/b0cf0d5c-7609-49ff-b31e-20394b4bb71d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for bearded wood-partridge (dendrortyx barbatus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2474251,
+          "inatTaxonId": 1330,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -18180,10 +18325,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -18197,9 +18342,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-NM/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic mule (equus mulus) for United States \u2013 New Mexico (USA-NM). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 New Mexico (USA-NM).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -18258,8 +18403,8 @@
     {
       "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -18299,7 +18444,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/b2019c82-1245-44fe-b86e-a25bc1702de9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 50 Dan review decisions (custom scope rules, reject remove). Effective scope for emperor penguin (aptenodytes forsteri) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2481661,
+          "inatTaxonId": 3820,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b2970a27-4413-4b99-b777-29f0b56632a0",
@@ -18831,8 +19030,8 @@
     {
       "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -18872,7 +19071,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for siberian chipmunk (eutamias sibiricus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 520585,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b9f145ef-bd00-4d66-93ba-6e3fb4e51e9f",
@@ -19576,10 +19829,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -19593,9 +19846,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-NM/c150a21e-952d-4665-8a62-a319841c5a56.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic pig (sus scrofa scrofa) for United States \u2013 New Mexico (USA-NM). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 New Mexico (USA-NM).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -19680,52 +19933,6 @@
       "evidenceQuality": {
         "rawTotal": 12848,
         "qualifiedTotal": 12848,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "c1750080-1f8e-4238-b121-066d700f1641",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 8319,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -19838,8 +20045,8 @@
     {
       "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -19879,7 +20086,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/c30677db-a57e-4556-a7ff-cf77ef39324a.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for eastern moustached laughingthrush (garrulax cinereiceps) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "c35ee773-ead8-4a1b-b292-523162fbafc1",
@@ -20534,10 +20795,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -20551,9 +20812,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-NM/cae9534f-f302-4229-9e11-b91138333d92.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic chicken (gallus gallus domesticus) for United States \u2013 New Mexico (USA-NM). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 New Mexico (USA-NM).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
@@ -20992,8 +21253,8 @@
     {
       "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -21033,7 +21294,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/d0642934-f9d4-4f5d-a3b7-67fb0a55c751.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked tuftedcheek (pseudocolaptes boissonneauii) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 9142779,
+          "inatTaxonId": 11603,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d0a759dc-58ec-4c06-abb9-e60a26931962",
@@ -21372,8 +21687,8 @@
     {
       "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -21413,7 +21728,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/d42fc24e-515b-470e-87e2-6f15d93ffdb8.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for sumatran mountain muntjac (muntiacus montanus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 42186,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d437edb5-ebbd-4ac1-997e-4f5adc461179",
@@ -21457,58 +21826,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "d43df410-ee4e-4a4a-95e3-dabdcc8299c7",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 17,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436652,
-      "inatTaxonId": 43435,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 17,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -21562,8 +21879,8 @@
     {
       "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -21603,7 +21920,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/d5120db5-2a59-45d7-a3ee-bc6d06b00b57.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for saddleback tamarin (leontocebus fuscicollis) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 8493215,
+          "inatTaxonId": 43389,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d5636405-819a-495a-b2d1-0f802d52c1bd",
@@ -21706,8 +22077,8 @@
     {
       "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -21747,7 +22118,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d668b142-a012-4c44-b837-7b4e92a89119",
@@ -22249,58 +22674,6 @@
       },
       "evidenceQuality": {
         "rawTotal": 6,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "dd39bbd5-077c-482e-9d33-bd176116c870",
-      "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 48,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440892,
-      "inatTaxonId": 43335,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 48,
         "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
@@ -23622,93 +23995,6 @@
       "tags": []
     },
     {
-      "itemId": "eb3829b0-772e-4088-ae90-f11b9fe38284",
-      "countryIso3": "USA-NM",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1947,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 2986,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440958,
-      "inatTaxonId": 204113,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 2986,
-        "qualifiedTotal": 1947,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 65,
-        "outlierPointCount": 25,
-        "clusterCount": 2,
-        "clusterSpreadKm": 307.79771651125344,
-        "maxDistanceKm": 373.68691947749625,
-        "unique25kmCells": 11,
-        "unique50kmCells": 5,
-        "countryDiameterKm": 633.2177964250241,
-        "spreadRatio": 0.5901396353470026,
-        "coverageAreaKm2": 84519.38314279815,
-        "coverageRatio": 0.26838621967946524,
-        "footprintPolygonLatLngs": [
-          [
-            36.41048630281122,
-            -106.9025978169023
-          ],
-          [
-            36.39919020439444,
-            -106.90125762531645
-          ],
-          [
-            32.27638638373843,
-            -105.71872473718236
-          ],
-          [
-            32.323895950955226,
-            -105.3750949300801
-          ],
-          [
-            32.91155085637798,
-            -105.30003210857888
-          ],
-          [
-            36.7236241647847,
-            -106.03221912308685
-          ],
-          [
-            36.807316751747244,
-            -106.43329999114407
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 25 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 New Mexico, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
       "itemId": "eb70c899-f974-48a0-8134-256c751e3b38",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -23849,8 +24135,8 @@
     {
       "itemId": "ebff6251-9fd2-4e1b-a2db-f0db3190a289",
       "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -23890,7 +24176,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/ebff6251-9fd2-4e1b-a2db-f0db3190a289.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 24 Dan review decisions (custom scope rules, reject remove). Effective scope for australian zebra finch (taeniopygia castanotis) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "ebff6251-9fd2-4e1b-a2db-f0db3190a289",
+          "countryIso3": "USA-NM",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
@@ -25487,52 +25827,6 @@
       "tags": []
     },
     {
-      "itemId": "ff28e3a2-9c5e-4697-b949-4ff2f9153ea8",
-      "countryIso3": "USA-NM",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434883,
-      "inatTaxonId": 925699,
-      "inatPlaceId": 4192,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "ff31e033-1f44-4772-9317-c1236e27a635",
       "countryIso3": "USA-NM",
       "status": "likely_true_one_source",
@@ -25673,8 +25967,8 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "USA-NM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": false,
@@ -25720,7 +26014,67 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-NM/ff803ff7-ed2b-4520-9304-99b408657f47.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for brown rat (rattus norvegicus) in United States \u2013 New Mexico (USA-NM).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+          "countryIso3": "USA-NM",
+          "status": "unlisted",
+          "bucket": "Unlisted",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 2,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 40,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2439261,
+          "inatTaxonId": 44576,
+          "inatPlaceId": 4192,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 40,
+            "qualifiedTotal": 2,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 633.2177964250241,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "ffe603fc-4920-4302-96d0-65f708bd5b2d",
@@ -25769,73 +26123,54 @@
       "tags": []
     }
   ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "sourceFile": "data/review-overrides/countries/USA-NM/601cf098-9876-4912-84bb-0926834305e9.json",
-      "updatedAtUtc": "2026-06-09T00:00:00Z",
-      "updatedBy": "github-review",
-      "reason": "Manual review correction: remove grizzly bear (ursus u. arctos) from United States \u2013 New Mexico (USA-NM). Keep grizzly on the national USA/CAN packs only until state-level coverage is explicitly reviewed.",
-      "baseEntry": {
-        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-        "countryIso3": "USA-NM",
-        "status": "likely_false",
-        "bucket": "Needs Review",
-        "expected": true,
-        "gbifPresent": null,
-        "inatPresent": null,
-        "gbifCount": null,
-        "inatCount": null,
-        "rawGbifPresent": null,
-        "rawInatPresent": null,
-        "rawGbifCount": null,
-        "rawInatCount": null,
-        "gbifUsageKey": null,
-        "inatTaxonId": null,
-        "inatPlaceId": 4192,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 0,
-          "qualifiedTotal": 0,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "country_pack_only",
-          "label": "State pack only",
-          "short": "Pack-only",
-          "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-          "significant": false,
-          "footprintPolygonLatLngs": []
-        },
-        "tags": []
-      }
-    }
-  ],
   "manualOverrideSummary": {
-    "count": 8,
-    "appliedAtUtc": "2026-06-09T05:26:05.788887+00:00",
+    "count": 44,
+    "appliedAtUtc": "2026-06-09T10:11:40.432114+00:00",
     "items": [
+      "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+      "072d8e15-64e0-41a6-9e81-007bef444fff",
+      "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+      "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
+      "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+      "230c8c2d-4758-42c6-ac85-36a722f04977",
+      "249cae46-0a84-43db-be08-404a6695c171",
+      "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "3e4fac86-1e90-403c-b798-c20a93df373c",
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
+      "4385382e-2007-4b12-a150-54e63bbfee0d",
+      "514d9dd8-f2de-4a19-87df-3859e9063270",
       "601cf098-9876-4912-84bb-0926834305e9",
+      "67f8d7af-2d29-4b22-8810-71e798cac94d",
+      "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+      "711807fc-ba18-4107-bb8f-daf9caea5c13",
+      "7582ac8c-c63c-4531-a436-d4b532e753be",
+      "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+      "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+      "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+      "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+      "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+      "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+      "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+      "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+      "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+      "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
+      "b2019c82-1245-44fe-b86e-a25bc1702de9",
+      "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92"
+      "c30677db-a57e-4556-a7ff-cf77ef39324a",
+      "cae9534f-f302-4229-9e11-b91138333d92",
+      "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+      "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+      "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+      "ebff6251-9fd2-4e1b-a2db-f0db3190a289",
+      "ff803ff7-ed2b-4520-9304-99b408657f47"
     ]
   }
 }

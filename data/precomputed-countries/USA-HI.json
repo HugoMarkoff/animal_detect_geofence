@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 255,
+    "total": 233,
     "statusCounts": {
-      "likely_true_one_source": 97,
-      "likely_false": 79,
-      "unlisted": 73,
-      "new_record": 6
+      "likely_true_one_source": 134,
+      "likely_false": 28,
+      "unlisted": 69,
+      "new_record": 2
     },
     "bucketCounts": {
-      "Likely Valid": 97,
-      "Needs Review": 79,
-      "Unlisted": 73,
-      "New": 6
+      "Likely Valid": 134,
+      "Needs Review": 28,
+      "Unlisted": 69,
+      "New": 2
     }
   },
   "entries": [
@@ -121,8 +121,8 @@
     {
       "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -162,7 +162,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/033f2ecb-bf36-4ce1-bf3f-7efcd71fe374.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for grey-necked wood-rail (aramides cajaneus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 513889,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "06bf09eb-a291-4e46-8409-7fa8f7096020",
@@ -259,8 +313,8 @@
     {
       "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -300,53 +354,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "07446a4c-36ba-4ea4-b43e-be2b56e5899d",
-      "countryIso3": "USA-HI",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 3,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 3,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2493447,
-      "inatTaxonId": 15182,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 3,
-        "qualifiedTotal": 3,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/072d8e15-64e0-41a6-9e81-007bef444fff.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for lesser tropical ground squirel (notocitellus adocetus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7478670,
+          "inatTaxonId": 179982,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "07843615-e1fc-49d8-9821-fd1d7ff2e773",
@@ -547,8 +609,8 @@
     {
       "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -588,7 +650,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for variable squirrel (callosciurus finlaysonii) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437399,
+          "inatTaxonId": 45949,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "0c4c310f-32cc-471a-8777-e6e46f2e192f",
@@ -994,8 +1110,8 @@
     {
       "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -1035,7 +1151,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/169ed977-68c0-4685-a5e9-9ddbc90b6997.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked wren-babbler (turdinus brevicaudatus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7625239,
+          "inatTaxonId": 1289433,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
@@ -1120,10 +1290,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -1137,9 +1307,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-HI/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goat (capra aegagrus hircus) for United States \u2013 Hawaii (USA-HI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 Hawaii (USA-HI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
@@ -1198,8 +1368,8 @@
     {
       "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -1239,53 +1409,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "19cb4cb0-7a99-41cb-a962-1d7598a61173",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2497380,
-      "inatTaxonId": 19757,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/199a9842-5e9d-43f8-ace6-2bfe868a81c9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for olive-winged trumpeter (psophia dextralis) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 10875550,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "1a5311ef-a0e0-4593-acd3-e291dd13f620",
@@ -1676,8 +1854,8 @@
     {
       "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1717,7 +1895,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/230c8c2d-4758-42c6-ac85-36a722f04977.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for brazilian squirrel (guerlinguetus brasiliensis) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 45998,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "23140944-2bd7-46ce-819a-c26508c53d62",
@@ -1774,8 +2006,8 @@
     {
       "itemId": "249cae46-0a84-43db-be08-404a6695c171",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -1815,13 +2047,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/249cae46-0a84-43db-be08-404a6695c171.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-eared ground-thrush (geokichla camaronensis) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "249cae46-0a84-43db-be08-404a6695c171",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 6100884,
+          "inatTaxonId": 201197,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -1861,7 +2147,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/25ca4716-54f4-4f69-9b15-ab5af6d38cbd.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese serow (capricornis milneedwardsii) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7261423,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "2745c505-069b-42d5-83d9-4aedd59166e7",
@@ -1918,8 +2258,8 @@
     {
       "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -1959,7 +2299,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for common woolly monkey (lagothrix lagotricha) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "27fed912-e295-41bb-a629-45703c71eaff",
@@ -2016,8 +2410,8 @@
     {
       "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -2057,7 +2451,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for pur\u00fas red howler monkey (alouatta puruensis) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 5786093,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "29f4ab9b-df46-4d87-9923-a9869fa5d503",
@@ -2232,52 +2680,6 @@
       "evidenceQuality": {
         "rawTotal": 119704,
         "qualifiedTotal": 119704,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 62528,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -2480,52 +2882,6 @@
       "tags": []
     },
     {
-      "itemId": "317171d7-d306-4e71-9a4a-33e62012076b",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5220126,
-      "inatTaxonId": 42184,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "330bb1e9-84d6-4e41-afa9-938aee17ea29",
       "countryIso3": "USA-HI",
       "status": "unlisted",
@@ -2672,8 +3028,8 @@
     {
       "itemId": "372497c3-8d96-41af-b755-1d7f3feb2ee4",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -2713,7 +3069,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/372497c3-8d96-41af-b755-1d7f3feb2ee4.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 3 Dan review decisions (custom scope rules, reject remove). Effective scope for javan mongoose (urva javanica) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "372497c3-8d96-41af-b755-1d7f3feb2ee4",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 925973,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "389cef00-abbf-4624-a16b-c90ce0fba691",
@@ -2768,93 +3178,6 @@
       "tags": []
     },
     {
-      "itemId": "3a50c7a6-4aaa-4480-bda3-4ddce4b31706",
-      "countryIso3": "USA-HI",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 362,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 362,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 362,
-        "qualifiedTotal": 362,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 72,
-        "outlierPointCount": 18,
-        "clusterCount": 2,
-        "clusterSpreadKm": 95.48605918125052,
-        "maxDistanceKm": 115.07309135991937,
-        "unique25kmCells": 7,
-        "unique50kmCells": 5,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 0.6060955788544717,
-        "coverageAreaKm2": 11647.216052430731,
-        "coverageRatio": 0.41140249558230835,
-        "footprintPolygonLatLngs": [
-          [
-            18.904716463055617,
-            -155.78873299647856
-          ],
-          [
-            18.872197717486973,
-            -155.78271038703733
-          ],
-          [
-            19.506313911044057,
-            -154.7029537704914
-          ],
-          [
-            19.58415127262276,
-            -154.72773023468935
-          ],
-          [
-            20.04014317537642,
-            -155.04289297640287
-          ],
-          [
-            20.20903093089519,
-            -155.41333218144214
-          ],
-          [
-            18.90836453643148,
-            -155.78865958150502
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 18 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Hawaii, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
       "itemId": "3a8b9ae7-a5b0-497d-b4b7-8ffbe7f870d0",
       "countryIso3": "USA-HI",
       "status": "likely_true_one_source",
@@ -2901,56 +3224,10 @@
       "tags": []
     },
     {
-      "itemId": "3a8f6da9-0910-49a0-bfa8-c5217d15e2d9",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2480635,
-      "inatTaxonId": 1578973,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -2990,7 +3267,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/3b0ae87d-0cb4-46c4-822b-c65047e69a88.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for long-nosed mongoose (herpestes naso) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2434299,
+          "inatTaxonId": 925980,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "3ca3aec2-2579-4196-ad14-fe52bd70d64e",
@@ -3039,58 +3370,6 @@
       "tags": []
     },
     {
-      "itemId": "3cf50332-d826-4a1d-8ff0-7e431612d8fb",
-      "countryIso3": "USA-HI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5231397,
-      "inatTaxonId": 15559,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-HI",
       "status": "likely_true_one_source",
@@ -3127,10 +3406,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -3144,9 +3423,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-HI/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic dog (canis familiaris) for United States \u2013 Hawaii (USA-HI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 Hawaii (USA-HI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
@@ -3377,10 +3656,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -3394,9 +3673,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-HI/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic goose (anser anser domesticus) for United States \u2013 Hawaii (USA-HI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 Hawaii (USA-HI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
@@ -3501,8 +3780,8 @@
     {
       "itemId": "4295d9de-4a0d-4e4a-b5f3-05daac8c8e3d",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3542,7 +3821,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/4295d9de-4a0d-4e4a-b5f3-05daac8c8e3d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (accept remove, custom scope rules, reject remove). Effective scope for wild goat (capra aegagrus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "4295d9de-4a0d-4e4a-b5f3-05daac8c8e3d",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 74139,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "4325d580-8a3e-4bd8-a705-be1fe9230fe3",
@@ -3593,8 +3926,8 @@
     {
       "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -3634,7 +3967,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/4385382e-2007-4b12-a150-54e63bbfee0d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for redness tree squirrel (funisciurus anerythrus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437413,
+          "inatTaxonId": 45964,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "448349bf-58aa-4768-9d60-49d66b367b5d",
@@ -4075,58 +4462,6 @@
       "tags": []
     },
     {
-      "itemId": "502958f0-482d-4a66-96d8-5018edd893ee",
-      "countryIso3": "USA-HI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473339,
-      "inatTaxonId": 1449,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "5109acb4-e503-4147-a175-a3c6aa71f1e3",
       "countryIso3": "USA-HI",
       "status": "likely_true_one_source",
@@ -4204,8 +4539,8 @@
     {
       "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -4245,7 +4580,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/514d9dd8-f2de-4a19-87df-3859e9063270.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white-vented shama (kittacincla nigra) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 9099332,
+          "inatTaxonId": 13160,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "53a9dfd7-c6e6-43fa-b64e-3879af098979",
@@ -4484,89 +4873,6 @@
       "tags": []
     },
     {
-      "itemId": "5a565886-156e-4b19-a017-6a5bbae4df0f",
-      "countryIso3": "USA-HI",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 10,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 42,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436940,
-      "inatTaxonId": 43151,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 42,
-        "qualifiedTotal": 10,
-        "specimenOrSampleCount": 19,
-        "staleGbifCount": 20,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 3 likely outlier points before scoring. Only 7 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 10,
-        "corePointCount": 7,
-        "outlierPointCount": 3,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 23.545153031254703,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 0.12401346819701392,
-        "coverageAreaKm2": 727.4742537515417,
-        "coverageRatio": 0.025695816246389804,
-        "footprintPolygonLatLngs": [
-          [
-            21.435247362562937,
-            -158.09947148246732
-          ],
-          [
-            21.26272472072073,
-            -157.7799396394529
-          ],
-          [
-            21.30367825020149,
-            -157.76322629797397
-          ],
-          [
-            21.407073768863967,
-            -157.82543190412792
-          ],
-          [
-            21.507946870329793,
-            -158.05611369598944
-          ],
-          [
-            21.465501776468717,
-            -158.08938156622654
-          ]
-        ]
-      },
-      "tags": []
-    },
-    {
       "itemId": "5a9b1344-2dd5-4162-9d85-77ee4648ad9c",
       "countryIso3": "USA-HI",
       "status": "unlisted",
@@ -4665,58 +4971,6 @@
       "tags": []
     },
     {
-      "itemId": "5aa2382d-7b13-43e6-8266-10e6382da531",
-      "countryIso3": "USA-HI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5228229,
-      "inatTaxonId": 53,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "5acf63fb-339d-42b1-af7e-95f6151ae5fb",
       "countryIso3": "USA-HI",
       "status": "unlisted",
@@ -4764,52 +5018,6 @@
         "unique50kmCells": 0,
         "countryDiameterKm": 189.85964487219815,
         "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "5c7ce479-8a45-40b3-ae21-7c97dfae22f5",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440965,
-      "inatTaxonId": 42223,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -5011,21 +5219,21 @@
       "tags": []
     },
     {
-      "itemId": "61fb7ee1-6dfa-4795-853e-6f2d005b55cf",
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
       "countryIso3": "USA-HI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 3,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2479646,
-      "inatTaxonId": 18998,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
       "inatPlaceId": 4171,
       "managedEvidence": {
         "domesticNamed": false,
@@ -5037,30 +5245,78 @@
         "note": ""
       },
       "evidenceQuality": {
-        "rawTotal": 3,
+        "rawTotal": 0,
         "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
         "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+        "rejected": false,
+        "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/601cf098-9876-4912-84bb-0926834305e9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for grizzly bear (ursus u. arctos) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "6512e894-5e44-4c9e-a9d7-f474ce4aa81c",
@@ -5157,8 +5413,8 @@
     {
       "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -5198,7 +5454,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/67f8d7af-2d29-4b22-8810-71e798cac94d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for three-striped ground squirrel (lariscus insignis) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437524,
+          "inatTaxonId": 46187,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "68574b5e-4576-4953-a704-6bbf9d8e6e80",
@@ -5532,8 +5842,8 @@
     {
       "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -5573,7 +5883,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/6c7c93e1-741a-4152-8f0f-8f161a388d78.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for limestone wren-babbler (turdinus crispifrons) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7452882,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "6de041e9-509c-481b-9f7f-4c5e8c1d86bd",
@@ -5676,8 +6040,8 @@
     {
       "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -5717,7 +6081,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/711807fc-ba18-4107-bb8f-daf9caea5c13.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ochre-winged trumpeter (psophia ochroptera) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 7430311,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "71313453-1e2c-448f-88d7-d24e9cd2b930",
@@ -5864,56 +6282,10 @@
       "tags": []
     },
     {
-      "itemId": "73baf300-5592-4ab5-9da8-7da898477934",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2433875,
-      "inatTaxonId": 855297,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -5953,13 +6325,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 46 Dan review decisions (custom scope rules, reject remove). Effective scope for raccoon dog (nyctereutes procyonoides) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2434552,
+          "inatTaxonId": 855311,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -5999,13 +6425,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/747bf4a3-5a55-4b03-8c6b-1f84c3d8064e.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 3 Dan review decisions (custom scope rules, reject remove). Effective scope for small indian mongoose (urva auropunctata) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 925979,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6045,59 +6525,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
-    },
-    {
-      "itemId": "7921cb6a-4459-4a87-ad65-0610a8ab4556",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434825,
-      "inatTaxonId": 75102,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/7582ac8c-c63c-4531-a436-d4b532e753be.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for horsfield's tarsier (tarsius bancanus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1369285,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6137,13 +6625,67 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/7a3f5fb1-8e10-44c8-b040-d0672788540c.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for argentine gray fox (lycalopex griseus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 332338,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -6183,7 +6725,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/7ade12e0-5b31-4402-b97b-7a3631bcec6e.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese goral (naemorhedus griseus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7261419,
+          "inatTaxonId": 74722,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "7bef348d-37cf-4b5b-bf91-e4fe2dfc483c",
@@ -6482,8 +7078,8 @@
     {
       "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6523,7 +7119,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/82557fe4-2c1e-45ff-9920-c6407a348bf3.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for archer's robin-chat (dessonornis archeri) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 1585904,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "825e43b6-fd13-40d0-a16a-69a8cb134583",
@@ -6573,52 +7223,6 @@
         "unique50kmCells": 0,
         "countryDiameterKm": 189.85964487219815,
         "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "83133617-8358-4910-82ee-4c23e40ba3dc",
-      "countryIso3": "USA-HI",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 362,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 362,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473341,
-      "inatTaxonId": 1428,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 362,
-        "qualifiedTotal": 362,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -6820,93 +7424,6 @@
       "tags": []
     },
     {
-      "itemId": "89851bea-765b-431a-bb03-6f821931ebdc",
-      "countryIso3": "USA-HI",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 45889,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 54329,
-      "rawInatCount": 0,
-      "gbifUsageKey": 9326020,
-      "inatTaxonId": 882,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 54329,
-        "qualifiedTotal": 45889,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 76,
-        "outlierPointCount": 14,
-        "clusterCount": 3,
-        "clusterSpreadKm": 334.7595871154368,
-        "maxDistanceKm": 373.6544160135632,
-        "unique25kmCells": 14,
-        "unique50kmCells": 8,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 1.9680560145632022,
-        "coverageAreaKm2": 81633.42949340299,
-        "coverageRatio": 2.883452703662993,
-        "footprintPolygonLatLngs": [
-          [
-            22.09484440712115,
-            -160.3042642011478
-          ],
-          [
-            20.384642197627084,
-            -155.87348675073025
-          ],
-          [
-            20.706160322074904,
-            -155.67968671770285
-          ],
-          [
-            21.686171359808345,
-            -157.316644933038
-          ],
-          [
-            22.5132620915858,
-            -159.9696937041206
-          ],
-          [
-            22.483825653783473,
-            -160.0732877156168
-          ],
-          [
-            22.348813074267213,
-            -160.26244830237582
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 14 likely outlier points before scoring. 3 dense observation areas were found in United States \u2013 Hawaii, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
       "itemId": "8a50bd14-97f4-4f76-8e6c-5edeeb5be43f",
       "countryIso3": "USA-HI",
       "status": "likely_true_one_source",
@@ -6955,8 +7472,8 @@
     {
       "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -6996,7 +7513,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/8a57d557-41a8-4282-9e37-59f1b9e806ea.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white/crandall's saddleback tamarin (saguinus melanoleucus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
@@ -7105,8 +7676,8 @@
     {
       "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -7146,7 +7717,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/8bff2ed4-679e-4a5d-8874-948b9c4700b5.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for black flying squirrel (aeromys tephromelas) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437384,
+          "inatTaxonId": 45991,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8c9ba5cf-b98b-4b25-8543-9fcf0e69aed3",
@@ -7197,8 +7822,8 @@
     {
       "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": null,
@@ -7238,7 +7863,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/8d3957d7-0150-4d46-9a8b-c7278d9d0b9d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-winged trumpeter (psophia obscura) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": null,
+          "gbifCount": 0,
+          "inatCount": null,
+          "rawGbifPresent": false,
+          "rawInatPresent": null,
+          "rawGbifCount": 0,
+          "rawInatCount": null,
+          "gbifUsageKey": 8007102,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8d86a4a1-7ffc-404c-b228-7aa0aacb6b1f",
@@ -7295,8 +7974,8 @@
     {
       "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -7336,7 +8015,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/8e840c5c-c75f-47a1-90e3-5559ad64422b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for moonrat (echinosorex gymnura) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2437114,
+          "inatTaxonId": 1370747,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "8ed8aff1-cd22-47c4-8f9a-80ed276d88e9",
@@ -8124,8 +8857,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
@@ -8165,7 +8898,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 37 Dan review decisions (reject remove). Effective scope for human (homo sapiens) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 1,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 1,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2436436,
+          "inatTaxonId": 43584,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 1,
+            "qualifiedTotal": 1,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
@@ -8491,8 +9278,8 @@
     {
       "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -8532,7 +9319,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/9c7fff26-21ba-4c40-8f6f-747d182b5b46.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for australian ibis (threskiornis moluccus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 3740,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "9f87fb6d-be1d-43b4-a144-3d4750bdf6de",
@@ -8609,52 +9450,6 @@
       "evidenceQuality": {
         "rawTotal": 37,
         "qualifiedTotal": 37,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "a0cbbf4b-946f-4982-b332-28c323510523",
-      "countryIso3": "USA-HI",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 862,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 862,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2493462,
-      "inatTaxonId": 1289399,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 862,
-        "qualifiedTotal": 862,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -8767,8 +9562,8 @@
     {
       "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -8808,7 +9603,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/a6ae199d-c8fa-4f5d-bf4c-844d7b26320d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ashy-headed babbler (trichastoma cinereiceps) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 339801,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "a72e70e6-4979-40fc-831d-74121cbc0b93",
@@ -9105,98 +9954,6 @@
       "tags": []
     },
     {
-      "itemId": "aba05f1e-020f-49ce-a5c3-528482e1c5ce",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 8211070,
-      "inatTaxonId": 46001,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "ac01bf53-e125-4edd-8873-db9f519f1123",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 7261816,
-      "inatTaxonId": 1596132,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "countryIso3": "USA-HI",
       "status": "likely_true_one_source",
@@ -9302,8 +10059,8 @@
     {
       "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -9343,7 +10100,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/b0cf0d5c-7609-49ff-b31e-20394b4bb71d.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for bearded wood-partridge (dendrortyx barbatus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2474251,
+          "inatTaxonId": 1330,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -9382,10 +10193,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -9399,9 +10210,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-HI/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic mule (equus mulus) for United States \u2013 Hawaii (USA-HI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 Hawaii (USA-HI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -9460,8 +10271,8 @@
     {
       "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -9501,7 +10312,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/b2019c82-1245-44fe-b86e-a25bc1702de9.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 50 Dan review decisions (custom scope rules, reject remove). Effective scope for emperor penguin (aptenodytes forsteri) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2481661,
+          "inatTaxonId": 3820,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b2970a27-4413-4b99-b777-29f0b56632a0",
@@ -9610,8 +10475,8 @@
     {
       "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -9651,7 +10516,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for siberian chipmunk (eutamias sibiricus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 520585,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "ba76d46e-25de-45e2-90a8-bd279b650f7c",
@@ -10239,10 +11158,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -10256,9 +11175,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-HI/c150a21e-952d-4665-8a62-a319841c5a56.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic pig (sus scrofa scrofa) for United States \u2013 Hawaii (USA-HI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 Hawaii (USA-HI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -10315,56 +11234,10 @@
       }
     },
     {
-      "itemId": "c1750080-1f8e-4238-b121-066d700f1641",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 8319,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -10404,7 +11277,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/c30677db-a57e-4556-a7ff-cf77ef39324a.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for eastern moustached laughingthrush (garrulax cinereiceps) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "c56b82fe-e5d8-4998-8c5b-e4dad7ac8de6",
@@ -10673,10 +11600,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -10690,9 +11617,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-HI/cae9534f-f302-4229-9e11-b91138333d92.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic chicken (gallus gallus domesticus) for United States \u2013 Hawaii (USA-HI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 Hawaii (USA-HI).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
@@ -10941,8 +11868,8 @@
     {
       "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -10982,7 +11909,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/d0642934-f9d4-4f5d-a3b7-67fb0a55c751.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked tuftedcheek (pseudocolaptes boissonneauii) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 9142779,
+          "inatTaxonId": 11603,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d195f0ca-438e-4826-8fce-5e0de1ee27b6",
@@ -11131,8 +12112,8 @@
     {
       "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -11172,7 +12153,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/d42fc24e-515b-470e-87e2-6f15d93ffdb8.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for sumatran mountain muntjac (muntiacus montanus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": false,
+          "gbifCount": null,
+          "inatCount": 0,
+          "rawGbifPresent": null,
+          "rawInatPresent": false,
+          "rawGbifCount": null,
+          "rawInatCount": 0,
+          "gbifUsageKey": null,
+          "inatTaxonId": 42186,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d4f5df0a-0584-4461-8a9a-50a000d56a4b",
@@ -11223,8 +12258,8 @@
     {
       "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -11264,7 +12299,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/d5120db5-2a59-45d7-a3ee-bc6d06b00b57.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for saddleback tamarin (leontocebus fuscicollis) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": false,
+          "inatPresent": false,
+          "gbifCount": 0,
+          "inatCount": 0,
+          "rawGbifPresent": false,
+          "rawInatPresent": false,
+          "rawGbifCount": 0,
+          "rawInatCount": 0,
+          "gbifUsageKey": 8493215,
+          "inatTaxonId": 43389,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d5636405-819a-495a-b2d1-0f802d52c1bd",
@@ -11321,8 +12410,8 @@
     {
       "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -11362,7 +12451,61 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+          "countryIso3": "USA-HI",
+          "status": "likely_false",
+          "bucket": "Needs Review",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "d792dde9-0047-4b8e-9643-0e6e05d89f05",
@@ -11439,52 +12582,6 @@
       "evidenceQuality": {
         "rawTotal": 4801,
         "qualifiedTotal": 4801,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "db570f53-566b-4234-80f6-3af4026f6b12",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2441122,
-      "inatTaxonId": 42392,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -12137,77 +13234,6 @@
       "tags": []
     },
     {
-      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-      "countryIso3": "USA-HI",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 10,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 19,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5219173,
-      "inatTaxonId": 42048,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 19,
-        "qualifiedTotal": 10,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 1,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 6 likely outlier points before scoring. Only 4 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 10,
-        "corePointCount": 4,
-        "outlierPointCount": 6,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 32.229020594855974,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 189.85964487219815,
-        "spreadRatio": 0.16975182175522646,
-        "coverageAreaKm2": 876.557053859891,
-        "coverageRatio": 0.03096171289816294,
-        "footprintPolygonLatLngs": [
-          [
-            21.99120771602436,
-            -159.71618982254003
-          ],
-          [
-            22.245792590547996,
-            -159.33989368105958
-          ],
-          [
-            22.13200558620248,
-            -159.73515491161038
-          ]
-        ]
-      },
-      "tags": []
-    },
-    {
       "itemId": "eef88467-b894-4d0d-8a5a-4083eb78ea0f",
       "countryIso3": "USA-HI",
       "status": "likely_true_one_source",
@@ -12826,8 +13852,8 @@
     {
       "itemId": "febff896-db40-4ac8-bcfe-5bb99a600950",
       "countryIso3": "USA-HI",
-      "status": "new_record",
-      "bucket": "New",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": false,
@@ -12904,53 +13930,98 @@
         "short": "Regional",
         "note": "The cleaned outer footprint covers 3.6% of United States \u2013 Hawaii, so it stays regional."
       },
-      "tags": []
-    },
-    {
-      "itemId": "ff28e3a2-9c5e-4697-b949-4ff2f9153ea8",
-      "countryIso3": "USA-HI",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434883,
-      "inatTaxonId": 925699,
-      "inatPlaceId": 4171,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-HI/febff896-db40-4ac8-bcfe-5bb99a600950.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T04:51:16.710518+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported Dan review: accept add. Effective scope for mule deer (odocoileus hemionus) in United States \u2013 Hawaii (USA-HI).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "febff896-db40-4ac8-bcfe-5bb99a600950",
+          "countryIso3": "USA-HI",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 15,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 16,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2440974,
+          "inatTaxonId": 42220,
+          "inatPlaceId": 4171,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 16,
+            "qualifiedTotal": 15,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 1,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 13,
+            "corePointCount": 13,
+            "outlierPointCount": 0,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 28.45801400780873,
+            "unique25kmCells": 4,
+            "unique50kmCells": 4,
+            "countryDiameterKm": 189.85964487219815,
+            "spreadRatio": 0.14988974632795146,
+            "coverageAreaKm2": 1008.7106325462464,
+            "coverageRatio": 0.035629636273753894,
+            "footprintPolygonLatLngs": [
+              [
+                21.985372157718384,
+                -159.84220432992274
+              ],
+              [
+                21.9066544422214,
+                -159.70275531195105
+              ],
+              [
+                22.065113794124642,
+                -159.4242169583418
+              ],
+              [
+                22.146631150159394,
+                -159.48585113168178
+              ],
+              [
+                22.218293224502567,
+                -159.5925401409147
+              ],
+              [
+                22.21355581696824,
+                -159.62461696393768
+              ]
+            ],
+            "code": "regional",
+            "label": "Regional footprint",
+            "short": "Regional",
+            "note": "The cleaned outer footprint covers 3.6% of United States \u2013 Hawaii, so it stays regional."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "ff7cdbf5-2823-48fe-9b7f-d9d64a1d0568",
@@ -13105,27 +14176,27 @@
   ],
   "manualOverrideRemovedEntries": [
     {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "sourceFile": "data/review-overrides/countries/USA-HI/601cf098-9876-4912-84bb-0926834305e9.json",
-      "updatedAtUtc": "2026-06-09T00:00:00Z",
-      "updatedBy": "github-review",
-      "reason": "Manual review correction: remove grizzly bear (ursus u. arctos) from United States \u2013 Hawaii (USA-HI). Keep grizzly on the national USA/CAN packs only until state-level coverage is explicitly reviewed.",
+      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
+      "sourceFile": "data/review-overrides/countries/USA-HI/ee8d5a89-f82e-4323-80e2-0ffc9487ebaf.json",
+      "updatedAtUtc": "2026-06-02T04:48:45.214607+00:00",
+      "updatedBy": "Dan",
+      "reason": "Imported 24 Dan review decisions (accept add, reject add). Effective scope for grey wolf (canis lupus) in United States \u2013 Hawaii (USA-HI).",
       "baseEntry": {
-        "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+        "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
         "countryIso3": "USA-HI",
-        "status": "likely_false",
-        "bucket": "Needs Review",
-        "expected": true,
-        "gbifPresent": null,
-        "inatPresent": null,
-        "gbifCount": null,
-        "inatCount": null,
-        "rawGbifPresent": null,
-        "rawInatPresent": null,
-        "rawGbifCount": null,
-        "rawInatCount": null,
-        "gbifUsageKey": null,
-        "inatTaxonId": null,
+        "status": "new_record",
+        "bucket": "New",
+        "expected": false,
+        "gbifPresent": true,
+        "inatPresent": false,
+        "gbifCount": 10,
+        "inatCount": 0,
+        "rawGbifPresent": true,
+        "rawInatPresent": false,
+        "rawGbifCount": 19,
+        "rawInatCount": 0,
+        "gbifUsageKey": 5219173,
+        "inatTaxonId": 42048,
         "inatPlaceId": 4171,
         "managedEvidence": {
           "domesticNamed": false,
@@ -13137,38 +14208,104 @@
           "note": ""
         },
         "evidenceQuality": {
-          "rawTotal": 0,
-          "qualifiedTotal": 0,
+          "rawTotal": 19,
+          "qualifiedTotal": 10,
           "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
+          "staleGbifCount": 1,
           "staleInatCount": 0,
           "captiveInatCount": 0,
           "rejected": false,
           "note": ""
         },
         "observationProfile": {
-          "code": "country_pack_only",
-          "label": "State pack only",
-          "short": "Pack-only",
-          "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+          "code": "needs_review",
+          "label": "Pending review",
+          "short": "",
+          "note": "Dropped 6 likely outlier points before scoring. Only 4 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
           "significant": false,
-          "footprintPolygonLatLngs": []
+          "totalPoints": 10,
+          "corePointCount": 4,
+          "outlierPointCount": 6,
+          "clusterCount": 1,
+          "clusterSpreadKm": 0.0,
+          "maxDistanceKm": 32.229020594855974,
+          "unique25kmCells": 3,
+          "unique50kmCells": 3,
+          "countryDiameterKm": 189.85964487219815,
+          "spreadRatio": 0.16975182175522646,
+          "coverageAreaKm2": 876.557053859891,
+          "coverageRatio": 0.03096171289816294,
+          "footprintPolygonLatLngs": [
+            [
+              21.99120771602436,
+              -159.71618982254003
+            ],
+            [
+              22.245792590547996,
+              -159.33989368105958
+            ],
+            [
+              22.13200558620248,
+              -159.73515491161038
+            ]
+          ]
         },
         "tags": []
       }
     }
   ],
   "manualOverrideSummary": {
-    "count": 7,
-    "appliedAtUtc": "2026-06-09T05:26:05.369151+00:00",
+    "count": 48,
+    "appliedAtUtc": "2026-06-09T10:11:39.638525+00:00",
     "items": [
+      "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
+      "072d8e15-64e0-41a6-9e81-007bef444fff",
+      "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
+      "169ed977-68c0-4685-a5e9-9ddbc90b6997",
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
+      "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
+      "230c8c2d-4758-42c6-ac85-36a722f04977",
+      "249cae46-0a84-43db-be08-404a6695c171",
+      "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
+      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
+      "2813059e-da3b-4f17-a60c-d9c34f2fce24",
+      "372497c3-8d96-41af-b755-1d7f3feb2ee4",
+      "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
       "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
+      "4295d9de-4a0d-4e4a-b5f3-05daac8c8e3d",
+      "4385382e-2007-4b12-a150-54e63bbfee0d",
+      "514d9dd8-f2de-4a19-87df-3859e9063270",
       "601cf098-9876-4912-84bb-0926834305e9",
+      "67f8d7af-2d29-4b22-8810-71e798cac94d",
+      "6c7c93e1-741a-4152-8f0f-8f161a388d78",
+      "711807fc-ba18-4107-bb8f-daf9caea5c13",
+      "746d3e98-64af-4897-9cd3-c09b169a8c69",
+      "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
+      "7582ac8c-c63c-4531-a436-d4b532e753be",
+      "7a3f5fb1-8e10-44c8-b040-d0672788540c",
+      "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
+      "82557fe4-2c1e-45ff-9920-c6407a348bf3",
+      "8a57d557-41a8-4282-9e37-59f1b9e806ea",
+      "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
+      "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
+      "8e840c5c-c75f-47a1-90e3-5559ad64422b",
+      "990ae9dd-7a59-4344-afcb-1b7b21368000",
+      "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
+      "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
+      "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
+      "b2019c82-1245-44fe-b86e-a25bc1702de9",
+      "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
       "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92"
+      "c30677db-a57e-4556-a7ff-cf77ef39324a",
+      "cae9534f-f302-4229-9e11-b91138333d92",
+      "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
+      "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
+      "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
+      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
+      "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
+      "febff896-db40-4ac8-bcfe-5bb99a600950"
     ]
   }
 }

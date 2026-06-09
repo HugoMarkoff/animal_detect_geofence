@@ -1,0 +1,69 @@
+{
+  "countryIso3": "CAN",
+  "itemId": "3a8b9ae7-a5b0-497d-b4b7-8ffbe7f870d0",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T01:44:07.446652+00:00",
+  "reason": "Imported Dan review: accept add. Effective scope for black-necked stilt (himantopus mexicanus) in Canada (CAN).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "significant": true,
+      "totalPoints": 90,
+      "corePointCount": 32,
+      "outlierPointCount": 58,
+      "clusterCount": 1,
+      "clusterSpreadKm": 0.0,
+      "maxDistanceKm": 0.584946937203128,
+      "unique25kmCells": 4,
+      "unique50kmCells": 4,
+      "countryDiameterKm": 3565.5121210186394,
+      "spreadRatio": 0.00016405692011390866,
+      "coverageAreaKm2": 211.99429706339498,
+      "coverageRatio": 2.1231978329118036e-05,
+      "footprintPolygonLatLngs": [
+        [
+          49.87755313439681,
+          -119.47121648290418
+        ],
+        [
+          49.86493134239218,
+          -119.398239067175
+        ],
+        [
+          49.88138022778778,
+          -119.33860452942993
+        ],
+        [
+          50.004166490128895,
+          -119.35547653219494
+        ],
+        [
+          50.010828027922315,
+          -119.38048222445326
+        ],
+        [
+          50.01339256991624,
+          -119.4109859263393
+        ],
+        [
+          50.011970804159155,
+          -119.43339791494402
+        ],
+        [
+          50.00154317894928,
+          -119.47102368919391
+        ],
+        [
+          49.996262805708895,
+          -119.48196329038905
+        ]
+      ],
+      "code": "regional",
+      "label": "Regional footprint",
+      "short": "Regional",
+      "note": "Dropped 58 likely outlier points before scoring. The cleaned outer footprint covers 0.0% of Canada, so it stays regional."
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "countryIso3": "USA-AK",
+  "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 46 Dan review decisions (custom scope rules, reject remove). Effective scope for raccoon dog (nyctereutes procyonoides) in United States \u2013 Alaska (USA-AK).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": true,
+    "observationProfile": {
+      "code": "country_pack_only",
+      "label": "State pack only",
+      "short": "Pack-only",
+      "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+      "significant": false,
+      "footprintPolygonLatLngs": []
+    }
+  }
+}

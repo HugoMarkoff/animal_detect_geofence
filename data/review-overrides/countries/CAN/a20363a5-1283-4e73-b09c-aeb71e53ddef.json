@@ -1,0 +1,61 @@
+{
+  "countryIso3": "CAN",
+  "itemId": "a20363a5-1283-4e73-b09c-aeb71e53ddef",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T01:56:54.750204+00:00",
+  "reason": "Imported Dan review: accept add. Effective scope for house rat (rattus rattus) in Canada (CAN).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "significant": true,
+      "totalPoints": 90,
+      "corePointCount": 73,
+      "outlierPointCount": 17,
+      "clusterCount": 3,
+      "clusterSpreadKm": 279.7649138887919,
+      "maxDistanceKm": 372.11041403825885,
+      "unique25kmCells": 20,
+      "unique50kmCells": 13,
+      "countryDiameterKm": 3565.5121210186394,
+      "spreadRatio": 0.10436380564931294,
+      "coverageAreaKm2": 118112.60736695612,
+      "coverageRatio": 0.011829395199536501,
+      "footprintPolygonLatLngs": [
+        [
+          49.05359264508282,
+          -124.87541146777127
+        ],
+        [
+          48.08021734010589,
+          -124.33836821570766
+        ],
+        [
+          48.95522928541499,
+          -118.5601299737397
+        ],
+        [
+          48.9552901106279,
+          -118.56009698502774
+        ],
+        [
+          48.95530220280463,
+          -118.56009220137383
+        ],
+        [
+          50.568044999794495,
+          -118.51062433689282
+        ],
+        [
+          49.625825532048374,
+          -124.8179879059299
+        ]
+      ],
+      "code": "countrywide",
+      "label": "National footprint",
+      "short": "National",
+      "note": "Dropped 17 likely outlier points before scoring. 3 dense observation areas were found in Canada, so this is treated as national rather than a single regional pocket."
+    }
+  }
+}

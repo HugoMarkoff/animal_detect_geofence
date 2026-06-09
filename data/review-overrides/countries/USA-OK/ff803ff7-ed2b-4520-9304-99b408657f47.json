@@ -1,0 +1,49 @@
+{
+  "countryIso3": "USA-OK",
+  "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for brown rat (rattus norvegicus) in United States \u2013 Oklahoma (USA-OK).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "code": "needs_review",
+      "label": "Pending review",
+      "short": "",
+      "note": "Dropped 3 likely outlier points before scoring. Only 6 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+      "significant": false,
+      "totalPoints": 9,
+      "corePointCount": 6,
+      "outlierPointCount": 3,
+      "clusterCount": 1,
+      "clusterSpreadKm": 0.0,
+      "maxDistanceKm": 21.183905378321064,
+      "unique25kmCells": 4,
+      "unique50kmCells": 4,
+      "countryDiameterKm": 480.10776650687467,
+      "spreadRatio": 0.044123229941579654,
+      "coverageAreaKm2": 606.9278171071496,
+      "coverageRatio": 0.0033525070405892145,
+      "footprintPolygonLatLngs": [
+        [
+          36.21421112576402,
+          -96.00522801814938
+        ],
+        [
+          35.986485332464596,
+          -95.93128232274748
+        ],
+        [
+          35.97382979133727,
+          -95.88948359540734
+        ],
+        [
+          36.306424183642214,
+          -95.90310666401997
+        ]
+      ]
+    }
+  }
+}

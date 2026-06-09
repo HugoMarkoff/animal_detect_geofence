@@ -1,0 +1,20 @@
+{
+  "countryIso3": "USA-VA",
+  "itemId": "4295d9de-4a0d-4e4a-b5f3-05daac8c8e3d",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 52 Dan review decisions (accept remove, custom scope rules, reject remove). Effective scope for wild goat (capra aegagrus) in United States \u2013 Virginia (USA-VA).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": true,
+    "observationProfile": {
+      "code": "country_pack_only",
+      "label": "State pack only",
+      "short": "Pack-only",
+      "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+      "significant": false,
+      "footprintPolygonLatLngs": []
+    }
+  }
+}

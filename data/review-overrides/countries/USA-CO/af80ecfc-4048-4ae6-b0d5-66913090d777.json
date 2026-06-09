@@ -1,0 +1,61 @@
+{
+  "countryIso3": "USA-CO",
+  "itemId": "af80ecfc-4048-4ae6-b0d5-66913090d777",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T04:47:07.137529+00:00",
+  "reason": "Imported 4 Dan review decisions (accept add). Effective scope for mountain goat (oreamnos americanus) in United States \u2013 Colorado (USA-CO).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "significant": true,
+      "totalPoints": 90,
+      "corePointCount": 86,
+      "outlierPointCount": 4,
+      "clusterCount": 1,
+      "clusterSpreadKm": 0.0,
+      "maxDistanceKm": 108.28088872405812,
+      "unique25kmCells": 9,
+      "unique50kmCells": 4,
+      "countryDiameterKm": 585.8896265510634,
+      "spreadRatio": 0.1848144835085604,
+      "coverageAreaKm2": 11682.581588679976,
+      "coverageRatio": 0.04333285703198421,
+      "footprintPolygonLatLngs": [
+        [
+          39.089820846889914,
+          -106.66649039680087
+        ],
+        [
+          39.079649585187106,
+          -106.66425724760293
+        ],
+        [
+          38.95175872372452,
+          -105.97345304979461
+        ],
+        [
+          39.54062780413587,
+          -105.1691697941356
+        ],
+        [
+          39.55523991327822,
+          -105.17369555998732
+        ],
+        [
+          40.095214215424946,
+          -105.59082946923664
+        ],
+        [
+          39.81279494915797,
+          -106.45464960564426
+        ]
+      ],
+      "code": "regional",
+      "label": "Regional footprint",
+      "short": "Regional",
+      "note": "Dropped 4 likely outlier points before scoring. The cleaned outer footprint covers 4.3% of United States \u2013 Colorado, so it stays regional."
+    }
+  }
+}

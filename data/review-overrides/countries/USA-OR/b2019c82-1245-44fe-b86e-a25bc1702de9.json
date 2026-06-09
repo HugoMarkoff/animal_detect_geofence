@@ -1,0 +1,20 @@
+{
+  "countryIso3": "USA-OR",
+  "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 50 Dan review decisions (custom scope rules, reject remove). Effective scope for emperor penguin (aptenodytes forsteri) in United States \u2013 Oregon (USA-OR).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": true,
+    "observationProfile": {
+      "code": "country_pack_only",
+      "label": "State pack only",
+      "short": "Pack-only",
+      "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+      "significant": false,
+      "footprintPolygonLatLngs": []
+    }
+  }
+}

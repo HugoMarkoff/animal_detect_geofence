@@ -1,0 +1,65 @@
+{
+  "countryIso3": "CAN",
+  "itemId": "c5734460-e8a4-4278-a86d-230f522aa03f",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T01:58:16.278889+00:00",
+  "reason": "Imported Dan review: accept add. Effective scope for lesser black-backed gull (larus fuscus) in Canada (CAN).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "significant": true,
+      "totalPoints": 90,
+      "corePointCount": 29,
+      "outlierPointCount": 61,
+      "clusterCount": 2,
+      "clusterSpreadKm": 1106.2825534623587,
+      "maxDistanceKm": 1108.2380763259662,
+      "unique25kmCells": 3,
+      "unique50kmCells": 2,
+      "countryDiameterKm": 3565.5121210186394,
+      "spreadRatio": 0.31082157028521085,
+      "coverageAreaKm2": 592431.7797572183,
+      "coverageRatio": 0.05933413720806179,
+      "footprintPolygonLatLngs": [
+        [
+          42.93158960247245,
+          -68.12080052894555
+        ],
+        [
+          42.6797494662127,
+          -67.9198276400882
+        ],
+        [
+          42.679743712585186,
+          -67.91982049485016
+        ],
+        [
+          48.26962216246576,
+          -50.42361460882325
+        ],
+        [
+          48.283633014972565,
+          -50.39154782414784
+        ],
+        [
+          48.30086820984783,
+          -50.3829992501439
+        ],
+        [
+          48.299896058747855,
+          -50.38928145512535
+        ],
+        [
+          42.936403384132646,
+          -68.12123421926403
+        ]
+      ],
+      "code": "countrywide",
+      "label": "National footprint",
+      "short": "National",
+      "note": "Dropped 61 likely outlier points before scoring. 2 dense observation areas were found in Canada, so this is treated as national rather than a single regional pocket."
+    }
+  }
+}

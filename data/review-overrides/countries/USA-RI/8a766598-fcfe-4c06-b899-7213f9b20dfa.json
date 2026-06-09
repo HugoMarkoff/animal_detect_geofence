@@ -2,17 +2,25 @@
   "countryIso3": "USA-RI",
   "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
   "action": "upsert",
-  "updatedBy": "github-review",
-  "updatedAtUtc": "2026-06-09T00:00:00Z",
-  "reason": "Manual review approval: keep domestic donkey (equus asinus) for United States \u2013 Rhode Island (USA-RI). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 35 Dan review decisions (reject remove). Effective scope for domestic donkey (equus asinus) in United States \u2013 Rhode Island (USA-RI).",
   "patch": {
     "status": "likely_true_one_source",
     "expected": true,
     "observationProfile": {
-      "code": "countrywide",
-      "label": "National footprint",
-      "short": "National",
-      "note": "Approved from the domestic-animal policy pass."
+      "code": "no_points",
+      "label": "No mapped points",
+      "short": "No points",
+      "note": "No mapped coordinates were returned in the sampled observations.",
+      "significant": false,
+      "totalPoints": 0,
+      "maxDistanceKm": 0,
+      "unique25kmCells": 0,
+      "unique50kmCells": 0,
+      "countryDiameterKm": 71.37388470922251,
+      "spreadRatio": 0,
+      "footprintPolygonLatLngs": []
     }
   }
 }

@@ -523,6 +523,17 @@ def apply_country_overrides(
     iso3 = clean_text(pack.get("generatedFor")).upper()
     unit_type = clean_text(pack.get("unitType")).lower()
     uses_subnational_expected_membership = unit_type not in {"", "country"}
+    usa_pack_item_ids: set[str] | None = None
+    if uses_subnational_expected_membership:
+        usa_pack_path = PACK_DIR / f"{USA_PARENT_ISO3}.json"
+        if usa_pack_path.exists():
+            usa_pack = load_json_file(usa_pack_path)
+            usa_pack_item_ids = {
+                clean_text(raw_entry.get("itemId"))
+                for raw_entry in usa_pack.get("entries") or []
+                if isinstance(raw_entry, dict) and clean_text(raw_entry.get("itemId"))
+            }
+
     entries_by_id: dict[str, dict[str, Any]] = {}
     for raw_entry in pack.get("entries") or []:
         if not isinstance(raw_entry, dict):
@@ -532,15 +543,17 @@ def apply_country_overrides(
         if not item_id:
             continue
 
+        if uses_subnational_expected_membership and usa_pack_item_ids is not None and item_id not in usa_pack_item_ids:
+            continue
+
         # Drop stale expected entries that are no longer in the current global dataset
         # for this country. Explicit override upserts can still add items back afterward.
         if raw_entry.get("expected"):
             global_item = animals_by_id.get(item_id)
             if uses_subnational_expected_membership:
-                if (
-                    item_has_explicit_subnational_membership(global_item, iso3)
-                    and not item_expected_in_scope(global_item, iso3)
-                ):
+                if not item_expected_in_country(global_item, USA_PARENT_ISO3):
+                    continue
+                if item_has_explicit_subnational_membership(global_item, iso3) and not item_expected_in_scope(global_item, iso3):
                     continue
             elif not item_expected_in_country(global_item, iso3):
                 continue
@@ -553,6 +566,10 @@ def apply_country_overrides(
         override = load_override_file(path)
         item_id = override["itemId"]
         action = override["action"]
+
+        if uses_subnational_expected_membership and usa_pack_item_ids is not None and item_id not in usa_pack_item_ids:
+            continue
+
         active_items.append(item_id)
         existing_entry = entries_by_id.get(item_id)
 

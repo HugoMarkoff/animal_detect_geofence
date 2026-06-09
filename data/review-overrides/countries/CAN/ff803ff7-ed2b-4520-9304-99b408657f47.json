@@ -1,0 +1,73 @@
+{
+  "countryIso3": "CAN",
+  "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for brown rat (rattus norvegicus) in Canada (CAN).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "significant": true,
+      "totalPoints": 90,
+      "corePointCount": 51,
+      "outlierPointCount": 39,
+      "clusterCount": 3,
+      "clusterSpreadKm": 3350.7067888220267,
+      "maxDistanceKm": 3406.407996013321,
+      "unique25kmCells": 15,
+      "unique50kmCells": 9,
+      "countryDiameterKm": 3565.5121210186394,
+      "spreadRatio": 0.955376922134859,
+      "coverageAreaKm2": 5901361.287729188,
+      "coverageRatio": 0.5910421964600922,
+      "footprintPolygonLatLngs": [
+        [
+          50.10874384742174,
+          -131.28357777955858
+        ],
+        [
+          49.974869027018094,
+          -131.16676199352727
+        ],
+        [
+          49.827999323472454,
+          -130.32885551656818
+        ],
+        [
+          42.341534618333185,
+          -71.83408342971974
+        ],
+        [
+          42.46505755600552,
+          -71.44787334938798
+        ],
+        [
+          42.839593241324145,
+          -70.71244477804879
+        ],
+        [
+          46.265819509466226,
+          -75.91321161755694
+        ],
+        [
+          46.3080128230458,
+          -76.24746310377087
+        ],
+        [
+          50.20043772333918,
+          -130.9381521829229
+        ],
+        [
+          50.15319017774897,
+          -131.17086366586653
+        ]
+      ],
+      "code": "countrywide",
+      "label": "National footprint",
+      "short": "National",
+      "note": "Dropped 39 likely outlier points before scoring. 3 dense observation areas were found in Canada, so this is treated as national rather than a single regional pocket."
+    }
+  }
+}

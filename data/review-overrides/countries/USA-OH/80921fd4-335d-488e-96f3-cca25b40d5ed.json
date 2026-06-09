@@ -1,0 +1,20 @@
+{
+  "countryIso3": "USA-OH",
+  "itemId": "80921fd4-335d-488e-96f3-cca25b40d5ed",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-05T00:16:17.414090+00:00",
+  "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for mouflon (ovis orientalis) in United States \u2013 Ohio (USA-OH).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": true,
+    "observationProfile": {
+      "code": "country_pack_only",
+      "label": "State pack only",
+      "short": "Pack-only",
+      "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
+      "significant": false,
+      "footprintPolygonLatLngs": []
+    }
+  }
+}

@@ -2,17 +2,25 @@
   "countryIso3": "USA-NY",
   "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
   "action": "upsert",
-  "updatedBy": "github-review",
-  "updatedAtUtc": "2026-06-09T00:00:00Z",
-  "reason": "Manual review approval: keep domestic chicken (gallus gallus domesticus) for United States \u2013 New York (USA-NY). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+  "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 New York (USA-NY).",
   "patch": {
     "status": "likely_true_one_source",
     "expected": true,
     "observationProfile": {
-      "code": "countrywide",
-      "label": "National footprint",
-      "short": "National",
-      "note": "Approved from the domestic-animal policy pass."
+      "code": "no_points",
+      "label": "No mapped points",
+      "short": "No points",
+      "note": "No mapped coordinates were returned in the sampled observations.",
+      "significant": false,
+      "totalPoints": 0,
+      "maxDistanceKm": 0,
+      "unique25kmCells": 0,
+      "unique50kmCells": 0,
+      "countryDiameterKm": 424.15201043074677,
+      "spreadRatio": 0,
+      "footprintPolygonLatLngs": []
     }
   }
 }

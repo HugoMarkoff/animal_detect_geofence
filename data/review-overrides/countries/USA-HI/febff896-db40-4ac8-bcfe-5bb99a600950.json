@@ -1,0 +1,57 @@
+{
+  "countryIso3": "USA-HI",
+  "itemId": "febff896-db40-4ac8-bcfe-5bb99a600950",
+  "action": "upsert",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T04:51:16.710518+00:00",
+  "reason": "Imported Dan review: accept add. Effective scope for mule deer (odocoileus hemionus) in United States \u2013 Hawaii (USA-HI).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "significant": true,
+      "totalPoints": 13,
+      "corePointCount": 13,
+      "outlierPointCount": 0,
+      "clusterCount": 1,
+      "clusterSpreadKm": 0.0,
+      "maxDistanceKm": 28.45801400780873,
+      "unique25kmCells": 4,
+      "unique50kmCells": 4,
+      "countryDiameterKm": 189.85964487219815,
+      "spreadRatio": 0.14988974632795146,
+      "coverageAreaKm2": 1008.7106325462464,
+      "coverageRatio": 0.035629636273753894,
+      "footprintPolygonLatLngs": [
+        [
+          21.985372157718384,
+          -159.84220432992274
+        ],
+        [
+          21.9066544422214,
+          -159.70275531195105
+        ],
+        [
+          22.065113794124642,
+          -159.4242169583418
+        ],
+        [
+          22.146631150159394,
+          -159.48585113168178
+        ],
+        [
+          22.218293224502567,
+          -159.5925401409147
+        ],
+        [
+          22.21355581696824,
+          -159.62461696393768
+        ]
+      ],
+      "code": "regional",
+      "label": "Regional footprint",
+      "short": "Regional",
+      "note": "The cleaned outer footprint covers 3.6% of United States \u2013 Hawaii, so it stays regional."
+    }
+  }
+}
