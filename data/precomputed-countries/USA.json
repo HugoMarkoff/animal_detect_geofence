@@ -15751,38 +15751,105 @@
         "spreadRatio": 0.009025092939906991,
         "coverageAreaKm2": 853.5483961770042,
         "coverageRatio": 8.961074984322988e-05,
-        "footprintPolygonLatLngs": [
-          [
-            39.030791994838914,
-            -77.24888898529358
-          ],
-          [
-            38.91432226054521,
-            -76.89931458340554
-          ],
-          [
-            39.0534185690696,
-            -76.70130801908333
-          ],
-          [
-            39.05391027931366,
-            -76.70101595981066
-          ],
-          [
-            39.05459970670622,
-            -76.70148857273236
-          ],
-          [
-            39.04812956267634,
-            -77.24480423094751
-          ]
-        ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "Dropped 62 likely outlier points before scoring. The cleaned outer footprint covers 0.0% of United States, so it stays regional."
+        "footprintPolygonLatLngs": [],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Manual admin override applied from the review desk.",
+        "footprintPolygonsLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA/43320a08-bf31-49a5-8213-f032311c5765.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-09T11:13:41.834Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please update american beaver (castor canadensis) to national coverage in United States. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "43320a08-bf31-49a5-8213-f032311c5765",
+          "countryIso3": "USA",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 45459,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 45459,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2439838,
+          "inatTaxonId": 43794,
+          "inatPlaceId": 10316,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 45459,
+            "qualifiedTotal": 45459,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 28,
+            "outlierPointCount": 62,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 31.429738082225786,
+            "unique25kmCells": 4,
+            "unique50kmCells": 3,
+            "countryDiameterKm": 3482.483592301897,
+            "spreadRatio": 0.009025092939906991,
+            "coverageAreaKm2": 853.5483961770042,
+            "coverageRatio": 8.961074984322988e-05,
+            "footprintPolygonLatLngs": [
+              [
+                39.030791994838914,
+                -77.24888898529358
+              ],
+              [
+                38.91432226054521,
+                -76.89931458340554
+              ],
+              [
+                39.0534185690696,
+                -76.70130801908333
+              ],
+              [
+                39.05391027931366,
+                -76.70101595981066
+              ],
+              [
+                39.05459970670622,
+                -76.70148857273236
+              ],
+              [
+                39.04812956267634,
+                -77.24480423094751
+              ]
+            ],
+            "code": "regional",
+            "label": "Regional footprint",
+            "short": "Regional",
+            "note": "Dropped 62 likely outlier points before scoring. The cleaned outer footprint covers 0.0% of United States, so it stays regional."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "4358855e-64a1-4805-8481-8c6da9f21377",
@@ -64228,8 +64295,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 149,
-    "appliedAtUtc": "2026-06-09T10:56:10.570247+00:00",
+    "count": 150,
+    "appliedAtUtc": "2026-06-09T11:14:10.302682+00:00",
     "items": [
       "008d8de3-9cbc-449a-ae5d-80c1dea7b4c8",
       "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
@@ -64275,6 +64342,7 @@
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "41f668c6-d78d-47c8-8008-4a619e82e46f",
       "42d30572-ccc4-4ddf-809d-83c047377161",
+      "43320a08-bf31-49a5-8213-f032311c5765",
       "4358855e-64a1-4805-8481-8c6da9f21377",
       "4385382e-2007-4b12-a150-54e63bbfee0d",
       "43d4ed66-72e7-4114-94f3-e7765c79fb49",
