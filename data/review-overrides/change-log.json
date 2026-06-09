@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-09T10:56:06.809054+00:00",
+  "updatedAtUtc": "2026-06-09T11:13:41.834Z",
   "entries": [
     {
       "id": "2026-06-09T07:09:33.520049Z__DNK__429257d4-3ef2-47fb-b849-66ee6c107346__manual_correction",
@@ -2086,7 +2086,7 @@
       "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
       "updatedBy": "Dan",
       "countryIso3": "MULTI",
-      "countryName": "United States \u2013 Texas",
+      "countryName": "United States – Texas",
       "suggestionType": "dan_import",
       "requestedCoverage": "mixed",
       "itemId": "22976d14-d424-4f18-a67a-d8e1689cefcc",
@@ -2970,7 +2970,7 @@
       "requestedCoverage": "mixed",
       "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "matchedKey": "mammalia;primates;atelidae;alouatta;puruensis",
-      "speciesLabel": "pur\u00fas red howler monkey (alouatta puruensis)",
+      "speciesLabel": "purús red howler monkey (alouatta puruensis)",
       "sourceDataset": "Corrections_DAN.json",
       "files": [
         "data/review-overrides/countries/USA-AK/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
@@ -3026,7 +3026,7 @@
         "data/review-overrides/countries/USA-WY/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
         "data/review-overrides/countries/USA/2813059e-da3b-4f17-a60c-d9c34f2fce24.json"
       ],
-      "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective imported scope for pur\u00fas red howler monkey (alouatta puruensis).",
+      "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective imported scope for purús red howler monkey (alouatta puruensis).",
       "appliedScopes": [
         "USA",
         "USA-AK",
@@ -3197,7 +3197,7 @@
       "updatedAtUtc": "2026-06-02T04:53:33.046466+00:00",
       "updatedBy": "Dan",
       "countryIso3": "USA-OR",
-      "countryName": "United States \u2013 Oregon",
+      "countryName": "United States – Oregon",
       "suggestionType": "dan_import",
       "requestedCoverage": "removed",
       "itemId": "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
@@ -10861,12 +10861,12 @@
       "requestedCoverage": "mixed",
       "itemId": "a6002ec4-5eb6-497d-878d-0b2057f56713",
       "matchedKey": "mammalia;primates;atelidae;alouatta;juara",
-      "speciesLabel": "juru\u00e1 red howler monkey (alouatta juara)",
+      "speciesLabel": "juruá red howler monkey (alouatta juara)",
       "sourceDataset": "Corrections_DAN.json",
       "files": [
         "data/review-overrides/geofence-binary-overrides.json"
       ],
-      "reason": "Imported 2 Dan review decisions (custom scope rules). Effective imported scope for juru\u00e1 red howler monkey (alouatta juara).",
+      "reason": "Imported 2 Dan review decisions (custom scope rules). Effective imported scope for juruá red howler monkey (alouatta juara).",
       "appliedScopes": [
         "CAN",
         "USA"
@@ -14014,12 +14014,12 @@
       "requestedCoverage": "removed",
       "itemId": "d4817787-1c5b-4dfe-9251-03c759845951",
       "matchedKey": "aves;galliformes;numididae;guttera;pucherani",
-      "speciesLabel": "pintade hupp\u00e9e (guttera pucherani)",
+      "speciesLabel": "pintade huppée (guttera pucherani)",
       "sourceDataset": "Corrections_DAN.json",
       "files": [
         "data/review-overrides/countries/USA/d4817787-1c5b-4dfe-9251-03c759845951.json"
       ],
-      "reason": "Imported 2 Dan review decisions (custom scope rules). Effective imported scope for pintade hupp\u00e9e (guttera pucherani).",
+      "reason": "Imported 2 Dan review decisions (custom scope rules). Effective imported scope for pintade huppée (guttera pucherani).",
       "appliedScopes": [
         "USA"
       ],
@@ -15486,7 +15486,7 @@
       "updatedAtUtc": "2026-06-02T04:51:16.710518+00:00",
       "updatedBy": "Dan",
       "countryIso3": "USA-HI",
-      "countryName": "United States \u2013 Hawaii",
+      "countryName": "United States – Hawaii",
       "suggestionType": "dan_import",
       "requestedCoverage": "national",
       "itemId": "febff896-db40-4ac8-bcfe-5bb99a600950",
@@ -15607,6 +15607,24 @@
       "decisionOutcomes": [
         "custom"
       ]
+    },
+    {
+      "id": "2026-06-09T11:13:41.834Z__USA__43320a08-bf31-49a5-8213-f032311c5765__correction",
+      "updatedAtUtc": "2026-06-09T11:13:41.834Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "USA",
+      "countryName": "United States",
+      "suggestionType": "correction",
+      "requestedCoverage": "regional",
+      "itemId": "43320a08-bf31-49a5-8213-f032311c5765",
+      "matchedKey": "mammalia;rodentia;castoridae;castor;canadensis",
+      "speciesLabel": "american beaver (castor canadensis)",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/countries/USA/43320a08-bf31-49a5-8213-f032311c5765.json",
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Please update american beaver (castor canadensis) to national coverage in United States."
     }
   ]
 }
