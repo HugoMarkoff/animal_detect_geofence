@@ -247,6 +247,9 @@ def apply_item_country_overrides(
         regional.discard(USA_PARENT_ISO3)
         usa_states_known = False
         usa_states.clear()
+        allow_states.clear()
+        allow_regional_states.clear()
+        block_states.clear()
 
     if allow_states or allow_regional_states or block_states:
         expected.add(USA_PARENT_ISO3)
@@ -823,6 +826,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    global_artifact_paths = refresh_global_artifacts()
     animals_by_id = load_animals_by_id()
     override_files = collect_override_files()
     pack_countries = {
@@ -865,7 +869,6 @@ def main() -> None:
     elif changed_countries:
         print(f"No index changes needed in {INDEX_PATH.relative_to(ROOT).as_posix()}")
 
-    global_artifact_paths = refresh_global_artifacts()
     if global_artifact_paths:
         for relative_path in global_artifact_paths:
             print(f"Updated {relative_path}")
