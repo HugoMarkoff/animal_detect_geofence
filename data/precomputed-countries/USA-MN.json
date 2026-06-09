@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 395,
+    "total": 393,
     "statusCounts": {
       "likely_false": 25,
       "unlisted": 67,
-      "likely_true_one_source": 284,
+      "likely_true_one_source": 282,
       "likely_true_both": 16,
       "new_record": 3
     },
     "bucketCounts": {
       "Needs Review": 25,
       "Unlisted": 67,
-      "Likely Valid": 300,
+      "Likely Valid": 298,
       "New": 3
     }
   },
@@ -7824,106 +7824,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "countryIso3": "USA-MN",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4183,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-MN/601cf098-9876-4912-84bb-0926834305e9.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for grizzly bear (ursus u. arctos) in United States \u2013 Minnesota (USA-MN).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-          "countryIso3": "USA-MN",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4183,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "608f0305-b94a-4f39-b445-654fbb07ba73",
@@ -18515,106 +18415,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "USA-MN",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4183,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-MN/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Minnesota (USA-MN).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-          "countryIso3": "USA-MN",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4183,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
       "countryIso3": "USA-MN",
       "status": "likely_true_both",
@@ -21408,8 +21208,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 45,
-    "appliedAtUtc": "2026-06-09T10:11:40.087296+00:00",
+    "count": 43,
+    "appliedAtUtc": "2026-06-09T10:56:11.450503+00:00",
     "items": [
       "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "072d8e15-64e0-41a6-9e81-007bef444fff",
@@ -21428,7 +21228,6 @@
       "4385382e-2007-4b12-a150-54e63bbfee0d",
       "5109acb4-e503-4147-a175-a3c6aa71f1e3",
       "514d9dd8-f2de-4a19-87df-3859e9063270",
-      "601cf098-9876-4912-84bb-0926834305e9",
       "67f8d7af-2d29-4b22-8810-71e798cac94d",
       "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "711807fc-ba18-4107-bb8f-daf9caea5c13",
@@ -21454,8 +21253,7 @@
       "cae9534f-f302-4229-9e11-b91138333d92",
       "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
-      "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "d620e25c-eed1-40f1-8101-6d3b33f3a723"
+      "d5120db5-2a59-45d7-a3ee-bc6d06b00b57"
     ]
   }
 }

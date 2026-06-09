@@ -15450,106 +15450,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "USA-AL",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4160,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AL/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Alabama (USA-AL).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-          "countryIso3": "USA-AL",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4160,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
       "countryIso3": "USA-AL",
       "status": "likely_true_one_source",
@@ -17420,6 +17320,164 @@
       "tags": []
     },
     {
+      "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
+      "countryIso3": "USA-AL",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 17,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 114,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7429082,
+      "inatTaxonId": 44705,
+      "inatPlaceId": 4160,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 1,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 114,
+        "qualifiedTotal": 17,
+        "specimenOrSampleCount": 11,
+        "staleGbifCount": 11,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Dropped 12 likely outlier points before scoring. Only 5 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 17,
+        "corePointCount": 5,
+        "outlierPointCount": 12,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 57.77690807098165,
+        "unique25kmCells": 5,
+        "unique50kmCells": 3,
+        "countryDiameterKm": 415.7690624253551,
+        "spreadRatio": 0.1389639424683134,
+        "coverageAreaKm2": 3385.1523092166067,
+        "coverageRatio": 0.02493354282864471,
+        "footprintPolygonLatLngs": [
+          [
+            34.56575265850729,
+            -87.19049077536002
+          ],
+          [
+            34.3000318313501,
+            -86.4442317893898
+          ],
+          [
+            34.84025407435328,
+            -86.5408520315622
+          ],
+          [
+            34.95949098071174,
+            -86.71893696305085
+          ]
+        ]
+      },
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-AL/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for house mouse (mus musculus) in United States \u2013 Alabama (USA-AL).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
+          "countryIso3": "USA-AL",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 17,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 114,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7429082,
+          "inatTaxonId": 44705,
+          "inatPlaceId": 4160,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 1,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 114,
+            "qualifiedTotal": 17,
+            "specimenOrSampleCount": 11,
+            "staleGbifCount": 11,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "needs_review",
+            "label": "Pending review",
+            "short": "",
+            "note": "Dropped 12 likely outlier points before scoring. Only 5 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+            "significant": false,
+            "totalPoints": 17,
+            "corePointCount": 5,
+            "outlierPointCount": 12,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 57.77690807098165,
+            "unique25kmCells": 5,
+            "unique50kmCells": 3,
+            "countryDiameterKm": 415.7690624253551,
+            "spreadRatio": 0.1389639424683134,
+            "coverageAreaKm2": 3385.1523092166067,
+            "coverageRatio": 0.02493354282864471,
+            "footprintPolygonLatLngs": [
+              [
+                34.56575265850729,
+                -87.19049077536002
+              ],
+              [
+                34.3000318313501,
+                -86.4442317893898
+              ],
+              [
+                34.84025407435328,
+                -86.5408520315622
+              ],
+              [
+                34.95949098071174,
+                -86.71893696305085
+              ]
+            ]
+          },
+          "tags": []
+        }
+      }
+    },
+    {
       "itemId": "fb0b6995-6f9e-4fde-8358-a03f196bf768",
       "countryIso3": "USA-AL",
       "status": "likely_true_one_source",
@@ -17907,93 +17965,11 @@
         },
         "tags": []
       }
-    },
-    {
-      "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-      "sourceFile": "data/review-overrides/countries/USA-AL/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
-      "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-      "updatedBy": "Dan",
-      "reason": "Imported 52 Dan review decisions (custom scope rules, reject add). Effective scope for house mouse (mus musculus) in United States \u2013 Alabama (USA-AL).",
-      "baseEntry": {
-        "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-        "countryIso3": "USA-AL",
-        "status": "new_record",
-        "bucket": "New",
-        "expected": false,
-        "gbifPresent": true,
-        "inatPresent": false,
-        "gbifCount": 17,
-        "inatCount": 0,
-        "rawGbifPresent": true,
-        "rawInatPresent": false,
-        "rawGbifCount": 114,
-        "rawInatCount": 0,
-        "gbifUsageKey": 7429082,
-        "inatTaxonId": 44705,
-        "inatPlaceId": 4160,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 1,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 114,
-          "qualifiedTotal": 17,
-          "specimenOrSampleCount": 11,
-          "staleGbifCount": 11,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "needs_review",
-          "label": "Pending review",
-          "short": "",
-          "note": "Dropped 12 likely outlier points before scoring. Only 5 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-          "significant": false,
-          "totalPoints": 17,
-          "corePointCount": 5,
-          "outlierPointCount": 12,
-          "clusterCount": 1,
-          "clusterSpreadKm": 0.0,
-          "maxDistanceKm": 57.77690807098165,
-          "unique25kmCells": 5,
-          "unique50kmCells": 3,
-          "countryDiameterKm": 415.7690624253551,
-          "spreadRatio": 0.1389639424683134,
-          "coverageAreaKm2": 3385.1523092166067,
-          "coverageRatio": 0.02493354282864471,
-          "footprintPolygonLatLngs": [
-            [
-              34.56575265850729,
-              -87.19049077536002
-            ],
-            [
-              34.3000318313501,
-              -86.4442317893898
-            ],
-            [
-              34.84025407435328,
-              -86.5408520315622
-            ],
-            [
-              34.95949098071174,
-              -86.71893696305085
-            ]
-          ]
-        },
-        "tags": []
-      }
     }
   ],
   "manualOverrideSummary": {
-    "count": 44,
-    "appliedAtUtc": "2026-06-09T10:11:39.257123+00:00",
+    "count": 43,
+    "appliedAtUtc": "2026-06-09T10:56:10.653460+00:00",
     "items": [
       "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "072d8e15-64e0-41a6-9e81-007bef444fff",
@@ -18036,7 +18012,6 @@
       "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
       "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b"
     ]

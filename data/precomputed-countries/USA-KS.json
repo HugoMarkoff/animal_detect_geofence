@@ -11,15 +11,15 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 377,
+    "total": 376,
     "statusCounts": {
-      "likely_true_one_source": 308,
+      "likely_true_one_source": 307,
       "likely_false": 27,
       "unlisted": 39,
       "new_record": 3
     },
     "bucketCounts": {
-      "Likely Valid": 308,
+      "Likely Valid": 307,
       "Needs Review": 27,
       "Unlisted": 39,
       "New": 3
@@ -4459,10 +4459,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -4476,9 +4476,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-KS/3e4fac86-1e90-403c-b798-c20a93df373c.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic elk (cervus canadensis) for United States \u2013 Kansas (USA-KS). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T02:20:58.835706+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported Dan review: reject remove. Effective scope for domestic elk (cervus canadensis) in United States \u2013 Kansas (USA-KS).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
@@ -7003,106 +7003,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "countryIso3": "USA-KS",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4176,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-KS/601cf098-9876-4912-84bb-0926834305e9.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for grizzly bear (ursus u. arctos) in United States \u2013 Kansas (USA-KS).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-          "countryIso3": "USA-KS",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4176,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "60a26250-1387-4997-bb2a-4b2603f94deb",
@@ -17675,106 +17575,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "USA-KS",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4176,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-KS/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Kansas (USA-KS).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-          "countryIso3": "USA-KS",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4176,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
       "countryIso3": "USA-KS",
       "status": "likely_true_one_source",
@@ -19823,6 +19623,172 @@
       "tags": []
     },
     {
+      "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
+      "countryIso3": "USA-KS",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 16,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 754,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7429082,
+      "inatTaxonId": 44705,
+      "inatPlaceId": 4176,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 3,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 754,
+        "qualifiedTotal": 16,
+        "specimenOrSampleCount": 78,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Dropped 6 likely outlier points before scoring. Only 6 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 12,
+        "corePointCount": 6,
+        "outlierPointCount": 6,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 59.55462859923723,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 520.8909165872094,
+        "spreadRatio": 0.1143322463548208,
+        "coverageAreaKm2": 3294.3531483740917,
+        "coverageRatio": 0.015459188870831026,
+        "footprintPolygonLatLngs": [
+          [
+            38.74550635131038,
+            -95.3248352493596
+          ],
+          [
+            38.788436216528,
+            -94.71345345222028
+          ],
+          [
+            38.879630694878216,
+            -94.61931287229231
+          ],
+          [
+            39.067640913595696,
+            -94.5962915096824
+          ],
+          [
+            39.3900953096988,
+            -94.98446638968184
+          ]
+        ]
+      },
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-KS/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for house mouse (mus musculus) in United States \u2013 Kansas (USA-KS).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
+          "countryIso3": "USA-KS",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 16,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 754,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7429082,
+          "inatTaxonId": 44705,
+          "inatPlaceId": 4176,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 3,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 754,
+            "qualifiedTotal": 16,
+            "specimenOrSampleCount": 78,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "needs_review",
+            "label": "Pending review",
+            "short": "",
+            "note": "Dropped 6 likely outlier points before scoring. Only 6 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+            "significant": false,
+            "totalPoints": 12,
+            "corePointCount": 6,
+            "outlierPointCount": 6,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 59.55462859923723,
+            "unique25kmCells": 4,
+            "unique50kmCells": 4,
+            "countryDiameterKm": 520.8909165872094,
+            "spreadRatio": 0.1143322463548208,
+            "coverageAreaKm2": 3294.3531483740917,
+            "coverageRatio": 0.015459188870831026,
+            "footprintPolygonLatLngs": [
+              [
+                38.74550635131038,
+                -95.3248352493596
+              ],
+              [
+                38.788436216528,
+                -94.71345345222028
+              ],
+              [
+                38.879630694878216,
+                -94.61931287229231
+              ],
+              [
+                39.067640913595696,
+                -94.5962915096824
+              ],
+              [
+                39.3900953096988,
+                -94.98446638968184
+              ]
+            ]
+          },
+          "tags": []
+        }
+      }
+    },
+    {
       "itemId": "fb0b6995-6f9e-4fde-8358-a03f196bf768",
       "countryIso3": "USA-KS",
       "status": "likely_true_one_source",
@@ -20401,97 +20367,9 @@
       "tags": []
     }
   ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-      "sourceFile": "data/review-overrides/countries/USA-KS/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
-      "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-      "updatedBy": "Dan",
-      "reason": "Imported 52 Dan review decisions (custom scope rules, reject add). Effective scope for house mouse (mus musculus) in United States \u2013 Kansas (USA-KS).",
-      "baseEntry": {
-        "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-        "countryIso3": "USA-KS",
-        "status": "new_record",
-        "bucket": "New",
-        "expected": false,
-        "gbifPresent": true,
-        "inatPresent": false,
-        "gbifCount": 16,
-        "inatCount": 0,
-        "rawGbifPresent": true,
-        "rawInatPresent": false,
-        "rawGbifCount": 754,
-        "rawInatCount": 0,
-        "gbifUsageKey": 7429082,
-        "inatTaxonId": 44705,
-        "inatPlaceId": 4176,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 3,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 754,
-          "qualifiedTotal": 16,
-          "specimenOrSampleCount": 78,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "needs_review",
-          "label": "Pending review",
-          "short": "",
-          "note": "Dropped 6 likely outlier points before scoring. Only 6 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-          "significant": false,
-          "totalPoints": 12,
-          "corePointCount": 6,
-          "outlierPointCount": 6,
-          "clusterCount": 1,
-          "clusterSpreadKm": 0.0,
-          "maxDistanceKm": 59.55462859923723,
-          "unique25kmCells": 4,
-          "unique50kmCells": 4,
-          "countryDiameterKm": 520.8909165872094,
-          "spreadRatio": 0.1143322463548208,
-          "coverageAreaKm2": 3294.3531483740917,
-          "coverageRatio": 0.015459188870831026,
-          "footprintPolygonLatLngs": [
-            [
-              38.74550635131038,
-              -95.3248352493596
-            ],
-            [
-              38.788436216528,
-              -94.71345345222028
-            ],
-            [
-              38.879630694878216,
-              -94.61931287229231
-            ],
-            [
-              39.067640913595696,
-              -94.5962915096824
-            ],
-            [
-              39.3900953096988,
-              -94.98446638968184
-            ]
-          ]
-        },
-        "tags": []
-      }
-    }
-  ],
   "manualOverrideSummary": {
-    "count": 46,
-    "appliedAtUtc": "2026-06-09T10:11:39.822070+00:00",
+    "count": 44,
+    "appliedAtUtc": "2026-06-09T10:56:11.200584+00:00",
     "items": [
       "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "072d8e15-64e0-41a6-9e81-007bef444fff",
@@ -20510,7 +20388,6 @@
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "4385382e-2007-4b12-a150-54e63bbfee0d",
       "514d9dd8-f2de-4a19-87df-3859e9063270",
-      "601cf098-9876-4912-84bb-0926834305e9",
       "67f8d7af-2d29-4b22-8810-71e798cac94d",
       "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "711807fc-ba18-4107-bb8f-daf9caea5c13",
@@ -20536,7 +20413,6 @@
       "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
       "ff803ff7-ed2b-4520-9304-99b408657f47"
     ]

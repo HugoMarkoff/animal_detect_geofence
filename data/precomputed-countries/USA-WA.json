@@ -11,16 +11,16 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 471,
+    "total": 470,
     "statusCounts": {
       "new_record": 7,
-      "likely_true_one_source": 320,
+      "likely_true_one_source": 319,
       "unlisted": 106,
       "likely_false": 38
     },
     "bucketCounts": {
       "New": 7,
-      "Likely Valid": 320,
+      "Likely Valid": 319,
       "Unlisted": 106,
       "Needs Review": 38
     }
@@ -6019,10 +6019,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -6036,9 +6036,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-WA/3e4fac86-1e90-403c-b798-c20a93df373c.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic elk (cervus canadensis) for United States \u2013 Washington (USA-WA). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T02:20:58.835706+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported Dan review: reject remove. Effective scope for domestic elk (cervus canadensis) in United States \u2013 Washington (USA-WA).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
@@ -12505,106 +12505,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "80921fd4-335d-488e-96f3-cca25b40d5ed",
-      "countryIso3": "USA-WA",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 1067780,
-      "inatPlaceId": 4207,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-WA/80921fd4-335d-488e-96f3-cca25b40d5ed.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-05T00:16:17.414090+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for mouflon (ovis orientalis) in United States \u2013 Washington (USA-WA).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "80921fd4-335d-488e-96f3-cca25b40d5ed",
-          "countryIso3": "USA-WA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 1067780,
-          "inatPlaceId": 4207,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "819ea972-9d43-40f8-a47d-f415c816de94",
@@ -21609,106 +21509,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "USA-WA",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4207,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-WA/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Washington (USA-WA).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-          "countryIso3": "USA-WA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4207,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
       "countryIso3": "USA-WA",
       "status": "likely_true_one_source",
@@ -24882,6 +24682,188 @@
       "tags": []
     },
     {
+      "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
+      "countryIso3": "USA-WA",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 27,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 532,
+      "rawInatCount": 0,
+      "gbifUsageKey": 7429082,
+      "inatTaxonId": 44705,
+      "inatPlaceId": 4207,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 2,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 532,
+        "qualifiedTotal": 27,
+        "specimenOrSampleCount": 61,
+        "staleGbifCount": 61,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 27,
+        "corePointCount": 21,
+        "outlierPointCount": 6,
+        "clusterCount": 2,
+        "clusterSpreadKm": 362.26144701306623,
+        "maxDistanceKm": 402.47318956930786,
+        "unique25kmCells": 9,
+        "unique50kmCells": 6,
+        "countryDiameterKm": 485.107251373102,
+        "spreadRatio": 0.8296581599844212,
+        "coverageAreaKm2": 91281.15892624194,
+        "coverageRatio": 0.4938735083415407,
+        "footprintPolygonLatLngs": [
+          [
+            47.407823985189204,
+            -123.7146831326026
+          ],
+          [
+            47.17620796757189,
+            -123.1596846375218
+          ],
+          [
+            47.629438625037835,
+            -116.43435478442622
+          ],
+          [
+            47.66045540586045,
+            -116.43017046362756
+          ],
+          [
+            47.70487990023422,
+            -116.46243694036896
+          ],
+          [
+            47.94965127353042,
+            -116.81233405990758
+          ],
+          [
+            47.81764643609403,
+            -123.1625587279695
+          ]
+        ],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Dropped 6 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Washington, so this is treated as national rather than a single regional pocket."
+      },
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/USA-WA/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for house mouse (mus musculus) in United States \u2013 Washington (USA-WA).",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
+          "countryIso3": "USA-WA",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 27,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 532,
+          "rawInatCount": 0,
+          "gbifUsageKey": 7429082,
+          "inatTaxonId": 44705,
+          "inatPlaceId": 4207,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 2,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 532,
+            "qualifiedTotal": 27,
+            "specimenOrSampleCount": 61,
+            "staleGbifCount": 61,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 27,
+            "corePointCount": 21,
+            "outlierPointCount": 6,
+            "clusterCount": 2,
+            "clusterSpreadKm": 362.26144701306623,
+            "maxDistanceKm": 402.47318956930786,
+            "unique25kmCells": 9,
+            "unique50kmCells": 6,
+            "countryDiameterKm": 485.107251373102,
+            "spreadRatio": 0.8296581599844212,
+            "coverageAreaKm2": 91281.15892624194,
+            "coverageRatio": 0.4938735083415407,
+            "footprintPolygonLatLngs": [
+              [
+                47.407823985189204,
+                -123.7146831326026
+              ],
+              [
+                47.17620796757189,
+                -123.1596846375218
+              ],
+              [
+                47.629438625037835,
+                -116.43435478442622
+              ],
+              [
+                47.66045540586045,
+                -116.43017046362756
+              ],
+              [
+                47.70487990023422,
+                -116.46243694036896
+              ],
+              [
+                47.94965127353042,
+                -116.81233405990758
+              ],
+              [
+                47.81764643609403,
+                -123.1625587279695
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "Dropped 6 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Washington, so this is treated as national rather than a single regional pocket."
+          },
+          "tags": []
+        }
+      }
+    },
+    {
       "itemId": "fb0b6995-6f9e-4fde-8358-a03f196bf768",
       "countryIso3": "USA-WA",
       "status": "likely_true_one_source",
@@ -25465,105 +25447,11 @@
         },
         "tags": []
       }
-    },
-    {
-      "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-      "sourceFile": "data/review-overrides/countries/USA-WA/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
-      "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-      "updatedBy": "Dan",
-      "reason": "Imported 52 Dan review decisions (custom scope rules, reject add). Effective scope for house mouse (mus musculus) in United States \u2013 Washington (USA-WA).",
-      "baseEntry": {
-        "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-        "countryIso3": "USA-WA",
-        "status": "new_record",
-        "bucket": "New",
-        "expected": false,
-        "gbifPresent": true,
-        "inatPresent": false,
-        "gbifCount": 27,
-        "inatCount": 0,
-        "rawGbifPresent": true,
-        "rawInatPresent": false,
-        "rawGbifCount": 532,
-        "rawInatCount": 0,
-        "gbifUsageKey": 7429082,
-        "inatTaxonId": 44705,
-        "inatPlaceId": 4207,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 2,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 532,
-          "qualifiedTotal": 27,
-          "specimenOrSampleCount": 61,
-          "staleGbifCount": 61,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "significant": true,
-          "totalPoints": 27,
-          "corePointCount": 21,
-          "outlierPointCount": 6,
-          "clusterCount": 2,
-          "clusterSpreadKm": 362.26144701306623,
-          "maxDistanceKm": 402.47318956930786,
-          "unique25kmCells": 9,
-          "unique50kmCells": 6,
-          "countryDiameterKm": 485.107251373102,
-          "spreadRatio": 0.8296581599844212,
-          "coverageAreaKm2": 91281.15892624194,
-          "coverageRatio": 0.4938735083415407,
-          "footprintPolygonLatLngs": [
-            [
-              47.407823985189204,
-              -123.7146831326026
-            ],
-            [
-              47.17620796757189,
-              -123.1596846375218
-            ],
-            [
-              47.629438625037835,
-              -116.43435478442622
-            ],
-            [
-              47.66045540586045,
-              -116.43017046362756
-            ],
-            [
-              47.70487990023422,
-              -116.46243694036896
-            ],
-            [
-              47.94965127353042,
-              -116.81233405990758
-            ],
-            [
-              47.81764643609403,
-              -123.1625587279695
-            ]
-          ],
-          "code": "countrywide",
-          "label": "National footprint",
-          "short": "National",
-          "note": "Dropped 6 likely outlier points before scoring. 2 dense observation areas were found in United States \u2013 Washington, so this is treated as national rather than a single regional pocket."
-        },
-        "tags": []
-      }
     }
   ],
   "manualOverrideSummary": {
-    "count": 49,
-    "appliedAtUtc": "2026-06-09T10:11:41.020963+00:00",
+    "count": 47,
+    "appliedAtUtc": "2026-06-09T10:56:12.338821+00:00",
     "items": [
       "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "072d8e15-64e0-41a6-9e81-007bef444fff",
@@ -25591,7 +25479,6 @@
       "7582ac8c-c63c-4531-a436-d4b532e753be",
       "7a3f5fb1-8e10-44c8-b040-d0672788540c",
       "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
-      "80921fd4-335d-488e-96f3-cca25b40d5ed",
       "82557fe4-2c1e-45ff-9920-c6407a348bf3",
       "8a57d557-41a8-4282-9e37-59f1b9e806ea",
       "8a766598-fcfe-4c06-b899-7213f9b20dfa",
@@ -25611,7 +25498,6 @@
       "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "ebff6251-9fd2-4e1b-a2db-f0db3190a289",
       "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b"
     ]

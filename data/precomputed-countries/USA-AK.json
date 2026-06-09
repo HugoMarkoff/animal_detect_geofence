@@ -11,15 +11,15 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 351,
+    "total": 350,
     "statusCounts": {
-      "likely_true_one_source": 265,
+      "likely_true_one_source": 264,
       "likely_false": 34,
       "unlisted": 50,
       "new_record": 2
     },
     "bucketCounts": {
-      "Likely Valid": 265,
+      "Likely Valid": 264,
       "Needs Review": 34,
       "Unlisted": 50,
       "New": 2
@@ -16589,106 +16589,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "USA-AK",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4163,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AK/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Alaska (USA-AK).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-          "countryIso3": "USA-AK",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4163,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
       "countryIso3": "USA-AK",
       "status": "likely_true_one_source",
@@ -19404,8 +19304,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 48,
-    "appliedAtUtc": "2026-06-09T09:53:25.391985+00:00",
+    "count": 47,
+    "appliedAtUtc": "2026-06-09T10:56:10.619513+00:00",
     "items": [
       "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "072d8e15-64e0-41a6-9e81-007bef444fff",
@@ -19453,7 +19353,6 @@
       "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "dc7764c5-1132-49e6-baab-aaad844185a1"
     ]
   }

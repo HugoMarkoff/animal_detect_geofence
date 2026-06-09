@@ -11,15 +11,15 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 336,
+    "total": 334,
     "statusCounts": {
-      "likely_true_one_source": 281,
+      "likely_true_one_source": 279,
       "likely_false": 29,
       "unlisted": 25,
       "new_record": 1
     },
     "bucketCounts": {
-      "Likely Valid": 281,
+      "Likely Valid": 279,
       "Needs Review": 29,
       "Unlisted": 25,
       "New": 1
@@ -4027,10 +4027,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Approved from the domestic-animal policy pass.",
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -4044,9 +4044,9 @@
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/USA-AR/3e4fac86-1e90-403c-b798-c20a93df373c.json",
         "action": "upsert",
-        "updatedAtUtc": "2026-06-09T00:00:00Z",
-        "updatedBy": "github-review",
-        "reason": "Manual review approval: keep domestic elk (cervus canadensis) for United States \u2013 Arkansas (USA-AR). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+        "updatedAtUtc": "2026-06-02T02:20:58.835706+00:00",
+        "updatedBy": "Dan",
+        "reason": "Imported Dan review: reject remove. Effective scope for domestic elk (cervus canadensis) in United States \u2013 Arkansas (USA-AR).",
         "addedByOverride": false,
         "baseEntry": {
           "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
@@ -6277,106 +6277,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-      "countryIso3": "USA-AR",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4161,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AR/601cf098-9876-4912-84bb-0926834305e9.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for grizzly bear (ursus u. arctos) in United States \u2013 Arkansas (USA-AR).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "601cf098-9876-4912-84bb-0926834305e9",
-          "countryIso3": "USA-AR",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4161,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "60a26250-1387-4997-bb2a-4b2603f94deb",
@@ -16047,106 +15947,6 @@
       "tags": []
     },
     {
-      "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-      "countryIso3": "USA-AR",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4161,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AR/d620e25c-eed1-40f1-8101-6d3b33f3a723.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for african wild cat (felis silvestris lybica) in United States \u2013 Arkansas (USA-AR).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d620e25c-eed1-40f1-8101-6d3b33f3a723",
-          "countryIso3": "USA-AR",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4161,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d696e79e-7a64-434d-b880-a31aeada70da",
       "countryIso3": "USA-AR",
       "status": "likely_true_one_source",
@@ -18448,8 +18248,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 46,
-    "appliedAtUtc": "2026-06-09T10:11:39.292258+00:00",
+    "count": 44,
+    "appliedAtUtc": "2026-06-09T10:56:10.687131+00:00",
     "items": [
       "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
       "072d8e15-64e0-41a6-9e81-007bef444fff",
@@ -18468,7 +18268,6 @@
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "4385382e-2007-4b12-a150-54e63bbfee0d",
       "514d9dd8-f2de-4a19-87df-3859e9063270",
-      "601cf098-9876-4912-84bb-0926834305e9",
       "67f8d7af-2d29-4b22-8810-71e798cac94d",
       "6c7c93e1-741a-4152-8f0f-8f161a388d78",
       "711807fc-ba18-4107-bb8f-daf9caea5c13",
@@ -18495,7 +18294,6 @@
       "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
       "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
       "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "d620e25c-eed1-40f1-8101-6d3b33f3a723",
       "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf"
     ]
   }

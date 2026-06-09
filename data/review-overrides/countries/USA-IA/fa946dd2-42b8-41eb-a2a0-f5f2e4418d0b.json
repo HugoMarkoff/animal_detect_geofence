@@ -1,8 +1,53 @@
 {
   "countryIso3": "USA-IA",
   "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-  "action": "remove",
+  "action": "upsert",
   "updatedBy": "Dan",
   "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-  "reason": "Imported 52 Dan review decisions (custom scope rules, reject add). Effective scope for house mouse (mus musculus) in United States \u2013 Iowa (USA-IA)."
+  "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for house mouse (mus musculus) in United States \u2013 Iowa (USA-IA).",
+  "patch": {
+    "status": "likely_true_one_source",
+    "expected": false,
+    "observationProfile": {
+      "code": "needs_review",
+      "label": "Pending review",
+      "short": "",
+      "note": "Dropped 4 likely outlier points before scoring. Only 7 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+      "significant": false,
+      "totalPoints": 11,
+      "corePointCount": 7,
+      "outlierPointCount": 4,
+      "clusterCount": 1,
+      "clusterSpreadKm": 0.0,
+      "maxDistanceKm": 17.78503383636992,
+      "unique25kmCells": 3,
+      "unique50kmCells": 3,
+      "countryDiameterKm": 430.7778669882786,
+      "spreadRatio": 0.04128585797759625,
+      "coverageAreaKm2": 574.218357914967,
+      "coverageRatio": 0.003939856722757173,
+      "footprintPolygonLatLngs": [
+        [
+          41.64623427027692,
+          -93.87938408081494
+        ],
+        [
+          41.46388049860201,
+          -93.56239034907937
+        ],
+        [
+          41.5932882474849,
+          -93.55968019130323
+        ],
+        [
+          41.69663215487893,
+          -93.68251257092376
+        ],
+        [
+          41.65375369254218,
+          -93.87035543478535
+        ]
+      ]
+    }
+  }
 }

@@ -2,17 +2,25 @@
   "countryIso3": "USA-CO",
   "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
   "action": "upsert",
-  "updatedBy": "github-review",
-  "updatedAtUtc": "2026-06-09T00:00:00Z",
-  "reason": "Manual review approval: keep domestic elk (cervus canadensis) for United States \u2013 Colorado (USA-CO). This taxon should be reviewed against expected trail-camera presence, not just native range. Human-associated, feral, and free-ranging occurrence matters more than strict nativeness.",
+  "updatedBy": "Dan",
+  "updatedAtUtc": "2026-06-02T02:20:58.835706+00:00",
+  "reason": "Imported Dan review: reject remove. Effective scope for domestic elk (cervus canadensis) in United States \u2013 Colorado (USA-CO).",
   "patch": {
     "status": "likely_true_one_source",
     "expected": true,
     "observationProfile": {
-      "code": "countrywide",
-      "label": "National footprint",
-      "short": "National",
-      "note": "Approved from the domestic-animal policy pass."
+      "code": "no_points",
+      "label": "No mapped points",
+      "short": "No points",
+      "note": "No mapped coordinates were returned in the sampled observations.",
+      "significant": false,
+      "totalPoints": 0,
+      "maxDistanceKm": 0,
+      "unique25kmCells": 0,
+      "unique50kmCells": 0,
+      "countryDiameterKm": 585.8896265510634,
+      "spreadRatio": 0,
+      "footprintPolygonLatLngs": []
     }
   }
 }

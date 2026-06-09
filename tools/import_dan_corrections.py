@@ -495,10 +495,14 @@ def main() -> int:
         outcome = clean_text(decision.get("outcome")).lower()
         updated_at = clean_text(decision.get("updatedAt")) or now_utc_iso()
         notes = clean_text(decision.get("notes"))
+        notes_lower = notes.lower()
         common_name = clean_text(decision.get("commonName"))
 
         if outcome == "reject" and prefix == "systematic":
             skipped_systematic_rejects += 1
+            continue
+
+        if "made obsolete by a custom decision for a systematic proposal" in notes_lower:
             continue
 
         if outcome == "custom":
@@ -562,6 +566,10 @@ def main() -> int:
             append_unique_error(errors, f"Decision key {source_key} uses unsupported outcome '{outcome}'.")
             continue
 
+        existing_record = final_actions.get((item_id, scope_iso3))
+        if isinstance(existing_record, dict) and clean_text(existing_record.get("proposalAction")) == "custom":
+            continue
+
         final_decision = "allow" if (proposal_action == "add") == (outcome == "accept") else "block"
         final_actions[(item_id, scope_iso3)] = {
             "itemId": item_id,
@@ -600,6 +608,7 @@ def main() -> int:
 
     changed_scopes_by_item: dict[str, set[str]] = defaultdict(set)
     changed_files_by_item: dict[str, set[str]] = defaultdict(set)
+    relevant_scope_candidates_by_item: dict[str, set[str]] = defaultdict(set)
     tracking_scope_changes = 0
 
     for item_id, scoped_records in actions_by_item.items():
@@ -607,17 +616,32 @@ def main() -> int:
         item_tracking = ensure_tracking_entry(tracking_items, animals_by_id, item_id)
         animal = animals_by_id[item_id]
 
-        for scope_iso3, record in sorted(scoped_records.items()):
-            previous_scope = scope_snapshot(item_tracking_before, scope_iso3)
-            allow = item_tracking.get("allow") if isinstance(item_tracking.get("allow"), dict) else {}
-            block = item_tracking.get("block") if isinstance(item_tracking.get("block"), dict) else {}
-            allow_regional = item_tracking.get("allow_regional") if isinstance(item_tracking.get("allow_regional"), dict) else {}
-            metadata = item_tracking.get("metadata") if isinstance(item_tracking.get("metadata"), dict) else {}
+        allow = item_tracking.get("allow") if isinstance(item_tracking.get("allow"), dict) else {}
+        block = item_tracking.get("block") if isinstance(item_tracking.get("block"), dict) else {}
+        allow_regional = item_tracking.get("allow_regional") if isinstance(item_tracking.get("allow_regional"), dict) else {}
+        metadata = item_tracking.get("metadata") if isinstance(item_tracking.get("metadata"), dict) else {}
 
+        tracked_relevant_scopes = {
+            scope_iso3
+            for scope_iso3 in relevant_scopes
+            if scope_iso3 in allow or scope_iso3 in block or scope_iso3 in allow_regional or scope_iso3 in metadata
+        }
+        existing_override_scopes = {
+            scope_iso3
+            for (scope_iso3, existing_item_id), _path in existing_override_paths.items()
+            if existing_item_id == item_id and scope_iso3 in relevant_scopes
+        }
+        relevant_scope_candidates_by_item[item_id].update(tracked_relevant_scopes)
+        relevant_scope_candidates_by_item[item_id].update(existing_override_scopes)
+        relevant_scope_candidates_by_item[item_id].update(scoped_records)
+
+        for scope_iso3 in tracked_relevant_scopes:
             allow.pop(scope_iso3, None)
             block.pop(scope_iso3, None)
             allow_regional.pop(scope_iso3, None)
+            metadata.pop(scope_iso3, None)
 
+        for scope_iso3, record in sorted(scoped_records.items()):
             if record["decision"] == "allow":
                 allow[scope_iso3] = True
             else:
@@ -643,19 +667,21 @@ def main() -> int:
             }
             metadata[scope_iso3] = metadata_entry
 
-            item_tracking["allow"] = allow
-            item_tracking["block"] = block
-            item_tracking["allow_regional"] = allow_regional
-            item_tracking["metadata"] = metadata
+        item_tracking["allow"] = allow
+        item_tracking["block"] = block
+        item_tracking["allow_regional"] = allow_regional
+        item_tracking["metadata"] = metadata
 
-            current_scope = scope_snapshot(item_tracking, scope_iso3)
+        if not item_tracking.get("allow") and not item_tracking.get("block") and not item_tracking.get("allow_regional") and not item_tracking.get("metadata"):
+            tracking_items.pop(item_id, None)
+
+        for scope_iso3 in sorted(relevant_scope_candidates_by_item[item_id]):
+            previous_scope = scope_snapshot(item_tracking_before, scope_iso3)
+            current_scope = scope_snapshot(tracking_items.get(item_id), scope_iso3)
             if previous_scope != current_scope:
                 changed_scopes_by_item[item_id].add(scope_iso3)
                 changed_files_by_item[item_id].add(GEOFENCE_TRACKING_PATH.relative_to(ROOT).as_posix())
                 tracking_scope_changes += 1
-
-        if not item_tracking.get("allow") and not item_tracking.get("block") and not item_tracking.get("allow_regional") and not item_tracking.get("metadata"):
-            tracking_items.pop(item_id, None)
 
     override_writes = 0
     override_deletes = 0
@@ -663,7 +689,7 @@ def main() -> int:
     for item_id, scoped_records in actions_by_item.items():
         animal = animals_by_id[item_id]
         projected_item = project_item(animal, tracking_items.get(item_id))
-        candidate_scopes = derive_candidate_scopes(set(scoped_records))
+        candidate_scopes = derive_candidate_scopes(relevant_scope_candidates_by_item[item_id])
         updated_at = max((clean_text(record.get("updatedAtUtc")) for record in source_records_by_item[item_id]), default="") or now_utc_iso()
         item_label = species_label(animal, fallback=item_id)
 
