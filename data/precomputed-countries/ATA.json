@@ -7,68 +7,17 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/country-validation/ATA/new_candidates.csv",
   "summary": {
-    "total": 25,
+    "total": 23,
     "statusCounts": {
-      "likely_false": 14,
-      "likely_true_one_source": 11
+      "likely_false": 11,
+      "likely_true_one_source": 12
     },
     "bucketCounts": {
-      "Needs Review": 14,
-      "Likely Valid": 11
+      "Needs Review": 11,
+      "Likely Valid": 12
     }
   },
   "entries": [
-    {
-      "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
-      "countryIso3": "ATA",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 2441110,
-      "inatTaxonId": 121578,
-      "inatPlaceId": 206462,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 4222.008245644752,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
-    },
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "ATA",
@@ -668,7 +617,7 @@
     {
       "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "countryIso3": "ATA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -701,10 +650,10 @@
         "note": ""
       },
       "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Approved from the domestic-animal policy pass.",
         "significant": false,
         "totalPoints": 0,
         "maxDistanceKm": 0,
@@ -714,7 +663,66 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid",
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/ATA/aca65aaa-8c6d-4b69-94de-842b08b13bd6.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-09T00:00:00Z",
+        "updatedBy": "github-review",
+        "reason": "Manual review approval: keep domestic cattle (bos taurus) for Antarctica (ATA). Domestic cattle should be allowed everywhere rather than held in review as a native-range question.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
+          "countryIso3": "ATA",
+          "status": "likely_false",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": 2441022,
+          "inatTaxonId": 74113,
+          "inatPlaceId": 206462,
+          "managedEvidence": {
+            "domesticNamed": true,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "no_points",
+            "label": "No mapped points",
+            "short": "No points",
+            "note": "No mapped coordinates were returned in the sampled observations.",
+            "significant": false,
+            "totalPoints": 0,
+            "maxDistanceKm": 0,
+            "unique25kmCells": 0,
+            "unique50kmCells": 0,
+            "countryDiameterKm": 4222.008245644752,
+            "spreadRatio": 0,
+            "footprintPolygonLatLngs": []
+          },
+          "bucket": "Needs Review"
+        }
+      }
     },
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
@@ -856,57 +864,6 @@
         "note": "Dropped 16 likely outlier points before scoring. 2 dense observation areas were found in Antarctica, so this is treated as national rather than a single regional pocket."
       },
       "bucket": "Likely Valid"
-    },
-    {
-      "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
-      "countryIso3": "ATA",
-      "status": "likely_false",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 9606290,
-      "inatTaxonId": 906,
-      "inatPlaceId": 206462,
-      "managedEvidence": {
-        "domesticNamed": true,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 4222.008245644752,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "bucket": "Needs Review"
     },
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
@@ -1148,10 +1105,13 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 1,
-    "appliedAtUtc": "2026-05-17T08:54:55.636205+00:00",
+    "count": 4,
+    "appliedAtUtc": "2026-06-09T05:26:01.733062+00:00",
     "items": [
-      "601cf098-9876-4912-84bb-0926834305e9"
+      "0de8422e-f59d-4802-9e93-ab8559e43e55",
+      "601cf098-9876-4912-84bb-0926834305e9",
+      "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
+      "c10547c3-1748-48bf-a451-8066c820f22f"
     ]
   }
 }
