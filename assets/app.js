@@ -363,6 +363,7 @@ const state = {
     token: "",
     login: "",
     canWrite: false,
+    isFineGrainedToken: false,
     permissionLabel: "",
     isConnecting: false,
     isApplying: false,
@@ -1562,6 +1563,37 @@ function parseGitHubRepo(repository) {
   return { owner, repo };
 }
 
+function githubPermissionHint(response, fallbackPermission = "repository Contents: Read and write") {
+  const acceptedPermissions = cleanText(response?.headers?.get("x-accepted-github-permissions"));
+  if (!acceptedPermissions) {
+    return `Grant this token ${fallbackPermission} for ${DEFAULT_GITHUB_REPO}.`;
+  }
+
+  const formatted = acceptedPermissions
+    .split(",")
+    .map((entry) => {
+      const [name, level] = entry.split("=").map((part) => cleanText(part));
+      if (!name || !level) {
+        return "";
+      }
+      return `${name.replace(/_/g, " ")}: ${level}`;
+    })
+    .filter(Boolean);
+
+  return formatted.length
+    ? `Grant this token ${formatted.join(", ")} for ${DEFAULT_GITHUB_REPO}.`
+    : `Grant this token ${fallbackPermission} for ${DEFAULT_GITHUB_REPO}.`;
+}
+
+function buildGitHubErrorMessage(response, payload) {
+  const message = cleanText(payload?.message) || `GitHub request failed with ${response.status}.`;
+  if (!/personal access token/i.test(message)) {
+    return message;
+  }
+
+  return `${message}. ${githubPermissionHint(response)}`;
+}
+
 function encodeGitHubPath(path) {
   return cleanText(path)
     .split("/")
@@ -1607,7 +1639,7 @@ async function fetchGitHubJson(path, options = {}) {
 
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) {
-    throw new Error(payload.message || `GitHub request failed with ${response.status}.`);
+    throw new Error(buildGitHubErrorMessage(response, payload));
   }
 
   return payload;
@@ -2059,9 +2091,12 @@ function derivedAdminMessage() {
     return applyState;
   }
 
+  const fineGrainedNote = state.admin.isFineGrainedToken
+    ? " Fine-grained tokens must include repository Contents: Read and write for admin apply."
+    : "";
   const permissionText = state.admin.canWrite
-    ? `Connected as @${state.admin.login} with ${state.admin.permissionLabel || "write"} access to ${DEFAULT_GITHUB_REPO}.`
-    : `Connected as @${state.admin.login}, but this account cannot push to ${DEFAULT_GITHUB_REPO}.`;
+    ? `Connected as @${state.admin.login} with ${state.admin.permissionLabel || "write"} access to ${DEFAULT_GITHUB_REPO}.${fineGrainedNote}`
+    : `Connected as @${state.admin.login}, but this account cannot push to ${DEFAULT_GITHUB_REPO}.${fineGrainedNote}`;
 
   return {
     message: applyState.canApply ? `${permissionText} ${applyState.message}` : `${permissionText} ${applyState.message}`,
@@ -2143,6 +2178,10 @@ async function connectAdminSession() {
       fetchGitHubJson("/user", { token }),
       fetchGitHubJson(`/repos/${owner}/${repo}`, { token }),
     ]);
+    await fetchGitHubJson(
+      `/repos/${owner}/${repo}/contents/${encodeGitHubPath(ADMIN_CHANGE_LOG_PATH)}?ref=${encodeURIComponent(DEFAULT_GITHUB_BRANCH)}`,
+      { token },
+    );
 
     const permissions = repository.permissions || {};
     const canWrite = Boolean(permissions.admin || permissions.maintain || permissions.push);
@@ -2151,6 +2190,7 @@ async function connectAdminSession() {
     state.admin.token = token;
     state.admin.login = cleanText(user.login);
     state.admin.canWrite = canWrite;
+    state.admin.isFineGrainedToken = token.startsWith("github_pat_");
     state.admin.permissionLabel = permissionLabel;
     persistAdminToken(token);
     clearAdminMessage();
@@ -2165,6 +2205,7 @@ async function connectAdminSession() {
     state.admin.token = "";
     state.admin.login = "";
     state.admin.canWrite = false;
+    state.admin.isFineGrainedToken = false;
     state.admin.permissionLabel = "";
     state.admin.lastCommitUrl = "";
     clearPersistedAdminToken();
@@ -2180,6 +2221,7 @@ function disconnectAdminSession() {
   state.admin.token = "";
   state.admin.login = "";
   state.admin.canWrite = false;
+  state.admin.isFineGrainedToken = false;
   state.admin.permissionLabel = "";
   state.admin.isConnecting = false;
   state.admin.isApplying = false;
