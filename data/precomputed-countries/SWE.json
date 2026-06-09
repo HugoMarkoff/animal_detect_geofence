@@ -11,14 +11,14 @@
     "statusCounts": {
       "likely_true_both": 103,
       "unlisted": 127,
-      "new_record": 52,
-      "likely_true_one_source": 28,
+      "new_record": 51,
+      "likely_true_one_source": 29,
       "likely_false": 5
     },
     "bucketCounts": {
-      "Likely Valid": 131,
+      "Likely Valid": 132,
       "Unlisted": 127,
-      "New": 52,
+      "New": 51,
       "Needs Review": 5
     }
   },
@@ -7991,8 +7991,8 @@
     {
       "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
       "countryIso3": "SWE",
-      "status": "new_record",
-      "bucket": "New",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": false,
@@ -8038,46 +8038,112 @@
         "spreadRatio": 0.32092478385391504,
         "coverageAreaKm2": 48939.840585674654,
         "coverageRatio": 0.1086839529323547,
-        "footprintPolygonLatLngs": [
-          [
-            67.2423969307946,
-            20.83639284319724
-          ],
-          [
-            65.12131155973869,
-            22.25845504622862
-          ],
-          [
-            65.35567266959734,
-            24.10291557756957
-          ],
-          [
-            65.47271897212514,
-            24.58901259656699
-          ],
-          [
-            65.56660249736275,
-            24.66658870848021
-          ],
-          [
-            67.18492558426247,
-            24.55060758357859
-          ],
-          [
-            67.64641522491829,
-            23.225429228640362
-          ],
-          [
-            68.02098969799289,
-            21.302063021018473
-          ]
-        ],
+        "footprintPolygonLatLngs": [],
         "code": "countrywide",
         "label": "National footprint",
         "short": "National",
-        "note": "Dropped 33 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Sweden, so it is treated as national."
+        "note": "Manual admin override applied from the review desk."
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/SWE/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-09T09:01:16.813Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please accept raccoon dog (nyctereutes procyonoides) into the permanent Sweden country pack and keep its current national footprint coverage. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+          "countryIso3": "SWE",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": false,
+          "gbifCount": 248,
+          "inatCount": 0,
+          "rawGbifPresent": true,
+          "rawInatPresent": false,
+          "rawGbifCount": 515,
+          "rawInatCount": 0,
+          "gbifUsageKey": 2434552,
+          "inatTaxonId": 855311,
+          "inatPlaceId": 7599,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 515,
+            "qualifiedTotal": 248,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 57,
+            "outlierPointCount": 33,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 243.00033875034268,
+            "unique25kmCells": 22,
+            "unique50kmCells": 12,
+            "countryDiameterKm": 757.1878239885531,
+            "spreadRatio": 0.32092478385391504,
+            "coverageAreaKm2": 48939.840585674654,
+            "coverageRatio": 0.1086839529323547,
+            "footprintPolygonLatLngs": [
+              [
+                67.2423969307946,
+                20.83639284319724
+              ],
+              [
+                65.12131155973869,
+                22.25845504622862
+              ],
+              [
+                65.35567266959734,
+                24.10291557756957
+              ],
+              [
+                65.47271897212514,
+                24.58901259656699
+              ],
+              [
+                65.56660249736275,
+                24.66658870848021
+              ],
+              [
+                67.18492558426247,
+                24.55060758357859
+              ],
+              [
+                67.64641522491829,
+                23.225429228640362
+              ],
+              [
+                68.02098969799289,
+                21.302063021018473
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "Dropped 33 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Sweden, so it is treated as national."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "74ea542e-855f-436c-980f-ab33014de432",
@@ -18035,12 +18101,13 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 6,
-    "appliedAtUtc": "2026-06-09T05:26:04.759297+00:00",
+    "count": 7,
+    "appliedAtUtc": "2026-06-09T09:01:40.289884+00:00",
     "items": [
       "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "601cf098-9876-4912-84bb-0926834305e9",
+      "746d3e98-64af-4897-9cd3-c09b169a8c69",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "c150a21e-952d-4665-8a62-a319841c5a56",
       "cae9534f-f302-4229-9e11-b91138333d92"
