@@ -1,5 +1,164 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-09T06:03:21.163941Z",
-  "entries": []
+  "updatedAtUtc": "2026-06-09T07:09:39.520049Z",
+  "entries": [
+    {
+      "id": "2026-06-09T07:09:33.520049Z__DNK__429257d4-3ef2-47fb-b849-66ee6c107346__manual_correction",
+      "updatedAtUtc": "2026-06-09T07:09:33.520049Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "DNK",
+      "countryName": "Denmark",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "regional",
+      "itemId": "429257d4-3ef2-47fb-b849-66ee6c107346",
+      "matchedKey": "mammalia;artiodactyla;cervidae;alces;alces",
+      "speciesLabel": "moose (alces alces)",
+      "sourceDataset": "data/review-overrides/countries/DNK/429257d4-3ef2-47fb-b849-66ee6c107346.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Backfilled the existing Denmark regional moose approval into the shared binary change file so the fresh change baseline includes the current reviewed regional exception.",
+      "appliedScopes": [
+        "DNK"
+      ]
+    },
+    {
+      "id": "2026-06-09T07:09:34.520049Z__CAN__601cf098-9876-4912-84bb-0926834305e9__manual_correction",
+      "updatedAtUtc": "2026-06-09T07:09:34.520049Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "CAN",
+      "countryName": "Canada",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "matchedKey": "mammalia;carnivora;ursidae;ursus;u. arctos",
+      "speciesLabel": "grizzly bear (ursus u. arctos)",
+      "sourceDataset": "systematic_review_proposals.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Backfilled the current grizzly correction into the fresh audit log. Effective override keeps grizzly only in Canada and the United States and removes it from all USA state packs.",
+      "appliedScopes": [
+        "CAN",
+        "USA"
+      ]
+    },
+    {
+      "id": "2026-06-09T07:09:35.520049Z__USA__601cf098-9876-4912-84bb-0926834305e9__manual_correction",
+      "updatedAtUtc": "2026-06-09T07:09:35.520049Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "USA",
+      "countryName": "United States",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "matchedKey": "mammalia;carnivora;ursidae;ursus;u. arctos",
+      "speciesLabel": "grizzly bear (ursus u. arctos)",
+      "sourceDataset": "systematic_review_proposals.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Backfilled the current grizzly correction into the fresh audit log. Effective override keeps grizzly only in Canada and the United States and removes it from all USA state packs.",
+      "appliedScopes": [
+        "CAN",
+        "USA"
+      ]
+    },
+    {
+      "id": "2026-06-09T07:09:36.520049Z__MEX__ea7e5297-8c71-4c93-a55b-27b1fe8f49de__manual_correction",
+      "updatedAtUtc": "2026-06-09T07:09:36.520049Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "MEX",
+      "countryName": "Mexico",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "ea7e5297-8c71-4c93-a55b-27b1fe8f49de",
+      "matchedKey": "reptilia;squamata;helodermatidae;heloderma;suspectum",
+      "speciesLabel": "gila monster (heloderma suspectum)",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Corrected gila monster from the broad reptile fallback to its native USA/MEX scope, with USA limited to AZ, CA, NM, NV, and UT in state packs.",
+      "appliedScopes": [
+        "MEX",
+        "USA-AZ",
+        "USA-CA",
+        "USA-NM",
+        "USA-NV",
+        "USA-UT"
+      ]
+    },
+    {
+      "id": "2026-06-09T07:09:37.520049Z__USA__ea7e5297-8c71-4c93-a55b-27b1fe8f49de__manual_correction",
+      "updatedAtUtc": "2026-06-09T07:09:37.520049Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "USA",
+      "countryName": "United States",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "ea7e5297-8c71-4c93-a55b-27b1fe8f49de",
+      "matchedKey": "reptilia;squamata;helodermatidae;heloderma;suspectum",
+      "speciesLabel": "gila monster (heloderma suspectum)",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Corrected gila monster from the broad reptile fallback to its native USA/MEX scope, with USA limited to AZ, CA, NM, NV, and UT in state packs.",
+      "appliedScopes": [
+        "MEX",
+        "USA-AZ",
+        "USA-CA",
+        "USA-NM",
+        "USA-NV",
+        "USA-UT"
+      ]
+    },
+    {
+      "id": "2026-06-09T07:09:38.520049Z__MEX__446887df-3477-4f4a-a434-852f96ba48d9__manual_correction",
+      "updatedAtUtc": "2026-06-09T07:09:38.520049Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "MEX",
+      "countryName": "Mexico",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "446887df-3477-4f4a-a434-852f96ba48d9",
+      "matchedKey": "reptilia;testudines;emydidae;actinemys;marmorata",
+      "speciesLabel": "western pond turtle (actinemys marmorata)",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Corrected western pond turtle from the broad emydid fallback to USA/MEX, with USA limited to CA, OR, and WA in state packs.",
+      "appliedScopes": [
+        "MEX",
+        "USA-CA",
+        "USA-OR",
+        "USA-WA"
+      ]
+    },
+    {
+      "id": "2026-06-09T07:09:39.520049Z__USA__446887df-3477-4f4a-a434-852f96ba48d9__manual_correction",
+      "updatedAtUtc": "2026-06-09T07:09:39.520049Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "USA",
+      "countryName": "United States",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "446887df-3477-4f4a-a434-852f96ba48d9",
+      "matchedKey": "reptilia;testudines;emydidae;actinemys;marmorata",
+      "speciesLabel": "western pond turtle (actinemys marmorata)",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Corrected western pond turtle from the broad emydid fallback to USA/MEX, with USA limited to CA, OR, and WA in state packs.",
+      "appliedScopes": [
+        "MEX",
+        "USA-CA",
+        "USA-OR",
+        "USA-WA"
+      ]
+    }
+  ]
 }

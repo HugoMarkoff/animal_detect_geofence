@@ -169,6 +169,40 @@ def item_expected_in_country(item: dict[str, Any] | None, country_iso3: str) -> 
     return country_iso3 in normalize_country_codes(item.get("expectedCountries"))
 
 
+def item_has_explicit_subnational_membership(item: dict[str, Any] | None, scope_iso3: str) -> bool:
+    if not isinstance(item, dict):
+        return False
+
+    state_code = usa_state_code_from_scope(scope_iso3)
+    if not state_code:
+        return False
+
+    expected_subdivisions = normalize_expected_subdivisions(item.get("expectedSubdivisions"))
+    return USA_PARENT_ISO3 in expected_subdivisions
+
+
+def item_expected_in_scope(item: dict[str, Any] | None, scope_iso3: str) -> bool:
+    if not isinstance(item, dict):
+        return False
+
+    normalized_scope = clean_text(scope_iso3).upper()
+    state_code = usa_state_code_from_scope(normalized_scope)
+    if not state_code:
+        return item_expected_in_country(item, normalized_scope)
+
+    expected_countries = set(normalize_country_codes(item.get("expectedCountries")))
+    if USA_PARENT_ISO3 not in expected_countries:
+        return False
+
+    expected_subdivisions = normalize_expected_subdivisions(item.get("expectedSubdivisions"))
+    raw_usa_states = expected_subdivisions.get(USA_PARENT_ISO3)
+    if not isinstance(raw_usa_states, list):
+        return False
+    if not raw_usa_states:
+        return True
+    return state_code in raw_usa_states
+
+
 def apply_item_country_overrides(
     expected_countries: list[str],
     allow_regional_countries: list[str],
@@ -500,12 +534,16 @@ def apply_country_overrides(
 
         # Drop stale expected entries that are no longer in the current global dataset
         # for this country. Explicit override upserts can still add items back afterward.
-        if (
-            raw_entry.get("expected")
-            and not uses_subnational_expected_membership
-            and not item_expected_in_country(animals_by_id.get(item_id), iso3)
-        ):
-            continue
+        if raw_entry.get("expected"):
+            global_item = animals_by_id.get(item_id)
+            if uses_subnational_expected_membership:
+                if (
+                    item_has_explicit_subnational_membership(global_item, iso3)
+                    and not item_expected_in_scope(global_item, iso3)
+                ):
+                    continue
+            elif not item_expected_in_country(global_item, iso3):
+                continue
 
         entries_by_id[item_id] = deepcopy(raw_entry)
     removed_entries: list[dict[str, Any]] = []
