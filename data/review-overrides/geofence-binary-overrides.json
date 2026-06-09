@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-09T09:01:16.596Z",
+  "updatedAtUtc": "2026-06-09T09:57:26.477Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -1456,6 +1456,32 @@
           "updatedBy": "HugoMarkoff",
           "updatedAtUtc": "2026-06-09T09:01:16.596Z",
           "reason": "Please accept raccoon dog (nyctereutes procyonoides) into the permanent Sweden country pack and keep its current national footprint coverage."
+        }
+      }
+    },
+    "18c5f185-04c8-43fc-9325-d38f7daa2700": {
+      "itemId": "18c5f185-04c8-43fc-9325-d38f7daa2700",
+      "matchedKey": "mammalia;artiodactyla;bovidae;bison;bonasus",
+      "speciesLabel": "european bison (bison bonasus)",
+      "commonName": "european bison",
+      "binomial": "bison bonasus",
+      "classLabel": "Mammal",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "allow": {
+        "DNK": true
+      },
+      "block": {},
+      "allow_regional": {
+        "DNK": true
+      },
+      "metadata": {
+        "DNK": {
+          "decision": "allow",
+          "coverage": "regional",
+          "overridePath": "data/review-overrides/countries/DNK/18c5f185-04c8-43fc-9325-d38f7daa2700.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-06-09T09:57:26.477Z",
+          "reason": "Please update european bison (bison bonasus) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint."
         }
       }
     }
