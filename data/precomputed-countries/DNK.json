@@ -2302,40 +2302,329 @@
         "coverageRatio": 1.636206591884099,
         "footprintPolygonLatLngs": [
           [
-            57.16822914453392,
-            9.276920145317709
+            56.881879,
+            10.264215
           ],
           [
-            57.16367386347378,
-            9.277717827425601
+            56.901744,
+            10.242241
           ],
           [
-            57.1069659236786,
-            9.318400151865301
+            56.937291,
+            10.258299
           ],
           [
-            54.67246109852238,
-            15.770587050570777
+            56.937291,
+            10.245622
           ],
           [
-            54.74351712565548,
-            16.091538469424457
+            56.95436,
+            10.217732
           ],
           [
-            57.363192912302665,
-            9.464755563667993
+            56.940521,
+            10.211816
           ],
           [
-            57.2774600447854,
-            9.327644992951454
+            56.936368,
+            10.197449
+          ],
+          [
+            56.947441,
+            10.182236
+          ],
+          [
+            56.951592,
+            10.156037
+          ],
+          [
+            56.945134,
+            10.147585
+          ],
+          [
+            56.932676,
+            10.167869
+          ],
+          [
+            56.909133,
+            10.180546
+          ],
+          [
+            56.889734,
+            10.171249
+          ],
+          [
+            56.892044,
+            10.154347
+          ],
+          [
+            56.881417,
+            10.163643
+          ],
+          [
+            56.84998,
+            10.154347
+          ],
+          [
+            56.823608,
+            10.173785
+          ],
+          [
+            56.807405,
+            10.206745
+          ],
+          [
+            56.819905,
+            10.23379
+          ],
+          [
+            56.817591,
+            10.267595
+          ],
+          [
+            56.844892,
+            10.262524
           ]
         ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+        "code": "regional",
+        "label": "Regional footprint",
+        "short": "Regional",
+        "note": "Manual admin override applied from the review desk.",
+        "footprintPolygonsLatLngs": [
+          [
+            [
+              56.881879,
+              10.264215
+            ],
+            [
+              56.901744,
+              10.242241
+            ],
+            [
+              56.937291,
+              10.258299
+            ],
+            [
+              56.937291,
+              10.245622
+            ],
+            [
+              56.95436,
+              10.217732
+            ],
+            [
+              56.940521,
+              10.211816
+            ],
+            [
+              56.936368,
+              10.197449
+            ],
+            [
+              56.947441,
+              10.182236
+            ],
+            [
+              56.951592,
+              10.156037
+            ],
+            [
+              56.945134,
+              10.147585
+            ],
+            [
+              56.932676,
+              10.167869
+            ],
+            [
+              56.909133,
+              10.180546
+            ],
+            [
+              56.889734,
+              10.171249
+            ],
+            [
+              56.892044,
+              10.154347
+            ],
+            [
+              56.881417,
+              10.163643
+            ],
+            [
+              56.84998,
+              10.154347
+            ],
+            [
+              56.823608,
+              10.173785
+            ],
+            [
+              56.807405,
+              10.206745
+            ],
+            [
+              56.819905,
+              10.23379
+            ],
+            [
+              56.817591,
+              10.267595
+            ],
+            [
+              56.844892,
+              10.262524
+            ]
+          ],
+          [
+            [
+              55.117481,
+              14.945606
+            ],
+            [
+              55.115282,
+              14.948488
+            ],
+            [
+              55.115923,
+              14.950009
+            ],
+            [
+              55.11102,
+              14.96362
+            ],
+            [
+              55.105658,
+              14.957135
+            ],
+            [
+              55.10552,
+              14.956014
+            ],
+            [
+              55.103778,
+              14.954412
+            ],
+            [
+              55.103962,
+              14.952891
+            ],
+            [
+              55.110745,
+              14.932876
+            ],
+            [
+              55.112166,
+              14.931995
+            ],
+            [
+              55.120276,
+              14.931114
+            ],
+            [
+              55.121468,
+              14.934557
+            ]
+          ]
+        ]
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/DNK/18c5f185-04c8-43fc-9325-d38f7daa2700.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-09T09:57:26.480Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please update european bison (bison bonasus) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "18c5f185-04c8-43fc-9325-d38f7daa2700",
+          "countryIso3": "DNK",
+          "status": "likely_true_both",
+          "bucket": "Likely Valid",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 131,
+          "inatCount": 52,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 131,
+          "rawInatCount": 52,
+          "gbifUsageKey": 2441184,
+          "inatTaxonId": 42407,
+          "inatPlaceId": 8051,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 46,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 183,
+            "qualifiedTotal": 183,
+            "specimenOrSampleCount": 46,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 90,
+            "outlierPointCount": 0,
+            "clusterCount": 2,
+            "clusterSpreadKm": 348.91155001307595,
+            "maxDistanceKm": 371.7748411857395,
+            "unique25kmCells": 4,
+            "unique50kmCells": 3,
+            "countryDiameterKm": 234.24129640355284,
+            "spreadRatio": 1.587144738753677,
+            "coverageAreaKm2": 70510.68687065336,
+            "coverageRatio": 1.636206591884099,
+            "footprintPolygonLatLngs": [
+              [
+                57.16822914453392,
+                9.276920145317709
+              ],
+              [
+                57.16367386347378,
+                9.277717827425601
+              ],
+              [
+                57.1069659236786,
+                9.318400151865301
+              ],
+              [
+                54.67246109852238,
+                15.770587050570777
+              ],
+              [
+                54.74351712565548,
+                16.091538469424457
+              ],
+              [
+                57.363192912302665,
+                9.464755563667993
+              ],
+              [
+                57.2774600447854,
+                9.327644992951454
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "19cb4cb0-7a99-41cb-a962-1d7598a61173",
@@ -28517,9 +28806,10 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 16,
-    "appliedAtUtc": "2026-06-09T07:51:31.509626+00:00",
+    "count": 17,
+    "appliedAtUtc": "2026-06-09T09:57:46.131294+00:00",
     "items": [
+      "18c5f185-04c8-43fc-9325-d38f7daa2700",
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "2813059e-da3b-4f17-a60c-d9c34f2fce24",
       "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
