@@ -101,6 +101,25 @@ const ADMIN_PERSISTENT_TOKEN_KEY = "country-pack-review-admin-persistent-token-2
 const ONBOARDING_SCROLL_LOCK_CLASS = "onboarding-scroll-locked";
 const ONBOARDING_LIVE_TARGET_CLASS = "onboarding-live-target";
 const ADMIN_OVERRIDE_NOTE = "Manual admin override applied from the review desk.";
+const ONBOARDING_DEMO_REMOVAL_SPECIES_QUERY = "sahara penguin";
+const ONBOARDING_DEMO_REMOVAL_SPECIES = Object.freeze({
+  itemId: "demo-dnk-removal-sahara-penguin",
+  label: "Sahara penguin (spheniscus saharicus)",
+  commonName: "Sahara penguin",
+  binomial: "spheniscus saharicus",
+  classLabel: "Bird",
+  status: "likely_false",
+  bucket: "Needs Review",
+  expected: true,
+  footprintCode: "countrywide",
+  footprintLabel: "National footprint",
+  footprintShort: "National",
+  footprintNote: "This species is currently treated as national coverage in the selected country.",
+  polygonLatLngs: [],
+  hasPolygon: false,
+  exactGeometry: false,
+  tags: [],
+});
 const STATUS_TO_BUCKET = {
   likely_true_one_source: "Likely Valid",
   likely_true_both: "Likely Valid",
@@ -193,7 +212,7 @@ const ONBOARDING_STEPS = [
         <li><strong>Needs Review</strong> = ask whether a listed species should stay or be removed.</li>
         <li><strong>Likely Valid</strong> = the current listing still looks fine.</li>
       </ul>
-      <p class="onboarding-note">Example: African wildcat is <strong>Needs Review</strong>. A missing Denmark entry for raccoon dog would show up as <strong>New</strong>.</p>
+      <p class="onboarding-note">Example: the demo-only <strong>Sahara penguin</strong> is shown as <strong>Needs Review</strong>. A missing Denmark entry for raccoon dog would show up as <strong>New</strong>.</p>
     `,
   },
   {
@@ -220,8 +239,8 @@ const ONBOARDING_STEPS = [
         <li><strong>Correction</strong> = keep the species, but change its coverage.</li>
         <li><strong>Removal</strong> = remove a species that should not stay in the pack.</li>
       </ul>
-      <p>Press <strong>Next</strong> to switch the live form to a real <strong>Removal</strong> example.</p>
-      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>Next will switch to <strong>Removal</strong> and select <strong>African wildcat</strong> in the current country pack.</p>
+      <p>Press <strong>Next</strong> to switch the live form to a demo-only <strong>Removal</strong> example.</p>
+      <p class="onboarding-note onboarding-demo-status" data-onboarding-demo-status>Next will switch to <strong>Removal</strong> and select <strong>Sahara penguin</strong> in a demo-only Denmark pack view.</p>
     `,
   },
   {
@@ -230,7 +249,7 @@ const ONBOARDING_STEPS = [
     title: "Preview Fills In Automatically",
     bodyHtml: `
       <p>As soon as the fields describe a valid change, the ticket preview fills in automatically here.</p>
-      <p class="onboarding-note">For this example, choosing <strong>Removal</strong> and selecting <strong>African wildcat</strong> should already fill the title and body below.</p>
+      <p class="onboarding-note">For this example, choosing <strong>Removal</strong> and selecting <strong>Sahara penguin</strong> should already fill the title and body below.</p>
     `,
   },
   {
@@ -4491,6 +4510,7 @@ function closeOnboarding(markSeen = true) {
   onboardingViewportFollowsTarget = false;
   setOnboardingScrollLock(false);
   clearOnboardingLiveTargets();
+  removeOnboardingRemovalDemoSpecies();
   if (shouldRestoreSpeciesFilter) {
     setSpeciesFilterValue(onboardingOriginalSpeciesFilter);
   }
@@ -4599,7 +4619,7 @@ async function typeOnboardingInputValue(input, value, playbackId, stepDelayMs = 
 async function playOnboardingRemovalSelectionDemo() {
   const playbackId = startOnboardingDemoPlayback();
 
-  setOnboardingDemoStatus("Loading Denmark so the live form uses the real country pack...");
+  setOnboardingDemoStatus("Loading Denmark so the live form uses the demo-only removal example...");
   await ensureCountryLoaded("DNK");
   if (!onboardingDemoPlaybackActive(playbackId)) {
     return false;
@@ -4607,12 +4627,9 @@ async function playOnboardingRemovalSelectionDemo() {
 
   setGroupFilterValue("needs_review");
 
-  const removalEntry = findSpeciesEntry(
-    ["african wild cat", "felis silvestris lybica"],
-    () => true,
-  );
+  const removalEntry = ensureOnboardingRemovalDemoSpecies();
   if (!removalEntry) {
-    throw new Error("Could not find African wildcat in the Denmark pack.");
+    throw new Error("Could not load the Sahara penguin demo in the Denmark pack.");
   }
 
   const removalOption = document
@@ -4655,8 +4672,8 @@ async function playOnboardingRemovalSelectionDemo() {
     return false;
   }
 
-  setOnboardingDemoStatus("Type african wild cat into the live selector...");
-  if (!(await typeOnboardingInputValue(currentSpeciesInput, "african wild cat", playbackId, 96))) {
+  setOnboardingDemoStatus("Type sahara penguin into the live selector...");
+  if (!(await typeOnboardingInputValue(currentSpeciesInput, ONBOARDING_DEMO_REMOVAL_SPECIES_QUERY, playbackId, 96))) {
     return false;
   }
 
@@ -4664,11 +4681,11 @@ async function playOnboardingRemovalSelectionDemo() {
   await yieldToBrowser();
   const optionButton = currentSpeciesOptions.querySelector(`[data-item-id="${removalEntry.itemId}"]`);
   if (!optionButton) {
-    throw new Error("Could not find African wildcat in the live selector results.");
+    throw new Error("Could not find Sahara penguin in the live selector results.");
   }
 
   setOnboardingLiveTarget(currentSpeciesGuideTarget);
-  setOnboardingDemoStatus("Select African wildcat from the live results...");
+  setOnboardingDemoStatus("Select Sahara penguin from the live results...");
   if (!(await pauseOnboardingDemo(620, playbackId))) {
     return false;
   }
@@ -4680,7 +4697,7 @@ async function playOnboardingRemovalSelectionDemo() {
   }
 
   setOnboardingLiveTarget(currentSpeciesGuideTarget);
-  setOnboardingDemoStatus("African wildcat is now selected as the current species. The preview below updates automatically.");
+  setOnboardingDemoStatus("Sahara penguin is now selected as the current species. The preview below updates automatically.");
   return true;
 }
 
@@ -4773,6 +4790,68 @@ function completeOnboardingAction(action) {
   updateOnboardingStepControls(ONBOARDING_STEPS[onboardingStepIndex]);
 }
 
+function cloneOnboardingRemovalDemoSpecies() {
+  return {
+    ...ONBOARDING_DEMO_REMOVAL_SPECIES,
+    polygonLatLngs: [],
+    tags: [],
+  };
+}
+
+function ensureOnboardingRemovalDemoSpecies() {
+  if (!state.currentCountry || state.currentCountry.iso3 !== "DNK") {
+    throw new Error("Could not load the Denmark demo species example.");
+  }
+
+  const existingEntry = currentSpeciesById(ONBOARDING_DEMO_REMOVAL_SPECIES.itemId);
+  if (existingEntry) {
+    return existingEntry;
+  }
+
+  state.currentCountry = rebuildCountryDerivedState({
+    ...state.currentCountry,
+    species: [cloneOnboardingRemovalDemoSpecies(), ...(state.currentCountry.species || [])],
+  });
+  updateCurrentSpeciesOptions();
+  updateSuggestionGuidance();
+  renderCountryHeader();
+  renderGroupChips();
+  renderSpeciesList();
+  updateMapSummary();
+  return currentSpeciesById(ONBOARDING_DEMO_REMOVAL_SPECIES.itemId);
+}
+
+function removeOnboardingRemovalDemoSpecies() {
+  if (!state.currentCountry || !currentSpeciesById(ONBOARDING_DEMO_REMOVAL_SPECIES.itemId)) {
+    return;
+  }
+
+  const shouldClearSelection = currentSpeciesItemIdInput.value === ONBOARDING_DEMO_REMOVAL_SPECIES.itemId;
+  const shouldClearHighlight = state.highlightedSpeciesId === ONBOARDING_DEMO_REMOVAL_SPECIES.itemId;
+
+  state.currentCountry = rebuildCountryDerivedState({
+    ...state.currentCountry,
+    species: (state.currentCountry.species || []).filter((entry) => entry.itemId !== ONBOARDING_DEMO_REMOVAL_SPECIES.itemId),
+  });
+
+  if (shouldClearSelection) {
+    setCurrentSpeciesValue("", "");
+    clearTicketPreview();
+  }
+  if (shouldClearHighlight) {
+    state.highlightedSpeciesId = "";
+  }
+
+  updateCurrentSpeciesOptions();
+  updateSuggestionGuidance();
+  renderCountryHeader();
+  renderGroupChips();
+  renderSpeciesList();
+  updateSelectedRegionalLayers(false);
+  updateMapSummary();
+  updateTicketPreviewGate();
+}
+
 async function runOnboardingGuideAction(action) {
   const success = await runOnboardingDemo(action);
   if (success) {
@@ -4812,17 +4891,14 @@ async function loadOnboardingRemovalExample({ buildPreview = false } = {}) {
   setGroupFilterValue("needs_review");
   setSuggestionTypeValue("removal");
 
-  const removalEntry = findSpeciesEntry(
-    ["african wild cat", "felis silvestris lybica"],
-    () => true,
-  );
+  const removalEntry = ensureOnboardingRemovalDemoSpecies();
 
   if (!removalEntry) {
-    throw new Error("Could not find African wildcat in the Denmark pack.");
+    throw new Error("Could not load the Sahara penguin demo in the Denmark pack.");
   }
 
-  onboardingDemoSpeciesFilter = "african wild cat";
-  setSpeciesFilterValue("african wild cat");
+  onboardingDemoSpeciesFilter = ONBOARDING_DEMO_REMOVAL_SPECIES_QUERY;
+  setSpeciesFilterValue(ONBOARDING_DEMO_REMOVAL_SPECIES_QUERY);
   if (!clickSpeciesCard(removalEntry.itemId)) {
     applySpeciesSelection(removalEntry.itemId, true);
   }
@@ -4887,25 +4963,25 @@ async function runOnboardingDemo(action) {
     }
 
     if (action === "ticket-removal") {
-      setOnboardingDemoStatus("Loading the Denmark African wildcat removal demo...");
+      setOnboardingDemoStatus("Loading the demo-only Denmark Sahara penguin removal example...");
       await loadOnboardingRemovalExample({ buildPreview: true });
-      setOnboardingDemoStatus("Loaded Denmark + African wildcat and built the removal preview below.");
+      setOnboardingDemoStatus("Loaded Denmark + Sahara penguin and built the removal preview below.");
       return true;
     }
 
     if (action === "ticket-removal-select") {
-      setOnboardingDemoStatus("Switching the live form to Removal and selecting African wildcat...");
+      setOnboardingDemoStatus("Switching the live form to Removal and selecting Sahara penguin...");
       await loadOnboardingRemovalExample({ buildPreview: false });
       await yieldToBrowser();
       await yieldToBrowser();
-      setOnboardingDemoStatus("Selected African wildcat as a live Removal example. Press Next to continue.");
+      setOnboardingDemoStatus("Selected Sahara penguin as a demo-only Removal example. Press Next to continue.");
       return true;
     }
 
     if (action === "ticket-removal-preview") {
       setOnboardingDemoStatus("Building the live removal preview...");
       await loadOnboardingRemovalExample({ buildPreview: true });
-      setOnboardingDemoStatus("Built the African wildcat removal preview below.");
+      setOnboardingDemoStatus("Built the Sahara penguin removal preview below.");
       return true;
     }
 
