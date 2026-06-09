@@ -98,6 +98,7 @@ const ONBOARDING_SEEN_KEY = "country-pack-review-onboarding-20260510g";
 const ADMIN_TOKEN_HANDOFF_KEY = "country-pack-review-admin-token-handoff-20260507a";
 const ADMIN_SESSION_TOKEN_KEY = "country-pack-review-admin-session-token-20260507a";
 const ADMIN_PERSISTENT_TOKEN_KEY = "country-pack-review-admin-persistent-token-20260507a";
+const ADMIN_QUEUE_SESSION_KEY = "country-pack-review-admin-queue-20260609a";
 const ONBOARDING_SCROLL_LOCK_CLASS = "onboarding-scroll-locked";
 const ONBOARDING_LIVE_TARGET_CLASS = "onboarding-live-target";
 const ADMIN_OVERRIDE_NOTE = "Manual admin override applied from the review desk.";
@@ -370,6 +371,8 @@ const state = {
     message: "",
     messageIsError: false,
     lastCommitUrl: "",
+    queue: [],
+    activeJobId: "",
   },
 };
 
@@ -1968,8 +1971,8 @@ function adminCommitMessage(ticket) {
   return `Apply admin review files for ${ticket.countryIso3}: ${summary}`;
 }
 
-function buildAdminSessionSpeciesEntry(ticket) {
-  if (!state.currentCountry) {
+function buildAdminSessionSpeciesEntry(ticket, country = state.currentCountry) {
+  if (!country) {
     return null;
   }
 
@@ -1983,34 +1986,47 @@ function buildAdminSessionSpeciesEntry(ticket) {
     status: adminOverrideStatus(ticket),
     expected: ticket.suggestionType === "addition" ? true : Boolean(ticket.currentSpecies?.expected),
     observationProfile,
-  }, state.currentCountry.precomputeMode);
+  }, country.precomputeMode);
+}
+
+function applyAdminTicketToCountryState(country, ticket) {
+  if (!country || country.iso3 !== ticket.countryIso3) {
+    return null;
+  }
+
+  const target = adminOverrideTarget(ticket);
+  const nextSpecies = (country.species || []).filter((entry) => entry.itemId !== target.itemId);
+
+  if (ticket.suggestionType !== "removal") {
+    const nextEntry = buildAdminSessionSpeciesEntry(ticket, country);
+    if (!nextEntry) {
+      return null;
+    }
+    nextSpecies.push(nextEntry);
+  }
+
+  return rebuildCountryDerivedState({
+    ...country,
+    species: nextSpecies,
+  });
 }
 
 async function applyAdminOverrideLocally(ticket) {
-  if (!state.currentCountry || state.currentCountry.iso3 !== ticket.countryIso3) {
+  const nextCountry = applyAdminTicketToCountryState(state.currentCountry, ticket);
+  if (!nextCountry) {
     return false;
   }
 
   const target = adminOverrideTarget(ticket);
-  const nextSpecies = (state.currentCountry.species || []).filter((entry) => entry.itemId !== target.itemId);
-
   if (ticket.suggestionType === "removal") {
     if (state.highlightedSpeciesId === target.itemId) {
       state.highlightedSpeciesId = "";
     }
   } else {
-    const nextEntry = buildAdminSessionSpeciesEntry(ticket);
-    if (!nextEntry) {
-      return false;
-    }
-    nextSpecies.push(nextEntry);
     state.highlightedSpeciesId = target.itemId;
   }
 
-  state.currentCountry = rebuildCountryDerivedState({
-    ...state.currentCountry,
-    species: nextSpecies,
-  });
+  state.currentCountry = nextCountry;
 
   syncSuggestionTypeAvailability();
   updateCurrentSpeciesOptions();
@@ -2020,10 +2036,150 @@ async function applyAdminOverrideLocally(ticket) {
   renderSpeciesList();
   updateMapSummary();
   clearTicketPreview();
-  await loadRegionalOverlays();
+  void loadRegionalOverlays();
   updateTicketPreviewGate();
   scheduleTicketPreviewRefresh();
   return true;
+}
+
+function adminQueueJobs() {
+  return Array.isArray(state.admin.queue) ? state.admin.queue : [];
+}
+
+function writePersistedAdminQueue() {
+  try {
+    window.sessionStorage.setItem(ADMIN_QUEUE_SESSION_KEY, JSON.stringify(adminQueueJobs()));
+  } catch {
+    // Ignore storage failures and keep the in-memory queue.
+  }
+}
+
+function replaceAdminQueueJobs(jobs) {
+  state.admin.queue = Array.isArray(jobs) ? jobs : [];
+  writePersistedAdminQueue();
+}
+
+function adminTicketItemId(ticket) {
+  return adminOverrideTarget(ticket, { strict: false }).itemId;
+}
+
+function normalizeAdminQueueJob(rawJob) {
+  if (!rawJob || typeof rawJob !== "object") {
+    return null;
+  }
+
+  const ticket = cloneJson(rawJob.ticket || null);
+  const countryIso3 = cleanText(rawJob.countryIso3 || ticket?.countryIso3).toUpperCase();
+  const itemId = cleanText(rawJob.itemId || adminTicketItemId(ticket));
+  const suggestionType = cleanText(ticket?.suggestionType).toLowerCase();
+  if (!ticket || !countryIso3 || !itemId || !["addition", "accept_new", "correction", "removal"].includes(suggestionType)) {
+    return null;
+  }
+
+  let status = cleanText(rawJob.status).toLowerCase();
+  if (!status) {
+    status = "queued";
+  }
+  if (status === "committing") {
+    status = "queued";
+  }
+  if (!["queued", "committed", "failed"].includes(status)) {
+    status = "queued";
+  }
+
+  const createdAtUtc = cleanText(rawJob.createdAtUtc) || new Date().toISOString();
+  return {
+    id: cleanText(rawJob.id) || `${createdAtUtc}__${countryIso3}__${itemId}__${suggestionType}`,
+    ticket,
+    itemId,
+    countryIso3,
+    summary: cleanText(rawJob.summary) || buildTicketSummary(ticket),
+    status,
+    createdAtUtc,
+    updatedAtUtc: cleanText(rawJob.updatedAtUtc) || createdAtUtc,
+    commitUrl: cleanText(rawJob.commitUrl),
+    error: cleanText(rawJob.error),
+  };
+}
+
+function restorePersistedAdminQueue() {
+  try {
+    const rawValue = window.sessionStorage.getItem(ADMIN_QUEUE_SESSION_KEY) || "[]";
+    const restoredJobs = JSON.parse(rawValue)
+      .map((job) => normalizeAdminQueueJob(job))
+      .filter(Boolean);
+    replaceAdminQueueJobs(restoredJobs);
+    if (restoredJobs.length) {
+      setAdminMessage(adminQueueSummaryMessage(), restoredJobs.some((job) => job.status === "failed"));
+    }
+  } catch {
+    replaceAdminQueueJobs([]);
+  }
+}
+
+function adminQueueStatusCounts() {
+  return adminQueueJobs().reduce((counts, job) => {
+    if (!counts[job.status]) {
+      counts[job.status] = 0;
+    }
+    counts[job.status] += 1;
+    return counts;
+  }, {
+    queued: 0,
+    committing: 0,
+    committed: 0,
+    failed: 0,
+  });
+}
+
+function adminQueueSummaryMessage() {
+  const counts = adminQueueStatusCounts();
+  const parts = [];
+  if (counts.committing) {
+    parts.push(`${counts.committing} uploading`);
+  }
+  if (counts.queued) {
+    parts.push(`${counts.queued} queued`);
+  }
+  if (counts.failed) {
+    parts.push(`${counts.failed} failed`);
+  }
+  if (counts.committed) {
+    parts.push(`${counts.committed} remembered in this browser session`);
+  }
+  return parts.length ? `Background admin queue: ${parts.join(" · ")}.` : "";
+}
+
+function adminPendingJobForItem(itemId, countryIso3 = state.currentCountry?.iso3 || "") {
+  const normalizedItemId = cleanText(itemId);
+  const normalizedCountryIso3 = cleanText(countryIso3).toUpperCase();
+  if (!normalizedItemId || !normalizedCountryIso3) {
+    return null;
+  }
+
+  if (state.admin.activeJobId) {
+    const activeJob = adminQueueJobs().find((job) => job.id === state.admin.activeJobId) || null;
+    if (activeJob && activeJob.itemId === normalizedItemId && activeJob.countryIso3 === normalizedCountryIso3) {
+      return activeJob;
+    }
+  }
+
+  return adminQueueJobs().find((job) => job.itemId === normalizedItemId && job.countryIso3 === normalizedCountryIso3 && job.status === "queued") || null;
+}
+
+function adminPendingJobForTicket(ticket) {
+  return adminPendingJobForItem(adminTicketItemId(ticket), ticket?.countryIso3 || "");
+}
+
+function applyPersistedAdminQueueToCountry(country) {
+  if (!country) {
+    return country;
+  }
+
+  return adminQueueJobs()
+    .filter((job) => job.countryIso3 === country.iso3)
+    .sort((left, right) => `${left.createdAtUtc}__${left.id}`.localeCompare(`${right.createdAtUtc}__${right.id}`))
+    .reduce((nextCountry, job) => applyAdminTicketToCountryState(nextCountry, job.ticket) || nextCountry, country);
 }
 
 function setAdminMessage(message, isError = false) {
@@ -2061,19 +2217,28 @@ function adminApplyState() {
     };
   }
 
-  if (state.admin.isApplying) {
+  const validation = validateAdminTicket(state.preview?.ticket || null);
+  if (!validation.ok) {
     return {
       canApply: false,
-      message: "Applying admin override...",
+      message: validation.message,
+      isError: true,
+    };
+  }
+
+  const pendingJob = adminPendingJobForTicket(state.preview?.ticket || null);
+  if (pendingJob) {
+    return {
+      canApply: false,
+      message: "This species already has a background admin change queued.",
       isError: false,
     };
   }
 
-  const validation = validateAdminTicket(state.preview?.ticket || null);
   return {
-    canApply: validation.ok,
+    canApply: true,
     message: validation.message,
-    isError: !validation.ok,
+    isError: false,
   };
 }
 
@@ -2097,9 +2262,10 @@ function derivedAdminMessage() {
   const permissionText = state.admin.canWrite
     ? `Connected as @${state.admin.login} with ${state.admin.permissionLabel || "write"} access to ${DEFAULT_GITHUB_REPO}.${fineGrainedNote}`
     : `Connected as @${state.admin.login}, but this account cannot push to ${DEFAULT_GITHUB_REPO}.${fineGrainedNote}`;
+  const queueText = adminQueueSummaryMessage();
 
   return {
-    message: applyState.canApply ? `${permissionText} ${applyState.message}` : `${permissionText} ${applyState.message}`,
+    message: [permissionText, applyState.message, queueText].filter(Boolean).join(" "),
     isError: applyState.isError,
     canApply: applyState.canApply,
   };
@@ -2108,6 +2274,11 @@ function derivedAdminMessage() {
 function renderAdminState() {
   const connected = Boolean(state.admin.login);
   const status = derivedAdminMessage();
+  const queueCounts = adminQueueStatusCounts();
+  const queueText = [
+    queueCounts.committing ? `${queueCounts.committing} uploading` : "",
+    queueCounts.queued ? `${queueCounts.queued} queued` : "",
+  ].filter(Boolean).join(" · ");
 
   adminTokenField.hidden = connected;
   adminConnectButton.hidden = connected;
@@ -2118,8 +2289,8 @@ function renderAdminState() {
   adminDisconnectButton.disabled = state.admin.isConnecting || state.admin.isApplying;
 
   adminApplyButton.hidden = !connected;
-  adminApplyButton.disabled = !status.canApply || state.admin.isConnecting || state.admin.isApplying;
-  adminApplyButton.textContent = state.admin.isApplying ? "Applying..." : "Apply Changes (Admin)";
+  adminApplyButton.disabled = !status.canApply || state.admin.isConnecting;
+  adminApplyButton.textContent = queueText ? `Queue Change (${queueText})` : "Apply Changes (Admin)";
 
   adminAuthStatus.textContent = status.message;
   adminAuthStatus.classList.toggle("error", Boolean(status.isError));
@@ -2201,6 +2372,9 @@ async function connectAdminSession() {
     }
 
     setStatus(canWrite ? `Admin session connected as @${state.admin.login}.` : `Admin session connected as @${state.admin.login}, but push access is missing.`, !canWrite);
+    if (canWrite) {
+      void processAdminQueue();
+    }
   } catch (error) {
     state.admin.token = "";
     state.admin.login = "";
@@ -2225,6 +2399,7 @@ function disconnectAdminSession() {
   state.admin.permissionLabel = "";
   state.admin.isConnecting = false;
   state.admin.isApplying = false;
+  state.admin.activeJobId = "";
   state.admin.lastCommitUrl = "";
   clearPersistedAdminToken();
   adminTokenInput.value = "";
@@ -2265,6 +2440,66 @@ function restorePersistedAdminSession() {
   void connectAdminSession();
 }
 
+async function processAdminQueue() {
+  if (state.admin.isApplying || !state.admin.login || !state.admin.canWrite || !state.admin.token) {
+    return;
+  }
+
+  const nextJob = adminQueueJobs().find((job) => job.status === "queued") || null;
+  if (!nextJob) {
+    renderAdminState();
+    return;
+  }
+
+  nextJob.status = "committing";
+  nextJob.updatedAtUtc = new Date().toISOString();
+  state.admin.isApplying = true;
+  state.admin.activeJobId = nextJob.id;
+  state.admin.lastCommitUrl = cleanText(nextJob.commitUrl);
+  replaceAdminQueueJobs(adminQueueJobs().map((job) => job.id === nextJob.id ? nextJob : job));
+  setAdminMessage(`Uploading ${nextJob.summary}. ${adminQueueSummaryMessage()}`.trim());
+  renderAdminState();
+  setStatus(`Uploading ${nextJob.summary}...`);
+
+  try {
+    const { owner, repo } = parseGitHubRepo(DEFAULT_GITHUB_REPO);
+    const result = await commitGitHubFiles(
+      owner,
+      repo,
+      DEFAULT_GITHUB_BRANCH,
+      adminCommitMessage(nextJob.ticket),
+      await buildAdminFileEntries(owner, repo, nextJob.ticket, state.admin.login, state.admin.token),
+      state.admin.token,
+    );
+
+    nextJob.status = "committed";
+    nextJob.updatedAtUtc = new Date().toISOString();
+    nextJob.commitUrl = cleanText(result?.htmlUrl);
+    nextJob.error = "";
+    state.admin.lastCommitUrl = nextJob.commitUrl;
+    replaceAdminQueueJobs(adminQueueJobs().map((job) => job.id === nextJob.id ? nextJob : job));
+
+    const publishedNote = "The country override, binary geofence tracking file, and change log were committed. The published country pack updates after the rebuild step commits regenerated pack files.";
+    setAdminMessage(`Uploaded ${nextJob.summary}. ${publishedNote} ${adminQueueSummaryMessage()}`.trim());
+    setStatus(`Uploaded ${nextJob.summary}.`);
+  } catch (error) {
+    nextJob.status = "failed";
+    nextJob.updatedAtUtc = new Date().toISOString();
+    nextJob.error = error.message || "Could not commit the admin override.";
+    replaceAdminQueueJobs(adminQueueJobs().map((job) => job.id === nextJob.id ? nextJob : job));
+    setAdminMessage(`${nextJob.error} ${adminQueueSummaryMessage()}`.trim(), true);
+    setStatus(nextJob.error, true);
+  } finally {
+    state.admin.isApplying = false;
+    state.admin.activeJobId = "";
+    renderAdminState();
+  }
+
+  if (nextJob.status === "committed") {
+    void processAdminQueue();
+  }
+}
+
 async function applyAdminChanges() {
   const applyState = adminApplyState();
   if (!applyState.canApply || !state.preview?.ticket) {
@@ -2273,41 +2508,35 @@ async function applyAdminChanges() {
     return;
   }
 
-  state.admin.isApplying = true;
-  state.admin.lastCommitUrl = "";
-  clearAdminMessage();
-  renderAdminState();
-  setStatus("Committing admin override to GitHub...");
-
+  const ticket = cloneJson(state.preview.ticket);
+  const target = adminOverrideTarget(ticket);
+  const queuedAtUtc = new Date().toISOString();
   try {
-    const ticket = state.preview.ticket;
-    const { owner, repo } = parseGitHubRepo(DEFAULT_GITHUB_REPO);
-    const target = adminOverrideTarget(ticket);
-    const fileEntries = await buildAdminFileEntries(owner, repo, ticket, state.admin.login, state.admin.token);
-    const result = await commitGitHubFiles(owner, repo, DEFAULT_GITHUB_BRANCH, adminCommitMessage(ticket), fileEntries, state.admin.token);
+    const sessionUpdated = await applyAdminOverrideLocally(ticket);
+    const queuedJob = {
+      id: `${queuedAtUtc}__${ticket.countryIso3}__${target.itemId}__${ticket.suggestionType}`,
+      ticket,
+      itemId: target.itemId,
+      countryIso3: ticket.countryIso3,
+      summary: buildTicketSummary(ticket),
+      status: "queued",
+      createdAtUtc: queuedAtUtc,
+      updatedAtUtc: queuedAtUtc,
+      commitUrl: "",
+      error: "",
+    };
+    replaceAdminQueueJobs([...adminQueueJobs(), queuedJob]);
 
-    state.admin.lastCommitUrl = cleanText(result?.htmlUrl);
-    let sessionUpdated = false;
-    try {
-      sessionUpdated = await applyAdminOverrideLocally(ticket);
-    } catch (localError) {
-      console.error(localError);
-    }
-
-    const publishedNote = "The country override, binary geofence tracking file, and change log were committed. The published country pack updates after the rebuild step commits regenerated pack files.";
-    if (sessionUpdated) {
-      setAdminMessage(`Override committed for ${target.itemId}. This browser session now shows the change. ${publishedNote}`);
-      setStatus("Admin override committed. This browser session now shows the change.");
-    } else {
-      setAdminMessage(`Override committed for ${target.itemId}. ${publishedNote}`);
-      setStatus("Admin override committed.");
-    }
+    const localNote = sessionUpdated
+      ? "This browser session now shows the change immediately."
+      : "The change was queued, but the visible pack could not be refreshed locally."
+    setAdminMessage(`Queued ${queuedJob.summary}. ${localNote} ${adminQueueSummaryMessage()}`.trim());
+    setStatus(`Queued ${queuedJob.summary}.`);
+    renderAdminState();
+    void processAdminQueue();
   } catch (error) {
     setAdminMessage(error.message || "Could not commit the admin override.", true);
     setStatus(error.message || "Could not commit the admin override.", true);
-  } finally {
-    state.admin.isApplying = false;
-    renderAdminState();
   }
 }
 
@@ -3894,10 +4123,10 @@ function adminShortcutState(entry, suggestion) {
     };
   }
 
-  if (state.admin.isApplying) {
+  if (adminPendingJobForItem(entry?.itemId || "", state.currentCountry?.iso3 || "")) {
     return {
       ok: false,
-      message: "Another admin change is already being committed.",
+      message: "This species already has a background admin change queued.",
     };
   }
 
@@ -3981,7 +4210,7 @@ function renderSpeciesAdminActions(entry) {
     return "";
   }
 
-  const disabled = !state.admin.canWrite || state.admin.isConnecting || state.admin.isApplying;
+  const disabled = !state.admin.canWrite || state.admin.isConnecting || Boolean(adminPendingJobForItem(entry.itemId, state.currentCountry?.iso3 || ""));
   const disabledAttr = disabled ? " disabled" : "";
   const safeLabel = escapeHtml(entry.commonName || entry.label);
   const buttons = [];
@@ -5411,7 +5640,7 @@ async function loadCountry(iso3) {
 
   try {
     const countryData = await loadCountryData(iso3);
-    state.currentCountry = countryData;
+    state.currentCountry = applyPersistedAdminQueueToCountry(countryData);
     syncSuggestionTypeAvailability();
     updateCurrentSpeciesOptions();
     updateSuggestionGuidance();
@@ -5483,6 +5712,7 @@ async function initialize() {
   updateNotificationPreference();
   updateSuggestionGuidance();
   updateTicketPreviewGate();
+  restorePersistedAdminQueue();
   renderAdminState();
   consumeAdminTokenHandoff();
   restorePersistedAdminSession();
