@@ -11,14 +11,14 @@
     "statusCounts": {
       "unlisted": 221,
       "likely_true_both": 89,
-      "new_record": 49,
-      "likely_true_one_source": 36,
+      "new_record": 48,
+      "likely_true_one_source": 37,
       "likely_false": 4
     },
     "bucketCounts": {
       "Unlisted": 221,
-      "Likely Valid": 125,
-      "New": 49,
+      "Likely Valid": 126,
+      "New": 48,
       "Needs Review": 4
     }
   },
@@ -20660,8 +20660,8 @@
     {
       "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
       "countryIso3": "DNK",
-      "status": "new_record",
-      "bucket": "New",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": true,
@@ -20707,50 +20707,116 @@
         "spreadRatio": 0.9356712179628242,
         "coverageAreaKm2": 37831.4773240924,
         "coverageRatio": 0.8778827058080567,
-        "footprintPolygonLatLngs": [
-          [
-            54.93921819397691,
-            8.354755710235096
-          ],
-          [
-            54.67201441606336,
-            8.810406960715646
-          ],
-          [
-            54.62965727187246,
-            9.370801556329072
-          ],
-          [
-            54.646379605655376,
-            9.541697319677219
-          ],
-          [
-            56.24265587575489,
-            10.431373310153136
-          ],
-          [
-            56.37680399858435,
-            10.403751060202199
-          ],
-          [
-            57.237282929329744,
-            10.19385965848699
-          ],
-          [
-            57.30069545967398,
-            9.184922679565124
-          ],
-          [
-            56.75351869243047,
-            8.701875983379553
-          ]
-        ],
+        "footprintPolygonLatLngs": [],
         "code": "countrywide",
         "label": "National footprint",
         "short": "National",
-        "note": "Dropped 7 likely outlier points before scoring. 3 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+        "note": "Manual admin override applied from the review desk."
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/DNK/b57debc1-dff2-48d3-a400-f2b5021e71b0.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-09T07:51:12.845Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please accept northern raccoon (procyon lotor) into the permanent Denmark country pack and keep its current national footprint coverage. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
+          "countryIso3": "DNK",
+          "status": "new_record",
+          "bucket": "New",
+          "expected": false,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 25,
+          "inatCount": 1,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 95,
+          "rawInatCount": 1,
+          "gbifUsageKey": 5218786,
+          "inatTaxonId": 41663,
+          "inatPlaceId": 8051,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 96,
+            "qualifiedTotal": 26,
+            "specimenOrSampleCount": 6,
+            "staleGbifCount": 65,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 25,
+            "corePointCount": 18,
+            "outlierPointCount": 7,
+            "clusterCount": 3,
+            "clusterSpreadKm": 191.92198018195677,
+            "maxDistanceKm": 219.17283910310317,
+            "unique25kmCells": 13,
+            "unique50kmCells": 8,
+            "countryDiameterKm": 234.24129640355284,
+            "spreadRatio": 0.9356712179628242,
+            "coverageAreaKm2": 37831.4773240924,
+            "coverageRatio": 0.8778827058080567,
+            "footprintPolygonLatLngs": [
+              [
+                54.93921819397691,
+                8.354755710235096
+              ],
+              [
+                54.67201441606336,
+                8.810406960715646
+              ],
+              [
+                54.62965727187246,
+                9.370801556329072
+              ],
+              [
+                54.646379605655376,
+                9.541697319677219
+              ],
+              [
+                56.24265587575489,
+                10.431373310153136
+              ],
+              [
+                56.37680399858435,
+                10.403751060202199
+              ],
+              [
+                57.237282929329744,
+                10.19385965848699
+              ],
+              [
+                57.30069545967398,
+                9.184922679565124
+              ],
+              [
+                56.75351869243047,
+                8.701875983379553
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "Dropped 7 likely outlier points before scoring. 3 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "b77d7237-243a-490e-b547-90e52983c23a",
@@ -28451,8 +28517,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 15,
-    "appliedAtUtc": "2026-06-09T05:26:02.686617+00:00",
+    "count": 16,
+    "appliedAtUtc": "2026-06-09T07:51:31.509626+00:00",
     "items": [
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
       "2813059e-da3b-4f17-a60c-d9c34f2fce24",
@@ -28464,6 +28530,7 @@
       "8e840c5c-c75f-47a1-90e3-5559ad64422b",
       "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
+      "b57debc1-dff2-48d3-a400-f2b5021e71b0",
       "c10547c3-1748-48bf-a451-8066c820f22f",
       "c150a21e-952d-4665-8a62-a319841c5a56",
       "cae9534f-f302-4229-9e11-b91138333d92",
