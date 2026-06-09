@@ -643,7 +643,9 @@ function resolveObservationProfile(entry, packMode) {
   const rawProfile = entry.observationProfile || {};
   const code = cleanText(rawProfile.code) || (packMode === "baseline" ? "country_pack_only" : "unscored");
   const defaults = FOOTPRINT_DEFAULTS[code] || FOOTPRINT_DEFAULTS.unscored;
-  const polygon = sanitizePolygon(rawProfile.footprintPolygonLatLngs || []);
+  const polygons = sanitizePolygons(rawProfile.footprintPolygonsLatLngs || []);
+  const polygon = polygons[0] || sanitizePolygon(rawProfile.footprintPolygonLatLngs || []);
+  const normalizedPolygons = polygons.length ? polygons : (polygon.length >= 3 ? [polygon] : []);
 
   return {
     code,
@@ -651,6 +653,7 @@ function resolveObservationProfile(entry, packMode) {
     short: cleanText(rawProfile.short) || defaults.short,
     note: cleanText(rawProfile.note) || defaults.note,
     footprintPolygonLatLngs: polygon,
+    footprintPolygonsLatLngs: normalizedPolygons,
     significant: Boolean(rawProfile.significant),
   };
 }
@@ -888,7 +891,8 @@ function buildCountrySpeciesEntry(rawEntry, packMode) {
     footprintShort: observationProfile.short,
     footprintNote: observationProfile.note,
     polygonLatLngs: observationProfile.footprintPolygonLatLngs,
-    hasPolygon: observationProfile.footprintPolygonLatLngs.length >= 3,
+    polygonLatLngsList: observationProfile.footprintPolygonsLatLngs,
+    hasPolygon: observationProfile.footprintPolygonsLatLngs.some((polygon) => polygon.length >= 3),
     exactGeometry: footprintCode === "regional" && Boolean(rawEntry?.manualOverride),
     tags,
   };
@@ -947,25 +951,24 @@ function buildRegionalOverlayCollection(countryData) {
     if (entry.footprintCode !== "regional") {
       return;
     }
-    const polygon = sanitizePolygon(entry.polygonLatLngs || []);
-    if (polygon.length < 3) {
-      return;
-    }
+    const polygons = sanitizePolygons(entry.polygonLatLngsList || []);
+    const normalizedPolygons = polygons.length ? polygons : [sanitizePolygon(entry.polygonLatLngs || [])].filter((polygon) => polygon.length >= 3);
+    normalizedPolygons.forEach((polygon) => {
+      const polygonKey = JSON.stringify(polygon);
+      if (!grouped.has(polygonKey)) {
+        grouped.set(polygonKey, { polygon, species: [], exactGeometry: false });
+      }
 
-    const polygonKey = JSON.stringify(polygon);
-    if (!grouped.has(polygonKey)) {
-      grouped.set(polygonKey, { polygon, species: [], exactGeometry: false });
-    }
-
-    const groupedEntry = grouped.get(polygonKey);
-    groupedEntry.exactGeometry ||= Boolean(entry.exactGeometry);
-    groupedEntry.species.push({
-      itemId: entry.itemId,
-      label: entry.label,
-      commonName: entry.commonName,
-      binomial: entry.binomial,
-      classLabel: entry.classLabel,
-      bucket: entry.bucket,
+      const groupedEntry = grouped.get(polygonKey);
+      groupedEntry.exactGeometry ||= Boolean(entry.exactGeometry);
+      groupedEntry.species.push({
+        itemId: entry.itemId,
+        label: entry.label,
+        commonName: entry.commonName,
+        binomial: entry.binomial,
+        classLabel: entry.classLabel,
+        bucket: entry.bucket,
+      });
     });
   });
 
@@ -1249,7 +1252,16 @@ function buildIssueBody(ticket) {
     );
   }
 
-  if (ticket.currentSpecies?.polygonLatLngs?.length) {
+  const currentSpeciesPolygons = sanitizePolygons(ticket.currentSpecies?.polygonLatLngsList || []);
+  if (currentSpeciesPolygons.length) {
+    lines.push(
+      "",
+      currentSpeciesPolygons.length === 1 ? "## Current stored polygon" : "## Current stored polygons",
+      "```json",
+      JSON.stringify(currentSpeciesPolygons.length === 1 ? currentSpeciesPolygons[0] : currentSpeciesPolygons, null, 2),
+      "```"
+    );
+  } else if (ticket.currentSpecies?.polygonLatLngs?.length) {
     lines.push(
       "",
       "## Current stored polygon",
@@ -1820,13 +1832,15 @@ function adminOverrideStatus(ticket) {
 
 function adminObservationProfile(ticket) {
   if (ticket.scope === "regional") {
+    const polygons = sanitizePolygons(ticket.polygons);
     return {
       code: "regional",
       label: "Regional footprint",
       short: "Regional",
       note: ADMIN_OVERRIDE_NOTE,
       significant: true,
-      footprintPolygonLatLngs: sanitizePolygon(ticket.polygons[0] || []),
+      footprintPolygonLatLngs: polygons[0] || [],
+      footprintPolygonsLatLngs: polygons,
     };
   }
 
@@ -1837,19 +1851,26 @@ function adminObservationProfile(ticket) {
     note: ADMIN_OVERRIDE_NOTE,
     significant: true,
     footprintPolygonLatLngs: [],
+    footprintPolygonsLatLngs: [],
   };
 }
 
 function adminObservationProfileForCurrentSpecies(entry) {
   const code = cleanText(entry?.footprintCode) || "unscored";
   const defaults = FOOTPRINT_DEFAULTS[code] || FOOTPRINT_DEFAULTS.unscored;
+  const polygons = code === "regional"
+    ? sanitizePolygons(entry?.polygonLatLngsList || []).length
+      ? sanitizePolygons(entry?.polygonLatLngsList || [])
+      : [sanitizePolygon(entry?.polygonLatLngs || [])].filter((polygon) => polygon.length >= 3)
+    : [];
   return {
     code,
     label: cleanText(entry?.footprintLabel) || defaults.label,
     short: cleanText(entry?.footprintShort) || defaults.short,
     note: ADMIN_OVERRIDE_NOTE,
     significant: code === "countrywide" || code === "regional",
-    footprintPolygonLatLngs: code === "regional" ? sanitizePolygon(entry?.polygonLatLngs || []) : [],
+    footprintPolygonLatLngs: polygons[0] || [],
+    footprintPolygonsLatLngs: polygons,
   };
 }
 
@@ -1875,10 +1896,10 @@ function validateAdminTicket(ticket) {
     };
   }
 
-  if (ticket.scope === "regional" && ticket.polygons.length !== 1) {
+  if (ticket.scope === "regional" && !ticket.polygons.length) {
     return {
       ok: false,
-      message: "Admin apply currently supports exactly one regional polygon. Keep one area or use Make GitHub Issue.",
+      message: "Draw at least one regional area before using admin apply.",
     };
   }
 
