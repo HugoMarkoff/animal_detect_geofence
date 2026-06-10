@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-10T02:18:44.116Z",
+  "updatedAtUtc": "2026-06-10T02:23:44.215Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -48702,6 +48702,30 @@
           "updatedBy": "HugoMarkoff",
           "updatedAtUtc": "2026-06-10T02:10:59.270Z",
           "reason": "Please remove wild turkey (meleagris gallopavo) from the Greenland country pack."
+        }
+      }
+    },
+    "a5121a63-c9d0-4849-8db7-e7d8bbf4e581": {
+      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
+      "matchedKey": "reptilia;squamata;agamidae;ctenophorous;isolepsis",
+      "speciesLabel": "military sand-dragon (ctenophorous isolepsis)",
+      "commonName": "military sand-dragon",
+      "binomial": "ctenophorous isolepsis",
+      "classLabel": "Reptile",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "allow": {},
+      "block": {
+        "GRL": true
+      },
+      "allow_regional": {},
+      "metadata": {
+        "GRL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "data/review-overrides/countries/GRL/a5121a63-c9d0-4849-8db7-e7d8bbf4e581.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-06-10T02:23:44.215Z",
+          "reason": "Please remove military sand-dragon (ctenophorous isolepsis) from the Greenland country pack."
         }
       }
     }
