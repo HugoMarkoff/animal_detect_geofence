@@ -968,38 +968,105 @@
         "spreadRatio": 0.09951291087691692,
         "coverageAreaKm2": 19427.613676533987,
         "coverageRatio": 0.008968994618188746,
-        "footprintPolygonLatLngs": [
-          [
-            67.28861138181797,
-            -54.55540976697147
-          ],
-          [
-            66.9135162124966,
-            -54.30666319296523
-          ],
-          [
-            66.5661520902244,
-            -50.59358543377805
-          ],
-          [
-            66.95980891263929,
-            -49.72877323629959
-          ],
-          [
-            67.20341728348208,
-            -49.37446560579429
-          ],
-          [
-            67.20744039681844,
-            -49.39871702015048
-          ]
-        ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "Dropped 27 likely outlier points before scoring. The cleaned outer footprint covers 0.9% of Greenland, so it stays regional."
+        "footprintPolygonLatLngs": [],
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Manual admin override applied from the review desk.",
+        "footprintPolygonsLatLngs": []
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/GRL/294ffd0a-220a-4d80-8e58-7b1ff62bdc32.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-10T02:06:55.176Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please update reindeer (rangifer tarandus) to national coverage in Greenland. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
+          "countryIso3": "GRL",
+          "status": "likely_true_both",
+          "bucket": "Likely Valid",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 764,
+          "inatCount": 123,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 764,
+          "rawInatCount": 123,
+          "gbifUsageKey": 5220114,
+          "inatTaxonId": 42199,
+          "inatPlaceId": 7704,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 4,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 887,
+            "qualifiedTotal": 887,
+            "specimenOrSampleCount": 4,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 63,
+            "outlierPointCount": 27,
+            "clusterCount": 1,
+            "clusterSpreadKm": 0.0,
+            "maxDistanceKm": 165.261746117209,
+            "unique25kmCells": 11,
+            "unique50kmCells": 7,
+            "countryDiameterKm": 1660.7065823008018,
+            "spreadRatio": 0.09951291087691692,
+            "coverageAreaKm2": 19427.613676533987,
+            "coverageRatio": 0.008968994618188746,
+            "footprintPolygonLatLngs": [
+              [
+                67.28861138181797,
+                -54.55540976697147
+              ],
+              [
+                66.9135162124966,
+                -54.30666319296523
+              ],
+              [
+                66.5661520902244,
+                -50.59358543377805
+              ],
+              [
+                66.95980891263929,
+                -49.72877323629959
+              ],
+              [
+                67.20341728348208,
+                -49.37446560579429
+              ],
+              [
+                67.20744039681844,
+                -49.39871702015048
+              ]
+            ],
+            "code": "regional",
+            "label": "Regional footprint",
+            "short": "Regional",
+            "note": "Dropped 27 likely outlier points before scoring. The cleaned outer footprint covers 0.9% of Greenland, so it stays regional."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "29f4ab9b-df46-4d87-9923-a9869fa5d503",
@@ -6356,10 +6423,11 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 9,
-    "appliedAtUtc": "2026-06-09T05:26:03.116204+00:00",
+    "count": 10,
+    "appliedAtUtc": "2026-06-10T02:07:16.982148+00:00",
     "items": [
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
+      "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "601cf098-9876-4912-84bb-0926834305e9",
       "8a766598-fcfe-4c06-b899-7213f9b20dfa",
