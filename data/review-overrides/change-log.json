@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-10T02:10:59.713Z",
+  "updatedAtUtc": "2026-06-10T02:18:44.166Z",
   "entries": [
     {
       "id": "2026-06-09T07:09:33.520049Z__DNK__429257d4-3ef2-47fb-b849-66ee6c107346__manual_correction",
@@ -15661,6 +15661,24 @@
         "data/review-overrides/geofence-binary-overrides.json"
       ],
       "reason": "Please remove wild turkey (meleagris gallopavo) from the Greenland country pack."
+    },
+    {
+      "id": "2026-06-10T02:18:44.166Z__GRL__b57debc1-dff2-48d3-a400-f2b5021e71b0__removal",
+      "updatedAtUtc": "2026-06-10T02:18:44.166Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "GRL",
+      "countryName": "Greenland",
+      "suggestionType": "removal",
+      "requestedCoverage": "removed",
+      "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
+      "matchedKey": "mammalia;carnivora;procyonidae;procyon;lotor",
+      "speciesLabel": "northern raccoon (procyon lotor)",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/countries/GRL/b57debc1-dff2-48d3-a400-f2b5021e71b0.json",
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Please remove northern raccoon (procyon lotor) from the Greenland country pack."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-10T02:10:59.270Z",
+  "updatedAtUtc": "2026-06-10T02:18:44.116Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -3973,7 +3973,9 @@
       "allow": {
         "DNK": true
       },
-      "block": {},
+      "block": {
+        "GRL": true
+      },
       "allow_regional": {},
       "metadata": {
         "DNK": {
@@ -3983,6 +3985,14 @@
           "updatedBy": "HugoMarkoff",
           "updatedAtUtc": "2026-06-09T07:51:12.636Z",
           "reason": "Please accept northern raccoon (procyon lotor) into the permanent Denmark country pack and keep its current national footprint coverage."
+        },
+        "GRL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "data/review-overrides/countries/GRL/b57debc1-dff2-48d3-a400-f2b5021e71b0.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-06-10T02:18:44.116Z",
+          "reason": "Please remove northern raccoon (procyon lotor) from the Greenland country pack."
         }
       }
     },
