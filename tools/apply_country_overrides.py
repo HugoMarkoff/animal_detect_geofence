@@ -20,6 +20,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parent.parent
+WORKSPACE_ROOT = ROOT.parent
 DATA_DIR = ROOT / "data"
 PACK_DIR = DATA_DIR / "precomputed-countries"
 INDEX_PATH = PACK_DIR / "index.json"
@@ -27,6 +28,7 @@ OVERRIDES_DIR = DATA_DIR / "review-overrides" / "countries"
 ANIMALS_PATH = DATA_DIR / "animals-global.json"
 GEOFENCE_TRACKING_PATH = DATA_DIR / "review-overrides" / "geofence-binary-overrides.json"
 SIMPLE_GEOFENCE_PATH = DATA_DIR / "geofence-simple.json"
+DAN_DECISIONS_PATH = WORKSPACE_ROOT / "Corrections_DAN.json"
 
 STATUS_TO_BUCKET = {
     "likely_true_both": "Likely Valid",
@@ -247,6 +249,9 @@ def apply_item_country_overrides(
         regional.discard(USA_PARENT_ISO3)
         usa_states_known = False
         usa_states.clear()
+        allow_states.clear()
+        allow_regional_states.clear()
+        block_states.clear()
 
     if allow_states or allow_regional_states or block_states:
         expected.add(USA_PARENT_ISO3)
@@ -313,6 +318,48 @@ def default_new_entry(item_id: str, country_iso3: str) -> dict[str, Any]:
     }
 
 
+def default_expected_observation_profile(country_iso3: str) -> dict[str, Any]:
+    scope_iso3 = clean_text(country_iso3).upper()
+    if scope_iso3.startswith(f"{USA_PARENT_ISO3}-"):
+        return {
+            "code": "country_pack_only",
+            "label": "State pack only",
+            "short": "Pack-only",
+            "note": "Added from expected USA state membership during pack refresh.",
+            "significant": False,
+            "footprintPolygonLatLngs": [],
+        }
+    return {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": False,
+        "footprintPolygonLatLngs": [],
+    }
+
+
+def tracking_requires_pack_entry(item_tracking: dict[str, object] | None, scope_iso3: str) -> bool:
+    if not isinstance(item_tracking, dict):
+        return False
+
+    scope_key = clean_text(scope_iso3).upper()
+    allow = item_tracking.get("allow") if isinstance(item_tracking.get("allow"), dict) else {}
+    allow_regional = item_tracking.get("allow_regional") if isinstance(item_tracking.get("allow_regional"), dict) else {}
+
+    if bool(allow.get(scope_key)) or bool(allow_regional.get(scope_key)):
+        return True
+
+    if scope_key == USA_PARENT_ISO3:
+        return any(
+            clean_text(candidate_scope).upper().startswith(f"{USA_PARENT_ISO3}-") and bool(enabled)
+            for scope_map in (allow, allow_regional)
+            for candidate_scope, enabled in scope_map.items()
+        )
+
+    return False
+
+
 def deep_merge_dict(base: dict[str, Any], patch: dict[str, Any]) -> dict[str, Any]:
     merged = deepcopy(base)
     for key, value in patch.items():
@@ -344,6 +391,251 @@ def load_geofence_tracking_items() -> dict[str, dict[str, object]]:
         if item_id and isinstance(raw_item, dict):
             items[item_id] = raw_item
     return items
+
+
+def normalize_taxon_text(value: object) -> str:
+    return " ".join(str(value or "").strip().lower().replace("_", " ").split())
+
+
+def normalize_taxon_key(value: object) -> str:
+    raw = str(value or "").strip().lower()
+    if not raw:
+        return ""
+    parts = [segment.strip() for segment in raw.split(";") if segment.strip()]
+    return ";".join(parts)
+
+
+def resolve_dan_rule_scope(rule: dict[str, Any]) -> str:
+    country = clean_text(rule.get("country")).upper()
+    state = clean_text(rule.get("state")).upper()
+    if not country:
+        return ""
+    if state:
+        if country != USA_PARENT_ISO3:
+            return ""
+        return f"{country}-{state}"
+    return country
+
+
+def parse_dan_decision_key(key: str) -> tuple[str, str, str, str]:
+    parts = key.split(":")
+    if len(parts) < 3:
+        return clean_text(key).lower(), "", "", ""
+    prefix = clean_text(parts[0]).lower()
+    scope = clean_text(parts[1]).upper()
+    action = clean_text(parts[2]).lower()
+    item_id = clean_text(parts[3]) if len(parts) > 3 else ""
+    return prefix, scope, action, item_id
+
+
+def sort_dan_decisions(raw_decisions: dict[str, Any]) -> list[tuple[str, dict[str, Any]]]:
+    rows: list[tuple[int, str, dict[str, Any], str]] = []
+    for index, (key, value) in enumerate(raw_decisions.items()):
+        updated_at = clean_text((value or {}).get("updatedAt")) or f"zzzz-{index:06d}"
+        rows.append((index, key, value if isinstance(value, dict) else {}, updated_at))
+    rows.sort(key=lambda row: (row[3], row[0]))
+    return [(key, value) for _, key, value, _ in rows]
+
+
+def build_dan_item_indexes(animals_by_id: dict[str, dict[str, Any]]) -> tuple[dict[str, set[str]], dict[str, set[str]], dict[str, set[str]]]:
+    by_taxon_prefix: dict[str, set[str]] = defaultdict(set)
+    by_binomial: dict[str, set[str]] = defaultdict(set)
+    by_genus: dict[str, set[str]] = defaultdict(set)
+
+    for item_id, animal in animals_by_id.items():
+        matched_key = normalize_taxon_key(animal.get("matchedKey"))
+        if matched_key:
+            parts = matched_key.split(";")
+            for index in range(1, len(parts) + 1):
+                by_taxon_prefix[";".join(parts[:index])].add(item_id)
+
+        binomial = normalize_taxon_text(animal.get("binomial"))
+        if not binomial:
+            continue
+        by_binomial[binomial].add(item_id)
+        genus = binomial.split(" ", 1)[0]
+        if genus:
+            by_genus[genus].add(item_id)
+
+    return by_taxon_prefix, by_binomial, by_genus
+
+
+def resolve_dan_rule_items(
+    rule: dict[str, Any],
+    by_taxon_prefix: dict[str, set[str]],
+    by_binomial: dict[str, set[str]],
+    by_genus: dict[str, set[str]],
+) -> list[str]:
+    taxon_level = clean_text(rule.get("taxonLevel")).lower()
+    taxon_key = normalize_taxon_key(rule.get("taxonKey"))
+    binomial = normalize_taxon_text(rule.get("binomial"))
+    matches: set[str] = set()
+
+    if taxon_key:
+        matches.update(by_taxon_prefix.get(taxon_key, set()))
+
+    if not matches and binomial:
+        matches.update(by_binomial.get(binomial, set()))
+
+    if not matches and taxon_level == "genus" and binomial:
+        genus = binomial.split(" ", 1)[0]
+        if genus:
+            matches.update(by_genus.get(genus, set()))
+
+    return sorted(matches)
+
+
+def build_empty_tracking_entry(item_id: str) -> dict[str, Any]:
+    return {
+        "itemId": item_id,
+        "allow": {},
+        "block": {},
+        "allow_regional": {},
+        "metadata": {},
+    }
+
+
+def set_tracking_decision(item_tracking: dict[str, Any], scope_iso3: str, decision: str) -> None:
+    allow = item_tracking.setdefault("allow", {})
+    block = item_tracking.setdefault("block", {})
+    allow_regional = item_tracking.setdefault("allow_regional", {})
+    metadata = item_tracking.setdefault("metadata", {})
+
+    if decision == "block":
+        block[scope_iso3] = True
+        allow.pop(scope_iso3, None)
+        allow_regional.pop(scope_iso3, None)
+    else:
+        allow[scope_iso3] = True
+        block.pop(scope_iso3, None)
+
+    metadata.pop(scope_iso3, None)
+
+
+def load_dan_tracking_items(animals_by_id: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    if not DAN_DECISIONS_PATH.exists():
+        return {}
+
+    payload = load_json_file(DAN_DECISIONS_PATH)
+    raw_decisions = payload.get("decisions")
+    if not isinstance(raw_decisions, dict):
+        return {}
+
+    relevant_scopes = {
+        path.stem.upper()
+        for path in PACK_DIR.glob("*.json")
+        if path.name != INDEX_PATH.name
+    }
+    by_taxon_prefix, by_binomial, by_genus = build_dan_item_indexes(animals_by_id)
+    final_actions: dict[tuple[str, str], dict[str, Any]] = {}
+
+    for source_key, decision in sort_dan_decisions(raw_decisions):
+        prefix, scope_iso3, proposal_action, item_id = parse_dan_decision_key(source_key)
+        outcome = clean_text(decision.get("outcome")).lower()
+        notes_lower = clean_text(decision.get("notes")).lower()
+
+        if outcome == "reject" and prefix == "systematic":
+            continue
+        if "made obsolete by a custom decision for a systematic proposal" in notes_lower:
+            continue
+
+        if outcome == "custom":
+            custom = decision.get("custom") if isinstance(decision.get("custom"), dict) else {}
+            for decision_name, bucket_name in (("block", "blockRules"), ("allow", "allowRules")):
+                rules = custom.get(bucket_name)
+                if not isinstance(rules, list):
+                    continue
+                for raw_rule in rules:
+                    if not isinstance(raw_rule, dict):
+                        continue
+                    matched_scope = resolve_dan_rule_scope(raw_rule)
+                    if not matched_scope or matched_scope not in relevant_scopes:
+                        continue
+                    matched_items = resolve_dan_rule_items(raw_rule, by_taxon_prefix, by_binomial, by_genus)
+                    if not matched_items and clean_text(raw_rule.get("taxonLevel")).lower() == "species" and item_id in animals_by_id:
+                        matched_items = [item_id]
+                    for matched_item_id in matched_items:
+                        final_actions[(matched_item_id, matched_scope)] = {
+                            "decision": decision_name,
+                            "custom": True,
+                        }
+            continue
+
+        if prefix not in {"canada", "usa", "usa_state"}:
+            continue
+        if scope_iso3 not in relevant_scopes or not item_id:
+            continue
+        if proposal_action not in {"add", "remove"} or outcome not in {"accept", "reject"}:
+            continue
+        existing_action = final_actions.get((item_id, scope_iso3))
+        if isinstance(existing_action, dict) and bool(existing_action.get("custom")):
+            continue
+
+        final_decision = "allow" if (proposal_action == "add") == (outcome == "accept") else "block"
+        final_actions[(item_id, scope_iso3)] = {
+            "decision": final_decision,
+            "custom": False,
+        }
+
+    overlay: dict[str, dict[str, Any]] = {}
+    for (item_id, scope_iso3), action in sorted(final_actions.items()):
+        if item_id not in animals_by_id:
+            continue
+        item_tracking = overlay.setdefault(item_id, build_empty_tracking_entry(item_id))
+        set_tracking_decision(item_tracking, scope_iso3, clean_text(action.get("decision")).lower())
+
+    return overlay
+
+
+def merge_tracking_items(
+    dan_tracking_items: dict[str, dict[str, Any]],
+    manual_tracking_items: dict[str, dict[str, object]],
+) -> dict[str, dict[str, Any]]:
+    merged = {item_id: deepcopy(item_tracking) for item_id, item_tracking in dan_tracking_items.items()}
+
+    for item_id, raw_item in manual_tracking_items.items():
+        if not isinstance(raw_item, dict):
+            continue
+        next_item = merged.setdefault(item_id, build_empty_tracking_entry(item_id))
+        for key in ("itemId", "matchedKey", "speciesLabel", "commonName", "binomial", "classLabel", "sourceDataset"):
+            value = raw_item.get(key)
+            if value not in (None, ""):
+                next_item[key] = deepcopy(value)
+
+        raw_block = raw_item.get("block") if isinstance(raw_item.get("block"), dict) else {}
+        raw_allow = raw_item.get("allow") if isinstance(raw_item.get("allow"), dict) else {}
+        raw_allow_regional = raw_item.get("allow_regional") if isinstance(raw_item.get("allow_regional"), dict) else {}
+        raw_metadata = raw_item.get("metadata") if isinstance(raw_item.get("metadata"), dict) else {}
+
+        next_allow = next_item.setdefault("allow", {})
+        next_block = next_item.setdefault("block", {})
+        next_allow_regional = next_item.setdefault("allow_regional", {})
+        next_metadata = next_item.setdefault("metadata", {})
+
+        for scope_iso3, enabled in raw_block.items():
+            if not bool(enabled):
+                continue
+            next_block[scope_iso3] = True
+            next_allow.pop(scope_iso3, None)
+            next_allow_regional.pop(scope_iso3, None)
+
+        for scope_iso3, enabled in raw_allow.items():
+            if not bool(enabled):
+                continue
+            next_allow[scope_iso3] = True
+            next_block.pop(scope_iso3, None)
+
+        for scope_iso3, enabled in raw_allow_regional.items():
+            if not bool(enabled):
+                continue
+            next_allow_regional[scope_iso3] = True
+            next_block.pop(scope_iso3, None)
+
+        for scope_iso3, meta in raw_metadata.items():
+            if isinstance(meta, dict):
+                next_metadata[scope_iso3] = deepcopy(meta)
+
+    return merged
 
 
 def load_regional_country_override_items() -> dict[str, list[str]]:
@@ -518,6 +810,7 @@ def apply_country_overrides(
     pack: dict[str, Any],
     override_paths: list[Path],
     animals_by_id: dict[str, dict[str, Any]],
+    manual_tracking_items: dict[str, dict[str, object]],
     previous_override_summary: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     iso3 = clean_text(pack.get("generatedFor")).upper()
@@ -559,6 +852,28 @@ def apply_country_overrides(
                 continue
 
         entries_by_id[item_id] = deepcopy(raw_entry)
+
+    for item_id, global_item in animals_by_id.items():
+        if item_id in entries_by_id:
+            continue
+
+        if not tracking_requires_pack_entry(manual_tracking_items.get(item_id), iso3):
+            continue
+
+        if uses_subnational_expected_membership:
+            if usa_pack_item_ids is not None and item_id not in usa_pack_item_ids:
+                continue
+            if not item_expected_in_scope(global_item, iso3):
+                continue
+        elif not item_expected_in_country(global_item, iso3):
+            continue
+
+        next_entry = default_new_entry(item_id, iso3)
+        next_entry["expected"] = True
+        next_entry["bucket"] = status_to_bucket(next_entry["status"])
+        next_entry["observationProfile"] = default_expected_observation_profile(iso3)
+        entries_by_id[item_id] = next_entry
+
     removed_entries: list[dict[str, Any]] = []
     active_items: list[str] = []
 
@@ -757,7 +1072,15 @@ def refresh_global_artifacts() -> list[str]:
         raise SystemExit(f"Failed to parse {ANIMALS_PATH.relative_to(ROOT).as_posix()}: {exc}") from exc
 
     items = animals_payload.get("items") or []
-    geofence_tracking_items = load_geofence_tracking_items()
+    animals_by_id = {
+        clean_text(item.get("id")): item
+        for item in items
+        if isinstance(item, dict) and clean_text(item.get("id"))
+    }
+    geofence_tracking_items = merge_tracking_items(
+        load_dan_tracking_items(animals_by_id),
+        load_geofence_tracking_items(),
+    )
     regional_country_overrides = load_regional_country_override_items()
     next_items: list[Any] = []
     simple_items: list[dict[str, Any]] = []
@@ -823,7 +1146,9 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
+    global_artifact_paths = refresh_global_artifacts()
     animals_by_id = load_animals_by_id()
+    manual_tracking_items = load_geofence_tracking_items()
     override_files = collect_override_files()
     pack_countries = {
         path.stem.upper()
@@ -852,6 +1177,7 @@ def main() -> None:
             restored_pack,
             override_files.get(iso3, []),
             animals_by_id,
+            manual_tracking_items,
             previous_override_summary=current_pack.get("manualOverrideSummary") if isinstance(current_pack.get("manualOverrideSummary"), dict) else None,
         )
         if write_json_if_changed(pack_path, next_pack):
@@ -865,7 +1191,6 @@ def main() -> None:
     elif changed_countries:
         print(f"No index changes needed in {INDEX_PATH.relative_to(ROOT).as_posix()}")
 
-    global_artifact_paths = refresh_global_artifacts()
     if global_artifact_paths:
         for relative_path in global_artifact_paths:
             print(f"Updated {relative_path}")

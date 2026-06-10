@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 559,
+    "total": 524,
     "statusCounts": {
-      "likely_true_one_source": 371,
-      "unlisted": 155,
-      "likely_false": 30,
-      "new_record": 3
+      "likely_true_one_source": 325,
+      "unlisted": 156,
+      "likely_false": 37,
+      "new_record": 6
     },
     "bucketCounts": {
-      "Likely Valid": 371,
-      "Unlisted": 155,
-      "Needs Review": 30,
-      "New": 3
+      "Likely Valid": 325,
+      "Unlisted": 156,
+      "Needs Review": 37,
+      "New": 6
     }
   },
   "entries": [
@@ -355,106 +355,6 @@
       "tags": []
     },
     {
-      "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 513889,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/033f2ecb-bf36-4ce1-bf3f-7efcd71fe374.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for grey-necked wood-rail (aramides cajaneus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 513889,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "0364fc81-17d7-4495-a48c-4fc396b44d5d",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -603,106 +503,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 7478670,
-      "inatTaxonId": 179982,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/072d8e15-64e0-41a6-9e81-007bef444fff.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for lesser tropical ground squirel (notocitellus adocetus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "072d8e15-64e0-41a6-9e81-007bef444fff",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 7478670,
-          "inatTaxonId": 179982,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "07843615-e1fc-49d8-9821-fd1d7ff2e773",
@@ -1089,106 +889,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437399,
-      "inatTaxonId": 45949,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for variable squirrel (callosciurus finlaysonii) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2437399,
-          "inatTaxonId": 45949,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "0c4c310f-32cc-471a-8777-e6e46f2e192f",
@@ -2240,106 +1940,6 @@
       "tags": []
     },
     {
-      "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 7625239,
-      "inatTaxonId": 1289433,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/169ed977-68c0-4685-a5e9-9ddbc90b6997.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked wren-babbler (turdinus brevicaudatus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "169ed977-68c0-4685-a5e9-9ddbc90b6997",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 7625239,
-          "inatTaxonId": 1289433,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "1744bcc8-f0f4-4c2d-9deb-094edd5f56a4",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -2434,8 +2034,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -2481,67 +2081,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 123070,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "1965ba9a-cbff-40ba-8e7f-d7c7a5bb4ace",
@@ -2588,106 +2128,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 10875550,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/199a9842-5e9d-43f8-ace6-2bfe868a81c9.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for olive-winged trumpeter (psophia dextralis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": null,
-          "gbifCount": 0,
-          "inatCount": null,
-          "rawGbifPresent": false,
-          "rawInatPresent": null,
-          "rawGbifCount": 0,
-          "rawInatCount": null,
-          "gbifUsageKey": 10875550,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "1a5311ef-a0e0-4593-acd3-e291dd13f620",
@@ -3498,8 +2938,8 @@
     {
       "itemId": "22976d14-d424-4f18-a67a-d8e1689cefcc",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "new_record",
+      "bucket": "New",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": false,
@@ -3588,210 +3028,7 @@
         "short": "Regional",
         "note": "The cleaned outer footprint covers 0.1% of United States \u2013 Texas, so it stays regional."
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/22976d14-d424-4f18-a67a-d8e1689cefcc.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported Dan custom review: Allow the ocelot in Texas, but in no other US states. Effective scope for ocelot (leopardus pardalis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "22976d14-d424-4f18-a67a-d8e1689cefcc",
-          "countryIso3": "USA-TX",
-          "status": "new_record",
-          "bucket": "New",
-          "expected": false,
-          "gbifPresent": true,
-          "inatPresent": false,
-          "gbifCount": 10905,
-          "inatCount": 0,
-          "rawGbifPresent": true,
-          "rawInatPresent": false,
-          "rawGbifCount": 17877,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2434982,
-          "inatTaxonId": 41997,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 17877,
-            "qualifiedTotal": 10905,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "significant": true,
-            "totalPoints": 90,
-            "corePointCount": 90,
-            "outlierPointCount": 0,
-            "clusterCount": 1,
-            "clusterSpreadKm": 0.0,
-            "maxDistanceKm": 16.373338701281714,
-            "unique25kmCells": 4,
-            "unique50kmCells": 4,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0.01739734780803477,
-            "coverageAreaKm2": 592.5803376799595,
-            "coverageRatio": 0.0008518222034263183,
-            "footprintPolygonLatLngs": [
-              [
-                26.20586740601302,
-                -97.45309698561908
-              ],
-              [
-                26.167495798159514,
-                -97.43695716446216
-              ],
-              [
-                26.165910305089767,
-                -97.43495937761269
-              ],
-              [
-                26.164153102794778,
-                -97.43155066106742
-              ],
-              [
-                26.156982898870684,
-                -97.417056573927
-              ],
-              [
-                26.248112975150228,
-                -97.13250308625439
-              ],
-              [
-                26.341950794646486,
-                -97.20992879597564
-              ],
-              [
-                26.28723889768366,
-                -97.42877751766923
-              ],
-              [
-                26.21403404518588,
-                -97.45329011536082
-              ]
-            ],
-            "code": "regional",
-            "label": "Regional footprint",
-            "short": "Regional",
-            "note": "The cleaned outer footprint covers 0.1% of United States \u2013 Texas, so it stays regional."
-          },
-          "tags": []
-        }
-      }
-    },
-    {
-      "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 45998,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/230c8c2d-4758-42c6-ac85-36a722f04977.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for brazilian squirrel (guerlinguetus brasiliensis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "230c8c2d-4758-42c6-ac85-36a722f04977",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 45998,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "23140944-2bd7-46ce-819a-c26508c53d62",
@@ -3838,106 +3075,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "249cae46-0a84-43db-be08-404a6695c171",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 6100884,
-      "inatTaxonId": 201197,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/249cae46-0a84-43db-be08-404a6695c171.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-eared ground-thrush (geokichla camaronensis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "249cae46-0a84-43db-be08-404a6695c171",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 6100884,
-          "inatTaxonId": 201197,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "24b341f7-149b-4a57-96b9-69f8ff6724c2",
@@ -4030,106 +3167,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 7261423,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/25ca4716-54f4-4f69-9b15-ab5af6d38cbd.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese serow (capricornis milneedwardsii) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": null,
-          "gbifCount": 0,
-          "inatCount": null,
-          "rawGbifPresent": false,
-          "rawInatPresent": null,
-          "rawGbifCount": 0,
-          "rawInatCount": null,
-          "gbifUsageKey": 7261423,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "266e985f-1dee-4d11-ac96-8ade6aee7c9a",
@@ -4228,106 +3265,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for common woolly monkey (lagothrix lagotricha) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "277c1292-8e80-4de1-a630-239ba0f7416d",
@@ -4570,106 +3507,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 5786093,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/2813059e-da3b-4f17-a60c-d9c34f2fce24.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for pur\u00fas red howler monkey (alouatta puruensis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "2813059e-da3b-4f17-a60c-d9c34f2fce24",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": null,
-          "gbifCount": 0,
-          "inatCount": null,
-          "rawGbifPresent": false,
-          "rawInatPresent": null,
-          "rawGbifCount": 0,
-          "rawInatCount": null,
-          "gbifUsageKey": 5786093,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "283061f7-1159-4e65-a75b-e6c1b1a13abd",
@@ -6066,6 +4903,58 @@
       "tags": []
     },
     {
+      "itemId": "38be5860-88eb-4aee-8055-67db8342c8ac",
+      "countryIso3": "USA-TX",
+      "status": "unlisted",
+      "bucket": "Unlisted",
+      "expected": false,
+      "gbifPresent": false,
+      "inatPresent": false,
+      "gbifCount": 0,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 5,
+      "rawInatCount": 0,
+      "gbifUsageKey": 2436661,
+      "inatTaxonId": 43428,
+      "inatPlaceId": 4203,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 5,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": true,
+        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 941.1399301748665,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
       "itemId": "38e24c13-9a60-4c22-b550-b85730bc8f35",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -6406,106 +5295,6 @@
       "tags": []
     },
     {
-      "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434299,
-      "inatTaxonId": 925980,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/3b0ae87d-0cb4-46c4-822b-c65047e69a88.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for long-nosed mongoose (herpestes naso) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2434299,
-          "inatTaxonId": 925980,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "3b2e6713-957d-44e5-abe7-dfe8b8313cd2",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -6652,8 +5441,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6699,67 +5488,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 47144,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "3d9d81cc-dc64-497c-951a-ad901644d8e7",
@@ -6816,8 +5545,8 @@
     {
       "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6863,67 +5592,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/3e4fac86-1e90-403c-b798-c20a93df373c.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T02:20:58.835706+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported Dan review: reject remove. Effective scope for domestic elk (cervus canadensis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 204114,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "3e764b23-9c39-4172-a386-09ecf92dffc5",
@@ -7176,8 +5845,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -7223,67 +5892,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "41930eb4-2283-445a-8758-1f0b2ff43cf9",
@@ -7658,106 +6267,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437413,
-      "inatTaxonId": 45964,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/4385382e-2007-4b12-a150-54e63bbfee0d.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for redness tree squirrel (funisciurus anerythrus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "4385382e-2007-4b12-a150-54e63bbfee0d",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2437413,
-          "inatTaxonId": 45964,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "43d4ed66-72e7-4114-94f3-e7765c79fb49",
@@ -9483,106 +7992,6 @@
       "tags": []
     },
     {
-      "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 9099332,
-      "inatTaxonId": 13160,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/514d9dd8-f2de-4a19-87df-3859e9063270.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white-vented shama (kittacincla nigra) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "514d9dd8-f2de-4a19-87df-3859e9063270",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 9099332,
-          "inatTaxonId": 13160,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "518013b1-6f89-4679-8523-73cb73cb2f1c",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -9817,106 +8226,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "531c61a7-b1a2-46d1-b882-4f517780b8ee",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 72674,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/531c61a7-b1a2-46d1-b882-4f517780b8ee.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 2 Dan review decisions (custom scope rules, reject remove). Effective scope for mottled owl (ciccaba virgata) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "531c61a7-b1a2-46d1-b882-4f517780b8ee",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 72674,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "539ebd55-081b-429a-9ae6-5a6a0f6999d4",
@@ -12220,106 +10529,6 @@
       "tags": []
     },
     {
-      "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437524,
-      "inatTaxonId": 46187,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/67f8d7af-2d29-4b22-8810-71e798cac94d.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for three-striped ground squirrel (lariscus insignis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2437524,
-          "inatTaxonId": 46187,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "68574b5e-4576-4953-a704-6bbf9d8e6e80",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -12827,106 +11036,6 @@
       "tags": []
     },
     {
-      "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 7452882,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/6c7c93e1-741a-4152-8f0f-8f161a388d78.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for limestone wren-babbler (turdinus crispifrons) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "6c7c93e1-741a-4152-8f0f-8f161a388d78",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": null,
-          "gbifCount": 0,
-          "inatCount": null,
-          "rawGbifPresent": false,
-          "rawInatPresent": null,
-          "rawGbifCount": 0,
-          "rawInatCount": null,
-          "gbifUsageKey": 7452882,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "6cced5c0-5992-4bc6-ae91-27786b320087",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -13261,106 +11370,6 @@
       "tags": []
     },
     {
-      "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 7430311,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/711807fc-ba18-4107-bb8f-daf9caea5c13.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ochre-winged trumpeter (psophia ochroptera) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "711807fc-ba18-4107-bb8f-daf9caea5c13",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": null,
-          "gbifCount": 0,
-          "inatCount": null,
-          "rawGbifPresent": false,
-          "rawInatPresent": null,
-          "rawGbifCount": 0,
-          "rawInatCount": null,
-          "gbifUsageKey": 7430311,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "71313453-1e2c-448f-88d7-d24e9cd2b930",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -13689,106 +11698,6 @@
       "tags": []
     },
     {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 46 Dan review decisions (custom scope rules, reject remove). Effective scope for raccoon dog (nyctereutes procyonoides) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2434552,
-          "inatTaxonId": 855311,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "74ad9376-b86f-4c46-be31-eae5f582c2c4",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -13833,106 +11742,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 1369285,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/7582ac8c-c63c-4531-a436-d4b532e753be.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for horsfield's tarsier (tarsius bancanus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "7582ac8c-c63c-4531-a436-d4b532e753be",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 1369285,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "764a8bff-2ae5-4d5c-81d3-eb550732940f",
@@ -14309,106 +12118,6 @@
       "tags": []
     },
     {
-      "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 332338,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/7a3f5fb1-8e10-44c8-b040-d0672788540c.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for argentine gray fox (lycalopex griseus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "7a3f5fb1-8e10-44c8-b040-d0672788540c",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 332338,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "7a5a9437-883c-4a5b-b7f9-1d90ec457f46",
       "countryIso3": "USA-TX",
       "status": "unlisted",
@@ -14505,106 +12214,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 7261419,
-      "inatTaxonId": 74722,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/7ade12e0-5b31-4402-b97b-7a3631bcec6e.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for chinese goral (naemorhedus griseus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 7261419,
-          "inatTaxonId": 74722,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "7bef348d-37cf-4b5b-bf91-e4fe2dfc483c",
@@ -14895,106 +12504,6 @@
       "tags": []
     },
     {
-      "itemId": "80921fd4-335d-488e-96f3-cca25b40d5ed",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 1067780,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/80921fd4-335d-488e-96f3-cca25b40d5ed.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-05T00:16:17.414090+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for mouflon (ovis orientalis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "80921fd4-335d-488e-96f3-cca25b40d5ed",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 1067780,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "8221a31b-e2be-42d4-ac37-f39966d2d28c",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -15091,106 +12600,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 1585904,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/82557fe4-2c1e-45ff-9920-c6407a348bf3.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for archer's robin-chat (dessonornis archeri) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "82557fe4-2c1e-45ff-9920-c6407a348bf3",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 1585904,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "828b8955-2d2c-444b-8722-d0b084b804b1",
@@ -16134,106 +13543,6 @@
       "tags": []
     },
     {
-      "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/8a57d557-41a8-4282-9e37-59f1b9e806ea.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for white/crandall's saddleback tamarin (saguinus melanoleucus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "8a57d557-41a8-4282-9e37-59f1b9e806ea",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -16529,106 +13838,6 @@
       "tags": []
     },
     {
-      "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437384,
-      "inatTaxonId": 45991,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/8bff2ed4-679e-4a5d-8874-948b9c4700b5.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for black flying squirrel (aeromys tephromelas) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2437384,
-          "inatTaxonId": 45991,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "8c48ed75-e275-4188-a6b1-55929d298e85",
       "countryIso3": "USA-TX",
       "status": "unlisted",
@@ -16773,106 +13982,6 @@
       "tags": []
     },
     {
-      "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": null,
-      "gbifCount": 0,
-      "inatCount": null,
-      "rawGbifPresent": false,
-      "rawInatPresent": null,
-      "rawGbifCount": 0,
-      "rawInatCount": null,
-      "gbifUsageKey": 8007102,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/8d3957d7-0150-4d46-9a8b-c7278d9d0b9d.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for black-winged trumpeter (psophia obscura) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": null,
-          "gbifCount": 0,
-          "inatCount": null,
-          "rawGbifPresent": false,
-          "rawInatPresent": null,
-          "rawGbifCount": 0,
-          "rawInatCount": null,
-          "gbifUsageKey": 8007102,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "8d86a4a1-7ffc-404c-b228-7aa0aacb6b1f",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -16917,106 +14026,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437114,
-      "inatTaxonId": 1370747,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/8e840c5c-c75f-47a1-90e3-5559ad64422b.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for moonrat (echinosorex gymnura) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "8e840c5c-c75f-47a1-90e3-5559ad64422b",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2437114,
-          "inatTaxonId": 1370747,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "8ed8aff1-cd22-47c4-8f9a-80ed276d88e9",
@@ -18820,106 +15829,6 @@
       "tags": []
     },
     {
-      "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 3740,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/9c7fff26-21ba-4c40-8f6f-747d182b5b46.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for australian ibis (threskiornis moluccus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 3740,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "9c970db3-1497-4397-bb06-06e3827570dd",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -19818,106 +16727,6 @@
       "tags": []
     },
     {
-      "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 339801,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/a6ae199d-c8fa-4f5d-bf4c-844d7b26320d.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for ashy-headed babbler (trichastoma cinereiceps) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 339801,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "a6c4ef9a-d23f-49ca-97c6-4f859df0066e",
       "countryIso3": "USA-TX",
       "status": "unlisted",
@@ -20306,8 +17115,8 @@
     {
       "itemId": "aa76422e-228f-475b-9152-9525ed250517",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "new_record",
+      "bucket": "New",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": false,
@@ -20408,122 +17217,7 @@
         "short": "National",
         "note": "Dropped 25 likely outlier points before scoring. 4 dense observation areas were found in United States \u2013 Texas, so this is treated as national rather than a single regional pocket."
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/aa76422e-228f-475b-9152-9525ed250517.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 2 Dan review decisions (custom scope rules, reject add). Effective scope for great kiskadee (pitangus sulphuratus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "aa76422e-228f-475b-9152-9525ed250517",
-          "countryIso3": "USA-TX",
-          "status": "new_record",
-          "bucket": "New",
-          "expected": false,
-          "gbifPresent": true,
-          "inatPresent": false,
-          "gbifCount": 231921,
-          "inatCount": 0,
-          "rawGbifPresent": true,
-          "rawInatPresent": false,
-          "rawGbifCount": 321854,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2482755,
-          "inatTaxonId": 16956,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 321854,
-            "qualifiedTotal": 231921,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "significant": true,
-            "totalPoints": 90,
-            "corePointCount": 65,
-            "outlierPointCount": 25,
-            "clusterCount": 4,
-            "clusterSpreadKm": 241.96545756915,
-            "maxDistanceKm": 325.7626989548906,
-            "unique25kmCells": 17,
-            "unique50kmCells": 11,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0.3461363061010098,
-            "coverageAreaKm2": 82020.4767299083,
-            "coverageRatio": 0.11790276992261803,
-            "footprintPolygonLatLngs": [
-              [
-                25.804517486586903,
-                -98.80741097661222
-              ],
-              [
-                25.79799997111946,
-                -98.79829948415141
-              ],
-              [
-                25.672980903177525,
-                -98.61230561218609
-              ],
-              [
-                25.616411079459507,
-                -98.44035991939235
-              ],
-              [
-                25.530947352852014,
-                -97.10081772174317
-              ],
-              [
-                25.599094436781222,
-                -96.9475968650942
-              ],
-              [
-                25.691626355017448,
-                -96.86563867522332
-              ],
-              [
-                28.77681475278472,
-                -96.52882442171723
-              ],
-              [
-                28.915522009985093,
-                -96.55783995080708
-              ],
-              [
-                29.31864107451755,
-                -96.86036861763976
-              ],
-              [
-                27.98921599325935,
-                -98.15063560858626
-              ],
-              [
-                25.846659117774443,
-                -98.80338128462724
-              ]
-            ],
-            "code": "countrywide",
-            "label": "National footprint",
-            "short": "National",
-            "note": "Dropped 25 likely outlier points before scoring. 4 dense observation areas were found in United States \u2013 Texas, so this is treated as national rather than a single regional pocket."
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "aaca0050-69c0-4ce5-a454-74fb2797c73c",
@@ -21173,106 +17867,6 @@
       "tags": []
     },
     {
-      "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2474251,
-      "inatTaxonId": 1330,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/b0cf0d5c-7609-49ff-b31e-20394b4bb71d.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for bearded wood-partridge (dendrortyx barbatus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2474251,
-          "inatTaxonId": 1330,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "b0f1b993-d62c-4b55-b833-5e575a15df05",
       "countryIso3": "USA-TX",
       "status": "unlisted",
@@ -21327,8 +17921,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -21374,167 +17968,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
-      "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2481661,
-      "inatTaxonId": 3820,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/b2019c82-1245-44fe-b86e-a25bc1702de9.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 50 Dan review decisions (custom scope rules, reject remove). Effective scope for emperor penguin (aptenodytes forsteri) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b2019c82-1245-44fe-b86e-a25bc1702de9",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2481661,
-          "inatTaxonId": 3820,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "b2970a27-4413-4b99-b777-29f0b56632a0",
@@ -21881,106 +18315,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 520585,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for siberian chipmunk (eutamias sibiricus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 520585,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "b92970dd-2355-4ecc-afe9-429d9c5c1e4c",
@@ -23002,8 +19336,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -23049,67 +19383,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/c150a21e-952d-4665-8a62-a319841c5a56.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "c1679de2-13f3-4a44-9eae-16ed7cc7e286",
@@ -23248,106 +19522,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/c30677db-a57e-4556-a7ff-cf77ef39324a.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for eastern moustached laughingthrush (garrulax cinereiceps) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "c30677db-a57e-4556-a7ff-cf77ef39324a",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "c334b775-63f2-4b74-a965-ba4a023e926b",
@@ -24100,8 +20274,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -24147,67 +20321,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/cae9534f-f302-4229-9e11-b91138333d92.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 941.1399301748665,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "cb86bb15-bf32-453f-930f-68da02c4b521",
@@ -24642,106 +20756,6 @@
       "tags": []
     },
     {
-      "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 9142779,
-      "inatTaxonId": 11603,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/d0642934-f9d4-4f5d-a3b7-67fb0a55c751.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for streaked tuftedcheek (pseudocolaptes boissonneauii) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 9142779,
-          "inatTaxonId": 11603,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d0a759dc-58ec-4c06-abb9-e60a26931962",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -25128,106 +21142,6 @@
       "tags": []
     },
     {
-      "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": false,
-      "gbifCount": null,
-      "inatCount": 0,
-      "rawGbifPresent": null,
-      "rawInatPresent": false,
-      "rawGbifCount": null,
-      "rawInatCount": 0,
-      "gbifUsageKey": null,
-      "inatTaxonId": 42186,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/d42fc24e-515b-470e-87e2-6f15d93ffdb8.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (custom scope rules, reject remove). Effective scope for sumatran mountain muntjac (muntiacus montanus) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 42186,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "d437edb5-ebbd-4ac1-997e-4f5adc461179",
       "countryIso3": "USA-TX",
       "status": "likely_true_one_source",
@@ -25318,106 +21232,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 8493215,
-      "inatTaxonId": 43389,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/d5120db5-2a59-45d7-a3ee-bc6d06b00b57.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules, reject remove). Effective scope for saddleback tamarin (leontocebus fuscicollis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 8493215,
-          "inatTaxonId": 43389,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
     },
     {
       "itemId": "d5636405-819a-495a-b2d1-0f802d52c1bd",
@@ -27730,106 +23544,6 @@
       "tags": []
     },
     {
-      "itemId": "ebff6251-9fd2-4e1b-a2db-f0db3190a289",
-      "countryIso3": "USA-TX",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": null,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "rawGbifPresent": null,
-      "rawInatPresent": null,
-      "rawGbifCount": null,
-      "rawInatCount": null,
-      "gbifUsageKey": null,
-      "inatTaxonId": null,
-      "inatPlaceId": 4203,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "State pack only",
-        "short": "Pack-only",
-        "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-        "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-TX/ebff6251-9fd2-4e1b-a2db-f0db3190a289.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 24 Dan review decisions (custom scope rules, reject remove). Effective scope for australian zebra finch (taeniopygia castanotis) in United States \u2013 Texas (USA-TX).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "ebff6251-9fd2-4e1b-a2db-f0db3190a289",
-          "countryIso3": "USA-TX",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4203,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
-    },
-    {
       "itemId": "ec3161a2-5575-4213-875f-f6a0b6d13376",
       "countryIso3": "USA-TX",
       "status": "unlisted",
@@ -27930,6 +23644,85 @@
         "countryDiameterKm": 941.1399301748665,
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
+      "countryIso3": "USA-TX",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 235,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 820,
+      "rawInatCount": 0,
+      "gbifUsageKey": 5219173,
+      "inatTaxonId": 42048,
+      "inatPlaceId": 4203,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 820,
+        "qualifiedTotal": 235,
+        "specimenOrSampleCount": 13,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Dropped 69 likely outlier points before scoring. Only 8 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 77,
+        "corePointCount": 8,
+        "outlierPointCount": 69,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 104.82894922799908,
+        "unique25kmCells": 6,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 941.1399301748665,
+        "spreadRatio": 0.11138508299028557,
+        "coverageAreaKm2": 7343.375805421918,
+        "coverageRatio": 0.010555953617449161,
+        "footprintPolygonLatLngs": [
+          [
+            29.71857849826505,
+            -97.82022583973104
+          ],
+          [
+            29.888225041428694,
+            -97.33232921660831
+          ],
+          [
+            29.987890999227147,
+            -97.1781448867256
+          ],
+          [
+            30.70971246677009,
+            -96.87994760653208
+          ],
+          [
+            30.383625553150814,
+            -97.80448705193218
+          ]
+        ]
       },
       "tags": []
     },
@@ -29867,206 +25660,5 @@
       },
       "tags": []
     }
-  ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "38be5860-88eb-4aee-8055-67db8342c8ac",
-      "sourceFile": "data/review-overrides/countries/USA-TX/38be5860-88eb-4aee-8055-67db8342c8ac.json",
-      "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-      "updatedBy": "Dan",
-      "reason": "Imported 52 Dan review decisions (accept add, custom scope rules, reject add). Effective scope for common squirrel monkey (saimiri sciureus) in United States \u2013 Texas (USA-TX).",
-      "baseEntry": {
-        "itemId": "38be5860-88eb-4aee-8055-67db8342c8ac",
-        "countryIso3": "USA-TX",
-        "status": "unlisted",
-        "bucket": "Unlisted",
-        "expected": false,
-        "gbifPresent": false,
-        "inatPresent": false,
-        "gbifCount": 0,
-        "inatCount": 0,
-        "rawGbifPresent": true,
-        "rawInatPresent": false,
-        "rawGbifCount": 5,
-        "rawInatCount": 0,
-        "gbifUsageKey": 2436661,
-        "inatTaxonId": 43428,
-        "inatPlaceId": 4203,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 5,
-          "qualifiedTotal": 0,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": true,
-          "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-        },
-        "observationProfile": {
-          "code": "no_points",
-          "label": "No mapped points",
-          "short": "No points",
-          "note": "No mapped coordinates were returned in the sampled observations.",
-          "significant": false,
-          "totalPoints": 0,
-          "maxDistanceKm": 0,
-          "unique25kmCells": 0,
-          "unique50kmCells": 0,
-          "countryDiameterKm": 941.1399301748665,
-          "spreadRatio": 0,
-          "footprintPolygonLatLngs": []
-        },
-        "tags": []
-      }
-    },
-    {
-      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-      "sourceFile": "data/review-overrides/countries/USA-TX/ee8d5a89-f82e-4323-80e2-0ffc9487ebaf.json",
-      "updatedAtUtc": "2026-06-02T04:48:45.214607+00:00",
-      "updatedBy": "Dan",
-      "reason": "Imported 24 Dan review decisions (accept add, reject add). Effective scope for grey wolf (canis lupus) in United States \u2013 Texas (USA-TX).",
-      "baseEntry": {
-        "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-        "countryIso3": "USA-TX",
-        "status": "new_record",
-        "bucket": "New",
-        "expected": false,
-        "gbifPresent": true,
-        "inatPresent": false,
-        "gbifCount": 235,
-        "inatCount": 0,
-        "rawGbifPresent": true,
-        "rawInatPresent": false,
-        "rawGbifCount": 820,
-        "rawInatCount": 0,
-        "gbifUsageKey": 5219173,
-        "inatTaxonId": 42048,
-        "inatPlaceId": 4203,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 820,
-          "qualifiedTotal": 235,
-          "specimenOrSampleCount": 13,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "needs_review",
-          "label": "Pending review",
-          "short": "",
-          "note": "Dropped 69 likely outlier points before scoring. Only 8 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-          "significant": false,
-          "totalPoints": 77,
-          "corePointCount": 8,
-          "outlierPointCount": 69,
-          "clusterCount": 1,
-          "clusterSpreadKm": 0.0,
-          "maxDistanceKm": 104.82894922799908,
-          "unique25kmCells": 6,
-          "unique50kmCells": 4,
-          "countryDiameterKm": 941.1399301748665,
-          "spreadRatio": 0.11138508299028557,
-          "coverageAreaKm2": 7343.375805421918,
-          "coverageRatio": 0.010555953617449161,
-          "footprintPolygonLatLngs": [
-            [
-              29.71857849826505,
-              -97.82022583973104
-            ],
-            [
-              29.888225041428694,
-              -97.33232921660831
-            ],
-            [
-              29.987890999227147,
-              -97.1781448867256
-            ],
-            [
-              30.70971246677009,
-              -96.87994760653208
-            ],
-            [
-              30.383625553150814,
-              -97.80448705193218
-            ]
-          ]
-        },
-        "tags": []
-      }
-    }
-  ],
-  "manualOverrideSummary": {
-    "count": 48,
-    "appliedAtUtc": "2026-06-09T10:56:12.193826+00:00",
-    "items": [
-      "033f2ecb-bf36-4ce1-bf3f-7efcd71fe374",
-      "072d8e15-64e0-41a6-9e81-007bef444fff",
-      "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
-      "169ed977-68c0-4685-a5e9-9ddbc90b6997",
-      "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-      "199a9842-5e9d-43f8-ace6-2bfe868a81c9",
-      "22976d14-d424-4f18-a67a-d8e1689cefcc",
-      "230c8c2d-4758-42c6-ac85-36a722f04977",
-      "249cae46-0a84-43db-be08-404a6695c171",
-      "25ca4716-54f4-4f69-9b15-ab5af6d38cbd",
-      "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
-      "2813059e-da3b-4f17-a60c-d9c34f2fce24",
-      "38be5860-88eb-4aee-8055-67db8342c8ac",
-      "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
-      "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-      "3e4fac86-1e90-403c-b798-c20a93df373c",
-      "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-      "4385382e-2007-4b12-a150-54e63bbfee0d",
-      "514d9dd8-f2de-4a19-87df-3859e9063270",
-      "531c61a7-b1a2-46d1-b882-4f517780b8ee",
-      "67f8d7af-2d29-4b22-8810-71e798cac94d",
-      "6c7c93e1-741a-4152-8f0f-8f161a388d78",
-      "711807fc-ba18-4107-bb8f-daf9caea5c13",
-      "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "7582ac8c-c63c-4531-a436-d4b532e753be",
-      "7a3f5fb1-8e10-44c8-b040-d0672788540c",
-      "7ade12e0-5b31-4402-b97b-7a3631bcec6e",
-      "80921fd4-335d-488e-96f3-cca25b40d5ed",
-      "82557fe4-2c1e-45ff-9920-c6407a348bf3",
-      "8a57d557-41a8-4282-9e37-59f1b9e806ea",
-      "8bff2ed4-679e-4a5d-8874-948b9c4700b5",
-      "8d3957d7-0150-4d46-9a8b-c7278d9d0b9d",
-      "8e840c5c-c75f-47a1-90e3-5559ad64422b",
-      "9c7fff26-21ba-4c40-8f6f-747d182b5b46",
-      "a6ae199d-c8fa-4f5d-bf4c-844d7b26320d",
-      "aa76422e-228f-475b-9152-9525ed250517",
-      "b0cf0d5c-7609-49ff-b31e-20394b4bb71d",
-      "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-      "b2019c82-1245-44fe-b86e-a25bc1702de9",
-      "b8fcd6ad-a58e-4d68-9661-0a7c4fe537fa",
-      "c150a21e-952d-4665-8a62-a319841c5a56",
-      "c30677db-a57e-4556-a7ff-cf77ef39324a",
-      "cae9534f-f302-4229-9e11-b91138333d92",
-      "d0642934-f9d4-4f5d-a3b7-67fb0a55c751",
-      "d42fc24e-515b-470e-87e2-6f15d93ffdb8",
-      "d5120db5-2a59-45d7-a3ee-bc6d06b00b57",
-      "ebff6251-9fd2-4e1b-a2db-f0db3190a289",
-      "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf"
-    ]
-  }
+  ]
 }
