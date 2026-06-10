@@ -5,16 +5,16 @@ This directory is the git-native admin edit layer for published country packs.
 ## Layout
 
 - `countries/<ISO3>/<ITEM_ID>.json`: one override file per species per country.
-- `geofence-baseline.json`: tracked baseline snapshot of the approved global geofence membership used as the immutable rebuild starting point.
-- `geofence-binary-overrides.json`: item-level binary `allow`, `block`, and `allow_regional` decisions captured from reviewed admin changes. It intentionally stores no per-scope metadata.
+- `geofence-baseline.json`: tracked rebuild baseline snapshot used as the immutable starting point for global refreshes.
+- `geofence-binary-overrides.json`: item-level binary `allow`, `block`, and `allow_regional` decisions captured from reviewed non-Dan shared changes. It intentionally stores no per-scope metadata.
 - `change-log.json`: append-only audit log for review-desk changes.
 
 Keeping overrides split per item keeps merge conflicts low when multiple editors are working in the same country.
 
 The baseline + binary geofence files are intentionally non-spatial:
 
-- `geofence-baseline.json` stores the current approved global baseline for `expectedCountries`, `allowRegionalCountries`, and `expectedSubdivisions`.
-- `geofence-binary-overrides.json` stores only country-level decisions.
+- `geofence-baseline.json` stores the rebuild baseline snapshot for `expectedCountries`, `allowRegionalCountries`, and `expectedSubdivisions`.
+- `geofence-binary-overrides.json` stores the persistent shared non-Dan review decisions.
 - `countries/<ISO3>/<ITEM_ID>.json` stores the national or regional country-pack override, including polygons when needed.
 
 This keeps the global geofence baseline/binary layer compact while the country pack remains the detailed polygon-bearing layer.
@@ -106,7 +106,7 @@ The publish repo also keeps `data/geofence-simple.json` as the human-readable it
 
 `geofence-binary-overrides.json` is keyed by `itemId` because review-desk approvals are species-specific.
 
-It is a delta layer, not the source-of-truth baseline. Rebuilds automatically drop rows that no longer change anything relative to `geofence-baseline.json`.
+It is the persistent shared review layer for non-Dan global changes. Rebuilds must preserve these rows rather than auto-pruning them just because the current baseline snapshot already matches the same outcome.
 
 Per item, it stores:
 

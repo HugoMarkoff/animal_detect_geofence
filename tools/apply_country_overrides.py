@@ -1283,10 +1283,7 @@ def refresh_global_artifacts() -> list[str]:
         if isinstance(item, dict) and clean_text(item.get("id"))
     }
     geofence_baseline_items = load_geofence_baseline_items()
-    manual_tracking_items = prune_geofence_tracking_items_to_delta(
-        load_geofence_tracking_items(),
-        geofence_baseline_items,
-    )
+    manual_tracking_items = load_geofence_tracking_items()
     geofence_tracking_items = merge_tracking_items(
         load_dan_tracking_items(animals_by_id),
         manual_tracking_items,
