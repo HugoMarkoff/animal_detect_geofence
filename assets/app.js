@@ -86,7 +86,7 @@ const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const GITHUB_BLOB_WRITE_CONCURRENCY = 8;
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260609b";
+const DATA_VERSION = "20260610a";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -1553,7 +1553,6 @@ function applyGeofenceDecision(trackingPayload, ticket, login) {
     allow: {},
     block: {},
     allow_regional: {},
-    metadata: {},
   };
 
   const entry = payload.items[trackedSpecies.itemId];
@@ -1566,7 +1565,7 @@ function applyGeofenceDecision(trackingPayload, ticket, login) {
   entry.allow ||= {};
   entry.block ||= {};
   entry.allow_regional ||= {};
-  entry.metadata ||= {};
+  delete entry.metadata;
 
   delete entry.allow[iso3];
   delete entry.block[iso3];
@@ -1574,27 +1573,11 @@ function applyGeofenceDecision(trackingPayload, ticket, login) {
 
   if (ticket.suggestionType === "removal") {
     entry.block[iso3] = true;
-    entry.metadata[iso3] = {
-      decision: "block",
-      coverage: requestedCoverage,
-      overridePath: adminOverrideTarget(ticket).path,
-      updatedBy: login,
-      updatedAtUtc,
-      reason: ticket.explanation,
-    };
   } else {
     entry.allow[iso3] = true;
     if (requestedCoverage === "regional") {
       entry.allow_regional[iso3] = true;
     }
-    entry.metadata[iso3] = {
-      decision: "allow",
-      coverage: requestedCoverage,
-      overridePath: adminOverrideTarget(ticket).path,
-      updatedBy: login,
-      updatedAtUtc,
-      reason: ticket.explanation,
-    };
   }
 
   return payload;

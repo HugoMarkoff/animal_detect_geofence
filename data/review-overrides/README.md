@@ -5,7 +5,7 @@ This directory is the git-native admin edit layer for published country packs.
 ## Layout
 
 - `countries/<ISO3>/<ITEM_ID>.json`: one override file per species per country.
-- `geofence-binary-overrides.json`: item-level binary `allow`, `block`, and `allow_regional` decisions captured from reviewed admin changes.
+- `geofence-binary-overrides.json`: item-level binary `allow`, `block`, and `allow_regional` decisions captured from reviewed admin changes. It intentionally stores no per-scope metadata.
 - `change-log.json`: append-only audit log for review-desk changes.
 
 Keeping overrides split per item keeps merge conflicts low when multiple editors are working in the same country.
@@ -17,12 +17,16 @@ The binary geofence file is intentionally non-spatial:
 
 This keeps the global geofence binary while the country pack remains the detailed polygon-bearing layer.
 
+Reviewer, timestamp, reason, and touched-file audit details belong in `change-log.json`, not in `geofence-binary-overrides.json`. Writers should treat any `metadata` field inside the binary tracking file as legacy residue and remove it.
+
 ## Actions
 
 Each override file supports one of two actions:
 
 - `upsert`: patch an existing pack entry or add a new one.
 - `remove`: remove a species from the published country pack.
+
+There are no additional country override action types today. Binary geofence decisions are represented by the `allow`, `block`, and `allow_regional` maps in `geofence-binary-overrides.json` rather than a separate action enum.
 
 `remove` is reversible. If the override file is deleted later, the published pack is restored to its base entry on the next rebuild.
 
@@ -86,6 +90,8 @@ python tools/apply_country_overrides.py
 
 The GitHub Actions workflow in [.github/workflows/apply-country-overrides.yml](../../.github/workflows/apply-country-overrides.yml) runs the same command and commits updated files in `data/precomputed-countries/`, `data/animals-global.json`, and `data/geofence-simple.json`.
 
+Dan-derived decisions from `Corrections_DAN.json` are runtime-only overlays used during rebuild/apply. They should not be persisted into `geofence-binary-overrides.json`, `change-log.json`, or `countries/<ISO3>/<ITEM_ID>.json`.
+
 ## Published simple geofence snapshot
 
 The publish repo also keeps `data/geofence-simple.json` as the human-readable item-level snapshot of the current binary geofence state.
@@ -103,6 +109,8 @@ Per item, it stores:
 - `allow.<ISO3> = true`: this species should be allowed in that country.
 - `block.<ISO3> = true`: this species should be removed from that country.
 - `allow_regional.<ISO3> = true`: this species is allowed in that country, but the approved coverage is regional instead of national.
+
+No other keys are required for decision tracking. In particular, the file should not carry reviewer names, timestamps, reasons, override paths, or similar audit metadata.
 
 The root dataset builder reads this file during `build_global_animals_dataset.py`, adjusts `expectedCountries`, and emits `allowRegionalCountries` in the generated `animals-global.json`.
 

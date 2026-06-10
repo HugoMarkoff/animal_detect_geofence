@@ -491,7 +491,6 @@ def build_empty_tracking_entry(item_id: str) -> dict[str, Any]:
         "allow": {},
         "block": {},
         "allow_regional": {},
-        "metadata": {},
     }
 
 
@@ -499,7 +498,6 @@ def set_tracking_decision(item_tracking: dict[str, Any], scope_iso3: str, decisi
     allow = item_tracking.setdefault("allow", {})
     block = item_tracking.setdefault("block", {})
     allow_regional = item_tracking.setdefault("allow_regional", {})
-    metadata = item_tracking.setdefault("metadata", {})
 
     if decision == "block":
         block[scope_iso3] = True
@@ -508,8 +506,6 @@ def set_tracking_decision(item_tracking: dict[str, Any], scope_iso3: str, decisi
     else:
         allow[scope_iso3] = True
         block.pop(scope_iso3, None)
-
-    metadata.pop(scope_iso3, None)
 
 
 def load_dan_tracking_items(animals_by_id: dict[str, dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -605,12 +601,10 @@ def merge_tracking_items(
         raw_block = raw_item.get("block") if isinstance(raw_item.get("block"), dict) else {}
         raw_allow = raw_item.get("allow") if isinstance(raw_item.get("allow"), dict) else {}
         raw_allow_regional = raw_item.get("allow_regional") if isinstance(raw_item.get("allow_regional"), dict) else {}
-        raw_metadata = raw_item.get("metadata") if isinstance(raw_item.get("metadata"), dict) else {}
 
         next_allow = next_item.setdefault("allow", {})
         next_block = next_item.setdefault("block", {})
         next_allow_regional = next_item.setdefault("allow_regional", {})
-        next_metadata = next_item.setdefault("metadata", {})
 
         for scope_iso3, enabled in raw_block.items():
             if not bool(enabled):
@@ -629,11 +623,10 @@ def merge_tracking_items(
             if not bool(enabled):
                 continue
             next_allow_regional[scope_iso3] = True
+            next_allow[scope_iso3] = True
             next_block.pop(scope_iso3, None)
 
-        for scope_iso3, meta in raw_metadata.items():
-            if isinstance(meta, dict):
-                next_metadata[scope_iso3] = deepcopy(meta)
+        next_item.pop("metadata", None)
 
     return merged
 
