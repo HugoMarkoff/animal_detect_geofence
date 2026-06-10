@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-09T11:13:41.834Z",
+  "updatedAtUtc": "2026-06-10T02:06:55.176Z",
   "entries": [
     {
       "id": "2026-06-09T07:09:33.520049Z__DNK__429257d4-3ef2-47fb-b849-66ee6c107346__manual_correction",
@@ -15625,6 +15625,24 @@
         "data/review-overrides/geofence-binary-overrides.json"
       ],
       "reason": "Please update american beaver (castor canadensis) to national coverage in United States."
+    },
+    {
+      "id": "2026-06-10T02:06:55.176Z__GRL__294ffd0a-220a-4d80-8e58-7b1ff62bdc32__correction",
+      "updatedAtUtc": "2026-06-10T02:06:55.176Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "GRL",
+      "countryName": "Greenland",
+      "suggestionType": "correction",
+      "requestedCoverage": "regional",
+      "itemId": "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
+      "matchedKey": "mammalia;artiodactyla;cervidae;rangifer;tarandus",
+      "speciesLabel": "reindeer (rangifer tarandus)",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/countries/GRL/294ffd0a-220a-4d80-8e58-7b1ff62bdc32.json",
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Please update reindeer (rangifer tarandus) to national coverage in Greenland."
     }
   ]
 }

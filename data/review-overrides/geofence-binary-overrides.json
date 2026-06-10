@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-09T11:13:41.634Z",
+  "updatedAtUtc": "2026-06-10T02:06:55.128Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -13456,12 +13456,16 @@
       "commonName": "reindeer",
       "binomial": "rangifer tarandus",
       "classLabel": "Mammal",
-      "sourceDataset": "Corrections_DAN.json",
-      "allow": {},
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "allow": {
+        "GRL": true
+      },
       "block": {
         "USA-OR": true
       },
-      "allow_regional": {},
+      "allow_regional": {
+        "GRL": true
+      },
       "metadata": {
         "USA-OR": {
           "decision": "block",
@@ -13473,6 +13477,14 @@
           "updatedBy": "Dan",
           "updatedAtUtc": "2026-06-02T04:53:33.046466+00:00",
           "reason": "Imported Dan review: accept remove. Effective scope for reindeer (rangifer tarandus) in United States – Oregon (USA-OR)."
+        },
+        "GRL": {
+          "decision": "allow",
+          "coverage": "regional",
+          "overridePath": "data/review-overrides/countries/GRL/294ffd0a-220a-4d80-8e58-7b1ff62bdc32.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-06-10T02:06:55.128Z",
+          "reason": "Please update reindeer (rangifer tarandus) to national coverage in Greenland."
         }
       }
     },
