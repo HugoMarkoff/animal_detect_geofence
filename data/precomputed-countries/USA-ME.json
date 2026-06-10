@@ -11,17 +11,17 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 279,
+    "total": 291,
     "statusCounts": {
-      "likely_true_one_source": 234,
-      "likely_false": 29,
-      "unlisted": 12,
+      "likely_true_one_source": 223,
+      "likely_false": 51,
+      "unlisted": 13,
       "new_record": 4
     },
     "bucketCounts": {
-      "Likely Valid": 234,
-      "Needs Review": 29,
-      "Unlisted": 12,
+      "Likely Valid": 223,
+      "Needs Review": 51,
+      "Unlisted": 13,
       "New": 4
     }
   },
@@ -683,6 +683,51 @@
       "tags": []
     },
     {
+      "itemId": "0d85f409-e783-4ab3-9726-2a3f0a1349f5",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -1249,8 +1294,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1296,67 +1341,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 123070,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "1965ba9a-cbff-40ba-8e7f-d7c7a5bb4ace",
@@ -1727,6 +1712,51 @@
       "tags": []
     },
     {
+      "itemId": "1e2d6891-9ee9-4a6a-aa5e-b6cad1642cba",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "200b1e14-8f71-4e34-a197-e5699dd3b8d2",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -1957,6 +1987,51 @@
       "tags": []
     },
     {
+      "itemId": "24db939e-690e-4dcf-a110-3e90392f3f23",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "2573d6c8-6924-4fca-8a1f-cdb00b1cc859",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -2001,6 +2076,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "265cec39-e155-4897-9e7f-06f62fc22af1",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "266e985f-1dee-4d11-ac96-8ade6aee7c9a",
@@ -2231,6 +2351,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -2739,6 +2904,51 @@
       "tags": []
     },
     {
+      "itemId": "361e6ba6-a9d6-4220-a276-2d2af66f9fa9",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "376abf0b-0806-411d-a810-99fb925a08cc",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -2971,8 +3181,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3018,67 +3228,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 47144,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "3eb4472d-b8da-4bd8-9533-7b9b4e844f6a",
@@ -3175,8 +3325,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -3222,67 +3372,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "4202940f-f843-4222-b91e-b3404b7fb4ab",
@@ -4207,8 +4297,8 @@
     {
       "itemId": "5109acb4-e503-4147-a175-a3c6aa71f1e3",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -4254,67 +4344,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/5109acb4-e503-4147-a175-a3c6aa71f1e3.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T04:45:24.284451+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 8 Dan review decisions (reject remove). Effective scope for domestic horse (equus caballus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "5109acb4-e503-4147-a175-a3c6aa71f1e3",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2440886,
-          "inatTaxonId": 209233,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "512152a2-2327-4a54-a996-b6adc12cec19",
@@ -4913,6 +4943,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "60eb9e56-9b25-4adf-9d95-59ca3dadfec6",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "612349cc-8342-4ae1-bac8-62e9c16ff4b5",
@@ -6093,6 +6168,51 @@
       "tags": []
     },
     {
+      "itemId": "7311a758-ade1-4c76-96e8-b8d05ee80d1f",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -6459,6 +6579,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "830419bc-bbb2-401e-a2d6-699624709986",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "86f5b978-4f30-40cc-bd08-be9e3fba27a0",
@@ -6929,8 +7094,8 @@
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -6976,67 +7141,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/8a766598-fcfe-4c06-b899-7213f9b20dfa.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 35 Dan review decisions (reject remove). Effective scope for domestic donkey (equus asinus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2440891,
-          "inatTaxonId": 148030,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "8b073a27-8240-413b-b775-484eca29f6c5",
@@ -8100,8 +8205,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -8141,61 +8246,7 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 37 Dan review decisions (reject remove). Effective scope for human (homo sapiens) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2436436,
-          "inatTaxonId": 43584,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
@@ -9224,8 +9275,8 @@
     {
       "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
@@ -9277,73 +9328,7 @@
         "coverageRatio": 0.0021942087438995422,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/aca65aaa-8c6d-4b69-94de-842b08b13bd6.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 6 Dan review decisions (reject remove). Effective scope for domestic cattle (bos taurus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": true,
-          "inatPresent": false,
-          "gbifCount": 1,
-          "inatCount": 0,
-          "rawGbifPresent": true,
-          "rawInatPresent": false,
-          "rawGbifCount": 1,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2441022,
-          "inatTaxonId": 74113,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 1,
-            "qualifiedTotal": 1,
-            "specimenOrSampleCount": 1,
-            "staleGbifCount": 1,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "needs_review",
-            "label": "Pending review",
-            "short": "",
-            "note": "Only 1 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-            "significant": false,
-            "totalPoints": 1,
-            "corePointCount": 1,
-            "outlierPointCount": 0,
-            "clusterCount": 1,
-            "clusterSpreadKm": 0.0,
-            "maxDistanceKm": 0.0,
-            "unique25kmCells": 1,
-            "unique50kmCells": 1,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0.0,
-            "coverageAreaKm2": 201.06192982974676,
-            "coverageRatio": 0.0021942087438995422,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "acda85bc-f4ae-43be-a1cf-77d8526207c4",
@@ -9667,8 +9652,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -9714,67 +9699,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
@@ -10464,8 +10389,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -10511,67 +10436,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/c150a21e-952d-4665-8a62-a319841c5a56.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "c1679de2-13f3-4a44-9eae-16ed7cc7e286",
@@ -11041,8 +10906,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -11088,67 +10953,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/cae9534f-f302-4229-9e11-b91138333d92.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
-          "countryIso3": "USA-ME",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "ce2e0e86-5580-4ab4-974a-4970753a140f",
@@ -12451,6 +12256,51 @@
       "tags": []
     },
     {
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -12969,6 +12819,51 @@
       "tags": []
     },
     {
+      "itemId": "f255895c-5284-40b6-928f-14b5711941bd",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "f35e251d-783d-4a23-8249-aae540e7a73e",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -13383,6 +13278,51 @@
       "tags": []
     },
     {
+      "itemId": "fa03d72f-ebbb-46cc-a84c-b34409df1bbd",
+      "countryIso3": "USA-ME",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "fa44de03-cc13-43d4-90c3-49f4f45827a3",
       "countryIso3": "USA-ME",
       "status": "likely_true_one_source",
@@ -13431,8 +13371,8 @@
     {
       "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
       "countryIso3": "USA-ME",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "unlisted",
+      "bucket": "Unlisted",
       "expected": false,
       "gbifPresent": false,
       "inatPresent": false,
@@ -13478,67 +13418,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-ME/fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for house mouse (mus musculus) in United States \u2013 Maine (USA-ME).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
-          "countryIso3": "USA-ME",
-          "status": "unlisted",
-          "bucket": "Unlisted",
-          "expected": false,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": true,
-          "rawInatPresent": false,
-          "rawGbifCount": 78,
-          "rawInatCount": 0,
-          "gbifUsageKey": 7429082,
-          "inatTaxonId": 44705,
-          "inatPlaceId": 4181,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 78,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": true,
-            "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 341.5710163387947,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "fb0b6995-6f9e-4fde-8358-a03f196bf768",
@@ -13908,22 +13788,5 @@
       },
       "tags": []
     }
-  ],
-  "manualOverrideSummary": {
-    "count": 11,
-    "appliedAtUtc": "2026-06-09T11:04:33.864665+00:00",
-    "items": [
-      "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-      "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-      "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-      "5109acb4-e503-4147-a175-a3c6aa71f1e3",
-      "8a766598-fcfe-4c06-b899-7213f9b20dfa",
-      "990ae9dd-7a59-4344-afcb-1b7b21368000",
-      "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
-      "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-      "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92",
-      "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b"
-    ]
-  }
+  ]
 }

@@ -11,19 +11,19 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 377,
+    "total": 390,
     "statusCounts": {
-      "likely_true_one_source": 225,
-      "likely_false": 28,
+      "likely_true_one_source": 219,
+      "likely_false": 46,
       "likely_true_both": 28,
       "unlisted": 86,
-      "new_record": 10
+      "new_record": 11
     },
     "bucketCounts": {
-      "Likely Valid": 253,
-      "Needs Review": 28,
+      "Likely Valid": 247,
+      "Needs Review": 46,
       "Unlisted": 86,
-      "New": 10
+      "New": 11
     }
   },
   "entries": [
@@ -580,6 +580,51 @@
       "tags": []
     },
     {
+      "itemId": "0d85f409-e783-4ab3-9726-2a3f0a1349f5",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "USA-OH",
       "status": "likely_true_one_source",
@@ -1112,8 +1157,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-OH",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1159,67 +1204,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-OH/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 Ohio (USA-OH).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-          "countryIso3": "USA-OH",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 123070,
-          "inatPlaceId": 4195,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 384.47440053228894,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "1965ba9a-cbff-40ba-8e7f-d7c7a5bb4ace",
@@ -1544,6 +1529,51 @@
       "tags": []
     },
     {
+      "itemId": "1e2d6891-9ee9-4a6a-aa5e-b6cad1642cba",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "200b1e14-8f71-4e34-a197-e5699dd3b8d2",
       "countryIso3": "USA-OH",
       "status": "likely_true_one_source",
@@ -1826,6 +1856,51 @@
       "tags": []
     },
     {
+      "itemId": "24db939e-690e-4dcf-a110-3e90392f3f23",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "25248c94-2e54-4c9d-9939-0d8800296747",
       "countryIso3": "USA-OH",
       "status": "unlisted",
@@ -1922,6 +1997,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "265cec39-e155-4897-9e7f-06f62fc22af1",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "266e985f-1dee-4d11-ac96-8ade6aee7c9a",
@@ -2152,6 +2272,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -2954,6 +3119,51 @@
       "tags": []
     },
     {
+      "itemId": "361e6ba6-a9d6-4220-a276-2d2af66f9fa9",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "376abf0b-0806-411d-a810-99fb925a08cc",
       "countryIso3": "USA-OH",
       "status": "likely_true_one_source",
@@ -3440,8 +3650,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-OH",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3487,67 +3697,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-OH/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 Ohio (USA-OH).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-          "countryIso3": "USA-OH",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 47144,
-          "inatPlaceId": 4195,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 384.47440053228894,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "3eb4472d-b8da-4bd8-9533-7b9b4e844f6a",
@@ -3644,8 +3794,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-OH",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -3691,67 +3841,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-OH/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 Ohio (USA-OH).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-          "countryIso3": "USA-OH",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4195,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 384.47440053228894,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "41930eb4-2283-445a-8758-1f0b2ff43cf9",
@@ -6406,6 +6496,51 @@
       "tags": []
     },
     {
+      "itemId": "60eb9e56-9b25-4adf-9d95-59ca3dadfec6",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "612349cc-8342-4ae1-bac8-62e9c16ff4b5",
       "countryIso3": "USA-OH",
       "status": "likely_true_one_source",
@@ -7663,6 +7798,51 @@
       "tags": []
     },
     {
+      "itemId": "7311a758-ade1-4c76-96e8-b8d05ee80d1f",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-OH",
       "status": "likely_true_both",
@@ -8427,6 +8607,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "830419bc-bbb2-401e-a2d6-699624709986",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "83379ccf-4c97-4faf-b626-79893dcd2ba1",
@@ -12621,8 +12846,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-OH",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -12668,67 +12893,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-OH/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 Ohio (USA-OH).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-          "countryIso3": "USA-OH",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4195,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 384.47440053228894,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "b2970a27-4413-4b99-b777-29f0b56632a0",
@@ -13736,8 +13901,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-OH",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -13783,67 +13948,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-OH/c150a21e-952d-4665-8a62-a319841c5a56.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 Ohio (USA-OH).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
-          "countryIso3": "USA-OH",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4195,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 384.47440053228894,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "c1679de2-13f3-4a44-9eae-16ed7cc7e286",
@@ -14412,8 +14517,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-OH",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -14459,67 +14564,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-OH/cae9534f-f302-4229-9e11-b91138333d92.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 Ohio (USA-OH).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
-          "countryIso3": "USA-OH",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4195,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 384.47440053228894,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "cc17e7c2-109d-413a-bebf-6da97b044df3",
@@ -16843,6 +16888,51 @@
       "tags": []
     },
     {
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",
       "countryIso3": "USA-OH",
       "status": "likely_true_one_source",
@@ -17155,6 +17245,64 @@
         "unique50kmCells": 0,
         "countryDiameterKm": 384.47440053228894,
         "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
+      "countryIso3": "USA-OH",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 11,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 161,
+      "rawInatCount": 0,
+      "gbifUsageKey": 5219173,
+      "inatTaxonId": 42048,
+      "inatPlaceId": 4195,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 161,
+        "qualifiedTotal": 11,
+        "specimenOrSampleCount": 40,
+        "staleGbifCount": 58,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "needs_review",
+        "label": "Pending review",
+        "short": "",
+        "note": "Dropped 9 likely outlier points before scoring. Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
+        "significant": false,
+        "totalPoints": 11,
+        "corePointCount": 2,
+        "outlierPointCount": 9,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 22.288925365368446,
+        "unique25kmCells": 2,
+        "unique50kmCells": 2,
+        "countryDiameterKm": 384.47440053228894,
+        "spreadRatio": 0.05797245625329111,
+        "coverageAreaKm2": 558.0860377436088,
+        "coverageRatio": 0.004807025424586202,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -17538,6 +17686,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "f255895c-5284-40b6-928f-14b5711941bd",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "f35e251d-783d-4a23-8249-aae540e7a73e",
@@ -18062,6 +18255,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "fa03d72f-ebbb-46cc-a84c-b34409df1bbd",
+      "countryIso3": "USA-OH",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "fa3a7f4a-912a-4ff9-b82c-95b27f3d39fb",
@@ -18679,85 +18917,5 @@
       },
       "tags": []
     }
-  ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-      "sourceFile": "data/review-overrides/countries/USA-OH/ee8d5a89-f82e-4323-80e2-0ffc9487ebaf.json",
-      "updatedAtUtc": "2026-06-02T04:48:45.214607+00:00",
-      "updatedBy": "Dan",
-      "reason": "Imported 24 Dan review decisions (accept add, reject add). Effective scope for grey wolf (canis lupus) in United States \u2013 Ohio (USA-OH).",
-      "baseEntry": {
-        "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-        "countryIso3": "USA-OH",
-        "status": "new_record",
-        "bucket": "New",
-        "expected": false,
-        "gbifPresent": true,
-        "inatPresent": false,
-        "gbifCount": 11,
-        "inatCount": 0,
-        "rawGbifPresent": true,
-        "rawInatPresent": false,
-        "rawGbifCount": 161,
-        "rawInatCount": 0,
-        "gbifUsageKey": 5219173,
-        "inatTaxonId": 42048,
-        "inatPlaceId": 4195,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 161,
-          "qualifiedTotal": 11,
-          "specimenOrSampleCount": 40,
-          "staleGbifCount": 58,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "code": "needs_review",
-          "label": "Pending review",
-          "short": "",
-          "note": "Dropped 9 likely outlier points before scoring. Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-          "significant": false,
-          "totalPoints": 11,
-          "corePointCount": 2,
-          "outlierPointCount": 9,
-          "clusterCount": 1,
-          "clusterSpreadKm": 0.0,
-          "maxDistanceKm": 22.288925365368446,
-          "unique25kmCells": 2,
-          "unique50kmCells": 2,
-          "countryDiameterKm": 384.47440053228894,
-          "spreadRatio": 0.05797245625329111,
-          "coverageAreaKm2": 558.0860377436088,
-          "coverageRatio": 0.004807025424586202,
-          "footprintPolygonLatLngs": []
-        },
-        "tags": []
-      }
-    }
-  ],
-  "manualOverrideSummary": {
-    "count": 7,
-    "appliedAtUtc": "2026-06-09T11:04:34.303303+00:00",
-    "items": [
-      "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-      "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-      "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-      "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-      "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92",
-      "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf"
-    ]
-  }
+  ]
 }

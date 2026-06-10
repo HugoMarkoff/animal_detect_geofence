@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 317,
+    "total": 330,
     "statusCounts": {
-      "likely_true_one_source": 252,
-      "likely_false": 28,
+      "likely_true_one_source": 245,
+      "likely_false": 47,
       "unlisted": 35,
-      "new_record": 2
+      "new_record": 3
     },
     "bucketCounts": {
-      "Likely Valid": 252,
-      "Needs Review": 28,
+      "Likely Valid": 245,
+      "Needs Review": 47,
       "Unlisted": 35,
-      "New": 2
+      "New": 3
     }
   },
   "entries": [
@@ -717,6 +717,51 @@
       "tags": []
     },
     {
+      "itemId": "0d85f409-e783-4ab3-9726-2a3f0a1349f5",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "USA-NC",
       "status": "likely_true_one_source",
@@ -1162,8 +1207,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-NC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1209,67 +1254,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-NC/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 North Carolina (USA-NC).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-          "countryIso3": "USA-NC",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 123070,
-          "inatPlaceId": 4187,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 421.28153695620114,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "18dcf75c-03c5-4993-9e21-786b01d29ed3",
@@ -1692,6 +1677,51 @@
       "tags": []
     },
     {
+      "itemId": "1e2d6891-9ee9-4a6a-aa5e-b6cad1642cba",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "200b1e14-8f71-4e34-a197-e5699dd3b8d2",
       "countryIso3": "USA-NC",
       "status": "likely_true_one_source",
@@ -1922,6 +1952,51 @@
       "tags": []
     },
     {
+      "itemId": "24db939e-690e-4dcf-a110-3e90392f3f23",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "2573d6c8-6924-4fca-8a1f-cdb00b1cc859",
       "countryIso3": "USA-NC",
       "status": "likely_true_one_source",
@@ -1966,6 +2041,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "265cec39-e155-4897-9e7f-06f62fc22af1",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "277c1292-8e80-4de1-a630-239ba0f7416d",
@@ -2150,6 +2270,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -2808,6 +2973,51 @@
       "tags": []
     },
     {
+      "itemId": "361e6ba6-a9d6-4220-a276-2d2af66f9fa9",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "376abf0b-0806-411d-a810-99fb925a08cc",
       "countryIso3": "USA-NC",
       "status": "likely_true_one_source",
@@ -3040,8 +3250,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-NC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3087,67 +3297,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-NC/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 North Carolina (USA-NC).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-          "countryIso3": "USA-NC",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 47144,
-          "inatPlaceId": 4187,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 421.28153695620114,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "3eb4472d-b8da-4bd8-9533-7b9b4e844f6a",
@@ -3296,8 +3446,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-NC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -3343,67 +3493,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-NC/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 North Carolina (USA-NC).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-          "countryIso3": "USA-NC",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4187,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 421.28153695620114,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "41930eb4-2283-445a-8758-1f0b2ff43cf9",
@@ -5669,6 +5759,51 @@
       "tags": []
     },
     {
+      "itemId": "60eb9e56-9b25-4adf-9d95-59ca3dadfec6",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "612349cc-8342-4ae1-bac8-62e9c16ff4b5",
       "countryIso3": "USA-NC",
       "status": "likely_true_one_source",
@@ -6902,6 +7037,51 @@
       "tags": []
     },
     {
+      "itemId": "7311a758-ade1-4c76-96e8-b8d05ee80d1f",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-NC",
       "status": "likely_true_one_source",
@@ -7366,6 +7546,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "830419bc-bbb2-401e-a2d6-699624709986",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "85ae8325-57dd-4fcb-bd1a-5b304226d6e5",
@@ -7992,8 +8217,8 @@
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "countryIso3": "USA-NC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -8039,67 +8264,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-NC/8a766598-fcfe-4c06-b899-7213f9b20dfa.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 35 Dan review decisions (reject remove). Effective scope for domestic donkey (equus asinus) in United States \u2013 North Carolina (USA-NC).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
-          "countryIso3": "USA-NC",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2440891,
-          "inatTaxonId": 148030,
-          "inatPlaceId": 4187,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 421.28153695620114,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "8b073a27-8240-413b-b775-484eca29f6c5",
@@ -11027,8 +11192,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-NC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -11074,67 +11239,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-NC/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 North Carolina (USA-NC).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-          "countryIso3": "USA-NC",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4187,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 421.28153695620114,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "b310c664-bb99-487b-9c54-fb0935165d29",
@@ -11936,8 +12041,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-NC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -11983,67 +12088,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-NC/c150a21e-952d-4665-8a62-a319841c5a56.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 North Carolina (USA-NC).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
-          "countryIso3": "USA-NC",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4187,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 421.28153695620114,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "c1f36fb1-ed18-4776-bf32-a37c890c68fa",
@@ -12560,8 +12605,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-NC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -12607,67 +12652,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-NC/cae9534f-f302-4229-9e11-b91138333d92.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 North Carolina (USA-NC).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
-          "countryIso3": "USA-NC",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4187,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 421.28153695620114,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "ce2e0e86-5580-4ab4-974a-4970753a140f",
@@ -14102,6 +14087,51 @@
       "tags": []
     },
     {
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",
       "countryIso3": "USA-NC",
       "status": "likely_true_one_source",
@@ -14380,6 +14410,105 @@
         "countryDiameterKm": 421.28153695620114,
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
+      "countryIso3": "USA-NC",
+      "status": "new_record",
+      "bucket": "New",
+      "expected": false,
+      "gbifPresent": true,
+      "inatPresent": false,
+      "gbifCount": 113,
+      "inatCount": 0,
+      "rawGbifPresent": true,
+      "rawInatPresent": false,
+      "rawGbifCount": 197,
+      "rawInatCount": 0,
+      "gbifUsageKey": 5219173,
+      "inatTaxonId": 42048,
+      "inatPlaceId": 4187,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 197,
+        "qualifiedTotal": 113,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 70,
+        "outlierPointCount": 20,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 43.46503768267915,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 421.28153695620114,
+        "spreadRatio": 0.10317337426348697,
+        "coverageAreaKm2": 1937.8270373815535,
+        "coverageRatio": 0.013902095812366318,
+        "footprintPolygonLatLngs": [
+          [
+            35.855761947463364,
+            -76.08129954932514
+          ],
+          [
+            35.8125233124851,
+            -76.06957631923702
+          ],
+          [
+            35.64669979480382,
+            -75.9193898565235
+          ],
+          [
+            35.605280768875375,
+            -75.83551712754411
+          ],
+          [
+            35.60760853259396,
+            -75.7764827218517
+          ],
+          [
+            35.69592669258516,
+            -75.54838876765781
+          ],
+          [
+            35.89530259179419,
+            -75.58568848571176
+          ],
+          [
+            36.06788457781814,
+            -75.7964552670063
+          ],
+          [
+            36.06722461692229,
+            -75.94716827139735
+          ],
+          [
+            36.0423553939424,
+            -76.04548396470054
+          ]
+        ],
+        "code": "regional",
+        "label": "Regional footprint",
+        "short": "Regional",
+        "note": "Dropped 20 likely outlier points before scoring. The cleaned outer footprint covers 1.4% of United States \u2013 North Carolina, so it stays regional."
       },
       "tags": []
     },
@@ -14710,6 +14839,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "f255895c-5284-40b6-928f-14b5711941bd",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "f35e251d-783d-4a23-8249-aae540e7a73e",
@@ -15078,6 +15252,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "fa03d72f-ebbb-46cc-a84c-b34409df1bbd",
+      "countryIso3": "USA-NC",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "fa44de03-cc13-43d4-90c3-49f4f45827a3",
@@ -15539,127 +15758,5 @@
       },
       "tags": []
     }
-  ],
-  "manualOverrideRemovedEntries": [
-    {
-      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-      "sourceFile": "data/review-overrides/countries/USA-NC/ee8d5a89-f82e-4323-80e2-0ffc9487ebaf.json",
-      "updatedAtUtc": "2026-06-02T04:48:45.214607+00:00",
-      "updatedBy": "Dan",
-      "reason": "Imported 24 Dan review decisions (accept add, reject add). Effective scope for grey wolf (canis lupus) in United States \u2013 North Carolina (USA-NC).",
-      "baseEntry": {
-        "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-        "countryIso3": "USA-NC",
-        "status": "new_record",
-        "bucket": "New",
-        "expected": false,
-        "gbifPresent": true,
-        "inatPresent": false,
-        "gbifCount": 113,
-        "inatCount": 0,
-        "rawGbifPresent": true,
-        "rawInatPresent": false,
-        "rawGbifCount": 197,
-        "rawInatCount": 0,
-        "gbifUsageKey": 5219173,
-        "inatTaxonId": 42048,
-        "inatPlaceId": 4187,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 197,
-          "qualifiedTotal": 113,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
-        "observationProfile": {
-          "significant": true,
-          "totalPoints": 90,
-          "corePointCount": 70,
-          "outlierPointCount": 20,
-          "clusterCount": 1,
-          "clusterSpreadKm": 0.0,
-          "maxDistanceKm": 43.46503768267915,
-          "unique25kmCells": 4,
-          "unique50kmCells": 4,
-          "countryDiameterKm": 421.28153695620114,
-          "spreadRatio": 0.10317337426348697,
-          "coverageAreaKm2": 1937.8270373815535,
-          "coverageRatio": 0.013902095812366318,
-          "footprintPolygonLatLngs": [
-            [
-              35.855761947463364,
-              -76.08129954932514
-            ],
-            [
-              35.8125233124851,
-              -76.06957631923702
-            ],
-            [
-              35.64669979480382,
-              -75.9193898565235
-            ],
-            [
-              35.605280768875375,
-              -75.83551712754411
-            ],
-            [
-              35.60760853259396,
-              -75.7764827218517
-            ],
-            [
-              35.69592669258516,
-              -75.54838876765781
-            ],
-            [
-              35.89530259179419,
-              -75.58568848571176
-            ],
-            [
-              36.06788457781814,
-              -75.7964552670063
-            ],
-            [
-              36.06722461692229,
-              -75.94716827139735
-            ],
-            [
-              36.0423553939424,
-              -76.04548396470054
-            ]
-          ],
-          "code": "regional",
-          "label": "Regional footprint",
-          "short": "Regional",
-          "note": "Dropped 20 likely outlier points before scoring. The cleaned outer footprint covers 1.4% of United States \u2013 North Carolina, so it stays regional."
-        },
-        "tags": []
-      }
-    }
-  ],
-  "manualOverrideSummary": {
-    "count": 8,
-    "appliedAtUtc": "2026-06-09T11:05:40.480202+00:00",
-    "items": [
-      "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-      "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-      "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-      "8a766598-fcfe-4c06-b899-7213f9b20dfa",
-      "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-      "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92",
-      "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf"
-    ]
-  }
+  ]
 }

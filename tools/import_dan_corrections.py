@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
-"""Import Dan's reviewed USA/CAN decisions into the publish override model.
+"""Audit Dan's reviewed USA/CAN decisions without persisting them on disk.
 
-This script materializes Corrections_DAN.json into the existing publish-side
-review files instead of introducing a new runtime review layer. It updates:
-
-- data/review-overrides/geofence-binary-overrides.json
-- data/review-overrides/countries/<ISO3>/<ITEM_ID>.json
-- data/review-overrides/change-log.json
-
-The publish pack applier is then run twice so the second pass can prune or keep
-country-pack entries against the freshly refreshed global expected-country set.
+Dan remains a runtime overlay sourced from Corrections_DAN.json when the publish
+artifacts are refreshed. This script summarizes the current Dan decision set,
+removes any legacy Dan-derived per-scope override files, and refreshes the
+published artifacts without writing Dan back into the manual review layer.
 """
 
 from __future__ import annotations
@@ -450,6 +445,32 @@ def build_log_entry(
     }
 
 
+def is_dan_override_payload(payload: object) -> bool:
+    if not isinstance(payload, dict):
+        return False
+    updated_by = clean_text(payload.get("updatedBy"))
+    source_dataset = clean_text(payload.get("sourceDataset"))
+    reason = clean_text(payload.get("reason")).lower()
+    return (
+        updated_by == "Dan"
+        or source_dataset == "Corrections_DAN.json"
+        or reason.startswith("imported dan review:")
+    )
+
+
+def find_legacy_dan_override_paths(relevant_scopes: set[str]) -> dict[tuple[str, str], Path]:
+    legacy_paths: dict[tuple[str, str], Path] = {}
+    for path in sorted(OVERRIDES_DIR.glob("*/*.json")):
+        scope_iso3 = path.parent.name.strip().upper()
+        item_id = path.stem.strip()
+        if scope_iso3 not in relevant_scopes or not item_id:
+            continue
+        payload = load_json_file(path)
+        if is_dan_override_payload(payload):
+            legacy_paths[(scope_iso3, item_id)] = path
+    return legacy_paths
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Import Dan's USA/CAN review decisions into the publish override files.")
     parser.add_argument("--dry-run", action="store_true", help="Summarize the import without writing files.")
@@ -468,23 +489,6 @@ def main() -> int:
         if path.name != "index.json"
     }
     relevant_scopes = {scope_iso3 for scope_iso3 in pack_paths if is_us_can_scope(scope_iso3)}
-    base_entries_by_scope, scope_names = load_pack_info(pack_paths)
-
-    tracking_payload = load_json_or_default(
-        GEOFENCE_TRACKING_PATH,
-        {"schemaVersion": 1, "updatedAtUtc": None, "items": {}},
-    )
-    if not isinstance(tracking_payload, dict):
-        raise SystemExit(f"{GEOFENCE_TRACKING_PATH} must contain a JSON object.")
-    tracking_items = tracking_payload.get("items")
-    if not isinstance(tracking_items, dict):
-        tracking_items = {}
-        tracking_payload["items"] = tracking_items
-
-    existing_override_paths = {
-        (path.parent.name.strip().upper(), path.stem.strip()): path
-        for path in OVERRIDES_DIR.glob("*/*.json")
-    }
 
     final_actions: dict[tuple[str, str], dict[str, Any]] = {}
     errors: list[str] = []
@@ -598,193 +602,19 @@ def main() -> int:
             preview = f"{preview}\n- ... and {len(errors) - 40} more"
         raise SystemExit(f"Cannot import Dan decisions until these issues are resolved:\n{preview}")
 
-    actions_by_item: dict[str, dict[str, dict[str, Any]]] = defaultdict(dict)
-    source_records_by_item: dict[str, list[dict[str, Any]]] = defaultdict(list)
-    for (item_id, scope_iso3), record in sorted(final_actions.items()):
-        actions_by_item[item_id][scope_iso3] = record
-    for item_id, scoped_records in actions_by_item.items():
-        for record in scoped_records.values():
-            source_records_by_item[item_id].append(record)
-
-    changed_scopes_by_item: dict[str, set[str]] = defaultdict(set)
-    changed_files_by_item: dict[str, set[str]] = defaultdict(set)
-    relevant_scope_candidates_by_item: dict[str, set[str]] = defaultdict(set)
+    legacy_override_paths = find_legacy_dan_override_paths(relevant_scopes)
+    touched_items = {item_id for item_id, _scope_iso3 in final_actions}
+    touched_items.update(item_id for (_scope_iso3, item_id) in legacy_override_paths)
+    touched_scopes = sorted({scope_iso3 for _item_id, scope_iso3 in final_actions if scope_iso3 in pack_paths})
+    touched_scopes = sorted(set(touched_scopes) | {scope_iso3 for (scope_iso3, _item_id) in legacy_override_paths if scope_iso3 in pack_paths})
     tracking_scope_changes = 0
-
-    for item_id, scoped_records in actions_by_item.items():
-        item_tracking_before = deepcopy(tracking_items.get(item_id)) if isinstance(tracking_items.get(item_id), dict) else None
-        item_tracking = ensure_tracking_entry(tracking_items, animals_by_id, item_id)
-        animal = animals_by_id[item_id]
-
-        allow = item_tracking.get("allow") if isinstance(item_tracking.get("allow"), dict) else {}
-        block = item_tracking.get("block") if isinstance(item_tracking.get("block"), dict) else {}
-        allow_regional = item_tracking.get("allow_regional") if isinstance(item_tracking.get("allow_regional"), dict) else {}
-        metadata = item_tracking.get("metadata") if isinstance(item_tracking.get("metadata"), dict) else {}
-
-        tracked_relevant_scopes = {
-            scope_iso3
-            for scope_iso3 in relevant_scopes
-            if scope_iso3 in allow or scope_iso3 in block or scope_iso3 in allow_regional or scope_iso3 in metadata
-        }
-        existing_override_scopes = {
-            scope_iso3
-            for (scope_iso3, existing_item_id), _path in existing_override_paths.items()
-            if existing_item_id == item_id and scope_iso3 in relevant_scopes
-        }
-        relevant_scope_candidates_by_item[item_id].update(tracked_relevant_scopes)
-        relevant_scope_candidates_by_item[item_id].update(existing_override_scopes)
-        relevant_scope_candidates_by_item[item_id].update(scoped_records)
-
-        for scope_iso3 in tracked_relevant_scopes:
-            allow.pop(scope_iso3, None)
-            block.pop(scope_iso3, None)
-            allow_regional.pop(scope_iso3, None)
-            metadata.pop(scope_iso3, None)
-
-        for scope_iso3, record in sorted(scoped_records.items()):
-            if record["decision"] == "allow":
-                allow[scope_iso3] = True
-            else:
-                block[scope_iso3] = True
-
-            scope_name = scope_names.get(scope_iso3, scope_iso3)
-            record["scopeName"] = scope_name
-            metadata_entry = {
-                "decision": record["decision"],
-                "coverage": scope_coverage(scope_iso3, record["decision"]),
-                "sourceDataset": "Corrections_DAN.json",
-                "decisionKey": record["sourceKey"],
-                "decisionOutcome": record["outcome"],
-                "proposalAction": record["proposalAction"],
-                "updatedBy": args.reviewer,
-                "updatedAtUtc": record["updatedAtUtc"],
-                "reason": build_override_reason(
-                    species_label(animal, fallback=item_id),
-                    scope_iso3,
-                    scope_name,
-                    [record],
-                ),
-            }
-            metadata[scope_iso3] = metadata_entry
-
-        item_tracking["allow"] = allow
-        item_tracking["block"] = block
-        item_tracking["allow_regional"] = allow_regional
-        item_tracking["metadata"] = metadata
-
-        if not item_tracking.get("allow") and not item_tracking.get("block") and not item_tracking.get("allow_regional") and not item_tracking.get("metadata"):
-            tracking_items.pop(item_id, None)
-
-        for scope_iso3 in sorted(relevant_scope_candidates_by_item[item_id]):
-            previous_scope = scope_snapshot(item_tracking_before, scope_iso3)
-            current_scope = scope_snapshot(tracking_items.get(item_id), scope_iso3)
-            if previous_scope != current_scope:
-                changed_scopes_by_item[item_id].add(scope_iso3)
-                changed_files_by_item[item_id].add(GEOFENCE_TRACKING_PATH.relative_to(ROOT).as_posix())
-                tracking_scope_changes += 1
-
     override_writes = 0
-    override_deletes = 0
-
-    for item_id, scoped_records in actions_by_item.items():
-        animal = animals_by_id[item_id]
-        projected_item = project_item(animal, tracking_items.get(item_id))
-        candidate_scopes = derive_candidate_scopes(relevant_scope_candidates_by_item[item_id])
-        updated_at = max((clean_text(record.get("updatedAtUtc")) for record in source_records_by_item[item_id]), default="") or now_utc_iso()
-        item_label = species_label(animal, fallback=item_id)
-
-        for scope_iso3 in candidate_scopes:
-            if scope_iso3 not in relevant_scopes:
-                continue
-
-            final_expected = item_expected_in_scope(projected_item, scope_iso3)
-            base_entry = base_entries_by_scope.get(scope_iso3, {}).get(item_id)
-            scope_name = scope_names.get(scope_iso3, scope_iso3)
-            desired_payload = desired_override_payload(
-                item_id,
-                scope_iso3,
-                scope_name,
-                final_expected,
-                base_entry,
-                source_records_by_item[item_id],
-                updated_at,
-                args.reviewer,
-                item_label,
-            )
-
-            override_path = OVERRIDES_DIR / scope_iso3 / f"{item_id}.json"
-            relative_override_path = override_path.relative_to(ROOT).as_posix()
-
-            if desired_payload is None:
-                if override_path.exists():
-                    changed_scopes_by_item[item_id].add(scope_iso3)
-                    changed_files_by_item[item_id].add(relative_override_path)
-                    if not args.dry_run:
-                        override_path.unlink()
-                    override_deletes += 1
-                continue
-
-            changed_scopes_by_item[item_id].add(scope_iso3)
-            changed_files_by_item[item_id].add(relative_override_path)
-            serialized_override = serialize_json(desired_payload)
-            if args.dry_run:
-                previous_override = override_path.read_text(encoding="utf-8") if override_path.exists() else None
-                if previous_override != serialized_override:
-                    override_writes += 1
-                continue
-
-            if write_json_text_if_changed(override_path, desired_payload):
-                override_writes += 1
-
-    changed_items = {
-        item_id
-        for item_id in actions_by_item
-        if changed_scopes_by_item.get(item_id) or changed_files_by_item.get(item_id)
-    }
-
-    log_entries_upserted = 0
-    if changed_items and not args.dry_run:
-        change_log_payload = load_json_or_default(
-            CHANGE_LOG_PATH,
-            {"schemaVersion": 1, "updatedAtUtc": None, "entries": []},
-        )
-        entries = change_log_payload.get("entries") if isinstance(change_log_payload.get("entries"), list) else []
-        entries_by_id = {
-            clean_text(entry.get("id")): index
-            for index, entry in enumerate(entries)
-            if isinstance(entry, dict) and clean_text(entry.get("id"))
-        }
-
-        for item_id in sorted(changed_items):
-            entry = build_log_entry(
-                item_id,
-                animals_by_id.get(item_id),
-                source_records_by_item[item_id],
-                changed_scopes_by_item[item_id],
-                changed_files_by_item[item_id],
-            )
-            existing_index = entries_by_id.get(clean_text(entry.get("id")))
-            if existing_index is None:
-                entries.append(entry)
-            else:
-                entries[existing_index] = entry
-            log_entries_upserted += 1
-
-        change_log_payload["entries"] = entries
-        change_log_payload["updatedAtUtc"] = now_utc_iso()
-        write_json_if_changed(CHANGE_LOG_PATH, change_log_payload)
-
-    tracking_changed = bool(changed_items)
-    if tracking_changed and not args.dry_run:
-        tracking_payload["updatedAtUtc"] = now_utc_iso()
-        write_json_if_changed(GEOFENCE_TRACKING_PATH, tracking_payload)
-
-    touched_scopes = sorted({scope for item_id in changed_items for scope in changed_scopes_by_item[item_id] if scope in pack_paths})
+    override_deletes = len(legacy_override_paths)
 
     print(f"Dan decisions loaded: {len(raw_decisions)}")
     print(f"Systematic rejects skipped: {skipped_systematic_rejects}")
     print(f"Effective item/scope actions: {len(final_actions)}")
-    print(f"Touched items: {len(changed_items)}")
+    print(f"Touched items: {len(touched_items)}")
     print(f"Tracking scope updates: {tracking_scope_changes}")
     print(f"Override writes planned: {override_writes}")
     print(f"Override deletes planned: {override_deletes}")
@@ -799,24 +629,27 @@ def main() -> int:
         print("Dry run complete; no files were written.")
         return 0
 
-    if changed_items:
-        for pass_index in (1, 2):
-            completed = subprocess.run(
-                [sys.executable, str(APPLY_OVERRIDES_PATH)],
-                cwd=str(ROOT),
-                capture_output=True,
-                text=True,
-                check=False,
-            )
-            if completed.returncode != 0:
-                raise SystemExit(
-                    f"apply_country_overrides.py pass {pass_index} failed.\n"
-                    f"stdout:\n{completed.stdout.strip()}\n\n"
-                    f"stderr:\n{completed.stderr.strip()}"
-                )
-            print(f"apply_country_overrides.py pass {pass_index} completed.")
+    for path in legacy_override_paths.values():
+        path.unlink()
 
-    print(f"Change-log entries updated: {log_entries_upserted}")
+    if override_deletes:
+        completed = subprocess.run(
+            [sys.executable, str(APPLY_OVERRIDES_PATH)],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if completed.returncode != 0:
+            raise SystemExit(
+                "apply_country_overrides.py failed after removing legacy Dan override files.\n"
+                f"stdout:\n{completed.stdout.strip()}\n\n"
+                f"stderr:\n{completed.stderr.strip()}"
+            )
+        print("apply_country_overrides.py completed.")
+
+    print("Dan override persistence disabled; legacy Dan per-scope override files were removed and shared manual files were left untouched.")
+    print("Change-log entries updated: 0")
     return 0
 
 

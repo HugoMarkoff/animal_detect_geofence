@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 389,
+    "total": 402,
     "statusCounts": {
-      "likely_true_one_source": 307,
-      "likely_false": 31,
+      "likely_true_one_source": 298,
+      "likely_false": 52,
       "likely_true_both": 2,
-      "unlisted": 42,
+      "unlisted": 43,
       "new_record": 7
     },
     "bucketCounts": {
-      "Likely Valid": 309,
-      "Needs Review": 31,
-      "Unlisted": 42,
+      "Likely Valid": 300,
+      "Needs Review": 52,
+      "Unlisted": 43,
       "New": 7
     }
   },
@@ -768,6 +768,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "0d85f409-e783-4ab3-9726-2a3f0a1349f5",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
@@ -1572,8 +1617,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1619,67 +1664,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/189cdd40-b83d-48d1-a4fa-e43a104f2a23.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goat (capra aegagrus hircus) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 123070,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "1965ba9a-cbff-40ba-8e7f-d7c7a5bb4ace",
@@ -2008,6 +1993,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "1e2d6891-9ee9-4a6a-aa5e-b6cad1642cba",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "200b1e14-8f71-4e34-a197-e5699dd3b8d2",
@@ -2344,6 +2374,51 @@
       "tags": []
     },
     {
+      "itemId": "24db939e-690e-4dcf-a110-3e90392f3f23",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "2573d6c8-6924-4fca-8a1f-cdb00b1cc859",
       "countryIso3": "USA-AZ",
       "status": "likely_true_one_source",
@@ -2434,6 +2509,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "265cec39-e155-4897-9e7f-06f62fc22af1",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "266e985f-1dee-4d11-ac96-8ade6aee7c9a",
@@ -2710,6 +2830,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -3558,6 +3723,51 @@
       "tags": []
     },
     {
+      "itemId": "361e6ba6-a9d6-4220-a276-2d2af66f9fa9",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "36c727f7-9fce-42d3-9e97-64e429ce3ed2",
       "countryIso3": "USA-AZ",
       "status": "unlisted",
@@ -3986,8 +4196,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4033,73 +4243,13 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/3d80f1d6-b1df-4966-9ff4-94053c7a902a.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (reject remove). Effective scope for domestic dog (canis familiaris) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 47144,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4145,67 +4295,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/3e4fac86-1e90-403c-b798-c20a93df373c.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T02:20:58.835706+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported Dan review: reject remove. Effective scope for domestic elk (cervus canadensis) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": false,
-          "gbifCount": null,
-          "inatCount": 0,
-          "rawGbifPresent": null,
-          "rawInatPresent": false,
-          "rawGbifCount": null,
-          "rawInatCount": 0,
-          "gbifUsageKey": null,
-          "inatTaxonId": 204114,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "3eb4472d-b8da-4bd8-9533-7b9b4e844f6a",
@@ -4302,8 +4392,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -4349,67 +4439,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/4173d2d9-1d0e-42cd-bf66-f295e62a7c08.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic goose (anser anser domesticus) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "41930eb4-2283-445a-8758-1f0b2ff43cf9",
@@ -6823,6 +6853,51 @@
       "tags": []
     },
     {
+      "itemId": "60eb9e56-9b25-4adf-9d95-59ca3dadfec6",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "612349cc-8342-4ae1-bac8-62e9c16ff4b5",
       "countryIso3": "USA-AZ",
       "status": "likely_true_one_source",
@@ -8280,6 +8355,51 @@
       "tags": []
     },
     {
+      "itemId": "7311a758-ade1-4c76-96e8-b8d05ee80d1f",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "73d873bc-ff46-447e-a592-2c5a54b5dfa9",
       "countryIso3": "USA-AZ",
       "status": "likely_true_one_source",
@@ -8946,6 +9066,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "830419bc-bbb2-401e-a2d6-699624709986",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "83e96493-7f32-4c25-ad71-e437c8463aa4",
@@ -10985,8 +11150,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -11026,61 +11191,7 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/990ae9dd-7a59-4344-afcb-1b7b21368000.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 37 Dan review decisions (reject remove). Effective scope for human (homo sapiens) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": false,
-          "inatPresent": false,
-          "gbifCount": 0,
-          "inatCount": 0,
-          "rawGbifPresent": false,
-          "rawInatPresent": false,
-          "rawGbifCount": 0,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2436436,
-          "inatTaxonId": 43584,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "country_pack_only",
-            "label": "State pack only",
-            "short": "Pack-only",
-            "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
-            "significant": false,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "990d0d09-d362-428c-b25d-82f454ac61d6",
@@ -13139,8 +13250,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -13186,67 +13297,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic mule (equus mulus) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
@@ -14085,8 +14136,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -14132,67 +14183,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/c150a21e-952d-4665-8a62-a319841c5a56.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic pig (sus scrofa scrofa) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "c1679de2-13f3-4a44-9eae-16ed7cc7e286",
@@ -14899,8 +14890,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "likely_false",
+      "bucket": "Needs Review",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -14946,67 +14937,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/cae9534f-f302-4229-9e11-b91138333d92.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 53 Dan review decisions (reject remove). Effective scope for domestic chicken (gallus gallus domesticus) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
-          "countryIso3": "USA-AZ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
-          "expected": true,
-          "gbifPresent": null,
-          "inatPresent": null,
-          "gbifCount": null,
-          "inatCount": null,
-          "rawGbifPresent": null,
-          "rawInatPresent": null,
-          "rawGbifCount": null,
-          "rawInatCount": null,
-          "gbifUsageKey": null,
-          "inatTaxonId": null,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": true,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 0,
-            "qualifiedTotal": 0,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "ce2e0e86-5580-4ab4-974a-4970753a140f",
@@ -17040,6 +16971,51 @@
       "tags": []
     },
     {
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",
       "countryIso3": "USA-AZ",
       "status": "likely_true_one_source",
@@ -17176,6 +17152,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "ea7e5297-8c71-4c93-a55b-27b1fe8f49de",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "eb70c899-f974-48a0-8134-256c751e3b38",
@@ -17832,6 +17853,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "f255895c-5284-40b6-928f-14b5711941bd",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     },
     {
       "itemId": "f33491f9-621d-4870-8276-4f16d3d0b898",
@@ -18542,6 +18608,51 @@
       "tags": []
     },
     {
+      "itemId": "fa03d72f-ebbb-46cc-a84c-b34409df1bbd",
+      "countryIso3": "USA-AZ",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
+    },
+    {
       "itemId": "fa44de03-cc13-43d4-90c3-49f4f45827a3",
       "countryIso3": "USA-AZ",
       "status": "likely_true_one_source",
@@ -19096,8 +19207,8 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "USA-AZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
+      "status": "unlisted",
+      "bucket": "Unlisted",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": false,
@@ -19143,67 +19254,7 @@
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
-      "tags": [],
-      "manualOverride": {
-        "sourceFile": "data/review-overrides/countries/USA-AZ/ff803ff7-ed2b-4520-9304-99b408657f47.json",
-        "action": "upsert",
-        "updatedAtUtc": "2026-06-02T17:51:19.668106+00:00",
-        "updatedBy": "Dan",
-        "reason": "Imported 52 Dan review decisions (custom scope rules). Effective scope for brown rat (rattus norvegicus) in United States \u2013 Arizona (USA-AZ).",
-        "addedByOverride": false,
-        "baseEntry": {
-          "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
-          "countryIso3": "USA-AZ",
-          "status": "unlisted",
-          "bucket": "Unlisted",
-          "expected": false,
-          "gbifPresent": true,
-          "inatPresent": false,
-          "gbifCount": 7,
-          "inatCount": 0,
-          "rawGbifPresent": true,
-          "rawInatPresent": false,
-          "rawGbifCount": 12,
-          "rawInatCount": 0,
-          "gbifUsageKey": 2439261,
-          "inatTaxonId": 44576,
-          "inatPlaceId": 4162,
-          "managedEvidence": {
-            "domesticNamed": false,
-            "materialSampleCount": 0,
-            "atlasCount": 0,
-            "managedCount": 0,
-            "captiveInatCount": 0,
-            "needsReview": false,
-            "note": ""
-          },
-          "evidenceQuality": {
-            "rawTotal": 12,
-            "qualifiedTotal": 7,
-            "specimenOrSampleCount": 0,
-            "staleGbifCount": 0,
-            "staleInatCount": 0,
-            "captiveInatCount": 0,
-            "rejected": false,
-            "note": ""
-          },
-          "observationProfile": {
-            "code": "no_points",
-            "label": "No mapped points",
-            "short": "No points",
-            "note": "No mapped coordinates were returned in the sampled observations.",
-            "significant": false,
-            "totalPoints": 0,
-            "maxDistanceKm": 0,
-            "unique25kmCells": 0,
-            "unique50kmCells": 0,
-            "countryDiameterKm": 613.1097811569646,
-            "spreadRatio": 0,
-            "footprintPolygonLatLngs": []
-          },
-          "tags": []
-        }
-      }
+      "tags": []
     },
     {
       "itemId": "ffe603fc-4920-4302-96d0-65f708bd5b2d",
@@ -19251,20 +19302,5 @@
       },
       "tags": []
     }
-  ],
-  "manualOverrideSummary": {
-    "count": 9,
-    "appliedAtUtc": "2026-06-09T11:04:33.310700+00:00",
-    "items": [
-      "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
-      "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
-      "3e4fac86-1e90-403c-b798-c20a93df373c",
-      "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
-      "990ae9dd-7a59-4344-afcb-1b7b21368000",
-      "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
-      "c150a21e-952d-4665-8a62-a319841c5a56",
-      "cae9534f-f302-4229-9e11-b91138333d92",
-      "ff803ff7-ed2b-4520-9304-99b408657f47"
-    ]
-  }
+  ]
 }

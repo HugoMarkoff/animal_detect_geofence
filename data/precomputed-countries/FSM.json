@@ -7,19 +7,19 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 50,
+    "total": 49,
     "statusCounts": {
       "likely_true_both": 6,
-      "likely_true_one_source": 20,
+      "likely_true_one_source": 18,
       "unlisted": 16,
       "new_record": 2,
-      "likely_false": 6
+      "likely_false": 7
     },
     "bucketCounts": {
-      "Likely Valid": 26,
+      "Likely Valid": 24,
       "Unlisted": 16,
       "New": 2,
-      "Needs Review": 6
+      "Needs Review": 7
     }
   },
   "entries": [
@@ -1163,23 +1163,6 @@
       }
     },
     {
-      "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
-      "countryIso3": "FSM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
-    },
-    {
       "itemId": "5885ce9f-7b3a-4df5-ad16-c480bae028ce",
       "countryIso3": "FSM",
       "status": "likely_true_one_source",
@@ -1986,23 +1969,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
-      "countryIso3": "FSM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "a77bd03b-d642-4cc2-bbfc-2f6eaa39c10c",
@@ -3307,6 +3273,51 @@
         "note": "The cleaned footprint still covers more than 5% of Micronesia, so it is treated as national."
       },
       "tags": []
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "FSM",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     }
   ],
   "manualOverrideSummary": {

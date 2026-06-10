@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 113,
+    "total": 112,
     "statusCounts": {
       "unlisted": 22,
       "likely_true_both": 32,
-      "likely_true_one_source": 35,
-      "likely_false": 19,
+      "likely_true_one_source": 33,
+      "likely_false": 20,
       "new_record": 5
     },
     "bucketCounts": {
       "Unlisted": 22,
-      "Likely Valid": 67,
-      "Needs Review": 19,
+      "Likely Valid": 65,
+      "Needs Review": 20,
       "New": 5
     }
   },
@@ -2142,23 +2142,6 @@
       }
     },
     {
-      "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
-      "countryIso3": "YEM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
-    },
-    {
       "itemId": "5552317d-ff57-4de0-9772-45f7991203af",
       "countryIso3": "YEM",
       "status": "likely_true_both",
@@ -4125,23 +4108,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
-      "countryIso3": "YEM",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "a51fd282-2db6-4945-bebe-d64e52153bcf",
@@ -6769,6 +6735,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "YEM",
+      "status": "likely_false",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Needs Review"
     }
   ],
   "manualOverrideSummary": {
