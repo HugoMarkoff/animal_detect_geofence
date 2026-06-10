@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-10T02:06:55.128Z",
+  "updatedAtUtc": "2026-06-10T02:10:59.270Z",
   "items": {
     "3b0ae87d-0cb4-46c4-822b-c65047e69a88": {
       "itemId": "3b0ae87d-0cb4-46c4-822b-c65047e69a88",
@@ -48668,6 +48668,30 @@
           "updatedBy": "HugoMarkoff",
           "updatedAtUtc": "2026-06-09T11:13:41.634Z",
           "reason": "Please update american beaver (castor canadensis) to national coverage in United States."
+        }
+      }
+    },
+    "94d8284e-6193-43b5-b80c-9029cf951675": {
+      "itemId": "94d8284e-6193-43b5-b80c-9029cf951675",
+      "matchedKey": "aves;galliformes;phasianidae;meleagris;gallopavo",
+      "speciesLabel": "wild turkey (meleagris gallopavo)",
+      "commonName": "wild turkey",
+      "binomial": "meleagris gallopavo",
+      "classLabel": "Bird",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "allow": {},
+      "block": {
+        "GRL": true
+      },
+      "allow_regional": {},
+      "metadata": {
+        "GRL": {
+          "decision": "block",
+          "coverage": "removed",
+          "overridePath": "data/review-overrides/countries/GRL/94d8284e-6193-43b5-b80c-9029cf951675.json",
+          "updatedBy": "HugoMarkoff",
+          "updatedAtUtc": "2026-06-10T02:10:59.270Z",
+          "reason": "Please remove wild turkey (meleagris gallopavo) from the Greenland country pack."
         }
       }
     }

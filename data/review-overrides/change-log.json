@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-10T02:06:55.176Z",
+  "updatedAtUtc": "2026-06-10T02:10:59.713Z",
   "entries": [
     {
       "id": "2026-06-09T07:09:33.520049Z__DNK__429257d4-3ef2-47fb-b849-66ee6c107346__manual_correction",
@@ -15643,6 +15643,24 @@
         "data/review-overrides/geofence-binary-overrides.json"
       ],
       "reason": "Please update reindeer (rangifer tarandus) to national coverage in Greenland."
+    },
+    {
+      "id": "2026-06-10T02:10:59.713Z__GRL__94d8284e-6193-43b5-b80c-9029cf951675__removal",
+      "updatedAtUtc": "2026-06-10T02:10:59.713Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "GRL",
+      "countryName": "Greenland",
+      "suggestionType": "removal",
+      "requestedCoverage": "removed",
+      "itemId": "94d8284e-6193-43b5-b80c-9029cf951675",
+      "matchedKey": "aves;galliformes;phasianidae;meleagris;gallopavo",
+      "speciesLabel": "wild turkey (meleagris gallopavo)",
+      "sourceDataset": "taxonomy_release_new.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/countries/GRL/94d8284e-6193-43b5-b80c-9029cf951675.json",
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Please remove wild turkey (meleagris gallopavo) from the Greenland country pack."
     }
   ]
 }
