@@ -739,6 +739,9 @@ def load_countrywide_override_items() -> dict[str, list[str]]:
         if not isinstance(patch, dict):
             continue
 
+        if patch.get("expected") is not False:
+            continue
+
         observation_profile = patch.get("observationProfile")
         if not isinstance(observation_profile, dict):
             continue
@@ -1197,8 +1200,6 @@ def refresh_global_artifacts() -> list[str]:
         # admin save incorrectly leaked the same scope into allowRegionalCountries,
         # scrub that stale global carryover before applying the current shared tracking.
         for country_iso3 in countrywide_override_items.get(item_id, []):
-            if country_iso3 not in current_regional:
-                continue
             if scope_tracking_decision(item_tracking, country_iso3):
                 continue
             current_regional.discard(country_iso3)
