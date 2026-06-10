@@ -7,19 +7,19 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 108,
+    "total": 107,
     "statusCounts": {
       "likely_false": 18,
       "new_record": 7,
       "unlisted": 52,
       "likely_true_both": 11,
-      "likely_true_one_source": 20
+      "likely_true_one_source": 19
     },
     "bucketCounts": {
       "Needs Review": 18,
       "New": 7,
       "Unlisted": 52,
-      "Likely Valid": 31
+      "Likely Valid": 30
     }
   },
   "entries": [
@@ -4208,23 +4208,6 @@
       "tags": []
     },
     {
-      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
-      "countryIso3": "GRL",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
-    },
-    {
       "itemId": "aca65aaa-8c6d-4b69-94de-842b08b13bd6",
       "countryIso3": "GRL",
       "status": "likely_true_one_source",
@@ -6320,68 +6303,33 @@
   ],
   "manualOverrideRemovedEntries": [
     {
-      "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
-      "sourceFile": "data/review-overrides/countries/GRL/b57debc1-dff2-48d3-a400-f2b5021e71b0.json",
-      "updatedAtUtc": "2026-06-10T02:18:44.166Z",
+      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
+      "sourceFile": "data/review-overrides/countries/GRL/a5121a63-c9d0-4849-8db7-e7d8bbf4e581.json",
+      "updatedAtUtc": "2026-06-10T02:23:44.660Z",
       "updatedBy": "HugoMarkoff",
-      "reason": "Please remove northern raccoon (procyon lotor) from the Greenland country pack. Applied from the admin panel.",
+      "reason": "Please remove military sand-dragon (ctenophorous isolepsis) from the Greenland country pack. Applied from the admin panel.",
       "baseEntry": {
-        "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
+        "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
         "countryIso3": "GRL",
-        "status": "likely_false",
-        "bucket": "Needs Review",
+        "status": "likely_true_one_source",
+        "bucket": "Likely Valid",
         "expected": true,
-        "gbifPresent": false,
-        "inatPresent": false,
-        "gbifCount": 0,
-        "inatCount": 0,
-        "rawGbifPresent": false,
-        "rawInatPresent": false,
-        "rawGbifCount": 0,
-        "rawInatCount": 0,
-        "gbifUsageKey": 5218786,
-        "inatTaxonId": 41663,
-        "inatPlaceId": 7704,
-        "managedEvidence": {
-          "domesticNamed": false,
-          "materialSampleCount": 0,
-          "atlasCount": 0,
-          "managedCount": 0,
-          "captiveInatCount": 0,
-          "needsReview": false,
-          "note": ""
-        },
-        "evidenceQuality": {
-          "rawTotal": 0,
-          "qualifiedTotal": 0,
-          "specimenOrSampleCount": 0,
-          "staleGbifCount": 0,
-          "staleInatCount": 0,
-          "captiveInatCount": 0,
-          "rejected": false,
-          "note": ""
-        },
+        "gbifPresent": true,
+        "inatPresent": null,
+        "gbifCount": null,
+        "inatCount": null,
         "observationProfile": {
-          "code": "no_points",
-          "label": "No mapped points",
-          "short": "No points",
-          "note": "No mapped coordinates were returned in the sampled observations.",
-          "significant": false,
-          "totalPoints": 0,
-          "maxDistanceKm": 0,
-          "unique25kmCells": 0,
-          "unique50kmCells": 0,
-          "countryDiameterKm": 1660.7065823008018,
-          "spreadRatio": 0,
-          "footprintPolygonLatLngs": []
-        },
-        "tags": []
+          "code": "country_pack_only",
+          "label": "Whole pack coverage",
+          "short": "Pack-wide",
+          "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+        }
       }
     }
   ],
   "manualOverrideSummary": {
-    "count": 12,
-    "appliedAtUtc": "2026-06-10T02:19:08.940740+00:00",
+    "count": 13,
+    "appliedAtUtc": "2026-06-10T02:24:06.376916+00:00",
     "items": [
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
@@ -6390,6 +6338,7 @@
       "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "9212982e-8a58-4775-a6ac-e9a43110d8f5",
       "94d8284e-6193-43b5-b80c-9029cf951675",
+      "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "b57debc1-dff2-48d3-a400-f2b5021e71b0",
       "c10547c3-1748-48bf-a451-8066c820f22f",
