@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 400,
+    "total": 397,
     "statusCounts": {
       "likely_true_both": 125,
-      "unlisted": 226,
+      "unlisted": 225,
       "new_record": 23,
-      "likely_true_one_source": 16,
+      "likely_true_one_source": 14,
       "likely_false": 10
     },
     "bucketCounts": {
-      "Likely Valid": 141,
-      "Unlisted": 226,
+      "Likely Valid": 139,
+      "Unlisted": 225,
       "New": 23,
       "Needs Review": 10
     }
@@ -3262,23 +3262,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "GRC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -10458,58 +10441,6 @@
         "label": "National footprint",
         "short": "National",
         "note": "Dropped 50 likely outlier points before scoring. 2 dense observation areas were found in Greece, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "GRC",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 7094,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 409.94498107623434,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
       },
       "tags": []
     },
@@ -20470,23 +20401,6 @@
       "tags": [
         "not in geofence"
       ]
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "GRC",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

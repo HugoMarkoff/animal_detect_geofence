@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 458,
+    "total": 455,
     "statusCounts": {
       "unlisted": 216,
       "likely_true_both": 143,
-      "new_record": 67,
-      "likely_true_one_source": 26,
+      "new_record": 66,
+      "likely_true_one_source": 24,
       "likely_false": 6
     },
     "bucketCounts": {
       "Unlisted": 216,
-      "Likely Valid": 169,
-      "New": 67,
+      "Likely Valid": 167,
+      "New": 66,
       "Needs Review": 6
     }
   },
@@ -3513,23 +3513,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "FRA",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -11981,66 +11964,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "FRA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 17,
-      "inatCount": 2,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 178,
-      "rawInatCount": 2,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 6753,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 180,
-        "qualifiedTotal": 19,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 1 likely outlier point before scoring. Only 1 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 2,
-        "corePointCount": 1,
-        "outlierPointCount": 1,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 0.0,
-        "unique25kmCells": 1,
-        "unique50kmCells": 1,
-        "countryDiameterKm": 832.1809744868077,
-        "spreadRatio": 0.0,
-        "coverageAreaKm2": 201.06192982974676,
-        "coverageRatio": 0.00036966165202524464,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [
-        "not in geofence"
-      ]
     },
     {
       "itemId": "7520f733-7da0-4c28-99cd-802cd3be14e8",
@@ -24315,23 +24238,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "FRA",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

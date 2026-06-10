@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 162,
+    "total": 159,
     "statusCounts": {
-      "likely_true_one_source": 72,
+      "likely_true_one_source": 70,
       "unlisted": 58,
-      "new_record": 22,
+      "new_record": 21,
       "likely_false": 10
     },
     "bucketCounts": {
-      "Likely Valid": 72,
+      "Likely Valid": 70,
       "Unlisted": 58,
-      "New": 22,
+      "New": 21,
       "Needs Review": 10
     }
   },
@@ -1298,23 +1298,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "ALA",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
@@ -4902,58 +4885,6 @@
       "evidenceQuality": {
         "rawTotal": 0,
         "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 44.85218479273398,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "ALA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": 13,
-      "inatCount": null,
-      "rawGbifPresent": true,
-      "rawInatPresent": null,
-      "rawGbifCount": 14,
-      "rawInatCount": null,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": null,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 14,
-        "qualifiedTotal": 13,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -9832,23 +9763,6 @@
         "note": "The cleaned footprint still covers more than 5% of \u00c5land Islands, so it is treated as national."
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "ALA",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

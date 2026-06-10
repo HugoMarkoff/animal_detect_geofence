@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 250,
+    "total": 247,
     "statusCounts": {
       "likely_true_both": 121,
-      "new_record": 33,
+      "new_record": 32,
       "unlisted": 64,
-      "likely_true_one_source": 23,
+      "likely_true_one_source": 21,
       "likely_false": 9
     },
     "bucketCounts": {
-      "Likely Valid": 144,
-      "New": 33,
+      "Likely Valid": 142,
+      "New": 32,
       "Unlisted": 64,
       "Needs Review": 9
     }
@@ -1758,23 +1758,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "CHE",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -6418,93 +6401,6 @@
         "countryDiameterKm": 229.26932059228173,
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "CHE",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 17,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 38,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 7236,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 38,
-        "qualifiedTotal": 17,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 21,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 17,
-        "corePointCount": 16,
-        "outlierPointCount": 1,
-        "clusterCount": 3,
-        "clusterSpreadKm": 209.87882578391452,
-        "maxDistanceKm": 250.07304635534058,
-        "unique25kmCells": 9,
-        "unique50kmCells": 6,
-        "countryDiameterKm": 229.26932059228173,
-        "spreadRatio": 1.0907392481005118,
-        "coverageAreaKm2": 51289.206834002165,
-        "coverageRatio": 1.2423507129639126,
-        "footprintPolygonLatLngs": [
-          [
-            46.647916287476306,
-            5.914242405372502
-          ],
-          [
-            46.40548319756039,
-            6.079199098144469
-          ],
-          [
-            46.423740769337094,
-            10.1632459294002
-          ],
-          [
-            46.85560241135847,
-            10.357101138211041
-          ],
-          [
-            47.772785067372276,
-            9.109358966342569
-          ],
-          [
-            47.86096812487218,
-            8.887844437845938
-          ],
-          [
-            47.77491359004405,
-            7.284655037168813
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 1 likely outlier point before scoring. 3 dense observation areas were found in Switzerland, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
     },
@@ -13179,23 +13075,6 @@
         "note": "2 dense observation areas were found in Switzerland, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "CHE",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

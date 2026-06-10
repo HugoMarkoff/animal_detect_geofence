@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 206,
+    "total": 203,
     "statusCounts": {
       "likely_true_both": 129,
-      "likely_true_one_source": 25,
+      "likely_true_one_source": 23,
       "unlisted": 31,
-      "new_record": 9,
+      "new_record": 8,
       "likely_false": 12
     },
     "bucketCounts": {
-      "Likely Valid": 154,
+      "Likely Valid": 152,
       "Unlisted": 31,
-      "New": 9,
+      "New": 8,
       "Needs Review": 12
     }
   },
@@ -1763,23 +1763,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "KAZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -5549,79 +5532,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "KAZ",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 3,
-      "inatCount": 3,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 3,
-      "rawInatCount": 3,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 7342,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 6,
-        "qualifiedTotal": 6,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Only 3 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 3,
-        "corePointCount": 3,
-        "outlierPointCount": 0,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 0.16948250539712714,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 1862.646084324353,
-        "spreadRatio": 9.099018156130524e-05,
-        "coverageAreaKm2": 204.7001460375655,
-        "coverageRatio": 7.512207642025965e-05,
-        "footprintPolygonLatLngs": [
-          [
-            52.1129261447791,
-            78.97402196228674
-          ],
-          [
-            51.98468840026043,
-            79.00240197180766
-          ],
-          [
-            52.04369720645262,
-            79.15859792666151
-          ]
-        ]
-      },
-      "tags": [
-        "not in geofence"
-      ]
     },
     {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
@@ -11394,23 +11304,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "KAZ",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

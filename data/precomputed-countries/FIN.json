@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 224,
+    "total": 221,
     "statusCounts": {
       "likely_true_both": 103,
       "unlisted": 66,
-      "new_record": 31,
-      "likely_true_one_source": 22,
+      "new_record": 30,
+      "likely_true_one_source": 20,
       "likely_false": 2
     },
     "bucketCounts": {
-      "Likely Valid": 125,
+      "Likely Valid": 123,
       "Unlisted": 66,
-      "New": 31,
+      "New": 30,
       "Needs Review": 2
     }
   },
@@ -1591,23 +1591,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "FIN",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -5758,83 +5741,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "FIN",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 3311,
-      "inatCount": 176,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 13435,
-      "rawInatCount": 188,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 7020,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 13623,
-        "qualifiedTotal": 3487,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 13 likely outlier points before scoring. Only 5 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 18,
-        "corePointCount": 5,
-        "outlierPointCount": 13,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 19.885878419897953,
-        "unique25kmCells": 2,
-        "unique50kmCells": 2,
-        "countryDiameterKm": 656.4558554185799,
-        "spreadRatio": 0.030292788548923828,
-        "coverageAreaKm2": 520.1007958686489,
-        "coverageRatio": 0.0015366911284178072,
-        "footprintPolygonLatLngs": [
-          [
-            61.74883869668783,
-            27.151503526700612
-          ],
-          [
-            61.436740292311136,
-            27.322376611351114
-          ],
-          [
-            61.43679218073637,
-            27.323136787613176
-          ],
-          [
-            61.43688427644445,
-            27.32375692106348
-          ]
-        ]
-      },
-      "tags": [
-        "not in geofence"
-      ]
     },
     {
       "itemId": "75e7ac24-a298-4a2f-bc12-9a153b08b7e6",
@@ -12050,23 +11956,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "FIN",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

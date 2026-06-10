@@ -7,19 +7,19 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 30,
+    "total": 28,
     "statusCounts": {
       "likely_false": 11,
       "new_record": 2,
-      "likely_true_one_source": 5,
       "unlisted": 11,
-      "likely_true_both": 1
+      "likely_true_both": 1,
+      "likely_true_one_source": 3
     },
     "bucketCounts": {
       "Needs Review": 11,
       "New": 2,
-      "Likely Valid": 6,
-      "Unlisted": 11
+      "Unlisted": 11,
+      "Likely Valid": 4
     }
   },
   "entries": [
@@ -161,23 +161,6 @@
         "note": "The cleaned footprint still covers more than 5% of South Georgia, so it is treated as national."
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "SGS",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2ec9f24f-e0d5-4f0a-97b2-f89a17f20f6e",
@@ -1513,23 +1496,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "SGS",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "f64c3cbb-8dca-4532-baf7-d005626313d4",

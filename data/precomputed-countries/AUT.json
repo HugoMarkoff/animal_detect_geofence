@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 271,
+    "total": 268,
     "statusCounts": {
       "likely_true_both": 129,
       "unlisted": 91,
-      "new_record": 28,
-      "likely_true_one_source": 19,
+      "new_record": 27,
+      "likely_true_one_source": 17,
       "likely_false": 4
     },
     "bucketCounts": {
-      "Likely Valid": 148,
+      "Likely Valid": 146,
       "Unlisted": 91,
-      "New": 28,
+      "New": 27,
       "Needs Review": 4
     }
   },
@@ -2000,23 +2000,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "AUT",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -7338,66 +7321,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "AUT",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 10,
-      "inatCount": 3,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 110,
-      "rawInatCount": 3,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 8057,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 113,
-        "qualifiedTotal": 13,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 1 likely outlier point before scoring. Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 3,
-        "corePointCount": 2,
-        "outlierPointCount": 1,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 34.02433268559424,
-        "unique25kmCells": 2,
-        "unique50kmCells": 2,
-        "countryDiameterKm": 326.7841395424246,
-        "spreadRatio": 0.1041186782603231,
-        "coverageAreaKm2": 746.0638637769052,
-        "coverageRatio": 0.008895373416042556,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [
-        "not in geofence"
-      ]
     },
     {
       "itemId": "75e7ac24-a298-4a2f-bc12-9a153b08b7e6",
@@ -14013,23 +13936,6 @@
       "tags": [
         "not in geofence"
       ]
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "AUT",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

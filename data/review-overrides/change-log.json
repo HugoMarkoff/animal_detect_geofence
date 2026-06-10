@@ -1,7 +1,63 @@
 {
   "schemaVersion": 1,
-  "updatedAtUtc": "2026-06-10T07:00:23.260029+00:00",
+  "updatedAtUtc": "2026-06-10T08:30:01Z",
   "entries": [
+    {
+      "id": "2026-06-10T08:30:00Z__USA__e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910__manual_correction",
+      "updatedAtUtc": "2026-06-10T08:30:00Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "USA",
+      "countryName": "United States",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
+      "matchedKey": "reptilia;testudines;emydidae;terrapene;triunguis",
+      "speciesLabel": "three-toed box turtle (terrapene triunguis)",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Corrected three-toed box turtle from the broken species-level geofence to its south-central USA range, limited to AL, AR, FL, KS, LA, MO, MS, OK, and TX in state packs.",
+      "appliedScopes": [
+        "USA-AL",
+        "USA-AR",
+        "USA-FL",
+        "USA-KS",
+        "USA-LA",
+        "USA-MO",
+        "USA-MS",
+        "USA-OK",
+        "USA-TX"
+      ]
+    },
+    {
+      "id": "2026-06-10T08:30:01Z__BRA__2a29c629-ff91-481c-80b2-efd0afc69b60__manual_correction",
+      "updatedAtUtc": "2026-06-10T08:30:01Z",
+      "updatedBy": "HugoMarkoff",
+      "countryIso3": "BRA",
+      "countryName": "Brazil",
+      "suggestionType": "manual_correction",
+      "requestedCoverage": "countrywide",
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "matchedKey": "reptilia;testudines;testudinidae;chelonoidis;denticulatus",
+      "speciesLabel": "yellow-footed tortoise (chelonoidis denticulatus)",
+      "sourceDataset": "taxonomy_release_new.txt -> taxonomy_release.txt + geofence_new.json",
+      "files": [
+        "data/review-overrides/geofence-binary-overrides.json"
+      ],
+      "reason": "Corrected yellow-footed tortoise from the broken species-level geofence to its Amazon Basin range in BOL, BRA, COL, ECU, GUF, GUY, PER, SUR, and VEN.",
+      "appliedScopes": [
+        "BOL",
+        "BRA",
+        "COL",
+        "ECU",
+        "GUF",
+        "GUY",
+        "PER",
+        "SUR",
+        "VEN"
+      ]
+    },
     {
       "id": "2026-06-09T07:09:33.520049Z__DNK__429257d4-3ef2-47fb-b849-66ee6c107346__manual_correction",
       "updatedAtUtc": "2026-06-09T07:09:33.520049Z",

@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 388,
+    "total": 385,
     "statusCounts": {
       "unlisted": 213,
       "likely_true_both": 89,
-      "new_record": 47,
-      "likely_true_one_source": 35,
+      "new_record": 46,
+      "likely_true_one_source": 33,
       "likely_false": 4
     },
     "bucketCounts": {
       "Unlisted": 213,
-      "Likely Valid": 124,
-      "New": 47,
+      "Likely Valid": 122,
+      "New": 46,
       "Needs Review": 4
     }
   },
@@ -4208,23 +4208,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "DNK",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -13165,105 +13148,6 @@
         "label": "National footprint",
         "short": "National",
         "note": "Dropped 14 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "DNK",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 1169,
-      "inatCount": 67,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 1332,
-      "rawInatCount": 67,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 8051,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1399,
-        "qualifiedTotal": 1236,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 89,
-        "outlierPointCount": 1,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 253.30349240519777,
-        "unique25kmCells": 37,
-        "unique50kmCells": 17,
-        "countryDiameterKm": 234.24129640355284,
-        "spreadRatio": 1.0813784601362708,
-        "coverageAreaKm2": 59366.8312294636,
-        "coverageRatio": 1.3776124571741681,
-        "footprintPolygonLatLngs": [
-          [
-            56.416524989045975,
-            7.593806491161091
-          ],
-          [
-            55.150935129367326,
-            7.960332581137306
-          ],
-          [
-            54.730384923242084,
-            8.182617467208903
-          ],
-          [
-            54.529347693504,
-            8.922319056773008
-          ],
-          [
-            54.66893527048352,
-            9.847385793471876
-          ],
-          [
-            56.243117068933614,
-            11.432540546370818
-          ],
-          [
-            57.46272770257048,
-            10.642121013485497
-          ],
-          [
-            57.48612212392326,
-            10.245723283084649
-          ],
-          [
-            57.40835867118684,
-            9.556882710609841
-          ],
-          [
-            57.35580528290933,
-            9.257963508547883
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 1 likely outlier point before scoring. 89 cleaned observations are spread widely across Denmark, so this is treated as national coverage."
       },
       "tags": []
     },
@@ -25482,23 +25366,6 @@
         "note": "Dropped 22 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "DNK",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

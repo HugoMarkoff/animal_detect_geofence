@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 189,
+    "total": 186,
     "statusCounts": {
       "likely_true_both": 115,
       "unlisted": 35,
-      "likely_true_one_source": 16,
-      "new_record": 19,
+      "likely_true_one_source": 14,
+      "new_record": 18,
       "likely_false": 4
     },
     "bucketCounts": {
-      "Likely Valid": 131,
+      "Likely Valid": 129,
       "Unlisted": 35,
-      "New": 19,
+      "New": 18,
       "Needs Review": 4
     }
   },
@@ -1489,23 +1489,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "BLR",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -4863,66 +4846,6 @@
         "note": "Dropped 56 likely outlier points before scoring. 2 dense observation areas were found in Belarus, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "BLR",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 8,
-      "inatCount": 9,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 13,
-      "rawInatCount": 13,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 7578,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 26,
-        "qualifiedTotal": 17,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 4,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 7 likely outlier points before scoring. Only 2 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 9,
-        "corePointCount": 2,
-        "outlierPointCount": 7,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 0.35678950326006087,
-        "unique25kmCells": 2,
-        "unique50kmCells": 2,
-        "countryDiameterKm": 514.1250134811764,
-        "spreadRatio": 0.0006939742162012585,
-        "coverageAreaKm2": 206.77698302006988,
-        "coverageRatio": 0.0009960355636804907,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [
-        "not in geofence"
-      ]
     },
     {
       "itemId": "75e7ac24-a298-4a2f-bc12-9a153b08b7e6",
@@ -9899,23 +9822,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "BLR",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",

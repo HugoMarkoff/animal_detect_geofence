@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 202,
+    "total": 199,
     "statusCounts": {
-      "likely_true_both": 66,
+      "likely_true_both": 65,
       "unlisted": 60,
-      "likely_true_one_source": 29,
+      "likely_true_one_source": 27,
       "new_record": 39,
       "likely_false": 8
     },
     "bucketCounts": {
-      "Likely Valid": 95,
+      "Likely Valid": 92,
       "Unlisted": 60,
       "New": 39,
       "Needs Review": 8
@@ -908,23 +908,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
-      "countryIso3": "KOR",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -4802,89 +4785,6 @@
         "countryDiameterKm": 357.1992928015265,
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
-      "countryIso3": "KOR",
-      "status": "likely_true_both",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 16751,
-      "inatCount": 231,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 16751,
-      "rawInatCount": 231,
-      "gbifUsageKey": 2434552,
-      "inatTaxonId": 855311,
-      "inatPlaceId": 6891,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 16982,
-        "qualifiedTotal": 16982,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 90,
-        "corePointCount": 72,
-        "outlierPointCount": 18,
-        "clusterCount": 3,
-        "clusterSpreadKm": 154.87889185410864,
-        "maxDistanceKm": 284.6955158911804,
-        "unique25kmCells": 23,
-        "unique50kmCells": 13,
-        "countryDiameterKm": 357.1992928015265,
-        "spreadRatio": 0.7970214992821053,
-        "coverageAreaKm2": 58364.0257005093,
-        "coverageRatio": 0.5824171809251502,
-        "footprintPolygonLatLngs": [
-          [
-            36.849116442059966,
-            125.62932111766862
-          ],
-          [
-            35.06878277208069,
-            126.34936174390123
-          ],
-          [
-            35.34783007764455,
-            127.09346077490375
-          ],
-          [
-            36.613614688098096,
-            127.97291968989597
-          ],
-          [
-            38.42466650923016,
-            127.41073235592394
-          ],
-          [
-            38.478830277228504,
-            127.21216812180622
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 18 likely outlier points before scoring. 3 dense observation areas were found in South Korea, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
     },
@@ -10890,23 +10790,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "e8e3b12d-eeaf-4ba0-8b5a-3f455c32b910",
-      "countryIso3": "KOR",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "e8f340d7-e6f9-4c66-bf54-65621e1e83db",
