@@ -7,13 +7,13 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/country-validation/ASM/new_candidates.csv",
   "summary": {
-    "total": 26,
+    "total": 27,
     "statusCounts": {
-      "likely_true_one_source": 23,
+      "likely_true_one_source": 24,
       "likely_false": 3
     },
     "bucketCounts": {
-      "Likely Valid": 23,
+      "Likely Valid": 24,
       "Needs Review": 3
     }
   },
@@ -168,7 +168,7 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "ASM",
-          "status": "likely_false",
+          "status": "likely_true_one_source",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": null,
@@ -214,7 +214,7 @@
             "spreadRatio": 0,
             "footprintPolygonLatLngs": []
           },
-          "bucket": "Needs Review"
+          "bucket": "Likely Valid"
         }
       }
     },
@@ -1703,7 +1703,7 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "ASM",
-          "status": "likely_false",
+          "status": "likely_true_one_source",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": null,
@@ -1749,7 +1749,7 @@
             "spreadRatio": 0,
             "footprintPolygonLatLngs": []
           },
-          "bucket": "Needs Review"
+          "bucket": "Likely Valid"
         }
       }
     },
@@ -2145,6 +2145,51 @@
         "spreadRatio": 1.5692632715108636,
         "coverageAreaKm2": 601.1777107240515,
         "coverageRatio": 3.0209935212263894,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "ASM",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
         "footprintPolygonLatLngs": []
       },
       "bucket": "Likely Valid"

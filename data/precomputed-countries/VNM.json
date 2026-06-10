@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 302,
+    "total": 301,
     "statusCounts": {
       "likely_true_both": 139,
-      "unlisted": 33,
-      "new_record": 13,
-      "likely_true_one_source": 88,
+      "new_record": 12,
+      "likely_true_one_source": 89,
+      "unlisted": 32,
       "likely_false": 29
     },
     "bucketCounts": {
-      "Likely Valid": 227,
-      "Unlisted": 33,
-      "New": 13,
+      "Likely Valid": 228,
+      "New": 12,
+      "Unlisted": 32,
       "Needs Review": 29
     }
   },
@@ -52,58 +52,6 @@
       "evidenceQuality": {
         "rawTotal": 102,
         "qualifiedTotal": 102,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 649.3937296362067,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "05414e5e-7d3c-462b-854b-955eb50a601b",
-      "countryIso3": "VNM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2485917,
-      "inatTaxonId": 11201,
-      "inatPlaceId": 6847,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,
@@ -13635,8 +13583,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "VNM",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -17287,9 +17235,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "VNM",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 37,

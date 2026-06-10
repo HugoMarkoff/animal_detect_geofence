@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 143,
+    "total": 142,
     "statusCounts": {
-      "likely_true_one_source": 38,
-      "unlisted": 43,
+      "likely_true_one_source": 39,
+      "unlisted": 42,
       "likely_true_both": 33,
-      "new_record": 22,
+      "new_record": 21,
       "likely_false": 7
     },
     "bucketCounts": {
-      "Likely Valid": 71,
-      "Unlisted": 43,
-      "New": 22,
+      "Likely Valid": 72,
+      "Unlisted": 42,
+      "New": 21,
       "Needs Review": 7
     }
   },
@@ -3886,87 +3886,6 @@
       ]
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "GLP",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 67,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 75,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 8177,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 75,
-        "qualifiedTotal": 67,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 2,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 16,
-        "corePointCount": 16,
-        "outlierPointCount": 0,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 49.30045108427734,
-        "unique25kmCells": 6,
-        "unique50kmCells": 4,
-        "countryDiameterKm": 45.528386516862696,
-        "spreadRatio": 1.082850829032071,
-        "coverageAreaKm2": 2398.609613903929,
-        "coverageRatio": 1.4733474286879171,
-        "footprintPolygonLatLngs": [
-          [
-            16.16668284133997,
-            -61.77726367204138
-          ],
-          [
-            15.96653499202541,
-            -61.72912143726076
-          ],
-          [
-            15.968915511300239,
-            -61.67344790067473
-          ],
-          [
-            16.264712529327202,
-            -61.20585199161784
-          ],
-          [
-            16.5236821543114,
-            -61.50081002646941
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "The cleaned footprint still covers more than 5% of Guadeloupe, so it is treated as national."
-      },
-      "tags": [
-        "not in geofence"
-      ]
-    },
-    {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
       "countryIso3": "GLP",
       "status": "likely_true_both",
@@ -6156,8 +6075,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "GLP",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -8439,9 +8358,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "GLP",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 3,

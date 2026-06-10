@@ -9,15 +9,15 @@
   "summary": {
     "total": 87,
     "statusCounts": {
-      "likely_true_one_source": 28,
+      "likely_true_one_source": 29,
       "likely_true_both": 29,
-      "unlisted": 12,
+      "unlisted": 11,
       "likely_false": 10,
       "new_record": 8
     },
     "bucketCounts": {
-      "Likely Valid": 57,
-      "Unlisted": 12,
+      "Likely Valid": 58,
+      "Unlisted": 11,
       "Needs Review": 10,
       "New": 8
     }
@@ -246,8 +246,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "VGB",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -2551,77 +2551,6 @@
       "tags": []
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "VGB",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 4,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 4,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 10318,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 4,
-        "qualifiedTotal": 4,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Only 4 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 4,
-        "corePointCount": 4,
-        "outlierPointCount": 0,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 22.820610660881567,
-        "unique25kmCells": 4,
-        "unique50kmCells": 4,
-        "countryDiameterKm": 13.86575534383214,
-        "spreadRatio": 1.6458252792577064,
-        "coverageAreaKm2": 600.7460288421806,
-        "coverageRatio": 3.9784505221336466,
-        "footprintPolygonLatLngs": [
-          [
-            18.467798098176974,
-            -64.82770880449118
-          ],
-          [
-            18.43408056877305,
-            -64.82681114768208
-          ],
-          [
-            18.443307920804518,
-            -64.46103178530667
-          ]
-        ]
-      },
-      "tags": []
-    },
-    {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
       "countryIso3": "VGB",
       "status": "new_record",
@@ -3496,8 +3425,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "VGB",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -4207,8 +4136,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "VGB",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -5578,6 +5507,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "VGB",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
     }
   ],
   "manualOverrideSummary": {

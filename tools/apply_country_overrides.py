@@ -37,6 +37,7 @@ STATUS_TO_BUCKET = {
     "likely_false": "Needs Review",
     "unlisted": "Unlisted",
 }
+LIKELY_VALID_STATUSES = {"likely_true_both", "likely_true_one_source"}
 ALLOWED_ACTIONS = {"upsert", "remove"}
 DISALLOWED_PATCH_KEYS = {"itemId", "countryIso3", "manualOverride"}
 USA_PARENT_ISO3 = "USA"
@@ -358,6 +359,66 @@ def tracking_requires_pack_entry(item_tracking: dict[str, object] | None, scope_
         )
 
     return False
+
+
+def scope_tracking_decision(item_tracking: dict[str, object] | None, scope_iso3: str) -> str:
+    if not isinstance(item_tracking, dict):
+        return ""
+
+    scope_key = clean_text(scope_iso3).upper()
+    allow = item_tracking.get("allow") if isinstance(item_tracking.get("allow"), dict) else {}
+    block = item_tracking.get("block") if isinstance(item_tracking.get("block"), dict) else {}
+    allow_regional = item_tracking.get("allow_regional") if isinstance(item_tracking.get("allow_regional"), dict) else {}
+
+    if bool(block.get(scope_key)):
+        return "block"
+    if bool(allow_regional.get(scope_key)):
+        return "allow_regional"
+    if bool(allow.get(scope_key)):
+        return "allow"
+
+    if scope_key == USA_PARENT_ISO3:
+        if any(usa_state_code_from_scope(candidate_scope) and bool(enabled) for candidate_scope, enabled in allow_regional.items()):
+            return "allow_regional"
+        if any(usa_state_code_from_scope(candidate_scope) and bool(enabled) for candidate_scope, enabled in allow.items()):
+            return "allow"
+        return ""
+
+    if not usa_state_code_from_scope(scope_key):
+        return ""
+
+    if bool(block.get(USA_PARENT_ISO3)):
+        return "block"
+    if bool(allow_regional.get(USA_PARENT_ISO3)):
+        return "allow_regional"
+    if bool(allow.get(USA_PARENT_ISO3)):
+        return "allow"
+
+    return ""
+
+
+def normalize_tracked_pack_entry(entry: dict[str, Any], scope_iso3: str, tracking_decision: str) -> dict[str, Any] | None:
+    if tracking_decision == "block":
+        return None
+
+    if tracking_decision not in {"allow", "allow_regional"}:
+        return entry
+
+    next_entry = deepcopy(entry)
+    next_entry["expected"] = True
+
+    status = clean_text(next_entry.get("status"))
+    if status not in LIKELY_VALID_STATUSES:
+        status = "likely_true_one_source"
+        next_entry["status"] = status
+
+    next_entry["bucket"] = status_to_bucket(status)
+
+    observation_profile = next_entry.get("observationProfile")
+    if not isinstance(observation_profile, dict) or not clean_text(observation_profile.get("code")):
+        next_entry["observationProfile"] = default_expected_observation_profile(scope_iso3)
+
+    return next_entry
 
 
 def deep_merge_dict(base: dict[str, Any], patch: dict[str, Any]) -> dict[str, Any]:
@@ -803,7 +864,7 @@ def apply_country_overrides(
     pack: dict[str, Any],
     override_paths: list[Path],
     animals_by_id: dict[str, dict[str, Any]],
-    manual_tracking_items: dict[str, dict[str, object]],
+    tracking_items: dict[str, dict[str, object]],
     previous_override_summary: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     iso3 = clean_text(pack.get("generatedFor")).upper()
@@ -829,6 +890,10 @@ def apply_country_overrides(
         if not item_id:
             continue
 
+        tracking_decision = scope_tracking_decision(tracking_items.get(item_id), iso3)
+        if tracking_decision == "block":
+            continue
+
         if uses_subnational_expected_membership and usa_pack_item_ids is not None and item_id not in usa_pack_item_ids:
             continue
 
@@ -844,13 +909,16 @@ def apply_country_overrides(
             elif not item_expected_in_country(global_item, iso3):
                 continue
 
-        entries_by_id[item_id] = deepcopy(raw_entry)
+        next_entry = normalize_tracked_pack_entry(deepcopy(raw_entry), iso3, tracking_decision)
+        if next_entry is None:
+            continue
+        entries_by_id[item_id] = next_entry
 
     for item_id, global_item in animals_by_id.items():
         if item_id in entries_by_id:
             continue
 
-        if not tracking_requires_pack_entry(manual_tracking_items.get(item_id), iso3):
+        if not tracking_requires_pack_entry(tracking_items.get(item_id), iso3):
             continue
 
         if uses_subnational_expected_membership:
@@ -863,6 +931,7 @@ def apply_country_overrides(
 
         next_entry = default_new_entry(item_id, iso3)
         next_entry["expected"] = True
+        next_entry["status"] = "likely_true_one_source"
         next_entry["bucket"] = status_to_bucket(next_entry["status"])
         next_entry["observationProfile"] = default_expected_observation_profile(iso3)
         entries_by_id[item_id] = next_entry
@@ -1142,6 +1211,10 @@ def main() -> None:
     global_artifact_paths = refresh_global_artifacts()
     animals_by_id = load_animals_by_id()
     manual_tracking_items = load_geofence_tracking_items()
+    effective_tracking_items = merge_tracking_items(
+        load_dan_tracking_items(animals_by_id),
+        manual_tracking_items,
+    )
     override_files = collect_override_files()
     pack_countries = {
         path.stem.upper()
@@ -1170,7 +1243,7 @@ def main() -> None:
             restored_pack,
             override_files.get(iso3, []),
             animals_by_id,
-            manual_tracking_items,
+            effective_tracking_items,
             previous_override_summary=current_pack.get("manualOverrideSummary") if isinstance(current_pack.get("manualOverrideSummary"), dict) else None,
         )
         if write_json_if_changed(pack_path, next_pack):

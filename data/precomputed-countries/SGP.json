@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 231,
+    "total": 230,
     "statusCounts": {
-      "unlisted": 49,
-      "new_record": 38,
-      "likely_true_one_source": 42,
+      "unlisted": 48,
+      "new_record": 37,
+      "likely_true_one_source": 43,
       "likely_false": 40,
       "likely_true_both": 62
     },
     "bucketCounts": {
-      "Unlisted": 49,
-      "New": 38,
-      "Likely Valid": 104,
+      "Unlisted": 48,
+      "New": 37,
+      "Likely Valid": 105,
       "Needs Review": 40
     }
   },
@@ -697,8 +697,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "SGP",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -5917,58 +5917,6 @@
       "tags": []
     },
     {
-      "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
-      "countryIso3": "SGP",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437524,
-      "inatTaxonId": 46187,
-      "inatPlaceId": 6734,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 30.066594033278285,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "6bcf68d5-79c3-4779-b630-9aea80fb6b0f",
       "countryIso3": "SGP",
       "status": "unlisted",
@@ -8200,8 +8148,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "SGP",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -13505,9 +13453,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "SGP",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 12,

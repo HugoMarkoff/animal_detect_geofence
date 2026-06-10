@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 203,
+    "total": 202,
     "statusCounts": {
       "likely_true_both": 66,
-      "unlisted": 61,
-      "likely_true_one_source": 28,
-      "new_record": 40,
+      "unlisted": 60,
+      "likely_true_one_source": 29,
+      "new_record": 39,
       "likely_false": 8
     },
     "bucketCounts": {
-      "Likely Valid": 94,
-      "Unlisted": 61,
-      "New": 40,
+      "Likely Valid": 95,
+      "Unlisted": 60,
+      "New": 39,
       "Needs Review": 8
     }
   },
@@ -339,8 +339,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "KOR",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -3751,58 +3751,6 @@
       "tags": []
     },
     {
-      "itemId": "5feae9b9-02b6-4d4e-8a88-5e4da1693fcd",
-      "countryIso3": "KOR",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 2,
-      "inatCount": 4,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 2,
-      "rawInatCount": 4,
-      "gbifUsageKey": 9476062,
-      "inatTaxonId": 9607,
-      "inatPlaceId": 6891,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 6,
-        "qualifiedTotal": 6,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 357.1992928015265,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "6433fa45-b77a-4a33-9a33-abd84711f8e6",
       "countryIso3": "KOR",
       "status": "likely_true_both",
@@ -6886,8 +6834,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "KOR",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -8961,8 +8909,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "KOR",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -12305,9 +12253,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "KOR",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 110,

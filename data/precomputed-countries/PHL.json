@@ -7,19 +7,19 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 221,
+    "total": 220,
     "statusCounts": {
       "likely_true_both": 65,
-      "likely_true_one_source": 39,
+      "likely_true_one_source": 40,
       "likely_false": 32,
-      "unlisted": 61,
-      "new_record": 24
+      "unlisted": 60,
+      "new_record": 23
     },
     "bucketCounts": {
-      "Likely Valid": 104,
+      "Likely Valid": 105,
       "Needs Review": 32,
-      "Unlisted": 61,
-      "New": 24
+      "Unlisted": 60,
+      "New": 23
     }
   },
   "entries": [
@@ -558,8 +558,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "PHL",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -5374,58 +5374,6 @@
       "tags": []
     },
     {
-      "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
-      "countryIso3": "PHL",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437524,
-      "inatTaxonId": 46187,
-      "inatPlaceId": 6873,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 660.2252478198006,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "68fd6f62-27ab-4a0f-a6b5-73d7e5cbb9a0",
       "countryIso3": "PHL",
       "status": "unlisted",
@@ -7439,8 +7387,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "PHL",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -12819,9 +12767,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "PHL",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 5,

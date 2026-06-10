@@ -9,15 +9,15 @@
   "summary": {
     "total": 274,
     "statusCounts": {
-      "likely_true_one_source": 114,
+      "likely_true_one_source": 115,
       "likely_true_both": 77,
-      "unlisted": 21,
+      "unlisted": 20,
       "likely_false": 56,
       "new_record": 6
     },
     "bucketCounts": {
-      "Likely Valid": 191,
-      "Unlisted": 21,
+      "Likely Valid": 192,
+      "Unlisted": 20,
       "Needs Review": 56,
       "New": 6
     }
@@ -396,8 +396,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "LAO",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -9343,8 +9343,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "LAO",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -15564,9 +15564,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "LAO",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

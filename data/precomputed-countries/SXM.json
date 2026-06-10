@@ -9,15 +9,15 @@
   "summary": {
     "total": 87,
     "statusCounts": {
-      "likely_true_one_source": 25,
-      "unlisted": 16,
+      "likely_true_one_source": 26,
+      "unlisted": 15,
       "likely_true_both": 27,
       "likely_false": 9,
       "new_record": 10
     },
     "bucketCounts": {
-      "Likely Valid": 52,
-      "Unlisted": 16,
+      "Likely Valid": 53,
+      "Unlisted": 15,
       "Needs Review": 9,
       "New": 10
     }
@@ -2400,58 +2400,6 @@
       "tags": []
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "SXM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 1,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 1,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 10411,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 6.579524642479541,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
       "countryIso3": "SXM",
       "status": "new_record",
@@ -3280,8 +3228,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "SXM",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -4060,8 +4008,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "SXM",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -5511,6 +5459,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "SXM",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
     }
   ],
   "manualOverrideSummary": {

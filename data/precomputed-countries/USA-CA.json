@@ -11,19 +11,19 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 598,
+    "total": 597,
     "statusCounts": {
-      "likely_true_one_source": 311,
-      "unlisted": 216,
+      "likely_true_one_source": 349,
+      "unlisted": 215,
       "likely_true_both": 17,
-      "likely_false": 45,
-      "new_record": 9
+      "likely_false": 8,
+      "new_record": 8
     },
     "bucketCounts": {
-      "Likely Valid": 328,
-      "Unlisted": 216,
-      "Needs Review": 45,
-      "New": 9
+      "Likely Valid": 366,
+      "Unlisted": 215,
+      "Needs Review": 8,
+      "New": 8
     }
   },
   "entries": [
@@ -1881,8 +1881,8 @@
     {
       "itemId": "153c8243-6f18-4416-8682-2222637e8864",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -2267,8 +2267,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3345,8 +3345,8 @@
     {
       "itemId": "2175f08a-4175-4b35-81bc-43d71f7eb2dc",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4816,8 +4816,8 @@
     {
       "itemId": "2e2e018d-1fd4-48a3-97bc-625461c10057",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -5732,8 +5732,8 @@
     {
       "itemId": "33e2f3bf-4554-4f9a-8f8f-849c089724ba",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": true,
@@ -6039,58 +6039,6 @@
       },
       "evidenceQuality": {
         "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 734.7212871432043,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "38be5860-88eb-4aee-8055-67db8342c8ac",
-      "countryIso3": "USA-CA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 28,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436661,
-      "inatTaxonId": 43428,
-      "inatPlaceId": 4164,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 28,
         "qualifiedTotal": 0,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
@@ -6654,8 +6602,8 @@
     {
       "itemId": "3c727840-a266-492f-b403-d3af7a595121",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6746,8 +6694,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6798,8 +6746,8 @@
     {
       "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -7040,8 +6988,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -7380,8 +7328,8 @@
     {
       "itemId": "4358855e-64a1-4805-8481-8c6da9f21377",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -7472,8 +7420,8 @@
     {
       "itemId": "43d4ed66-72e7-4114-94f3-e7765c79fb49",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -7616,7 +7564,7 @@
     {
       "itemId": "446887df-3477-4f4a-a434-852f96ba48d9",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -7656,7 +7604,7 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "448349bf-58aa-4768-9d60-49d66b367b5d",
@@ -8686,8 +8634,8 @@
     {
       "itemId": "4cf322e5-831c-4759-9331-cff10333e23f",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -9639,7 +9587,7 @@
     {
       "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -9679,7 +9627,7 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "56681b45-c922-4d50-a3c7-48a85795346b",
@@ -10318,8 +10266,8 @@
     {
       "itemId": "5a9bec72-e7b1-495a-9d8e-bcd4b3c0ef97",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -11586,8 +11534,8 @@
     {
       "itemId": "6512e894-5e44-4c9e-a9d7-f474ce4aa81c",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12081,8 +12029,8 @@
     {
       "itemId": "6785e65d-bba4-45f0-b7ae-3aa8be99540d",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12357,8 +12305,8 @@
     {
       "itemId": "69288f26-c835-4ec5-a3e3-29d70df638a1",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12547,9 +12495,9 @@
     {
       "itemId": "6bcf68d5-79c3-4779-b630-9aea80fb6b0f",
       "countryIso3": "USA-CA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 4824,
@@ -13278,8 +13226,8 @@
     {
       "itemId": "72891679-0964-4bbb-9572-d9cb9c2aae86",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -14466,8 +14414,8 @@
     {
       "itemId": "7e487297-83f6-443e-8e44-d94062ce4d88",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -15008,8 +14956,8 @@
     {
       "itemId": "85dba961-ba18-4330-9783-8ffd476ffa96",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -16880,8 +16828,8 @@
     {
       "itemId": "92fa8623-0b11-4fa6-9f03-55a6a9f2dc13",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -17116,8 +17064,8 @@
     {
       "itemId": "93fdeb68-56ac-46fd-be33-7a6b8345cec4",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -19506,8 +19454,8 @@
     {
       "itemId": "a71ae710-7033-40e6-8aa7-cba453daf950",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -19696,8 +19644,8 @@
     {
       "itemId": "a8f8b53d-9256-4b8f-8e50-cbab23138a7f",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -20791,8 +20739,8 @@
     {
       "itemId": "aec8529a-01ae-4d7e-8f5b-1937aa5bfd82",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -21039,8 +20987,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -21195,8 +21143,8 @@
     {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -22261,8 +22209,8 @@
     {
       "itemId": "bf92583d-3a1c-49e2-8883-868be0866f1b",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -22546,8 +22494,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -23116,8 +23064,8 @@
     {
       "itemId": "c5ce946f-8f0d-4379-992b-cc0982381f5e",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -23260,8 +23208,8 @@
     {
       "itemId": "c85c70ce-4ca6-4182-95c3-258c060cc97c",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -23496,8 +23444,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -24360,8 +24308,8 @@
     {
       "itemId": "d37b29bb-36b9-4180-a3a5-dd5903fd383f",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -24934,8 +24882,8 @@
     {
       "itemId": "d8e879d6-1028-4aae-947b-37b6d7505780",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -26825,7 +26773,7 @@
     {
       "itemId": "ea7e5297-8c71-4c93-a55b-27b1fe8f49de",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -26865,7 +26813,7 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "eb6cf1f5-12f6-4db6-bc47-8d1f2f16fddf",
@@ -28037,8 +27985,8 @@
     {
       "itemId": "f4a7c936-de6e-4b67-96d5-4b6ae3a2df36",
       "countryIso3": "USA-CA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,

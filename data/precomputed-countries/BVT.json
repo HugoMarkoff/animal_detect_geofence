@@ -7,14 +7,14 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 15,
+    "total": 16,
     "statusCounts": {
       "likely_false": 11,
-      "likely_true_one_source": 4
+      "likely_true_one_source": 5
     },
     "bucketCounts": {
       "Needs Review": 11,
-      "Likely Valid": 4
+      "Likely Valid": 5
     }
   },
   "entries": [
@@ -512,8 +512,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "BVT",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -847,6 +847,51 @@
         "short": "Pack-wide",
         "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
       }
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "BVT",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
     }
   ],
   "manualOverrideSummary": {

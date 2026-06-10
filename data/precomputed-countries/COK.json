@@ -10,14 +10,14 @@
     "total": 36,
     "statusCounts": {
       "likely_true_both": 4,
-      "likely_true_one_source": 14,
-      "unlisted": 10,
+      "likely_true_one_source": 15,
+      "unlisted": 9,
       "likely_false": 4,
       "new_record": 4
     },
     "bucketCounts": {
-      "Likely Valid": 18,
-      "Unlisted": 10,
+      "Likely Valid": 19,
+      "Unlisted": 9,
       "Needs Review": 4,
       "New": 4
     }
@@ -136,8 +136,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "COK",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -1392,8 +1392,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "COK",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -1909,8 +1909,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "COK",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -2537,9 +2537,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "COK",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": true,
       "gbifCount": 0,

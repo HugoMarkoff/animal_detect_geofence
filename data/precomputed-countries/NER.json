@@ -9,16 +9,16 @@
   "summary": {
     "total": 198,
     "statusCounts": {
-      "unlisted": 58,
+      "unlisted": 57,
       "new_record": 13,
       "likely_true_both": 74,
-      "likely_true_one_source": 39,
+      "likely_true_one_source": 40,
       "likely_false": 14
     },
     "bucketCounts": {
-      "Unlisted": 58,
+      "Unlisted": 57,
       "New": 13,
-      "Likely Valid": 113,
+      "Likely Valid": 114,
       "Needs Review": 14
     }
   },
@@ -11524,9 +11524,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "NER",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": true,
       "gbifCount": 0,

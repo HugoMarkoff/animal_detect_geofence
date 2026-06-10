@@ -7,19 +7,19 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 316,
+    "total": 315,
     "statusCounts": {
       "likely_true_both": 158,
       "likely_false": 25,
-      "likely_true_one_source": 85,
-      "unlisted": 39,
-      "new_record": 9
+      "likely_true_one_source": 86,
+      "unlisted": 38,
+      "new_record": 8
     },
     "bucketCounts": {
-      "Likely Valid": 243,
+      "Likely Valid": 244,
       "Needs Review": 25,
-      "Unlisted": 39,
-      "New": 9
+      "Unlisted": 38,
+      "New": 8
     }
   },
   "entries": [
@@ -1176,8 +1176,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "GUY",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -9144,83 +9144,6 @@
       "tags": []
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "GUY",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 13,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 15,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 8142,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 15,
-        "qualifiedTotal": 13,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 2,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 13,
-        "corePointCount": 13,
-        "outlierPointCount": 0,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 19.656938959075553,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 523.1701746966977,
-        "spreadRatio": 0.03757274384089546,
-        "coverageAreaKm2": 593.0396626294646,
-        "coverageRatio": 0.002758721781417156,
-        "footprintPolygonLatLngs": [
-          [
-            6.765914952373537,
-            -58.23873855254104
-          ],
-          [
-            6.758912195757495,
-            -57.924268599851864
-          ],
-          [
-            6.8654738819696055,
-            -58.22552926924423
-          ],
-          [
-            6.861055501606437,
-            -58.22875559821461
-          ]
-        ],
-        "code": "regional",
-        "label": "Regional footprint",
-        "short": "Regional",
-        "note": "The cleaned outer footprint covers 0.3% of Guyana, so it stays regional."
-      },
-      "tags": [
-        "not in geofence"
-      ]
-    },
-    {
       "itemId": "75760d64-d7a3-496e-b338-e14d97383ecf",
       "countryIso3": "GUY",
       "status": "likely_true_both",
@@ -11347,8 +11270,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "GUY",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -14663,8 +14586,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "GUY",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -18611,9 +18534,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "GUY",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

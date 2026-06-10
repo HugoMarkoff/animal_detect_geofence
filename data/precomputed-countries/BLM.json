@@ -9,16 +9,16 @@
   "summary": {
     "total": 87,
     "statusCounts": {
-      "likely_true_one_source": 23,
+      "likely_true_one_source": 24,
       "new_record": 7,
-      "unlisted": 18,
+      "unlisted": 17,
       "likely_true_both": 33,
       "likely_false": 6
     },
     "bucketCounts": {
-      "Likely Valid": 56,
+      "Likely Valid": 57,
       "New": 7,
-      "Unlisted": 18,
+      "Unlisted": 17,
       "Needs Review": 6
     }
   },
@@ -4042,8 +4042,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "BLM",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -5640,9 +5640,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "BLM",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": true,
       "gbifCount": 0,

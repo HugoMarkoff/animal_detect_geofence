@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 255,
+    "total": 254,
     "statusCounts": {
-      "unlisted": 33,
-      "new_record": 13,
+      "unlisted": 32,
+      "new_record": 12,
       "likely_true_both": 130,
-      "likely_true_one_source": 61,
+      "likely_true_one_source": 62,
       "likely_false": 18
     },
     "bucketCounts": {
-      "Unlisted": 33,
-      "New": 13,
-      "Likely Valid": 191,
+      "Unlisted": 32,
+      "New": 12,
+      "Likely Valid": 192,
       "Needs Review": 18
     }
   },
@@ -11346,8 +11346,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "NPL",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -12513,58 +12513,6 @@
         "captiveInatCount": 0,
         "rejected": false,
         "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 432.8933695884773,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "d2309561-3fe4-4e7d-88ee-429be08ef393",
-      "countryIso3": "NPL",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 2,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2437418,
-      "inatTaxonId": 45965,
-      "inatPlaceId": 7335,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 2,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
       },
       "observationProfile": {
         "code": "no_points",
@@ -15149,9 +15097,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "NPL",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 3,

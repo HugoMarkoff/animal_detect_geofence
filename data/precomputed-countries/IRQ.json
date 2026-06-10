@@ -10,16 +10,16 @@
     "total": 154,
     "statusCounts": {
       "likely_true_both": 69,
-      "likely_true_one_source": 43,
+      "likely_true_one_source": 44,
       "unlisted": 21,
       "likely_false": 15,
-      "new_record": 6
+      "new_record": 5
     },
     "bucketCounts": {
-      "Likely Valid": 112,
+      "Likely Valid": 113,
       "Unlisted": 21,
       "Needs Review": 15,
-      "New": 6
+      "New": 5
     }
   },
   "entries": [
@@ -5057,8 +5057,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "IRQ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -6557,8 +6557,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "IRQ",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -8929,9 +8929,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "IRQ",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 4,

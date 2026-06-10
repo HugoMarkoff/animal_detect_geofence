@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 58,
+    "total": 57,
     "statusCounts": {
       "likely_true_both": 4,
-      "unlisted": 20,
+      "unlisted": 18,
       "likely_false": 13,
-      "likely_true_one_source": 6,
+      "likely_true_one_source": 7,
       "new_record": 15
     },
     "bucketCounts": {
-      "Likely Valid": 10,
-      "Unlisted": 20,
+      "Likely Valid": 11,
+      "Unlisted": 18,
       "Needs Review": 13,
       "New": 15
     }
@@ -1000,58 +1000,6 @@
       "tags": []
     },
     {
-      "itemId": "46251df3-35f8-4ad9-b877-6cae826594c9",
-      "countryIso3": "UMI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 38,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2438454,
-      "inatTaxonId": 44748,
-      "inatPlaceId": 10316,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 38,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 6.598847810788075,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "479e2063-c763-4f03-b2ac-367adc8fb8c6",
       "countryIso3": "UMI",
       "status": "unlisted",
@@ -1853,8 +1801,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "UMI",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -3377,9 +3325,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "UMI",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

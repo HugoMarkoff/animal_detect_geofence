@@ -9,15 +9,15 @@
   "summary": {
     "total": 158,
     "statusCounts": {
-      "unlisted": 18,
+      "unlisted": 17,
       "likely_true_both": 66,
-      "likely_true_one_source": 33,
+      "likely_true_one_source": 34,
       "likely_false": 39,
       "new_record": 2
     },
     "bucketCounts": {
-      "Unlisted": 18,
-      "Likely Valid": 99,
+      "Unlisted": 17,
+      "Likely Valid": 100,
       "Needs Review": 39,
       "New": 2
     }
@@ -5400,8 +5400,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "BFA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -6956,8 +6956,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "BFA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": true,
@@ -9243,9 +9243,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "BFA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

@@ -9,16 +9,16 @@
   "summary": {
     "total": 209,
     "statusCounts": {
-      "likely_true_one_source": 30,
+      "likely_true_one_source": 31,
       "likely_true_both": 125,
       "new_record": 6,
-      "unlisted": 32,
+      "unlisted": 31,
       "likely_false": 16
     },
     "bucketCounts": {
-      "Likely Valid": 155,
+      "Likely Valid": 156,
       "New": 6,
-      "Unlisted": 32,
+      "Unlisted": 31,
       "Needs Review": 16
     }
   },
@@ -601,8 +601,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "BWA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": true,
@@ -7421,8 +7421,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "BWA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -8971,8 +8971,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "BWA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -12149,9 +12149,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "BWA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 1,

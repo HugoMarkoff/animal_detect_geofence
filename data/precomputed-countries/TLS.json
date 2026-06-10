@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 78,
+    "total": 79,
     "statusCounts": {
       "new_record": 8,
-      "likely_true_one_source": 43,
+      "likely_true_one_source": 44,
       "unlisted": 6,
       "likely_false": 20,
       "likely_true_both": 1
     },
     "bucketCounts": {
       "New": 8,
-      "Likely Valid": 44,
+      "Likely Valid": 45,
       "Unlisted": 6,
       "Needs Review": 20
     }
@@ -136,8 +136,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "TLS",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": null,
@@ -3115,8 +3115,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "TLS",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": null,
@@ -4370,8 +4370,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "TLS",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": null,
@@ -5609,6 +5609,51 @@
         "note": "Dropped 6 likely outlier points before scoring. 2 dense observation areas were found in Timor-Leste, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "TLS",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
     }
   ],
   "manualOverrideSummary": {

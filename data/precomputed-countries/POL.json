@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 278,
+    "total": 277,
     "statusCounts": {
       "likely_true_both": 128,
-      "unlisted": 97,
+      "unlisted": 96,
       "new_record": 30,
       "likely_true_one_source": 21,
       "likely_false": 2
     },
     "bucketCounts": {
       "Likely Valid": 149,
-      "Unlisted": 97,
+      "Unlisted": 96,
       "New": 30,
       "Needs Review": 2
     }
@@ -4705,58 +4705,6 @@
             16.778517429000242
           ]
         ]
-      },
-      "tags": []
-    },
-    {
-      "itemId": "502958f0-482d-4a66-96d8-5018edd893ee",
-      "countryIso3": "POL",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2473339,
-      "inatTaxonId": 1449,
-      "inatPlaceId": 7800,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 630.9637609310427,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
       },
       "tags": []
     },
@@ -9486,8 +9434,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "POL",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,

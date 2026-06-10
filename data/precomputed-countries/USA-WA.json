@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 437,
+    "total": 436,
     "statusCounts": {
-      "new_record": 8,
-      "likely_true_one_source": 273,
-      "unlisted": 107,
-      "likely_false": 49
+      "new_record": 6,
+      "likely_true_one_source": 308,
+      "unlisted": 106,
+      "likely_false": 16
     },
     "bucketCounts": {
-      "New": 8,
-      "Likely Valid": 273,
-      "Unlisted": 107,
-      "Needs Review": 49
+      "New": 6,
+      "Likely Valid": 308,
+      "Unlisted": 106,
+      "Needs Review": 16
     }
   },
   "entries": [
@@ -1321,8 +1321,8 @@
     {
       "itemId": "13263335-364f-4bf5-b732-50035863086f",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1511,8 +1511,8 @@
     {
       "itemId": "153c8243-6f18-4416-8682-2222637e8864",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1897,8 +1897,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -2611,8 +2611,8 @@
     {
       "itemId": "2175f08a-4175-4b35-81bc-43d71f7eb2dc",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3429,8 +3429,8 @@
     {
       "itemId": "2e2e018d-1fd4-48a3-97bc-625461c10057",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3993,8 +3993,8 @@
     {
       "itemId": "33e2f3bf-4554-4f9a-8f8f-849c089724ba",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4124,58 +4124,6 @@
         "short": "Pack-only",
         "note": "This expected species keeps validated state-pack membership, but this accelerated state build does not store mapped footprint geometry for expected species.",
         "significant": false,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "38be5860-88eb-4aee-8055-67db8342c8ac",
-      "countryIso3": "USA-WA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 12,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436661,
-      "inatTaxonId": 43428,
-      "inatPlaceId": 4207,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 12,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 485.107251373102,
-        "spreadRatio": 0,
         "footprintPolygonLatLngs": []
       },
       "tags": []
@@ -4673,8 +4621,8 @@
     {
       "itemId": "3c727840-a266-492f-b403-d3af7a595121",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4765,8 +4713,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4817,8 +4765,8 @@
     {
       "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4961,8 +4909,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -5347,8 +5295,8 @@
     {
       "itemId": "4358855e-64a1-4805-8481-8c6da9f21377",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -5439,8 +5387,8 @@
     {
       "itemId": "43d4ed66-72e7-4114-94f3-e7765c79fb49",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -5485,7 +5433,7 @@
     {
       "itemId": "446887df-3477-4f4a-a434-852f96ba48d9",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -5525,7 +5473,7 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "44e7f637-f8db-4252-9804-7c200fd6516c",
@@ -6054,8 +6002,8 @@
     {
       "itemId": "4cf322e5-831c-4759-9331-cff10333e23f",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6849,7 +6797,7 @@
     {
       "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
+      "status": "likely_true_one_source",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -6889,7 +6837,7 @@
         "significant": false,
         "footprintPolygonLatLngs": []
       },
-      "bucket": "Needs Review"
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "55631055-3e0e-4b7a-9612-dedebe9f78b0",
@@ -7338,8 +7286,8 @@
     {
       "itemId": "5a9bec72-e7b1-495a-9d8e-bcd4b3c0ef97",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -8503,8 +8451,8 @@
     {
       "itemId": "6785e65d-bba4-45f0-b7ae-3aa8be99540d",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -8824,8 +8772,8 @@
     {
       "itemId": "69288f26-c835-4ec5-a3e3-29d70df638a1",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -9014,9 +8962,9 @@
     {
       "itemId": "6bcf68d5-79c3-4779-b630-9aea80fb6b0f",
       "countryIso3": "USA-WA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 6954,
@@ -9297,8 +9245,8 @@
     {
       "itemId": "72891679-0964-4bbb-9572-d9cb9c2aae86",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -11266,8 +11214,8 @@
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -12039,8 +11987,8 @@
     {
       "itemId": "92fa8623-0b11-4fa6-9f03-55a6a9f2dc13",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12177,8 +12125,8 @@
     {
       "itemId": "93fdeb68-56ac-46fd-be33-7a6b8345cec4",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12949,8 +12897,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
@@ -14261,8 +14209,8 @@
     {
       "itemId": "a8f8b53d-9256-4b8f-8e50-cbab23138a7f",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -15008,8 +14956,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -15112,8 +15060,8 @@
     {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -16035,8 +15983,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -16415,8 +16363,8 @@
     {
       "itemId": "c5ce946f-8f0d-4379-992b-cc0982381f5e",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -16507,8 +16455,8 @@
     {
       "itemId": "c85c70ce-4ca6-4182-95c3-258c060cc97c",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -16691,8 +16639,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -17429,8 +17377,8 @@
     {
       "itemId": "d37b29bb-36b9-4180-a3a5-dd5903fd383f",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -17803,8 +17751,8 @@
     {
       "itemId": "d8e879d6-1028-4aae-947b-37b6d7505780",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -20048,8 +19996,8 @@
     {
       "itemId": "f4a7c936-de6e-4b67-96d5-4b6ae3a2df36",
       "countryIso3": "USA-WA",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -20692,9 +20640,9 @@
     {
       "itemId": "fa946dd2-42b8-41eb-a2a0-f5f2e4418d0b",
       "countryIso3": "USA-WA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 27,

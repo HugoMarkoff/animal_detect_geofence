@@ -9,15 +9,15 @@
   "summary": {
     "total": 390,
     "statusCounts": {
-      "likely_true_one_source": 67,
-      "unlisted": 72,
+      "likely_true_one_source": 68,
+      "unlisted": 71,
       "likely_true_both": 208,
       "likely_false": 33,
       "new_record": 10
     },
     "bucketCounts": {
-      "Likely Valid": 275,
-      "Unlisted": 72,
+      "Likely Valid": 276,
+      "Unlisted": 71,
       "Needs Review": 33,
       "New": 10
     }
@@ -16765,8 +16765,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "TZA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -22446,9 +22446,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "TZA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

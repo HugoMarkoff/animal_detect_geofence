@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 272,
+    "total": 271,
     "statusCounts": {
       "likely_true_both": 129,
-      "unlisted": 92,
+      "unlisted": 91,
       "new_record": 28,
       "likely_true_one_source": 19,
       "likely_false": 4
     },
     "bucketCounts": {
       "Likely Valid": 148,
-      "Unlisted": 92,
+      "Unlisted": 91,
       "New": 28,
       "Needs Review": 4
     }
@@ -3678,58 +3678,6 @@
         "label": "National footprint",
         "short": "National",
         "note": "Dropped 10 likely outlier points before scoring. The cleaned footprint still covers more than 5% of Austria, so it is treated as national."
-      },
-      "tags": []
-    },
-    {
-      "itemId": "43d9103c-362c-40c6-9a16-4c82b8bed23c",
-      "countryIso3": "AUT",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 2,
-      "inatCount": 2,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 3,
-      "rawInatCount": 2,
-      "gbifUsageKey": 2440946,
-      "inatTaxonId": 42187,
-      "inatPlaceId": 8057,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 5,
-        "qualifiedTotal": 4,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 326.7841395424246,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
       },
       "tags": []
     },

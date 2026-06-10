@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 477,
+    "total": 478,
     "statusCounts": {
       "likely_true_both": 292,
-      "likely_true_one_source": 85,
+      "likely_true_one_source": 86,
       "unlisted": 59,
       "likely_false": 25,
       "new_record": 16
     },
     "bucketCounts": {
-      "Likely Valid": 377,
+      "Likely Valid": 378,
       "Unlisted": 59,
       "Needs Review": 25,
       "New": 16
@@ -27070,6 +27070,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "BOL",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "ff835113-781b-43f5-b54a-2fe9f6eb7d91",

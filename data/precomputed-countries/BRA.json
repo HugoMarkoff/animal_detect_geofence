@@ -11,14 +11,14 @@
     "statusCounts": {
       "likely_true_both": 358,
       "unlisted": 11,
-      "likely_true_one_source": 81,
-      "new_record": 23,
+      "likely_true_one_source": 82,
+      "new_record": 22,
       "likely_false": 18
     },
     "bucketCounts": {
-      "Likely Valid": 439,
+      "Likely Valid": 440,
       "Unlisted": 11,
-      "New": 23,
+      "New": 22,
       "Needs Review": 18
     }
   },
@@ -17030,8 +17030,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "BRA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": null,
           "inatPresent": false,
@@ -28798,9 +28798,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "BRA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 54,

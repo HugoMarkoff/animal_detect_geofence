@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 255,
+    "total": 253,
     "statusCounts": {
       "likely_true_both": 140,
       "unlisted": 55,
-      "new_record": 42,
+      "new_record": 40,
       "likely_true_one_source": 14,
       "likely_false": 4
     },
     "bucketCounts": {
       "Likely Valid": 154,
       "Unlisted": 55,
-      "New": 42,
+      "New": 40,
       "Needs Review": 4
     }
   },
@@ -627,60 +627,6 @@
         "note": "Dropped 41 likely outlier points before scoring. 3 dense observation areas were found in Italy, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
-    },
-    {
-      "itemId": "0ad79cf9-e2a2-48ac-bc4e-f3ca24faeacc",
-      "countryIso3": "ITA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 40,
-      "inatCount": 62,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 56,
-      "rawInatCount": 71,
-      "gbifUsageKey": 2437399,
-      "inatTaxonId": 45949,
-      "inatPlaceId": 6973,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 127,
-        "qualifiedTotal": 102,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 619.4133607311962,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [
-        "not in geofence"
-      ]
     },
     {
       "itemId": "0ce65b35-c507-43bf-b65d-2ed86f75f131",
@@ -8523,60 +8469,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "8de05af8-ee42-4603-ae80-d0d4da880182",
-      "countryIso3": "ITA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": true,
-      "gbifCount": 27,
-      "inatCount": 20,
-      "rawGbifPresent": true,
-      "rawInatPresent": true,
-      "rawGbifCount": 27,
-      "rawInatCount": 20,
-      "gbifUsageKey": 2437394,
-      "inatTaxonId": 45952,
-      "inatPlaceId": 6973,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 47,
-        "qualifiedTotal": 47,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 619.4133607311962,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": [
-        "not in geofence"
-      ]
     },
     {
       "itemId": "9212982e-8a58-4775-a6ac-e9a43110d8f5",

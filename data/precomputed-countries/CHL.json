@@ -9,17 +9,17 @@
   "summary": {
     "total": 238,
     "statusCounts": {
-      "likely_true_one_source": 27,
+      "likely_true_one_source": 28,
       "likely_false": 10,
       "unlisted": 94,
       "likely_true_both": 71,
-      "new_record": 36
+      "new_record": 35
     },
     "bucketCounts": {
-      "Likely Valid": 98,
+      "Likely Valid": 99,
       "Needs Review": 10,
       "Unlisted": 94,
-      "New": 36
+      "New": 35
     }
   },
   "entries": [
@@ -7973,8 +7973,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "CHL",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -14200,9 +14200,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "CHL",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 38,

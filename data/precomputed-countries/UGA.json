@@ -10,14 +10,14 @@
     "total": 354,
     "statusCounts": {
       "likely_true_both": 189,
-      "likely_true_one_source": 80,
-      "unlisted": 50,
+      "likely_true_one_source": 81,
+      "unlisted": 49,
       "likely_false": 28,
       "new_record": 7
     },
     "bucketCounts": {
-      "Likely Valid": 269,
-      "Unlisted": 50,
+      "Likely Valid": 270,
+      "Unlisted": 49,
       "Needs Review": 28,
       "New": 7
     }
@@ -1062,8 +1062,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "UGA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -13233,8 +13233,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "UGA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -21019,9 +21019,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "UGA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

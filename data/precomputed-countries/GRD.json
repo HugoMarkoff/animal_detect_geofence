@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 110,
+    "total": 109,
     "statusCounts": {
       "likely_true_both": 32,
-      "likely_true_one_source": 33,
-      "unlisted": 21,
-      "new_record": 18,
+      "likely_true_one_source": 34,
+      "unlisted": 20,
+      "new_record": 17,
       "likely_false": 6
     },
     "bucketCounts": {
-      "Likely Valid": 65,
-      "Unlisted": 21,
-      "New": 18,
+      "Likely Valid": 66,
+      "Unlisted": 20,
+      "New": 17,
       "Needs Review": 6
     }
   },
@@ -373,8 +373,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "GRD",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -3152,91 +3152,6 @@
       "tags": []
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "GRD",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 14,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 14,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 9992,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 14,
-        "qualifiedTotal": 14,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 14,
-        "corePointCount": 14,
-        "outlierPointCount": 0,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 16.570282833539693,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 20.928315827817965,
-        "spreadRatio": 0.7917637983804906,
-        "coverageAreaKm2": 524.431045422238,
-        "coverageRatio": 1.524508852971622,
-        "footprintPolygonLatLngs": [
-          [
-            11.982828521321656,
-            -61.852585941884435
-          ],
-          [
-            11.94170086949323,
-            -61.81707018973727
-          ],
-          [
-            11.924567765104616,
-            -61.771608712096295
-          ],
-          [
-            11.922270961168836,
-            -61.75478768886259
-          ],
-          [
-            12.172959257227465,
-            -61.633539189832526
-          ],
-          [
-            12.02361405761946,
-            -61.84844520927362
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "The cleaned footprint still covers more than 5% of Grenada, so it is treated as national."
-      },
-      "tags": [
-        "not in geofence"
-      ]
-    },
-    {
       "itemId": "75cfaf2a-ccd5-4efe-83cc-0df47512a8dc",
       "countryIso3": "GRD",
       "status": "unlisted",
@@ -4174,8 +4089,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "GRD",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -5137,8 +5052,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "GRD",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -6575,9 +6490,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "GRD",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 1,

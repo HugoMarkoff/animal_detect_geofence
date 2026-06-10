@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 202,
+    "total": 199,
     "statusCounts": {
-      "likely_true_one_source": 38,
+      "likely_true_one_source": 39,
       "likely_true_both": 77,
       "new_record": 35,
-      "unlisted": 46,
+      "unlisted": 42,
       "likely_false": 6
     },
     "bucketCounts": {
-      "Likely Valid": 115,
+      "Likely Valid": 116,
       "New": 35,
-      "Unlisted": 46,
+      "Unlisted": 42,
       "Needs Review": 6
     }
   },
@@ -5467,58 +5467,6 @@
       ]
     },
     {
-      "itemId": "6bdf206b-1c00-4c74-8782-b3f7552fc655",
-      "countryIso3": "CUB",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436649,
-      "inatTaxonId": 43436,
-      "inatPlaceId": 6944,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 374.0436527113896,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "6cced5c0-5992-4bc6-ae91-27786b320087",
       "countryIso3": "CUB",
       "status": "likely_true_both",
@@ -5810,77 +5758,6 @@
       "tags": []
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "CUB",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 6,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 6,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 6944,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 6,
-        "qualifiedTotal": 6,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 1 likely outlier point before scoring. Only 5 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 6,
-        "corePointCount": 5,
-        "outlierPointCount": 1,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 0.9817604528849379,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 374.0436527113896,
-        "spreadRatio": 0.002624721595376088,
-        "coverageAreaKm2": 218.74969767794053,
-        "coverageRatio": 0.001990732933620368,
-        "footprintPolygonLatLngs": [
-          [
-            23.043038339806664,
-            -82.39819022304734
-          ],
-          [
-            23.133774278115688,
-            -82.26984820329528
-          ],
-          [
-            23.175226931683095,
-            -82.35961359888375
-          ]
-        ]
-      },
-      "tags": []
-    },
-    {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
       "countryIso3": "CUB",
       "status": "likely_true_both",
@@ -6027,58 +5904,6 @@
         "captiveInatCount": 0,
         "rejected": false,
         "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 374.0436527113896,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "7cf4c87c-d076-4e6b-a87d-85cfd5e73b03",
-      "countryIso3": "CUB",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5219542,
-      "inatTaxonId": 43373,
-      "inatPlaceId": 6944,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
       },
       "observationProfile": {
         "code": "no_points",
@@ -7262,8 +7087,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "CUB",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -12062,9 +11887,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "CUB",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 1,

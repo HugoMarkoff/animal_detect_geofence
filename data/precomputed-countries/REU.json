@@ -11,15 +11,15 @@
     "statusCounts": {
       "unlisted": 30,
       "likely_true_both": 7,
-      "likely_true_one_source": 16,
+      "likely_true_one_source": 17,
       "likely_false": 7,
-      "new_record": 18
+      "new_record": 17
     },
     "bucketCounts": {
       "Unlisted": 30,
-      "Likely Valid": 23,
+      "Likely Valid": 24,
       "Needs Review": 7,
-      "New": 18
+      "New": 17
     }
   },
   "entries": [
@@ -292,8 +292,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "REU",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -3864,8 +3864,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "REU",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -5062,9 +5062,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "REU",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 9,

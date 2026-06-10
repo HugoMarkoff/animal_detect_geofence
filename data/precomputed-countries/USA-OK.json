@@ -11,19 +11,19 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 376,
+    "total": 374,
     "statusCounts": {
-      "likely_true_one_source": 254,
-      "likely_false": 35,
-      "unlisted": 65,
+      "likely_true_one_source": 279,
+      "likely_false": 12,
+      "unlisted": 63,
       "likely_true_both": 18,
-      "new_record": 4
+      "new_record": 2
     },
     "bucketCounts": {
-      "Likely Valid": 272,
-      "Needs Review": 35,
-      "Unlisted": 65,
-      "New": 4
+      "Likely Valid": 297,
+      "Needs Review": 12,
+      "Unlisted": 63,
+      "New": 2
     }
   },
   "entries": [
@@ -680,8 +680,8 @@
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
@@ -1014,8 +1014,8 @@
     {
       "itemId": "153c8243-6f18-4416-8682-2222637e8864",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1198,8 +1198,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3104,8 +3104,8 @@
     {
       "itemId": "33e2f3bf-4554-4f9a-8f8f-849c089724ba",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3307,58 +3307,6 @@
       "rawInatCount": 0,
       "gbifUsageKey": 2474909,
       "inatTaxonId": 115,
-      "inatPlaceId": 4196,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 480.10776650687467,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "38be5860-88eb-4aee-8055-67db8342c8ac",
-      "countryIso3": "USA-OK",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436661,
-      "inatTaxonId": 43428,
       "inatPlaceId": 4196,
       "managedEvidence": {
         "domesticNamed": false,
@@ -3680,8 +3628,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3732,8 +3680,8 @@
     {
       "itemId": "3e4fac86-1e90-403c-b798-c20a93df373c",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3876,8 +3824,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -4204,8 +4152,8 @@
     {
       "itemId": "4358855e-64a1-4805-8481-8c6da9f21377",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4296,8 +4244,8 @@
     {
       "itemId": "43d4ed66-72e7-4114-94f3-e7765c79fb49",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4826,8 +4774,8 @@
     {
       "itemId": "4cf322e5-831c-4759-9331-cff10333e23f",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -5753,8 +5701,8 @@
     {
       "itemId": "5a9bec72-e7b1-495a-9d8e-bcd4b3c0ef97",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -7077,8 +7025,8 @@
     {
       "itemId": "69288f26-c835-4ec5-a3e3-29d70df638a1",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -7169,9 +7117,9 @@
     {
       "itemId": "6bcf68d5-79c3-4779-b630-9aea80fb6b0f",
       "countryIso3": "USA-OK",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 1,
@@ -7497,8 +7445,8 @@
     {
       "itemId": "72891679-0964-4bbb-9572-d9cb9c2aae86",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -9723,8 +9671,8 @@
     {
       "itemId": "93fdeb68-56ac-46fd-be33-7a6b8345cec4",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -10471,8 +10419,8 @@
     {
       "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -12468,8 +12416,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -12572,8 +12520,8 @@
     {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -13357,8 +13305,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -13783,8 +13731,8 @@
     {
       "itemId": "c5ce946f-8f0d-4379-992b-cc0982381f5e",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -13875,8 +13823,8 @@
     {
       "itemId": "c85c70ce-4ca6-4182-95c3-258c060cc97c",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -14105,8 +14053,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -14681,8 +14629,8 @@
     {
       "itemId": "d37b29bb-36b9-4180-a3a5-dd5903fd383f",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -15003,8 +14951,8 @@
     {
       "itemId": "d8e879d6-1028-4aae-947b-37b6d7505780",
       "countryIso3": "USA-OK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -16487,77 +16435,6 @@
       "tags": []
     },
     {
-      "itemId": "ee8d5a89-f82e-4323-80e2-0ffc9487ebaf",
-      "countryIso3": "USA-OK",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 17,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 194,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5219173,
-      "inatTaxonId": 42048,
-      "inatPlaceId": 4196,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 194,
-        "qualifiedTotal": 17,
-        "specimenOrSampleCount": 18,
-        "staleGbifCount": 17,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 14 likely outlier points before scoring. Only 3 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 17,
-        "corePointCount": 3,
-        "outlierPointCount": 14,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 27.479003167398606,
-        "unique25kmCells": 2,
-        "unique50kmCells": 2,
-        "countryDiameterKm": 480.10776650687467,
-        "spreadRatio": 0.05723507321559884,
-        "coverageAreaKm2": 719.3372839337164,
-        "coverageRatio": 0.0039734268902694835,
-        "footprintPolygonLatLngs": [
-          [
-            36.31059618047266,
-            -97.3427071809386
-          ],
-          [
-            36.05446718798484,
-            -97.09925894748088
-          ],
-          [
-            36.08235203090769,
-            -96.95104992331915
-          ]
-        ]
-      },
-      "tags": []
-    },
-    {
       "itemId": "eecb6468-58c6-4b4b-a90d-eae2648398a0",
       "countryIso3": "USA-OK",
       "status": "likely_true_one_source",
@@ -17979,9 +17856,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "USA-OK",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 9,

@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 153,
+    "total": 152,
     "statusCounts": {
       "likely_true_both": 64,
       "new_record": 16,
-      "unlisted": 39,
-      "likely_true_one_source": 26,
+      "unlisted": 37,
+      "likely_true_one_source": 27,
       "likely_false": 8
     },
     "bucketCounts": {
-      "Likely Valid": 90,
+      "Likely Valid": 91,
       "New": 16,
-      "Unlisted": 39,
+      "Unlisted": 37,
       "Needs Review": 8
     }
   },
@@ -240,8 +240,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "LKA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -4162,58 +4162,6 @@
         "label": "National footprint",
         "short": "National",
         "note": "Dropped 5 likely outlier points before scoring. 5 dense observation areas were found in Sri Lanka, so this is treated as national rather than a single regional pocket."
-      },
-      "tags": []
-    },
-    {
-      "itemId": "67f8d7af-2d29-4b22-8810-71e798cac94d",
-      "countryIso3": "LKA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": true,
-      "gbifCount": 0,
-      "inatCount": 1,
-      "rawGbifPresent": false,
-      "rawInatPresent": true,
-      "rawGbifCount": 0,
-      "rawInatCount": 1,
-      "gbifUsageKey": 2437524,
-      "inatTaxonId": 46187,
-      "inatPlaceId": 7077,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 289.0281068167489,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
       },
       "tags": []
     },
@@ -9418,9 +9366,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "LKA",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 1,

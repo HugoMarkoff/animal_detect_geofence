@@ -7,13 +7,13 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/country-validation/AFG/new_candidates.csv",
   "summary": {
-    "total": 136,
+    "total": 137,
     "statusCounts": {
-      "likely_true_one_source": 104,
+      "likely_true_one_source": 105,
       "likely_false": 32
     },
     "bucketCounts": {
-      "Likely Valid": 104,
+      "Likely Valid": 105,
       "Needs Review": 32
     }
   },
@@ -5249,7 +5249,7 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "AFG",
-          "status": "likely_false",
+          "status": "likely_true_one_source",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": null,
@@ -5295,7 +5295,7 @@
             "spreadRatio": 0,
             "footprintPolygonLatLngs": []
           },
-          "bucket": "Needs Review"
+          "bucket": "Likely Valid"
         }
       }
     },
@@ -6822,7 +6822,7 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "AFG",
-          "status": "likely_false",
+          "status": "likely_true_one_source",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": null,
@@ -6868,7 +6868,7 @@
             "spreadRatio": 0,
             "footprintPolygonLatLngs": []
           },
-          "bucket": "Needs Review"
+          "bucket": "Likely Valid"
         }
       }
     },
@@ -9233,6 +9233,51 @@
         "label": "National footprint",
         "short": "National",
         "note": "Dropped 26 likely outlier points before scoring. 2 dense observation areas were found in Afghanistan, so this is treated as national rather than a single regional pocket."
+      },
+      "bucket": "Likely Valid"
+    },
+    {
+      "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
+      "countryIso3": "AFG",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "countrywide",
+        "label": "National footprint",
+        "short": "National",
+        "note": "Added from expected country membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
       },
       "bucket": "Likely Valid"
     }

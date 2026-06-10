@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 120,
+    "total": 119,
     "statusCounts": {
-      "likely_true_one_source": 30,
+      "likely_true_one_source": 31,
       "likely_true_both": 40,
-      "unlisted": 32,
-      "new_record": 10,
+      "unlisted": 31,
+      "new_record": 9,
       "likely_false": 8
     },
     "bucketCounts": {
-      "Likely Valid": 70,
-      "Unlisted": 32,
-      "New": 10,
+      "Likely Valid": 71,
+      "Unlisted": 31,
+      "New": 9,
       "Needs Review": 8
     }
   },
@@ -3319,85 +3319,6 @@
       "tags": []
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "VIR",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 102,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 118,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 10319,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 118,
-        "qualifiedTotal": 102,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 1,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "significant": true,
-        "totalPoints": 17,
-        "corePointCount": 13,
-        "outlierPointCount": 4,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 22.22759356401098,
-        "unique25kmCells": 3,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 21.019374919894773,
-        "spreadRatio": 1.0574811881286077,
-        "coverageAreaKm2": 674.3847854526441,
-        "coverageRatio": 1.9434720041862943,
-        "footprintPolygonLatLngs": [
-          [
-            18.336612905180782,
-            -64.99224025205382
-          ],
-          [
-            18.323832187122857,
-            -64.98917800935486
-          ],
-          [
-            18.28944230739709,
-            -64.63614577739425
-          ],
-          [
-            18.381836033214974,
-            -64.64691634760051
-          ],
-          [
-            18.396113509702328,
-            -64.67498767961924
-          ]
-        ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 4 likely outlier points before scoring. The cleaned footprint still covers more than 5% of United States Virgin Islands, so it is treated as national."
-      },
-      "tags": []
-    },
-    {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
       "countryIso3": "VIR",
       "status": "new_record",
@@ -4516,8 +4437,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "VIR",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -5464,8 +5385,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "VIR",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -7297,9 +7218,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "VIR",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

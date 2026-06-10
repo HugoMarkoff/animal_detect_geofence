@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 400,
+    "total": 399,
     "statusCounts": {
-      "unlisted": 66,
+      "unlisted": 65,
       "likely_true_both": 249,
-      "likely_true_one_source": 58,
-      "new_record": 15,
+      "likely_true_one_source": 59,
+      "new_record": 14,
       "likely_false": 12
     },
     "bucketCounts": {
-      "Unlisted": 66,
-      "Likely Valid": 307,
-      "New": 15,
+      "Unlisted": 65,
+      "Likely Valid": 308,
+      "New": 14,
       "Needs Review": 12
     }
   },
@@ -1410,58 +1410,6 @@
         "captiveInatCount": 0,
         "rejected": false,
         "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 3129.503017389813,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "11cd447b-2067-4a30-8c43-b6172993f08c",
-      "countryIso3": "AUS",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2436642,
-      "inatTaxonId": 43406,
-      "inatPlaceId": 6744,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
       },
       "observationProfile": {
         "code": "no_points",
@@ -22313,9 +22261,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "AUS",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 1077,

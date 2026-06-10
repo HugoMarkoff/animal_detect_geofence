@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 120,
+    "total": 119,
     "statusCounts": {
-      "likely_true_one_source": 23,
+      "likely_true_one_source": 24,
       "likely_true_both": 33,
       "unlisted": 25,
-      "new_record": 32,
+      "new_record": 30,
       "likely_false": 7
     },
     "bucketCounts": {
-      "Likely Valid": 56,
+      "Likely Valid": 57,
       "Unlisted": 25,
-      "New": 32,
+      "New": 30,
       "Needs Review": 7
     }
   },
@@ -364,8 +364,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "DMA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -3855,83 +3855,6 @@
       "tags": []
     },
     {
-      "itemId": "747bf4a3-5a55-4b03-8c6b-1f84c3d8064e",
-      "countryIso3": "DMA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
-      "gbifPresent": null,
-      "inatPresent": true,
-      "gbifCount": null,
-      "inatCount": 41,
-      "rawGbifPresent": null,
-      "rawInatPresent": true,
-      "rawGbifCount": null,
-      "rawInatCount": 43,
-      "gbifUsageKey": null,
-      "inatTaxonId": 925979,
-      "inatPlaceId": 6931,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 43,
-        "qualifiedTotal": 41,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "needs_review",
-        "label": "Pending review",
-        "short": "",
-        "note": "Dropped 12 likely outlier points before scoring. Only 6 cleaned observations remain. Keep this in review until someone confirms it or draws a regional area.",
-        "significant": false,
-        "totalPoints": 18,
-        "corePointCount": 6,
-        "outlierPointCount": 12,
-        "clusterCount": 1,
-        "clusterSpreadKm": 0.0,
-        "maxDistanceKm": 89.28568641750465,
-        "unique25kmCells": 5,
-        "unique50kmCells": 3,
-        "countryDiameterKm": 30.922530590107066,
-        "spreadRatio": 2.887399081305121,
-        "coverageAreaKm2": 4798.157892311308,
-        "coverageRatio": 6.389025156206802,
-        "footprintPolygonLatLngs": [
-          [
-            19.89527718709773,
-            -70.7729437118529
-          ],
-          [
-            19.586597692102778,
-            -70.82308275267347
-          ],
-          [
-            19.08206280677814,
-            -70.48409372443068
-          ],
-          [
-            18.992913870000073,
-            -70.1293907277504
-          ]
-        ]
-      },
-      "tags": [
-        "not in geofence"
-      ]
-    },
-    {
       "itemId": "78406034-cab0-4208-b324-31c2e8de60cd",
       "countryIso3": "DMA",
       "status": "new_record",
@@ -5059,8 +4982,8 @@
         "baseEntry": {
           "itemId": "990ae9dd-7a59-4344-afcb-1b7b21368000",
           "countryIso3": "DMA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -6451,8 +6374,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "DMA",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -8097,9 +8020,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "DMA",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": true,
       "gbifCount": 0,

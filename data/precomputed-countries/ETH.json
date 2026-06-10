@@ -9,16 +9,16 @@
   "summary": {
     "total": 294,
     "statusCounts": {
-      "unlisted": 75,
+      "unlisted": 74,
       "likely_false": 14,
       "likely_true_both": 156,
-      "likely_true_one_source": 45,
+      "likely_true_one_source": 46,
       "new_record": 4
     },
     "bucketCounts": {
-      "Unlisted": 75,
+      "Unlisted": 74,
       "Needs Review": 14,
-      "Likely Valid": 201,
+      "Likely Valid": 202,
       "New": 4
     }
   },
@@ -11947,8 +11947,8 @@
         "baseEntry": {
           "itemId": "c10547c3-1748-48bf-a451-8066c820f22f",
           "countryIso3": "ETH",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": false,
           "inatPresent": false,
@@ -16331,9 +16331,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "ETH",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
       "gbifCount": 0,

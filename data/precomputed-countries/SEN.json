@@ -9,15 +9,15 @@
   "summary": {
     "total": 226,
     "statusCounts": {
-      "unlisted": 58,
+      "unlisted": 57,
       "likely_true_both": 93,
       "likely_false": 25,
-      "likely_true_one_source": 40,
+      "likely_true_one_source": 41,
       "new_record": 10
     },
     "bucketCounts": {
-      "Unlisted": 58,
-      "Likely Valid": 133,
+      "Unlisted": 57,
+      "Likely Valid": 134,
       "Needs Review": 25,
       "New": 10
     }
@@ -645,8 +645,8 @@
         "baseEntry": {
           "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
           "countryIso3": "SEN",
-          "status": "likely_false",
-          "bucket": "Needs Review",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
           "expected": true,
           "gbifPresent": true,
           "inatPresent": false,
@@ -13278,9 +13278,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "SEN",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 1,

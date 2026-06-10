@@ -11,18 +11,18 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 311,
+    "total": 312,
     "statusCounts": {
-      "likely_true_one_source": 217,
-      "likely_false": 42,
+      "likely_true_one_source": 244,
+      "likely_false": 17,
       "unlisted": 50,
-      "new_record": 2
+      "new_record": 1
     },
     "bucketCounts": {
-      "Likely Valid": 217,
-      "Needs Review": 42,
+      "Likely Valid": 244,
+      "Needs Review": 17,
       "Unlisted": 50,
-      "New": 2
+      "New": 1
     }
   },
   "entries": [
@@ -639,8 +639,8 @@
     {
       "itemId": "0de8422e-f59d-4802-9e93-ab8559e43e55",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": false,
       "inatPresent": false,
@@ -1117,8 +1117,8 @@
     {
       "itemId": "153c8243-6f18-4416-8682-2222637e8864",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1301,8 +1301,8 @@
     {
       "itemId": "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -1975,8 +1975,8 @@
     {
       "itemId": "2175f08a-4175-4b35-81bc-43d71f7eb2dc",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -2809,8 +2809,8 @@
     {
       "itemId": "33e2f3bf-4554-4f9a-8f8f-849c089724ba",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3091,8 +3091,8 @@
     {
       "itemId": "3d80f1d6-b1df-4966-9ff4-94053c7a902a",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3235,8 +3235,8 @@
     {
       "itemId": "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -3517,8 +3517,8 @@
     {
       "itemId": "4358855e-64a1-4805-8481-8c6da9f21377",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -3983,8 +3983,8 @@
     {
       "itemId": "4cf322e5-831c-4759-9331-cff10333e23f",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -4639,8 +4639,8 @@
     {
       "itemId": "5a9bec72-e7b1-495a-9d8e-bcd4b3c0ef97",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -4681,6 +4681,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "5c7ce479-8a45-40b3-ae21-7c97dfae22f5",
+      "countryIso3": "USA-AK",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "5cd86218-19db-4cd7-9a50-fbe4df8ab705",
@@ -5497,8 +5542,8 @@
     {
       "itemId": "6785e65d-bba4-45f0-b7ae-3aa8be99540d",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -5733,8 +5778,8 @@
     {
       "itemId": "69288f26-c835-4ec5-a3e3-29d70df638a1",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -5871,9 +5916,9 @@
     {
       "itemId": "6bcf68d5-79c3-4779-b630-9aea80fb6b0f",
       "countryIso3": "USA-AK",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
       "gbifCount": 46,
@@ -6254,8 +6299,8 @@
     {
       "itemId": "72891679-0964-4bbb-9572-d9cb9c2aae86",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -6815,8 +6860,8 @@
     {
       "itemId": "7c82313a-008c-41c3-84ac-171e5796bd4a",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -7504,8 +7549,8 @@
     {
       "itemId": "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": true,
       "inatPresent": false,
@@ -8007,8 +8052,8 @@
     {
       "itemId": "92fa8623-0b11-4fa6-9f03-55a6a9f2dc13",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -8053,8 +8098,8 @@
     {
       "itemId": "93fdeb68-56ac-46fd-be33-7a6b8345cec4",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -10422,8 +10467,8 @@
     {
       "itemId": "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -10474,8 +10519,8 @@
     {
       "itemId": "b34b243f-385d-4880-93b9-0c2526d012a7",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -11137,8 +11182,8 @@
     {
       "itemId": "c150a21e-952d-4665-8a62-a319841c5a56",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -11517,8 +11562,8 @@
     {
       "itemId": "c85c70ce-4ca6-4182-95c3-258c060cc97c",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -11655,8 +11700,8 @@
     {
       "itemId": "cae9534f-f302-4229-9e11-b91138333d92",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": null,
@@ -12081,8 +12126,8 @@
     {
       "itemId": "d37b29bb-36b9-4180-a3a5-dd5903fd383f",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -12501,8 +12546,8 @@
     {
       "itemId": "d8e879d6-1028-4aae-947b-37b6d7505780",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,
@@ -13935,8 +13980,8 @@
     {
       "itemId": "f4a7c936-de6e-4b67-96d5-4b6ae3a2df36",
       "countryIso3": "USA-AK",
-      "status": "likely_false",
-      "bucket": "Needs Review",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": true,
       "gbifPresent": null,
       "inatPresent": false,

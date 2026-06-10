@@ -10,15 +10,15 @@
     "total": 77,
     "statusCounts": {
       "new_record": 10,
-      "likely_true_one_source": 22,
-      "unlisted": 19,
+      "likely_true_one_source": 23,
+      "unlisted": 18,
       "likely_true_both": 23,
       "likely_false": 3
     },
     "bucketCounts": {
       "New": 10,
-      "Likely Valid": 45,
-      "Unlisted": 19,
+      "Likely Valid": 46,
+      "Unlisted": 18,
       "Needs Review": 3
     }
   },
@@ -4835,9 +4835,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "NCL",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 1,

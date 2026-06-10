@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 239,
+    "total": 238,
     "statusCounts": {
       "likely_true_both": 119,
       "new_record": 31,
-      "unlisted": 66,
+      "unlisted": 65,
       "likely_true_one_source": 19,
       "likely_false": 4
     },
     "bucketCounts": {
       "Likely Valid": 138,
       "New": 31,
-      "Unlisted": 66,
+      "Unlisted": 65,
       "Needs Review": 4
     }
   },
@@ -3356,58 +3356,6 @@
         "captiveInatCount": 0,
         "rejected": true,
         "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 316.8817392901311,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
-      "itemId": "43d9103c-362c-40c6-9a16-4c82b8bed23c",
-      "countryIso3": "CZE",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": true,
-      "inatPresent": false,
-      "gbifCount": 1,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2440946,
-      "inatTaxonId": 42187,
-      "inatPlaceId": 8264,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 1,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
       },
       "observationProfile": {
         "code": "no_points",

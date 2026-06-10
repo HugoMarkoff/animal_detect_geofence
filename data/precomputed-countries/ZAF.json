@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 344,
+    "total": 343,
     "statusCounts": {
-      "likely_true_one_source": 31,
-      "unlisted": 111,
+      "likely_true_one_source": 32,
+      "unlisted": 110,
       "likely_true_both": 168,
-      "new_record": 26,
+      "new_record": 25,
       "likely_false": 8
     },
     "bucketCounts": {
-      "Likely Valid": 199,
-      "Unlisted": 111,
-      "New": 26,
+      "Likely Valid": 200,
+      "Unlisted": 110,
+      "New": 25,
       "Needs Review": 8
     }
   },
@@ -13638,58 +13638,6 @@
       "tags": []
     },
     {
-      "itemId": "b8b9d6cf-88e7-42e8-8c94-669b7ab1486a",
-      "countryIso3": "ZAF",
-      "status": "unlisted",
-      "bucket": "Unlisted",
-      "expected": false,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": true,
-      "rawInatPresent": false,
-      "rawGbifCount": 1,
-      "rawInatCount": 0,
-      "gbifUsageKey": 2438437,
-      "inatTaxonId": 44761,
-      "inatPlaceId": 6986,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 1,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": true,
-        "note": "No recent wild observations from the last 10 years were found; the available evidence is only non-wild or stale records."
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 1246.8651065711915,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "ba9611a3-432b-472e-91d7-4578b6f78478",
       "countryIso3": "ZAF",
       "status": "likely_true_both",
@@ -19697,9 +19645,9 @@
     {
       "itemId": "ff803ff7-ed2b-4520-9304-99b408657f47",
       "countryIso3": "ZAF",
-      "status": "new_record",
-      "bucket": "New",
-      "expected": false,
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
       "gbifPresent": true,
       "inatPresent": true,
       "gbifCount": 53,
