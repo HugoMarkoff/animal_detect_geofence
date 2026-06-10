@@ -11,16 +11,16 @@
   "unitType": "state",
   "scopeLabel": "United States",
   "summary": {
-    "total": 356,
+    "total": 357,
     "statusCounts": {
-      "likely_true_one_source": 228,
+      "likely_true_one_source": 229,
       "likely_true_both": 69,
       "unlisted": 34,
       "likely_false": 14,
       "new_record": 11
     },
     "bucketCounts": {
-      "Likely Valid": 297,
+      "Likely Valid": 298,
       "Unlisted": 34,
       "Needs Review": 14,
       "New": 11
@@ -5824,6 +5824,51 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "601cf098-9876-4912-84bb-0926834305e9",
+      "countryIso3": "USA-MT",
+      "status": "likely_true_one_source",
+      "expected": true,
+      "gbifPresent": null,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "rawGbifPresent": null,
+      "rawInatPresent": null,
+      "rawGbifCount": null,
+      "rawInatCount": null,
+      "gbifUsageKey": null,
+      "inatTaxonId": null,
+      "inatPlaceId": null,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 0,
+        "qualifiedTotal": 0,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "State pack only",
+        "short": "Pack-only",
+        "note": "Added from expected USA state membership during pack refresh.",
+        "significant": false,
+        "footprintPolygonLatLngs": []
+      },
+      "bucket": "Likely Valid"
     },
     {
       "itemId": "608f0305-b94a-4f39-b445-654fbb07ba73",

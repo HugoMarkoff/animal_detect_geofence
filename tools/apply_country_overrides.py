@@ -26,6 +26,7 @@ PACK_DIR = DATA_DIR / "precomputed-countries"
 INDEX_PATH = PACK_DIR / "index.json"
 OVERRIDES_DIR = DATA_DIR / "review-overrides" / "countries"
 ANIMALS_PATH = DATA_DIR / "animals-global.json"
+GEOFENCE_BASELINE_PATH = DATA_DIR / "review-overrides" / "geofence-baseline.json"
 GEOFENCE_TRACKING_PATH = DATA_DIR / "review-overrides" / "geofence-binary-overrides.json"
 SIMPLE_GEOFENCE_PATH = DATA_DIR / "geofence-simple.json"
 DAN_DECISIONS_PATH = WORKSPACE_ROOT / "Corrections_DAN.json"
@@ -151,8 +152,8 @@ def normalize_expected_subdivisions(raw_mapping: object) -> dict[str, list[str]]
     return {USA_PARENT_ISO3: normalized_states}
 
 
-def serialize_expected_subdivisions(expected_countries: set[str], usa_states_known: bool, usa_states: set[str]) -> dict[str, list[str]]:
-    if USA_PARENT_ISO3 not in expected_countries or not usa_states_known:
+def serialize_expected_subdivisions(usa_states_known: bool, usa_states: set[str]) -> dict[str, list[str]]:
+    if not usa_states_known:
         return {}
 
     normalized_states = {state_code for state_code in usa_states if state_code in USA_STATE_CODES}
@@ -163,6 +164,27 @@ def serialize_expected_subdivisions(expected_countries: set[str], usa_states_kno
         return {USA_PARENT_ISO3: []}
 
     return {USA_PARENT_ISO3: sorted(normalized_states)}
+
+
+def normalize_geofence_fields(
+    expected_countries: object,
+    allow_regional_countries: object,
+    expected_subdivisions: object,
+) -> tuple[list[str], list[str], dict[str, list[str]]]:
+    expected = set(normalize_country_codes(expected_countries))
+    regional = set(normalize_country_codes(allow_regional_countries))
+    subdivisions = normalize_expected_subdivisions(expected_subdivisions)
+
+    raw_usa_states = subdivisions.get(USA_PARENT_ISO3)
+    if isinstance(raw_usa_states, list):
+        if raw_usa_states:
+            expected.discard(USA_PARENT_ISO3)
+            regional.discard(USA_PARENT_ISO3)
+        else:
+            expected.add(USA_PARENT_ISO3)
+
+    regional &= expected
+    return sorted(expected), sorted(regional), subdivisions
 
 
 def item_expected_in_country(item: dict[str, Any] | None, country_iso3: str) -> bool:
@@ -193,17 +215,14 @@ def item_expected_in_scope(item: dict[str, Any] | None, scope_iso3: str) -> bool
     if not state_code:
         return item_expected_in_country(item, normalized_scope)
 
-    expected_countries = set(normalize_country_codes(item.get("expectedCountries")))
-    if USA_PARENT_ISO3 not in expected_countries:
-        return False
-
     expected_subdivisions = normalize_expected_subdivisions(item.get("expectedSubdivisions"))
     raw_usa_states = expected_subdivisions.get(USA_PARENT_ISO3)
-    if not isinstance(raw_usa_states, list):
-        return False
-    if not raw_usa_states:
-        return True
-    return state_code in raw_usa_states
+    if isinstance(raw_usa_states, list):
+        if not raw_usa_states:
+            return True
+        return state_code in raw_usa_states
+
+    return item_expected_in_country(item, USA_PARENT_ISO3)
 
 
 def apply_item_country_overrides(
@@ -212,9 +231,13 @@ def apply_item_country_overrides(
     expected_subdivisions: dict[str, list[str]],
     item_override: dict[str, object] | None,
 ) -> tuple[list[str], list[str], dict[str, list[str]]]:
-    expected = set(normalize_country_codes(expected_countries))
-    regional = set(normalize_country_codes(allow_regional_countries)) & expected
-    normalized_subdivisions = normalize_expected_subdivisions(expected_subdivisions)
+    next_expected, next_regional, normalized_subdivisions = normalize_geofence_fields(
+        expected_countries,
+        allow_regional_countries,
+        expected_subdivisions,
+    )
+    expected = set(next_expected)
+    regional = set(next_regional)
 
     usa_states_known = False
     usa_states: set[str] = set()
@@ -227,7 +250,7 @@ def apply_item_country_overrides(
             usa_states.update(USA_STATE_CODES)
 
     if not isinstance(item_override, dict):
-        return sorted(expected), sorted(regional & expected), serialize_expected_subdivisions(expected, usa_states_known, usa_states)
+        return sorted(expected), sorted(regional & expected), serialize_expected_subdivisions(usa_states_known, usa_states)
 
     allow, allow_states = split_override_scope_map(item_override.get("allow"))
     block, block_states = split_override_scope_map(item_override.get("block"))
@@ -241,9 +264,8 @@ def apply_item_country_overrides(
 
     if USA_PARENT_ISO3 in allow or USA_PARENT_ISO3 in allow_regional:
         expected.add(USA_PARENT_ISO3)
-        if not usa_states_known:
-            usa_states_known = True
-            usa_states.update(USA_STATE_CODES)
+        usa_states_known = True
+        usa_states.update(USA_STATE_CODES)
 
     if USA_PARENT_ISO3 in block:
         expected.discard(USA_PARENT_ISO3)
@@ -255,9 +277,10 @@ def apply_item_country_overrides(
         block_states.clear()
 
     if allow_states or allow_regional_states or block_states:
-        expected.add(USA_PARENT_ISO3)
         if not usa_states_known:
             usa_states_known = True
+            if USA_PARENT_ISO3 in expected:
+                usa_states.update(USA_STATE_CODES)
         usa_states.update(allow_states)
         usa_states.update(allow_regional_states)
         usa_states.difference_update(block_states)
@@ -266,8 +289,14 @@ def apply_item_country_overrides(
         expected.discard(USA_PARENT_ISO3)
         regional.discard(USA_PARENT_ISO3)
         usa_states_known = False
+    elif usa_states_known:
+        if usa_states == USA_STATE_CODES:
+            expected.add(USA_PARENT_ISO3)
+        else:
+            expected.discard(USA_PARENT_ISO3)
+            regional.discard(USA_PARENT_ISO3)
 
-    next_subdivisions = serialize_expected_subdivisions(expected, usa_states_known, usa_states)
+    next_subdivisions = serialize_expected_subdivisions(usa_states_known, usa_states)
     return sorted(expected), sorted(regional & expected), next_subdivisions
 
 
@@ -351,13 +380,6 @@ def tracking_requires_pack_entry(item_tracking: dict[str, object] | None, scope_
     if bool(allow.get(scope_key)) or bool(allow_regional.get(scope_key)):
         return True
 
-    if scope_key == USA_PARENT_ISO3:
-        return any(
-            clean_text(candidate_scope).upper().startswith(f"{USA_PARENT_ISO3}-") and bool(enabled)
-            for scope_map in (allow, allow_regional)
-            for candidate_scope, enabled in scope_map.items()
-        )
-
     return False
 
 
@@ -378,10 +400,6 @@ def scope_tracking_decision(item_tracking: dict[str, object] | None, scope_iso3:
         return "allow"
 
     if scope_key == USA_PARENT_ISO3:
-        if any(usa_state_code_from_scope(candidate_scope) and bool(enabled) for candidate_scope, enabled in allow_regional.items()):
-            return "allow_regional"
-        if any(usa_state_code_from_scope(candidate_scope) and bool(enabled) for candidate_scope, enabled in allow.items()):
-            return "allow"
         return ""
 
     if not usa_state_code_from_scope(scope_key):
@@ -452,6 +470,83 @@ def load_geofence_tracking_items() -> dict[str, dict[str, object]]:
         if item_id and isinstance(raw_item, dict):
             items[item_id] = raw_item
     return items
+
+
+def load_geofence_baseline_items() -> dict[str, dict[str, object]]:
+    if not GEOFENCE_BASELINE_PATH.exists():
+        return {}
+
+    payload = load_json_file(GEOFENCE_BASELINE_PATH)
+    raw_items = payload.get("items") or {}
+    if not isinstance(raw_items, dict):
+        return {}
+
+    items: dict[str, dict[str, object]] = {}
+    for raw_item_id, raw_item in raw_items.items():
+        item_id = clean_text(raw_item_id)
+        if not item_id or not isinstance(raw_item, dict):
+            continue
+
+        expected, regional, subdivisions = normalize_geofence_fields(
+            raw_item.get("expectedCountries"),
+            raw_item.get("allowRegionalCountries"),
+            raw_item.get("expectedSubdivisions"),
+        )
+        next_item: dict[str, object] = {
+            "expectedCountries": expected,
+            "allowRegionalCountries": regional,
+        }
+        if subdivisions:
+            next_item["expectedSubdivisions"] = subdivisions
+        items[item_id] = next_item
+
+    return items
+
+
+def prune_geofence_tracking_items_to_delta(
+    tracking_items: dict[str, dict[str, object]],
+    baseline_items: dict[str, dict[str, object]],
+) -> dict[str, dict[str, object]]:
+    if not tracking_items or not baseline_items:
+        return tracking_items
+
+    next_items: dict[str, dict[str, object]] = {}
+    for item_id, item_tracking in tracking_items.items():
+        baseline_item = baseline_items.get(item_id)
+        if not isinstance(baseline_item, dict):
+            next_items[item_id] = item_tracking
+            continue
+
+        baseline_expected = normalize_country_codes(baseline_item.get("expectedCountries"))
+        baseline_regional = normalize_country_codes(baseline_item.get("allowRegionalCountries"))
+        baseline_subdivisions = normalize_expected_subdivisions(baseline_item.get("expectedSubdivisions"))
+        next_expected, next_regional, next_subdivisions = apply_item_country_overrides(
+            baseline_expected,
+            baseline_regional,
+            baseline_subdivisions,
+            item_tracking,
+        )
+        if (
+            next_expected == baseline_expected
+            and next_regional == baseline_regional
+            and next_subdivisions == baseline_subdivisions
+        ):
+            continue
+
+        next_items[item_id] = item_tracking
+
+    if next_items == tracking_items:
+        return tracking_items
+
+    payload = load_json_file(GEOFENCE_TRACKING_PATH) if GEOFENCE_TRACKING_PATH.exists() else {"schemaVersion": 1}
+    payload["schemaVersion"] = int(payload.get("schemaVersion") or 1)
+    payload["updatedAtUtc"] = now_utc_iso()
+    payload["items"] = {
+        item_id: next_items[item_id]
+        for item_id in sorted(next_items)
+    }
+    write_json_if_changed(GEOFENCE_TRACKING_PATH, payload)
+    return next_items
 
 
 def normalize_taxon_text(value: object) -> str:
@@ -930,17 +1025,25 @@ def apply_country_overrides(
         if tracking_decision == "block":
             continue
 
-        if uses_subnational_expected_membership and usa_pack_item_ids is not None and item_id not in usa_pack_item_ids:
+        global_item = animals_by_id.get(item_id)
+        has_explicit_subnational_membership = item_has_explicit_subnational_membership(global_item, iso3)
+
+        if (
+            uses_subnational_expected_membership
+            and usa_pack_item_ids is not None
+            and not has_explicit_subnational_membership
+            and item_id not in usa_pack_item_ids
+        ):
             continue
 
         # Drop stale expected entries that are no longer in the current global dataset
         # for this country. Explicit override upserts can still add items back afterward.
         if raw_entry.get("expected"):
-            global_item = animals_by_id.get(item_id)
             if uses_subnational_expected_membership:
-                if not item_expected_in_country(global_item, USA_PARENT_ISO3):
-                    continue
-                if item_has_explicit_subnational_membership(global_item, iso3) and not item_expected_in_scope(global_item, iso3):
+                if has_explicit_subnational_membership:
+                    if not item_expected_in_scope(global_item, iso3):
+                        continue
+                elif not item_expected_in_country(global_item, USA_PARENT_ISO3):
                     continue
             elif not item_expected_in_country(global_item, iso3):
                 continue
@@ -957,10 +1060,14 @@ def apply_country_overrides(
         if not tracking_requires_pack_entry(tracking_items.get(item_id), iso3):
             continue
 
+        has_explicit_subnational_membership = item_has_explicit_subnational_membership(global_item, iso3)
         if uses_subnational_expected_membership:
-            if usa_pack_item_ids is not None and item_id not in usa_pack_item_ids:
+            if usa_pack_item_ids is not None and not has_explicit_subnational_membership and item_id not in usa_pack_item_ids:
                 continue
-            if not item_expected_in_scope(global_item, iso3):
+            if has_explicit_subnational_membership:
+                if not item_expected_in_scope(global_item, iso3):
+                    continue
+            elif not item_expected_in_country(global_item, USA_PARENT_ISO3):
                 continue
         elif not item_expected_in_country(global_item, iso3):
             continue
@@ -1175,9 +1282,14 @@ def refresh_global_artifacts() -> list[str]:
         for item in items
         if isinstance(item, dict) and clean_text(item.get("id"))
     }
+    geofence_baseline_items = load_geofence_baseline_items()
+    manual_tracking_items = prune_geofence_tracking_items_to_delta(
+        load_geofence_tracking_items(),
+        geofence_baseline_items,
+    )
     geofence_tracking_items = merge_tracking_items(
         load_dan_tracking_items(animals_by_id),
-        load_geofence_tracking_items(),
+        manual_tracking_items,
     )
     regional_country_overrides = load_regional_country_override_items()
     countrywide_override_items = load_countrywide_override_items()
@@ -1191,8 +1303,19 @@ def refresh_global_artifacts() -> list[str]:
 
         item = deepcopy(raw_item)
         item_id = clean_text(item.get("id"))
-        current_expected = set(normalize_country_codes(item.get("expectedCountries")))
-        current_regional = set(normalize_country_codes(item.get("allowRegionalCountries")))
+        baseline_item = geofence_baseline_items.get(item_id)
+        if isinstance(baseline_item, dict):
+            current_expected = set(normalize_country_codes(baseline_item.get("expectedCountries")))
+            current_regional = set(normalize_country_codes(baseline_item.get("allowRegionalCountries")))
+            current_subdivisions = normalize_expected_subdivisions(baseline_item.get("expectedSubdivisions"))
+        else:
+            next_expected, next_regional, current_subdivisions = normalize_geofence_fields(
+                item.get("expectedCountries"),
+                item.get("allowRegionalCountries"),
+                item.get("expectedSubdivisions"),
+            )
+            current_expected = set(next_expected)
+            current_regional = set(next_regional)
         current_regional.update(regional_country_overrides.get(item_id, []))
         item_tracking = geofence_tracking_items.get(item_id)
 
@@ -1208,7 +1331,7 @@ def refresh_global_artifacts() -> list[str]:
         next_expected, next_regional, next_subdivisions = apply_item_country_overrides(
             sorted(current_expected),
             sorted(current_regional),
-            normalize_expected_subdivisions(item.get("expectedSubdivisions")),
+            current_subdivisions,
             item_tracking,
         )
         item["expectedCountries"] = next_expected
