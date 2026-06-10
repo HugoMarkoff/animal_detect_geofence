@@ -86,7 +86,7 @@ const GITHUB_API_ROOT = "https://api.github.com";
 const GITHUB_API_VERSION = "2022-11-28";
 const GITHUB_BLOB_WRITE_CONCURRENCY = 8;
 const DATA_ROOT = "./data";
-const DATA_VERSION = "20260610b";
+const DATA_VERSION = "20260610c";
 const ADMIN_GEOFENCE_TRACKING_PATH = "data/review-overrides/geofence-binary-overrides.json";
 const ADMIN_SIMPLE_GEOFENCE_PATH = "data/geofence-simple.json";
 const ADMIN_CHANGE_LOG_PATH = "data/review-overrides/change-log.json";
@@ -1468,24 +1468,34 @@ function adminRequestedCoverage(ticket) {
     return "removed";
   }
 
-  if (ticket.scope === "regional" || ticket.currentSpecies?.footprintCode === "regional") {
+  if (ticket.suggestionType === "accept_new") {
+    return ticket.currentSpecies?.footprintCode === "regional" ? "regional" : "national";
+  }
+
+  if (ticket.scope === "regional") {
     return "regional";
   }
 
   return "national";
 }
 
+function adminNeedsSharedGeofenceFiles(ticket) {
+  if (ticket.suggestionType === "removal") {
+    return true;
+  }
+
+  return adminRequestedCoverage(ticket) === "regional";
+}
+
 function buildFileInstructions(ticket) {
   const trackedSpecies = adminTrackedSpecies(ticket, { requireCatalog: false });
   const overridePath = adminOverrideTarget(ticket, { strict: false }).path;
   const requestedCoverage = adminRequestedCoverage(ticket);
+  const needsSharedGeofenceFiles = adminNeedsSharedGeofenceFiles(ticket);
   const itemIdText = trackedSpecies.itemId || "<CATALOG_ITEM_ID>";
-  const files = [
-    ADMIN_SIMPLE_GEOFENCE_PATH,
-    ADMIN_GEOFENCE_TRACKING_PATH,
-    overridePath,
-    ADMIN_CHANGE_LOG_PATH,
-  ];
+  const files = needsSharedGeofenceFiles
+    ? [ADMIN_SIMPLE_GEOFENCE_PATH, ADMIN_GEOFENCE_TRACKING_PATH, overridePath, ADMIN_CHANGE_LOG_PATH]
+    : [overridePath];
   const instructions = [];
   const matchedKeyText = trackedSpecies.matchedKey || "<MATCHED_KEY_FROM_ANIMALS_GLOBAL>";
   const trackedLabel = trackedSpecies.label || matchedKeyText;
@@ -1494,7 +1504,7 @@ function buildFileInstructions(ticket) {
     instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, set ${itemIdText} (${trackedLabel}) so ${ticket.countryIso3} is blocked and not marked in allow_regional.`);
     instructions.push(`After the rebuild, ${ADMIN_SIMPLE_GEOFENCE_PATH} should no longer list ${ticket.countryIso3} in expectedCountries for ${trackedLabel}.`);
     instructions.push(`In ${overridePath}, keep the remove action so the published country pack drops ${trackedSpecies.label}.`);
-  } else {
+  } else if (needsSharedGeofenceFiles) {
     instructions.push(`In ${ADMIN_GEOFENCE_TRACKING_PATH}, mirror the binary allow decision for ${itemIdText} (${matchedKeyText}) and ${ticket.countryIso3}.`);
     if (requestedCoverage === "regional") {
       instructions.push(`After the rebuild, ${ADMIN_SIMPLE_GEOFENCE_PATH} should list ${ticket.countryIso3} in both expectedCountries and allowRegionalCountries for ${trackedLabel}.`);
@@ -1503,10 +1513,17 @@ function buildFileInstructions(ticket) {
       instructions.push(`After the rebuild, ${ADMIN_SIMPLE_GEOFENCE_PATH} should list ${ticket.countryIso3} in expectedCountries but not allowRegionalCountries for ${trackedLabel}.`);
       instructions.push(`In ${overridePath}, keep ${trackedSpecies.label} as national coverage with no polygon.`);
     }
+  } else {
+    instructions.push(`In ${overridePath}, keep ${trackedSpecies.label} as national coverage with no polygon.`);
+    instructions.push(`Do not update ${ADMIN_GEOFENCE_TRACKING_PATH} or ${ADMIN_CHANGE_LOG_PATH}; this national approval stays as a country-local override only.`);
   }
 
-  instructions.push(`In ${ADMIN_CHANGE_LOG_PATH}, append this review change so later rebuilds and audits can trace who changed what.`);
-  instructions.push(`The workflow rebuilds ${ADMIN_SIMPLE_GEOFENCE_PATH}, data/animals-global.json, and the country packs from ${ADMIN_GEOFENCE_TRACKING_PATH} + override files.`);
+  if (needsSharedGeofenceFiles) {
+    instructions.push(`In ${ADMIN_CHANGE_LOG_PATH}, append this review change so later rebuilds and audits can trace who changed what.`);
+    instructions.push(`The workflow rebuilds ${ADMIN_SIMPLE_GEOFENCE_PATH}, data/animals-global.json, and the country packs from ${ADMIN_GEOFENCE_TRACKING_PATH} + override files.`);
+  } else {
+    instructions.push(`The workflow rebuilds the affected country pack from override files only and leaves ${ADMIN_SIMPLE_GEOFENCE_PATH} unchanged for this national local override.`);
+  }
   instructions.push(`The upstream source dataset is still ${sourceTaxonomyPath()} + ${sourceGeofencePath()}, but this repo keeps the generated simple geofence snapshot in ${ADMIN_SIMPLE_GEOFENCE_PATH}.`);
 
   return { files, instructions };
@@ -2003,6 +2020,17 @@ function serializeJsonFile(payload) {
 }
 
 async function buildAdminFileEntries(owner, repo, ticket, login, token) {
+  const fileEntries = [
+    {
+      path: adminOverrideTarget(ticket).path,
+      content: serializeJsonFile(buildAdminOverridePayload(ticket, login)),
+    },
+  ];
+
+  if (!adminNeedsSharedGeofenceFiles(ticket)) {
+    return fileEntries;
+  }
+
   const geofenceTrackingPayload = applyGeofenceDecision(
     await readGitHubContentsJson(owner, repo, ADMIN_GEOFENCE_TRACKING_PATH, token, createEmptyGeofenceTrackingPayload),
     ticket,
@@ -2014,11 +2042,7 @@ async function buildAdminFileEntries(owner, repo, ticket, login, token) {
     login,
   );
 
-  return [
-    {
-      path: adminOverrideTarget(ticket).path,
-      content: serializeJsonFile(buildAdminOverridePayload(ticket, login)),
-    },
+  fileEntries.push(
     {
       path: ADMIN_GEOFENCE_TRACKING_PATH,
       content: serializeJsonFile(geofenceTrackingPayload),
@@ -2027,7 +2051,9 @@ async function buildAdminFileEntries(owner, repo, ticket, login, token) {
       path: ADMIN_CHANGE_LOG_PATH,
       content: serializeJsonFile(changeLogPayload),
     },
-  ];
+  );
+
+  return fileEntries;
 }
 
 function adminCommitMessage(ticket) {

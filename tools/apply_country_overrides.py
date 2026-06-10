@@ -725,6 +725,39 @@ def load_regional_country_override_items() -> dict[str, list[str]]:
     }
 
 
+def load_countrywide_override_items() -> dict[str, list[str]]:
+    countrywide_by_item: dict[str, set[str]] = defaultdict(set)
+    if not OVERRIDES_DIR.exists():
+        return {}
+
+    for path in sorted(OVERRIDES_DIR.glob("*/*.json")):
+        override = load_override_file(path)
+        if override["action"] != "upsert":
+            continue
+
+        patch = override.get("patch")
+        if not isinstance(patch, dict):
+            continue
+
+        observation_profile = patch.get("observationProfile")
+        if not isinstance(observation_profile, dict):
+            continue
+
+        if clean_text(observation_profile.get("code")).lower() != "countrywide":
+            continue
+
+        item_id = clean_text(override.get("itemId"))
+        country_iso3 = clean_text(override.get("countryIso3")).upper()
+        if item_id and country_iso3:
+            countrywide_by_item[item_id].add(country_iso3)
+
+    return {
+        item_id: sorted(countries)
+        for item_id, countries in countrywide_by_item.items()
+        if countries
+    }
+
+
 def collect_override_files() -> dict[str, list[Path]]:
     by_country: dict[str, list[Path]] = defaultdict(list)
     if not OVERRIDES_DIR.exists():
@@ -1144,6 +1177,7 @@ def refresh_global_artifacts() -> list[str]:
         load_geofence_tracking_items(),
     )
     regional_country_overrides = load_regional_country_override_items()
+    countrywide_override_items = load_countrywide_override_items()
     next_items: list[Any] = []
     simple_items: list[dict[str, Any]] = []
 
@@ -1154,13 +1188,27 @@ def refresh_global_artifacts() -> list[str]:
 
         item = deepcopy(raw_item)
         item_id = clean_text(item.get("id"))
+        current_expected = set(normalize_country_codes(item.get("expectedCountries")))
         current_regional = set(normalize_country_codes(item.get("allowRegionalCountries")))
         current_regional.update(regional_country_overrides.get(item_id, []))
+        item_tracking = geofence_tracking_items.get(item_id)
+
+        # National country-only overrides should stay local to the pack. If an older
+        # admin save incorrectly leaked the same scope into allowRegionalCountries,
+        # scrub that stale global carryover before applying the current shared tracking.
+        for country_iso3 in countrywide_override_items.get(item_id, []):
+            if country_iso3 not in current_regional:
+                continue
+            if scope_tracking_decision(item_tracking, country_iso3):
+                continue
+            current_regional.discard(country_iso3)
+            current_expected.discard(country_iso3)
+
         next_expected, next_regional, next_subdivisions = apply_item_country_overrides(
-            normalize_country_codes(item.get("expectedCountries")),
+            sorted(current_expected),
             sorted(current_regional),
             normalize_expected_subdivisions(item.get("expectedSubdivisions")),
-            geofence_tracking_items.get(item_id),
+            item_tracking,
         )
         item["expectedCountries"] = next_expected
         item["allowRegionalCountries"] = next_regional
