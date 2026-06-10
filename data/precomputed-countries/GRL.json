@@ -7,19 +7,19 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 107,
+    "total": 106,
     "statusCounts": {
       "likely_false": 18,
       "new_record": 7,
       "unlisted": 52,
       "likely_true_both": 11,
-      "likely_true_one_source": 19
+      "likely_true_one_source": 18
     },
     "bucketCounts": {
       "Needs Review": 18,
       "New": 7,
       "Unlisted": 52,
-      "Likely Valid": 30
+      "Likely Valid": 29
     }
   },
   "entries": [
@@ -2216,23 +2216,6 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
-    },
-    {
-      "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
-      "countryIso3": "GRL",
-      "status": "likely_true_one_source",
-      "bucket": "Likely Valid",
-      "expected": true,
-      "gbifPresent": true,
-      "inatPresent": null,
-      "gbifCount": null,
-      "inatCount": null,
-      "observationProfile": {
-        "code": "country_pack_only",
-        "label": "Whole pack coverage",
-        "short": "Pack-wide",
-        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
-      }
     },
     {
       "itemId": "56681b45-c922-4d50-a3c7-48a85795346b",
@@ -6303,13 +6286,13 @@
   ],
   "manualOverrideRemovedEntries": [
     {
-      "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
-      "sourceFile": "data/review-overrides/countries/GRL/a5121a63-c9d0-4849-8db7-e7d8bbf4e581.json",
-      "updatedAtUtc": "2026-06-10T02:23:44.660Z",
+      "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
+      "sourceFile": "data/review-overrides/countries/GRL/5530da0c-f031-4392-b86e-bd1af72de752.json",
+      "updatedAtUtc": "2026-06-10T02:25:18.365Z",
       "updatedBy": "HugoMarkoff",
-      "reason": "Please remove military sand-dragon (ctenophorous isolepsis) from the Greenland country pack. Applied from the admin panel.",
+      "reason": "Please remove pacific gophersnake (pituophis catenifer catenifer) from the Greenland country pack. Applied from the admin panel.",
       "baseEntry": {
-        "itemId": "a5121a63-c9d0-4849-8db7-e7d8bbf4e581",
+        "itemId": "5530da0c-f031-4392-b86e-bd1af72de752",
         "countryIso3": "GRL",
         "status": "likely_true_one_source",
         "bucket": "Likely Valid",
@@ -6328,12 +6311,13 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 13,
-    "appliedAtUtc": "2026-06-10T02:24:06.376916+00:00",
+    "count": 14,
+    "appliedAtUtc": "2026-06-10T02:25:40.176563+00:00",
     "items": [
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
       "4173d2d9-1d0e-42cd-bf66-f295e62a7c08",
+      "5530da0c-f031-4392-b86e-bd1af72de752",
       "601cf098-9876-4912-84bb-0926834305e9",
       "8a766598-fcfe-4c06-b899-7213f9b20dfa",
       "9212982e-8a58-4775-a6ac-e9a43110d8f5",
