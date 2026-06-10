@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 109,
+    "total": 108,
     "statusCounts": {
-      "likely_false": 19,
+      "likely_false": 18,
       "new_record": 7,
       "unlisted": 52,
       "likely_true_both": 11,
       "likely_true_one_source": 20
     },
     "bucketCounts": {
-      "Needs Review": 19,
+      "Needs Review": 18,
       "New": 7,
       "Unlisted": 52,
       "Likely Valid": 31
@@ -4493,58 +4493,6 @@
       "tags": []
     },
     {
-      "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
-      "countryIso3": "GRL",
-      "status": "likely_false",
-      "bucket": "Needs Review",
-      "expected": true,
-      "gbifPresent": false,
-      "inatPresent": false,
-      "gbifCount": 0,
-      "inatCount": 0,
-      "rawGbifPresent": false,
-      "rawInatPresent": false,
-      "rawGbifCount": 0,
-      "rawInatCount": 0,
-      "gbifUsageKey": 5218786,
-      "inatTaxonId": 41663,
-      "inatPlaceId": 7704,
-      "managedEvidence": {
-        "domesticNamed": false,
-        "materialSampleCount": 0,
-        "atlasCount": 0,
-        "managedCount": 0,
-        "captiveInatCount": 0,
-        "needsReview": false,
-        "note": ""
-      },
-      "evidenceQuality": {
-        "rawTotal": 0,
-        "qualifiedTotal": 0,
-        "specimenOrSampleCount": 0,
-        "staleGbifCount": 0,
-        "staleInatCount": 0,
-        "captiveInatCount": 0,
-        "rejected": false,
-        "note": ""
-      },
-      "observationProfile": {
-        "code": "no_points",
-        "label": "No mapped points",
-        "short": "No points",
-        "note": "No mapped coordinates were returned in the sampled observations.",
-        "significant": false,
-        "totalPoints": 0,
-        "maxDistanceKm": 0,
-        "unique25kmCells": 0,
-        "unique50kmCells": 0,
-        "countryDiameterKm": 1660.7065823008018,
-        "spreadRatio": 0,
-        "footprintPolygonLatLngs": []
-      },
-      "tags": []
-    },
-    {
       "itemId": "b77d7237-243a-490e-b547-90e52983c23a",
       "countryIso3": "GRL",
       "status": "unlisted",
@@ -6372,13 +6320,13 @@
   ],
   "manualOverrideRemovedEntries": [
     {
-      "itemId": "94d8284e-6193-43b5-b80c-9029cf951675",
-      "sourceFile": "data/review-overrides/countries/GRL/94d8284e-6193-43b5-b80c-9029cf951675.json",
-      "updatedAtUtc": "2026-06-10T02:10:59.713Z",
+      "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
+      "sourceFile": "data/review-overrides/countries/GRL/b57debc1-dff2-48d3-a400-f2b5021e71b0.json",
+      "updatedAtUtc": "2026-06-10T02:18:44.166Z",
       "updatedBy": "HugoMarkoff",
-      "reason": "Please remove wild turkey (meleagris gallopavo) from the Greenland country pack. Applied from the admin panel.",
+      "reason": "Please remove northern raccoon (procyon lotor) from the Greenland country pack. Applied from the admin panel.",
       "baseEntry": {
-        "itemId": "94d8284e-6193-43b5-b80c-9029cf951675",
+        "itemId": "b57debc1-dff2-48d3-a400-f2b5021e71b0",
         "countryIso3": "GRL",
         "status": "likely_false",
         "bucket": "Needs Review",
@@ -6391,8 +6339,8 @@
         "rawInatPresent": false,
         "rawGbifCount": 0,
         "rawInatCount": 0,
-        "gbifUsageKey": 9606290,
-        "inatTaxonId": 906,
+        "gbifUsageKey": 5218786,
+        "inatTaxonId": 41663,
         "inatPlaceId": 7704,
         "managedEvidence": {
           "domesticNamed": false,
@@ -6432,8 +6380,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 11,
-    "appliedAtUtc": "2026-06-10T02:11:23.748114+00:00",
+    "count": 12,
+    "appliedAtUtc": "2026-06-10T02:19:08.940740+00:00",
     "items": [
       "189cdd40-b83d-48d1-a4fa-e43a104f2a23",
       "294ffd0a-220a-4d80-8e58-7b1ff62bdc32",
@@ -6443,6 +6391,7 @@
       "9212982e-8a58-4775-a6ac-e9a43110d8f5",
       "94d8284e-6193-43b5-b80c-9029cf951675",
       "b1e08fbb-d8b6-47b1-8559-a39c73f1f0ae",
+      "b57debc1-dff2-48d3-a400-f2b5021e71b0",
       "c10547c3-1748-48bf-a451-8066c820f22f",
       "c150a21e-952d-4665-8a62-a319841c5a56",
       "cae9534f-f302-4229-9e11-b91138333d92"
