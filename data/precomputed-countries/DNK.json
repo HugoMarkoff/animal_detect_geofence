@@ -11,14 +11,14 @@
     "statusCounts": {
       "unlisted": 213,
       "likely_true_both": 89,
-      "new_record": 46,
-      "likely_true_one_source": 34,
+      "new_record": 45,
+      "likely_true_one_source": 35,
       "likely_false": 4
     },
     "bucketCounts": {
       "Unlisted": 213,
-      "Likely Valid": 123,
-      "New": 46,
+      "Likely Valid": 124,
+      "New": 45,
       "Needs Review": 4
     }
   },
@@ -24846,8 +24846,8 @@
     {
       "itemId": "e415387d-26d7-4ef1-9c47-539870f7429b",
       "countryIso3": "DNK",
-      "status": "new_record",
-      "bucket": "New",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
       "expected": false,
       "gbifPresent": true,
       "inatPresent": true,
@@ -24895,40 +24895,313 @@
         "coverageRatio": 0.43453535468001914,
         "footprintPolygonLatLngs": [
           [
-            56.229203512537204,
-            9.26962966463365
+            56.511122,
+            10.529923
           ],
           [
-            55.6751629374429,
-            13.060508125802588
+            56.467562,
+            10.327743
           ],
           [
-            55.68655054136958,
-            13.077709693653722
+            56.36904,
+            10.30262
           ],
           [
-            55.819584349852676,
-            13.10742695969588
+            56.300784,
+            10.39713
           ],
           [
-            56.45063962104922,
-            9.469578501830675
+            56.277563,
+            10.494033
           ],
           [
-            56.45284418298977,
-            9.395404505246903
+            56.20183,
+            10.331332
           ],
           [
-            56.42319288189365,
-            9.32621941919304
+            56.075981,
+            10.527795
+          ],
+          [
+            56.140302,
+            10.742174
+          ],
+          [
+            56.37827,
+            10.940063
+          ],
+          [
+            56.464851,
+            10.964799
+          ],
+          [
+            56.551236,
+            10.816383
           ]
         ],
-        "code": "countrywide",
-        "label": "National footprint",
-        "short": "National",
-        "note": "Dropped 7 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+        "code": "regional",
+        "label": "Regional footprint",
+        "short": "Regional",
+        "note": "Manual admin override applied from the review desk.",
+        "footprintPolygonsLatLngs": [
+          [
+            [
+              56.511122,
+              10.529923
+            ],
+            [
+              56.467562,
+              10.327743
+            ],
+            [
+              56.36904,
+              10.30262
+            ],
+            [
+              56.300784,
+              10.39713
+            ],
+            [
+              56.277563,
+              10.494033
+            ],
+            [
+              56.20183,
+              10.331332
+            ],
+            [
+              56.075981,
+              10.527795
+            ],
+            [
+              56.140302,
+              10.742174
+            ],
+            [
+              56.37827,
+              10.940063
+            ],
+            [
+              56.464851,
+              10.964799
+            ],
+            [
+              56.551236,
+              10.816383
+            ]
+          ],
+          [
+            [
+              56.245683,
+              9.562899
+            ],
+            [
+              56.106566,
+              9.244078
+            ],
+            [
+              55.943882,
+              9.285305
+            ],
+            [
+              55.828361,
+              9.408986
+            ],
+            [
+              55.839158,
+              9.623365
+            ],
+            [
+              55.954647,
+              9.870726
+            ],
+            [
+              56.068259,
+              9.922947
+            ],
+            [
+              56.213624,
+              9.914702
+            ],
+            [
+              56.294509,
+              9.698143
+            ]
+          ],
+          [
+            [
+              56.003823,
+              12.584874
+            ],
+            [
+              56.042194,
+              12.41447
+            ],
+            [
+              55.968488,
+              12.356752
+            ],
+            [
+              55.865371,
+              12.213833
+            ],
+            [
+              55.707061,
+              12.460709
+            ],
+            [
+              55.802927,
+              12.59331
+            ],
+            [
+              55.912704,
+              12.473338
+            ]
+          ],
+          [
+            [
+              55.29687,
+              12.019419
+            ],
+            [
+              55.321364,
+              11.869877
+            ],
+            [
+              55.289383,
+              11.782545
+            ],
+            [
+              55.195332,
+              11.851932
+            ],
+            [
+              55.153689,
+              11.830398
+            ],
+            [
+              55.111317,
+              11.850736
+            ],
+            [
+              55.109266,
+              12.03856
+            ],
+            [
+              55.140025,
+              12.033775
+            ],
+            [
+              55.135925,
+              12.092395
+            ],
+            [
+              55.190556,
+              12.128285
+            ],
+            [
+              55.213751,
+              12.160586
+            ]
+          ]
+        ]
       },
-      "tags": []
+      "tags": [],
+      "manualOverride": {
+        "sourceFile": "data/review-overrides/countries/DNK/e415387d-26d7-4ef1-9c47-539870f7429b.json",
+        "action": "upsert",
+        "updatedAtUtc": "2026-06-11T08:07:50.852Z",
+        "updatedBy": "HugoMarkoff",
+        "reason": "Please update sika deer (cervus nippon) to regional coverage in Denmark. The selected regional areas show the requested corrected footprint. Applied from the admin panel.",
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "e415387d-26d7-4ef1-9c47-539870f7429b",
+          "countryIso3": "DNK",
+          "status": "likely_true_one_source",
+          "bucket": "Likely Valid",
+          "expected": true,
+          "gbifPresent": true,
+          "inatPresent": true,
+          "gbifCount": 541,
+          "inatCount": 165,
+          "rawGbifPresent": true,
+          "rawInatPresent": true,
+          "rawGbifCount": 953,
+          "rawInatCount": 169,
+          "gbifUsageKey": 2440954,
+          "inatTaxonId": 42210,
+          "inatPlaceId": 8051,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 1122,
+            "qualifiedTotal": 706,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "significant": true,
+            "totalPoints": 90,
+            "corePointCount": 83,
+            "outlierPointCount": 7,
+            "clusterCount": 2,
+            "clusterSpreadKm": 175.82698331830878,
+            "maxDistanceKm": 181.42435305219576,
+            "unique25kmCells": 5,
+            "unique50kmCells": 3,
+            "countryDiameterKm": 234.24129640355284,
+            "spreadRatio": 0.7745190785643381,
+            "coverageAreaKm2": 18725.866574580745,
+            "coverageRatio": 0.43453535468001914,
+            "footprintPolygonLatLngs": [
+              [
+                56.229203512537204,
+                9.26962966463365
+              ],
+              [
+                55.6751629374429,
+                13.060508125802588
+              ],
+              [
+                55.68655054136958,
+                13.077709693653722
+              ],
+              [
+                55.819584349852676,
+                13.10742695969588
+              ],
+              [
+                56.45063962104922,
+                9.469578501830675
+              ],
+              [
+                56.45284418298977,
+                9.395404505246903
+              ],
+              [
+                56.42319288189365,
+                9.32621941919304
+              ]
+            ],
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "Dropped 7 likely outlier points before scoring. 2 dense observation areas were found in Denmark, so this is treated as national rather than a single regional pocket."
+          },
+          "tags": []
+        }
+      }
     },
     {
       "itemId": "e6c03f93-b93d-4049-ae1a-1e0ea29ebba9",
@@ -28092,8 +28365,8 @@
     }
   ],
   "manualOverrideSummary": {
-    "count": 18,
-    "appliedAtUtc": "2026-06-10T09:22:27.481870+00:00",
+    "count": 19,
+    "appliedAtUtc": "2026-06-11T08:08:16.344992+00:00",
     "items": [
       "18c5f185-04c8-43fc-9325-d38f7daa2700",
       "2757e36f-7bc1-4a8a-9ad7-b9b64dbd6ab0",
@@ -28112,6 +28385,7 @@
       "c150a21e-952d-4665-8a62-a319841c5a56",
       "cae9534f-f302-4229-9e11-b91138333d92",
       "d372cda5-a8ca-4b7b-97ed-4e4fab9c9b4b",
+      "e415387d-26d7-4ef1-9c47-539870f7429b",
       "eb3829b0-772e-4088-ae90-f11b9fe38284"
     ]
   }
