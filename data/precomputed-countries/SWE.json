@@ -7945,16 +7945,60 @@
         "significant": true,
         "footprintPolygonLatLngs": []
       },
+      "bucket": "Likely Valid",
       "manualOverride": {
         "sourceFile": "data/review-overrides/countries/SWE/746d3e98-64af-4897-9cd3-c09b169a8c69.json",
         "action": "upsert",
         "updatedAtUtc": "2026-06-09T09:01:16.813Z",
         "updatedBy": "HugoMarkoff",
         "reason": "Please accept raccoon dog (nyctereutes procyonoides) into the permanent Sweden country pack and keep its current national footprint coverage. Applied from the admin panel.",
-        "addedByOverride": true,
-        "baseEntry": null
-      },
-      "bucket": "Likely Valid"
+        "addedByOverride": false,
+        "baseEntry": {
+          "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+          "countryIso3": "SWE",
+          "status": "likely_true_one_source",
+          "expected": true,
+          "gbifPresent": null,
+          "inatPresent": null,
+          "gbifCount": null,
+          "inatCount": null,
+          "rawGbifPresent": null,
+          "rawInatPresent": null,
+          "rawGbifCount": null,
+          "rawInatCount": null,
+          "gbifUsageKey": null,
+          "inatTaxonId": null,
+          "inatPlaceId": null,
+          "managedEvidence": {
+            "domesticNamed": false,
+            "materialSampleCount": 0,
+            "atlasCount": 0,
+            "managedCount": 0,
+            "captiveInatCount": 0,
+            "needsReview": false,
+            "note": ""
+          },
+          "evidenceQuality": {
+            "rawTotal": 0,
+            "qualifiedTotal": 0,
+            "specimenOrSampleCount": 0,
+            "staleGbifCount": 0,
+            "staleInatCount": 0,
+            "captiveInatCount": 0,
+            "rejected": false,
+            "note": ""
+          },
+          "observationProfile": {
+            "code": "countrywide",
+            "label": "National footprint",
+            "short": "National",
+            "note": "Added from expected country membership during pack refresh.",
+            "significant": false,
+            "footprintPolygonLatLngs": []
+          },
+          "bucket": "Likely Valid"
+        }
+      }
     },
     {
       "itemId": "74ea542e-855f-436c-980f-ab33014de432",

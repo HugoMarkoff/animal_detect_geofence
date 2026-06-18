@@ -1444,6 +1444,7 @@ function adminTrackedSpecies(ticket, options = {}) {
       binomial: fallbackBinomial,
       classLabel: cleanText(ticket.proposedSpecies?.classLabel || ticket.currentSpecies?.classLabel),
       expectedCountries: [],
+      expectedSubdivisions: {},
     };
   }
 
@@ -1460,7 +1461,49 @@ function adminTrackedSpecies(ticket, options = {}) {
     binomial: cleanText(animal.binomial),
     classLabel: cleanText(animal.classLabel),
     expectedCountries: Array.isArray(animal.expectedCountries) ? animal.expectedCountries.map((iso3) => cleanText(iso3).toUpperCase()).filter(Boolean) : [],
+    expectedSubdivisions: normalizeTrackedExpectedSubdivisions(animal.expectedSubdivisions),
   };
+}
+
+function normalizeTrackedExpectedSubdivisions(rawExpectedSubdivisions) {
+  if (!rawExpectedSubdivisions || typeof rawExpectedSubdivisions !== "object" || Array.isArray(rawExpectedSubdivisions)) {
+    return {};
+  }
+
+  const rawUsaStates = rawExpectedSubdivisions.USA;
+  if (!Array.isArray(rawUsaStates)) {
+    return {};
+  }
+
+  return {
+    USA: Array.from(new Set(rawUsaStates.map((stateCode) => cleanText(stateCode).toUpperCase()).filter((stateCode) => /^[A-Z]{2}$/.test(stateCode)))).sort(),
+  };
+}
+
+function adminScopeAlreadyExpected(trackedSpecies, scopeIso3) {
+  const normalizedScope = cleanText(scopeIso3).toUpperCase();
+  if (!normalizedScope) {
+    return false;
+  }
+
+  const expectedCountries = Array.isArray(trackedSpecies?.expectedCountries)
+    ? trackedSpecies.expectedCountries.map((iso3) => cleanText(iso3).toUpperCase()).filter(Boolean)
+    : [];
+  const usaStateCode = usaStateCodeFromPackKey(normalizedScope);
+  if (!usaStateCode) {
+    return expectedCountries.includes(normalizedScope);
+  }
+
+  const expectedSubdivisions = normalizeTrackedExpectedSubdivisions(trackedSpecies?.expectedSubdivisions);
+  const rawUsaStates = Array.isArray(expectedSubdivisions.USA) ? expectedSubdivisions.USA : null;
+  if (rawUsaStates) {
+    if (!rawUsaStates.length) {
+      return true;
+    }
+    return rawUsaStates.includes(usaStateCode);
+  }
+
+  return expectedCountries.includes("USA");
 }
 
 function adminRequestedCoverage(ticket) {
@@ -1479,23 +1522,29 @@ function adminRequestedCoverage(ticket) {
   return "national";
 }
 
-function adminNeedsSharedGeofenceFiles(ticket) {
+function adminNeedsSharedGeofenceFiles(ticket, trackedSpecies = null) {
+  const requestedCoverage = adminRequestedCoverage(ticket);
   if (ticket.suggestionType === "removal") {
     return true;
   }
 
-  return adminRequestedCoverage(ticket) === "regional";
+  if (requestedCoverage === "regional") {
+    return true;
+  }
+
+  const tracked = trackedSpecies || adminTrackedSpecies(ticket, { requireCatalog: false });
+  return !adminScopeAlreadyExpected(tracked, ticket.countryIso3);
 }
 
 function buildFileInstructions(ticket) {
   const trackedSpecies = adminTrackedSpecies(ticket, { requireCatalog: false });
   const overridePath = adminOverrideTarget(ticket, { strict: false }).path;
   const requestedCoverage = adminRequestedCoverage(ticket);
-  const needsSharedGeofenceFiles = adminNeedsSharedGeofenceFiles(ticket);
+  const needsSharedGeofenceFiles = adminNeedsSharedGeofenceFiles(ticket, trackedSpecies);
   const itemIdText = trackedSpecies.itemId || "<CATALOG_ITEM_ID>";
   const files = needsSharedGeofenceFiles
     ? [ADMIN_SIMPLE_GEOFENCE_PATH, ADMIN_GEOFENCE_TRACKING_PATH, overridePath, ADMIN_CHANGE_LOG_PATH]
-    : [overridePath];
+    : [overridePath, ADMIN_CHANGE_LOG_PATH];
   const instructions = [];
   const matchedKeyText = trackedSpecies.matchedKey || "<MATCHED_KEY_FROM_ANIMALS_GLOBAL>";
   const trackedLabel = trackedSpecies.label || matchedKeyText;
@@ -1515,14 +1564,14 @@ function buildFileInstructions(ticket) {
     }
   } else {
     instructions.push(`In ${overridePath}, keep ${trackedSpecies.label} as national coverage with no polygon.`);
-    instructions.push(`Do not update ${ADMIN_GEOFENCE_TRACKING_PATH} or ${ADMIN_CHANGE_LOG_PATH}; this national approval stays as a country-local override only.`);
+    instructions.push(`Do not update ${ADMIN_GEOFENCE_TRACKING_PATH} or ${ADMIN_SIMPLE_GEOFENCE_PATH}; this approval stays country-local because ${trackedLabel} is already expected in ${ticket.countryIso3}.`);
   }
 
+  instructions.push(`In ${ADMIN_CHANGE_LOG_PATH}, append this review change so later rebuilds and audits can trace who changed what.`);
   if (needsSharedGeofenceFiles) {
-    instructions.push(`In ${ADMIN_CHANGE_LOG_PATH}, append this review change so later rebuilds and audits can trace who changed what.`);
     instructions.push(`The workflow rebuilds ${ADMIN_SIMPLE_GEOFENCE_PATH}, data/animals-global.json, and the country packs from ${ADMIN_GEOFENCE_TRACKING_PATH} + override files.`);
   } else {
-    instructions.push(`The workflow rebuilds the affected country pack from override files only and leaves ${ADMIN_SIMPLE_GEOFENCE_PATH} unchanged for this national local override.`);
+    instructions.push(`The workflow rebuilds the affected country pack from override files only and leaves ${ADMIN_SIMPLE_GEOFENCE_PATH} unchanged for this local-only national override.`);
   }
   instructions.push(`The upstream source dataset is still ${sourceTaxonomyPath()} + ${sourceGeofencePath()}, but this repo keeps the generated simple geofence snapshot in ${ADMIN_SIMPLE_GEOFENCE_PATH}.`);
 
@@ -1603,7 +1652,12 @@ function applyGeofenceDecision(trackingPayload, ticket, login) {
 function appendChangeLog(changeLogPayload, ticket, login) {
   const payload = cloneJson(changeLogPayload || createEmptyChangeLogPayload());
   const trackedSpecies = adminTrackedSpecies(ticket);
+  const sharedGeofence = adminNeedsSharedGeofenceFiles(ticket, trackedSpecies);
   const updatedAtUtc = new Date().toISOString();
+  const files = [adminOverrideTarget(ticket).path];
+  if (sharedGeofence) {
+    files.push(ADMIN_GEOFENCE_TRACKING_PATH);
+  }
 
   payload.schemaVersion = ADMIN_CHANGE_LOG_SCHEMA_VERSION;
   payload.updatedAtUtc = updatedAtUtc;
@@ -1620,10 +1674,8 @@ function appendChangeLog(changeLogPayload, ticket, login) {
     matchedKey: trackedSpecies.matchedKey,
     speciesLabel: trackedSpecies.label,
     sourceDataset: cleanText(globalDatasetInfo?.dataset),
-    files: [
-      adminOverrideTarget(ticket).path,
-      ADMIN_GEOFENCE_TRACKING_PATH,
-    ],
+    sharedGeofence,
+    files,
     reason: ticket.explanation,
   });
   return payload;
@@ -2025,33 +2077,28 @@ async function buildAdminFileEntries(owner, repo, ticket, login, token) {
       path: adminOverrideTarget(ticket).path,
       content: serializeJsonFile(buildAdminOverridePayload(ticket, login)),
     },
+    {
+      path: ADMIN_CHANGE_LOG_PATH,
+      content: serializeJsonFile(appendChangeLog(
+        await readGitHubContentsJson(owner, repo, ADMIN_CHANGE_LOG_PATH, token, createEmptyChangeLogPayload),
+        ticket,
+        login,
+      )),
+    },
   ];
 
   if (!adminNeedsSharedGeofenceFiles(ticket)) {
     return fileEntries;
   }
 
-  const geofenceTrackingPayload = applyGeofenceDecision(
-    await readGitHubContentsJson(owner, repo, ADMIN_GEOFENCE_TRACKING_PATH, token, createEmptyGeofenceTrackingPayload),
-    ticket,
-    login,
-  );
-  const changeLogPayload = appendChangeLog(
-    await readGitHubContentsJson(owner, repo, ADMIN_CHANGE_LOG_PATH, token, createEmptyChangeLogPayload),
-    ticket,
-    login,
-  );
-
-  fileEntries.push(
-    {
-      path: ADMIN_GEOFENCE_TRACKING_PATH,
-      content: serializeJsonFile(geofenceTrackingPayload),
-    },
-    {
-      path: ADMIN_CHANGE_LOG_PATH,
-      content: serializeJsonFile(changeLogPayload),
-    },
-  );
+  fileEntries.push({
+    path: ADMIN_GEOFENCE_TRACKING_PATH,
+    content: serializeJsonFile(applyGeofenceDecision(
+      await readGitHubContentsJson(owner, repo, ADMIN_GEOFENCE_TRACKING_PATH, token, createEmptyGeofenceTrackingPayload),
+      ticket,
+      login,
+    )),
+  });
 
   return fileEntries;
 }

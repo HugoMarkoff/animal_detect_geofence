@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - data/review-overrides/**
+      - tools/cleanup_review_tracking.py
       - tools/apply_country_overrides.py
       - .github/workflows/apply-country-overrides.yml
   workflow_dispatch:
@@ -30,6 +31,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Normalize review tracking
+        run: python tools/cleanup_review_tracking.py
+
       - name: Apply tracked overrides
         run: python tools/apply_country_overrides.py
 
@@ -37,11 +41,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet --exit-code -- data/precomputed-countries data/animals-global.json data/geofence-simple.json; then
+          if git diff --quiet --exit-code -- data/review-overrides data/precomputed-countries data/animals-global.json data/geofence-simple.json; then
             echo "No regenerated override-derived artifacts to commit."
             exit 0
           fi
-          git add data/precomputed-countries data/animals-global.json data/geofence-simple.json
+          git add data/review-overrides data/precomputed-countries data/animals-global.json data/geofence-simple.json
           git commit -m "Apply country overrides"
           git push origin HEAD:main
 
