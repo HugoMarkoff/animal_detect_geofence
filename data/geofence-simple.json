@@ -26634,7 +26634,7 @@
     },
     {
       "itemId": "8c9ba5cf-b98b-4b25-8543-9fcf0e69aed3",
-      "commonName": "faucon p\u00e8lerin",
+      "commonName": "peregrine falcon",
       "binomial": "falco peregrinus",
       "classLabel": "Bird",
       "matchedKey": "aves;falconiformes;falconidae;falco;peregrinus",
@@ -33069,14 +33069,18 @@
     {
       "itemId": "601cf098-9876-4912-84bb-0926834305e9",
       "commonName": "grizzly bear",
-      "binomial": "ursus u. arctos",
+      "binomial": "ursus arctos horribilis",
       "classLabel": "Mammal",
-      "matchedKey": "mammalia;carnivora;ursidae;ursus;",
-      "matchLevel": 4,
+      "matchedKey": "mammalia;carnivora;ursidae;ursus;arctos horribilis",
+      "matchLevel": 5,
       "expectedCountries": [
-        "CAN"
+        "CAN",
+        "USA"
       ],
-      "allowRegionalCountries": []
+      "allowRegionalCountries": [],
+      "expectedSubdivisions": {
+        "USA": []
+      }
     },
     {
       "itemId": "3340e172-70df-44d8-9a87-3b4621de5f94",
