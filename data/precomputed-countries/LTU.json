@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 185,
+    "total": 187,
     "statusCounts": {
-      "likely_true_both": 106,
+      "likely_true_both": 107,
       "unlisted": 43,
-      "likely_true_one_source": 14,
+      "likely_true_one_source": 15,
       "new_record": 19,
       "likely_false": 3
     },
     "bucketCounts": {
-      "Likely Valid": 120,
+      "Likely Valid": 122,
       "Unlisted": 43,
       "New": 19,
       "Needs Review": 3
@@ -1385,6 +1385,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "LTU",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -4938,6 +4955,58 @@
       "evidenceQuality": {
         "rawTotal": 209,
         "qualifiedTotal": 209,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "code": "no_points",
+        "label": "No mapped points",
+        "short": "No points",
+        "note": "No mapped coordinates were returned in the sampled observations.",
+        "significant": false,
+        "totalPoints": 0,
+        "maxDistanceKm": 0,
+        "unique25kmCells": 0,
+        "unique50kmCells": 0,
+        "countryDiameterKm": 288.3444854184074,
+        "spreadRatio": 0,
+        "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+      "countryIso3": "LTU",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 52,
+      "inatCount": 64,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 52,
+      "rawInatCount": 64,
+      "gbifUsageKey": 2434552,
+      "inatTaxonId": 855311,
+      "inatPlaceId": 8266,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 116,
+        "qualifiedTotal": 116,
         "specimenOrSampleCount": 0,
         "staleGbifCount": 0,
         "staleInatCount": 0,

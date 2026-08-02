@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 139,
+    "total": 140,
     "statusCounts": {
-      "likely_true_one_source": 28,
+      "likely_true_one_source": 29,
       "likely_true_both": 50,
       "new_record": 31,
       "unlisted": 23,
       "likely_false": 7
     },
     "bucketCounts": {
-      "Likely Valid": 78,
+      "Likely Valid": 79,
       "New": 31,
       "Unlisted": 23,
       "Needs Review": 7
@@ -1487,6 +1487,23 @@
       "tags": [
         "not in geofence"
       ]
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "CYM",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",

@@ -7,13 +7,13 @@
   "selectionMode": "expected-country",
   "candidateFile": "/home/hugo/Desktop/Danish_Species_Map/country-validation/AFG/new_candidates.csv",
   "summary": {
-    "total": 135,
+    "total": 136,
     "statusCounts": {
-      "likely_true_one_source": 103,
+      "likely_true_one_source": 104,
       "likely_false": 32
     },
     "bucketCounts": {
-      "Likely Valid": 103,
+      "Likely Valid": 104,
       "Needs Review": 32
     }
   },
@@ -1233,6 +1233,23 @@
         "note": "Dropped 5 likely outlier points before scoring. 3 dense observation areas were found in Afghanistan, so this is treated as national rather than a single regional pocket."
       },
       "bucket": "Likely Valid"
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "AFG",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2d3d0e66-8be4-4d10-9774-e2837b358353",

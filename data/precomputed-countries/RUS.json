@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 318,
+    "total": 320,
     "statusCounts": {
-      "likely_true_both": 181,
+      "likely_true_both": 182,
       "unlisted": 78,
-      "likely_true_one_source": 29,
+      "likely_true_one_source": 30,
       "new_record": 23,
       "likely_false": 7
     },
     "bucketCounts": {
-      "Likely Valid": 210,
+      "Likely Valid": 212,
       "Unlisted": 78,
       "New": 23,
       "Needs Review": 7
@@ -2269,6 +2269,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "RUS",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
@@ -8309,6 +8326,101 @@
         "countryDiameterKm": 4665.850721230783,
         "spreadRatio": 0,
         "footprintPolygonLatLngs": []
+      },
+      "tags": []
+    },
+    {
+      "itemId": "746d3e98-64af-4897-9cd3-c09b169a8c69",
+      "countryIso3": "RUS",
+      "status": "likely_true_both",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": true,
+      "gbifCount": 875,
+      "inatCount": 906,
+      "rawGbifPresent": true,
+      "rawInatPresent": true,
+      "rawGbifCount": 875,
+      "rawInatCount": 906,
+      "gbifUsageKey": 2434552,
+      "inatTaxonId": 855311,
+      "inatPlaceId": 7161,
+      "managedEvidence": {
+        "domesticNamed": false,
+        "materialSampleCount": 0,
+        "atlasCount": 0,
+        "managedCount": 0,
+        "captiveInatCount": 0,
+        "needsReview": false,
+        "note": ""
+      },
+      "evidenceQuality": {
+        "rawTotal": 1781,
+        "qualifiedTotal": 1781,
+        "specimenOrSampleCount": 0,
+        "staleGbifCount": 0,
+        "staleInatCount": 0,
+        "captiveInatCount": 0,
+        "rejected": false,
+        "note": ""
+      },
+      "observationProfile": {
+        "significant": true,
+        "totalPoints": 90,
+        "corePointCount": 15,
+        "outlierPointCount": 75,
+        "clusterCount": 1,
+        "clusterSpreadKm": 0.0,
+        "maxDistanceKm": 0.3436718722858852,
+        "unique25kmCells": 4,
+        "unique50kmCells": 4,
+        "countryDiameterKm": 4665.850721230783,
+        "spreadRatio": 7.365685119802324e-05,
+        "coverageAreaKm2": 207.31885138782823,
+        "coverageRatio": 1.2125153152424421e-05,
+        "footprintPolygonLatLngs": [
+          [
+            58.516286198210935,
+            50.55459821983565
+          ],
+          [
+            58.394751660838985,
+            50.61312150455859
+          ],
+          [
+            58.39169331507512,
+            50.64316943711731
+          ],
+          [
+            58.39172820807814,
+            50.666803270538665
+          ],
+          [
+            58.392333389757255,
+            50.674285268766624
+          ],
+          [
+            58.52517111643612,
+            50.72973821163551
+          ],
+          [
+            58.53250879931551,
+            50.705190337558605
+          ],
+          [
+            58.538057043313025,
+            50.65343009479746
+          ],
+          [
+            58.53544121042784,
+            50.61448253295702
+          ]
+        ],
+        "code": "regional",
+        "label": "Regional footprint",
+        "short": "Regional",
+        "note": "Dropped 75 likely outlier points before scoring. The cleaned outer footprint covers 0.0% of Russia, so it stays regional."
       },
       "tags": []
     },

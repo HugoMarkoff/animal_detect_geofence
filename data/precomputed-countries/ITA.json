@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 251,
+    "total": 252,
     "statusCounts": {
       "likely_true_both": 140,
       "unlisted": 55,
       "new_record": 40,
-      "likely_true_one_source": 12,
+      "likely_true_one_source": 13,
       "likely_false": 4
     },
     "bucketCounts": {
-      "Likely Valid": 152,
+      "Likely Valid": 153,
       "Unlisted": 55,
       "New": 40,
       "Needs Review": 4
@@ -2045,6 +2045,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "ITA",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",

@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 185,
+    "total": 186,
     "statusCounts": {
-      "likely_true_one_source": 29,
+      "likely_true_one_source": 30,
       "unlisted": 52,
       "likely_true_both": 76,
       "new_record": 15,
       "likely_false": 13
     },
     "bucketCounts": {
-      "Likely Valid": 105,
+      "Likely Valid": 106,
       "Unlisted": 52,
       "New": 15,
       "Needs Review": 13
@@ -1451,6 +1451,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "EGY",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",

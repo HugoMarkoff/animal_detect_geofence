@@ -7,18 +7,18 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 145,
+    "total": 146,
     "statusCounts": {
       "new_record": 14,
       "unlisted": 15,
       "likely_true_both": 63,
-      "likely_true_one_source": 22,
+      "likely_true_one_source": 23,
       "likely_false": 31
     },
     "bucketCounts": {
       "New": 14,
       "Unlisted": 15,
-      "Likely Valid": 85,
+      "Likely Valid": 86,
       "Needs Review": 31
     }
   },
@@ -1095,6 +1095,23 @@
         "footprintPolygonLatLngs": []
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "TJK",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",

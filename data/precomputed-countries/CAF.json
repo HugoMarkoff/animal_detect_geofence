@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 274,
+    "total": 275,
     "statusCounts": {
       "unlisted": 54,
       "likely_true_both": 140,
-      "likely_true_one_source": 43,
+      "likely_true_one_source": 44,
       "likely_false": 34,
       "new_record": 3
     },
     "bucketCounts": {
       "Unlisted": 54,
-      "Likely Valid": 183,
+      "Likely Valid": 184,
       "Needs Review": 34,
       "New": 3
     }
@@ -2119,6 +2119,23 @@
         "note": "Dropped 1 likely outlier point before scoring. 3 dense observation areas were found in Central African Republic, so this is treated as national rather than a single regional pocket."
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "CAF",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a454390-09b9-45dc-b747-00657e92cf8c",

@@ -7,17 +7,17 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 59,
+    "total": 60,
     "statusCounts": {
       "new_record": 20,
-      "likely_true_one_source": 13,
+      "likely_true_one_source": 14,
       "unlisted": 13,
       "likely_true_both": 10,
       "likely_false": 3
     },
     "bucketCounts": {
       "New": 20,
-      "Likely Valid": 23,
+      "Likely Valid": 24,
       "Unlisted": 13,
       "Needs Review": 3
     }
@@ -814,6 +814,23 @@
         "note": "The cleaned footprint still covers more than 5% of Norfolk Island, so it is treated as national."
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "NFK",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a38f095-29db-4e96-bc1f-a01d80135a9b",

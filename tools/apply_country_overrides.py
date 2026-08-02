@@ -47,9 +47,6 @@ USA_STATE_CODES = {
     "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV",
     "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY",
 }
-# Occupying at least this many states says the same thing as being expected
-# country-wide. Below it a species stays regional rather than national.
-USA_NATIONAL_STATE_THRESHOLD = 3
 
 
 def clean_text(value: object) -> str:
@@ -182,17 +179,10 @@ def normalize_geofence_fields(
     # from expectedCountries makes country-only requests -- which is what the
     # serving stack sends -- geofence it away entirely.
     raw_usa_states = subdivisions.get(USA_PARENT_ISO3)
-    narrow_usa = False
     if isinstance(raw_usa_states, list):
-        if not raw_usa_states or len(raw_usa_states) >= USA_NATIONAL_STATE_THRESHOLD:
-            expected.add(USA_PARENT_ISO3)
-        else:
-            expected.discard(USA_PARENT_ISO3)
-            narrow_usa = True
+        expected.add(USA_PARENT_ISO3)
 
     regional &= expected
-    if narrow_usa:
-        regional.add(USA_PARENT_ISO3)
     return sorted(expected), sorted(regional), subdivisions
 
 
@@ -300,16 +290,11 @@ def apply_item_country_overrides(
         regional.discard(USA_PARENT_ISO3)
         usa_states_known = False
     elif usa_states_known:
-        if len(usa_states) >= USA_NATIONAL_STATE_THRESHOLD:
-            expected.add(USA_PARENT_ISO3)
-            regional.discard(USA_PARENT_ISO3)
-        else:
-            expected.discard(USA_PARENT_ISO3)
-            regional.add(USA_PARENT_ISO3)
+        expected.add(USA_PARENT_ISO3)
+        regional.discard(USA_PARENT_ISO3)
 
     next_subdivisions = serialize_expected_subdivisions(usa_states_known, usa_states)
-    regional = (regional & expected) | (regional & {USA_PARENT_ISO3})
-    return sorted(expected), sorted(regional), next_subdivisions
+    return sorted(expected), sorted(regional & expected), next_subdivisions
 
 
 def empty_managed_evidence() -> dict[str, Any]:

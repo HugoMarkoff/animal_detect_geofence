@@ -7,16 +7,16 @@
   "selectionMode": "country-indexed",
   "candidateFile": null,
   "summary": {
-    "total": 70,
+    "total": 71,
     "statusCounts": {
       "likely_true_both": 12,
-      "likely_true_one_source": 16,
+      "likely_true_one_source": 17,
       "unlisted": 21,
       "new_record": 14,
       "likely_false": 7
     },
     "bucketCounts": {
-      "Likely Valid": 28,
+      "Likely Valid": 29,
       "Unlisted": 21,
       "New": 14,
       "Needs Review": 7
@@ -743,6 +743,23 @@
         ]
       },
       "tags": []
+    },
+    {
+      "itemId": "2a29c629-ff91-481c-80b2-efd0afc69b60",
+      "countryIso3": "SYC",
+      "status": "likely_true_one_source",
+      "bucket": "Likely Valid",
+      "expected": true,
+      "gbifPresent": true,
+      "inatPresent": null,
+      "gbifCount": null,
+      "inatCount": null,
+      "observationProfile": {
+        "code": "country_pack_only",
+        "label": "Whole pack coverage",
+        "short": "Pack-wide",
+        "note": "Expected from animals-global.json after the supported dataset scope expanded; this row has not been country-validated yet."
+      }
     },
     {
       "itemId": "2a54b5b4-1d76-4e1d-97ad-d5cf459d53b3",
