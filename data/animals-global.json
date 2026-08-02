@@ -30369,7 +30369,7 @@
       "genus": "falco",
       "species": "peregrinus",
       "binomial": "falco peregrinus",
-      "commonName": "faucon pèlerin",
+      "commonName": "peregrine falcon",
       "matchedKey": "aves;falconiformes;falconidae;falco;peregrinus",
       "matchLevel": 5,
       "expectedCountries": [
@@ -37722,15 +37722,25 @@
       "order": "carnivora",
       "family": "ursidae",
       "genus": "ursus",
-      "species": "u. arctos",
-      "binomial": "ursus u. arctos",
+      "species": "arctos horribilis",
+      "binomial": "ursus arctos horribilis",
       "commonName": "grizzly bear",
-      "matchedKey": "mammalia;carnivora;ursidae;ursus;",
-      "matchLevel": 4,
+      "matchedKey": "mammalia;carnivora;ursidae;ursus;arctos horribilis",
+      "matchLevel": 5,
       "expectedCountries": [
-        "CAN"
+        "CAN",
+        "USA"
       ],
-      "allowRegionalCountries": []
+      "allowRegionalCountries": [],
+      "expectedSubdivisions": {
+        "USA": [
+          "AK",
+          "ID",
+          "MT",
+          "WA",
+          "WY"
+        ]
+      }
     },
     {
       "id": "3340e172-70df-44d8-9a87-3b4621de5f94",
