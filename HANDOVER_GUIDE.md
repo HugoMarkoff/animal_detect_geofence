@@ -76,7 +76,6 @@ animal_detect_geofence/
 
 This repo does not yet include:
 
-- the SpeciesNet testing app,
 - the full build pipeline scripts that regenerate the country packs,
 - the original radar app.
 

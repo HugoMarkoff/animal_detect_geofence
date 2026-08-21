@@ -200,7 +200,7 @@ const ONBOARDING_STEPS = [
         <li>Accepted changes are implemented in the <strong>Animal Detect API within 24 hours</strong>.</li>
       </ul>
       <p class="onboarding-note">Rule of thumb: if a species could realistically appear on a camera trap in the wild in that country, it should usually be in scope. There is some gray area for semi-domestic species if they roam public land and can still pass camera traps.</p>
-      <p class="onboarding-note">Requests with GPS latitude and longitude can match both national and regional species. Requests with only a 3-letter ISO country code use national species only. Accepted national changes are also candidates for SpeciesNet follow-up. For the United States, you can review either the whole country or switch into individual state packs.</p>
+      <p class="onboarding-note">Requests with GPS latitude and longitude can match both national and regional species. Requests with only a 3-letter ISO country code use national species only. For the United States, you can review either the whole country or switch into individual state packs.</p>
     `,
   },
   {
@@ -688,7 +688,8 @@ function normalizeAdminRegionalPolygons(rawPolygons) {
   const normalizedPolygons = polygons
     .flatMap((polygon) => clipFeatureToCountry({
       type: "Feature",
-      properties: {},
+      // exactGeometry keeps hand-drawn areas clip-only: no coastline snap or buffer padding.
+      properties: { exactGeometry: true },
       geometry: {
         type: "Polygon",
         coordinates: [latLngPolygonToGeoJsonRing(polygon)],
